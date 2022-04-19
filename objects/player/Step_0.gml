@@ -524,7 +524,7 @@ returned_id = global.return_player_id;
 			if footstep_sound_played = 0
 			{
 			footstep_sound_played = 1
-			sfx_for_multiplayer(footstep_sfx,0,0.08*(double_pressed_run_key+double_pressed_run_key))
+			sfx_for_multiplayer(footstep_sfx,0,0.03*(double_pressed_run_key+double_pressed_run_key))
 			}
 		}
 		else
