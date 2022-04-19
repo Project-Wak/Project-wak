@@ -1,0 +1,30 @@
+image_index = 0
+depth = 999
+
+global.save_point_x = 896
+global.save_point_y = 736
+
+
+
+var ele__ = instance_create_depth(-1000,736,0,obj_elevator)
+ele__.t_x = -1000
+ele__.t_y = 736
+ele__.real_t_x = 896
+ele__.real_t_y = 736
+ele__.activated = 1
+ele__.cannot_active_more = 1
+ele__.destination = 0
+ele__.line_length = 2500
+
+
+var inside_ = instance_create_depth(1888,640,0,pl_practice)
+inside_.image_index = 0
+
+var inside_ = instance_create_depth(3151,640,0,pl_practice)
+inside_.image_index = 2
+
+
+var droped_item__ = instance_create_depth(2175,167,0,obj_droped_item)
+droped_item__.item_var = 115
+
+
