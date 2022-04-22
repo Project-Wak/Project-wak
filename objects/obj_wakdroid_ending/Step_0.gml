@@ -1,5 +1,26 @@
 /// @description Insert description here
 // You can write your code in this editor
+if !instance_exists(_light_)
+{
+_light_ = instance_create_depth(x,y,depth,obj_light)
+_light_.p_id = id
+_light_.alpha = 0
+_light_.sprite_index = sprite64
+_light_.image_blend = $FF4EB0F7
+_light_.light_type = 0
+_light_.image_xscale = 0
+_light_.image_yscale = 0
+}
+else
+{
+_light_.x = x
+_light_.y = y
+
+_light_.image_xscale += (5.6 - _light_.image_xscale)*0.08
+_light_.image_yscale += (5.6 - _light_.image_yscale)*0.08
+_light_.alpha += ((0.5-global.room_brightness)*image_alpha - _light_.alpha)*0.08
+}
+
 if place_meeting(x,y+1,floor_parents)
 {
 gravity = 0
@@ -22,11 +43,16 @@ repeat(100)
 	}
 }
 
+if audio_is_playing(ending_select)
+{
+audio_sound_gain(bgm__,volume__*0.04*global.master_volume*2*global.bgm_volume,0)
+}
 
 
-
-
-
+if global.b_alpha < 0.6
+{
+interecting_now = 1
+}
 
 
 
@@ -39,21 +65,20 @@ global.playing_scene = 1
 
 	if !instance_exists(check__) && message_phase = 0
 	{
-	image_index = 1
+	player.image_xscale = 1
 	check__ = instance_create_depth(x,y,depth-1,player_message)
 	check__.text = "..."
 	check__.target = player.id
 	check__.parents = id
 	player.image_xscale = -1
+	audio_stop_sound(boss_bgm)
 	}
 	
 	if !instance_exists(check__) && message_phase = 1
 	{
-	image_xscale = 1
-	vspeed = -4
-	image_index = 1
 	global.show_guide_mes_spr = 6
 	global.show_guide_mes = "(박사의 계획은 성공적으로 저지된듯 하다)"
+	message_phase++
 	}
 	
 	if message_phase = 2
@@ -63,8 +88,10 @@ global.playing_scene = 1
 	player.guarding = 1.8
 	}
 	
-	if global.show_guide_mes = -4 && message_phase = 2
+	if !instance_exists(check__) && global.show_guide_mes = -4 && message_phase = 2
 	{
+	bgm__ = audio_play_sound(ending_select,0,true)
+
 	check__ = instance_create_depth(x,y,depth-1,player_message)
 	check__.text = "(자폭 시스템를 가동합니다)"
 	check__.target = id
@@ -107,7 +134,10 @@ global.playing_scene = 1
 			
 			if global.choice_now = 2
 			{
-			message_phase = 50
+			var	sfx__ = audio_play_sound(walk_sfx,0,false)
+			audio_sound_gain(sfx__,0.3,0)
+			message_phase = 49
+			global.t_b_alpha = 3.1
 			}
 		global.choice = 0
 		global.choosed = 0
@@ -118,36 +148,147 @@ global.playing_scene = 1
 	if !instance_exists(check__) && message_phase = 5
 	{
 	//시계 던지는 연출
+		if !instance_exists(threw_item)
+		{
+		var clock__ = instance_create_depth(player.x,player.y,depth+1,threw_item)
+		clock__.vspeed = -3
+		clock__.hspeed = 5
+		}
+		else
+		{
+			if threw_item.gravity = 0
+			{
+			clock_throw_scene ++
+				if clock_throw_scene > 100
+				{
+				instance_destroy(threw_item)
+				var sfx = audio_play_sound(glow_sfx,0,0)
+				audio_sound_gain(sfx,0.3*global.master_volume*2*global.sfx_volume,0)
+				global.w_alpha = 1
+				image_alpha = 0
+				message_phase = 6
+				}
+			}
+		}
 	}
 	
-	if !instance_exists(check__) && message_phase = 6
+	if message_phase = 6
 	{
-	global.show_guide_mes_spr = 6
-	global.show_guide_mes = "(성공적으로 자폭 직전의 왁드로이드는 과거로 가버린듯 하다)"
-	message_phase++
+	clock_throw_scene ++
+	global.w_alpha -= 0.05
+	volume__ += (-0.01 - volume__)*0.05
+		if !instance_exists(check__) && clock_throw_scene > 200
+		{
+		global.show_guide_mes_spr = 6
+		global.show_guide_mes = "(성공적으로 자폭 직전의 왁드로이드는 과거로 가버린듯 하다)"
+		message_phase++
+		}
 	}
 	
-	if global.show_guide_mes = -4 && message_phase = 7
+	if message_phase >= 7 && message_phase <= 10
 	{
-	check__ = instance_create_depth(x,y,depth-1,player_message)
-	check__.text = "!"
-	check__.target = player.id
-	check__.parents = id
+	global.w_alpha -= 0.05
+		if message_phase = 7
+		{
+			if global.show_guide_mes = -4
+			{
+			var xx_ = player.x+irandom_range(-16,16)
+			var yy_ = player.y+irandom_range(-16,16)
+			var random_val___ = percentage_k(15)
+				if random_val___ = 1
+				{
+				var random_val___2 = percentage_k(30)
+				create_buble_effect(player.image_alpha*0.1,270+irandom_range(-5,5),0,choose(-1)*irandom_range(50,100)/70,0.01,0.01,$FF3ACAFF,c_white,1,c_white,xx_,yy_,depth-random_val___2,0,false,false)
+				}
+			}
+		}
+		else
+		{
+		var xx_ = player.x+irandom_range(-16,16)
+		var yy_ = player.y+irandom_range(-16,16)
+		var random_val___ = percentage_k(15)
+			if random_val___ = 1
+			{
+			var random_val___2 = percentage_k(30)
+			create_buble_effect(player.image_alpha*0.1,270+irandom_range(-5,5),0,choose(-1)*irandom_range(50,100)/70,0.01,0.01,$FF3ACAFF,c_white,1,$FF3ACAFF,xx_,yy_,depth-random_val___2,0,false,false)
+			}
+		}
+	}
+	
+	if message_phase = 7 && global.show_guide_mes = -4
+	{
+	player.image_alpha += (0.8-irandom_range(30,10)/100 - player.image_alpha)*0.07
+	player.guarding = 1
+		if !instance_exists(check__)
+		{
+		var sfx = audio_play_sound(glow_sfx,0,0)
+		audio_sound_gain(sfx,0.3*global.master_volume*2*global.sfx_volume,0)
+		check__ = instance_create_depth(x,y,depth-1,player_message)
+		check__.text = "!"
+		check__.target = player.id
+		check__.parents = id
+		}
 	}
 	
 	if !instance_exists(check__) && message_phase = 8
 	{
+	player.guarding = 1
+	player.image_alpha += (0.8-irandom_range(30,10)/100 - player.image_alpha)*0.07
 	global.show_guide_mes_spr = 6
 	global.show_guide_mes = "(몸이 점점 사라지고 있다)"
 	message_phase++
 	}
 	
-	if global.show_guide_mes = -4 && message_phase = 9
+	if message_phase = 9 && global.show_guide_mes != -4
 	{
-	global.show_credits = 1
-	global.credit_b_alpha += 0.001
+	player.guarding = 1
+	}
+
+	if !instance_exists(check__) && global.show_guide_mes = -4 && message_phase = 9
+	{
+		if __sfx__ = 0 && player.image_alpha < 0.1
+		{
+		var sfx = audio_play_sound(glow_sfx,0,0)
+		audio_sound_gain(sfx,0.2*global.master_volume*2*global.sfx_volume,0)
+		__sfx__ = 1
+		}
+	player.image_alpha += (-0.01 - player.image_alpha)*0.03
+	depth = obj_camera.depth-10
+	audio_stop_sound(ending_select)
+		if !audio_is_playing(it_s_over)
+		{
+		var sfx = audio_play_sound(it_s_over,0,true)
+		audio_sound_gain(sfx,0.23*global.master_volume*2*global.bgm_volume,0)
+		}
+	global.gameover_reason = "[소멸 엔딩]\n과거로 보낸 왁드로이드로 인해 과거의 플레이어가 사망하여 없어지자\n현재의 플레이어 또한 없어져 버렸다"
+	show_ending += (1 - show_ending)*0.01
+	obj_camera.t_y = player.y-ending_mes_timer
+	global.fix_camera = 0
+	ending_mes_timer += 0.5
+
+		if ending_mes_timer > 150
+		{
+		global.credit_b_alpha += 0.0012
+			if ending_mes_timer > 450
+			{
+			message_phase = 10
+			}
+		}
 	}
 	
+	if message_phase = 10
+	{
+	global.credit_b_alpha += 0.0012
+	obj_camera.t_y = player.y-ending_mes_timer
+		if global.credit_b_alpha > 0.3
+		{
+		show_ending += (-0.08 - show_ending)*0.01
+			if global.show_credits = 0 && global.credit_b_alpha > 0.8
+			{
+			global.show_credits = 1
+			}
+		}
+	}
 	
 
 	//check__ = instance_create_depth(x,y,depth-1,player_message)
@@ -173,34 +314,30 @@ global.playing_scene = 1
 	
 	if !instance_exists(check__) && message_phase = 31
 	{
-	check__ = instance_create_depth(x,y,depth-1,player_message)
-	check__.text = "(왁드로이드의 자폭으로 인해 폭발하는 연구소)"
-	check__.target = player.id
-	check__.parents = id
+	global.show_guide_mes_spr = 6
+	global.show_guide_mes = "(왁드로이드의 자폭으로 인해 폭발하는 연구소)"
+	message_phase++
 	}
 	
-	if !instance_exists(check__) && message_phase = 32
+	if !instance_exists(check__) && global.show_guide_mes = -4 && message_phase = 32
 	{
-	check__ = instance_create_depth(x,y,depth-1,player_message)
-	check__.text = "(그리고, 이를 모르는 이세돌 멤버들과 팬치들, 천양이가 폭발에 휘말릴 것이다)"
-	check__.target = player.id
-	check__.parents = id
+	global.show_guide_mes_spr = 6
+	global.show_guide_mes = "(그리고, 이를 모르는 이세돌 멤버들과 팬치들, 천양이가 폭발에 휘말릴 것이다)"
+	message_phase++
 	}
 	
-	if !instance_exists(check__) && message_phase = 33
+	if !instance_exists(check__) && global.show_guide_mes = -4 && message_phase = 33
 	{
-	check__ = instance_create_depth(x,y,depth-1,player_message)
-	check__.text = "(답은 한가지 밖에 없다)"
-	check__.target = player.id
-	check__.parents = id
+	global.show_guide_mes_spr = 6
+	global.show_guide_mes = "(답은 한가지 밖에 없다)"
+	message_phase++
 	}
 	
-	if !instance_exists(check__) && message_phase = 34
+	if !instance_exists(check__) && global.show_guide_mes = -4 && message_phase = 34
 	{
-	check__ = instance_create_depth(x,y,depth-1,player_message)
-	check__.text = "(되돌려야만 한다)"
-	check__.target = player.id
-	check__.parents = id
+	global.show_guide_mes_spr = 6
+	global.show_guide_mes = "(되돌려야만 한다)"
+	message_phase++
 	}
 	
 	if !instance_exists(check__) && message_phase = 35
@@ -211,8 +348,16 @@ global.playing_scene = 1
 	
 	
 	//엔딩3 - 도망자 엔딩
+	if global.b_alpha > 3 && message_phase = 49
+	{
+	volume__ += (-0.1 - volume__)*0.1
+	room_goto(room_sector_outside)
+	global.t_b_alpha = -0.01
+	}
+	
 	if !instance_exists(check__) && message_phase = 50
 	{
+	volume__ += (-0.1 - volume__)*0.1
 	check__ = instance_create_depth(x,y,depth-1,player_message)
 	check__.text = "..."
 	check__.target = player.id
@@ -221,36 +366,32 @@ global.playing_scene = 1
 	
 	if !instance_exists(check__) && message_phase = 51
 	{
+	volume__ += (-0.1 - volume__)*0.1
 	check__ = instance_create_depth(x,y,depth-1,player_message)
 	check__.text = "!"
 	check__.target = player.id
 	check__.parents = id
 	}
 	
+	if message_phase >= 52
+	{
+	volume__ += (1 - volume__)*0.1
+	}
+	
 	if !instance_exists(check__) && message_phase = 52
 	{
-	check__ = instance_create_depth(x,y,depth-1,player_message)
-	check__.text = "(중요한 사실을 간과했다!)"
-	check__.target = player.id
-	check__.parents = id
+	global.show_guide_mes_spr = 6
+	global.show_guide_mes = "(왁드로이드의 자폭에 대한 사실을 모르는)"
+	message_phase++
 	}
 	
-	if !instance_exists(check__) && message_phase = 53
+	if !instance_exists(check__) && global.show_guide_mes = -4 && message_phase = 53
 	{
-	check__ = instance_create_depth(x,y,depth-1,player_message)
-	check__.text = "(왁드로이드의 자폭에 대한 사실을 모르는)"
-	check__.target = player.id
-	check__.parents = id
+	global.show_guide_mes_spr = 6
+	global.show_guide_mes = "(이세돌 맴버들과 팬치들, 그리고 천양이는 폭발에 휘말려 버렸다)"
+	message_phase = 55
 	}
-	
-	if !instance_exists(check__) && message_phase = 54
-	{
-	check__ = instance_create_depth(x,y,depth-1,player_message)
-	check__.text = "(이세돌 맴버들과 팬치들, 그리고 천양이는 폭발에 휘말려 버렸다)"
-	check__.target = player.id
-	check__.parents = id
-	}
-	
+
 	if !instance_exists(check__) && message_phase = 55
 	{
 	check__ = instance_create_depth(x,y,depth-1,player_message)
@@ -263,8 +404,8 @@ global.playing_scene = 1
 	if !instance_exists(check__) && message_phase = 56
 	{
 	global.choice += (1 - global.choice)*0.1
-	global.choice_name[0] = "Re:wind시계를 이용한다"
-	global.choice_name[1] = "아무것도 하지 않는다"
+	global.choice_name[0] = "Re:wind시계를 이용해 과거로 되돌아간다"
+	global.choice_name[1] = "박사의 계획을 저지했으니, 만족하고 집으로 돌아간다"
 	global.choice_name[2] = -4
 	
 		if global.choosed > 0
@@ -294,18 +435,16 @@ global.playing_scene = 1
 	
 	if !instance_exists(check__) && message_phase = 58
 	{
-	check__ = instance_create_depth(x,y,depth-1,player_message)
-	check__.text = "(이 상황을 바꾸기 위해선)"
-	check__.target = player.id
-	check__.parents = id
+	global.show_guide_mes_spr = 6
+	global.show_guide_mes = "(이 상황을 바꾸기 위해선)"
+	message_phase++
 	}
 	
-	if !instance_exists(check__) && message_phase = 58
+	if !instance_exists(check__) && global.show_guide_mes = -4 && message_phase = 58
 	{
-	check__ = instance_create_depth(x,y,depth-1,player_message)
-	check__.text = "(되돌려야만 한다)"
-	check__.target = player.id
-	check__.parents = id
+	global.show_guide_mes_spr = 6
+	global.show_guide_mes = "(되돌려야만 한다)"
+	message_phase++
 	}
 	
 	if !instance_exists(check__) && message_phase = 59
@@ -322,31 +461,55 @@ global.playing_scene = 1
 	check__.target = player.id
 	check__.parents = id
 	}
-}
-
-
-if cre_boss = 1
-{
-	if !instance_exists(obj_wakdroid)
+	
+	if !instance_exists(check__) && message_phase = 71
 	{
-	var test_mob = instance_create_depth(5703,2327,player.depth+3,obj_wakdroid)
-	test_mob.image_xscale = 1
-	test_mob.image_yscale = 1
-	test_mob.test_mob_type = 1
-	cre_boss = 0
+	obj_camera.t_x = -4
+	global.fix_camera = 0
+	global.movement_speed = 1
+	player.image_index += 0.15
+	player.image_xscale = -1
+	timer2 ++
+	
+		if timer2 > 200
+		{
+		depth = obj_camera.depth-10
+		audio_stop_sound(ending_select)
+			if !audio_is_playing(it_s_over)
+			{
+			var sfx = audio_play_sound(it_s_over,0,true)
+			audio_sound_gain(sfx,0.23*global.master_volume*2*global.bgm_volume,0)
+			}
+		global.gameover_reason = "[도망자 엔딩]\n이세돌 멤버들과, 팬치들 그리고 천양이를 구하지 않고 혼자 탈출 했다"
+		show_ending += (1 - show_ending)*0.01
+		obj_camera.t_y = player.y-120-ending_mes_timer
+		ending_mes_timer += 0.5
+
+			if ending_mes_timer > 150
+			{
+			global.credit_b_alpha += 0.0012
+				if ending_mes_timer > 450
+				{
+				message_phase = 72
+				}
+			}
+		}
+	}
+	
+	if message_phase = 72
+	{
+	global.credit_b_alpha += 0.0012
+	obj_camera.t_y = player.y-120-ending_mes_timer
+		if global.credit_b_alpha > 0.3
+		{
+		show_ending += (-0.08 - show_ending)*0.01
+			if global.show_credits = 0 && global.credit_b_alpha > 0.8
+			{
+			global.show_credits = 1
+			}
+		}
 	}
 }
 
-
-
-if player.x > 5000 && global.never_move = 0 && global.playing_scene = 0 && global.ending_story = 0
-{
-interecting_now = 1
-global.ending_story = 1
-}
-else
-{
-can_interect = 0
-}
 
 

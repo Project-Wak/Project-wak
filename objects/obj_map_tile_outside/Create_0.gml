@@ -13,14 +13,16 @@ global.platform_speed = 0
 global.never_move = 0
 obj_chatbox.new_chat = 0
 
-
+global.room_brightness = 0.78
 
 b_alpha = 0
 timer = 0
+sfx = 0
 
-player.x = 637
+player.x = 800
 player.y = 1100
 global.hp = player.max_hp
 global.n_time = 12
+explo_anime = 0.1
 
 instance_create_depth(x,y,depth,outside_water)

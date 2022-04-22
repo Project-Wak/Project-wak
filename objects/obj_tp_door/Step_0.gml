@@ -20,6 +20,8 @@ audio_sound_gain(sfx,global.master_volume*2*global.sfx_volume,0)
 t_y = -64
 global.never_move = 1
 global.t_b_alpha = 2.1
+var	sfx__ = audio_play_sound(walk_sfx,0,false)
+audio_sound_gain(sfx__,0.3,0)
 }
 
 if t_y = -64

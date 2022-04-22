@@ -15,10 +15,7 @@ if image_alpha > 0.08
 image_alpha = 0.08
 }
 
-if global.room_brightness < 0.8
-{
-global.room_brightness += 0.001
-}
+
 
 timer ++
 

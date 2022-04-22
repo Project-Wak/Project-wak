@@ -3,7 +3,7 @@
 
 ////////////////////////////////////////////////////////////////////////
 
-
+global.credit_message = "Credits\n\n\n\nDirector\n아버\n\n\nProgramer\n아버\n\n\nStory\n아버\n\n\nEnemy design\n아버\n\n\nBoss design\n아버\n\n\nStage design\n아버\n\n\nEffect design\n아버\n\n\n\n\n\nBoss theme\nSymphony of Specters - Intense Cinematic Trailer\n\n\nEnding theme\nSharo - Atorie to denno sekai\nBrightwaltz - Touch a flower softly\n\n\nGameover theme\nBrightwaltz - Trifolium repens f. roseum\n\n\nSleeping theme\nBrightwaltz - Piano Improvisation 2020 Spring No2\n\n\nInteraction theme\nBrightwaltz - Dance in the Air\n\n\nTrailer theme\nak+q - Ignotus\nZekk - Libertas\n\n\n\n\n\n\n\n[개발에 참고한 게임들]\n\n\n레전드 오브 곡괭이 - 공격 모션이나 스킬 제작, 스토리 및 이펙트 디자인\n\nElden Ring - 보스 패턴 및 맵 디자인\n\nTerraria - 객관안 및 쌉벌래두\n\n\n\n\n[이외에 참고한 디자인]\n\n\n심해두 팬아트 - 보스 및 잡몹\n\n메시 팬아트 - 보스\n\n왁두 팬아트 - 주인공 디자인 및 보스\n\n말레니아(Elden Ring) / 캬루(프리코네) - 엔젤로이드 보스\n\nNier Automata - 드론형 터렛\n\n이세돌 팬아트 - 이세돌 NPC 및 악세사리 디자인\n\nRe:wind 뮤비 - Re:wind 시계 악세사리 디자인\n\nSword art online - 여러 이펙트 디자인 및 도탄 시스템\n\nTakt op destiny - 스킬 이펙트 디자인\n\n\n\n\n\nBeta Tester\n(피드백 주신분들)\n\n\nStellarSea\n\n서장님\n\n오코츠유타\n\n옥수수칲\n\n탄창\n\n황금뿌리\n\n러머\n\nSsab\n\n공벌\n\n화염뽱어\n\n젓가락아저씨\n\n진성e\n\n벼슬\n\n페르마벤\n\n댐쿵이\n\n쓰레기맛캔디\n\n1잡탕1\n\nzun\n\nDillionaire\n\nalpamin\n\nBackSang\n\nNANFREE\n\n쥬기\n\n참이프\n\n광부\n\nContra\n\nQuiettBee\n\n사미니\n\n(이외의 많은 여러 사람들)\n\n\n\n\nSpecial Thanks\n(개발에 큰 도움 주신분들과 추가 아이디어 제공자)\n\n\n\nBackSang\n\n쓰레기맛캔디\n\nzun\n\nDillionaire\n\nNANFREE\n\nalpamin\n\n1잡탕1\n\n쥬기\n\n댐쿵이\n\n\n\n\n\n\n\nThanks for playing\n\n\n\n\n\n\n\nMade with Gamemaker studio 2"
 //text_color = 0 //Initialize text color variable
 ip_for_calcul = ""
 //created_platfrom = 0

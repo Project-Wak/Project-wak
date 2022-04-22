@@ -40,6 +40,9 @@ if t_y = -64
 				player.y = y+32
 				obj_camera.x = x
 				obj_camera.y = y+65
+				var	sfx__ = audio_play_sound(walk_sfx,0,false)
+				audio_sound_gain(sfx__,0.3,0)
+				
 					if my_connection = 14 && cre_shadow = 0
 					{
 					cre_shadow = 1
@@ -54,6 +57,8 @@ if t_y = -64
 				player.y = y+32
 				obj_camera.x = x
 				obj_camera.y = y+65
+				var	sfx__ = audio_play_sound(walk_sfx,0,false)
+				audio_sound_gain(sfx__,0.3,0)
 				
 					if my_connection = 14 && cre_shadow = 0
 					{

@@ -36,6 +36,7 @@ if hp <= 0
 global.boss_target = -4
 global.playing_scene = 1
 global.never_move = 1
+global.t_b_alpha = 3.01
 hp = 0
 dead_scene ++
 patturn = 0
@@ -43,79 +44,13 @@ patturn = 0
 
 cannot_step = 1
 
-y += 1.5
-
-	if dead_scene%15
+	if global.b_alpha > 3
 	{
-	shake_boss *= -1
-	x += shake_boss*14
-	}
-	
-	if dead_scene%40 = 0
-	{
-	var a___ = audio_play_sound(bomb_sfx,0,0)
-	audio_sound_gain(a___,0.01*global.master_volume*2*global.sfx_volume,0)
-			
-	var sfx = audio_play_sound(mob_faint,0,0)
-	audio_sound_gain(sfx,0.2*global.master_volume*2*global.sfx_volume,0)
-	
-	
-	repeat(2)
-	{
-	var _ef = instance_create_depth(x+irandom_range(-100,100),y+irandom_range(-60,100),depth-1,effect_spark)
-	_ef.hspeed = irandom_range(-20,20)
-	_ef.vspeed = irandom_range(-4,2)
-	}
-	
-			
-		
-		
-	view_shake(11,11,1)
-		repeat(choose(6,7,7,8,8,9,9,9,10,10,11,12))
-		{
-		randomize()
-		var random_target = id
-		var dust = instance_create_depth(random_target.x+irandom_range(-60,60),random_target.y+irandom_range(-60,60),random_target.depth-1,pepsi_effect_received)
-		var scale = irandom_range(20,40)/50
-		dust.image_xscale = scale
-		dust.image_yscale = scale
-		dust.vspeed = irandom_range(-50,50)/25
-		dust.hspeed = irandom_range(-50,50)/25
-		dust.image_alpha = 1
-		}
-	}
-	
-	
-	if dead_scene > 400
-	{
-	global.playing_scene = 0
-	global.never_move = 0
-	audio_stop_sound(boss_bgm)
-	var a___ = audio_play_sound(bomb_sfx,0,0)
-	audio_sound_gain(a___,0.12*global.master_volume*2*global.sfx_volume,0)
-
-	dead_scene = 0
-	var test_mob = instance_create_depth(xstart-700,ystart+600,player.depth+3,mob_spawn_here)
-	test_mob.t_y = -900
-	test_mob.mob_type = obj_twin_eye
-	test_mob.xscale = 1.1
-	test_mob.yscale = 1.1
-	test_mob.mob_var = -6
-	
-	give_item(0,9)
-	
-	var random_drop_ = percentage_k(50)
-	if random_drop_ = 1
-	{
-	give_item(0,3)
-	}
-	else
-	{
-	give_item(0,4)
-	}
-
+	instance_create_depth(2994,2331,depth,obj_wakdroid_ending)
+	player.x = 2800
+	player.image_xscale = 1
+	global.t_b_alpha = -0.01
 	global.gold += 12000
-	global.left_time += 12*global.time_plusment
 	instance_destroy(_light_1)
 	instance_destroy()
 	}
@@ -166,8 +101,8 @@ else
 		{
 		global.boss_target = id
 		global.boss_name = "폭주한 왁드로이드"
-		obj_camera.tv_x = 1280
-		obj_camera.tv_y = 720
+		obj_camera.tv_x = 1280*1.1
+		obj_camera.tv_y = 720*1.1
 		obj_camera.t_x = xstart
 		obj_camera.t_y = player.y
 	
@@ -183,7 +118,6 @@ else
 
 	if activated = 1
 	{
-	global.dreamy_alpha += (1 - global.dreamy_alpha)*0.04
 		if !instance_exists(wall1)
 		{
 		wall1 = instance_create_depth(xstart-650,ystart-1200,player.depth+3,obj_floor_tile3)
@@ -227,6 +161,7 @@ else
 
 	if scene__ >= 1
 	{
+	global.dreamy_alpha += (1 - global.dreamy_alpha)*0.04
 	activated = 2
 	player.assult_mode = 300
 		if instance_exists(check__)
@@ -239,7 +174,7 @@ else
 
 		if patturn = 0
 		{
-		image_xscale = sign_k(x - player.x)
+		image_xscale = sign_k(x - player.x)*0.9
 		change_dir ++
 		
 			if y < 200
@@ -254,7 +189,7 @@ else
 				back_my_point ++
 				}
 				
-				if back_my_point > 40
+				if back_my_point > 20
 				{
 				var xx___ = x
 				var yy___ = y
@@ -291,13 +226,13 @@ else
 		timer ++
 		}
 		
-			if change_dir > 100
+			if change_dir > 60
 			{
 			random_dir = choose(-1,1)
 			change_dir = 0
 			}
 	
-			if timer > 200
+			if timer > 110
 			{
 			var random_patturn = choose(1,2,2,3,4,4)
 				if random_patturn != b_patturn
@@ -325,7 +260,7 @@ else
 		
 		if patturn >= 1 && patturn < 2
 		{
-		image_xscale = sign_k(x - player.x)
+		image_xscale = sign_k(x - player.x)*0.9
 			if patturn = 1
 			{
 			random_dir = choose(-1,1)
@@ -432,7 +367,7 @@ else
 		
 		if patturn >= 2 && patturn < 3
 		{
-		image_xscale = sign_k(x - player.x)
+		image_xscale = sign_k(x - player.x)*0.9
 			if patturn = 2
 			{
 			random_dir = choose(-1,1)
@@ -519,7 +454,7 @@ else
 			if patturn = 3
 			{
 			random_dir = choose(-1,1)
-			image_xscale = sign_k(x - player.x)
+			image_xscale = sign_k(x - player.x)*0.9
 			var xx___ = x
 			var yy___ = y
 				repeat(choose(6,7,7,8,8,9,9,9,10,10,11,12))
@@ -649,7 +584,7 @@ else
 			if patturn = 4
 			{
 			random_dir = choose(-1,1)
-			image_xscale = sign_k(x - player.x)
+			image_xscale = sign_k(x - player.x)*0.9
 			var xx___ = x
 			var yy___ = y
 				repeat(choose(6,7,7,8,8,9,9,9,10,10,11,12))

@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "nomal_ending.mp3",
-  "duration": 120.142143,
+  "duration": 120.137146,
   "parent": {
     "name": "소리",
     "path": "folders/소리.yy",

@@ -12,7 +12,7 @@ global.playing_scene = 1
 else
 {
 timer__playing_scene_++
-	if timer__playing_scene_ > 10
+	if timer__playing_scene_ > 10 && global.never_move = 0
 	{
 	global.playing_scene = 0
 	timer__playing_scene_ = 0
@@ -168,13 +168,19 @@ v_y += (tv_y - v_y)*0.02;
 if global.slow_motion > 0
 {
 player.depth = -100
-v_x = 1280*0.75
-v_y = 720*0.75
+	if global.show_credits = 0 && global.playing_scene = 0
+	{
+	v_x = 1280*0.75
+	v_y = 720*0.75
+	}
 }
 else
 {
-tv_x = 1280*0.8
-tv_y = 720*0.8
+	if global.show_credits = 0 && global.playing_scene = 0
+	{
+	tv_x = 1280*0.8
+	tv_y = 720*0.8
+	}
 }
 
 if global.w_alpha2 > 0
@@ -187,7 +193,7 @@ if global.w_alpha < 0
 global.w_alpha = 0
 }
 
-if global.w_alpha > 0
+if global.w_alpha > 0 && room != room_sector_outside
 {
 global.w_alpha -= 0.15
 }

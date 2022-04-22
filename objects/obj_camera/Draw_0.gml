@@ -197,7 +197,7 @@ instance_destroy(setting_parents)
 	if global.show_guide_mes_spr != 6
 	{
 	draw_set_color(c_black)
-	draw_set_alpha(0.5)
+	draw_set_alpha(0.7)
 	draw_rectangle(g_xx-v_x_*200,g_yy-v_x_*32,g_xx+v_x_*200,g_yy+v_x_*220,false)
 	draw_sprite_ext(spr_icon,global.show_guide_mes_spr,g_xx-v_x_*170,g_yy-v_x_*11,v_x_*0.6,v_x_*0.6,0,c_white,0.8)
 	draw_text_kl_scale(g_xx,g_yy,string(global.show_guide_mes),v_x_*73,-1,0.67,c_white,0,0,font0,v_x_/3.5,v_x_/3.5,0);
@@ -210,7 +210,7 @@ instance_destroy(setting_parents)
 	else
 	{
 	draw_set_color(c_black)
-	draw_set_alpha(0.4)
+	draw_set_alpha(0.7)
 	draw_rectangle(g_xx-v_x_*200,g_yy-v_x_*27,g_xx+v_x_*200,g_yy+v_x_*40,false)
 	draw_text_kl_scale(g_xx,g_yy,string(global.show_guide_mes),v_x_*73,-1,0.67,c_white,0,0,font0,v_x_/3.5,v_x_/3.5,0);
 	

@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "buy_item.mp3",
-  "duration": 0.2921,
+  "duration": 0.2871,
   "parent": {
     "name": "소리",
     "path": "folders/소리.yy",

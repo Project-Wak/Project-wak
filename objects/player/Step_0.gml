@@ -34,14 +34,14 @@ if global.room_brightness <= 0.35 && room != room_sector_outside
 			{
 			_light_.image_xscale += (5.6 - _light_.image_xscale)*0.08
 			_light_.image_yscale += (5.6 - _light_.image_yscale)*0.08
-			_light_.alpha += (0.5-global.room_brightness - _light_.alpha)*0.08
+			_light_.alpha += ((0.5-global.room_brightness)*image_alpha - _light_.alpha)*0.08
 			}
 			
 			if light_timer >= 140 && light_timer < 200
 			{
 			_light_.image_xscale += (5.2 - _light_.image_xscale)*0.08
 			_light_.image_yscale += (5.2 - _light_.image_yscale)*0.08
-			_light_.alpha += (0.4-global.room_brightness - _light_.alpha)*0.08
+			_light_.alpha += ((0.4-global.room_brightness)*image_alpha - _light_.alpha)*0.08
 			}
 			
 			if light_timer >= 200
@@ -2653,7 +2653,7 @@ if guarding >= 2.5
 	}
 }
 
-if keyboard_check(string(global.guard_key_for_code)) && hurt = 0 && hurt_little = 0 && global.chat_activity = false
+if keyboard_check(string(global.guard_key_for_code)) && hurt = 0 && hurt_little = 0 && global.chat_activity = false && global.playing_scene = 0
 {
 	if guarding = -1 && gravity <= 0 && vspeed >= 0
 	{
@@ -3639,7 +3639,7 @@ if spin_attack = 0 && jump_attack = 0 && down_attack = 0 && sting_attack = 0 && 
 if pressed_d_key+pressed_a_key = 0 && cannot_move = 0 && attack_ = 0 && pering = 0 && dash_attack = 0 && sting_attack = 0
 {
 global.movement_speed += (0 - global.movement_speed)*0.23
-	if gravity <= 0
+	if gravity <= 0 && global.playing_scene = 0
 	{
 	image_index += (0 - image_index)*0.1
 	}
@@ -3661,12 +3661,12 @@ global.movement_speed = 0
 	if spin = 1
 	{
 	spin_speed = 1
-	sfx_for_multiplayer(spin_sfx,0,0.12)
+	sfx_for_multiplayer(spin_sfx,0,0.12/(global.playing_scene+1))
 	
 	var random_val = choose(1,0)
 		if random_val = 1
 		{
-			if global.voice_option = 0
+			if global.voice_option = 0 && global.playing_scene = 0
 			{
 			sfx_for_multiplayer(zzae_ggi_chun,0,0.3)
 			}

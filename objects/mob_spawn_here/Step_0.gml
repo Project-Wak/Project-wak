@@ -108,7 +108,13 @@ else
 
 if go_origin_room = 1
 {
-global.t_b_alpha = 2.1
+	if global.t_b_alpha != 2.1
+	{
+	global.t_b_alpha = 2.1
+	var	sfx__ = audio_play_sound(walk_sfx,0,false)
+	audio_sound_gain(sfx__,0.3,0)
+	}
+
 	if global.b_alpha > 2
 	{
 	global.t_b_alpha = 0

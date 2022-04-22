@@ -10,7 +10,7 @@ if can_draw = 1
 		draw_set_color(color_1)
 		draw_line_width(x,y,spark_x[i],spark_y[i],1.5)
 		draw_set_color(c_white)
-		draw_line_width(x,y,spark_x[i],spark_y[i],3)
+		draw_line_width(x,y,spark_x[i],spark_y[i],1.5)
 		}
 	
 		if alpha2 > 0
@@ -19,7 +19,7 @@ if can_draw = 1
 			{
 			draw_set_color(color_2)
 			draw_set_alpha(alpha2)
-			draw_line_width(x,y,spark_x[i],spark_y[i],3)
+			draw_line_width(x,y,spark_x[i],spark_y[i],1.5)
 			}
 		}
 	}

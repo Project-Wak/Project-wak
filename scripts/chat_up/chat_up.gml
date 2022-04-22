@@ -108,6 +108,17 @@ audio_sound_gain(sfx,0.07*global.master_volume*2*global.sfx_volume,0)
 		global.lenturn = 1
 		room_goto(room_sector_B07)
 		}
+		else if (argument0 = "/ending" || argument0 = "/end")
+		{
+		global.lenturn = 1
+		instance_create_depth(2994,2331,depth,obj_wakdroid_ending)
+		player.x = 2800
+		player.image_xscale = 1
+		global.t_b_alpha = -0.01
+		global.gold += 12000
+		instance_destroy(obj_angel)
+		instance_destroy(angel_spear)
+		}
 		else if (argument0 = "/tuto")
 		{
 		global.tutorial = 0
