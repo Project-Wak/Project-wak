@@ -518,12 +518,18 @@ obj_camera.t_x = 5373
 		image_xscale = -sign_k(player.x - x)
 			if attack_delay > 70
 			{
-			movement_speed += (-sign(image_xscale)*(9+rage_mode*5) - movement_speed)*0.03
+			movement_speed += (-sign(image_xscale)*(9+rage_mode*5) - movement_speed)*0.1
 			}
 			else
 			{
-			movement_speed += (-sign(image_xscale)*(3+rage_mode*5) - movement_speed)*0.03
+			movement_speed += (-sign(image_xscale)*(6+rage_mode*5) - movement_speed)*0.1
 			}
+			
+			if abs(x - player.x) <= 150 && abs(player.y - y) > 32
+			{
+			attack_delay += 5
+			}
+			
 
 			if attack_delay > 240
 			{

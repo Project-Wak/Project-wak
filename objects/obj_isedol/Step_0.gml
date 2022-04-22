@@ -148,6 +148,8 @@ can_give_item = 0
 
 
 
+
+
 if (can_interect = 1 && interecting_now = 0 && keyboard_check_released(ord(string(global.skip_key))))
 {
 	if player.assult_mode <= 0
@@ -173,63 +175,11 @@ if interecting_now = 1
 player.x += (x-90*image_xscale - player.x)*0.1
 global.never_move = 1
 global.playing_scene = 1
-	if image_index = 0
+	if instance_exists(obj_wakdroid_ending)
 	{
-		if global.tutorial = 1 && can_give_item = 1 && give_healitem = 0
+		if image_index = 0
 		{
-			if !instance_exists(check__) && message_phase = 0
-			{
-			image_xscale = sign_k(x - player.x)
-			check__ = instance_create_depth(x,y,depth-1,player_message)
-			check__.text = "!"
-			check__.target = player.id
-			check__.parents = id
-			}
-		
-			if !instance_exists(check__) && message_phase = 1
-			{
-			check__ = instance_create_depth(x,y,depth-1,player_message)
-			check__.text = "왁굳님!"
-			check__.target = id
-			check__.parents = id
-			}
-		
-			if !instance_exists(check__) && message_phase = 2
-			{
-			check__ = instance_create_depth(x,y,depth-1,player_message)
-			check__.text = "도움이 될지 모르겠지만, 이거 받으세여"
-			check__.target = id
-			check__.parents = id
-			}
-		
-			if !instance_exists(check__) && message_phase = 3
-			{
-			check__ = instance_create_depth(x,y,depth-1,player_message)
-			check__.text = "(악세사리을 건네받았다!)"
-			check__.target = player.id
-			check__.parents = id
-			give_item(1,2)
-			}
-		
-			if !instance_exists(check__) && message_phase = 4
-			{
-			check__ = instance_create_depth(x,y,depth-1,player_message)
-			check__.text = "그럼 화이팅!"
-			check__.target = id
-			check__.parents = id
-			}
-			
-			if !instance_exists(check__) && message_phase = 5
-			{
-			can_give_item = 0
-			message_phase = 0
-			first_tuto = 1
-			alarm[1] = 1
-			}
-		}
-		else
-		{
-			if (global.total_died >= 10)
+			if global.tutorial = 1 && can_give_item = 1 && give_healitem = 0
 			{
 				if !instance_exists(check__) && message_phase = 0
 				{
@@ -243,7 +193,7 @@ global.playing_scene = 1
 				if !instance_exists(check__) && message_phase = 1
 				{
 				check__ = instance_create_depth(x,y,depth-1,player_message)
-				check__.text = "왁굳님! 꽤 힘들어 보이는데 괜찮으세요?"
+				check__.text = "왁굳님!"
 				check__.target = id
 				check__.parents = id
 				}
@@ -251,7 +201,7 @@ global.playing_scene = 1
 				if !instance_exists(check__) && message_phase = 2
 				{
 				check__ = instance_create_depth(x,y,depth-1,player_message)
-				check__.text = "도움이 될지 모르겠지만, 이거 받으세요!"
+				check__.text = "도움이 될지 모르겠지만, 이거 받으세여"
 				check__.target = id
 				check__.parents = id
 				}
@@ -262,19 +212,147 @@ global.playing_scene = 1
 				check__.text = "(악세사리을 건네받았다!)"
 				check__.target = player.id
 				check__.parents = id
-				give_item(1,14)
+				give_item(1,2)
 				}
 		
 				if !instance_exists(check__) && message_phase = 4
 				{
 				check__ = instance_create_depth(x,y,depth-1,player_message)
-				check__.text = "힘들 때 사용하면 체력이 오를 거예요! 화이팅!"
+				check__.text = "그럼 화이팅!"
 				check__.target = id
 				check__.parents = id
-				give_healitem = 0
 				}
-				
+			
 				if !instance_exists(check__) && message_phase = 5
+				{
+				can_give_item = 0
+				message_phase = 0
+				first_tuto = 1
+				alarm[1] = 1
+				}
+			}
+			else
+			{
+				if (global.total_died >= 10)
+				{
+					if !instance_exists(check__) && message_phase = 0
+					{
+					image_xscale = sign_k(x - player.x)
+					check__ = instance_create_depth(x,y,depth-1,player_message)
+					check__.text = "!"
+					check__.target = player.id
+					check__.parents = id
+					}
+		
+					if !instance_exists(check__) && message_phase = 1
+					{
+					check__ = instance_create_depth(x,y,depth-1,player_message)
+					check__.text = "왁굳님! 꽤 힘들어 보이는데 괜찮으세요?"
+					check__.target = id
+					check__.parents = id
+					}
+		
+					if !instance_exists(check__) && message_phase = 2
+					{
+					check__ = instance_create_depth(x,y,depth-1,player_message)
+					check__.text = "도움이 될지 모르겠지만, 이거 받으세요!"
+					check__.target = id
+					check__.parents = id
+					}
+		
+					if !instance_exists(check__) && message_phase = 3
+					{
+					check__ = instance_create_depth(x,y,depth-1,player_message)
+					check__.text = "(악세사리을 건네받았다!)"
+					check__.target = player.id
+					check__.parents = id
+					give_item(1,14)
+					}
+		
+					if !instance_exists(check__) && message_phase = 4
+					{
+					check__ = instance_create_depth(x,y,depth-1,player_message)
+					check__.text = "힘들 때 사용하면 체력이 오를 거예요! 화이팅!"
+					check__.target = id
+					check__.parents = id
+					give_healitem = 0
+					}
+				
+					if !instance_exists(check__) && message_phase = 5
+					{
+					message_phase = 0
+					alarm[1] = 1
+					}
+				}
+				else
+				{
+					if !instance_exists(check__) && message_phase = 0
+					{
+					image_xscale = sign_k(x - player.x)
+					check__ = instance_create_depth(x,y,depth-1,player_message)
+					check__.text = "!"
+					check__.target = player.id
+					check__.parents = id
+					}
+			
+					if !instance_exists(check__) && message_phase = 1
+					{
+					check__ = instance_create_depth(x,y,depth-1,player_message)
+					check__.text = "(아이네다)"
+					check__.target = player.id
+					check__.parents = id
+					can_interect = 0
+					}
+			
+					if !instance_exists(check__) && message_phase = 2
+					{
+					message_phase = 0
+					alarm[1] = 1
+					}
+				}
+			}
+		}
+		
+		if image_index = 1
+		{
+			if global.tutorial = 1 && can_give_item = 1
+			{
+				if !instance_exists(check__) && message_phase = 0
+				{
+				image_xscale = sign_k(x - player.x)
+				check__ = instance_create_depth(x,y,depth-1,player_message)
+				check__.text = "와! 왁굳님!"
+				check__.target = id
+				check__.parents = id
+				can_interect = 0
+				}
+			
+				if !instance_exists(check__) && message_phase = 1
+				{
+				check__ = instance_create_depth(x,y,depth-1,player_message)
+				check__.text = "도움이 될지 모르겠지만, 이거 받으세여"
+				check__.target = id
+				check__.parents = id
+				}
+			
+				if !instance_exists(check__) && message_phase = 2
+				{
+				check__ = instance_create_depth(x,y,depth-1,player_message)
+				check__.text = "(악세사리을 건네받았다!)"
+				check__.target = player.id
+				check__.parents = id
+				give_item(1,5)
+				}
+			
+				if !instance_exists(check__) && message_phase = 3
+				{
+				check__ = instance_create_depth(x,y,depth-1,player_message)
+				check__.text = "화이팅!"
+				check__.target = id
+				check__.parents = id
+				}
+			
+				if !instance_exists(check__) && message_phase = 4
 				{
 				message_phase = 0
 				alarm[1] = 1
@@ -294,7 +372,285 @@ global.playing_scene = 1
 				if !instance_exists(check__) && message_phase = 1
 				{
 				check__ = instance_create_depth(x,y,depth-1,player_message)
-				check__.text = "(아이네다)"
+				check__.text = "(주르르다)"
+				check__.target = player.id
+				check__.parents = id
+				can_interect = 0
+				}
+			
+				if !instance_exists(check__) && message_phase = 2
+				{
+				message_phase = 0
+				alarm[1] = 1
+				}
+			}
+		}
+	
+		if image_index = 2
+		{
+			if global.tutorial = 1 && can_give_item = 1
+			{
+				if !instance_exists(check__) && message_phase = 0
+				{
+				image_xscale = sign_k(x - player.x)
+				check__ = instance_create_depth(x,y,depth-1,player_message)
+				check__.text = "헉! 왁굳님이다!"
+				check__.target = id
+				check__.parents = id
+				can_interect = 0
+				}
+			
+				if !instance_exists(check__) && message_phase = 1
+				{
+				check__ = instance_create_depth(x,y,depth-1,player_message)
+				check__.text = "선물로 이거 드릴게여"
+				check__.target = id
+				check__.parents = id
+				}
+			
+				if !instance_exists(check__) && message_phase = 2
+				{
+				check__ = instance_create_depth(x,y,depth-1,player_message)
+				check__.text = "(악세사리을 건네받았다!)"
+				check__.target = player.id
+				check__.parents = id
+				give_item(1,7)
+				}
+			
+				if !instance_exists(check__) && message_phase = 3
+				{
+				check__ = instance_create_depth(x,y,depth-1,player_message)
+				check__.text = "화이팅!"
+				check__.target = id
+				check__.parents = id
+				}
+			
+				if !instance_exists(check__) && message_phase = 4
+				{
+				message_phase = 0
+				alarm[1] = 1
+				}
+			}
+			else
+			{
+				if !instance_exists(check__) && message_phase = 0
+				{
+				image_xscale = sign_k(x - player.x)
+				check__ = instance_create_depth(x,y,depth-1,player_message)
+				check__.text = "!"
+				check__.target = player.id
+				check__.parents = id
+				}
+			
+				if !instance_exists(check__) && message_phase = 1
+				{
+				check__ = instance_create_depth(x,y,depth-1,player_message)
+				check__.text = "(고세구다)"
+				check__.target = player.id
+				check__.parents = id
+				can_interect = 0
+				}
+			
+				if !instance_exists(check__) && message_phase = 2
+				{
+				message_phase = 0
+				alarm[1] = 1
+				}
+			}
+		}
+	
+	
+		if image_index = 3
+		{
+			if global.tutorial = 1 && can_give_item = 1
+			{
+				if !instance_exists(check__) && message_phase = 0
+				{
+				image_xscale = sign_k(x - player.x)
+				check__ = instance_create_depth(x,y,depth-1,player_message)
+				check__.text = "와! 왁굳님!"
+				check__.target = id
+				check__.parents = id
+				can_interect = 0
+				}
+			
+				if !instance_exists(check__) && message_phase = 1
+				{
+				check__ = instance_create_depth(x,y,depth-1,player_message)
+				check__.text = "도움이 될지 모르겠지만, 이거 받으세여"
+				check__.target = id
+				check__.parents = id
+				}
+			
+				if !instance_exists(check__) && message_phase = 2
+				{
+				check__ = instance_create_depth(x,y,depth-1,player_message)
+				check__.text = "(악세사리을 건네받았다!)"
+				check__.target = player.id
+				check__.parents = id
+				give_item(1,12)
+				}
+			
+				if !instance_exists(check__) && message_phase = 3
+				{
+				check__ = instance_create_depth(x,y,depth-1,player_message)
+				check__.text = "화이팅!"
+				check__.target = id
+				check__.parents = id
+				}
+			
+				if !instance_exists(check__) && message_phase = 4
+				{
+				message_phase = 0
+				alarm[1] = 1
+				}
+			}
+			else
+			{
+				if !instance_exists(check__) && message_phase = 0
+				{
+				image_xscale = sign_k(x - player.x)
+				check__ = instance_create_depth(x,y,depth-1,player_message)
+				check__.text = "!"
+				check__.target = player.id
+				check__.parents = id
+				}
+			
+				if !instance_exists(check__) && message_phase = 1
+				{
+				check__ = instance_create_depth(x,y,depth-1,player_message)
+				check__.text = "(비챤이다)"
+				check__.target = player.id
+				check__.parents = id
+				can_interect = 0
+				}
+			
+				if !instance_exists(check__) && message_phase = 2
+				{
+				message_phase = 0
+				alarm[1] = 1
+				}
+			}
+		}
+	
+	
+		if image_index = 4
+		{
+			if global.tutorial = 1 && can_give_item = 1
+			{
+				if !instance_exists(check__) && message_phase = 0
+				{
+				image_xscale = sign_k(x - player.x)
+				check__ = instance_create_depth(x,y,depth-1,player_message)
+				check__.text = "와! 왁굳님!"
+				check__.target = id
+				check__.parents = id
+				can_interect = 0
+				}
+			
+				if !instance_exists(check__) && message_phase = 1
+				{
+				check__ = instance_create_depth(x,y,depth-1,player_message)
+				check__.text = "왁굳님 이거 받으세영"
+				check__.target = id
+				check__.parents = id
+				}
+			
+				if !instance_exists(check__) && message_phase = 2
+				{
+				check__ = instance_create_depth(x,y,depth-1,player_message)
+				check__.text = "(악세사리을 건네받았다!)"
+				check__.target = player.id
+				check__.parents = id
+				give_item(1,6)
+				}
+			
+				if !instance_exists(check__) && message_phase = 3
+				{
+				message_phase = 0
+				alarm[1] = 1
+				}
+			}
+			else
+			{
+				if !instance_exists(check__) && message_phase = 0
+				{
+				image_xscale = sign_k(x - player.x)
+				check__ = instance_create_depth(x,y,depth-1,player_message)
+				check__.text = "!"
+				check__.target = player.id
+				check__.parents = id
+				}
+			
+				if !instance_exists(check__) && message_phase = 1
+				{
+				check__ = instance_create_depth(x,y,depth-1,player_message)
+				check__.text = "(징버거다)"
+				check__.target = player.id
+				check__.parents = id
+				can_interect = 0
+				}
+			
+				if !instance_exists(check__) && message_phase = 2
+				{
+				message_phase = 0
+				alarm[1] = 1
+				}
+			}
+		}
+	
+		if image_index = 5
+		{
+			if global.tutorial = 1 && can_give_item = 1
+			{
+				if !instance_exists(check__) && message_phase = 0
+				{
+				image_xscale = sign_k(x - player.x)
+				check__ = instance_create_depth(x,y,depth-1,player_message)
+				check__.text = "와! 왁굳님!"
+				check__.target = id
+				check__.parents = id
+				can_interect = 0
+				}
+			
+				if !instance_exists(check__) && message_phase = 1
+				{
+				check__ = instance_create_depth(x,y,depth-1,player_message)
+				check__.text = "선물이예요!"
+				check__.target = id
+				check__.parents = id
+				}
+			
+				if !instance_exists(check__) && message_phase = 2
+				{
+				check__ = instance_create_depth(x,y,depth-1,player_message)
+				check__.text = "(악세사리을 건네받았다!)"
+				check__.target = player.id
+				check__.parents = id
+				give_item(1,13)
+				}
+			
+				if !instance_exists(check__) && message_phase = 3
+				{
+				message_phase = 0
+				alarm[1] = 1
+				}
+			}
+			else
+			{
+				if !instance_exists(check__) && message_phase = 0
+				{
+				image_xscale = sign_k(x - player.x)
+				check__ = instance_create_depth(x,y,depth-1,player_message)
+				check__.text = "!"
+				check__.target = player.id
+				check__.parents = id
+				}
+			
+				if !instance_exists(check__) && message_phase = 1
+				{
+				check__ = instance_create_depth(x,y,depth-1,player_message)
+				check__.text = "(릴파다)"
 				check__.target = player.id
 				check__.parents = id
 				can_interect = 0
@@ -308,355 +664,58 @@ global.playing_scene = 1
 			}
 		}
 	}
+	else
+	{
+		if !instance_exists(check__) && message_phase = 0
+		{
+		check__ = instance_create_depth(x,y,depth-1,player_message)
+		check__.text = "..."
+		check__.target = player.id
+		check__.parents = id
+		can_interect = 0
+		}
 		
-	if image_index = 1
-	{
-		if global.tutorial = 1 && can_give_item = 1
+		if !instance_exists(check__) && message_phase = 1
 		{
-			if !instance_exists(check__) && message_phase = 0
-			{
-			image_xscale = sign_k(x - player.x)
-			check__ = instance_create_depth(x,y,depth-1,player_message)
-			check__.text = "와! 왁굳님!"
-			check__.target = id
-			check__.parents = id
-			can_interect = 0
-			}
-			
-			if !instance_exists(check__) && message_phase = 1
-			{
-			check__ = instance_create_depth(x,y,depth-1,player_message)
-			check__.text = "도움이 될지 모르겠지만, 이거 받으세여"
-			check__.target = id
-			check__.parents = id
-			}
-			
-			if !instance_exists(check__) && message_phase = 2
-			{
-			check__ = instance_create_depth(x,y,depth-1,player_message)
-			check__.text = "(악세사리을 건네받았다!)"
-			check__.target = player.id
-			check__.parents = id
-			give_item(1,5)
-			}
-			
-			if !instance_exists(check__) && message_phase = 3
-			{
-			check__ = instance_create_depth(x,y,depth-1,player_message)
-			check__.text = "화이팅!"
-			check__.target = id
-			check__.parents = id
-			}
-			
-			if !instance_exists(check__) && message_phase = 4
-			{
-			message_phase = 0
-			alarm[1] = 1
-			}
+		check__ = instance_create_depth(x,y,depth-1,player_message)
+		check__.text = "헉!"
+		check__.target = id
+		check__.parents = id
+		can_interect = 0
 		}
-		else
+		
+		if !instance_exists(check__) && message_phase = 2
 		{
-			if !instance_exists(check__) && message_phase = 0
-			{
-			image_xscale = sign_k(x - player.x)
-			check__ = instance_create_depth(x,y,depth-1,player_message)
-			check__.text = "!"
-			check__.target = player.id
-			check__.parents = id
-			}
-			
-			if !instance_exists(check__) && message_phase = 1
-			{
-			check__ = instance_create_depth(x,y,depth-1,player_message)
-			check__.text = "(주르르다)"
-			check__.target = player.id
-			check__.parents = id
-			can_interect = 0
-			}
-			
-			if !instance_exists(check__) && message_phase = 2
-			{
-			message_phase = 0
-			alarm[1] = 1
-			}
+		check__ = instance_create_depth(x,y,depth-1,player_message)
+		check__.text = "그게 정말 사실이예요?"
+		check__.target = id
+		check__.parents = id
+		can_interect = 0
 		}
-	}
-	
-	if image_index = 2
-	{
-		if global.tutorial = 1 && can_give_item = 1
+		
+		if !instance_exists(check__) && message_phase = 3
 		{
-			if !instance_exists(check__) && message_phase = 0
-			{
-			image_xscale = sign_k(x - player.x)
-			check__ = instance_create_depth(x,y,depth-1,player_message)
-			check__.text = "헉! 왁굳님이다!"
-			check__.target = id
-			check__.parents = id
-			can_interect = 0
-			}
-			
-			if !instance_exists(check__) && message_phase = 1
-			{
-			check__ = instance_create_depth(x,y,depth-1,player_message)
-			check__.text = "선물로 이거 드릴게여"
-			check__.target = id
-			check__.parents = id
-			}
-			
-			if !instance_exists(check__) && message_phase = 2
-			{
-			check__ = instance_create_depth(x,y,depth-1,player_message)
-			check__.text = "(악세사리을 건네받았다!)"
-			check__.target = player.id
-			check__.parents = id
-			give_item(1,7)
-			}
-			
-			if !instance_exists(check__) && message_phase = 3
-			{
-			check__ = instance_create_depth(x,y,depth-1,player_message)
-			check__.text = "화이팅!"
-			check__.target = id
-			check__.parents = id
-			}
-			
-			if !instance_exists(check__) && message_phase = 4
-			{
-			message_phase = 0
-			alarm[1] = 1
-			}
+		check__ = instance_create_depth(x,y,depth-1,player_message)
+		check__.text = "천양님이랑 팬치들한테도 전해둘게요!"
+		check__.target = id
+		check__.parents = id
+		can_interect = 0
 		}
-		else
+		
+		if !instance_exists(check__) && message_phase = 4
 		{
-			if !instance_exists(check__) && message_phase = 0
-			{
-			image_xscale = sign_k(x - player.x)
-			check__ = instance_create_depth(x,y,depth-1,player_message)
-			check__.text = "!"
-			check__.target = player.id
-			check__.parents = id
-			}
-			
-			if !instance_exists(check__) && message_phase = 1
-			{
-			check__ = instance_create_depth(x,y,depth-1,player_message)
-			check__.text = "(고세구다)"
-			check__.target = player.id
-			check__.parents = id
-			can_interect = 0
-			}
-			
-			if !instance_exists(check__) && message_phase = 2
-			{
-			message_phase = 0
-			alarm[1] = 1
-			}
+		check__ = instance_create_depth(x,y,depth-1,player_message)
+		check__.text = "왁굳님은 빨리 왁드로이드를 처치하러 가세요!"
+		check__.target = id
+		check__.parents = id
+		can_interect = 0
 		}
-	}
-	
-	
-	if image_index = 3
-	{
-		if global.tutorial = 1 && can_give_item = 1
+		
+		if !instance_exists(check__) && message_phase = 5
 		{
-			if !instance_exists(check__) && message_phase = 0
-			{
-			image_xscale = sign_k(x - player.x)
-			check__ = instance_create_depth(x,y,depth-1,player_message)
-			check__.text = "와! 왁굳님!"
-			check__.target = id
-			check__.parents = id
-			can_interect = 0
-			}
-			
-			if !instance_exists(check__) && message_phase = 1
-			{
-			check__ = instance_create_depth(x,y,depth-1,player_message)
-			check__.text = "도움이 될지 모르겠지만, 이거 받으세여"
-			check__.target = id
-			check__.parents = id
-			}
-			
-			if !instance_exists(check__) && message_phase = 2
-			{
-			check__ = instance_create_depth(x,y,depth-1,player_message)
-			check__.text = "(악세사리을 건네받았다!)"
-			check__.target = player.id
-			check__.parents = id
-			give_item(1,12)
-			}
-			
-			if !instance_exists(check__) && message_phase = 3
-			{
-			check__ = instance_create_depth(x,y,depth-1,player_message)
-			check__.text = "화이팅!"
-			check__.target = id
-			check__.parents = id
-			}
-			
-			if !instance_exists(check__) && message_phase = 4
-			{
-			message_phase = 0
-			alarm[1] = 1
-			}
-		}
-		else
-		{
-			if !instance_exists(check__) && message_phase = 0
-			{
-			image_xscale = sign_k(x - player.x)
-			check__ = instance_create_depth(x,y,depth-1,player_message)
-			check__.text = "!"
-			check__.target = player.id
-			check__.parents = id
-			}
-			
-			if !instance_exists(check__) && message_phase = 1
-			{
-			check__ = instance_create_depth(x,y,depth-1,player_message)
-			check__.text = "(비챤이다)"
-			check__.target = player.id
-			check__.parents = id
-			can_interect = 0
-			}
-			
-			if !instance_exists(check__) && message_phase = 2
-			{
-			message_phase = 0
-			alarm[1] = 1
-			}
-		}
-	}
-	
-	
-	if image_index = 4
-	{
-		if global.tutorial = 1 && can_give_item = 1
-		{
-			if !instance_exists(check__) && message_phase = 0
-			{
-			image_xscale = sign_k(x - player.x)
-			check__ = instance_create_depth(x,y,depth-1,player_message)
-			check__.text = "와! 왁굳님!"
-			check__.target = id
-			check__.parents = id
-			can_interect = 0
-			}
-			
-			if !instance_exists(check__) && message_phase = 1
-			{
-			check__ = instance_create_depth(x,y,depth-1,player_message)
-			check__.text = "왁굳님 이거 받으세영"
-			check__.target = id
-			check__.parents = id
-			}
-			
-			if !instance_exists(check__) && message_phase = 2
-			{
-			check__ = instance_create_depth(x,y,depth-1,player_message)
-			check__.text = "(악세사리을 건네받았다!)"
-			check__.target = player.id
-			check__.parents = id
-			give_item(1,6)
-			}
-			
-			if !instance_exists(check__) && message_phase = 3
-			{
-			message_phase = 0
-			alarm[1] = 1
-			}
-		}
-		else
-		{
-			if !instance_exists(check__) && message_phase = 0
-			{
-			image_xscale = sign_k(x - player.x)
-			check__ = instance_create_depth(x,y,depth-1,player_message)
-			check__.text = "!"
-			check__.target = player.id
-			check__.parents = id
-			}
-			
-			if !instance_exists(check__) && message_phase = 1
-			{
-			check__ = instance_create_depth(x,y,depth-1,player_message)
-			check__.text = "(징버거다)"
-			check__.target = player.id
-			check__.parents = id
-			can_interect = 0
-			}
-			
-			if !instance_exists(check__) && message_phase = 2
-			{
-			message_phase = 0
-			alarm[1] = 1
-			}
-		}
-	}
-	
-	if image_index = 5
-	{
-		if global.tutorial = 1 && can_give_item = 1
-		{
-			if !instance_exists(check__) && message_phase = 0
-			{
-			image_xscale = sign_k(x - player.x)
-			check__ = instance_create_depth(x,y,depth-1,player_message)
-			check__.text = "와! 왁굳님!"
-			check__.target = id
-			check__.parents = id
-			can_interect = 0
-			}
-			
-			if !instance_exists(check__) && message_phase = 1
-			{
-			check__ = instance_create_depth(x,y,depth-1,player_message)
-			check__.text = "선물이예요!"
-			check__.target = id
-			check__.parents = id
-			}
-			
-			if !instance_exists(check__) && message_phase = 2
-			{
-			check__ = instance_create_depth(x,y,depth-1,player_message)
-			check__.text = "(악세사리을 건네받았다!)"
-			check__.target = player.id
-			check__.parents = id
-			give_item(1,13)
-			}
-			
-			if !instance_exists(check__) && message_phase = 3
-			{
-			message_phase = 0
-			alarm[1] = 1
-			}
-		}
-		else
-		{
-			if !instance_exists(check__) && message_phase = 0
-			{
-			image_xscale = sign_k(x - player.x)
-			check__ = instance_create_depth(x,y,depth-1,player_message)
-			check__.text = "!"
-			check__.target = player.id
-			check__.parents = id
-			}
-			
-			if !instance_exists(check__) && message_phase = 1
-			{
-			check__ = instance_create_depth(x,y,depth-1,player_message)
-			check__.text = "(릴파다)"
-			check__.target = player.id
-			check__.parents = id
-			can_interect = 0
-			}
-			
-			if !instance_exists(check__) && message_phase = 2
-			{
-			message_phase = 0
-			alarm[1] = 1
-			}
+		global.real_ending = 1
+		message_phase = 4
+		alarm[1] = 1
 		}
 	}
 }

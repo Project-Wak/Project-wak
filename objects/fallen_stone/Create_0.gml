@@ -8,3 +8,4 @@ image_speed = 0
 w_alpha = 0.3
 image_angle = irandom_range(0,360)
 water_placed = 0
+saved_y = -4

@@ -167,6 +167,11 @@ if explo_anime >= 2
 				{
 				obj_wakdroid_ending.message_phase = 50
 				}
+				
+				with(fallen_stone)
+				{
+				saved_y = y
+				}
 			player.x -= 300
 			player.guarding = 0
 			global.playing_scene = 0

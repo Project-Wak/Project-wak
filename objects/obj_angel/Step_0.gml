@@ -681,10 +681,13 @@ activated = 2
 		
 		if w_alpha >= 1
 		{
-		var effect_ = instance_create_depth(player.x,obj_angel.y+190,player.depth+1,down_effect)
-		effect_.t_image_xscale = 0.7*6
-		effect_.t_image_yscale = 0.05*6
-		effect_.received = 0
+			if w_alpha = 1
+			{
+			var effect_ = instance_create_depth(player.x,obj_angel.y+220,player.depth+1,down_effect)
+			effect_.t_image_xscale = 0.7*6
+			effect_.t_image_yscale = 0.05*6
+			effect_.received = 0
+			}
 			
 			repeat(2)
 			{

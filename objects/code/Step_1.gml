@@ -185,6 +185,17 @@ global.slow_motion += global.slow_motion*0.03
 		global.boss_target = -4
 		global.gameover_reason = -4
 		global.total_died ++
+		
+		if instance_exists(obj_wakdroid_ending)
+		{
+		global.platform_speed = 0
+		room_goto(room_main)
+		player.x = 1213
+		player.y = 662
+		global.back_to_origin_stage = 2
+		global.b_alpha = 0
+		alarm[5] = 300
+		}
 	
 		var _revive_xx = -4
 		var _revive_yy = -4
@@ -198,7 +209,7 @@ global.slow_motion += global.slow_motion*0.03
 		{
 		global.platform_speed = 0
 		room_goto(room_main)
-		player.x = 3164
+		player.x = 1213
 		player.y = 662
 		global.back_to_origin_stage = 2
 		alarm[5] = 300
@@ -437,7 +448,7 @@ global.slow_motion += global.slow_motion*0.03
 		{
 			if global.gameover_reason = -4
 			{
-			global.gameover_reason = "플레이어가 사망했다 [게임오버 엔딩]"
+			global.gameover_reason = "[게임오버 엔딩]\n플레이어가 사망했다"
 			}
 		global.gameover += (1 - global.gameover)*0.03
 		}

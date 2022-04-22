@@ -628,7 +628,7 @@ w_alpha += (-0.01 - w_alpha)*0.1
 	
 	if image_alpha != 0
 	{
-		if global.hp <= 0 && global.in_practice = 0 && global.slow_motion = 0 && global.never_move = 0 && global.never_move_in_setting = 0
+		if global.hp <= 0 && ((global.in_practice = 0 && global.slow_motion = 0 && global.never_move = 0 && global.never_move_in_setting = 0) || (instance_exists(obj_wakdroid_ending) && global.slow_motion = 0))
 		{
 		var message_1 = ("Tip : 올려치기("+string(global.w_key)+") 혹은 회전베기("+string(global.q_key)+")를 사용해보세요")
 		var message_2 = ("Tip : 기절상태에서 점프(Space) 혹은 구르기(아래 방향키)시 빠르게 기절을 풀수 있습니다")
@@ -643,7 +643,10 @@ w_alpha += (-0.01 - w_alpha)*0.1
 		global.slow_motion = 1;
 		room_speed = 15;
 		global.never_move = 1
-		global.w_alpha = 1;
+			if !instance_exists(obj_wakdroid_ending)
+			{
+			global.w_alpha = 1;
+			}
 		code.sepa_power += irandom_range(15,20)*choose(-1,1)
 		code.sepa_alpha = 1.2
 		//var a___ = audio_play_sound(last_scene,0,0)
@@ -4769,8 +4772,6 @@ cooltime = 1
 
 	if attack_sfx_on = 0 && (floor(image_index) = 5)
 	{
-	global.stemina -= 1
-	global.stemina_cooltime = 0
 	sfx_for_multiplayer(swing_sfx2,0,0.4)
 	sfx_for_multiplayer(swing_lightsaber_sfx2,0,0.1)
 

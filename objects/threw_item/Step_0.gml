@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-image_angle -= hspeed*0.7
+image_angle -= hspeed*2
 w_alpha += (-0.01 - w_alpha)*0.1
 if x > obj_wakdroid_ending.x-40
 {

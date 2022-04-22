@@ -53,6 +53,7 @@ cannot_step = 1
 	global.gold += 12000
 	instance_destroy(_light_1)
 	instance_destroy()
+	instance_destroy(skill_red_ball_effect_rage)
 	}
 }
 else
@@ -638,7 +639,7 @@ else
 
 			if patturn = 4.2
 			{
-			var _aaa = instance_create_depth(x-random_dir*24,y-16,depth-1,effect_special_skill_sec_attacked)
+			_aaa = instance_create_depth(x-random_dir*24,y-16,depth-1,effect_special_skill_sec_attacked)
 			_aaa.image_angle = point_direction(x,y,player.x,player.y)-90
 			_aaa.direction = point_direction(x,y,player.x,player.y)-90
 			view_shake(11,11,1)
@@ -648,9 +649,15 @@ else
 			sfx_for_multiplayer(choose(swing_lightsaber_sfx2,swing_lightsaber_sfx3),0,0.1)
 			}
 			
+			if instance_exists(_aaa)
+			{
+			_aaa.image_angle = point_direction(x,y,player.x,player.y)-90
+			_aaa.direction = point_direction(x,y,player.x,player.y)-90
+			}
+			
 			if patturn > 4.33
 			{
-				if !instance_exists(effect_special_skill_sec_attacked)
+				if !instance_exists(_aaa)
 				{
 				patturn = 0
 				var xx___ = x

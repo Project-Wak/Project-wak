@@ -60,8 +60,11 @@ interecting_now = 1
 
 if interecting_now = 1
 {
-global.never_move = 1
-global.playing_scene = 1
+	if message_phase != 60 && message_phase != 61 && message_phase != 64 && !instance_exists(check__)
+	{
+	global.never_move = 1
+	global.playing_scene = 1
+	}
 
 	if !instance_exists(check__) && message_phase = 0
 	{
@@ -235,7 +238,7 @@ global.playing_scene = 1
 	player.guarding = 1
 	player.image_alpha += (0.8-irandom_range(30,10)/100 - player.image_alpha)*0.07
 	global.show_guide_mes_spr = 6
-	global.show_guide_mes = "(몸이 점점 사라지고 있다)"
+	global.show_guide_mes = "(몸이 점점 사라져간다)"
 	message_phase++
 	}
 	
@@ -243,11 +246,20 @@ global.playing_scene = 1
 	{
 	player.guarding = 1
 	}
+	
+	if !instance_exists(check__) && message_phase = 9
+	{
+	check__ = instance_create_depth(x,y,depth-1,player_message)
+	check__.text = "..."
+	check__.target = player.id
+	check__.parents = id
+	}
 
-	if !instance_exists(check__) && global.show_guide_mes = -4 && message_phase = 9
+	if !instance_exists(check__) && global.show_guide_mes = -4 && message_phase = 10
 	{
 		if __sfx__ = 0 && player.image_alpha < 0.1
 		{
+		instance_destroy(check__)
 		var sfx = audio_play_sound(glow_sfx,0,0)
 		audio_sound_gain(sfx,0.2*global.master_volume*2*global.sfx_volume,0)
 		__sfx__ = 1
@@ -255,28 +267,39 @@ global.playing_scene = 1
 	player.image_alpha += (-0.01 - player.image_alpha)*0.03
 	depth = obj_camera.depth-10
 	audio_stop_sound(ending_select)
-		if !audio_is_playing(it_s_over)
+		if timer2 > 50
 		{
-		var sfx = audio_play_sound(it_s_over,0,true)
-		audio_sound_gain(sfx,0.23*global.master_volume*2*global.bgm_volume,0)
+		obj_camera.t_y = player.y-ending_mes_timer-timer2*0.5
 		}
-	global.gameover_reason = "[소멸 엔딩]\n과거로 보낸 왁드로이드로 인해 과거의 플레이어가 사망하여 없어지자\n현재의 플레이어 또한 없어져 버렸다"
-	show_ending += (1 - show_ending)*0.01
-	obj_camera.t_y = player.y-ending_mes_timer
-	global.fix_camera = 0
-	ending_mes_timer += 0.5
-
-		if ending_mes_timer > 150
+	
+		if timer2 > 170
 		{
-		global.credit_b_alpha += 0.0012
-			if ending_mes_timer > 450
+			if !audio_is_playing(it_s_over)
 			{
-			message_phase = 10
+			var sfx = audio_play_sound(it_s_over,0,true)
+			audio_sound_gain(sfx,0.23*global.master_volume*2*global.bgm_volume,0)
 			}
+		global.gameover_reason = "[소멸 엔딩]\n과거로 보낸 왁드로이드로 인해 과거의 자신이 사망하여 없어졌기에\n현재의 자신 또한 존재할 수 없게 되었다"
+		show_ending += (1 - show_ending)*0.01
+		global.fix_camera = 0
+		ending_mes_timer += 0.5
+
+			if ending_mes_timer > 150
+			{
+			global.credit_b_alpha += 0.0012
+				if ending_mes_timer > 450
+				{
+				message_phase = 11
+				}
+			}
+		}
+		else
+		{
+		timer2 ++
 		}
 	}
 	
-	if message_phase = 10
+	if message_phase = 11
 	{
 	global.credit_b_alpha += 0.0012
 	obj_camera.t_y = player.y-ending_mes_timer
@@ -425,41 +448,108 @@ global.playing_scene = 1
 	}
 	
 	//사망 회귀 엔딩
-	if !instance_exists(check__) && message_phase = 57
+	if message_phase = 57
 	{
-	check__ = instance_create_depth(x,y,depth-1,player_message)
-	check__.text = "..."
-	check__.target = player.id
-	check__.parents = id
+	volume__ += (-0.01 - volume__)*0.1
+		if !instance_exists(check__)
+		{
+		check__ = instance_create_depth(x,y,depth-1,player_message)
+		check__.text = "..."
+		check__.target = player.id
+		check__.parents = id
+		}
 	}
 	
-	if !instance_exists(check__) && message_phase = 58
+	if message_phase = 58
 	{
-	global.show_guide_mes_spr = 6
-	global.show_guide_mes = "(이 상황을 바꾸기 위해선)"
-	message_phase++
+	volume__ += (-0.01 - volume__)*0.1
+		if !instance_exists(check__)
+		{
+		global.show_guide_mes_spr = 6
+		global.show_guide_mes = "(이 상황을 바꾸기 위해선)"
+		message_phase++
+		}
 	}
 	
-	if !instance_exists(check__) && global.show_guide_mes = -4 && message_phase = 58
+	if !instance_exists(check__) && global.show_guide_mes = -4 && message_phase = 59
 	{
 	global.show_guide_mes_spr = 6
 	global.show_guide_mes = "(되돌려야만 한다)"
 	message_phase++
 	}
 	
-	if !instance_exists(check__) && message_phase = 59
+	if !instance_exists(check__) && message_phase = 60 && global.show_guide_mes = -4
 	{
 	player.suicide = 1
 	player.suicide_sfx = 0
+	message_phase ++
+	}
+	
+	if message_phase = 61
+	{
+		if !instance_exists(check__) && room = room_main && global.b_alpha < 0.1
+		{
+		check__ = instance_create_depth(x,y,depth-1,player_message)
+		check__.text = "!"
+		check__.target = player.id
+		check__.parents = id
+		}
+		
+		if room != room_main
+		{
+		global.w_alpha -= 0.05
+		global.playing_scene = 0
+		}
+	}
+	
+	if !instance_exists(check__) && message_phase = 62 && global.show_guide_mes = -4
+	{
+	global.show_guide_mes_spr = 6
+	global.show_guide_mes = "(빨리 왁드로이드의 자폭에 대한 사실을 알려야만 한다!)"
+	message_phase++
+	}
+	
+	if !instance_exists(check__) && message_phase = 63 && global.show_guide_mes = -4
+	{
+		if player.x < 1179
+		{
+		player.image_xscale = -1
+		global.movement_speed = 5.6
+		player.image_index += 0.8
+		}
+		else
+		{
+		message_phase++
+		}
+	}
+	
+	if !instance_exists(check__) && message_phase = 64 && global.show_guide_mes = -4
+	{
+		if player.x < 1179
+		{
+		message_phase = 61
+		}
+		else
+		{
+		global.never_move = 0
+			if !instance_exists(player_message)
+			{
+			global.playing_scene = 0
+			}
+		}
 	}
 	
 	//도망자 엔딩
-	if !instance_exists(check__) && message_phase = 70
+	if message_phase = 70
 	{
-	check__ = instance_create_depth(x,y,depth-1,player_message)
-	check__.text = "..."
-	check__.target = player.id
-	check__.parents = id
+	volume__ += (-0.01 - volume__)*0.1
+		if !instance_exists(check__)
+		{
+		check__ = instance_create_depth(x,y,depth-1,player_message)
+		check__.text = "..."
+		check__.target = player.id
+		check__.parents = id
+		}
 	}
 	
 	if !instance_exists(check__) && message_phase = 71

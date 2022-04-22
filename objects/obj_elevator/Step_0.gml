@@ -40,6 +40,11 @@ if activated = 1
 	obj_camera.tv_y = 720*0.5
 	player.image_xscale = sign_k(player.x - real_t_x)
 	}
+	else
+	{
+	player.x = 1213
+	player.y = 733
+	}
 
 x += (t_x - x)*0.05
 y += (t_y - y)*0.05

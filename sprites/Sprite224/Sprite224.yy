@@ -77,8 +77,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "project wak",
-    "path": "project wak.yyp",
+    "name": "스프라이트",
+    "path": "folders/스프라이트.yy",
   },
   "resourceVersion": "1.0",
   "name": "Sprite224",

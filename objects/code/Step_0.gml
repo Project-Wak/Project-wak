@@ -84,7 +84,7 @@ global.platform_speed = 0
 			{
 				if global.slow_motion = 0
 				{
-				global.gameover_reason = "D-day가 지나, 박사의 왁드로이드가 완성되어버렸다 [멸망 엔딩]"
+				global.gameover_reason = "[멸망 엔딩]\nD-day가 지나, 박사의 왁드로이드가 완성되어버렸다"
 				global.never_move = 0
 				global.playing_scene = 0
 				global.slow_motion = 1

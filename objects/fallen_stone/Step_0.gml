@@ -8,24 +8,37 @@ w_alpha = 0.6
 image_angle -= hspeed*0.7
 
 
-if place_meeting(x,y-10,obj_floor_tile1)
+if saved_y != -4
 {
-gravity = 0
-vspeed += (0 - vspeed)*0.1
-hspeed += (0 - hspeed)*0.1
-}
-else
-{
-	if place_meeting(x,y,outside_water)
+	if obj_map_tile_outside.timer < 90
 	{
-	gravity = 0.08
+	y += (saved_y - y)*0.01
 	}
 	else
 	{
-	gravity = 0.02
+	y += (saved_y-4 - y)*0.01
 	}
 }
-
+else
+{
+	if place_meeting(x,y-10,obj_floor_tile1)
+	{
+	gravity = 0
+	vspeed += (0 - vspeed)*0.1
+	hspeed += (0 - hspeed)*0.1
+	}
+	else
+	{
+		if place_meeting(x,y,outside_water)
+		{
+		gravity = 0.08
+		}
+		else
+		{
+		gravity = 0.02
+		}
+	}
+}
 
 
 if water_placed = 0 && place_meeting(x,y,outside_water)

@@ -11,7 +11,7 @@ spin = 0
 random_dir = choose(-1,1)
 change_dir = 0
 global.got_sec_phase = 1
-
+_aaa = -4
 back_my_point = 0
 dead_scene = 0
 shake_boss = 1

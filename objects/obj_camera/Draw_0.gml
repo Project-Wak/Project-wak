@@ -13,6 +13,7 @@ if global.left_time > 0
 	{
 	var cal_days = floor(global.left_time/24)
 	var cal_night = "낮"
+	var cal_time = global.left_time - cal_days*24
 		if global.n_night = 1
 		{
 		cal_night = "밤"
@@ -24,14 +25,15 @@ if global.left_time > 0
 	draw_text_kl_scale(xx-175*v_x_,yy+50*v_x_,string(global.n_time)+":00"+" ("+string(cal_night)+")",64,-1,0.8,c_white,-1,-1,font0,v_x_/4,v_x_/4,0)
 	
 	
-	if instance_exists(obj_wakdroid) || instance_exists(obj_last_boss)
+	if instance_exists(obj_wakdroid) || instance_exists(obj_last_boss) || instance_exists(obj_wakdroid_ending)
 	{
 	cal_days = 0
+	cal_time = 0
 	}
 
 	draw_text_kl_scale(xx-113*v_x_,yy+32*v_x_,"/",64,-1,0.6,c_white,-1,-1,font0,v_x_/3,v_x_/1.5,0)
 	draw_text_kl_scale(xx-100*v_x_,yy+30*v_x_,"D-day",64,-1,0.6,c_white,-1,-1,font0,v_x_/3.5,v_x_/3.5,0)
-	draw_text_kl_scale(xx-95*v_x_,yy+50*v_x_,string(cal_days)+"일 "+string(global.left_time - cal_days*24)+"시간 남음",64,-1,0.6,c_white,-1,-1,font0,v_x_/4,v_x_/4,0)
+	draw_text_kl_scale(xx-95*v_x_,yy+50*v_x_,string(cal_days)+"일 "+string(cal_time)+"시간 남음",64,-1,0.6,c_white,-1,-1,font0,v_x_/4,v_x_/4,0)
 	}
 
 
@@ -45,19 +47,19 @@ var __ins = global.boss_target
 if global.boss_hp_alpha > 0
 {
 var _xx = camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5
-draw_sprite_ext(sprite20,0,_xx-190*v_x_,yy+626*v_x_,10*v_x_,2.21*v_x_,0,c_white,global.boss_hp_alpha)
+draw_sprite_ext(sprite20,0,_xx-220*v_x_,yy+626*v_x_,11.8*v_x_,2.21*v_x_,0,c_white,global.boss_hp_alpha)
 	if instance_exists(__ins)
 	{
 	draw_hp += (__ins.hp - draw_hp)*0.1
 		if m_hp != __ins.hp
 		{
-		draw_sprite_ext(sprite20,5,_xx-160*v_x_,yy+626*v_x_,(m_hp/__ins.max_hp)*10.1*v_x_,2.2*v_x_,0,c_white,global.boss_hp_alpha)
+		draw_sprite_ext(sprite20,5,_xx-190*v_x_,yy+626*v_x_,(m_hp/__ins.max_hp)*12.1*v_x_,2.2*v_x_,0,c_white,global.boss_hp_alpha)
 		}
-	draw_sprite_ext(sprite20,1,_xx-160*v_x_,yy+626*v_x_,(draw_hp/__ins.max_hp)*10.1*v_x_,2.2*v_x_,0,c_white,global.boss_hp_alpha)
+	draw_sprite_ext(sprite20,1,_xx-190*v_x_,yy+626*v_x_,(draw_hp/__ins.max_hp)*12.1*v_x_,2.2*v_x_,0,c_white,global.boss_hp_alpha)
 	}
 
-draw_text_kl_scale(_xx-165*v_x_,yy+598*v_x_,global.boss_name,64,-1,global.boss_hp_alpha,c_white,-1,-1,font0,v_x_*0.34,v_x_*0.34,0)
-draw_sprite_ext(boss_shower,0,_xx-180*v_x_,yy+626*v_x_,1*v_x_,1*v_x_,0,c_white,global.boss_hp_alpha)
+draw_text_kl_scale(_xx-195*v_x_,yy+598*v_x_,global.boss_name,64,-1,global.boss_hp_alpha,c_white,-1,-1,font0,v_x_*0.34,v_x_*0.34,0)
+draw_sprite_ext(boss_shower,0,_xx-210*v_x_,yy+626*v_x_,1*v_x_,1*v_x_,0,c_white,global.boss_hp_alpha)
 }
 
 
@@ -254,7 +256,7 @@ audio_stop_sound(boss_bgm)
 	}
 var xx_g = camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5
 var yy_g = camera_get_view_y(view_camera[0])+v_x_*250
-draw_text_kl_scale(xx_g,yy_g,"Game over",v_x_*64,-1,global.gameover,c_white,0,0,font_title,v_x_*0.7,v_x_*0.7,0);
+draw_text_kl_scale(xx_g,yy_g,"-The end-",v_x_*64,-1,global.gameover,c_white,0,0,font_title,v_x_*0.7,v_x_*0.7,0);
 draw_text_kl_scale(xx_g,yy_g+v_x_*100,"("+string(global.gameover_reason)+")",v_x_*64,-1,global.gameover*0.5,c_white,0,0,font_title,v_x_*0.15,v_x_*0.15,0);
 
 draw_text_kl_scale(xx+xxx-32*v_x_,yy+yyy-(70)*v_x_,"("+string(global.skip_key)+"키를 눌러 처음으로)",v_x_*64,-1,global.gameover*0.5,c_white,0,1,font0,v_x_*0.3,v_x_*0.3,0);

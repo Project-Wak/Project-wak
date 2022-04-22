@@ -104,7 +104,7 @@ var alpha = (global.show_credits-40)*0.8
 	alpha = 0.8
 	}
 	
-draw_text_k_scale(xx+wid*0.5,yy-v_x*(global.show_credits-940),string(global.credit_message)+"\n\n\n\n\n\n\n\n(아무키나 눌러 나가기)",200,-1,alpha,c_white,0,0,font_title,v_x/5,v_x/5,0)
+draw_text_k_scale(xx+wid*0.5,yy-v_x*(global.show_credits-940),"Credits"+string(global.credit_message)+"\n\n\n\n\n\n\n\n(아무키나 눌러 나가기)",200,-1,alpha,c_white,0,0,font_title,v_x/5,v_x/5,0)
 
 	if (keyboard_check_released(vk_anykey) || mouse_check_button_released(mb_any)) && global.show_credits > 30
 	{
