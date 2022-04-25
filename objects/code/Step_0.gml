@@ -1,5 +1,12 @@
 global.dev_message_alpha -= 0.08
 
+
+if global.nickname = -4
+{
+global.nickname = "왁굳"
+}
+
+
 if global.tiredness > 24
 {
 global.tiredness = 24
@@ -84,7 +91,18 @@ global.platform_speed = 0
 			{
 				if global.slow_motion = 0
 				{
-				global.gameover_reason = "[멸망 엔딩]\nD-day가 지나, 박사의 왁드로이드가 완성되어버렸다"
+				global.t_b_alpha = 1.01
+					
+					if instance_exists(obj_wakdroid_ending)
+					{
+					global.gameover_reason_title = "[회귀 불능 엔딩]"
+					global.gameover_reason = "과거로 되돌아가려고 했지만,\n시계가 완전히 망가져 버려 과거로 돌아갈 수 없게 되었다"
+					}
+					else
+					{
+					global.gameover_reason_title = "[종말 엔딩]"
+					global.gameover_reason = "D-day가 지나, 박사의 왁드로이드가 완성되어버렸다"
+					}
 				global.never_move = 0
 				global.playing_scene = 0
 				global.slow_motion = 1
@@ -95,7 +113,7 @@ global.platform_speed = 0
 			{
 				if global.never_move = 1
 				{
-				global.w_alpha += (playing_gameover_scene-70)/100
+				global.w_alpha += (playing_gameover_scene-70)/1000
 				}
 			}
 		}
@@ -113,6 +131,7 @@ global.platform_speed = 0
 			{
 				if instance_exists(obj_isedol)
 				{
+				obj_camera.x = obj_isedol.x
 				obj_camera.t_x = obj_isedol.x
 				obj_camera.t_y = obj_isedol.y
 				}
@@ -132,7 +151,7 @@ global.platform_speed = 0
 			view_shake(1,1.3,1)
 				if playing_gameover_scene >= 110
 				{
-				global.w_alpha += (playing_gameover_scene-110)/1000
+				global.w_alpha = (playing_gameover_scene-110)/1000
 				}
 			}
 		
@@ -207,13 +226,26 @@ global.stemina = 11
 
 if global.gold_for_draw != global.gold
 {
+var cal_gold = global.gold - global.gold_for_draw
 	if gold_sfx = 0 && room != menu
 	{
 	var sfx = audio_play_sound(buy_item,0,0)
 	audio_sound_gain(sfx,0.07*global.master_volume*2*global.sfx_volume,0)
+	
+	var d_ef = instance_create_depth(player.x,player.y-16,depth-1,draw_hp_m)
+	var text__ = string(cal_gold)+"G"
+	if global.korean_text = 1
+	{
+	text__ = string(cal_gold)+"골드"
+	}
+	d_ef.d_text = text__
+	d_ef.image_blend = c_white
+	d_ef.image_xscale = 1
+	d_ef.image_yscale = 1
+	d_ef.target = -4
 	gold_sfx = 1
 	}
-global.gold_for_draw += (global.gold - global.gold_for_draw)*0.08
+global.gold_for_draw += (cal_gold)*0.08
 global.gold_draw_alpha += (13000 - global.gold_draw_alpha)*0.1
 	if abs(global.gold_for_draw - global.gold) <= 2
 	{

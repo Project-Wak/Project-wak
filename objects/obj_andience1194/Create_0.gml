@@ -17,3 +17,4 @@ cre_boss = 0
 b_alpha_ = 0
 
 play_scene__ = 0
+bgm = -4

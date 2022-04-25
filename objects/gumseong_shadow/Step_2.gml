@@ -37,23 +37,17 @@ global.gold += 1600
 
 	if global.weapon_owned[2] = 0 && room = room_sector_B04_2
 	{
-	var droped_item__ = instance_create_depth(x,y,0,obj_droped_item)
-	droped_item__.item_var = 202
-	droped_item__.vspeed = -4
+	give_item(2,2)
 	}
 	
 	if global.weapon_owned[5] = 0 && room = room_sector_B05_2
 	{
-	var droped_item__ = instance_create_depth(x,y,0,obj_droped_item)
-	droped_item__.item_var = 205
-	droped_item__.vspeed = -4
+	give_item(2,5)
 	}
 	
 	if global.weapon_owned[6] = 0 && room = room_sector_B06_2
 	{
-	var droped_item__ = instance_create_depth(x,y,0,obj_droped_item)
-	droped_item__.item_var = 206
-	droped_item__.vspeed = -4
+	give_item(2,6)
 	}
 
 

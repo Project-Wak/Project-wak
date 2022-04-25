@@ -7,7 +7,7 @@ var yy2 = yy+camera_get_view_height(view_camera[0])
 var v_x_ = obj_camera.v_x/1280
 var __alpha_set = 1-global.b_alpha_prt-global.b_alpha
 
-if global.left_time > 0
+if global.left_time > 0 && global.show_credits = 0
 {
 	if (instance_exists(player) && global.clock > 0) && (global.playing_scene = 0 && global.never_move_in_setting = 0 && global.b_alpha < 0.2)
 	{
@@ -46,8 +46,64 @@ if global.left_time > 0
 var __ins = global.boss_target
 if global.boss_hp_alpha > 0
 {
+var change_icon = 0
 var _xx = camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5
 draw_sprite_ext(sprite20,0,_xx-220*v_x_,yy+626*v_x_,11.8*v_x_,2.21*v_x_,0,c_white,global.boss_hp_alpha)
+
+if instance_exists(obj_wakdroid) || instance_exists(obj_last_boss) || instance_exists(obj_angel)
+{
+change_icon = 1
+draw_sprite_ext(sprite20,0,_xx-220*v_x_,yy+634*v_x_,11.8*v_x_,2.21*v_x_,0,c_white,global.boss_hp_alpha)
+draw_text_kl_scale(_xx-180*v_x_,yy+630*v_x_,"Rage",64,-1,global.boss_hp_alpha,c_white,-1,-1,font0,v_x_*0.23,v_x_*0.23,0)
+
+if instance_exists(obj_wakdroid)
+{
+var rage_gagement = obj_wakdroid.rage_mode
+var max_gagement = 1
+	if rage_gagement <= 0
+	{
+	rage_gagement = obj_wakdroid.damaged_count
+	max_gagement = 150
+	}
+}
+
+if instance_exists(obj_last_boss)
+{
+var rage_gagement = 0
+	if obj_last_boss.patturn > 3.07 && obj_last_boss.patturn < 3.55
+	{
+	rage_gagement = (obj_last_boss.patturn - 3.07)
+	}
+var max_gagement = 0.48
+	if rage_gagement <= 0
+	{
+	rage_gagement = 0
+	}
+}
+
+if instance_exists(obj_angel)
+{
+var rage_gagement = (obj_angel.hp-1500)
+	if obj_angel.phase_change != 0
+	{
+	rage_gagement = 1500
+	}
+var max_gagement = 1800
+	if rage_gagement <= 0
+	{
+	rage_gagement = 0
+	}
+}
+
+	
+	if draw_rage_gagement > max_gagement
+	{
+	draw_rage_gagement = max_gagement
+	}
+draw_rage_gagement +=(rage_gagement - draw_rage_gagement)*0.1
+draw_sprite_ext(sprite20,2,_xx-150*v_x_,yy+636*v_x_,((draw_rage_gagement)/max_gagement)*11.1*v_x_,v_x_,0,c_white,global.boss_hp_alpha)
+}
+
 	if instance_exists(__ins)
 	{
 	draw_hp += (__ins.hp - draw_hp)*0.1
@@ -58,16 +114,23 @@ draw_sprite_ext(sprite20,0,_xx-220*v_x_,yy+626*v_x_,11.8*v_x_,2.21*v_x_,0,c_whit
 	draw_sprite_ext(sprite20,1,_xx-190*v_x_,yy+626*v_x_,(draw_hp/__ins.max_hp)*12.1*v_x_,2.2*v_x_,0,c_white,global.boss_hp_alpha)
 	}
 
-draw_text_kl_scale(_xx-195*v_x_,yy+598*v_x_,global.boss_name,64,-1,global.boss_hp_alpha,c_white,-1,-1,font0,v_x_*0.34,v_x_*0.34,0)
-draw_sprite_ext(boss_shower,0,_xx-210*v_x_,yy+626*v_x_,1*v_x_,1*v_x_,0,c_white,global.boss_hp_alpha)
+	if change_icon = 1
+	{
+	draw_text_kl_scale(_xx-185*v_x_,yy+598*v_x_,global.boss_name,64,-1,global.boss_hp_alpha,c_white,-1,-1,font0,v_x_*0.34,v_x_*0.34,0)
+	draw_sprite_ext(boss_shower,3,_xx-210*v_x_,yy+632*v_x_,v_x_*0.9,v_x_*0.9,0,c_white,global.boss_hp_alpha)
+	}
+	else
+	{
+	draw_text_kl_scale(_xx-195*v_x_,yy+598*v_x_,global.boss_name,64,-1,global.boss_hp_alpha,c_white,-1,-1,font0,v_x_*0.34,v_x_*0.34,0)
+	draw_sprite_ext(boss_shower,0,_xx-210*v_x_,yy+626*v_x_,v_x_,v_x_,0,c_white,global.boss_hp_alpha)
+	}
 }
 
 
 
 
 
-
-if room != menu && global.playing_scene = 0 && global.never_move_in_setting = 0 && global.b_alpha < 0.2
+if room != menu && global.playing_scene = 0 && global.never_move_in_setting = 0 && global.b_alpha < 0.2 && global.show_credits = 0
 {
 	if global.slow_motion = 0 && global.show_challenger = 0 && global.select_dev_setting = 0
 	{
@@ -95,7 +158,7 @@ if room != menu && global.playing_scene = 0 && global.never_move_in_setting = 0 
 	draw_text_kl_scale(xx3,yy+151*v_x_,"Gold : "+string(floor(global.gold_for_draw))+" +"+string(floor(global.gold-global.gold_for_draw)),v_x_*64,-1,__alpha_set*alpha____*0.8,c_white,0,-1,font0,v_x_*0.34,v_x_*0.34,0);
 	}
 	
-	if (instance_exists(player) && player.assult_mode > 0)
+	if (instance_exists(player) && player.assult_mode > 0) && global.show_credits = 0
 	{
 	draw_sprite_ext(Sprite162,2,xx3+12*v_x_,yy+198*v_x_,v_x_*0.65,v_x_*0.65,0,c_white,__alpha_set*0.5)
 	draw_text_kl_scale(xx3+32*v_x_,yy+191*v_x_,"전투모드",v_x_*64,-1,__alpha_set*0.5,c_white,0,-1,font0,v_x_*0.3,v_x_*0.3,0);
@@ -128,29 +191,6 @@ if room != menu && global.playing_scene = 0 && global.never_move_in_setting = 0 
 }
 
 
-	if global.shine_ef = 0
-	{
-	draw_set_color(c_white)
-	draw_set_alpha(global.w_alpha)
-	draw_rectangle(0,0,room_width,room_height,0)
-	draw_set_alpha(1)
-	}
-	
-	draw_set_color(c_red)
-	draw_set_alpha(global.r_alpha)
-	draw_rectangle(0,0,room_width,room_height,0)
-	draw_set_alpha(1)
-
-	draw_set_color(c_black)
-	draw_set_alpha(global.b_alpha)
-	draw_rectangle(0,0,room_width,room_height,0)
-	draw_set_alpha(1)
-
-
-	draw_set_color(c_black)
-	draw_set_alpha(global.b_alpha_prt)
-	draw_rectangle(0,0,room_width,room_height,0)
-	draw_set_alpha(1)
 
 	
 	if global.guide = 1 && global.chat_activity = false && global.slow_motion = 0 && global.show_challenger = 0
@@ -193,7 +233,6 @@ var g_xx = camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0
 var g_yy = yy+v_x_*170
 
 code.option = 0
-window_set_cursor(cr_none)
 instance_destroy(setting_parents)
 
 	if global.show_guide_mes_spr != 6
@@ -211,6 +250,7 @@ instance_destroy(setting_parents)
 	}
 	else
 	{
+	message_can_des_delay ++
 	draw_set_color(c_black)
 	draw_set_alpha(0.7)
 	draw_rectangle(g_xx-v_x_*200,g_yy-v_x_*27,g_xx+v_x_*200,g_yy+v_x_*40,false)
@@ -232,7 +272,7 @@ instance_destroy(setting_parents)
 	message_can_des_delay = 0
 	}
 	
-	if guide_sfx = 0
+	if guide_sfx = 0 && global.show_guide_mes_spr != 6
 	{
 	var sfx = audio_play_sound(activate_sfx,0,0)
 	audio_sound_gain(sfx,0.5*global.master_volume*2*global.sfx_volume,0)
@@ -240,6 +280,24 @@ instance_destroy(setting_parents)
 	guide_sfx = 1
 	}
 }
+
+
+	
+	draw_set_color(c_red)
+	draw_set_alpha(global.r_alpha)
+	draw_rectangle(0,0,room_width,room_height,0)
+	draw_set_alpha(1)
+
+	draw_set_color(c_black)
+	draw_set_alpha(global.b_alpha)
+	draw_rectangle(0,0,room_width,room_height,0)
+	draw_set_alpha(1)
+
+
+	draw_set_color(c_black)
+	draw_set_alpha(global.b_alpha_prt)
+	draw_rectangle(0,0,room_width,room_height,0)
+	draw_set_alpha(1)
 
 
 var xx = camera_get_view_x(view_camera[0])
@@ -256,52 +314,38 @@ audio_stop_sound(boss_bgm)
 	}
 var xx_g = camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5
 var yy_g = camera_get_view_y(view_camera[0])+v_x_*250
-draw_text_kl_scale(xx_g,yy_g,"-The end-",v_x_*64,-1,global.gameover,c_white,0,0,font_title,v_x_*0.7,v_x_*0.7,0);
-draw_text_kl_scale(xx_g,yy_g+v_x_*100,"("+string(global.gameover_reason)+")",v_x_*64,-1,global.gameover*0.5,c_white,0,0,font_title,v_x_*0.15,v_x_*0.15,0);
-
-draw_text_kl_scale(xx+xxx-32*v_x_,yy+yyy-(70)*v_x_,"("+string(global.skip_key)+"키를 눌러 처음으로)",v_x_*64,-1,global.gameover*0.5,c_white,0,1,font0,v_x_*0.3,v_x_*0.3,0);
-
-	if global.gameover >= 0.98 && keyboard_check_released(ord(string(global.skip_key)))
-	{
-	game_restart()
-	}
-}
-
-
-
-
-
-
-
-if global.playing_scene > 0
+if show_ending_var = 0
 {
-	if global.playing_scene_black_bg < 125
-	{
-	global.playing_scene_black_bg ++
-	}
-global.playing_scene_black_bg += (125 - global.playing_scene_black_bg)*0.1
+draw_text_kl_scale(xx_g,yy_g-v_x_*global.gameover*32,"Project Wak",v_x_*64,-1,global.gameover,c_white,0,0,font_title,v_x_*0.4,v_x_*0.4,0);
+draw_text_kl_scale(xx_g,yy_g+v_x_*100-v_x_*(global.gameover-0.5)*64,"-The end-",v_x_*190,-1,(global.gameover-0.5)*2,c_white,0,0,font_title,v_x_*0.25,v_x_*0.25,0)
 }
 else
 {
-	if global.playing_scene_black_bg > 0
-	{
-	global.playing_scene_black_bg --
-	}
-global.playing_scene_black_bg += (-1 - global.playing_scene_black_bg)*0.1
+global.w_alpha -= 0.1
+draw_text_kl_scale(xx_g,yy_g,global.gameover_reason_title,v_x_*64,-1,global.gameover,c_white,0,0,font_title,v_x_*0.3,v_x_*0.3,0);
+draw_text_kl_scale(xx_g,yy_g+v_x_*100,global.gameover_reason,v_x_*190,-1,global.gameover*0.5,c_white,0,0,font_title,v_x_*0.15,v_x_*0.15,0)
 }
 
-if global.playing_scene_black_bg > 0
-{
-draw_set_alpha(1)
-draw_set_color(c_black)
-draw_rectangle(xx-32,yy-32,xx+xxx+32,yy-32+global.playing_scene_black_bg*v_x_,0)
-draw_rectangle(xx-32,yy+yyy+32,xx+xxx+32,yy+yyy+32-global.playing_scene_black_bg*v_x_,0)
+draw_text_kl_scale(xx+xxx-32*v_x_,yy+yyy-(70)*v_x_,"("+string(global.skip_key)+"키를 눌러 다음으로)",v_x_*64,-1,global.gameover*0.5,c_white,0,1,font0,v_x_*0.3,v_x_*0.3,0);
 
-	if global.hp > 0 && instance_exists(player_message)
+	if global.gameover >= 0.98 && keyboard_check_released(ord(string(global.skip_key)))
 	{
-	draw_text_kl_scale(xx+xxx-32*v_x_,yy+yyy-(-64+global.playing_scene_black_bg)*v_x_,"("+string(global.skip_key)+"키를 눌러 넘기기)",v_x_*64,-1,0.5,c_white,0,1,font0,v_x_*0.3,v_x_*0.3,0);
+	global.w_alpha = 0.6
+	show_ending_var ++
+	var sfx = audio_play_sound(critical_sfx,0,0)
+	audio_sound_gain(sfx,0.03*global.master_volume*2*global.sfx_volume,0)
+		if show_ending_var > 1
+		{
+		game_restart()
+		}
 	}
 }
+
+
+
+
+
+
 
 
 
@@ -333,8 +377,16 @@ var scale___ = global.clock_scale
 	scale___ = 0
 	}
 	
+
 draw_sprite_ext(spr_rewind_clock,4,xx__,yy__,scale___,scale___,0,c_gray,global.clock_alpha*0.5)
-draw_sprite_ext(spr_rewind_clock,5,xx__,yy__,scale___,scale___,0,c_white,global.clock_alpha)
+draw_sprite_ext(spr_rewind_clock,5+global.broken_clock,xx__-global.clock_far_from,yy__,scale___,scale___,0,c_white,global.clock_alpha)
+
+if global.broken_clock = 3
+{
+draw_sprite_ext(spr_rewind_clock,6+global.broken_clock,xx__+global.clock_far_from,yy__-global.clock_far_from*0.8,scale___,scale___,0,c_white,global.clock_alpha)
+draw_sprite_ext(spr_rewind_clock,7+global.broken_clock,xx__+global.clock_far_from*0.8,yy__+global.clock_far_from,scale___,scale___,0,c_white,global.clock_alpha)
+}
+
 
 	if global.graphics_for_code >= 2
 	{
@@ -347,27 +399,42 @@ draw_sprite_ext(spr_rewind_clock,5,xx__,yy__,scale___,scale___,0,c_white,global.
 		for(var i = 0; i < 9; i += 0.3*(global.graphics_for_code/3))
 		{
 		draw_sprite_ext(spr_rewind_clock,4,xx__+v_x_*i*global.clock_shading,yy__,scale___,scale___,0,c_gray,global.clock_alpha*0.5*0.03)
-		draw_sprite_ext(spr_rewind_clock,5,xx__+v_x_*i*global.clock_shading,yy__,scale___,scale___,0,c_white,global.clock_alpha*0.03)
+		draw_sprite_ext(spr_rewind_clock,5+global.broken_clock,xx__-global.clock_far_from+v_x_*i*global.clock_shading,yy__,scale___,scale___,0,c_white,global.clock_alpha*0.03)
 		draw_sprite_ext(spr_rewind_clock,3,xx__+v_x_*i*global.clock_shading,yy__,scale___,scale___,global.clock_angle,c_white,global.clock_alpha*0.03)
 		draw_sprite_ext(spr_rewind_clock,3,xx__+v_x_*i*global.clock_shading,yy__,scale___*0.8,scale___*0.8,global.clock_angle_sec,c_white,global.clock_alpha*0.03)
 	
 		draw_sprite_ext(spr_rewind_clock,4,xx__-v_x_*i*global.clock_shading,yy__,scale___,scale___,0,c_gray,global.clock_alpha*0.5*0.03)
-		draw_sprite_ext(spr_rewind_clock,5,xx__-v_x_*i*global.clock_shading,yy__,scale___,scale___,0,c_white,global.clock_alpha*0.03)
+		draw_sprite_ext(spr_rewind_clock,5+global.broken_clock,xx__-global.clock_far_from-v_x_*i*global.clock_shading,yy__,scale___,scale___,0,c_white,global.clock_alpha*0.03)
 		draw_sprite_ext(spr_rewind_clock,3,xx__-v_x_*i*global.clock_shading,yy__,scale___,scale___,global.clock_angle,c_white,global.clock_alpha*0.03)
 		draw_sprite_ext(spr_rewind_clock,3,xx__-v_x_*i*global.clock_shading,yy__,scale___*0.8,scale___*0.8,global.clock_angle_sec,c_white,global.clock_alpha*0.03)
 	
 		draw_sprite_ext(spr_rewind_clock,4,xx__,yy__+v_x_*i*global.clock_shading,scale___,scale___,0,c_gray,global.clock_alpha*0.5*0.03)
-		draw_sprite_ext(spr_rewind_clock,5,xx__,yy__+v_x_*i*global.clock_shading,scale___,scale___,0,c_white,global.clock_alpha*0.03)
+		draw_sprite_ext(spr_rewind_clock,5+global.broken_clock,xx__-global.clock_far_from,yy__+v_x_*i*global.clock_shading,scale___,scale___,0,c_white,global.clock_alpha*0.03)
 		draw_sprite_ext(spr_rewind_clock,3,xx__,yy__+v_x_*i*global.clock_shading,scale___,scale___,global.clock_angle,c_white,global.clock_alpha*0.03)
 		draw_sprite_ext(spr_rewind_clock,3,xx__,yy__+v_x_*i*global.clock_shading,scale___*0.8,scale___*0.8,global.clock_angle_sec,c_white,global.clock_alpha*0.03)
 	
 		draw_sprite_ext(spr_rewind_clock,4,xx__,yy__-v_x_*i*global.clock_shading,scale___,scale___,0,c_gray,global.clock_alpha*0.5*0.03)
-		draw_sprite_ext(spr_rewind_clock,5,xx__,yy__-v_x_*i*global.clock_shading,scale___,scale___,0,c_white,global.clock_alpha*0.03)
+		draw_sprite_ext(spr_rewind_clock,5+global.broken_clock,xx__-global.clock_far_from,yy__-v_x_*i*global.clock_shading,scale___,scale___,0,c_white,global.clock_alpha*0.03)
 		draw_sprite_ext(spr_rewind_clock,3,xx__,yy__-v_x_*i*global.clock_shading,scale___,scale___,global.clock_angle,c_white,global.clock_alpha*0.03)
 		draw_sprite_ext(spr_rewind_clock,3,xx__,yy__-v_x_*i*global.clock_shading,scale___*0.8,scale___*0.8,global.clock_angle_sec,c_white,global.clock_alpha*0.03)
+		
+			if global.broken_clock = 3
+			{
+			draw_sprite_ext(spr_rewind_clock,6+global.broken_clock,xx__+v_x_*i*global.clock_shading+global.clock_far_from,yy__-global.clock_far_from*0.8,scale___,scale___,0,c_white,global.clock_alpha*0.03)
+			draw_sprite_ext(spr_rewind_clock,7+global.broken_clock,xx__+v_x_*i*global.clock_shading+global.clock_far_from*0.8,yy__+global.clock_far_from,scale___,scale___,0,c_white,global.clock_alpha*0.03)
+			draw_sprite_ext(spr_rewind_clock,6+global.broken_clock,xx__+global.clock_far_from,yy__+v_x_*i*global.clock_shading-global.clock_far_from*0.8,scale___,scale___,0,c_white,global.clock_alpha*0.03)
+			draw_sprite_ext(spr_rewind_clock,7+global.broken_clock,xx__+global.clock_far_from*0.8,yy__+v_x_*i*global.clock_shading+global.clock_far_from,scale___,scale___,0,c_white,global.clock_alpha*0.03)
+			draw_sprite_ext(spr_rewind_clock,6+global.broken_clock,xx__-v_x_*i*global.clock_shading+global.clock_far_from,yy__-global.clock_far_from*0.8,scale___,scale___,0,c_white,global.clock_alpha*0.03)
+			draw_sprite_ext(spr_rewind_clock,7+global.broken_clock,xx__-v_x_*i*global.clock_shading+global.clock_far_from*0.8,yy__+global.clock_far_from,scale___,scale___,0,c_white,global.clock_alpha*0.03)
+			draw_sprite_ext(spr_rewind_clock,6+global.broken_clock,xx__+global.clock_far_from,yy__-v_x_*i*global.clock_shading-global.clock_far_from*0.8,scale___,scale___,0,c_white,global.clock_alpha*0.03)
+			draw_sprite_ext(spr_rewind_clock,7+global.broken_clock,xx__+global.clock_far_from*0.8,yy__-v_x_*i*global.clock_shading+global.clock_far_from,scale___,scale___,0,c_white,global.clock_alpha*0.03)
+			}
 		}
 	}
 }
+
+
+
 
 if global.story_text_alpha > 0
 {
@@ -385,4 +452,12 @@ if global.story_text_alpha > 0
 	{
 	draw_text_kl_scale(camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5,yy+300*v_x_,"왁굳은 그 계획을 저지하기 위해 박사의 연구소로 떠납니다",188*v_x_,-1,global.story_text_alpha,c_white,0,0,font0,v_x_/2,v_x_/2,0)
 	}
+}
+
+if global.shine_ef = 0
+{
+draw_set_color(c_white)
+draw_set_alpha(global.w_alpha)
+draw_rectangle(0,0,room_width,room_height,0)
+draw_set_alpha(1)
 }

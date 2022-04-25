@@ -99,8 +99,11 @@ if explo_anime >= 2
 		if sfx = 0
 		{
 		global.w_alpha = -1
-		var sfx__ = audio_play_sound(lab_explosion,0,false)
-		audio_sound_gain(sfx__,0.5*global.master_volume*2*global.sfx_volume,0)
+			if global.show_credits = 0
+			{
+			var sfx__ = audio_play_sound(lab_explosion,0,false)
+			audio_sound_gain(sfx__,0.5*global.master_volume*2*global.sfx_volume,0)
+			}
 		sfx = 1
 		}
 	}
@@ -172,7 +175,11 @@ if explo_anime >= 2
 				{
 				saved_y = y
 				}
-			player.x -= 300
+				
+				if global.real_ending = 0
+				{
+				player.x -= 300
+				}
 			player.guarding = 0
 			global.playing_scene = 0
 			global.never_move = 0

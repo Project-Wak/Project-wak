@@ -43,7 +43,7 @@ repeat(100)
 	}
 }
 
-if audio_is_playing(ending_select)
+if audio_is_playing(ending_select) || audio_is_playing(follower_bgm)
 {
 audio_sound_gain(bgm__,volume__*0.04*global.master_volume*2*global.bgm_volume,0)
 }
@@ -58,7 +58,7 @@ interecting_now = 1
 
 
 
-if interecting_now = 1
+if interecting_now = 1 && (global.real_ending = 0 || (message_phase >= 61 && message_phase <= 66))
 {
 	if message_phase != 60 && message_phase != 61 && message_phase != 64 && !instance_exists(check__)
 	{
@@ -80,7 +80,7 @@ if interecting_now = 1
 	if !instance_exists(check__) && message_phase = 1
 	{
 	global.show_guide_mes_spr = 6
-	global.show_guide_mes = "(박사의 계획은 성공적으로 저지된듯 하다)"
+	global.show_guide_mes = "박사의 계획은 성공적으로 저지된듯 하다"
 	message_phase++
 	}
 	
@@ -91,7 +91,7 @@ if interecting_now = 1
 	player.guarding = 1.8
 	}
 	
-	if !instance_exists(check__) && global.show_guide_mes = -4 && message_phase = 2
+	if !instance_exists(check__) && global.show_guide_mes = -4 && message_phase = 2 && show_cinematic_sec = 0
 	{
 	bgm__ = audio_play_sound(ending_select,0,true)
 
@@ -119,8 +119,8 @@ if interecting_now = 1
 	if !instance_exists(check__) && message_phase = 4
 	{
 	global.choice += (1 - global.choice)*0.1
-	global.choice_name[0] = "시계를 던져 자폭 단계의 왁드로이드를 과거로 보내버린다"
-	global.choice_name[1] = "일부러 폭발에 휘말려 시계를 이용해 과거로 되돌아간다"
+	global.choice_name[0] = "시계를 던져 왁드로이드를 과거로 보낸다 (시계 아이템 소모)"
+	global.choice_name[1] = "시계를 이용해 과거로 되돌아간다"
 	global.choice_name[2] = "연구소 밖으로 도망 간다"
 	
 		if global.choosed > 0
@@ -179,11 +179,11 @@ if interecting_now = 1
 	{
 	clock_throw_scene ++
 	global.w_alpha -= 0.05
-	volume__ += (-0.01 - volume__)*0.05
+	volume__ += (-0.1 - volume__)*0.05
 		if !instance_exists(check__) && clock_throw_scene > 200
 		{
 		global.show_guide_mes_spr = 6
-		global.show_guide_mes = "(성공적으로 자폭 직전의 왁드로이드는 과거로 가버린듯 하다)"
+		global.show_guide_mes = "성공적으로 자폭 직전의 왁드로이드는 과거로 보내졌다"
 		message_phase++
 		}
 	}
@@ -238,7 +238,7 @@ if interecting_now = 1
 	player.guarding = 1
 	player.image_alpha += (0.8-irandom_range(30,10)/100 - player.image_alpha)*0.07
 	global.show_guide_mes_spr = 6
-	global.show_guide_mes = "(몸이 점점 사라져간다)"
+	global.show_guide_mes = "몸이 점점 사라져간다"
 	message_phase++
 	}
 	
@@ -274,12 +274,13 @@ if interecting_now = 1
 	
 		if timer2 > 170
 		{
-			if !audio_is_playing(it_s_over)
+			if !audio_is_playing(nomal_ending)
 			{
-			var sfx = audio_play_sound(it_s_over,0,true)
-			audio_sound_gain(sfx,0.23*global.master_volume*2*global.bgm_volume,0)
+			bgm = audio_play_sound(nomal_ending,0,true)
+			audio_sound_gain(bgm,0.23*global.master_volume*2*global.bgm_volume,0)
 			}
-		global.gameover_reason = "[소멸 엔딩]\n과거로 보낸 왁드로이드로 인해 과거의 자신이 사망하여 없어졌기에\n현재의 자신 또한 존재할 수 없게 되었다"
+		global.gameover_reason_title = "[소멸 엔딩]"
+		global.gameover_reason = "과거로 보낸 왁드로이드로 인해 과거의 자신이 사망하여 없어졌기에\n현재의 자신 또한 존재할 수 없게 되었다"
 		show_ending += (1 - show_ending)*0.01
 		global.fix_camera = 0
 		ending_mes_timer += 0.5
@@ -306,9 +307,9 @@ if interecting_now = 1
 		if global.credit_b_alpha > 0.3
 		{
 		show_ending += (-0.08 - show_ending)*0.01
-			if global.show_credits = 0 && global.credit_b_alpha > 0.8
+			if show_ending < 0
 			{
-			global.show_credits = 1
+			message_phase = 99
 			}
 		}
 	}
@@ -335,52 +336,60 @@ if interecting_now = 1
 	check__.parents = id
 	}
 	
+	if message_phase >= 31 && message_phase <= 35
+	{
+	volume__ += (-0.1 - volume__)*0.1
+	}
+	
 	if !instance_exists(check__) && message_phase = 31
 	{
 	global.show_guide_mes_spr = 6
-	global.show_guide_mes = "(왁드로이드의 자폭으로 인해 폭발하는 연구소)"
+	global.show_guide_mes = "왁드로이드의 자폭으로 인해 폭발하는 연구소"
 	message_phase++
 	}
 	
 	if !instance_exists(check__) && global.show_guide_mes = -4 && message_phase = 32
 	{
 	global.show_guide_mes_spr = 6
-	global.show_guide_mes = "(그리고, 이를 모르는 이세돌 멤버들과 팬치들, 천양이가 폭발에 휘말릴 것이다)"
+	global.show_guide_mes = "이를 모르는 이세돌 멤버들과 팬치들, 천양이는 폭발에 휘말릴 것이다"
 	message_phase++
 	}
 	
 	if !instance_exists(check__) && global.show_guide_mes = -4 && message_phase = 33
 	{
 	global.show_guide_mes_spr = 6
-	global.show_guide_mes = "(답은 한가지 밖에 없다)"
+	global.show_guide_mes = "답은 한가지 밖에 없다"
 	message_phase++
 	}
 	
 	if !instance_exists(check__) && global.show_guide_mes = -4 && message_phase = 34
 	{
 	global.show_guide_mes_spr = 6
-	global.show_guide_mes = "(되돌려야만 한다)"
+	global.show_guide_mes = "되돌려야만 한다"
 	message_phase++
 	}
 	
-	if !instance_exists(check__) && message_phase = 35
+	if !instance_exists(check__) && message_phase = 35 && global.show_guide_mes = -4
 	{
 	player.suicide = 1
 	player.suicide_sfx = 0
+	message_phase = 61
 	}
 	
+	if message_phase >= 49 && message_phase <= 51
+	{
+	volume__ += (-0.1 - volume__)*0.1
+	}
 	
 	//엔딩3 - 도망자 엔딩
 	if global.b_alpha > 3 && message_phase = 49
 	{
-	volume__ += (-0.1 - volume__)*0.1
 	room_goto(room_sector_outside)
 	global.t_b_alpha = -0.01
 	}
 	
 	if !instance_exists(check__) && message_phase = 50
 	{
-	volume__ += (-0.1 - volume__)*0.1
 	check__ = instance_create_depth(x,y,depth-1,player_message)
 	check__.text = "..."
 	check__.target = player.id
@@ -389,14 +398,14 @@ if interecting_now = 1
 	
 	if !instance_exists(check__) && message_phase = 51
 	{
-	volume__ += (-0.1 - volume__)*0.1
+	audio_stop_sound(ending_select)
 	check__ = instance_create_depth(x,y,depth-1,player_message)
 	check__.text = "!"
 	check__.target = player.id
 	check__.parents = id
 	}
 	
-	if message_phase >= 52
+	if message_phase >= 52 && message_phase < 57
 	{
 	volume__ += (1 - volume__)*0.1
 	}
@@ -404,14 +413,14 @@ if interecting_now = 1
 	if !instance_exists(check__) && message_phase = 52
 	{
 	global.show_guide_mes_spr = 6
-	global.show_guide_mes = "(왁드로이드의 자폭에 대한 사실을 모르는)"
+	global.show_guide_mes = "왁드로이드의 자폭에 대한 사실을 모르는"
 	message_phase++
 	}
 	
 	if !instance_exists(check__) && global.show_guide_mes = -4 && message_phase = 53
 	{
 	global.show_guide_mes_spr = 6
-	global.show_guide_mes = "(이세돌 맴버들과 팬치들, 그리고 천양이는 폭발에 휘말려 버렸다)"
+	global.show_guide_mes = "이세돌 맴버들과 팬치들, 그리고 천양이는 폭발에 휘말려 버렸다"
 	message_phase = 55
 	}
 
@@ -427,7 +436,7 @@ if interecting_now = 1
 	if !instance_exists(check__) && message_phase = 56
 	{
 	global.choice += (1 - global.choice)*0.1
-	global.choice_name[0] = "Re:wind시계를 이용해 과거로 되돌아간다"
+	global.choice_name[0] = "Re:wind시계를 이용해 폭발 이전의 과거로 되돌아간다"
 	global.choice_name[1] = "박사의 계획을 저지했으니, 만족하고 집으로 돌아간다"
 	global.choice_name[2] = -4
 	
@@ -450,7 +459,7 @@ if interecting_now = 1
 	//사망 회귀 엔딩
 	if message_phase = 57
 	{
-	volume__ += (-0.01 - volume__)*0.1
+	volume__ += (-0.1 - volume__)*0.1
 		if !instance_exists(check__)
 		{
 		check__ = instance_create_depth(x,y,depth-1,player_message)
@@ -462,11 +471,11 @@ if interecting_now = 1
 	
 	if message_phase = 58
 	{
-	volume__ += (-0.01 - volume__)*0.1
+	volume__ += (-0.1 - volume__)*0.1
 		if !instance_exists(check__)
 		{
 		global.show_guide_mes_spr = 6
-		global.show_guide_mes = "(이 상황을 바꾸기 위해선)"
+		global.show_guide_mes = "이 상황을 바꾸기 위해선,"
 		message_phase++
 		}
 	}
@@ -474,7 +483,7 @@ if interecting_now = 1
 	if !instance_exists(check__) && global.show_guide_mes = -4 && message_phase = 59
 	{
 	global.show_guide_mes_spr = 6
-	global.show_guide_mes = "(되돌려야만 한다)"
+	global.show_guide_mes = "되돌려야만 한다"
 	message_phase++
 	}
 	
@@ -487,12 +496,20 @@ if interecting_now = 1
 	
 	if message_phase = 61
 	{
-		if !instance_exists(check__) && room = room_main && global.b_alpha < 0.1
+		if !audio_is_playing(follower_bgm) && room = room_main && show_cinematic_sec = 0
 		{
+		bgm__ = audio_play_sound(follower_bgm,0,true)
+		}
+		
+		if !instance_exists(check__) && room = room_main
+		{
+		global.b_alpha = 0
+		audio_stop_sound(ending_select)
 		check__ = instance_create_depth(x,y,depth-1,player_message)
 		check__.text = "!"
 		check__.target = player.id
 		check__.parents = id
+		global.never_move = 1
 		}
 		
 		if room != room_main
@@ -505,36 +522,67 @@ if interecting_now = 1
 	if !instance_exists(check__) && message_phase = 62 && global.show_guide_mes = -4
 	{
 	global.show_guide_mes_spr = 6
-	global.show_guide_mes = "(빨리 왁드로이드의 자폭에 대한 사실을 알려야만 한다!)"
+	global.show_guide_mes = "빨리 왁드로이드의 자폭에 대한 사실을 알려야만 한다!"
 	message_phase++
+	}
+	
+	if message_phase >= 61 && message_phase <= 64 && room = room_main
+	{
+	volume__ += (1 - volume__)*0.04
 	}
 	
 	if !instance_exists(check__) && message_phase = 63 && global.show_guide_mes = -4
 	{
-		if player.x < 1179
+		if global.real_ending = 0
 		{
-		player.image_xscale = -1
-		global.movement_speed = 5.6
-		player.image_index += 0.8
-		}
-		else
-		{
-		message_phase++
+			if player.x < 1179
+			{
+			player.image_xscale = -1
+			global.movement_speed = 4
+			player.image_index += 0.8
+			}
+			else
+			{
+			message_phase++
+			}
 		}
 	}
 	
 	if !instance_exists(check__) && message_phase = 64 && global.show_guide_mes = -4
 	{
-		if player.x < 1179
+		if global.real_ending = 0
 		{
-		message_phase = 61
+			if player.x < 1179
+			{
+			message_phase = 61
+			}
+			else
+			{
+			global.never_move = 0
+				if !instance_exists(player_message)
+				{
+				global.playing_scene = 0
+				}
+			}
 		}
 		else
 		{
-		global.never_move = 0
-			if !instance_exists(player_message)
+			if player.x < 1179 && room = room_main
 			{
-			global.playing_scene = 0
+				if global.t_b_alpha != 3.01
+				{
+				var	sfx__ = audio_play_sound(walk_sfx,0,false)
+				audio_sound_gain(sfx__,0.3,0)
+				global.t_b_alpha = 3.01
+				}
+			global.never_move = 1
+				if global.b_alpha > 3
+				{
+				global.t_b_alpha = -0.1
+				global.never_move = 0
+				global.ending_story = 0
+				room_goto(room_sector_B07)
+				}
 			}
 		}
 	}
@@ -542,7 +590,7 @@ if interecting_now = 1
 	//도망자 엔딩
 	if message_phase = 70
 	{
-	volume__ += (-0.01 - volume__)*0.1
+	volume__ += (-0.1 - volume__)*0.1
 		if !instance_exists(check__)
 		{
 		check__ = instance_create_depth(x,y,depth-1,player_message)
@@ -565,12 +613,13 @@ if interecting_now = 1
 		{
 		depth = obj_camera.depth-10
 		audio_stop_sound(ending_select)
-			if !audio_is_playing(it_s_over)
+			if !audio_is_playing(ending_sec_bgm)
 			{
-			var sfx = audio_play_sound(it_s_over,0,true)
-			audio_sound_gain(sfx,0.23*global.master_volume*2*global.bgm_volume,0)
+			bgm = audio_play_sound(ending_sec_bgm,0,true)
+			audio_sound_gain(bgm,0.23*global.master_volume*2*global.bgm_volume,0)
 			}
-		global.gameover_reason = "[도망자 엔딩]\n이세돌 멤버들과, 팬치들 그리고 천양이를 구하지 않고 혼자 탈출 했다"
+		global.gameover_reason_title = "[도망자 엔딩]"
+		global.gameover_reason = "이세돌 멤버들과, 팬치들 그리고 천양이를 구하지 않고 혼자 탈출 했다"
 		show_ending += (1 - show_ending)*0.01
 		obj_camera.t_y = player.y-120-ending_mes_timer
 		ending_mes_timer += 0.5
@@ -593,13 +642,454 @@ if interecting_now = 1
 		if global.credit_b_alpha > 0.3
 		{
 		show_ending += (-0.08 - show_ending)*0.01
-			if global.show_credits = 0 && global.credit_b_alpha > 0.8
+		
+			if show_ending < 0
 			{
-			global.show_credits = 1
+			message_phase = 99
+			}
+		}
+	}
+	
+	if message_phase = 99
+	{
+	show_mes_ending = 1
+	show_ending += (1.0001 - show_ending)*0.01
+	obj_camera.t_y = player.y-120-ending_mes_timer
+	
+		if show_ending > 1
+		{
+		message_phase = 100
+		}
+	}
+	
+	if message_phase = 100
+	{
+	show_ending += (-0.08 - show_ending)*0.01
+		if global.show_credits = 0 && global.credit_b_alpha > 0.8
+		{
+		global.show_credits = 1
+		}
+	}
+}
+
+if global.show_credits > 9100
+{
+volume_downer -= 0.001
+audio_sound_gain(bgm,0.23*global.master_volume*2*global.bgm_volume*volume_downer,0)
+	if volume_downer <= 0
+	{
+		if select_end = 0
+		{
+		global.choice += (1 - global.choice)*0.1
+		global.choice_name[0] = "기존 데이터로 중간 지점부터 시작 하여 빠르게 엔딩만 보기"
+		global.choice_name[1] = "다회차 플레이 하기"
+		global.choice_name[2] = -4
+			if global.choosed > 0
+			{
+				if global.choice_now = 0
+				{
+				game_restart()
+				}
+				
+				if global.choice_now = 1
+				{
+				file_delete("Project_wak_beta_04.ini")
+				global.replayed ++
+				select_end = 1
+				}
+			global.choosed = 0
+			}
+		}
+		else
+		{
+		global.choice += (-0.1 - global.choice)*0.3
+		select_end ++
+			if select_end <= 2
+			{
+			save_and_load_data(1,2)
+			}
+			
+			if select_end > 10
+			{
+			game_restart()
 			}
 		}
 	}
 }
 
+
+if room = room_sector_outside && global.real_ending > 0 && player.x > 1243 && show_cinematic = 0 && global.playing_scene = 0 && global.b_alpha < 0.1
+{
+show_cinematic ++
+}
+
+if show_cinematic > 0
+{
+global.never_move = 1
+	if show_cinematic_sec < 7150
+	{
+	global.playing_scene = 1
+	}
+	
+	if !instance_exists(check__) && show_cinematic = 1
+	{
+	obj_camera.t_x = player.x
+	player.image_xscale = 1
+	check__ = instance_create_depth(x,y,depth-1,player_message)
+	check__.text = "..."
+	check__.target = player.id
+	check__.parents = id
+	show_cinematic ++
+	}
+	
+	if show_cinematic > 1 && show_cinematic_sec = 0
+	{
+	show_cinematic ++
+	}
+	
+	if show_cinematic > 200 && show_cinematic_sec = 0
+	{
+	player.image_xscale = -1
+	global.movement_speed = speed_pl
+		if show_cinematic > 240
+		{
+		obj_camera.t_y = player.y-(show_cinematic-240)
+			if speed_pl > 1.3
+			{
+			speed_pl = 1.3
+			}
+			else
+			{
+			speed_pl += 0.003+speed_pl*0.1
+			}
+		}
+	}
+	
+	if show_cinematic > 540 && show_cinematic_sec = 0
+	{
+		if show_cinematic > 640
+		{
+		global.t_b_alpha += 0.01
+		}
+	
+		if global.t_b_alpha > 3
+		{
+		show_ending += (-0.01 - show_ending)*0.03
+		}
+		else
+		{
+		show_ending += (1.001 - show_ending)*0.03
+		}
+		
+		if global.t_b_alpha > 3.5 && global.show_credits = 0
+		{
+		global.show_credits = 1
+		}
+		
+		if global.t_b_alpha > 6
+		{
+		obj_camera.t_x = -4
+		obj_camera.t_y = -4
+		obj_camera.x = 831
+		obj_camera.y = -1000
+		global.t_b_alpha = -0.1
+		player.image_alpha = 0
+		show_cinematic_sec = 1
+		room_goto(tuto_room)
+		bgm__ = audio_play_sound(ending_cinematic,0,false)
+		}
+	}
+	
+	if show_cinematic_sec > 0
+	{
+		if room != room_main
+		{
+		obj_camera.v_x = 1280
+		obj_camera.v_y = 720
+		obj_camera.tv_x = 1280
+		obj_camera.tv_y = 720
+		}
+	global.never_move = 1
+	if show_cinematic_sec < 8280
+	{
+	global.playing_scene = 1
+	}
+	show_cinematic_sec ++
+	player.x = obj_camera.x
+	player.y = obj_camera.y
+	player.vspeed = 0
+	player.gravity = 0
+		if show_cinematic_sec < 500
+		{
+		obj_camera.t_x = 831
+		obj_camera.t_y += (732 - obj_camera.t_y)*0.01
+		}
+		
+		if show_cinematic_sec >= 500 && show_cinematic_sec < 600
+		{
+		obj_camera.t_x = 831
+		obj_camera.t_y += (room_height - obj_camera.t_y)*0.01
+		global.t_b_alpha = 2.1
+		}
+		
+		if show_cinematic_sec >= 600 && show_cinematic_sec < 1100
+		{
+			if show_cinematic_sec = 600
+			{
+			room_goto(room_sector_B02_2)
+			global.t_b_alpha = -0.1
+			obj_camera.x = 2398
+			obj_camera.t_x = 2398
+			obj_camera.y = 956
+			obj_camera.t_y = 956
+			}
+			else
+			{
+			obj_camera.t_x ++
+			}
+			
+			if show_cinematic_sec >= 1070
+			{
+			global.t_b_alpha = 2.1
+			}
+		}
+		
+		if show_cinematic_sec >= 1100 && show_cinematic_sec < 1680
+		{
+			if show_cinematic_sec = 1100
+			{
+			room_goto(room_sector_B03_2)
+			global.t_b_alpha = -0.1
+			obj_camera.x = 4667
+			obj_camera.t_x = 4667
+			obj_camera.y = 956
+			obj_camera.t_y = 956
+			}
+			else
+			{
+			obj_camera.t_x ++
+			}
+			
+			if show_cinematic_sec >= 1600
+			{
+			global.t_b_alpha = 2.1
+			}
+		}
+		
+		if show_cinematic_sec >= 1680 && show_cinematic_sec < 2200
+		{
+			if show_cinematic_sec <= 1681
+			{
+			room_goto(room_sector_B04_2)
+			global.t_b_alpha = -0.1
+			obj_camera.x = 3005
+			obj_camera.t_x = 3005
+			obj_camera.y = room_height-400
+			obj_camera.t_y = room_height-400
+			}
+			else
+			{
+				if show_cinematic_sec < 1920
+				{
+				obj_camera.t_y --
+				}
+				else
+				{
+				obj_camera.t_x ++
+				}
+			}
+			
+			if show_cinematic_sec = 1920
+			{
+			obj_camera.x = 1800
+			obj_camera.t_x = 1800
+			obj_camera.y = 642
+			obj_camera.t_y = 642
+			}
+			
+			if show_cinematic_sec >= 2160
+			{
+			global.t_b_alpha = 2.1
+			}
+		}
+		
+		if show_cinematic_sec >= 2200 && show_cinematic_sec < 2700
+		{
+			if show_cinematic_sec = 2200
+			{
+			room_goto(room_sector_B05_2)
+			global.t_b_alpha = -0.1
+			obj_camera.x = 1323
+			obj_camera.t_x = 1323
+			obj_camera.y = 1333
+			obj_camera.t_y = 1333
+			}
+			else
+			{
+				if show_cinematic_sec < 2400
+				{
+				obj_camera.t_x += 0.8
+				obj_camera.t_y -= 0.9
+				}
+				else
+				{
+				obj_camera.t_x ++
+				}
+			}
+			
+			if show_cinematic_sec = 2400
+			{
+			obj_camera.x = 5000
+			obj_camera.t_x = 5000
+			obj_camera.y = 2240
+			obj_camera.t_y = 2240
+			}
+			
+			if show_cinematic_sec >= 2700
+			{
+			global.t_b_alpha = 2.1
+			}
+		}
+		
+		if show_cinematic_sec >= 2760 && show_cinematic_sec < 3900
+		{
+			if show_cinematic_sec = 2760
+			{
+			room_goto(room_sector_B06_2)
+			global.t_b_alpha = -0.1
+			obj_camera.x = 144
+			obj_camera.t_x = 144
+			obj_camera.y = 2174
+			obj_camera.t_y = 2172
+			}
+			else
+			{
+			obj_camera.t_x ++
+			}
+			
+			if show_cinematic_sec = 3240
+			{
+			obj_camera.x = 3150
+			obj_camera.t_x = 3150
+			}
+			
+			if show_cinematic_sec >= 3800
+			{
+			global.t_b_alpha = 2.1
+			}
+		}
+		
+		if show_cinematic_sec >= 3900 && show_cinematic_sec < 4930
+		{
+			if show_cinematic_sec = 3900
+			{
+			room_goto(room_sector_B07)
+			global.t_b_alpha = -0.1
+			obj_camera.x = 1825
+			obj_camera.t_x = 1825
+			obj_camera.y = 2241
+			obj_camera.t_y = 2241
+			}
+			else
+			{
+			obj_camera.t_x += 1.5
+			}
+			
+			if show_cinematic_sec >= 4200
+			{
+			obj_camera.t_x += 1
+			}
+			
+			if show_cinematic_sec >= 4920
+			{
+			global.t_b_alpha = 2.1
+			}
+		}
+		
+		if show_cinematic_sec >= 4930 && show_cinematic_sec < 6010
+		{
+			if show_cinematic_sec = 4930
+			{
+			instance_destroy(obj_angel.wall1)
+			instance_destroy(obj_angel.wall2)
+			instance_destroy(obj_angel._light_)
+			instance_destroy(obj_angel.spear__)
+			instance_destroy(obj_angel)
+			global.t_b_alpha = -0.1
+			obj_camera.x = 4468
+			obj_camera.t_x = 4468
+			}
+			else
+			{
+			obj_camera.t_x += 0.5
+			}
+			
+			if show_cinematic_sec >= 6000
+			{
+			global.t_b_alpha = 2.1
+			}
+		}
+		
+		if show_cinematic_sec >= 6010 && show_cinematic_sec < 7150
+		{
+			if show_cinematic_sec = 6010
+			{
+			room_goto(room_sector_outside)
+			global.t_b_alpha = -0.1
+			obj_camera.x = 0
+			obj_camera.t_x = 0
+			obj_camera.y = 913
+			obj_camera.t_y = 913
+			}
+			else
+			{
+			obj_camera.t_x ++
+			}
+		}
+		
+		if show_cinematic_sec >= 7200 && show_cinematic_sec < 8280
+		{
+			if show_cinematic_sec <= 7201
+			{
+			room_goto(room_main)
+			global.t_b_alpha = -0.1
+			obj_camera.x = 669
+			obj_camera.t_x = 669
+			obj_camera.y = 664
+			obj_camera.t_y = 664
+			}
+			else
+			{
+				if show_cinematic_sec < 7800
+				{
+				obj_camera.t_x ++
+				}
+				else
+				{
+				obj_camera.t_x += 0.3
+				}
+			}
+			
+			if show_cinematic_sec = 7800
+			{
+			obj_camera.v_x = 1280*0.7
+			obj_camera.v_y = 720*0.7
+			obj_camera.tv_x = 1280*0.7
+			obj_camera.tv_y = 720*0.7
+			obj_camera.x = 3000
+			obj_camera.t_x = 3000
+			}
+		}
+		
+		if show_cinematic_sec >= 8280
+		{
+		global.t_b_alpha = 2.1
+			if global.b_alpha >= 1
+			{
+			global.playing_scene = 0
+			}
+		}
+	}
+}
 
 

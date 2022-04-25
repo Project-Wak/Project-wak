@@ -1,5 +1,12 @@
 /// @description Insert description here
 // You can write your code in this editor
+var line_width = 1.5
+
+if color_1 = c_black
+{
+line_width = 2.1
+}
+
 if can_draw = 1
 {
 	for(var i = 6; i <= 19; i++)
@@ -8,9 +15,9 @@ if can_draw = 1
 		{
 		draw_set_alpha((0.2-alpha)*1.25)
 		draw_set_color(color_1)
-		draw_line_width(x,y,spark_x[i],spark_y[i],1.5)
+		draw_line_width(x,y,spark_x[i],spark_y[i],line_width)
 		draw_set_color(c_white)
-		draw_line_width(x,y,spark_x[i],spark_y[i],1.5)
+		draw_line_width(x,y,spark_x[i],spark_y[i],line_width)
 		}
 	
 		if alpha2 > 0
@@ -19,7 +26,7 @@ if can_draw = 1
 			{
 			draw_set_color(color_2)
 			draw_set_alpha(alpha2)
-			draw_line_width(x,y,spark_x[i],spark_y[i],1.5)
+			draw_line_width(x,y,spark_x[i],spark_y[i],line_width)
 			}
 		}
 	}

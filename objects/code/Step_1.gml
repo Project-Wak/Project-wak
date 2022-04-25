@@ -4,8 +4,15 @@ if global.slow_motion > 0
 {
 global.slow_motion += 0.1
 global.slow_motion += global.slow_motion*0.03
+	if global.broken_clock = 3
+	{
+	global.clock = 0
+	global.clock_far_from += (32 - global.clock_far_from)*0.01
+	}
+
 	if global.slow_motion < 45
 	{
+	sfx_broken = 0
 	th_afas = 0
 		if global.t_b_alpha <= 0 && !instance_exists(full_screen_option)
 		{
@@ -124,6 +131,32 @@ global.slow_motion += global.slow_motion*0.03
 				global.w_alpha = 0.75
 				}
 			}
+			
+			if (playing_gameover_scene > 0 || instance_exists(obj_wakdroid_ending)) && sfx_broken = 0 && global.slow_motion > 1200
+			{
+			sfx_broken = 1
+				if instance_exists(obj_wakdroid_ending)
+				{
+					if global.broken_clock = 2
+					{
+					view_shake(0,8,8)
+					var sfx_th = audio_play_sound(broken_sfx,0,0)
+					audio_sound_gain(sfx_th,0.2*global.master_volume*2*global.sfx_volume,0)
+					var sfx_th = audio_play_sound(glow_sfx,0,0)
+					audio_sound_gain(sfx_th,0.3*global.master_volume*2*global.sfx_volume,0)
+					global.broken_clock++
+					}
+				}
+				else
+				{
+				view_shake(0,8,8)
+				var sfx_th = audio_play_sound(broken_sfx,0,0)
+				audio_sound_gain(sfx_th,0.2*global.master_volume*2*global.sfx_volume,0)
+				var sfx_th = audio_play_sound(glow_sfx,0,0)
+				audio_sound_gain(sfx_th,0.3*global.master_volume*2*global.sfx_volume,0)
+				global.broken_clock++
+				}
+			}
 		room_speed = 60
 		global.playing_scene = 0
 		if instance_exists(player)
@@ -156,7 +189,7 @@ global.slow_motion += global.slow_motion*0.03
 			{
 				if playing_gameover_scene > 0
 				{
-				global.left_time = 6*global.time_plusment
+				global.left_time = 8*global.time_plusment
 				playing_gameover_scene = 0
 				}
 			}
@@ -172,6 +205,7 @@ global.slow_motion += global.slow_motion*0.03
 		global.clock_alpha = -1
 		global.t_clock_alpha = -1
 		global.t_clock_scale = -1
+		global.poisoning = 0
 		if instance_exists(player)
 		{
 		player.suicided = 0
@@ -191,7 +225,7 @@ global.slow_motion += global.slow_motion*0.03
 		global.platform_speed = 0
 		room_goto(room_main)
 		player.x = 1213
-		player.y = 662
+		player.y = 734
 		global.back_to_origin_stage = 2
 		global.b_alpha = 0
 		alarm[5] = 300
@@ -322,6 +356,7 @@ global.slow_motion += global.slow_motion*0.03
 			
 			if instance_exists(obj_wakdroid)
 			{
+			audio_stop_sound(follower_bgm)
 			audio_stop_sound(boss_bgm)
 			instance_destroy(obj_wakdroid)
 			obj_andience1194.cre_boss = 1
@@ -329,6 +364,7 @@ global.slow_motion += global.slow_motion*0.03
 			
 			if instance_exists(obj_last_boss)
 			{
+			audio_stop_sound(final_battle)
 			audio_stop_sound(boss_bgm)
 			instance_destroy(mob_spawn_here)
 			instance_destroy(obj_last_boss.wall1)
@@ -446,11 +482,29 @@ global.slow_motion += global.slow_motion*0.03
 		}
 		else
 		{
-			if global.gameover_reason = -4
+			if global.broken_clock = 3
 			{
-			global.gameover_reason = "[게임오버 엔딩]\n플레이어가 사망했다"
+			global.t_b_alpha = -0.01
+				if global.slow_motion > 30000
+				{
+				global.gameover += (1 - global.gameover)*0.03
+				}
+				
+				if instance_exists(obj_wakdroid_ending)
+				{
+				global.gameover_reason_title = "[회귀 불능 엔딩]"
+				global.gameover_reason = "과거로 되돌아가려고 했지만,\n시계가 완전히 망가져 버려 과거로 돌아갈 수 없게 되었다"
+				}
 			}
-		global.gameover += (1 - global.gameover)*0.03
+			else
+			{
+				if global.gameover_reason = -4
+				{
+				global.gameover_reason_title = "[게임오버 엔딩]"
+				global.gameover_reason = "플레이어가 사망했다"
+				}
+			global.gameover += (1 - global.gameover)*0.03
+			}
 		}
 	}
 }

@@ -2,12 +2,14 @@
 // You can write your code in this editor
 //buffer_delete(//////send_all(command_buffer);
 var d_ef = instance_create_depth(x,y-64,depth-1,draw_hp_m)
-var text__ = "+"+string(hp)
+var text__ = "+150"
 d_ef.d_text = text__
 d_ef.image_blend = $FF82FF90
 d_ef.image_xscale = 1.2
 d_ef.image_yscale = 1.2
 d_ef.target = -4
+
+obj_last_boss.hp += 150
 
 repeat(4)
 {

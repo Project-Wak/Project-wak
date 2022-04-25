@@ -82,6 +82,16 @@ audio_sound_gain(sfx,0.07*global.master_volume*2*global.sfx_volume,0)
 		{
 		room_goto(room_sector_B02_2)
 		}
+		else if (argument0 = "/clock" || argument0 = "/cl")
+		{
+		global.clock = 1
+		global.broken_clock = 0
+		}
+		else if (argument0 = "/clock_end" || argument0 = "/cled")
+		{
+		global.clock = 1
+		global.broken_clock = 2
+		}
 		else if (argument0 = "/B03" || argument0 = "/b03")
 		{
 		room_goto(room_sector_B03_2)
@@ -118,6 +128,15 @@ audio_sound_gain(sfx,0.07*global.master_volume*2*global.sfx_volume,0)
 		global.gold += 12000
 		instance_destroy(obj_angel)
 		instance_destroy(angel_spear)
+		}
+		else if (argument0 = "/credit" || argument0 = "/cre")
+		{
+		global.real_ending = 1
+		instance_create_depth(2994,2331,depth,obj_wakdroid_ending)
+		audio_stop_sound(final_battle)
+		audio_stop_sound(follower_bgm)
+		room_goto(room_sector_outside)
+		global.t_b_alpha = -0.01
 		}
 		else if (argument0 = "/tuto")
 		{

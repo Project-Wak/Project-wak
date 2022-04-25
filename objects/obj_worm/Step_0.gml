@@ -87,8 +87,11 @@ var yy_ = y+lengthdir_y(42,image_angle)
 				player.hurt = 1
 				player.hurt_cooltime = 3
 				hp_minus_for_player(452,player.id)
-				var sfx = audio_play_sound(choose(global.hit_sfx_1,global.hit_sfx_2,global.hit_sfx_3),0,0)
-				audio_sound_gain(sfx,0.2*global.master_volume*2*global.sfx_volume,0)
+					if global.show_credits = 0
+					{
+					var sfx = audio_play_sound(choose(global.hit_sfx_1,global.hit_sfx_2,global.hit_sfx_3),0,0)
+					audio_sound_gain(sfx,0.2*global.master_volume*2*global.sfx_volume,0)
+					}
 				}
 			break;
 			break;
@@ -203,8 +206,11 @@ else
 {
 	if scene__ > 0 && activated != 2
 	{
-	obj_camera.t_x = xstart
-	obj_camera.t_y = y
+		if global.show_credits = 0
+		{
+		obj_camera.t_x = xstart
+		obj_camera.t_y = y
+		}
 	
 		if !instance_exists(_light_)
 		{
@@ -231,10 +237,13 @@ else
 	{
 		if activated = 2
 		{
-		global.boss_target = id
-		global.boss_name = "하수도 속의 거대 쌉벌레두"
-		obj_camera.t_x = 3300
-		obj_camera.t_y = player.y
+			if global.show_credits = 0
+			{
+			global.boss_target = id
+			global.boss_name = "하수도 속의 거대 쌉벌레두"
+			obj_camera.t_x = 3300
+			obj_camera.t_y = player.y
+			}
 	
 			if saved_real_x = -4
 			{
@@ -261,7 +270,7 @@ else
 		instance_destroy(simhae_doo_bullet)
 		}
 		
-		if !audio_is_playing(quake_sfx)
+		if !audio_is_playing(quake_sfx) && global.show_credits = 0
 		{
 		var sfx = audio_play_sound(quake_sfx,0,0)
 		audio_sound_gain(sfx,0.1*global.master_volume*2*global.sfx_volume,0)
@@ -270,8 +279,11 @@ else
 	player.guarding = 2
 	y -= scene__*4
 	x -= scene__*0.6
-	obj_camera.tv_x += 1280*0.1
-	obj_camera.tv_y += 720*0.1
+		if obj_camera.tv_x < 1280*1.1
+		{
+		obj_camera.tv_x += 1280*0.003
+		obj_camera.tv_y += 720*0.003
+		}
 	image_angle = point_direction(x,y,player.x,player.y)
 	view_shake(0.1,0.1,1)
 	scene__ += 0.0032
@@ -288,14 +300,14 @@ else
 		}
 	
 	
-		if bgm = -4
+		if bgm = -4 && global.show_credits = 0
 		{
 		var sfx = audio_play_sound(laser_skill_ready,0,0)
 		audio_sound_gain(sfx,0.1*global.master_volume*2*global.sfx_volume,0)
 		bgm = audio_play_sound(boss_bgm,0,1)
 		}
 	
-		if !instance_exists(check__)
+		if !instance_exists(check__) && player.image_alpha > 0
 		{
 		check__ = instance_create_depth(x,y,depth-1,player_message)
 		check__.text = "!"
@@ -347,7 +359,7 @@ else
 	
 			if timer > 250
 			{
-			var random_patturn = choose(1,1,2,2,3)
+			var random_patturn = choose(1,1,2,2,3,4,4)
 				if random_patturn != b_patturn
 				{
 				patturn = random_patturn
@@ -357,7 +369,7 @@ else
 				{
 					repeat(99)
 					{
-					random_patturn = choose(1,1,2,2,3)
+					random_patturn = choose(1,1,2,2,3,4,4)
 					
 						if random_patturn != b_patturn
 						{
@@ -405,7 +417,7 @@ else
 			{
 				if abs(x - player.x) < 600
 				{
-					if breathing = 0
+					if breathing = 0 && global.show_credits = 0
 					{
 					breathing = 1
 					var sfx = audio_play_sound(fire_sfx,0,0)
@@ -539,9 +551,84 @@ else
 			
 			if patturn > 3.5
 			{
+			bullet_time = 0
 			start_cre_dir = 0
 			patturn = 0
 			timer = 300
+			}
+		}
+		
+		
+		if patturn >= 4 && patturn < 5
+		{
+		obj_camera.tv_x = 1280*1.1
+		obj_camera.tv_y = 720*1.1
+		patturn += 0.001
+			
+			if patturn < 4.05
+			{
+				if __sfx = 0 && global.show_credits = 0
+				{
+				var skill_red_ball_effect = instance_create_depth(x,y,depth-1,red_circle_effect)
+				skill_red_ball_effect.image_xscale = 0.45
+				skill_red_ball_effect.image_yscale = 0.45
+				skill_red_ball_effect.t_scale = 0.65
+				skill_red_ball_effect.alarm[11] = 16
+				var sfx = audio_play_sound(laser_skill_ready,0,0)
+				audio_sound_gain(sfx,0.15*global.master_volume*2*global.sfx_volume,0)
+				__sfx = 1
+				}
+			
+			_light_.alpha += (1 - _light_.alpha)*0.07
+			}
+			
+			if patturn > 4.1
+			{
+				if !instance_exists(_aaa) && patturn < 4.13
+				{
+				_aaa = instance_create_depth(x,y+32,depth-10,effect_special_skill_sec_attacked)
+				_aaa.image_angle = 90+bullet_time+300
+				_aaa.direction = 90+bullet_time+300
+				_aaa.color_1 = $FF70FFDC
+				_aaa.color_2 = $FF5A8539
+				_aaa.color_3 = $FF4CE083
+			
+				view_shake(11,11,1)
+				
+					if global.show_credits = 0
+					{
+					var sfx = audio_play_sound(laser_sfx_sec,0,0)
+					audio_sound_gain(sfx,0.06*global.master_volume*2*global.sfx_volume,0)
+					}
+				}
+			}
+			
+			if instance_exists(_aaa)
+			{
+			bullet_time --
+			_aaa.image_angle = 90+bullet_time+300+150
+			_aaa.direction = 90+bullet_time+300+150
+			}
+			
+			if patturn > 4.2
+			{
+				if !instance_exists(_aaa)
+				{
+				image_angle += (90+150 - image_angle)*0.1
+				}
+			}
+			else
+			{
+			image_angle += (90+bullet_time+180 - image_angle)*0.1
+			}
+			
+			if patturn > 4.3
+			{
+			bullet_time = 0
+			start_cre_dir = 0
+			patturn = 0
+			timer = 300
+			__sfx = 0
 			}
 		}
 	}

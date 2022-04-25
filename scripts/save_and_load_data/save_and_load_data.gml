@@ -8,6 +8,13 @@ function save_and_load_data(argument0,argument1)
 	
 	//골드
 	ini_write_real("key_tuto","a",global.key_tuto);
+	ini_write_real("poison_tuto","a",global.poison_tuto);
+	ini_write_real("chunyang","a",global.chunyang);
+	ini_write_real("replayed","a",global.replayed);
+	for(var i = 0; i <= 6; i++)
+	{
+	ini_write_real("achievement",string(i),global.achievement[i]);
+	}
 	
 	//골드
 	ini_write_real("first_sleep","a",global.first_sleep);
@@ -78,6 +85,8 @@ function save_and_load_data(argument0,argument1)
 	
 	if argument1 = 1 //아이템 정보도 저장
 	{
+	ini_write_real("add_max_hp","a",global.add_max_hp);
+	ini_write_real("broken_clock","a",global.broken_clock);
 	//키 가이드
 	ini_write_real("explosion_tuto","a",global.explosion_tuto)
 	ini_write_real("suicide_skill_tuto","a",global.suicide_skill_tuto)
@@ -137,6 +146,15 @@ function save_and_load_data(argument0,argument1)
 		ini_write_real("item_owned",string(i),global.item_owned[i])
 		}
 	}
+	
+	if argument1 = 2 //아이템 정보도 저장 (다회차용)
+	{
+	//웨폰 보유 유무
+	var i = global.n_sword
+	ini_write_real("weapon_owned",string(i),global.weapon_owned[i])
+	ini_write_real("weapon_upgraded",string(i),global.weapon_upgraded[i])
+	ini_write_real("add_max_hp","a",global.add_max_hp);
+	}
 
 
 	ini_close_protect()
@@ -146,6 +164,12 @@ function save_and_load_data(argument0,argument1)
 	ini_open_protect("Project_wak_beta_04.ini")
 	//골드
 	global.gold = ini_read_real("gold","a",0);
+	global.poison_tuto = ini_read_real("poison_tuto","a",0);
+	global.chunyang = ini_read_real("chunyang","a",0);
+	global.add_max_hp = ini_read_real("add_max_hp","a",0);
+	global.broken_clock = ini_read_real("broken_clock","a",0);
+	global.replayed = ini_read_real("replayed","a",0);
+	
 	
 	//골드
 	global.first_sleep = ini_read_real("first_sleep","a",0);
@@ -223,7 +247,7 @@ function save_and_load_data(argument0,argument1)
 	global.left_time = ini_read_real("left_time","a",24*3);
 	
 	//현재 시각
-	global.n_time = ini_read_real("n_time","a",20);
+	global.n_time = ini_read_real("n_time","a",8);
 	
 	//현재 시각
 	global.difficulty = ini_read_real("difficulty","a",-4);
@@ -265,6 +289,11 @@ function save_and_load_data(argument0,argument1)
 	for(var i = 0; i < global.total_item_num; i++)
 	{
 	global.item_owned[i] = ini_read_real("item_owned",string(i),0)
+	}
+	
+	for(var i = 0; i <= 6; i++)
+	{
+	global.achievement[i] = ini_read_real("achievement",string(i),-4);
 	}
 	
 	

@@ -27,26 +27,7 @@ draw_text_k_scale(xx,yy+v_x*350,"accessories : "+string(global.accessories_equip
 }
 
 
-var xx = camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5
-var yy = camera_get_view_y(view_camera[0])+v_x*150
-if global.choice > 0
-{
-	for(var i = 0; i < 3; i++)
-	{
-		if global.choice_name[i] != -4
-		{
-		draw_set_color(c_black)
-		draw_set_alpha(global.choice*0.7)
-		draw_rectangle(xx-v_x*180,yy+v_x*(60+i*100),xx+v_x*180,yy+v_x*(100+i*100),false)
-		draw_text_kl_scale(xx,yy+v_x*(70+i*100),global.choice_name[i],32,-1,global.choice,c_white,0,0,font0,1/3.3*v_x,1/3.3*v_x,0)
-			if global.choice_now = i
-			{
-			draw_set_color(c_white)
-			draw_rectangle(xx-v_x*180,yy+v_x*(60+i*100),xx+v_x*180,yy+v_x*(100+i*100),true)
-			}
-		}
-	}
-}
+
 
 
 

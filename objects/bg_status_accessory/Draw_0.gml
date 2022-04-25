@@ -98,12 +98,12 @@ if (pressed > 0 && global.key_setting_message > 0) || global.key_setting_message
 	if cal__img = 14
 	{
 	item_name__ = "긴급 치료제"
-	item_desc__ = "전투 도중 'R키'를 눌러 사용가능한 치료제\n\n특수효과 : 최대 체력의 50%만큼 회복 (각 전투당 1회 사용가능)"
+	item_desc__ = "전투 도중 'R키'를 눌러 사용가능한 치료제\n\n특수효과 : 최대 체력의 50%만큼 회복 및 상태 이상 해제 (각 전투당 1회 사용가능)"
 	}
 	if cal__img = 15
 	{
 	item_name__ = "각성제"
-	item_desc__ = "전투 도중 'R키'를 눌러 사용가능한 각성제\n\n특수효과 : 사용 즉시 레이지 모드 발동 (각 전투당 1회 사용가능)"
+	item_desc__ = "전투 도중 'R키'를 눌러 사용가능한 각성제\n\n특수효과 : 사용 즉시 레이지 모드 발동 및 상태 이상 해제 (각 전투당 1회 사용가능)"
 	}
 	if cal__img = 16
 	{

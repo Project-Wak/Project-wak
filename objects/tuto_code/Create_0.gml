@@ -10,3 +10,8 @@ show_timer = -128
 bgm__ = -4
 
 //global.wakdroid_cleared = 0
+
+if instance_number(obj_BG) > 1
+{
+instance_destroy()
+}

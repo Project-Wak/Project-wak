@@ -1,4 +1,31 @@
 
+if global.broken_clock != n_broken_clock && global.b_alpha < 0.5 && global.slow_motion = 0 && code.playing_gameover_scene = 0
+{
+global.playing_scene = 1
+global.never_move = 1
+	if !instance_exists(check__) && message_phase = 0
+	{
+	check__ = instance_create_depth(x,y,depth-1,player_message)
+	check__.text = "!"
+	check__.target = player.id
+	check__.parents = id
+	}
+	
+	if !instance_exists(check__) && message_phase = 1 && global.show_guide_mes = -4
+	{
+	global.show_guide_mes_spr = 6
+	global.show_guide_mes = "폭발의 영향으로 인해 Re:wind시계에 금이 갔다"
+	message_phase ++
+	}
+	
+	if !instance_exists(check__) && message_phase = 2 && global.show_guide_mes = -4
+	{
+	n_broken_clock = global.broken_clock
+	global.playing_scene = 0
+	global.never_move = 0
+	}
+}
+
 if global.tutorial = 0
 {
 	if global.hp < 200 && y-100 < room_height
@@ -7,10 +34,48 @@ if global.tutorial = 0
 	}
 }
 
+if global.hp > 1 && global.poisoning = 1
+{
+poison_alpha += 0.01
+	if poison_alpha > 1
+	{
+	var xx_ = x
+	var yy_ = y
+		
+		repeat(choose(4,5))
+		{
+		var random_val___2 = percentage_k(80)
+		create_buble_effect(image_xscale*0.4,270+irandom_range(-5,5),0,choose(-1)*irandom_range(30,70)/25,0.07,0.07,$FF70FFDC,$FF4CE083,2,$FF5A8539,xx_,yy_,depth-random_val___2,0,false,false)
+		}
+
+		
+		if global.hp > 20
+		{
+		global.hp -= 20
+		}
+		else
+		{
+		global.hp = 1
+		}
+	poison_alpha = 0
+	}
+}
+
+if global.poisoning = 0
+{
+poison_alpha += (-0.01 - poison_alpha)*0.1
+}
+
+if global.poison_tuto = 0 && room = room_sector_B06_2
+{
+global.show_guide_mes_spr = 5
+global.show_guide_mes = "상태 이상 - 독\n\n독 상태에 걸리게 될경우,\n체력이 1이 남을때 까지 지속적으로 체력이 닳는다.\n(상태 이상은, 특정 아이템을 사용하거나 사망시에만 해제 된다)"
+global.poison_tuto = 1
+}
 
 
 
-if global.room_brightness <= 0.35 && room != room_sector_outside
+if global.room_brightness/(global.n_night+1) <= 0.35 && room != room_sector_outside
 {
 	if global.lenturn = 1
 	{
@@ -89,9 +154,9 @@ hspeed = ins_pl_hand.hspeed
 }
 
 
-if global.playing_scene = 0 && global.hp > 0 && global.never_move = 0 && global.b_alpha < 0.1 && global.never_move_in_setting = 0 && show_left_time = 0 && global.left_time <= 12
+if global.playing_scene = 0 && global.hp > 0 && global.never_move = 0 && global.b_alpha < 0.1 && global.never_move_in_setting = 0 && show_left_time = 0 && global.left_time <= 12 && global.slow_motion = 0 && code.playing_gameover_scene = 0
 {
-global.show_guide_mes = "(왁드로이드 완성까지 시간이 얼마 남지 않았다)"
+global.show_guide_mes = "왁드로이드 완성까지 시간이 얼마 남지 않았다"
 global.show_guide_mes_spr = 6
 show_left_time = 2
 }
@@ -99,9 +164,9 @@ show_left_time = 2
 
 
 
-if global.playing_scene = 0 && global.hp > 0 && global.never_move = 0 && global.b_alpha < 0.1 && global.never_move_in_setting = 0 && tiredness = 0 && global.tiredness >= 18
+if global.playing_scene = 0 && global.hp > 0 && global.never_move = 0 && global.b_alpha < 0.1 && global.never_move_in_setting = 0 && tiredness = 0 && global.tiredness >= 18 && global.slow_motion = 0 && code.playing_gameover_scene = 0
 {
-global.show_guide_mes = "(피로도가 쌓여 조금 피곤한것 같다)"
+global.show_guide_mes = "피로도가 쌓여 조금 피곤한것 같다"
 global.show_guide_mes_spr = 6
 tiredness = 2
 }
@@ -413,6 +478,7 @@ skill_combo_cancle_n_motion(0)
 		{
 			if keyboard_check_pressed(ord("R"))
 			{
+			global.poisoning = 0
 			sfx_for_multiplayer(medical_sylinge_sfx,0,0.1)
 			global.can_use_sylinge = 0
 			w_alpha = 2
@@ -813,7 +879,7 @@ w_alpha += (-0.01 - w_alpha)*0.1
 				check_guard = choose(-1,1)
 				}
 				
-				var cal_m_ste = (8.7/global.guard_power)*1
+				var cal_m_ste = (6.7/global.guard_power)*1
 				if guarding > 0 && global.stemina >= cal_m_ste && check_guard = sign(image_xscale)
 				{
 				guarding_now = 1
@@ -852,7 +918,28 @@ w_alpha += (-0.01 - w_alpha)*0.1
 					hurt = 1
 					hurt_cooltime = 40
 					movement_speed = -sign(_placed_obj.image_xscale)*5
-					hp_minus_for_player(652,_placed_obj)
+					
+					if instance_exists(obj_wakdroid)
+					{
+					hp_minus_for_player(252,_placed_obj)
+					}
+					else
+					{
+						if room = room_sector_B03_2
+						{
+						hp_minus_for_player(252,_placed_obj)
+						}
+						
+						if room = room_sector_B04_2
+						{
+						hp_minus_for_player(452,_placed_obj)
+						}
+						
+						if room = room_sector_B06_2
+						{
+						hp_minus_for_player(652,_placed_obj)
+						}
+					}
 				
 			
 				
@@ -916,6 +1003,7 @@ w_alpha += (-0.01 - w_alpha)*0.1
 					hurt = 1
 					hurt_cooltime = 30
 					movement_speed = -sign(_placed_obj.image_xscale)*4
+					
 					hp_minus_for_player(793,_placed_obj)
 				
 			
@@ -1256,6 +1344,70 @@ w_alpha += (-0.01 - w_alpha)*0.1
 				}
 			}
 			
+			
+			
+			
+			
+			var _placed_obj = instance_place(x,y,falling_spear)
+			if _placed_obj >= 0 && spin = 0 && _placed_obj.timer <= 5
+			{
+			var check_guard = sign(x - _placed_obj.x)
+			
+				if check_guard = 0
+				{
+				check_guard = choose(-1,1)
+				}
+				
+				var cal_m_ste = (1/global.guard_power)*1
+				if guarding > 0 && global.stemina >= cal_m_ste && check_guard = sign(image_xscale)
+				{
+				guarding_now = 1
+				}
+				
+				if guarding_now = 1 || charge_attack > 0 || pering > 0
+				{
+				global.stemina -= cal_m_ste
+			
+		
+					if guard_cool_time = 0
+					{
+					movement_speed = image_xscale
+					guarding = 2.5
+					w_alpha = 1
+					guard_cool_time = 6
+					sfx_for_multiplayer(guard,0,0.1)
+	
+					var random_dir = -image_xscale
+					global.rage_gauge += 2
+
+						repeat(8)
+						{
+						var _ef = instance_create_depth(x-image_xscale*4,y+irandom_range(-13,0),depth-1,effect_spark)
+						_ef.hspeed = irandom_range(5,20)*random_dir
+						_ef.vspeed = irandom_range(-4,2)
+						}
+					}
+				}
+				else
+				{
+					if hurt_cooltime = 0
+					{
+					hurt = 1
+					hurt_cooltime = 6
+					hp_minus_for_player(259,_placed_obj)
+				
+			
+				
+						if !place_meeting(x,y+3,floor_parents)
+						{
+						y -= 1
+						}
+					vspeed = -4
+					sfx_for_multiplayer(choose(global.hit_sfx_1,global.hit_sfx_2,global.hit_sfx_3),0,0.2)
+					}
+				}
+			}
+			
 		
 		
 		
@@ -1464,7 +1616,14 @@ w_alpha += (-0.01 - w_alpha)*0.1
 					hurt = 1
 					hurt_cooltime = 8
 					movement_speed = check_guard
-					hp_minus_for_player(10,_placed_obj)
+						if instance_exists(obj_wakdroid)
+						{
+						hp_minus_for_player(58,_placed_obj)
+						}
+						else
+						{
+						hp_minus_for_player(43,_placed_obj)
+						}
 				
 				
 						if !place_meeting(x,y+3,floor_parents)
@@ -1526,7 +1685,7 @@ w_alpha += (-0.01 - w_alpha)*0.1
 					hurt = 1
 					hurt_cooltime = 10
 					movement_speed = check_guard
-					hp_minus_for_player(272,_placed_obj)
+					hp_minus_for_player(89,_placed_obj)
 				
 				
 						if !place_meeting(x,y+3,floor_parents)
@@ -1671,7 +1830,7 @@ w_alpha += (-0.01 - w_alpha)*0.1
 				check_guard = choose(-1,1)
 				}
 				
-				var cal_m_ste = (1/global.guard_power)*0.6
+				var cal_m_ste = (1/global.guard_power)*0.15
 				if guarding > 0 && global.stemina >= cal_m_ste && check_guard = sign(image_xscale)
 				{
 				guarding_now = 1
@@ -1684,7 +1843,7 @@ w_alpha += (-0.01 - w_alpha)*0.1
 		
 					if guard_cool_time = 0
 					{
-					movement_speed = image_xscale*2
+					movement_speed = image_xscale*3
 					guarding = 2.5
 					w_alpha = 1
 					guard_cool_time = 13
@@ -1707,8 +1866,8 @@ w_alpha += (-0.01 - w_alpha)*0.1
 					{
 					hurt = 1
 					hurt_cooltime = 13
-					movement_speed = check_guard*0.8
-					hp_minus_for_player(194,_placed_obj)
+					movement_speed = check_guard*2
+					hp_minus_for_player(72,_placed_obj)
 				
 				
 						if on_floor != true
@@ -1732,7 +1891,7 @@ w_alpha += (-0.01 - w_alpha)*0.1
 				check_guard = choose(-1,1)
 				}
 				
-				var cal_m_ste = (1/global.guard_power)*0.7
+				var cal_m_ste = (1/global.guard_power)*0.2
 				if guarding > 0 && global.stemina >= cal_m_ste && check_guard = sign(image_xscale)
 				{
 				guarding_now = 1
@@ -1745,7 +1904,7 @@ w_alpha += (-0.01 - w_alpha)*0.1
 		
 					if guard_cool_time = 0
 					{
-					movement_speed = image_xscale
+					movement_speed = image_xscale*2
 					guarding = 2.5
 					w_alpha = 1
 					guard_cool_time = 10
@@ -1768,8 +1927,8 @@ w_alpha += (-0.01 - w_alpha)*0.1
 					{
 					hurt = 1
 					hurt_cooltime = 10
-					movement_speed = check_guard*0.8
-					hp_minus_for_player(214,_placed_obj)
+					movement_speed = check_guard*3
+					hp_minus_for_player(83,_placed_obj)
 				
 
 					y -= 2
@@ -1791,7 +1950,7 @@ w_alpha += (-0.01 - w_alpha)*0.1
 				check_guard = choose(-1,1)
 				}
 				
-				var cal_m_ste = (1/global.guard_power)*1.3
+				var cal_m_ste = (1/global.guard_power)*0.3
 				if guarding > 0 && global.stemina >= cal_m_ste && check_guard = sign(image_xscale)
 				{
 				guarding_now = 1
@@ -1827,8 +1986,8 @@ w_alpha += (-0.01 - w_alpha)*0.1
 					{
 					hurt = 1
 					hurt_cooltime = 10
-					movement_speed = check_guard*2
-					hp_minus_for_player(287,_placed_obj)
+					movement_speed = check_guard*3
+					hp_minus_for_player(92,_placed_obj)
 				
 				
 					y -= 2
@@ -1848,7 +2007,7 @@ w_alpha += (-0.01 - w_alpha)*0.1
 				check_guard = choose(-1,1)
 				}
 				
-				var cal_m_ste = (1/global.guard_power)*1.3
+				var cal_m_ste = (1/global.guard_power)*1.5
 				if guarding > 0 && global.stemina >= cal_m_ste && check_guard = sign(image_xscale)
 				{
 				guarding_now = 1
@@ -1861,7 +2020,7 @@ w_alpha += (-0.01 - w_alpha)*0.1
 		
 					if guard_cool_time = 0
 					{
-					movement_speed = image_xscale
+					movement_speed = image_xscale*7
 					guarding = 2.5
 					w_alpha = 1
 					guard_cool_time = 10
@@ -1884,8 +2043,8 @@ w_alpha += (-0.01 - w_alpha)*0.1
 					{
 					hurt = 1
 					hurt_cooltime = 10
-					movement_speed = check_guard*2
-					hp_minus_for_player(300,_placed_obj)
+					movement_speed = check_guard*4
+					hp_minus_for_player(108,_placed_obj)
 				
 				
 					vspeed = 2
@@ -2015,6 +2174,10 @@ w_alpha += (-0.01 - w_alpha)*0.1
 				hurt_cooltime = 5
 				movement_speed = check_guard*4.3
 				hp_minus_for_player(82,_placed_obj)
+					if instance_exists(obj_worm)
+					{
+					hp_minus_for_player(226,_placed_obj)
+					}
 				vspeed -= 0.6
 				sfx_for_multiplayer(choose(global.hit_sfx_1,global.hit_sfx_2,global.hit_sfx_3),0,0.2)
 				
@@ -2155,7 +2318,7 @@ w_alpha += (-0.01 - w_alpha)*0.1
 	
 	if global.cannot_use_stemina = 0
 	{
-		if (sprite_index = move_sprite || sprite_index = spr_crouch || sprite_index = guard_sprite) && gravity <= 0 && attack_gun_ = 0
+		if (sprite_index = move_sprite || sprite_index = spr_crouch || sprite_index = guard_sprite || sprite_index = jump_sprite) && gravity <= 0 && attack_gun_ = 0
 		{
 		global.stemina_cooltime += 2
 		}
@@ -2167,12 +2330,12 @@ w_alpha += (-0.01 - w_alpha)*0.1
 		if global.stemina_cooltime > 10
 		{
 		global.stemina += 0.15
-			if (player.sprite_index = spr_crouch)
+			if (sprite_index = spr_crouch)
 			{
 			global.stemina += 0.15
 			}
 			
-			if sprite_index = guard_sprite
+			if (sprite_index = guard_sprite || sprite_index = jump_sprite)
 			{
 			global.stemina -= 0.08
 			}
@@ -2279,7 +2442,7 @@ w_alpha += (-0.01 - w_alpha)*0.1
 	
 			if hurt = 1
 			{
-				if global.b_alpha < 0.1
+				if global.b_alpha < 0.1 && global.playing_scene = 0
 				{
 				sfx_for_multiplayer(down_attack_sfx,0,0.15)
 				}
@@ -2327,7 +2490,7 @@ w_alpha += (-0.01 - w_alpha)*0.1
 		}
 	}
 
-	if y > room_height && fallen = 0 && global.b_alpha < 0.1
+	if y > room_height && fallen = 0 && global.b_alpha < 0.1 && global.back_to_origin_stage = 0
 	{
 		if global.ignore_falling_check > 0
 		{
@@ -4035,8 +4198,16 @@ global.movement_speed = 0
 		sfx_for_multiplayer(jump_attack_sfx,0,0.6)
 		
 		sfx_for_multiplayer(choose(swing_lightsaber_sfx2,swing_lightsaber_sfx3),0,0.1)
+		
+		var _ins = instance_create_depth(x-image_xscale*32,y+64,depth-1,down_effect_line)
+		_ins.sprite_index = quake_effect
+		_ins.image_index = 4
+		_ins.image_alpha = 0.8
+		_ins.image_xscale = 1.6
+		_ins.image_yscale = 1.3
 		}
-	
+
+
 	jump_attack += 0.12
 	jump_attack_motion_dilay ++
 		if jump_attack_vsp_up != 1
@@ -4621,6 +4792,19 @@ global.movement_speed = 0
 
 if down_attack > 0 && spin_attack = 0
 {
+	if !instance_exists(down_effect_line)
+	{
+		if on_floor != true
+		{
+		var ins_ = instance_create_depth(x-image_xscale*36,y-32,depth+1,down_effect_line)
+		ins_.image_alpha = 0
+		}
+	}
+	else
+	{
+	down_effect_line.x = x-image_xscale*36
+	down_effect_line.y = y+24
+	}
 movement_speed = 0
 down_dis += 0.5
 	if down_attack < 5
@@ -4714,7 +4898,7 @@ global.movement_speed = 0
 		sfx_for_multiplayer(down_attack_sfx,0,0.5)
 		
 		
-
+		down_effect_line.image_alpha = 1
 		view_shake(4,15+down_dis,4)
 		
 		var effect_ = instance_create_depth(x,global.p_floor+27,player.depth+1,down_effect)

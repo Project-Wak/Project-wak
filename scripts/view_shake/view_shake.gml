@@ -3,6 +3,8 @@
 ///@param view_angle_shake
 function view_shake(argument0, argument1, argument2) 
 {
+	if global.show_credits = 0
+	{
 	var zoom_scale = argument0*1.7
 	var shake_scale = argument1*1.8
 	var angle_shake_ = argument2/5
@@ -50,4 +52,5 @@ global.can_send_shake++
 	//buffer_write(command_buffer, buffer_string, floor(argument2*100));
 	//////send_all(command_buffer);
 	//}
+	}
 }

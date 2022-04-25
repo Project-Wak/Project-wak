@@ -1,11 +1,17 @@
 //command_buffer = buffer_create(3, buffer_grow, 1);
 //match_buffer = buffer_create(3, buffer_grow, 1);
+
+if instance_number(player) > 1
+{
+instance_destroy()
+}
+
 image_index = 0
 image_speed = 0
 movement_speed = 0
 name = global.nickname;
 playerID = 0;
-soc = 0;
+
 alarm[1] = 1
 message_phase = 0
 show_left_time = 0
@@ -13,7 +19,9 @@ check__ = -4
 _light_ = -4
 light_timer = 0
 tiredness = 0
-run_stemina = 0
+
+poison_alpha = 0
+n_broken_clock = 0
 
 //if global.guide_message_chat = 0
 //{

@@ -18,3 +18,8 @@ t_laser_direction_2 = 90
 
 laser_direction_time = 0
 laser_direction_time_a = 0
+
+if instance_number(obj_BG) > 1
+{
+instance_destroy()
+}

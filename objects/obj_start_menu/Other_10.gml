@@ -9,7 +9,6 @@ if go_start != 3
 		{
 		var sfx_ = audio_play_sound(critical_sfx,0,0)
 		audio_sound_gain(sfx_,0.02*global.master_volume*2*global.sfx_volume,0)
-		window_set_cursor(cr_none)
 		global.t_b_alpha = 2.01
 		global.room_brightness = 0.6
 		go_start = 1
@@ -85,7 +84,6 @@ else
 
 var sfx_ = audio_play_sound(critical_sfx,0,0)
 audio_sound_gain(sfx_,0.02*global.master_volume*2*global.sfx_volume,0)
-window_set_cursor(cr_none)
 global.t_b_alpha = 2.01
 global.room_brightness = 0.6
 go_start = 4

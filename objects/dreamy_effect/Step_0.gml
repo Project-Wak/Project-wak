@@ -25,3 +25,5 @@ for(var i = 0; i <= 128; i++)
 	star_t_alpha[i] = 0
 	}
 }
+
+

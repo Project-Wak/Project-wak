@@ -19,12 +19,19 @@ cre_boss = 0
 show_ending = 0
 b_alpha_ = 0
 __sfx__ = 0
+speed_pl = 0
 
 play_scene__ = 0
 volume__ = 1
 ending_mes_timer = 0
 timer2 = 0
 view_size = 0.7
+show_mes_ending = 0
+show_cinematic = 0
+show_cinematic_sec = 0
+bgm = -4
+volume_downer = 1
+select_end = 0
 
 audio_stop_sound(boss_bgm)
 

@@ -40,6 +40,6 @@ draw_text_kl_scale(xx+160*_c_x,yy-10*_c_x,"현재 해상도 : "+string(n_window_
 	{
 	var xx2 = camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5
 	var yy2 = camera_get_view_y(view_camera[0])+camera_get_view_height(view_camera[0])-60*_c_x
-	draw_text_kl_scale(xx2,yy2,"게임 창 위치를 이동하려면 Tab키를 꾹 누른상태로 마우스 커서를 움직여주세요",64*_c_x,999,0.7,image_blend,0,0,font0,1/3.5*_c_x,1/3.5*_c_x,image_angle)
+	draw_text_kl_scale(xx2,yy2,"게임 창 위치를 이동하려면 Ctrl키를 꾹 누른상태로 마우스 커서를 움직여주세요",64*_c_x,999,0.7,image_blend,0,0,font0,1/3.5*_c_x,1/3.5*_c_x,image_angle)
 	}
 }

@@ -1,5 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
+if global.show_credits = 0
+{
 var v_x = obj_camera.v_x/1280
 var cm_x = camera_get_view_x(view_camera[0])
 var xx = cm_x+v_x*16
@@ -59,7 +61,12 @@ if image_alpha > 0 && global.hp > 0 && global.playing_scene <= 0 && global.t_b_a
 			{
 			draw_sprite_ext(sprite20,5,xx+69*v_x,yy+32*v_x,(max_hp/1000)*(global.m_hp/max_hp)*5.5*v_x,1.9*v_x*1.6,0,c_white,hp_bar_alpha)
 			draw_sprite_ext(sprite20,1,xx+69*v_x,yy+32*v_x,(max_hp/1000)*(draw_hp/max_hp)*5.5*v_x,1.9*v_x*1.6,0,c_white,hp_bar_alpha)
+				if poison_alpha > 0
+				{
+				draw_sprite_ext(sprite20,6,xx+69*v_x,yy+32*v_x,(max_hp/1000)*(draw_hp/max_hp)*5.5*v_x,1.9*v_x*1.6,0,c_white,poison_alpha)
+				}
 			}
+			
 		
 			if code.injured_effect > 0
 			{
@@ -68,7 +75,7 @@ if image_alpha > 0 && global.hp > 0 && global.playing_scene <= 0 && global.t_b_a
 			
 			if global.r_hp_alpha > 0
 			{
-			draw_sprite_ext(sprite20,3,xx+69*v_x,yy+32*v_x,5.5*v_x,2.05*v_x,0,c_red,global.r_hp_alpha)
+			draw_sprite_ext(sprite20,3,xx+69*v_x,yy+32*v_x,(max_hp/1080)*5.5*v_x,2.05*v_x,0,c_red,global.r_hp_alpha)
 			}
 		}
 	
@@ -93,4 +100,5 @@ if image_alpha > 0 && global.hp > 0 && global.playing_scene <= 0 && global.t_b_a
 		draw_sprite_ext(sprite20,3,xx+67*v_x,yy+96*v_x,1.82*v_x,1.71*v_x,0,c_white,global.rage_w_alpha)
 		}
 	}
+}
 }

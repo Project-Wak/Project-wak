@@ -2,7 +2,8 @@
 // You can write your code in this editor
 
 
-
+if global.show_credits = 0
+{
 if special_voice_chat = 0 && (string_pos("!BT",text) != 0 || string_pos("!bt",text) != 0)
 {
 var sfx = audio_play_sound(buy_item,0,0)
@@ -89,5 +90,6 @@ special_voice_chat = 1
 var _a = instance_create_depth(x,y,depth-1,obj_imoji)
 _a.image_index = 7
 _a.target = target
+}
 }
 

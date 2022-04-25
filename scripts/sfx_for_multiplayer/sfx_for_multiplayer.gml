@@ -4,7 +4,7 @@
 function sfx_for_multiplayer(argument0, argument1, argument2) 
 {
 var can_not_play = 0
-	if (global.n_sword = 6 && (argument0 = swing_lightsaber_sfx1 || argument0 = swing_lightsaber_sfx2 || argument0 = swing_lightsaber_sfx3)) || global.slow_motion > 0
+	if (global.n_sword = 6 && (argument0 = swing_lightsaber_sfx1 || argument0 = swing_lightsaber_sfx2 || argument0 = swing_lightsaber_sfx3)) || global.slow_motion > 0 || audio_is_playing(ending_cinematic)
 	{
 	can_not_play = 1
 	}

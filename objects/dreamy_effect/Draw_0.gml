@@ -4,6 +4,10 @@ if instance_exists(obj_angel)
 {
 depth = 9999900
 }
+else
+{
+depth = player.depth+9999
+}
 
 var cm_width = camera_get_view_width(view_camera[0])*2
 if global.dreamy_alpha > 0

@@ -6,3 +6,4 @@ image_yscale = 0.5
 room_speed = 60
 //n_to_set = 0
 global.n_to_setting__ = 0
+

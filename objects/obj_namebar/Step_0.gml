@@ -52,7 +52,7 @@ if activate = 0
 		if global.nickname = -4
 		{
 		already_set_name = 0
-		global.nickname = "아기뺑띠"+string(irandom_range(0,1000))
+		global.nickname = "우왁굳"
 		}
 	}
 	else

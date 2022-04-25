@@ -138,21 +138,27 @@ b_alpha_ += (t_b_alpha_ - b_alpha_)*0.08
 
 	if scene__ > 0 && activated != 2
 	{
-	obj_camera.tv_x = 1280*0.9
-	obj_camera.tv_y = 720*0.9
-	obj_camera.t_x = xstart
-	obj_camera.t_y = y+180
+		if global.show_credits = 0
+		{
+		obj_camera.tv_x = 1280*0.9
+		obj_camera.tv_y = 720*0.9
+		obj_camera.t_x = xstart
+		obj_camera.t_y = y+180
+		}
 	}
 	else
 	{
 		if activated = 2
 		{
-		global.boss_target = id
-		global.boss_name = "암흑속의 심해두"
-		obj_camera.tv_x = 1280
-		obj_camera.tv_y = 720
-		obj_camera.t_x = xstart
-		obj_camera.t_y = player.y
+			if global.show_credits = 0
+			{
+			global.boss_target = id
+			global.boss_name = "암흑속의 심해두"
+			obj_camera.tv_x = 1280
+			obj_camera.tv_y = 720
+			obj_camera.t_x = xstart
+			obj_camera.t_y = player.y
+			}
 	
 			if saved_real_x = -4
 			{
@@ -183,7 +189,7 @@ b_alpha_ += (t_b_alpha_ - b_alpha_)*0.08
 		wall2.image_yscale = 5
 		}
 		
-		if !audio_is_playing(quake_sfx)
+		if !audio_is_playing(quake_sfx) && global.show_credits = 0
 		{
 		var sfx = audio_play_sound(quake_sfx,0,0)
 		audio_sound_gain(sfx,0.1*global.master_volume*2*global.sfx_volume,0)
@@ -201,14 +207,14 @@ b_alpha_ += (t_b_alpha_ - b_alpha_)*0.08
 		y -= scene__*2.3
 		}
 	
-		if bgm = -4
+		if bgm = -4 && global.show_credits = 0
 		{
 		var sfx = audio_play_sound(laser_skill_ready,0,0)
 		audio_sound_gain(sfx,0.1*global.master_volume*2*global.sfx_volume,0)
 		bgm = audio_play_sound(boss_bgm,0,1)
 		}
 	
-		if !instance_exists(check__)
+		if !instance_exists(check__) && player.image_alpha > 0
 		{
 		check__ = instance_create_depth(x,y,depth-1,player_message)
 		check__.text = "!"
@@ -365,8 +371,11 @@ b_alpha_ += (t_b_alpha_ - b_alpha_)*0.08
 		{
 			if abs(hspeed) < 4
 			{
-			var a___ = audio_play_sound(charging_sfx,0,0)
-			audio_sound_gain(a___,0.1*global.master_volume*2*global.sfx_volume,0)
+				if global.show_credits = 0
+				{
+				var a___ = audio_play_sound(charging_sfx,0,0)
+				audio_sound_gain(a___,0.1*global.master_volume*2*global.sfx_volume,0)
+				}
 
 			hspeed = p_xscale*15
 			}

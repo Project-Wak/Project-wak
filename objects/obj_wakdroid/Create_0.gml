@@ -1,15 +1,15 @@
 /// @description Insert description here
 // You can write your code in this editor
 //command_buffer = buffer_create(3, buffer_grow, 1);
-wall_1 = instance_create_depth(4804,2117,depth,obj_floor_tile3)
-wall_1.image_yscale = 2.25
 
+audio_stop_sound(follower_bgm)
 phase = 0
-
+wall_1 = -4
 if global.left_time <= 24
 {
 global.left_time = 24
 }
+global.save_point_x = player.x
 
 t_x = player.x
 t_y = 2459
@@ -26,15 +26,15 @@ knocked_down_ef = 0
 hit_motion = 0
 can_attack = 0
 bgm = -4
-hp = 900
+hp = 1900
 check_floor = 0
 max_hp = hp
+check_hp = hp
 hp_bar_alpha = 0
 damage_calcul__ = 0
 t_hp_bar_alpha = 0
 armored_level = 5
 damaged_count = 0
-check_hp = 900
 dash_attack = 0
 draw_hp = 0
 rage_mode = 0

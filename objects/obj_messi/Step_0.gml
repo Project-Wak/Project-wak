@@ -421,21 +421,27 @@ alpha += (0 - alpha)*0.1
 
 if scene__ > 0 && activated != 2
 {
-obj_camera.tv_x = 1280*0.9
-obj_camera.tv_y = 720*0.9
-obj_camera.t_x = x
-obj_camera.t_y = player.y
+	if global.show_credits = 0
+	{
+	obj_camera.tv_x = 1280*0.9
+	obj_camera.tv_y = 720*0.9
+	obj_camera.t_x = x
+	obj_camera.t_y = player.y
+	}
 }
 else
 {
 	if activated = 2
 	{
-	global.boss_target = id
-	global.boss_name = "화염의 기사 - 거대 안드로이드 메시"
-	obj_camera.tv_x = 1280
-	obj_camera.tv_y = 720
-	obj_camera.t_x = x
-	obj_camera.t_y = y+105
+		if global.show_credits = 0
+		{
+		global.boss_target = id
+		global.boss_name = "화염의 기사 - 거대 안드로이드 메시"
+		obj_camera.tv_x = 1280
+		obj_camera.tv_y = 720
+		obj_camera.t_x = x
+		obj_camera.t_y = y+105
+		}
 	
 		if saved_real_x = -4
 		{
@@ -466,7 +472,7 @@ if activated = 1
 	instance_destroy(normal_mob)
 	}
 	
-	if !audio_is_playing(quake_sfx)
+	if !audio_is_playing(quake_sfx) && global.show_credits = 0
 	{
 	var sfx = audio_play_sound(quake_sfx,0,0)
 	audio_sound_gain(sfx,0.1*global.master_volume*2*global.sfx_volume,0)
@@ -489,14 +495,14 @@ image_blend = merge_color(c_black,c_white,scene__)
 global.playing_scene = 1
 global.never_move = 1
 global.room_brightness += 0.0005
-	if bgm = -4
+	if bgm = -4 && global.show_credits = 0
 	{
 	var sfx = audio_play_sound(laser_skill_ready,0,0)
 	audio_sound_gain(sfx,0.1*global.master_volume*2*global.sfx_volume,0)
 	bgm = audio_play_sound(boss_bgm,0,1)
 	}
 	
-	if !instance_exists(check__)
+	if !instance_exists(check__) && player.image_alpha > 0
 	{
 	check__ = instance_create_depth(x,y,depth-1,player_message)
 	check__.text = "!"
@@ -575,7 +581,7 @@ activated = 2
 		
 	obj_hand.cannot_step = 1
 	cannot_step = 1
-		if patturn = 1
+		if patturn = 1 && global.show_credits = 0
 		{
 		var sfx = audio_play_sound(laser_skill_ready,0,0)
 		audio_sound_gain(sfx,0.15*global.master_volume*2*global.sfx_volume,0)
@@ -583,7 +589,7 @@ activated = 2
 		
 		if patturn >= 1.32 && patturn <= 1.7
 		{
-			if patturn = 1.32
+			if patturn = 1.32 && global.show_credits = 0
 			{
 			var sfx = audio_play_sound(laser_skill_using,0,0)
 			audio_sound_gain(sfx,0.05*global.master_volume*2*global.sfx_volume,0)
@@ -713,8 +719,11 @@ activated = 2
 			{
 			left_hand.vspeed = 10
 			right_hand.vspeed = 10
-			var sfx = audio_play_sound(jump_attack_sfx,0,0)
-			audio_sound_gain(sfx,0.5*global.master_volume*2*global.sfx_volume,0)
+				if global.show_credits = 0
+				{
+				var sfx = audio_play_sound(jump_attack_sfx,0,0)
+				audio_sound_gain(sfx,0.5*global.master_volume*2*global.sfx_volume,0)
+				}
 			}
 		left_hand.vspeed += 1.6
 		left_hand.gravity = 0.35
@@ -727,15 +736,18 @@ activated = 2
 			right_hand.vspeed = 0
 			right_hand.gravity = 0
 			patturn = 2.2
-			var sfx = audio_play_sound(down_attack_sfx,0,0)
-			audio_sound_gain(sfx,0.2*global.master_volume*2*global.sfx_volume,0)
+				if global.show_credits = 0
+				{
+				var sfx = audio_play_sound(down_attack_sfx,0,0)
+				audio_sound_gain(sfx,0.2*global.master_volume*2*global.sfx_volume,0)
 		
-			var a___ = audio_play_sound(guard,0,0)
-			audio_sound_gain(a___,0.05*global.master_volume*2*global.sfx_volume,0)
+				var a___ = audio_play_sound(guard,0,0)
+				audio_sound_gain(a___,0.05*global.master_volume*2*global.sfx_volume,0)
 		
-			var sfx = audio_play_sound(mob_faint,0,0)
-			audio_sound_gain(sfx,0.4*global.master_volume*2*global.sfx_volume,0)
-			view_shake(11,30,1)
+				var sfx = audio_play_sound(mob_faint,0,0)
+				audio_sound_gain(sfx,0.4*global.master_volume*2*global.sfx_volume,0)
+				view_shake(11,30,1)
+				}
 		
 			var a___ = instance_create_depth(left_hand.x,left_hand.y+60,depth,rage_mode_knockback_attacked)
 			a___.image_xscale = 10
@@ -815,8 +827,11 @@ activated = 2
 			{
 			go_up = 0
 			sfx__ = 1
-			var sfx = audio_play_sound(jump_attack_sfx,0,0)
-			audio_sound_gain(sfx,0.5*global.master_volume*2*global.sfx_volume,0)
+				if global.show_credits = 0 
+				{
+				var sfx = audio_play_sound(jump_attack_sfx,0,0)
+				audio_sound_gain(sfx,0.5*global.master_volume*2*global.sfx_volume,0)
+				}
 			patturn = 2.75
 			}
 		
@@ -824,8 +839,11 @@ activated = 2
 			{
 				if floor(patturn*10) = 25
 				{
-				var a___ = audio_play_sound(bomb_sfx,0,0)
-				audio_sound_gain(a___,0.1*global.master_volume*2*global.sfx_volume,0)
+					if global.show_credits = 0
+					{
+					var a___ = audio_play_sound(bomb_sfx,0,0)
+					audio_sound_gain(a___,0.1*global.master_volume*2*global.sfx_volume,0)
+					}
 				patturn = 2.8
 				}
 				else
@@ -837,6 +855,8 @@ activated = 2
 			right_hand.vspeed = 0
 			right_hand.gravity = 0
 		
+			if global.show_credits = 0
+			{
 			var sfx = audio_play_sound(down_attack_sfx,0,0)
 			audio_sound_gain(sfx,0.2*global.master_volume*2*global.sfx_volume,0)
 		
@@ -846,6 +866,7 @@ activated = 2
 			var sfx = audio_play_sound(mob_faint,0,0)
 			audio_sound_gain(sfx,0.2*global.master_volume*2*global.sfx_volume,0)
 			view_shake(11,30,1)
+			}
 		
 			var a___ = instance_create_depth(left_hand.x,left_hand.y+60,depth,rage_mode_knockback_attacked)
 			a___.image_xscale = 10
@@ -954,6 +975,9 @@ activated = 2
 			{
 			left_hand.hspeed = 0
 			right_hand.hspeed = 0
+			
+			if global.show_credits = 0
+			{
 			var a___ = audio_play_sound(bomb_sfx,0,0)
 			audio_sound_gain(a___,0.12*global.master_volume*2*global.sfx_volume,0)
 			
@@ -962,6 +986,7 @@ activated = 2
 			
 			var a___ = audio_play_sound(guard,0,0)
 			audio_sound_gain(a___,0.07*global.master_volume*2*global.sfx_volume,0)
+			}
 		
 			var a___ = instance_create_depth(x,left_hand.y,depth,rage_mode_knockback_attacked)
 			a___.image_xscale = 3
@@ -1059,8 +1084,11 @@ activated = 2
 			{
 			left_hand.vspeed = 6
 			right_hand.vspeed = 6
-			var sfx = audio_play_sound(jump_attack_sfx,0,0)
-			audio_sound_gain(sfx,0.5*global.master_volume*2*global.sfx_volume,0)
+				if global.show_credits = 0
+				{
+				var sfx = audio_play_sound(jump_attack_sfx,0,0)
+				audio_sound_gain(sfx,0.5*global.master_volume*2*global.sfx_volume,0)
+				}
 			}
 		left_hand.vspeed += 1.6
 		left_hand.gravity = 0.35
@@ -1075,6 +1103,9 @@ activated = 2
 			left_hand.gravity = 0
 			right_hand.vspeed = 0
 			right_hand.gravity = 0
+			
+			if global.show_credits = 0
+			{
 			var sfx = audio_play_sound(down_attack_sfx,0,0)
 			audio_sound_gain(sfx,0.32*global.master_volume*2*global.sfx_volume,0)
 		
@@ -1084,6 +1115,7 @@ activated = 2
 			var sfx = audio_play_sound(mob_faint,0,0)
 			audio_sound_gain(sfx,0.4*global.master_volume*2*global.sfx_volume,0)
 			view_shake(11,30,1)
+			}
 		
 			var a___ = instance_create_depth(left_hand.x,left_hand.y+60,depth,rage_mode_knockback_attacked)
 			a___.image_xscale = 10
@@ -1191,15 +1223,19 @@ activated = 2
 				patturn = 4.1
 				left_hand.gravity = 0
 				left_hand.vspeed = 0
-				var sfx = audio_play_sound(down_attack_sfx,0,0)
-				audio_sound_gain(sfx,0.32*global.master_volume*2*global.sfx_volume,0)
+				
+					if global.show_credits = 0
+					{
+					var sfx = audio_play_sound(down_attack_sfx,0,0)
+					audio_sound_gain(sfx,0.32*global.master_volume*2*global.sfx_volume,0)
 		
-				var a___ = audio_play_sound(guard,0,0)
-				audio_sound_gain(a___,0.07*global.master_volume*2*global.sfx_volume,0)
+					var a___ = audio_play_sound(guard,0,0)
+					audio_sound_gain(a___,0.07*global.master_volume*2*global.sfx_volume,0)
 		
-				var sfx = audio_play_sound(mob_faint,0,0)
-				audio_sound_gain(sfx,0.4*global.master_volume*2*global.sfx_volume,0)
-				view_shake(11,30,1)
+					var sfx = audio_play_sound(mob_faint,0,0)
+					audio_sound_gain(sfx,0.4*global.master_volume*2*global.sfx_volume,0)
+					view_shake(11,30,1)
+					}
 		
 				var a___ = instance_create_depth(left_hand.x,left_hand.y+60,depth,rage_mode_knockback_attacked)
 				a___.image_xscale = 10
@@ -1224,15 +1260,19 @@ activated = 2
 				patturn = 4.1
 				right_hand.gravity = 0
 				right_hand.vspeed = 0
-				var sfx = audio_play_sound(down_attack_sfx,0,0)
-				audio_sound_gain(sfx,0.32*global.master_volume*2*global.sfx_volume,0)
+				
+					if global.show_credits = 0
+					{
+					var sfx = audio_play_sound(down_attack_sfx,0,0)
+					audio_sound_gain(sfx,0.32*global.master_volume*2*global.sfx_volume,0)
 		
-				var a___ = audio_play_sound(guard,0,0)
-				audio_sound_gain(a___,0.07*global.master_volume*2*global.sfx_volume,0)
+					var a___ = audio_play_sound(guard,0,0)
+					audio_sound_gain(a___,0.07*global.master_volume*2*global.sfx_volume,0)
 		
-				var sfx = audio_play_sound(mob_faint,0,0)
-				audio_sound_gain(sfx,0.4*global.master_volume*2*global.sfx_volume,0)
-				view_shake(11,30,1)
+					var sfx = audio_play_sound(mob_faint,0,0)
+					audio_sound_gain(sfx,0.4*global.master_volume*2*global.sfx_volume,0)
+					view_shake(11,30,1)
+					}
 		
 				var a___ = instance_create_depth(right_hand.x,right_hand.y+60,depth,rage_mode_knockback_attacked)
 				a___.image_xscale = 10
@@ -1249,7 +1289,7 @@ activated = 2
 			if !audio_is_playing(fire_sfx) && patturn >= 4.1
 			{
 			patturn += 0.001
-				if patturn >= 4.2 && patturn < 4.3
+				if patturn >= 4.2 && patturn < 4.3 && global.show_credits = 0
 				{
 				var sfx = audio_play_sound(fire_sfx,0,0)
 				audio_sound_gain(sfx,0.2*global.master_volume*2*global.sfx_volume,0)
@@ -1297,7 +1337,7 @@ activated = 2
 							{
 							global.r_alpha += (0.17 - global.r_alpha)*0.1
 							global.hp -= 10*global.difficulty
-								if !audio_is_playing(global.hit_sfx_1)
+								if !audio_is_playing(global.hit_sfx_1) && global.show_credits = 0
 								{
 								var sfx = audio_play_sound(global.hit_sfx_1,0,0)
 								audio_sound_gain(sfx,0.1*global.master_volume*2*global.sfx_volume,0)
@@ -1335,7 +1375,7 @@ activated = 2
 							{
 							global.r_alpha += (0.17 - global.r_alpha)*0.1
 							global.hp -= 10*global.difficulty
-								if !audio_is_playing(global.hit_sfx_1)
+								if !audio_is_playing(global.hit_sfx_1) && global.show_credits = 0
 								{
 								var sfx = audio_play_sound(global.hit_sfx_1,0,0)
 								audio_sound_gain(sfx,0.1*global.master_volume*2*global.sfx_volume,0)

@@ -43,8 +43,11 @@ else
 
 if water_placed = 0 && place_meeting(x,y,outside_water)
 {
-var sfx__ = audio_play_sound(water_in_sfx,0,false)
-audio_sound_gain(sfx__,1.3,0)
+	if global.show_credits = 0
+	{
+	var sfx__ = audio_play_sound(water_in_sfx,0,false)
+	audio_sound_gain(sfx__,1.3,0)
+	}
 	
 water_placed = 1
 vspeed = 0

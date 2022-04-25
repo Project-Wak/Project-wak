@@ -113,7 +113,7 @@ var yy_ = y
 			}
 			
 		global.hp -= 10*global.difficulty
-			if !audio_is_playing(global.hit_sfx_1)
+			if !audio_is_playing(global.hit_sfx_1) && global.show_credits = 0
 			{
 			var sfx = audio_play_sound(global.hit_sfx_1,0,0)
 			audio_sound_gain(sfx,0.1*global.master_volume*2*global.sfx_volume,0)
@@ -134,7 +134,7 @@ var yy_ = y
 			}
 			
 		global.hp -= 10*global.difficulty
-			if !audio_is_playing(global.hit_sfx_1)
+			if !audio_is_playing(global.hit_sfx_1) && global.show_credits = 0
 			{
 			var sfx = audio_play_sound(global.hit_sfx_1,0,0)
 			audio_sound_gain(sfx,0.1*global.master_volume*2*global.sfx_volume,0)

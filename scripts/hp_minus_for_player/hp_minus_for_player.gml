@@ -96,5 +96,14 @@ player.assult_mode = 600
 	if global.playing_scene = 0
 	{
 	global.hp -= (calcul_damage)
+		if instance_exists(obj_last_boss)
+		{
+		obj_last_boss.hp += calcul_damage/10
+		}
+	}
+	
+	if room = room_sector_B06_2
+	{
+	global.poisoning = 1
 	}
 }

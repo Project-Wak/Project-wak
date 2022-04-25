@@ -8,6 +8,11 @@ y = yy
 image_xscale = _c_x*0.8
 image_yscale = _c_x*0.8
 
+if check_mouse_place()
+{
+event_user(2)
+}
+
 if pressed > 0
 {
 global.key_setting_message = 1

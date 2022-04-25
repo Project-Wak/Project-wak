@@ -132,3 +132,14 @@ shader_set(shFlash)
 draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,c_white,w_alpha)
 shader_reset()
 }
+
+
+if instance_exists(obj_angel) && instance_exists(angel_spear)
+{
+	if obj_angel.patturn >= 4 && obj_angel.patturn < 4.18
+	{
+	draw_set_color(c_white)
+	draw_set_alpha(angel_spear.w_alpha)
+	draw_line_width(player.x,obj_angel.y+210,player.x,obj_angel.y-1000,angel_spear.w_alpha)
+	}
+}

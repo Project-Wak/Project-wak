@@ -1,15 +1,31 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if global.got_sec_phase = 1 && hp > 400
+obj_camera.tv_x = 1280*0.9
+obj_camera.tv_y = 720*0.9
+obj_camera.v_x = 1280*0.9
+obj_camera.v_y = 720*0.9
+if global.got_sec_phase = 1 && hp > 300
 {
-hp = 400
+hp = 300
 }
+global.room_brightness += (0.6 - global.room_brightness)*0.04
 
 if y > 2404
 {
 vspeed = 0
 gravity = 0
+}
+
+if damaged_count < 0
+{
+damaged_count = 0
+}
+
+if !instance_exists(wall_1)
+{
+wall_1 = instance_create_depth(4896,1728,depth,obj_floor_tile3)
+wall_1.image_yscale = 5
 }
 
 check_floor = -4
@@ -23,16 +39,16 @@ for(var i = 0; i < 64; i++)
 }
 
 
-if bgm != -4
+if audio_is_playing(follower_bgm)
 {
-audio_sound_gain(bgm,0.1*global.master_volume*global.bgm_volume*scene__,0)
+audio_sound_gain(code.last_bgm,0.1*global.master_volume*global.bgm_volume*scene__,0)
 }
 
-if bgm = -4
+if !audio_is_playing(follower_bgm)
 {
 var sfx = audio_play_sound(laser_skill_ready,0,0)
 audio_sound_gain(sfx,0.1*global.master_volume*2*global.sfx_volume,0)
-bgm = audio_play_sound(boss_bgm,0,1)
+code.last_bgm = audio_play_sound(follower_bgm,0,1)
 }
 
 	if dash_attack > 0
@@ -147,7 +163,7 @@ if phase = 1
 
 if phase = 0
 {
-obj_camera.t_x = 5373
+obj_camera.t_x = 5650
 	if scene__ <= 1
 	{
 	scene__ += 0.0032
@@ -204,6 +220,11 @@ obj_camera.t_x = 5373
 		attack_ = 0
 		keep_attacking = 0
 		attack_sfx_on = 0
+		gravity_ignore = 0
+			if vspeed < 0 && gravity = 0
+			{
+			gravity = 0.1
+			}
 		}
 		else if hit_motion > 0
 		{
@@ -212,6 +233,11 @@ obj_camera.t_x = 5373
 		attack_ = 0
 		keep_attacking = 0
 		attack_sfx_on = 0
+		gravity_ignore = 0
+			if vspeed < 0 && gravity = 0
+			{
+			gravity = 0.1
+			}
 		}
 	}
 
@@ -225,6 +251,7 @@ obj_camera.t_x = 5373
 		hit_motion = 0
 		keep_attacking = 0
 		cannot_move = 0
+		gravity_ignore = 0
 		hurt_motion_time_for_bug = 0
 		}
 	}
@@ -239,7 +266,11 @@ obj_camera.t_x = 5373
 	red_glow_effect(sprite_index,image_index,0.2)
 
 	rage_mode -= 0.001
-	damaged_count = 0
+		if damaged_count != 0
+		{
+		rage_mode += damaged_count/10000
+		damaged_count = 0
+		}
 	}
 
 
@@ -364,6 +395,25 @@ obj_camera.t_x = 5373
 				if rage_mode > 0
 				{
 				attack_ += 0.02
+				}
+				
+				if (attack_ > 3.9 && attack_ < 4.3) || (attack_ > 6.8 && attack_ < 7.3) || (attack_ > 12.8 && attack_ < 13.3)
+				{
+					if image_xscale = 1 && player.x > x+64
+					{
+					attack_ = 0
+					attack_sfx_on = 0
+					keep_attacking = 0
+					sprite_index = move_sprite
+					}
+				
+					if image_xscale = -1 && player.x < x-64
+					{
+					attack_ = 0
+					attack_sfx_on = 0
+					keep_attacking = 0
+					sprite_index = move_sprite
+					}
 				}
 		
 				if attack_sfx_on = 0 && (floor(image_index) = 2)
@@ -516,13 +566,13 @@ obj_camera.t_x = 5373
 		show_debug_message(attack_delay)
 		}
 		image_xscale = -sign_k(player.x - x)
-			if attack_delay > 70
+			if attack_delay > 40
 			{
-			movement_speed += (-sign(image_xscale)*(9+rage_mode*5) - movement_speed)*0.1
+			movement_speed += (-sign(image_xscale)*(9+rage_mode*5) - movement_speed)*0.25
 			}
 			else
 			{
-			movement_speed += (-sign(image_xscale)*(6+rage_mode*5) - movement_speed)*0.1
+			movement_speed += (-sign(image_xscale)*(5+rage_mode*5) - movement_speed)*0.1
 			}
 			
 			if abs(x - player.x) <= 150 && abs(player.y - y) > 32
@@ -756,6 +806,9 @@ obj_camera.t_x = 5373
 			{
 			_aaa.image_angle = 270
 			}
+		_aaa.color_1 = c_white
+		_aaa.color_2 = $FF1C1CB2
+		_aaa.color_3 = $FF6D52F2
 		}
 	
 		if attack_laser_sec > 18
@@ -1033,7 +1086,14 @@ repeat(100)
 
 if sprite_index = move_sprite
 {
-image_index += abs(movement_speed)*0.12
+	if abs(movement_speed) < 4
+	{
+	image_index += abs(movement_speed)*0.12
+	}
+	else
+	{
+	image_index += 4*0.12
+	}
 }
 
 if image_index > image_number

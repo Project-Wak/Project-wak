@@ -1,5 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
+
+
 depth = 1000
 image_speed = 0
 image_index = 0
@@ -16,6 +18,7 @@ angelring_y = 0
 angelring_timer = 0
 dead_scene = 0
 shake_boss = 1
+bullet_timer = 0
 bgm = -4
 activated = 0
 patturn = 0
@@ -25,8 +28,8 @@ laser2 = -4
 saved_player_dir = 0
 message_phase = 0
 check__ = -4
-hp = 2500
-max_hp = 2500
+hp = 3300
+max_hp = 3300
 cannot_move = 0
 cannot_step = 1
 random_quake = -1
@@ -57,3 +60,8 @@ sfx_2 = 0
 _light_ = -4
 
 alarm[0] = 120
+
+if global.real_ending > 0 && global.show_credits = 0
+{
+instance_destroy()
+}

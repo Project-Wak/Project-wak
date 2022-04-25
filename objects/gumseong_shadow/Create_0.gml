@@ -38,18 +38,11 @@ attack_delay_timer = 0
 force_move = 0
 run_delay = 0
 
-if global.gumseong_met_time > 3
-{
-global.gumseong_met_time = -3
-global.show_guide_mes_spr = 4
-global.show_guide_mes = "검성의 그림자\n\n검성의 그림자는 일종의 히든몹 같은 개념으로, 처치시 특정한 무기를 드랍한다.\n\n(다만, 해당 몹은 매우 강력하므로 무시하고 지나쳐도 상관없다)"
-global.gumseong_tuto = 1
-}
 
 if global.gumseong_tuto = 0
 {
 global.show_guide_mes_spr = 4
-global.show_guide_mes = "검성의 그림자\n\n검성의 그림자는 일종의 히든몹 같은 개념으로, 처치시 특정한 무기를 드랍한다.\n\n(다만, 해당 몹은 매우 강력하므로 무시하고 지나쳐도 상관없다)"
+global.show_guide_mes = "검성의 그림자\n\n검성의 그림자는 일종의 히든몹 같은 개념으로,\n처치시 특수한 무기를 드랍한다.\n\n(다만, 해당 몹은 매우 강력하므로 무시하고 지나쳐도 상관없다)"
 global.gumseong_tuto = 1
 }
 

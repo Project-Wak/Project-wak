@@ -13,11 +13,19 @@ can_interect = 0
 }
 
 
+if instance_exists(obj_worm) && obj_worm.activated > 0
+{
+can_interect = 0
+}
+
+
 if can_interect = 1 && keyboard_check_pressed(ord(string(global.skip_key))) && t_y != -64
 {
 //var sfx = audio_play_sound(activate_sfx,0,0)
 //audio_sound_gain(sfx,global.master_volume*2*global.sfx_volume,0)
 t_y = -64
+var	sfx__ = audio_play_sound(walk_sfx,0,false)
+audio_sound_gain(sfx__,0.3,0)
 global.never_move = 1
 global.t_b_alpha = 2.1
 }
@@ -40,8 +48,6 @@ if t_y = -64
 				player.y = y+32
 				obj_camera.x = x
 				obj_camera.y = y+65
-				var	sfx__ = audio_play_sound(walk_sfx,0,false)
-				audio_sound_gain(sfx__,0.3,0)
 				
 					if my_connection = 14 && cre_shadow = 0
 					{
@@ -57,8 +63,6 @@ if t_y = -64
 				player.y = y+32
 				obj_camera.x = x
 				obj_camera.y = y+65
-				var	sfx__ = audio_play_sound(walk_sfx,0,false)
-				audio_sound_gain(sfx__,0.3,0)
 				
 					if my_connection = 14 && cre_shadow = 0
 					{

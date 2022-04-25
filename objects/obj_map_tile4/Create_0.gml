@@ -4,6 +4,11 @@ depth = 999
 global.save_point_x = 896
 global.save_point_y = 736
 
+if global.tutorial = 0
+{
+global.n_time = 20
+}
+
 
 
 var ele__ = instance_create_depth(-1000,736,0,obj_elevator)
@@ -26,5 +31,9 @@ inside_.image_index = 2
 
 var droped_item__ = instance_create_depth(2175,167,0,obj_droped_item)
 droped_item__.item_var = 115
+
+var inside_ = instance_create_depth(1243,966,0,obj_isedol)
+inside_.image_index = 6
+
 
 

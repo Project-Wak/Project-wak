@@ -20,6 +20,10 @@ shaker_time = 0
 saved_xscale = 0
 saved_yscale = 0
 
+//color_1 = c_white
+//color_2 = $FF1C1CB2
+//color_3 = $FF6D52F2
+
 view_shake(3,3,1)
 alpha1 = 0.4
 alarm[0] = 1

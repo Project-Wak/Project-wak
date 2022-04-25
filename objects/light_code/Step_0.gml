@@ -29,7 +29,7 @@ if surface_exists(global.light_surf) && global.night_vision = 0
 {
 surface_set_target(global.light_surf);
 gpu_set_blendmode(bm_add);
-draw_sprite_ext(sprite173,2,0,0,60,60,0,$ffffff,global.room_brightness*global.brightness_setting*2)
+draw_sprite_ext(sprite173,2,0,0,60,60,0,$ffffff,global.room_brightness*global.brightness_setting*2/(global.n_night+1))
 gpu_set_blendmode(bm_normal);
 surface_reset_target()
 }

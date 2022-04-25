@@ -68,7 +68,7 @@ global.playing_scene = 1
 	if !instance_exists(check__) && message_phase = 2
 	{
 	check__ = instance_create_depth(x,y,depth-1,player_message)
-	check__.text = "우왁굳! 네가 여길 어떻게...."
+	check__.text = string(global.nickname)+"! 네가 여길 어떻게...."
 	check__.target = id
 	check__.parents = id
 	}
@@ -161,7 +161,7 @@ global.playing_scene = 1
 	if !instance_exists(check__) && message_phase = 12
 	{
 	check__ = instance_create_depth(x,y,depth-1,player_message)
-	check__.text = "으하하하ㅎㅎ핳"
+	check__.text = "공격부터 회피까지 네놈의 모든 걸 카피했으니 누구도 막을 수 없다!"
 	check__.target = id
 	check__.parents = id
 	}
@@ -218,6 +218,7 @@ global.playing_scene = 1
 	
 	if !instance_exists(check__) && message_phase = 19
 	{
+	image_xscale = -1
 	check__ = instance_create_depth(x,y,depth-1,player_message)
 	check__.text = "그... 그만둬!"
 	check__.target = id
@@ -230,7 +231,9 @@ global.playing_scene = 1
 		{
 		var target_xx = check__.target
 		obj_camera.x = target_xx.x
+		obj_camera.t_x = target_xx.x
 		}
+		
 	obj_camera.v_x = 1280*0.6
 	obj_camera.v_y = 720*0.6
 	}
@@ -391,6 +394,7 @@ global.playing_scene = 1
 	
 	if !instance_exists(check__) && message_phase = 29
 	{
+	obj_camera.t_x = -4
 	check__ = instance_create_depth(x,y,depth-1,player_message)
 	check__.text = "(왁드로이드를 쫓아가자)"
 	check__.target = player.id
@@ -408,6 +412,7 @@ global.playing_scene = 1
 	interecting_now = 0
 	message_phase ++
 	}
+	
 	
 	if (message_phase >= 23 && message_phase <= 24) || message_phase = 28
 	{

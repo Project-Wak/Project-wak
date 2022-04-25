@@ -106,3 +106,23 @@ if shaker_time >= 4
 {
 shaker_time = 0
 }
+
+if surface_exists(global.light_surf)
+{
+var s_x = camera_get_view_x(view_camera[0])
+var s_y = camera_get_view_y(view_camera[0])
+surface_set_target(global.light_surf)
+gpu_set_blendmode(bm_add);
+var xx = x - s_x
+var yy = y - s_y
+
+	for(var i = 3; i <= 20; i += 0.5)
+	{
+	//var alpha_ = image_alpha/i
+	var alpha_ = (image_alpha*0.2/i)
+	var color = $FF6D52F2
+	draw_sprite_ext(Sprite143,0,xx,yy,image_xscale*5/i,image_yscale*13/i,image_angle,color,alpha_)
+	}
+gpu_set_blendmode(bm_normal)
+surface_reset_target()
+}

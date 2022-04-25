@@ -36,3 +36,13 @@ image_alpha -= 0.1
 	instance_destroy()
 	}
 }
+
+if place_meeting(x-32,y,obj_floor_tile3)
+{
+image_angle = 90
+}
+
+if place_meeting(x+32,y,obj_floor_tile3)
+{
+image_angle = -90
+}

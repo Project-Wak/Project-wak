@@ -10,5 +10,14 @@ can_give_item = 0
 interecting_now = 0
 first_tuto = 0
 give_healitem = 0
+wall_1 = -4
 
 depth = 960
+set_time = 1
+betted_gold = 0
+global.coin_flip = 0
+coin_flip_speed = 0
+global.coin_flip_n = 0
+random_coin = 0
+timer = 0
+global.your_page = 0

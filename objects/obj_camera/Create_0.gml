@@ -20,6 +20,8 @@ global.show_time = 0
 timer__playing_scene_ = 0
 portensial_y = 0
 guide_sfx = 0
+draw_rage_gagement = 0
+spining_speed = 3
 
 instance_create_depth(x,y,depth,obj_potential_camera)
 
@@ -35,6 +37,7 @@ global.t_shake_y = 0
 global.b_alpha = 0
 global.t_b_alpha = 0
 global.fix_camera = 0
+show_ending_var = 0
 
 global.b_alpha_prt = 0
 global.t_b_alpha_prt = 0

@@ -22,11 +22,12 @@ saved_real_x = -4
 saved_real_y = -4
 start_cre_dir = 0
 bullet_time = 0
-
+__sfx = 0
 dead_scene = 0
-n_hp = 3700
-hp = 3700
-max_hp = 3700
+_aaa = -4
+n_hp = 5200
+hp = 5200
+max_hp = 5200
 b_patturn = 0
 cannot_move = 0
 t_hp_bar_alpha = 0

@@ -1,6 +1,13 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+
+
+if !instance_exists(obj_worm)
+{
+instance_destroy()
+}
+
 if n_hp != hp
 {
 obj_worm.hp -= n_hp-hp

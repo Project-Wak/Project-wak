@@ -29,24 +29,19 @@ if global.b_alpha < 0.1
 }
 
 
-if abs(player.x-2214) <= 32 && show_mes = 0
-{
-show_mes++
-global.show_guide_mes_spr = 6
-global.show_guide_mes = "(굉장히 몽환적인 장소다)"
-}
 
-if abs(player.x-2605) <= 32 && show_mes = 1
+
+if abs(player.x-2605) <= 32 && show_mes = 0 && global.show_credits = 0
 {
 show_mes++
 global.show_guide_mes_spr = 6
-global.show_guide_mes = "(점점 이 연구소의 끝이 보이는 것 같다)"
+global.show_guide_mes = "점점 이 연구소 지하의 끝이 보이는 것 같다"
 }
 
 
-if abs(player.x-2805) <= 32 && show_mes = 2
+if abs(player.x-2805) <= 32 && show_mes = 1 && global.show_credits = 0
 {
 show_mes++
 global.show_guide_mes_spr = 6
-global.show_guide_mes = "(미리 장비 세팅 및 게임 저장을 하고 오는편이 좋을 것 같다)"
+global.show_guide_mes = "왠지 미리 장비 세팅 및 게임 저장을 하는게 좋을 것 같다"
 }

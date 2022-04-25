@@ -39,7 +39,7 @@ real_text_time ++
 }
 
 
-if keyboard_check_released(ord(string(global.skip_key))) && global.left_time > 0
+if keyboard_check_released(ord(string(global.skip_key))) && global.left_time > 0 && global.show_time != 3
 {
 	with(parents)
 	{

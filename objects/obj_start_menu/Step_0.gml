@@ -15,13 +15,6 @@ wheel_cooltime --
 		{
 		menu_alpha += 0.1
 		}
-		else
-		{
-			if global.t_b_alpha <= 0
-			{
-			window_set_cursor(cr_default)
-			}
-		}
 	}
 
 	if start_alpha > 0.85
@@ -69,7 +62,81 @@ wheel_cooltime --
 	{
 		if global.b_alpha > 2
 		{
-		room_goto(tuto_room)
+			if global.tutorial != 0
+			{
+				if really = 0
+				{
+				global.choice_name[0] = "게임 불러오기"
+				global.choice_name[1] = "데이터 삭제"
+				global.choice_name[2] = -4
+				}
+				else
+				{
+				global.choice_name[0] = "취소 하기"
+				global.choice_name[1] = "정말로 데이터 삭제하기"
+				global.choice_name[2] = -4
+				}
+		
+				if global.choosed > 0
+				{
+				var sfx_ = audio_play_sound(critical_sfx,0,0)
+				audio_sound_gain(sfx_,0.02*global.master_volume*2*global.sfx_volume,0)
+				global.choice += (-0.1 - global.choice)*0.2
+					if really = 0
+					{
+						if global.choice_now = 0
+						{
+						global.choosed = 0
+						global.choice_now = 0
+						global.b_alpha = 1
+						global.choice = 0
+						timer_des = 1
+						alarm[2] = 120
+						}
+						else
+						{
+						global.choosed = 0
+						global.choice_now = 0
+						global.choice = 0
+						really = 1
+						}
+					}
+					else
+					{
+						if global.choice_now = 0
+						{
+						global.choosed = 0
+						global.choice_now = 0
+						global.choice = 0
+						really = 0
+						}
+						else
+						{
+						global.choice = 0
+						file_delete("Project_wak_beta_04.ini")
+						save_and_load_data(0,0)
+						timer_des++
+							if timer_des > 3
+							{
+							game_restart()
+							}
+						}
+					}
+				}
+				else
+				{
+					if timer_des = 0
+					{
+					global.choice += (1.001 - global.choice)*0.2
+					}
+				}
+			}
+			else
+			{
+			room_goto(tuto_room)
+			}
+		
+		global.cursor = 0
 		}
 	}
 
@@ -100,6 +167,7 @@ wheel_cooltime --
 						if global.story_next >= 3
 						{
 						room_goto(tuto_room)
+						global.cursor = 0
 						}
 					}
 				}

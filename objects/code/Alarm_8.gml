@@ -5,7 +5,7 @@ if global.key_setting_message = 0
 {
 	if instance_exists(player)
 	{
-	window_set_cursor(cr_default)
+	global.cursor = 1
 	show_debug_message("inv")
 	option ++
 	instance_create_depth(x,y,-9998,bg_status)
@@ -32,7 +32,7 @@ if global.key_setting_message = 0
 	if option > 1
 	{
 	option = 0
-	window_set_cursor(cr_none)
+	global.cursor = 0
 	instance_destroy(setting_parents)
 	}
 }

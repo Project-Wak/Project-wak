@@ -30,3 +30,5 @@ on_floor = 0
 }
 
 
+
+w_alpha += (-0.01 - w_alpha)*0.04

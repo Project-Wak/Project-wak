@@ -14,7 +14,7 @@ draw_text_kl_scale(xx-v_x*(600-16),yy-20*v_x,string(keyboard_string)+"|",v_x*64,
 
 	if time > 200
 	{
-	draw_text_kl_scale(camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])-v_x*16,yy-20*v_x,"(Enter 키를 눌러 닫기)",v_x*64,-1,alpha,c_red,0,1,font0,v_x*0.3,v_x*0.3,0);
+	draw_text_kl_scale(camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])-v_x*16,yy-20*v_x,"(Enter 키를 눌러 닫기)",v_x*64,-1,alpha,c_white,0,1,font0,v_x*0.3,v_x*0.3,0);
 	}
 	else
 	{

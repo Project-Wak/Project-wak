@@ -29,8 +29,11 @@ hp = max_hp
 if knocked_down_ef > 0 && attack_paturn = 0
 {
 knocked_down_ef ++
+if rage_mode <= 0
+{
 cannot_move = 1
 hit_motion = 1
+}
 sprite_index = hurt_sprite
 movement_speed += (0 - movement_speed)*0.1
 
@@ -142,7 +145,7 @@ if spin = 0 && dash_attack = 0
 		bloody(_attacker_ef.x,_attacker_ef.y,1)
 		hit_cooltime = 1
 		last_hit = 1
-		if test_mob_type = 0
+		if rage_mode <= 0
 		{
 		movement_speed = __i*1.8
 		cannot_move = 1
@@ -176,7 +179,7 @@ if spin = 0 && dash_attack = 0
 		bloody(_attacker_ef.x,_attacker_ef.y,1)
 		hit_cooltime = 1
 		last_hit = 1
-		if test_mob_type = 0
+		if rage_mode <= 0
 		{
 		movement_speed = __i*1.8
 		cannot_move = 1
@@ -212,7 +215,7 @@ if spin = 0 && dash_attack = 0
 		bloody(_attacker_ef.x,_attacker_ef.y,1)
 		hit_cooltime = 1
 		last_hit = 1
-		if test_mob_type = 0
+		if rage_mode <= 0
 		{
 		movement_speed = __i*0.4
 		cannot_move = 1
@@ -235,7 +238,7 @@ if spin = 0 && dash_attack = 0
 		if hit_cooltime = 0
 		{
 		var _attacker_ef = instance_place(x,y,effect_down_attack)
-		if test_mob_type = 0
+		if rage_mode <= 0
 		{
 		movement_speed = __i*0.9
 		cannot_move = 1
@@ -289,7 +292,7 @@ if spin = 0 && dash_attack = 0
 		bloody(_attacker_ef.x,_attacker_ef.y,1)
 		last_hit = 1
 		gravity = 0.36
-		if test_mob_type = 0
+		if rage_mode <= 0
 		{
 		movement_speed = __i*2
 		cannot_move = 1
@@ -328,7 +331,7 @@ if spin = 0 && dash_attack = 0
 		bloody(_attacker_ef.x,_attacker_ef.y,1)
 		last_hit = 1
 		gravity = 0.2
-		if test_mob_type = 0
+		if rage_mode <= 0
 		{
 		movement_speed = __i*2
 		cannot_move = 1
@@ -370,7 +373,7 @@ if spin = 0 && dash_attack = 0
 		last_hit = 1
 		gravity = 0.2
 		hit_cooltime = 1
-		if test_mob_type = 0
+		if rage_mode <= 0
 		{
 		movement_speed = __i*2.5
 		cannot_move = 1
@@ -406,7 +409,7 @@ if spin = 0 && dash_attack = 0
 		last_hit = 1
 		gravity = 0.36
 		hit_cooltime = 1
-		if test_mob_type = 0
+		if rage_mode <= 0
 		{
 		movement_speed = __i*7
 		cannot_move = 1
@@ -449,7 +452,7 @@ if spin = 0 && dash_attack = 0
 		last_hit = 1
 		hit_cooltime = 1
 		gravity = 0.2
-		if test_mob_type = 0
+		if rage_mode <= 0
 		{
 		movement_speed += __i*2.5
 		vspeed -= 0.5
@@ -482,7 +485,7 @@ if spin = 0 && dash_attack = 0
 		hp_minus_for_mob(0,62)
 		gravity = 0.2
 		y --
-		if test_mob_type = 0
+		if rage_mode <= 0
 		{
 		movement_speed = -sign_k(-global.movement_speed)*13
 		cannot_move = 1
@@ -526,9 +529,17 @@ if spin = 0 && dash_attack = 0
 		bloody(_attacker_ef.x,_attacker_ef.y,0)
 		view_shake(1,4,2)
 		hp_minus_for_mob(0,14)
+		if rage_mode > 0
+		{
+		rage_mode -= 0.01
+		}
+		if damaged_count > 0
+		{
+		damaged_count -= 0.1*150
+		}
 		last_hit = 1
 		gravity = 0.2
-		if test_mob_type = 0
+		if rage_mode <= 0
 		{
 		movement_speed = __i*2.5
 		vspeed -= 0.1
@@ -555,7 +566,14 @@ if spin = 0 && dash_attack = 0
 		var sfx = audio_play_sound(choose(global.hit_sfx_1,global.hit_sfx_2,global.hit_sfx_3),0,0)
 		audio_sound_gain(sfx,0.2*global.master_volume*2*global.sfx_volume,0)
 	
-
+		if rage_mode > 0
+		{
+		rage_mode -= 0.01
+		}
+		if damaged_count > 0
+		{
+		damaged_count -= 0.1*150
+		}
 		var sfx = audio_play_sound(sparking_sound,0,0)
 		audio_sound_gain(sfx,0.2*global.master_volume*2*global.sfx_volume,0)
 	
@@ -563,7 +581,7 @@ if spin = 0 && dash_attack = 0
 		{
 		y -= 1
 		}
-		if test_mob_type = 0
+		if rage_mode <= 0
 		{
 		vspeed -= 0.6
 		}
@@ -584,7 +602,7 @@ if spin = 0 && dash_attack = 0
 		last_hit = 1
 		hit_cooltime = 1
 		gravity = 0.2
-		if test_mob_type = 0
+		if rage_mode <= 0
 		{
 		movement_speed = __i*4.3
 		vspeed -= 1

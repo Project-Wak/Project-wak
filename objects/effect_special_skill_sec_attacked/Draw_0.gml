@@ -5,9 +5,7 @@ var spr_2 = Sprite140142
 var spr_3 = Sprite140
 var spr_4 = Sprite143151
 
-var color_1 = c_white
-var color_2 = $FF1C1CB2
-var color_3 = $FF6D52F2
+
 
 
 if a = 0

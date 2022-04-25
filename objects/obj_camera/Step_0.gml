@@ -5,17 +5,20 @@ if global.r_alpha > 0
 global.r_alpha -= 0.01
 }
 
-if instance_exists(player_message)
+if global.show_credits = 0
 {
-global.playing_scene = 1
-}
-else
-{
-timer__playing_scene_++
-	if timer__playing_scene_ > 10 && global.never_move = 0
+	if instance_exists(player_message)
 	{
-	global.playing_scene = 0
-	timer__playing_scene_ = 0
+	global.playing_scene = 1
+	}
+	else
+	{
+	timer__playing_scene_++
+		if timer__playing_scene_ > 10 && global.never_move = 0
+		{
+		global.playing_scene = 0
+		timer__playing_scene_ = 0
+		}
 	}
 }
 
@@ -126,7 +129,7 @@ if global.show_challenger = 0
 
 	if instance_exists(player)
 	{
-		if global.slow_motion = 0
+		if global.slow_motion = 0 && global.show_credits = 0
 		{
 		t_x = player.x;
 		t_y = player.y;
@@ -212,8 +215,18 @@ if global.clock_alpha > 0
 	{
 	global.fdraw_clock_angle += (global.clock_angle - global.fdraw_clock_angle)*0.1
 	global.fdraw_clock_angle_sec += (global.clock_angle_sec - global.fdraw_clock_angle_sec)*0.1
-	global.clock_angle += 3*(60/room_speed)
-	global.clock_angle_sec += 12*(60/room_speed)
+	global.clock_angle += spining_speed*(60/room_speed)
+	global.clock_angle_sec += spining_speed*4*(60/room_speed)
+	}
+	
+	if global.slow_motion > 500 && code.playing_gameover_scene > 0 && global.broken_clock >= 2
+	{
+	spining_speed += (0 - spining_speed)*0.03
+	}
+	
+	if global.slow_motion > 2500 && code.playing_gameover_scene > 0 && global.broken_clock >= 2
+	{
+	spining_speed += (0 - spining_speed)*0.03
 	}
 global.clock_scale += (global.t_clock_scale - global.clock_scale)*0.015*(60/room_speed)
 global.t_clock_scale -= 0.02*abs(1-global.t_clock_scale)+0.001*(60/room_speed)

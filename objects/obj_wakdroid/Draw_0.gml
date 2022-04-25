@@ -6,7 +6,21 @@
 //draw_text(x,y-32,string(dash_attack))
 draw_sprite_ext(spr_shadow,0,x,check_floor+27,1-abs(y-check_floor)/48,1-abs(y-check_floor)/64,0,c_white,(1-abs(y-check_floor)/48)*0.3)
 
+if sprite_index = move_sprite
+{
+	if abs(movement_speed) > 5
+	{
+	draw_sprite_ext(spr_move_run_wakdroid,image_index,x,y,image_xscale,image_yscale,image_angle,c_white,image_alpha)
+	}
+	else
+	{
+	draw_self()
+	}
+}
+else
+{
 draw_self()
+}
 //if w_alpha > 0
 //{
 //draw_sprite_ext(spr_move_white,image_index,x,y,image_xscale,image_yscale,0,c_white,w_alpha)

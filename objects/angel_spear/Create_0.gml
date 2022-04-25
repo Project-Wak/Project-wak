@@ -3,3 +3,4 @@
 cannot_step = 0
 on_floor = 0
 cannot_move = 0
+w_alpha = 0

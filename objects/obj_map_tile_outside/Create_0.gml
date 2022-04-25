@@ -23,6 +23,12 @@ player.x = 800
 player.y = 1100
 global.hp = player.max_hp
 global.n_time = 12
+if global.show_credits = 0
+{
 explo_anime = 0.1
-
+}
+else
+{
+explo_anime = 0
+}
 instance_create_depth(x,y,depth,outside_water)

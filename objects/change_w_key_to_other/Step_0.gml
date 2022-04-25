@@ -9,6 +9,10 @@ image_xscale = _c_x*0.5
 image_yscale = _c_x*0.5
 x = xx
 y = yy
+if check_mouse_place()
+{
+event_user(0)
+}
 
 if pressed > 0
 {

@@ -10,40 +10,66 @@ if activated = 1
 	global.t_b_alpha = 1.1
 	}
 
-	if global.back_to_origin_stage = 0
+	if player.image_alpha > 0
 	{
-	global.never_move = 1
-	global.playing_scene = 1
-		if (x - player.x) > 100
+		if global.back_to_origin_stage = 0 && !audio_is_playing(follower_bgm)
 		{
-		obj_camera.x = x
-		obj_camera.y = y
-		player.x = x
+		global.never_move = 1
+		global.playing_scene = 1
+			if (x - player.x) > 100
+			{
+			obj_camera.x = x
+			obj_camera.y = y
+			player.x = x
+			}
+			else
+			{
+			obj_camera.x = x
+			obj_camera.y = y
+			player.x += (x - player.x)*0.34
+			}
+
+			if (y - player.y) > 100
+			{
+			player.y = y
+			}
+			else
+			{
+			player.y += (y - player.y)*0.34
+			}
+
+		obj_camera.tv_x = 1280*0.5
+		obj_camera.tv_y = 720*0.5
+		player.image_xscale = sign_k(player.x - real_t_x)
 		}
 		else
 		{
-		obj_camera.x = x
-		obj_camera.y = y
-		player.x += (x - player.x)*0.34
+		activated = -1
+		timer = 0
+		t_x = real_t_x
+		t_y = real_t_y
+		x = t_x
+		y = t_y
+			if global.back_to_origin_stage != 0
+			{
+			obj_camera.x = 1213
+			obj_camera.y = 734
+			obj_camera.t_x = 1213
+			obj_camera.t_y = 734
+			player.x = 1213
+			player.y = 734
+			}
+			else
+			{
+			obj_camera.x = 4257
+			obj_camera.y = 2333
+			obj_camera.t_x = 4257
+			obj_camera.t_y = 2333
+			player.x = 4257
+			player.y = 2333
+			player.image_xscale = -1
+			}
 		}
-
-		if (y - player.y) > 100
-		{
-		player.y = y
-		}
-		else
-		{
-		player.y += (y - player.y)*0.34
-		}
-
-	obj_camera.tv_x = 1280*0.5
-	obj_camera.tv_y = 720*0.5
-	player.image_xscale = sign_k(player.x - real_t_x)
-	}
-	else
-	{
-	player.x = 1213
-	player.y = 733
 	}
 
 x += (t_x - x)*0.05

@@ -19,6 +19,13 @@ create_buble_effect(0.3,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,1
 }
 
 
+
+if hp > max_hp
+{
+hp = max_hp
+}
+
+
 if activated > 0
 {
 var random_val_fl = percentage_k(global.graphics_for_code*8)
@@ -29,6 +36,17 @@ var random_val_fl = percentage_k(global.graphics_for_code*8)
 	var random_val___2 = percentage_k(50)
 	create_buble_effect(0.15,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.07,0.07,$FF62D1F7,$FF6C60CD,2,$FF191919,xx_,yy_,998+random_val___2*2,1,false,false)
 	}
+	
+	if audio_is_playing(follower_bgm)
+	{
+	audio_stop_sound(follower_bgm)
+	code.last_bgm = audio_play_sound(final_battle,0,1)
+	}
+}
+
+if audio_is_playing(final_battle)
+{
+audio_sound_gain(code.last_bgm,0.13*global.master_volume*global.bgm_volume*scene__,0)
 }
 
 if hp <= 0
@@ -36,21 +54,36 @@ if hp <= 0
 global.boss_target = -4
 global.playing_scene = 1
 global.never_move = 1
+if global.t_b_alpha != 3.01
+{
+var	sfx__ = audio_play_sound(walk_sfx,0,false)
+audio_sound_gain(sfx__,0.3,0)
 global.t_b_alpha = 3.01
+}
 hp = 0
 dead_scene ++
 patturn = 0
+scene__ -= 0.01
 
 
 cannot_step = 1
 
 	if global.b_alpha > 3
 	{
-	instance_create_depth(2994,2331,depth,obj_wakdroid_ending)
-	player.x = 2800
-	player.image_xscale = 1
+		if global.real_ending > 0
+		{
+		audio_stop_sound(final_battle)
+		audio_stop_sound(follower_bgm)
+		room_goto(room_sector_outside)
+		}
+		else
+		{
+		instance_create_depth(2994,2331,depth,obj_wakdroid_ending)
+		player.x = 2800
+		player.image_xscale = 1
+		global.gold += 12000
+		}
 	global.t_b_alpha = -0.01
-	global.gold += 12000
 	instance_destroy(_light_1)
 	instance_destroy()
 	instance_destroy(skill_red_ball_effect_rage)
@@ -58,6 +91,8 @@ cannot_step = 1
 }
 else
 {
+
+	
 	if instance_exists(_light_1)
 	{
 	_light_1.x = x
@@ -144,10 +179,12 @@ else
 		{
 		scene__ += 0.0032
 		y -= scene__*3.1
+		global.room_brightness -= 0.001
 		}
 	image_blend = merge_color(c_black,c_white,scene__)
 	global.playing_scene = 1
 	global.never_move = 1
+	global.room_brightness -= 0.001
 
 		if !instance_exists(check__)
 		{
@@ -538,19 +575,19 @@ else
 			__ins__.color_3 = $FF513524
 			}
 			
-			if patturn = 3.63
+			if patturn = 3.62
 			{
 			var __ins__ = instance_create_depth(x-190,2370,depth-1,effect_special_skill_attacked)
 			var __ins__ = instance_create_depth(x+190,2370,depth-1,effect_special_skill_attacked)
 			}
 			
-			if patturn = 3.66
+			if patturn = 3.64
 			{
 			var __ins__ = instance_create_depth(x-190*2,2370,depth-1,effect_special_skill_attacked)
 			var __ins__ = instance_create_depth(x+190*2,2370,depth-1,effect_special_skill_attacked)
 			}
 			
-			if patturn = 3.69
+			if patturn = 3.66
 			{
 			var __ins__ = instance_create_depth(x-190*3,2370,depth-1,effect_special_skill_attacked)
 			var __ins__ = instance_create_depth(x+190*3,2370,depth-1,effect_special_skill_attacked)
@@ -642,6 +679,9 @@ else
 			_aaa = instance_create_depth(x-random_dir*24,y-16,depth-1,effect_special_skill_sec_attacked)
 			_aaa.image_angle = point_direction(x,y,player.x,player.y)-90
 			_aaa.direction = point_direction(x,y,player.x,player.y)-90
+			_aaa.color_1 = c_white
+			_aaa.color_2 = $FF1C1CB2
+			_aaa.color_3 = $FF6D52F2
 			view_shake(11,11,1)
 			
 			var sfx = audio_play_sound(laser_sfx_sec,0,0)

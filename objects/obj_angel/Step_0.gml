@@ -19,11 +19,19 @@ patturn = 0
 
 cannot_step = 1
 y += 1.5
+	if instance_exists(angel_spear)
+	{
+	angel_spear.image_angle += (90 - angel_spear.image_angle)*0.02
+	}
 
 	if dead_scene%15
 	{
 	shake_boss *= -1
 	x += shake_boss*14
+		if instance_exists(angel_spear)
+		{
+		angel_spear.gravity = 0.04
+		}
 	}
 	
 	if dead_scene%40 = 0
@@ -149,21 +157,27 @@ alpha += (0 - alpha)*0.1
 
 if scene__ > 0 && activated != 2
 {
-obj_camera.tv_x = 1280*0.9
-obj_camera.tv_y = 720*0.9
-obj_camera.t_x = x
-obj_camera.t_y = y+180
+	if global.show_credits = 0
+	{
+	obj_camera.tv_x = 1280*0.9
+	obj_camera.tv_y = 720*0.9
+	obj_camera.t_x = x
+	obj_camera.t_y = y+180
+	}
 }
 else
 {
 	if activated = 2
 	{
-	global.boss_target = id
-	global.boss_name = "연구소의 수호자 - 창의 기사 엔젤로이드"
-	obj_camera.tv_x = 1280*0.95
-	obj_camera.tv_y = 720*0.95
-	obj_camera.t_x = x
-	obj_camera.t_y = player.y
+		if global.show_credits = 0
+		{
+		global.boss_target = id
+		global.boss_name = "연구소의 수호자 - 창의 기사 엔젤로이드"
+		obj_camera.tv_x = 1280*0.95
+		obj_camera.tv_y = 720*0.95
+		obj_camera.t_x = x
+		obj_camera.t_y = player.y
+		}
 	
 		if saved_real_x = -4
 		{
@@ -192,7 +206,7 @@ if activated = 1
 	wall2.image_yscale = 5.4
 	}
 	
-	if !audio_is_playing(quake_sfx)
+	if !audio_is_playing(quake_sfx) && global.show_credits = 0
 	{
 	var sfx = audio_play_sound(quake_sfx,0,0)
 	audio_sound_gain(sfx,0.1*global.master_volume*2*global.sfx_volume,0)
@@ -205,7 +219,7 @@ image_blend = merge_color(c_black,c_white,scene__)
 global.playing_scene = 1
 global.never_move = 1
 global.room_brightness += 0.0002
-	if bgm = -4
+	if bgm = -4 && global.show_credits = 0
 	{
 	var sfx = audio_play_sound(laser_skill_ready,0,0)
 	audio_sound_gain(sfx,0.1*global.master_volume*2*global.sfx_volume,0)
@@ -218,7 +232,7 @@ global.room_brightness += 0.0002
 	y -= scene__*3.1
 	}
 	
-	if !instance_exists(check__)
+	if !instance_exists(check__) && player.image_alpha > 0
 	{
 	check__ = instance_create_depth(x,y,depth-1,player_message)
 	check__.text = "!"
@@ -291,9 +305,17 @@ activated = 2
 	timer ++
 	}
 	
-		if timer > 300
+		if timer > 300-phase_change*100
 		{
-		var random_patturn = choose(1,2,3)
+			if phase_change = 0
+			{
+			var random_patturn = choose(1,2,3)
+			}
+			else
+			{
+			var random_patturn = choose(1,2,3,4,4)
+			}
+			
 			if random_patturn != b_patturn
 			{
 			patturn = random_patturn
@@ -303,7 +325,14 @@ activated = 2
 			{
 				repeat(99)
 				{
-				random_patturn = choose(1,2,3)
+					if phase_change = 0
+					{
+					random_patturn = choose(1,2,3)
+					}
+					else
+					{
+					random_patturn = choose(1,2,3,4,4)
+					}
 					
 					if random_patturn != b_patturn
 					{
@@ -386,7 +415,7 @@ activated = 2
 				create_buble_effect(0.3,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.07,0.07,$FF62D1F7,$FF6C60CD,2,$FF191919,xx_,yy_,depth-random_val___2,1,false,false)
 				}
 				
-				if !audio_is_playing(quake_sfx)
+				if !audio_is_playing(quake_sfx) && global.show_credits = 0
 				{
 				var sfx = audio_play_sound(quake_sfx,0,0)
 				audio_sound_gain(sfx,0.33*global.master_volume*2*global.sfx_volume,0)
@@ -400,7 +429,7 @@ activated = 2
 				}
 			}
 			
-			if patturn > 1.4 && sfx_2 = 0
+			if patturn > 1.4 && sfx_2 = 0 && global.show_credits = 0
 			{
 			sfx_2 = 1
 			var sfx = audio_play_sound(jump_attack_sfx,0,0)
@@ -439,14 +468,17 @@ activated = 2
 			a___.image_xscale = 5
 			a___.image_yscale = 2
 				
-			var sfx = audio_play_sound(down_attack_sfx,0,0)
-			audio_sound_gain(sfx,0.32*global.master_volume*2*global.sfx_volume,0)
+				if global.show_credits = 0
+				{
+				var sfx = audio_play_sound(down_attack_sfx,0,0)
+				audio_sound_gain(sfx,0.32*global.master_volume*2*global.sfx_volume,0)
 		
-			var a___ = audio_play_sound(guard,0,0)
-			audio_sound_gain(a___,0.07*global.master_volume*2*global.sfx_volume,0)
+				var a___ = audio_play_sound(guard,0,0)
+				audio_sound_gain(a___,0.07*global.master_volume*2*global.sfx_volume,0)
 		
-			var sfx = audio_play_sound(mob_faint,0,0)
-			audio_sound_gain(sfx,0.4*global.master_volume*2*global.sfx_volume,0)
+				var sfx = audio_play_sound(mob_faint,0,0)
+				audio_sound_gain(sfx,0.4*global.master_volume*2*global.sfx_volume,0)
+				}
 			view_shake(11,38,1)
 			sfx_ = 1
 			}
@@ -502,11 +534,14 @@ activated = 2
 				}
 			spear__.hspeed += -f_dir
 			sfx_2 = 1
-			var sfx = audio_play_sound(jump_attack_sfx,0,0)
-			audio_sound_gain(sfx,0.2*global.master_volume*2*global.sfx_volume,0)
+				if global.show_credits = 0
+				{
+				var sfx = audio_play_sound(jump_attack_sfx,0,0)
+				audio_sound_gain(sfx,0.2*global.master_volume*2*global.sfx_volume,0)
 			
-			var sfx = audio_play_sound(choose(swing_lightsaber_sfx1,swing_lightsaber_sfx2,swing_lightsaber_sfx3),0,0)
-			audio_sound_gain(sfx,0.1*global.master_volume*2*global.sfx_volume,0)
+				var sfx = audio_play_sound(choose(swing_lightsaber_sfx1,swing_lightsaber_sfx2,swing_lightsaber_sfx3),0,0)
+				audio_sound_gain(sfx,0.1*global.master_volume*2*global.sfx_volume,0)
+				}
 			}
 			
 			if f_dir = 1
@@ -560,11 +595,14 @@ activated = 2
 				}
 			spear__.hspeed += -f_dir
 			sfx_2 = 1
-			var sfx = audio_play_sound(jump_attack_sfx,0,0)
-			audio_sound_gain(sfx,0.2*global.master_volume*2*global.sfx_volume,0)
+				if global.show_credits = 0
+				{
+				var sfx = audio_play_sound(jump_attack_sfx,0,0)
+				audio_sound_gain(sfx,0.2*global.master_volume*2*global.sfx_volume,0)
 			
-			var sfx = audio_play_sound(choose(swing_lightsaber_sfx1,swing_lightsaber_sfx2,swing_lightsaber_sfx3),0,0)
-			audio_sound_gain(sfx,0.1*global.master_volume*2*global.sfx_volume,0)
+				var sfx = audio_play_sound(choose(swing_lightsaber_sfx1,swing_lightsaber_sfx2,swing_lightsaber_sfx3),0,0)
+				audio_sound_gain(sfx,0.1*global.master_volume*2*global.sfx_volume,0)
+				}
 			}
 			
 			if f_dir = 1
@@ -618,11 +656,14 @@ activated = 2
 				}
 			spear__.hspeed += -f_dir
 			sfx_2 = 1
-			var sfx = audio_play_sound(jump_attack_sfx,0,0)
-			audio_sound_gain(sfx,0.2*global.master_volume*2*global.sfx_volume,0)
+				if global.show_credits = 0
+				{
+				var sfx = audio_play_sound(jump_attack_sfx,0,0)
+				audio_sound_gain(sfx,0.2*global.master_volume*2*global.sfx_volume,0)
 			
-			var sfx = audio_play_sound(choose(swing_lightsaber_sfx1,swing_lightsaber_sfx2,swing_lightsaber_sfx3),0,0)
-			audio_sound_gain(sfx,0.1*global.master_volume*2*global.sfx_volume,0)
+				var sfx = audio_play_sound(choose(swing_lightsaber_sfx1,swing_lightsaber_sfx2,swing_lightsaber_sfx3),0,0)
+				audio_sound_gain(sfx,0.1*global.master_volume*2*global.sfx_volume,0)
+				}
 			}
 			
 			if f_dir = 1
@@ -651,7 +692,7 @@ activated = 2
 	
 	if patturn >= 3 && patturn < 4
 	{
-		if sfx_2 = 0
+		if sfx_2 = 0 && global.show_credits = 0
 		{
 		sfx_2 = 1
 		var sfx = audio_play_sound(laser_skill_ready,0,0)
@@ -705,7 +746,44 @@ activated = 2
 		}
 	}
 	
+	if patturn >= 4 && patturn < 5
+	{
+	cannot_step = 1
+		if patturn = 4
+		{
+		w_alpha = 1.5
+		angel_spear.w_alpha = 1.5
+			if global.show_credits = 0
+			{
+			var sfx = audio_play_sound(laser_skill_ready,0,0)
+			audio_sound_gain(sfx,0.1*global.master_volume*2*global.sfx_volume,0)
+			}
+		}
+	patturn += 0.001
+	w_alpha += (-0.01 - w_alpha)*0.1
 	
+		if patturn > 4.1 && patturn < 4.18
+		{
+		bullet_timer ++
+			if bullet_timer%6 = 0
+			{
+			var __spear__ = instance_create_depth(player.x,y-1000,player.depth-11,falling_spear)
+			__spear__.vspeed = 46
+			
+			var effect_ = instance_create_depth(player.x,obj_angel.y+220,player.depth+1,down_effect)
+			effect_.t_image_xscale = 0.7*6
+			effect_.t_image_yscale = 0.05*6
+			effect_.received = 0
+			angel_spear.w_alpha = 1.2
+			}
+		}
+		
+		if patturn > 4.25
+		{
+		patturn = 0
+		bullet_timer = 0
+		}
+	}
 }
 }
 

@@ -55,9 +55,9 @@ global.playing_scene = 1
 player.x += (x-90 - player.x)*0.1
 	if global.tutorial = 0
 	{
-		if !audio_is_playing(interaction_sfx)
+		if !audio_is_playing(interaction_bgm)
 		{
-		var sfx = audio_play_sound(interaction_sfx,0,0)
+		var sfx = audio_play_sound(interaction_bgm,0,0)
 		audio_sound_gain(sfx,0.12*global.master_volume*2*global.bgm_volume,0)
 		}
 		
@@ -368,10 +368,31 @@ player.x += (x-90 - player.x)*0.1
 		//global.never_move = 1
 			if !instance_exists(check__) && message_phase = 0
 			{
-			check__ = instance_create_depth(x,y,depth-1,player_message)
-			check__.text = "(장비를 강화를 합니다)"
-			check__.target = player.id
-			check__.parents = id
+				if global.choosed > 0
+				{
+					if global.choice_now = 0
+					{
+					message_phase ++
+					}
+			
+					if global.choice_now = 1
+					{
+					global.playing_scene = 0
+					message_phase = 0
+					interecting_now = 0
+					can_interect = 0
+					alarm[0] = 1
+					}
+				global.choice = 0
+				global.choosed = 0
+				}
+				else
+				{
+				global.choice += (1 - global.choice)*0.1
+				global.choice_name[0] = "장비를 강화 한다"
+				global.choice_name[1] = "취소 하기"
+				global.choice_name[2] = -4
+				}
 			}
 		
 			if !instance_exists(check__) && message_phase = 1
@@ -379,7 +400,7 @@ player.x += (x-90 - player.x)*0.1
 				if global.key_setting_message = 0
 				{
 				global.n_to_setting__ = 5
-				window_set_cursor(cr_default)
+				global.cursor = 1
 				show_debug_message("inv")
 				code.option ++
 				instance_create_depth(x,y,-9998,bg_upgrage)
@@ -393,9 +414,9 @@ player.x += (x-90 - player.x)*0.1
 		}
 		else
 		{
-			if !audio_is_playing(interaction_sfx)
+			if !audio_is_playing(interaction_bgm)
 			{
-			var sfx = audio_play_sound(interaction_sfx,0,0)
+			var sfx = audio_play_sound(interaction_bgm,0,0)
 			audio_sound_gain(sfx,0.12*global.master_volume*2*global.bgm_volume,0)
 			}
 		

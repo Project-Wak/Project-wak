@@ -160,7 +160,7 @@ global.critical_plus += global.blue_flag*0.15+global.diamond_sword*0.1
 
 if instance_exists(player)
 {
-player.max_hp = 1000+(global.heart_crystal1*200+global.heart_crystal2*200+global.heart_crystal3*450+global.ribon*100+global.hairpin*100)
+player.max_hp = 1000+(global.heart_crystal1*200+global.heart_crystal2*200+global.heart_crystal3*450+global.ribon*100+global.hairpin*100+global.add_max_hp*50)
 }
 
 
