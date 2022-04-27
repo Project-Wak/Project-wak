@@ -30,7 +30,8 @@ if global.real_ending = 0 && instance_exists(obj_wakdroid_ending)
 wall_1 = instance_create_depth(1568,160,depth,obj_floor_tile3)
 wall_1.image_yscale = 4.75
 }
-else
+
+if global.real_ending != 0
 {
 	if instance_exists(wall_1)
 	{
@@ -748,7 +749,7 @@ global.playing_scene = 1
 			if !instance_exists(check__) && message_phase = 4
 			{
 			check__ = instance_create_depth(x,y,depth-1,player_message)
-			check__.text = string(global.nickname)+"님은 빨리 왁드로이드를 처치하러 가세요!"
+			check__.text = string(global.nickname)+"님은 빨리 왁드로이드를 막으러 가세요!"
 			check__.target = id
 			check__.parents = id
 			can_interect = 0
@@ -757,7 +758,7 @@ global.playing_scene = 1
 			if !instance_exists(check__) && message_phase = 5
 			{
 			check__ = instance_create_depth(x,y,depth-1,player_message)
-			check__.text = string(global.nickname)+"님! 부디 무사하시길!"
+			check__.text = "가시기 전에, 장비 강화라던가 단단히 준비하시고 가세요!"
 			check__.target = id
 			check__.parents = id
 			can_interect = 0
@@ -766,13 +767,22 @@ global.playing_scene = 1
 			if !instance_exists(check__) && message_phase = 6
 			{
 			check__ = instance_create_depth(x,y,depth-1,player_message)
+			check__.text = string(global.nickname)+"님! 부디 무사하시길!"
+			check__.target = id
+			check__.parents = id
+			can_interect = 0
+			}
+			
+			if !instance_exists(check__) && message_phase = 7
+			{
+			check__ = instance_create_depth(x,y,depth-1,player_message)
 			check__.text = "화이팅!"
 			check__.target = id
 			check__.parents = id
 			can_interect = 0
 			}
 		
-			if !instance_exists(check__) && message_phase = 7
+			if !instance_exists(check__) && message_phase = 8
 			{
 			global.real_ending = 1
 			message_phase = 4
@@ -1222,7 +1232,7 @@ global.playing_scene = 1
 				}
 				else
 				{
-				global.show_guide_mes = "져따."
+				global.show_guide_mes = "졌다."
 				global.show_guide_mes_spr = 6
 				global.gold -= betted_gold
 				}

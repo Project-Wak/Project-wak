@@ -117,11 +117,18 @@ t_y += (real_t_y - t_y)*0.1
 			if global.b_alpha > 1
 			{
 			global.left_time --
-			global.t_b_alpha = -0.01
+				if global.show_credits = 0
+				{
+				global.t_b_alpha = -0.01
+				}
+			
 				if destination = 2
 				{
 				global.never_move = 0
-				global.playing_scene = 0
+					if global.show_credits = 0
+					{
+					global.playing_scene = 0
+					}
 				room_goto(room_sector_B02_1);
 				}
 				
@@ -133,21 +140,30 @@ t_y += (real_t_y - t_y)*0.1
 				if destination = 3
 				{
 				global.never_move = 0
-				global.playing_scene = 0
+					if global.show_credits = 0
+					{
+					global.playing_scene = 0
+					}
 				room_goto(room_sector_B03_1);
 				}
 				
 				if destination = 4
 				{
 				global.never_move = 0
-				global.playing_scene = 0
+					if global.show_credits = 0
+					{
+					global.playing_scene = 0
+					}
 				room_goto(room_sector_B04_2);
 				}
 				
 				if destination = 5
 				{
 				global.never_move = 0
-				global.playing_scene = 0
+					if global.show_credits = 0
+					{
+					global.playing_scene = 0
+					}
 				room_goto(room_sector_B05_2);
 				}
 				
@@ -205,7 +221,10 @@ t_y += (real_t_y - t_y)*0.1
 			if global.back_to_origin_stage = 0
 			{
 			global.never_move = 0
-			global.playing_scene = 0
+				if global.show_credits = 0
+				{
+				global.playing_scene = 0
+				}
 			}
 		activated = -1
 		timer = 0

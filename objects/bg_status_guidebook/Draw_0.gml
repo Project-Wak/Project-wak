@@ -73,7 +73,7 @@ if (pressed > 0 && global.key_setting_message > 0) || global.key_setting_message
 	if cal__img = 7
 	{
 	item_name__ = "가이드 북 7번 - 보스 레이드"
-	item_desc__ = "보스를 잡게되면 다음 구역으로 이동 가능 하게 해주는 '키카드' 혹은 '열쇠'를 드랍한다.\n또한, 보스를 잡을때 마다 d-day를 12시간씩 늦출수 있다. (쉬움 난이도의 경우 24시간)"
+	item_desc__ = "보스를 잡게되면 다음 구역으로 이동 가능 하게 해주는 '키카드' 혹은 '열쇠'를 드랍한다.\n또한, 보스를 잡을때 마다 d-day를 6시간씩 늦출수 있다. (쉬움 난이도의 경우 12시간)"
 	}
 	if cal__img = 8
 	{

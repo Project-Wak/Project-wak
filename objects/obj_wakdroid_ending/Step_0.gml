@@ -43,10 +43,12 @@ repeat(100)
 	}
 }
 
-if audio_is_playing(ending_select) || audio_is_playing(follower_bgm)
+
+if audio_is_playing(ending_select) || audio_is_playing(follower_bgm) || audio_is_playing(ending_cinematic)
 {
-audio_sound_gain(bgm__,volume__*0.04*global.master_volume*2*global.bgm_volume,0)
+audio_sound_gain(bgm__,volume__*volume_downer*0.04*global.master_volume*2*global.bgm_volume,0)
 }
+
 
 
 if global.b_alpha < 0.6
@@ -672,7 +674,7 @@ if interecting_now = 1 && (global.real_ending = 0 || (message_phase >= 61 && mes
 	}
 }
 
-if global.show_credits > 9100
+if global.show_credits > 9600
 {
 volume_downer -= 0.001
 audio_sound_gain(bgm,0.23*global.master_volume*2*global.bgm_volume*volume_downer,0)
@@ -742,7 +744,7 @@ global.never_move = 1
 	show_cinematic ++
 	}
 	
-	if show_cinematic > 1 && show_cinematic_sec = 0
+	if show_cinematic > 1 && show_cinematic_sec = 0 && !instance_exists(check__)
 	{
 	show_cinematic ++
 	}

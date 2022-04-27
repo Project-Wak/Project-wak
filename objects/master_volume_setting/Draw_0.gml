@@ -1,17 +1,20 @@
 /// @description Insert description here
 // You can write your code in this editor
-
 var v_x_ = obj_camera.v_x/1280
+alpha_bg = 1
+
+
+
 var xx = camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5-120*v_x_
 var yy = camera_get_view_y(view_camera[0])+(160-10)*v_x_
-draw_set_alpha(1)
+draw_set_alpha(alpha_bg)
 draw_set_color($FF191414)
 draw_rectangle(camera_get_view_x(view_camera[0])-128,camera_get_view_y(view_camera[0])-128,camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])+128,camera_get_view_y(view_camera[0])+camera_get_view_height(view_camera[0])+128,0)
 
 if global.key_setting_message = 0
 {
 var xx2 = camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5-410*v_x_
-draw_set_alpha(1)
+draw_set_alpha(alpha_bg)
 draw_set_color($FF0C0A0A)
 draw_rectangle(camera_get_view_x(view_camera[0])-128,camera_get_view_y(view_camera[0])-128,xx2,camera_get_view_y(view_camera[0])+camera_get_view_height(view_camera[0])+128,0)
 }

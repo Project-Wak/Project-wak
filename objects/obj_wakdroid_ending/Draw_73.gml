@@ -15,7 +15,7 @@ draw_rectangle(0,0,room_width,room_height,false)
 
 if global.show_credits > 0
 {
-depth = obj_camera.depth-100
+depth = obj_camera.depth+100
 global.show_credits ++
 var alpha = (global.show_credits-40)*0.8
 	if alpha > 0.8
@@ -28,8 +28,10 @@ if audio_is_playing(ending_cinematic)
 {
 scale_ = 0.9
 }
+var play_time__ = global.playtime
+var cal_play_time__ = floor(global.playtime/60)
 
-draw_text_k_scale(xx+wid*0.5,yy-v_x*(global.show_credits*scale_-940),string(global.credit_message),200,-1,alpha,c_white,0,0,font_title,v_x/5,v_x/5,0)
+draw_text_k_scale(xx+wid*0.5,yy-v_x*(global.show_credits*scale_-940),string(global.credit_message)+"\n\n\n\n\n\n\n총 플레이 타임\n"+string(cal_play_time__)+"시간 "+string(play_time__-cal_play_time__*60)+"분",200,-1,alpha,c_white,0,0,font_title,v_x/5,v_x/5,0)
 
 	if keyboard_check(ord(string(global.skip_key)))
 	{

@@ -405,7 +405,7 @@ already_droped_saber = 0
 
 if n_sword_ != 0
 {
-	if image_alpha > 0 && hp <= 0 && attacked_before = 1 && already_droped_saber = 0 && suicided = 0
+	if image_alpha > 0 && hp <= 0 && attacked_before = 1 && already_droped_saber = 0 && suicided = 0 && !instance_exists(obj_wakdroid_ending)
 	{
 	already_droped_saber = 1
 		if n_sword_ = 1
@@ -2819,7 +2819,7 @@ if guarding >= 2.5
 	}
 }
 
-if keyboard_check(string(global.guard_key_for_code)) && hurt = 0 && hurt_little = 0 && global.chat_activity = false && global.playing_scene = 0
+if keyboard_check(string(global.guard_key_for_code)) && hurt = 0 && hurt_little = 0 && global.chat_activity = false && global.playing_scene = 0 && global.never_move_in_setting = 0
 {
 	if guarding = -1 && gravity <= 0 && vspeed >= 0
 	{
@@ -4506,8 +4506,8 @@ if attack_laser > 0 && spin_attack = 0
 {
 	if global.n_sword != 6
 	{
-	obj_camera.v_x = 1280*0.6
-	obj_camera.v_y = 720*0.6
+	obj_camera.v_x = 1280*0.9
+	obj_camera.v_y = 720*0.9
 	vspeed = 0
 	cannot_move = 1
 	global.never_move = 1
@@ -4620,8 +4620,8 @@ if attack_laser > 0 && spin_attack = 0
 	{
 	global.movement_speed = 0
 	movement_speed = 0
-	obj_camera.v_x = 1280*0.6
-	obj_camera.v_y = 720*0.6
+	obj_camera.v_x = 1280*0.9
+	obj_camera.v_y = 720*0.9
 	cannot_move = 1
 	sprite_index = suicide_sprite
 	image_index = attack_laser
@@ -4994,7 +4994,12 @@ if attack_ > 0
 attack_ += 0.15
 	if global.awakening > 1
 	{
-	attack_ += 0.03
+	attack_ += 0.01
+	}
+	
+	if image_index < 9
+	{
+	attack_ += 0.02
 	}
 sprite_index = attack_sprite
 image_index = attack_

@@ -21,7 +21,7 @@ if global.b_alpha < 0.1
 	}
 	else
 	{
-		if !instance_exists(obj_last_boss)
+		if !instance_exists(obj_last_boss) && !instance_exists(master_volume_setting)
 		{
 		global.dreamy_alpha += (-0.1 - global.dreamy_alpha)*0.01
 		}

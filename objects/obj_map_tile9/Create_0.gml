@@ -2,7 +2,10 @@
 // You can write your code in this editor
 image_index = 0
 depth = 999
+if global.show_credits = 0
+{
 global.t_b_alpha = -0.01
+}
 global.never_move = 0
 alarm[1] = 30
 alarm[2] = 100

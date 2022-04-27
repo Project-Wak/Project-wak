@@ -192,7 +192,7 @@ y += 1.5
 	}
 
 	global.gold += 14000
-	global.left_time += 12*global.time_plusment
+	global.left_time += 6*global.time_plusment
 	for(var i = 0; i < 32; i++)
 	{
 	instance_destroy(worm_body[i])

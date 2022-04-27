@@ -81,7 +81,7 @@ cannot_step = 1
 		instance_create_depth(2994,2331,depth,obj_wakdroid_ending)
 		player.x = 2800
 		player.image_xscale = 1
-		global.gold += 12000
+		global.gold += 32000
 		}
 	global.t_b_alpha = -0.01
 	instance_destroy(_light_1)

@@ -91,7 +91,7 @@ y += 1.5
 	}
 	
 	global.gold += 20000
-	global.left_time += 12*global.time_plusment
+	global.left_time += 6*global.time_plusment
 	
 	instance_destroy(wall1)
 	instance_destroy(wall2)

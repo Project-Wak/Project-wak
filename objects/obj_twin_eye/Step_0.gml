@@ -104,7 +104,7 @@ left_eye.y += 1.5
 	}
 
 	global.gold += 12000
-	global.left_time += 12*global.time_plusment
+	global.left_time += 6*global.time_plusment
 	instance_destroy(_light_)
 	instance_destroy(_light_1)
 	instance_destroy(left_eye)

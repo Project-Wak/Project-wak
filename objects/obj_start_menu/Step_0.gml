@@ -66,14 +66,14 @@ wheel_cooltime --
 			{
 				if really = 0
 				{
-				global.choice_name[0] = "게임 불러오기"
-				global.choice_name[1] = "데이터 삭제"
+				global.choice_name[0] = "이어 하기"
+				global.choice_name[1] = "세이브 파일 삭제"
 				global.choice_name[2] = -4
 				}
 				else
 				{
 				global.choice_name[0] = "취소 하기"
-				global.choice_name[1] = "정말로 데이터 삭제하기"
+				global.choice_name[1] = "세이브 파일 삭제"
 				global.choice_name[2] = -4
 				}
 		

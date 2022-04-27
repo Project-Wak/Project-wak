@@ -27,6 +27,7 @@ if go_start != 3
 	{
 	var sfx_ = audio_play_sound(critical_sfx,0,0)
 	audio_sound_gain(sfx_,0.02*global.master_volume*2*global.sfx_volume,0)
+	
 	code.alarm[10] = 1
 	}
 

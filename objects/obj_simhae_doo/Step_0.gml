@@ -107,7 +107,7 @@ y += 1.2
 	test_mob.mob_var = -6
 	
 	global.gold += 10000
-	global.left_time += 12*global.time_plusment
+	global.left_time += 6*global.time_plusment
 
 	instance_destroy()
 	}

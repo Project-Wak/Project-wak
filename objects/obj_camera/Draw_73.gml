@@ -8,11 +8,19 @@ var v_x_ = obj_camera.v_x/1280
 
 if global.playing_scene > 0
 {
-	if global.playing_scene_black_bg < 110
+var std_value = 110
+
+	if global.show_credits > 0
+	{
+	std_value = 80
+	}
+	
+
+	if global.playing_scene_black_bg < std_value
 	{
 	global.playing_scene_black_bg ++
 	}
-global.playing_scene_black_bg += (110 - global.playing_scene_black_bg)*0.1
+global.playing_scene_black_bg += (std_value - global.playing_scene_black_bg)*0.1
 }
 else
 {

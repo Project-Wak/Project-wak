@@ -20,7 +20,14 @@ var __check = instance_place(x,y+ii,floor_parents)
 }
 draw_sprite_ext(spr_shadow,0,x,p_floor+4,(1-abs(y-p_floor)/48)*0.3,(1-abs(y-p_floor)/64)*0.3,0,c_white,(1-abs(y-p_floor)/48)*0.3*0.5)
 
+if sprite_index = Sprite180
+{
+draw_sprite_ext(sprite_index,image_index,x,y+4,image_xscale,image_yscale,image_angle,c_white,image_alpha)
+}
+else
+{
 draw_self()
+}
 
 
 if can_interect = 1
