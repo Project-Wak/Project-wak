@@ -6,10 +6,11 @@ global.room_brightness = 0.2
 }
 
 
-if player.y > 1113 && player.x < 2955 && player.x > 2486 && !instance_exists(gumseong_shadow)
+if player.y > 1113 && player.x < 2955 && player.x > 2486 && !instance_exists(gumseong_shadow) && cre_gumseong = 0
 {
 var test_mob = instance_create_depth(2533,1478,player.depth+3,gumseong_shadow)
 test_mob.test_mob_type = 0
 test_mob.image_xscale = -1
 test_mob.image_yscale = 1
+cre_gumseong = 1
 }

@@ -16,6 +16,7 @@ alarm[1] = 1
 message_phase = 0
 show_left_time = 0
 check__ = -4
+pressed_space = 0
 _light_ = -4
 light_timer = 0
 tiredness = 0

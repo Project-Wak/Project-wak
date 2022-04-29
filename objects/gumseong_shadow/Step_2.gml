@@ -35,17 +35,17 @@ movement_speed += (0 - movement_speed)*0.1
 
 global.gold += 1600
 
-	if global.weapon_owned[2] = 0 && room = room_sector_B04_2
+	if room = room_sector_B04_2
 	{
 	give_item(2,2)
 	}
 	
-	if global.weapon_owned[5] = 0 && room = room_sector_B05_2
+	if room = room_sector_B05_2
 	{
 	give_item(2,5)
 	}
 	
-	if global.weapon_owned[6] = 0 && room = room_sector_B06_2
+	if room = room_sector_B06_2
 	{
 	give_item(2,6)
 	}

@@ -346,7 +346,7 @@ if guarding >= 0.8 && pering = 0 && guard_success = 1 && global.n_sword != 0 && 
 	text__ = "패링!"
 	}
 	d_ef.d_text = text__
-	d_ef.image_blend = $FF6D19FF
+	d_ef.image_blend = c_white
 	d_ef.image_xscale = 1.2
 	d_ef.image_yscale = 1.2
 	d_ef.target = -4
@@ -363,7 +363,7 @@ if global.korean_text = 1
 text__ = "스테미나 부족"
 }
 d_ef.d_text = text__
-d_ef.image_blend = $FF6D19FF
+d_ef.image_blend = c_white
 d_ef.image_xscale = 1.2
 d_ef.image_yscale = 1.2
 d_ef.target = -4
@@ -2194,7 +2194,13 @@ w_alpha += (-0.01 - w_alpha)*0.1
 				
 /////////////////////////////////////////////////////////////////////////////////////////	
 	
-	
+	if keyboard_check(vk_space)
+	{
+		if pressed_space = 1
+		{
+		pressed_space = 0
+		}
+	}
 	
 	if keyboard_check_pressed(vk_space) && global.chat_activity = false
 	{
@@ -2213,7 +2219,7 @@ w_alpha += (-0.01 - w_alpha)*0.1
 			effect_.image_angle = 0
 			effect_.image_xscale = 2.5*0.1
 			effect_.image_yscale = 0.8*0.1
-
+			pressed_space = 1
 			vspeed = -6-global.jump_plus
 			jump_end_motion = 0
 			b_movement_speed = 0
@@ -2247,7 +2253,7 @@ w_alpha += (-0.01 - w_alpha)*0.1
 				text__ = "일어남!"
 				}
 				d_ef.d_text = text__
-				d_ef.image_blend = $FF6D19FF
+				d_ef.image_blend = c_white
 				d_ef.image_xscale = 1.2
 				d_ef.image_yscale = 1.2
 				d_ef.target = -4
@@ -2294,7 +2300,7 @@ w_alpha += (-0.01 - w_alpha)*0.1
 					text__ = "일어남!"
 					}
 					d_ef.d_text = text__
-					d_ef.image_blend = $FF6D19FF
+					d_ef.image_blend = c_white
 					d_ef.image_xscale = 1.2
 					d_ef.image_yscale = 1.2
 					d_ef.target = -4
@@ -2771,7 +2777,7 @@ var text__ = "Stand up!"
 	text__ = "일어남!"
 	}
 d_ef.d_text = text__
-d_ef.image_blend = $FF6D19FF
+d_ef.image_blend = c_white
 d_ef.image_xscale = 1.2
 d_ef.image_yscale = 1.2
 d_ef.target = -4
@@ -2789,7 +2795,7 @@ if guarding >= 2.5
 	text__ = "슈퍼 세이브"
 	}
 	d_ef.d_text = text__
-	d_ef.image_blend = $FF6D19FF
+	d_ef.image_blend = c_white
 	d_ef.image_xscale = 1.4
 	d_ef.image_yscale = 1.4
 	d_ef.target = -4
@@ -2809,7 +2815,7 @@ if guarding >= 2.5
 	text__ = "슈퍼 가드"
 	}
 	d_ef.d_text = text__
-	d_ef.image_blend = $FF6D19FF
+	d_ef.image_blend = c_white
 	d_ef.image_xscale = 1.4
 	d_ef.image_yscale = 1.4
 	d_ef.target = -4
@@ -3553,13 +3559,17 @@ red_glow_effect(sprite_index,image_index,0.2)
 	global.awakening = 2
 	global.rage_gauge = 0
 	
-	var __i = choose(-1,1)
-	var bl_ef = instance_create_depth(x,y,depth-1,ef_blood)
-	var img_scale = -__i*irandom_range(8,15)/5
-	bl_ef.image_xscale = img_scale
-	bl_ef.image_yscale = abs(img_scale)
-	bl_ef.t_x = __i
-	bl_ef.image_angle = irandom_range(-90,90)
+		repeat(2)
+		{
+		var __i = choose(-1,1)
+		var bl_ef = instance_create_depth(x,y,depth-1,ef_blood)
+		var img_scale = -__i*irandom_range(8,15)/5
+		bl_ef.image_xscale = img_scale
+		bl_ef.image_yscale = abs(img_scale)
+		bl_ef.t_x = __i
+		bl_ef.image_angle = irandom_range(-90,90)
+		bl_ef.sfx_play = false
+		}
 	w_alpha = 1.1
 	}
 }
@@ -3598,6 +3608,7 @@ if global.stop_awakening = 1
 		bl_ef.image_yscale = abs(img_scale)
 		bl_ef.t_x = __i
 		bl_ef.image_angle = irandom_range(-90,90)
+		bl_ef.sfx_play = false
 		w_alpha = 1.1
 		
 		var skill_red_ball_effect_rage = instance_create_depth(x,y,player.depth-1,red_circle_effect)
@@ -4046,8 +4057,10 @@ spin_attack += 0.3
 			{
 				if on_floor = true
 				{
-				sfx_for_multiplayer(guard,0,0.1)
-				sfx_for_multiplayer(sword_ready,0,0.1)
+				y -= 3
+				vspeed = -4
+				sfx_for_multiplayer(guard,0,0.08)
+				sfx_for_multiplayer(sword_ready,0,0.08)
 				w_alpha = 1
 					repeat(8)
 					{
@@ -4079,6 +4092,8 @@ spin_attack += 0.3
 			
 				if on_floor = true
 				{
+				y -= 3
+				vspeed = -4
 				sfx_for_multiplayer(guard,0,0.1)
 				sfx_for_multiplayer(sword_ready,0,0.1)
 					repeat(8)
@@ -4088,7 +4103,7 @@ spin_attack += 0.3
 					_ef.vspeed = irandom_range(-4,2)
 					}
 				spin_attack = -999;
-				movement_speed += pressing_key__*4
+				movement_speed -= pressing_key__*4
 				sprite_index = spr_crouch
 				global.never_move = 1
 				alarm[2] = 50
@@ -4999,7 +5014,12 @@ attack_ += 0.15
 	
 	if image_index < 9
 	{
-	attack_ += 0.02
+	attack_ += 0.013
+	
+		if global.n_sword = 2
+		{
+		attack_ += 0.02
+		}
 	}
 sprite_index = attack_sprite
 image_index = attack_

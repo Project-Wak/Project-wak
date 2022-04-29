@@ -73,7 +73,7 @@ timer ++
 }
 
 
-if place_meeting(x,y-2,floor_parents) || place_meeting(x,y,player)
+if place_meeting(x,y-2,floor_parents) || (place_meeting(x,y,player) && player.spin = 0)
 {
 sfx_for_multiplayer(critical_sfx,0,0.01)
 speed = 0

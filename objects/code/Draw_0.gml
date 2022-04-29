@@ -36,16 +36,8 @@ var yy = camera_get_view_y(view_camera[0])+camera_get_view_height(view_camera[0]
 
 draw_text_kl_scale(camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])-v_x*16,camera_get_view_y(view_camera[0])+camera_get_view_height(view_camera[0])-40*v_x,"* "+string(global.dev_message),32,-1,global.dev_message_alpha,c_gray,0,1,font0,1/3*v_x,1/3*v_x,0)
 
-var _playing_music_name = ""
 
-if show_sound_list_alpha > 0
-{
-	if _playing_music_name != ""
-	{
-	draw_text_kl_scale(xx+camera_get_view_width(view_camera[0])*0.5,yy+(show_sound_list_y)*v_x*1.5,"Now playing",32,-1,show_sound_list_alpha,c_yellow,0,0,font0,1/3.5*v_x,1/3.5*v_x,0)
-	draw_text_kl_scale(xx+camera_get_view_width(view_camera[0])*0.5,yy+(show_sound_list_y+35)*v_x*1.5,string(_playing_music_name),32,-1,show_sound_list_alpha,c_white,0,0,font0,1/2*v_x,1/2*v_x,0)
-	}
-}
+
 
 
 

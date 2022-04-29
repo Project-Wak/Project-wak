@@ -51,7 +51,7 @@ if (pressed > 0 && global.key_setting_message > 0) || global.key_setting_message
 	if cal__img = 2
 	{
 	item_name__ = "초록 광선검 (+"+string(global.weapon_upgraded[cal__img])+")"
-	item_desc__ = "왁굳에디션 광선검\n가드력 10%"
+	item_desc__ = "왁굳에디션 광선검\n가드력 10%\n\n특수 효과 : 일반 공격 공속 증가"
 	}
 	if cal__img = 3
 	{

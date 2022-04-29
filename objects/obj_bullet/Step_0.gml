@@ -40,7 +40,7 @@ var cc__ = instance_place(x,y,effect)
 	text__ = "도탄!"
 	}
 	d_ef.d_text = text__
-	d_ef.image_blend = $FF6D19FF
+	d_ef.image_blend = $FF2019FF
 	d_ef.image_xscale = 1.2
 	d_ef.image_yscale = 1.2
 	d_ef.target = -4

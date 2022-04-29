@@ -81,7 +81,7 @@ global.slow_motion += global.slow_motion*0.03
 				text__ = "부활!"
 				}
 				d_ef.d_text = text__
-				d_ef.image_blend = $FF6D19FF
+				d_ef.image_blend = $FF2019FF
 				d_ef.image_xscale = 1.2
 				d_ef.image_yscale = 1.2
 				d_ef.target = -4

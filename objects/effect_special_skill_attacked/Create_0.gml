@@ -10,6 +10,14 @@ color_2 = $FF473021
 color_3 = $FF513524
 }
 
+
+if instance_exists(obj_worm)
+{
+color_1 = $FF70FFDC
+color_2 = $FF5A8539
+color_3 = $FF4CE083
+}
+
 a = 0
 laser_dis = 0
 time = 0

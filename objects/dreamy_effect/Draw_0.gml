@@ -18,12 +18,4 @@ draw_rectangle(player.x-cm_width,player.y-cm_width,player.x+cm_width,player.y+cm
 }
 
 
-for(var i = 0; i <= 128; i++)
-{
-	if star_alpha[i] > 0
-	{
-	draw_set_alpha(star_alpha[i])
-	draw_set_color(c_white)
-	draw_circle(player.x+star_xx[i],player.y+star_yy[i],1,false)
-	}
-}
+

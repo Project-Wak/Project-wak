@@ -143,3 +143,14 @@ if instance_exists(obj_angel) && instance_exists(angel_spear)
 	draw_line_width(player.x,obj_angel.y+210,player.x,obj_angel.y-1000,angel_spear.w_alpha)
 	}
 }
+
+
+if instance_exists(obj_worm)
+{
+	if obj_worm.patturn >= 5 && obj_worm.patturn < 6
+	{
+	draw_set_color(c_white)
+	draw_set_alpha(obj_worm.w_alpha)
+	draw_line_width(player.x,2329,player.x,player.y-1000,obj_worm.w_alpha)
+	}
+}

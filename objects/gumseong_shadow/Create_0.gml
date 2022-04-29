@@ -6,7 +6,6 @@ movement_speed = 0
 cannot_move = 0
 image_speed = 0
 image_index = 0
-gravity = 0.2
 hit_cooltime = 0
 last_hit = 0
 gravity_ignore = 0

@@ -185,6 +185,7 @@ if gravity = 0 && vspeed >= 0 && cannot_move = 0
 		bl_ef.image_xscale = 2.3
 		bl_ef.image_yscale = 0.42
 		bl_ef.t_x = __i
+		bl_ef.sfx_play = false
 	
 		var effect_ = instance_create_depth(x-movement_speed*19,y-8,player.depth+1,down_effect)
 		effect_.t_image_yscale = 0.3*3
@@ -347,7 +348,10 @@ if hit_cooltime = 0 && gravity_ignore = 0
 	}
 	else
 	{
-	gravity = 0.2
+		if global.show_guide_mes = -4
+		{
+		gravity = 0.2
+		}
 	}
 }
 

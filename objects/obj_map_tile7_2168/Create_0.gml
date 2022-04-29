@@ -13,6 +13,8 @@ ele__.cannot_active_more = 1
 ele__.destination = 0
 ele__.line_length = 2500
 
+cre_gumseong = 0
+
 
 
 var test_mob = instance_create_depth(2016,1344,player.depth+3,mob_spawn_here)

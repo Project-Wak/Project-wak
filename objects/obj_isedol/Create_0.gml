@@ -11,6 +11,7 @@ interecting_now = 0
 first_tuto = 0
 give_healitem = 0
 wall_1 = -4
+warning_night = 0
 
 depth = 960
 set_time = 1
@@ -21,3 +22,9 @@ global.coin_flip_n = 0
 random_coin = 0
 timer = 0
 global.your_page = 0
+wall2 = -4
+if global.tutorial = 0
+{
+wall2 = instance_create_depth(736,160,depth,obj_floor_tile3)
+wall2.image_yscale = 6
+}

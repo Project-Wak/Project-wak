@@ -18,7 +18,7 @@ player.assult_mode = 600
 	
 	if calcul_damage <= argu_0
 	{
-	img_bnd = $FF6D19FF
+	img_bnd = $FF2019FF
 	d_ef.image_blend = img_bnd
 	d_ef.image_xscale = 1.2
 	d_ef.image_yscale = 1.2
@@ -43,6 +43,7 @@ player.assult_mode = 600
 	bl_ef.image_yscale = abs(img_scale)
 	bl_ef.t_x = __i
 	bl_ef.image_angle = irandom_range(-90,90)
+	bl_ef.sfx_play = false
 	
 	var random_val_t = percentage_k(10)
 	
@@ -73,7 +74,7 @@ player.assult_mode = 600
 		}
 		else
 		{
-		img_bnd = $FF6D19FF
+		img_bnd = $FF2019FF
 		d_ef.image_blend = img_bnd
 		view_shake(4,0,15)
 		}

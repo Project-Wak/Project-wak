@@ -121,6 +121,7 @@ code.last_bgm = audio_play_sound(follower_bgm,0,1)
 		bl_ef.image_xscale = 2.3
 		bl_ef.image_yscale = 0.42
 		bl_ef.t_x = __i
+		bl_ef.sfx_play = true
 	
 		var effect_ = instance_create_depth(x-movement_speed*19,y-8,player.depth+1,down_effect)
 		effect_.t_image_yscale = 0.3*3
@@ -517,8 +518,17 @@ obj_camera.t_x = 5650
 			if abs(player.x - x) <= 256
 			{
 			rage_mode = 1
-			var sfx = audio_play_sound(sound5,0,0)
-			audio_sound_gain(sfx,0.1*global.master_volume*2*global.sfx_volume,0)
+				repeat(2)
+				{
+				var __i = choose(-1,1)
+				var bl_ef = instance_create_depth(x,y,depth-1,ef_blood)
+				var img_scale = -__i*2
+				bl_ef.image_xscale = img_scale
+				bl_ef.image_yscale = abs(img_scale)
+				bl_ef.t_x = __i
+				bl_ef.image_angle = irandom_range(-90,90)
+				bl_ef.sfx_play = true
+				}
 			damaged_count = 0
 			var a_____ = instance_create_depth(x,y,depth,rage_mode_knockback_attacked)
 			a_____.image_xscale = 3
@@ -623,8 +633,17 @@ obj_camera.t_x = 5650
 			{
 			attack_paturn = 1.1
 			movement_speed += (0 - movement_speed)*0.1
-			var sfx = audio_play_sound(sound5,0,0)
-			audio_sound_gain(sfx,0.1*global.master_volume*2*global.sfx_volume,0)
+				repeat(2)
+				{
+				var __i = choose(-1,1)
+				var bl_ef = instance_create_depth(x,y,depth-1,ef_blood)
+				var img_scale = -__i*2
+				bl_ef.image_xscale = img_scale
+				bl_ef.image_yscale = abs(img_scale)
+				bl_ef.t_x = __i
+				bl_ef.image_angle = irandom_range(-90,90)
+				bl_ef.sfx_play = true
+				}
 			w_alpha = 5
 			gravity_ignore = 1
 			y -= 2
@@ -843,8 +862,17 @@ obj_camera.t_x = 5650
 			{
 			attack_paturn = 3.1
 			movement_speed += (0 - movement_speed)*0.1
-			var sfx = audio_play_sound(sound5,0,0)
-			audio_sound_gain(sfx,0.1*global.master_volume*2*global.sfx_volume,0)
+				repeat(2)
+				{
+				var __i = choose(-1,1)
+				var bl_ef = instance_create_depth(x,y,depth-1,ef_blood)
+				var img_scale = -__i*2
+				bl_ef.image_xscale = img_scale
+				bl_ef.image_yscale = abs(img_scale)
+				bl_ef.t_x = __i
+				bl_ef.image_angle = irandom_range(-90,90)
+				bl_ef.sfx_play = true
+				}
 			w_alpha = 5
 			y -= 2
 			vspeed = -8

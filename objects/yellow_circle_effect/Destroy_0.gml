@@ -8,6 +8,8 @@ d_ef.image_blend = $FF82FF90
 d_ef.image_xscale = 1.2
 d_ef.image_yscale = 1.2
 d_ef.target = -4
+var sfx = audio_play_sound(glow_sfx,0,0)
+audio_sound_gain(sfx,0.3*global.master_volume*2*global.sfx_volume,0)
 
 repeat(4)
 {
@@ -20,3 +22,16 @@ audio_sound_gain(sfx,0.1*global.master_volume*2*global.sfx_volume,0)
 
 instance_destroy(_light_)
 obj_angel.hp += hp
+
+
+repeat(2)
+{
+var __i = choose(-1,1)
+var bl_ef = instance_create_depth(x,y,depth-1,ef_blood)
+var img_scale = -__i*2
+bl_ef.image_xscale = img_scale
+bl_ef.image_yscale = abs(img_scale)
+bl_ef.t_x = __i
+bl_ef.image_angle = irandom_range(-90,90)
+bl_ef.sfx_play = false
+}

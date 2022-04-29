@@ -122,8 +122,12 @@ var yy = y - s_y
 	for(var i = 3; i <= 20; i += 0.5)
 	{
 	//var alpha_ = image_alpha/i
-	var alpha_ = (image_alpha*0.2/i)
+	var alpha_ = (image_alpha*0.2*0.1/i)
 	var color = $FF6D52F2
+	draw_sprite_ext(Sprite143,0,xx,yy,image_xscale*5/i,image_yscale*13/i,image_angle,color,alpha_)
+	
+	var alpha_ = (image_alpha*0.2*0.5/i)
+	var color = c_white
 	draw_sprite_ext(Sprite143,0,xx,yy,image_xscale*5/i,image_yscale*13/i,image_angle,color,alpha_)
 	}
 gpu_set_blendmode(bm_normal)

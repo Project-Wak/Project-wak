@@ -181,7 +181,7 @@ if global.show_credits = 0
 
 	message_phase = 23
 
-	global.show_guide_mes = "레이지 모드("+string(global.e_key)+")\n\n레이지 모드 시전시, 일시적으로 스테미나 회복 속도가 대폭 증가한다.\n또한, 이동속도 증가 및 공격 속도가 증가한다."
+	global.show_guide_mes = "레이지 모드("+string(global.e_key)+")\n\n레이지 모드는 왼쪽 상단의 Rage가 풀인 경우 사용 가능하며,\n레이지 모드 시전시, 일시적으로 스테미나 회복 속도가 대폭 증가한다.\n또한, 이동속도 증가 및 공격 속도가 증가한다."
 	global.show_guide_mes_spr = 4
 	}
 

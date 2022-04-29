@@ -77,24 +77,14 @@ function give_item(argument0,argument1)
 	{
 	var _cal__ = argument1
 	global.weapon_owned[_cal__] ++
-		if _cal__ = 2
-		{
-		chat_up("'초록 광선검'을 획득하였다!")
-		}
-		
-		if _cal__ = 4
-		{
-		chat_up("'푸른 광선검'을 획득하였다!")
-		}
-		
 		if _cal__ = 1
 		{
 		chat_up("'양손 광선검'을 획득하였다!")
 		}
 	
-		if _cal__ = 5
+		if _cal__ = 2
 		{
-		chat_up("'돌격 소총'을 획득하였다!")
+		chat_up("'초록 광선검'을 획득하였다!")
 		}
 		
 		if _cal__ = 3
@@ -102,6 +92,16 @@ function give_item(argument0,argument1)
 		chat_up("'붉은 광선검'을 획득하였다!")
 		global.n_sword = 3
 		code.alarm[7] = 1
+		}
+		
+		if _cal__ = 4
+		{
+		chat_up("'푸른 광선검'을 획득하였다!")
+		}
+	
+		if _cal__ = 5
+		{
+		chat_up("'돌격 소총'을 획득하였다!")
 		}
 		
 		if _cal__ = 6

@@ -360,6 +360,12 @@ else
 			if timer > 250
 			{
 			var random_patturn = choose(1,1,2,2,3,4,4)
+			
+			if hp < 3000
+			{
+			random_patturn = choose(1,1,2,2,3,4,5,5)
+			}
+			
 				if random_patturn != b_patturn
 				{
 				patturn = random_patturn
@@ -370,6 +376,10 @@ else
 					repeat(99)
 					{
 					random_patturn = choose(1,1,2,2,3,4,4)
+						if hp < 3000
+						{
+						random_patturn = choose(1,1,2,2,3,4,5,5)
+						}
 					
 						if random_patturn != b_patturn
 						{
@@ -515,6 +525,21 @@ else
 	
 		if patturn >= 3 && patturn < 4
 		{
+			if patturn = 3.15
+			{
+				repeat(2)
+				{
+				var __i = choose(-1,1)
+				var bl_ef = instance_create_depth(x,y,depth-1,ef_blood)
+				var img_scale = -__i*2
+				bl_ef.image_xscale = img_scale
+				bl_ef.image_yscale = abs(img_scale)
+				bl_ef.t_x = __i
+				bl_ef.image_angle = irandom_range(-90,90)
+				bl_ef.sfx_play = true
+				}
+			}
+			
 			if patturn > 3.15
 			{
 			image_angle += (point_direction(x,y,x-30,y-30)+360 - image_angle)*0.1
@@ -569,11 +594,18 @@ else
 			{
 				if __sfx = 0 && global.show_credits = 0
 				{
-				var skill_red_ball_effect = instance_create_depth(x,y,depth-1,red_circle_effect)
-				skill_red_ball_effect.image_xscale = 0.45
-				skill_red_ball_effect.image_yscale = 0.45
-				skill_red_ball_effect.t_scale = 0.65
-				skill_red_ball_effect.alarm[11] = 16
+					repeat(2)
+					{
+					var __i = choose(-1,1)
+					var bl_ef = instance_create_depth(x,y,depth-1,ef_blood)
+					var img_scale = -__i*2
+					bl_ef.image_xscale = img_scale
+					bl_ef.image_yscale = abs(img_scale)
+					bl_ef.t_x = __i
+					bl_ef.image_angle = irandom_range(-90,90)
+					bl_ef.sfx_play = true
+					}
+		
 				var sfx = audio_play_sound(laser_skill_ready,0,0)
 				audio_sound_gain(sfx,0.15*global.master_volume*2*global.sfx_volume,0)
 				__sfx = 1
@@ -629,6 +661,79 @@ else
 			patturn = 0
 			timer = 300
 			__sfx = 0
+			}
+		}
+		
+		
+		
+		if patturn >= 5 && patturn < 6
+		{
+		obj_camera.tv_x = 1280*1.1
+		obj_camera.tv_y = 720*1.1
+		patturn += 0.001
+			
+			if patturn < 5.3
+			{
+			image_angle += (point_direction(x,y,x,0) - image_angle)*0.1
+			cannot_step = 1
+			y += (-400 - y)*0.01
+			}
+			
+			if patturn = 5.3
+			{
+			cannot_step = 0
+			t_y = 2050
+			t_x = 4307
+			image_angle = 300
+				for(var i = 0; i < 32; i++)
+				{
+				worm_body[i].x = 4307
+				worm_body[i].y = 2050+i*11
+				}
+			x = 4307
+			y = 2050
+			}
+			
+			if patturn = 5.3
+			{
+			w_alpha = 3
+			saved_x = player.x
+			}
+			
+			if patturn >= 5.3
+			{
+			w_alpha += (-0.1 - w_alpha)*0.1
+			}
+
+			if patturn = 5.4
+			{
+			instance_create_depth(saved_x,2329,depth-1,effect_special_skill_attacked)
+			}
+			
+			if patturn = 5.45
+			{
+			w_alpha = 3
+			saved_x = player.x
+			}
+			
+			if patturn = 5.55
+			{
+			instance_create_depth(saved_x,2329,depth-1,effect_special_skill_attacked)
+			}
+			
+			if patturn >= 5.75
+			{
+			breathing = 0
+			t_x = -4
+			t_y = -4
+			x = xstart
+			y = ystart+500
+				for(var i = 0; i < 32; i++)
+				{
+				worm_body[i].x = xstart+i*10
+				worm_body[i].y = ystart+500
+				}
+			patturn = 0
 			}
 		}
 	}

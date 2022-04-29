@@ -48,7 +48,7 @@ function hp_minus_for_mob(argument0,argument1)
 	
 		if argument1 <= argument1
 		{
-		d_ef.image_blend = $FF6D19FF
+		d_ef.image_blend = $FF2019FF
 		d_ef.image_xscale = 1.2
 		d_ef.image_yscale = 1.2
 		view_shake(3,4,2)
@@ -71,6 +71,7 @@ function hp_minus_for_mob(argument0,argument1)
 		bl_ef.image_yscale = abs(img_scale)
 		bl_ef.t_x = __i
 		bl_ef.image_angle = irandom_range(-90,90)
+		bl_ef.sfx_play = false
 		global.w_alpha = 0.15
 		}
 	}

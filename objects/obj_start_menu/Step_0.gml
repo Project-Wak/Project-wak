@@ -108,7 +108,7 @@ wheel_cooltime --
 						global.choosed = 0
 						global.choice_now = 0
 						global.choice = 0
-						really = 0
+						game_restart()
 						}
 						else
 						{
@@ -147,6 +147,10 @@ wheel_cooltime --
 			if global.story_text_alpha <= 2 && timer_st <= 60
 			{
 			global.story_text_alpha += 0.01
+				if keyboard_check(ord(string(global.skip_key)))
+				{
+				global.story_text_alpha += 0.01
+				}
 			}
 		
 			if global.story_text_alpha >= 1.4
@@ -159,6 +163,12 @@ wheel_cooltime --
 				if timer_st > 60
 				{
 				global.story_text_alpha -= 0.01
+				
+					if keyboard_check(ord(string(global.skip_key)))
+					{
+					global.story_text_alpha -= 0.01
+					}
+				
 					if global.story_text_alpha <= 0
 					{
 					timer_st = 0

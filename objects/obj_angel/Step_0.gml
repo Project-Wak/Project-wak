@@ -173,8 +173,8 @@ else
 		{
 		global.boss_target = id
 		global.boss_name = "연구소의 수호자 - 창의 기사 엔젤로이드"
-		obj_camera.tv_x = 1280*0.95
-		obj_camera.tv_y = 720*0.95
+		obj_camera.tv_x = 1280
+		obj_camera.tv_y = 720
 		obj_camera.t_x = x
 		obj_camera.t_y = player.y
 		}
@@ -198,11 +198,11 @@ if activated = 1
 {
 	if !instance_exists(wall1)
 	{
-	wall1 = instance_create_depth(x-500,1696,player.depth+3,obj_floor_tile3)
+	wall1 = instance_create_depth(x-560,1696,player.depth+3,obj_floor_tile3)
 	wall1.image_xscale = -1
 	wall1.image_yscale = 5.4
 
-	wall2 = instance_create_depth(x+500,1696,player.depth+3,obj_floor_tile3)
+	wall2 = instance_create_depth(x+560,1696,player.depth+3,obj_floor_tile3)
 	wall2.image_yscale = 5.4
 	}
 	
@@ -389,9 +389,6 @@ activated = 2
 		
 		if patturn > 1.3
 		{
-		obj_camera.tv_x = 1280*0.77
-		obj_camera.tv_y = 720*0.77
-		
 		spear__.image_angle = 0
 		spear__.cannot_step = 0
 		spear__.gravity = 0.3
@@ -718,6 +715,9 @@ activated = 2
 		ring__.image_yscale = image_yscale
 		ring__.direction = point_direction(x,y-103*image_yscale,player.x,player.y)
 		ring__.speed = 23
+		
+		var sfx = audio_play_sound(critical_sfx,0,0)
+		audio_sound_gain(sfx,0.05*global.master_volume*2*global.sfx_volume,0)
 		}
 		
 		if w_alpha >= 1

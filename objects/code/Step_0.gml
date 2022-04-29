@@ -6,6 +6,11 @@ if global.nickname = -4
 global.nickname = "왁굳"
 }
 
+if global.item_owned[2] > 0
+{
+global.tutorial = 1
+}
+
 
 if global.tiredness > 24
 {
@@ -259,15 +264,29 @@ global.gold_draw_alpha += (-0.01 - global.gold_draw_alpha)*0.1
 }
 
 
-if keyboard_check_pressed(vk_escape) && global.playing_scene = 0 && global.show_guide_mes = -4
+if global.playing_scene = 0 && global.show_guide_mes = -4 && global.hp > 0
 {
-alarm[10] = 1
+	if keyboard_check_pressed(vk_escape)
+	{
+	alarm[10] = 1
+	}
+	
+	if keyboard_check_pressed(vk_tab)
+	{
+	alarm[8] = 1
+	}
+}
+else
+{
+	if instance_exists(master_volume_setting) || instance_exists(bg_status)
+	{
+	option = 0
+	global.cursor = 0
+	instance_destroy(setting_parents)
+	}
 }
 
-if keyboard_check_pressed(vk_tab) && global.playing_scene = 0 && global.show_guide_mes = -4
-{
-alarm[8] = 1
-}
+
 
 if instance_exists(player)
 {

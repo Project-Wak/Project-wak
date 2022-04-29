@@ -60,7 +60,7 @@
     "eventStubScript": null,
     "parent": {"name":"angel_boss_spr213","path":"sprites/angel_boss_spr213/angel_boss_spr213.yy",},
     "resourceVersion": "1.4",
-    "name": "angel_boss_spr",
+    "name": "angel_boss_spr213",
     "tags": [],
     "resourceType": "GMSequence",
   },

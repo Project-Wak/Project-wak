@@ -38,8 +38,8 @@ if activated = 1
 			player.y += (y - player.y)*0.34
 			}
 
-		obj_camera.tv_x = 1280*0.5
-		obj_camera.tv_y = 720*0.5
+		obj_camera.tv_x = 1280*0.7
+		obj_camera.tv_y = 720*0.7
 		player.image_xscale = sign_k(player.x - real_t_x)
 		}
 		else
@@ -116,7 +116,7 @@ t_y += (real_t_y - t_y)*0.1
 		
 			if global.b_alpha > 1
 			{
-			global.left_time --
+			global.left_time -= 2
 				if global.show_credits = 0
 				{
 				global.t_b_alpha = -0.01
@@ -195,9 +195,9 @@ t_y += (real_t_y - t_y)*0.1
 				{
 					if room != room_main
 					{
-					global.n_time ++
-					global.tiredness += 2
-					global.left_time --
+					global.n_time += 2
+					global.tiredness += 4
+					global.left_time -= 2
 					}
 				}
 			}
@@ -212,9 +212,9 @@ t_y += (real_t_y - t_y)*0.1
 			{
 				if room != room_main
 				{
-				global.n_time ++
-				global.tiredness += 2
-				global.left_time --
+				global.n_time += 2
+				global.tiredness += 4
+				global.left_time -= 2
 				}
 			}
 			
