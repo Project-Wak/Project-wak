@@ -273,8 +273,15 @@ else
 			if timer > 110
 			{
 			var random_patturn = choose(1,2,2,3,4,4)
+			
+			if count_three > 3
+			{
+			random_patturn = 3
+			}
+			
 				if random_patturn != b_patturn
 				{
+				count_three ++
 				patturn = random_patturn
 				b_patturn = random_patturn
 				}
@@ -282,10 +289,16 @@ else
 				{
 					repeat(99)
 					{
+						if count_three > 3
+						{
+						random_patturn = 3
+						break;
+						}
 					random_patturn = choose(1,2,2,3,4,4)
 					
 						if random_patturn != b_patturn
 						{
+						count_three ++
 						patturn = random_patturn
 						b_patturn = random_patturn
 						break;
@@ -491,6 +504,7 @@ else
 		{
 			if patturn = 3
 			{
+			count_three = 0
 			random_dir = choose(-1,1)
 			image_xscale = sign_k(x - player.x)*0.9
 			var xx___ = x

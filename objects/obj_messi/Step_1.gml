@@ -14,7 +14,7 @@ var p_m_ins = instance_place(x,y,player)
 		}
 	t_x = player.x
 	//global.movement_speed += __i
-	p_m_ins.x += __i*6
+	global.movement_speed = __i*4
 		if cannot_move = 0
 		{
 		cannot_move = 1

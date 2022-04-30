@@ -189,7 +189,8 @@ global.slow_motion += global.slow_motion*0.03
 			{
 				if playing_gameover_scene > 0
 				{
-				global.left_time = 8*global.time_plusment
+				global.left_time = 12*global.time_plusment
+				global.tiredness = 0
 				playing_gameover_scene = 0
 				}
 			}

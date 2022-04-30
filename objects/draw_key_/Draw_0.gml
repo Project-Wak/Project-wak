@@ -228,7 +228,7 @@ var xx_sec = camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera
 
 if img_index = 15
 {
-draw_text_kl_scale(xx,yy+85*cm_vx,"회전 베기\n\n\n\n(사용 도중 좌우 및 아래 방향키를 누를시 해당 방향으로 돌진)",16,9999,1,image_blend,0,0,font0,cm_vx*1/3,cm_vx*1/3,image_angle)
+draw_text_kl_scale(xx,yy+85*cm_vx,"회전 베기\n\n\n\n(사용 도중 좌우 및 아래 방향키를 누를시 해당 방향으로 돌진)\n(공중에서 사용시 후딜 감소)",16,9999,1,image_blend,0,0,font0,cm_vx*1/3,cm_vx*1/3,image_angle)
 }
 
 if img_index = 22

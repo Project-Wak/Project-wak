@@ -246,6 +246,7 @@ else
 	
 		if keyboard_check(ord(string(global.skip_key)))
 		{
+		alpha -= 0.01
 		scene__ += 0.0032
 		y -= scene__*3.1
 			if instance_exists(left_eye)

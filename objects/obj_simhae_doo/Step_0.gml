@@ -203,6 +203,7 @@ b_alpha_ += (t_b_alpha_ - b_alpha_)*0.08
 	global.never_move = 1
 		if keyboard_check(ord(string(global.skip_key)))
 		{
+		alpha -= 0.01
 		scene__ += 0.0032
 		y -= scene__*2.3
 		}

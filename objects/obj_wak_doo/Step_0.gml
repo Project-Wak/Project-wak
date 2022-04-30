@@ -236,6 +236,7 @@ global.room_brightness += 0.0012
 	
 	if keyboard_check(ord(string(global.skip_key)))
 	{
+	alpha -= 0.01
 	scene__ += 0.0032
 	y -= scene__*3.1
 	left_hand.y -= scene__*3.1

@@ -390,7 +390,6 @@
     {"id":{"name":"obj_mouse","path":"objects/obj_mouse/obj_mouse.yy",},"order":0,},
     {"id":{"name":"devil_doo","path":"sprites/devil_doo/devil_doo.yy",},"order":217,},
     {"id":{"name":"code","path":"objects/code/code.yy",},"order":2,},
-    {"id":{"name":"angel_boss_spr213229","path":"sprites/angel_boss_spr213229/angel_boss_spr213229.yy",},"order":228,},
     {"id":{"name":"draw_text_kl_scale","path":"scripts/draw_text_kl_scale/draw_text_kl_scale.yy",},"order":6,},
     {"id":{"name":"Sprite170","path":"sprites/Sprite170/Sprite170.yy",},"order":169,},
     {"id":{"name":"obj_hint_arrow","path":"objects/obj_hint_arrow/obj_hint_arrow.yy",},"order":45,},

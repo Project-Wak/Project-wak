@@ -294,6 +294,7 @@ else
 	
 		if keyboard_check(ord(string(global.skip_key)))
 		{
+		alpha -= 0.01
 		scene__ += 0.0032
 		y -= scene__*4
 		x -= scene__*0.6

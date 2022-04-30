@@ -21,7 +21,6 @@ sfx = 0
 
 player.x = 800
 player.y = 1100
-global.hp = player.max_hp
 global.n_time = 12
 if global.show_credits = 0
 {

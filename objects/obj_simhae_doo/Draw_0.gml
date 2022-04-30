@@ -7,13 +7,13 @@ draw_set_color(c_black)
 draw_rectangle(player.x-2000,player.y-2000,player.x+2000,player.y+2000,false)
 }
 
-draw_sprite_ext(sprite_index,1,x+(player.x-x)/150,y+(player.y-y)/150,image_xscale,image_yscale,image_angle,image_blend,image_alpha)
+draw_sprite_ext(sprite_index,1,x+(player.x-x)/150,y+(player.y-y)/150,image_xscale,image_yscale,image_angle,c_white,image_alpha)
 
 if patturn > 1
 {
-draw_sprite_ext(sprite_index,2,x+(player.x-x)/150,y+(player.y-y)/150,image_xscale,image_yscale,image_angle,image_blend,image_alpha*(abs(patturn-1.65))/0.5)
+draw_sprite_ext(sprite_index,2,x+(player.x-x)/150,y+(player.y-y)/150,image_xscale,image_yscale,image_angle,c_white,image_alpha*(abs(patturn-1.65))/0.5)
 }
-draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha)
+draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,c_white,image_alpha)
 draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,c_black,alpha*0.7*image_alpha)
 
 if global.fps_draw > 0

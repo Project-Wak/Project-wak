@@ -9,9 +9,3 @@ image_speed = 0
 can_interect = 0
 
 
-global.hp = player.max_hp
-global.rage_gauge = 0
-global.can_use_sylinge = 1
-global.already_aed_used = 0
-global.awakening = 0
-global.used_suicide_skill = 0

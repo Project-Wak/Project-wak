@@ -32,7 +32,7 @@ if global.accessories_owned[2] = 1 && first_tuto = 1 && global.accessories_equip
 
 if global.real_ending = 0 && instance_exists(obj_wakdroid_ending)
 {
-wall_1 = instance_create_depth(1568,160,depth,obj_floor_tile3)
+wall_1 = instance_create_depth(1565,160,depth,obj_floor_tile3)
 wall_1.image_yscale = 4.75
 }
 
@@ -44,7 +44,7 @@ if global.real_ending != 0
 	}
 }
 
-if image_index != 6
+if image_index != 6 && !instance_number(obj_wakdroid_ending)
 {
 	if (global.accessories_owned[2] = 0 || (global.total_died >= 10 && global.accessories_owned[14] <= 0))
 	{
@@ -209,7 +209,7 @@ if (can_interect = 1 && interecting_now = 0 && keyboard_check_released(ord(strin
 }
 
 
-if image_index != 6
+if image_index != 6 && !instance_exists(obj_wakdroid_ending)
 {
 	if global.n_night = 1 && abs(x - player.x) <= 80 && player.x > x && warning_night = 0
 	{
@@ -826,6 +826,7 @@ global.playing_scene = 1
 					{
 					global.real_ending = 1
 					message_phase = 4
+					can_interect = 0
 					alarm[1] = 1
 					}
 				}

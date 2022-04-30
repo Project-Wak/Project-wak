@@ -228,6 +228,7 @@ global.room_brightness += 0.0002
 	
 	if keyboard_check(ord(string(global.skip_key)))
 	{
+	alpha -= 0.01
 	scene__ += 0.0032
 	y -= scene__*3.1
 	}
@@ -371,6 +372,7 @@ activated = 2
 	
 	if patturn >= 1 && patturn < 2
 	{
+	w_alpha += (-0.1 - w_alpha)*0.1
 	patturn += 0.001
 	cannot_step = 1
 	var a___ = instance_create_depth(spear__.x,spear__.y,depth,rage_mode_knockback_attacked)
@@ -386,13 +388,25 @@ activated = 2
 		{
 		spear__.y += (300 - spear__.y)*0.05
 		}
+
+		if patturn = 1.24
+		{
+		var sfx = audio_play_sound(jump_attack_sfx,0,0)
+		audio_sound_gain(sfx,0.1*global.master_volume*2*global.sfx_volume,0)
+		var effect_ = instance_create_depth(player.x,obj_angel.y+220,player.depth+1,down_effect)
+		effect_.t_image_xscale = 0.7*6
+		effect_.t_image_yscale = 0.05*6
+		effect_.received = 0
+		w_alpha = 2
+		}
+		
 		
 		if patturn > 1.3
 		{
 		spear__.image_angle = 0
 		spear__.cannot_step = 0
 		spear__.gravity = 0.3
-			if spear__.vspeed < 3 && spear__.on_floor = 0
+			if abs(spear__.vspeed) < 3 && spear__.on_floor = 0
 			{
 			spear__.x = player.x
 			spear__.y = y-300
@@ -401,7 +415,6 @@ activated = 2
 		
 			if spear__.on_floor = 1
 			{
-			
 			view_shake(0,1.1,1)
 			var random_val___ = percentage_k(global.graphics_for_code*3)
 				if random_val___ = 1

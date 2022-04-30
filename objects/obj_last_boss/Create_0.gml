@@ -20,6 +20,7 @@ activated = 0
 patturn = 0
 timer = 0
 laser1 = -4
+count_three = 0
 laser2 = -4
 saved_player_dir = 0
 skill_red_ball_effect_rage = -4

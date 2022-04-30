@@ -101,6 +101,16 @@ global.playing_scene = 1
 			{
 			sfx_for_multiplayer(tic_tak,0,0.15)
 			sfx_for_multiplayer(sleep_sfx,0,0.11)
+			
+			global.used_suicide_skill = 0
+			global.already_aed_used = 0
+			global.can_use_sylinge = 1
+			global.rage_gauge = 0
+			global.poisoning = 0
+			global.hp = player.max_hp
+			global.awakening = 0
+
+			global.t_b_alpha = -0.01
 			sfx_a = 1
 			}
 			

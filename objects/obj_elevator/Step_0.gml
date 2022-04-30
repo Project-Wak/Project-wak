@@ -196,7 +196,7 @@ t_y += (real_t_y - t_y)*0.1
 					if room != room_main
 					{
 					global.n_time += 2
-					global.tiredness += 4
+					global.tiredness += 3
 					global.left_time -= 2
 					}
 				}
@@ -213,7 +213,7 @@ t_y += (real_t_y - t_y)*0.1
 				if room != room_main
 				{
 				global.n_time += 2
-				global.tiredness += 4
+				global.tiredness += 3
 				global.left_time -= 2
 				}
 			}

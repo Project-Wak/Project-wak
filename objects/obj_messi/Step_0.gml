@@ -436,7 +436,7 @@ else
 		if global.show_credits = 0
 		{
 		global.boss_target = id
-		global.boss_name = "화염의 기사 - 거대 안드로이드 메시"
+		global.boss_name = "거대 왁두의 권속 - 화염의 거대 안드로이드 메시"
 		obj_camera.tv_x = 1280
 		obj_camera.tv_y = 720
 		obj_camera.t_x = x
@@ -486,6 +486,7 @@ scene__ += 0.0032
 
 	if keyboard_check(ord(string(global.skip_key)))
 	{
+	alpha -= 0.01
 	scene__ += 0.0032
 	y -= scene__*3.1
 	left_hand.y -= scene__*3.1

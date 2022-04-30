@@ -30,7 +30,7 @@ if cannot_step = 0
 			__i = choose(-0.2,0.2)
 			}
 		//global.movement_speed += __i
-		p_m_ins.x += __i*6
+		global.movement_speed = __i*4
 			if cannot_move = 0
 			{
 			cannot_move = 1

@@ -69,7 +69,7 @@ poison_alpha += (-0.01 - poison_alpha)*0.1
 if global.poison_tuto = 0 && room = room_sector_B06_2
 {
 global.show_guide_mes_spr = 5
-global.show_guide_mes = "상태 이상 - 독\n\n독 상태에 걸리게 될경우,\n체력이 1이 남을때 까지 지속적으로 체력이 닳는다.\n(상태 이상은, 특정 아이템을 사용하거나 사망시에만 해제 된다)"
+global.show_guide_mes = "상태 이상 - 독\n\n독 상태에 걸리게 될경우,\n체력이 1이 남을때 까지 지속적으로 체력이 닳는다.\n(상태 이상은 특정 아이템을 사용하거나 사망 혹은 숙면 시에만 해제된다)"
 global.poison_tuto = 1
 }
 
@@ -2404,7 +2404,7 @@ w_alpha += (-0.01 - w_alpha)*0.1
 	
 	for(var i = abs(movement_speed); i > 0; i--)
 	{
-		if !place_meeting(x+sign(movement_speed)*(i+16),y,floor_parents) || place_meeting(x+sign(movement_speed)*(i+16),y,stair_parents) 
+		if !place_meeting(x+sign(movement_speed)*(i+24),y,floor_parents) || place_meeting(x+sign(movement_speed)*(i+16),y,stair_parents) 
 		{
 		x += sign(movement_speed)*i;
 		break;
@@ -4247,7 +4247,7 @@ global.movement_speed = 0
 		
 		if jump_attack < 11
 		{
-			if !place_meeting(x-image_xscale*0.7,y,floor_parents)
+			if !place_meeting(x-image_xscale-16*sign(image_xscale),y,floor_parents)
 			{
 			x += (-image_xscale)*0.7
 			}
