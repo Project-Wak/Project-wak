@@ -55,7 +55,7 @@ if damage_able > 0
 		{
 		var _calcul_ = sign(player.x - x)
 		var guarding_now = 0
-			if (_calcul_ = sign(player.image_xscale) && player.guarding > 0 && global.stemina >= 0.1)
+			if (_calcul_ = sign(player.image_xscale) && player.guarding > 0 && global.stamina >= 0.1)
 			{
 			guarding_now = 1
 			}
@@ -89,7 +89,7 @@ if damage_able > 0
 				}
 				
 				player.w_alpha = 1
-				global.stemina -= 0.1
+				global.stamina -= 0.1
 				global.rage_gauge += 1
 				player.guarding = 2.5
 				player.guard_cool_time = 3

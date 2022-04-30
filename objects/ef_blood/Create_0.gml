@@ -7,3 +7,4 @@ yscale = 0
 sfx = 0
 image_speed = 0.8
 activated = 0
+

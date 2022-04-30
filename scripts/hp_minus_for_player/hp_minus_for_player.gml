@@ -94,7 +94,15 @@ player.assult_mode = 600
 	//}
 
 	
-	if global.playing_scene = 0
+	if global.playing_scene = 0 && instance_exists(normal_mob)
+	{
+	global.hp -= (calcul_damage)
+		if instance_exists(obj_last_boss)
+		{
+		obj_last_boss.hp += calcul_damage/10
+		}
+	}
+	else
 	{
 	global.hp -= (calcul_damage)
 		if instance_exists(obj_last_boss)

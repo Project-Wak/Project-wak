@@ -65,7 +65,7 @@ if global.show_credits = 0
 
 	if message_phase = 5 && !instance_exists(p_mes)
 	{
-	global.stemina = 999
+	global.stamina = 999
 	message_phase = 6
 	global.never_move = 0
 	var key_guide = instance_create_depth(-100,-100,-999994,draw_key_)
@@ -75,7 +75,7 @@ if global.show_credits = 0
 
 	if message_phase = 6 && !instance_exists(p_mes) && instance_exists(wak_drone) && point_distance(wak_drone.x,wak_drone.y,player.x,player.y) <= 370
 	{
-	global.stemina = 999
+	global.stamina = 999
 	message_phase = 8
 	global.never_move = 0
 
@@ -113,7 +113,7 @@ if global.show_credits = 0
 	{
 	message_phase = 14
 	global.never_move = 0
-	global.stemina = 999
+	global.stamina = 999
 	instance_destroy(draw_key_)
 	var key_guide = instance_create_depth(-100,-100,-999994,draw_key_)
 	key_guide.location = -2

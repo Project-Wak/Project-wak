@@ -174,7 +174,7 @@ tiredness = 2
 
 hspeed += (0 - hspeed)*0.1
 
-if room = room_main && global.never_move_in_setting = 0 && global.playing_scene = 0
+if global.never_move_in_setting = 0 && global.playing_scene = 0
 {
 	if global.n_sword = 1 && global.explosion_tuto = 0
 	{
@@ -816,14 +816,14 @@ w_alpha += (-0.01 - w_alpha)*0.1
 				}
 				
 				var cal_m_ste = (1/global.guard_power)*1
-				if guarding > 0 && global.stemina >= cal_m_ste && check_guard = sign(image_xscale)
+				if guarding > 0 && global.stamina >= cal_m_ste && check_guard = sign(image_xscale)
 				{
 				guarding_now = 1
 				}
 				
 				if guarding_now = 1 || charge_attack > 0 || pering > 0
 				{
-				global.stemina -= cal_m_ste
+				global.stamina -= cal_m_ste
 			
 		
 					if guard_cool_time = 0
@@ -880,14 +880,14 @@ w_alpha += (-0.01 - w_alpha)*0.1
 				}
 				
 				var cal_m_ste = (6.7/global.guard_power)*1
-				if guarding > 0 && global.stemina >= cal_m_ste && check_guard = sign(image_xscale)
+				if guarding > 0 && global.stamina >= cal_m_ste && check_guard = sign(image_xscale)
 				{
 				guarding_now = 1
 				}
 				
 				if guarding_now = 1 || charge_attack > 0 || pering > 0
 				{
-				global.stemina -= cal_m_ste
+				global.stamina -= cal_m_ste
 			
 		
 					if guard_cool_time = 0
@@ -965,14 +965,14 @@ w_alpha += (-0.01 - w_alpha)*0.1
 				}
 				
 				var cal_m_ste = (8/global.guard_power)*1
-				if guarding > 0 && global.stemina >= cal_m_ste && check_guard = sign(image_xscale)
+				if guarding > 0 && global.stamina >= cal_m_ste && check_guard = sign(image_xscale)
 				{
 				guarding_now = 1
 				}
 				
 				if guarding_now = 1 || charge_attack > 0 || pering > 0
 				{
-				global.stemina -= cal_m_ste
+				global.stamina -= cal_m_ste
 			
 		
 					if guard_cool_time = 0
@@ -1031,14 +1031,14 @@ w_alpha += (-0.01 - w_alpha)*0.1
 				}
 				
 				var cal_m_ste = (1.8/global.guard_power)*1
-				if guarding > 0 && global.stemina >= cal_m_ste && check_guard = sign(image_xscale)
+				if guarding > 0 && global.stamina >= cal_m_ste && check_guard = sign(image_xscale)
 				{
 				guarding_now = 1
 				}
 				
 				if guarding_now = 1 || charge_attack > 0 || pering > 0
 				{
-				global.stemina -= cal_m_ste
+				global.stamina -= cal_m_ste
 			
 		
 					if guard_cool_time = 0
@@ -1096,14 +1096,14 @@ w_alpha += (-0.01 - w_alpha)*0.1
 				}
 				
 				var cal_m_ste = (1/global.guard_power)*1
-				if guarding > 0 && global.stemina >= cal_m_ste && check_guard = sign(image_xscale)
+				if guarding > 0 && global.stamina >= cal_m_ste && check_guard = sign(image_xscale)
 				{
 				guarding_now = 1
 				}
 				
 				if guarding_now = 1 || charge_attack > 0 || pering > 0
 				{
-				global.stemina -= cal_m_ste
+				global.stamina -= cal_m_ste
 			
 		
 					if guard_cool_time = 0
@@ -1163,14 +1163,14 @@ w_alpha += (-0.01 - w_alpha)*0.1
 				}
 				
 				var cal_m_ste = (1/global.guard_power)*6.6
-				if guarding > 0 && global.stemina >= cal_m_ste && check_guard = sign(image_xscale)
+				if guarding > 0 && global.stamina >= cal_m_ste && check_guard = sign(image_xscale)
 				{
 				guarding_now = 1
 				}
 				
 				if guarding_now = 1 || charge_attack > 0 || pering > 0
 				{
-				global.stemina -= cal_m_ste
+				global.stamina -= cal_m_ste
 			
 		
 					if guard_cool_time = 0
@@ -1229,14 +1229,14 @@ w_alpha += (-0.01 - w_alpha)*0.1
 				}
 				
 				var cal_m_ste = (1/global.guard_power)*9
-				if guarding > 0 && global.stemina >= cal_m_ste && check_guard = sign(image_xscale)
+				if guarding > 0 && global.stamina >= cal_m_ste && check_guard = sign(image_xscale)
 				{
 				guarding_now = 1
 				}
 				
 				if guarding_now = 1 || charge_attack > 0 || pering > 0
 				{
-				global.stemina -= cal_m_ste
+				global.stamina -= cal_m_ste
 			
 		
 					if guard_cool_time = 0
@@ -1294,14 +1294,14 @@ w_alpha += (-0.01 - w_alpha)*0.1
 				}
 				
 				var cal_m_ste = (1/global.guard_power)*9
-				if guarding > 0 && global.stemina >= cal_m_ste && check_guard = sign(image_xscale)
+				if guarding > 0 && global.stamina >= cal_m_ste && check_guard = sign(image_xscale)
 				{
 				guarding_now = 1
 				}
 				
 				if guarding_now = 1 || charge_attack > 0 || pering > 0
 				{
-				global.stemina -= cal_m_ste
+				global.stamina -= cal_m_ste
 			
 		
 					if guard_cool_time = 0
@@ -1359,14 +1359,14 @@ w_alpha += (-0.01 - w_alpha)*0.1
 				}
 				
 				var cal_m_ste = (1/global.guard_power)*1
-				if guarding > 0 && global.stemina >= cal_m_ste && check_guard = sign(image_xscale)
+				if guarding > 0 && global.stamina >= cal_m_ste && check_guard = sign(image_xscale)
 				{
 				guarding_now = 1
 				}
 				
 				if guarding_now = 1 || charge_attack > 0 || pering > 0
 				{
-				global.stemina -= cal_m_ste
+				global.stamina -= cal_m_ste
 			
 		
 					if guard_cool_time = 0
@@ -1503,14 +1503,14 @@ w_alpha += (-0.01 - w_alpha)*0.1
 				}
 				
 				var cal_m_ste = (1/global.guard_power)*3
-				if guarding > 0 && global.stemina >= cal_m_ste && check_guard = sign(image_xscale)
+				if guarding > 0 && global.stamina >= cal_m_ste && check_guard = sign(image_xscale)
 				{
 				guarding_now = 1
 				}
 				
 				if guarding_now = 1 || charge_attack > 0 || pering > 0
 				{
-				global.stemina -= cal_m_ste
+				global.stamina -= cal_m_ste
 			
 		
 					if guard_cool_time = 0
@@ -1576,14 +1576,14 @@ w_alpha += (-0.01 - w_alpha)*0.1
 				}
 				
 				var cal_m_ste = (1/global.guard_power)*2
-				if guarding > 0 && global.stemina >= cal_m_ste && check_guard = sign(image_xscale)
+				if guarding > 0 && global.stamina >= cal_m_ste && check_guard = sign(image_xscale)
 				{
 				guarding_now = 1
 				}
 				
 				if guarding_now = 1 || charge_attack > 0 || pering > 0
 				{
-				global.stemina -= cal_m_ste
+				global.stamina -= cal_m_ste
 			
 		
 					if guard_cool_time = 0
@@ -1649,14 +1649,14 @@ w_alpha += (-0.01 - w_alpha)*0.1
 				}
 				
 				var cal_m_ste = (1/global.guard_power)*1.8
-				if guarding > 0 && global.stemina >= cal_m_ste && check_guard = sign(image_xscale)
+				if guarding > 0 && global.stamina >= cal_m_ste && check_guard = sign(image_xscale)
 				{
 				guarding_now = 1
 				}
 				
 				if guarding_now = 1 || charge_attack > 0 || pering > 0
 				{
-				global.stemina -= cal_m_ste
+				global.stamina -= cal_m_ste
 			
 		
 					if guard_cool_time = 0
@@ -1711,14 +1711,14 @@ w_alpha += (-0.01 - w_alpha)*0.1
 				}
 				
 				var cal_m_ste = (1/global.guard_power)
-				if guarding > 0 && global.stemina >= cal_m_ste && check_guard = sign(image_xscale)
+				if guarding > 0 && global.stamina >= cal_m_ste && check_guard = sign(image_xscale)
 				{
 				guarding_now = 1
 				}
 				
 				if guarding_now = 1 || charge_attack > 0 || pering > 0
 				{
-				global.stemina -= cal_m_ste
+				global.stamina -= cal_m_ste
 			
 		
 					if guard_cool_time = 0
@@ -1772,14 +1772,14 @@ w_alpha += (-0.01 - w_alpha)*0.1
 				}
 				
 				var cal_m_ste = (1/global.guard_power)*0.7
-				if guarding > 0 && global.stemina >= cal_m_ste && check_guard = sign(image_xscale)
+				if guarding > 0 && global.stamina >= cal_m_ste && check_guard = sign(image_xscale)
 				{
 				guarding_now = 1
 				}
 				
 				if guarding_now = 1 || charge_attack > 0 || pering > 0
 				{
-				global.stemina -= cal_m_ste
+				global.stamina -= cal_m_ste
 			
 		
 					if guard_cool_time = 0
@@ -1831,14 +1831,14 @@ w_alpha += (-0.01 - w_alpha)*0.1
 				}
 				
 				var cal_m_ste = (1/global.guard_power)*0.15
-				if guarding > 0 && global.stemina >= cal_m_ste && check_guard = sign(image_xscale)
+				if guarding > 0 && global.stamina >= cal_m_ste && check_guard = sign(image_xscale)
 				{
 				guarding_now = 1
 				}
 				
 				if guarding_now = 1 || charge_attack > 0 || pering > 0
 				{
-				global.stemina -= cal_m_ste
+				global.stamina -= cal_m_ste
 			
 		
 					if guard_cool_time = 0
@@ -1892,14 +1892,14 @@ w_alpha += (-0.01 - w_alpha)*0.1
 				}
 				
 				var cal_m_ste = (1/global.guard_power)*0.2
-				if guarding > 0 && global.stemina >= cal_m_ste && check_guard = sign(image_xscale)
+				if guarding > 0 && global.stamina >= cal_m_ste && check_guard = sign(image_xscale)
 				{
 				guarding_now = 1
 				}
 				
 				if guarding_now = 1 || charge_attack > 0 || pering > 0
 				{
-				global.stemina -= cal_m_ste
+				global.stamina -= cal_m_ste
 			
 		
 					if guard_cool_time = 0
@@ -1951,14 +1951,14 @@ w_alpha += (-0.01 - w_alpha)*0.1
 				}
 				
 				var cal_m_ste = (1/global.guard_power)*0.3
-				if guarding > 0 && global.stemina >= cal_m_ste && check_guard = sign(image_xscale)
+				if guarding > 0 && global.stamina >= cal_m_ste && check_guard = sign(image_xscale)
 				{
 				guarding_now = 1
 				}
 				
 				if guarding_now = 1 || charge_attack > 0 || pering > 0
 				{
-				global.stemina -= cal_m_ste
+				global.stamina -= cal_m_ste
 			
 		
 					if guard_cool_time = 0
@@ -2008,14 +2008,14 @@ w_alpha += (-0.01 - w_alpha)*0.1
 				}
 				
 				var cal_m_ste = (1/global.guard_power)*1.5
-				if guarding > 0 && global.stemina >= cal_m_ste && check_guard = sign(image_xscale)
+				if guarding > 0 && global.stamina >= cal_m_ste && check_guard = sign(image_xscale)
 				{
 				guarding_now = 1
 				}
 				
 				if guarding_now = 1 || charge_attack > 0 || pering > 0
 				{
-				global.stemina -= cal_m_ste
+				global.stamina -= cal_m_ste
 			
 		
 					if guard_cool_time = 0
@@ -2074,7 +2074,7 @@ w_alpha += (-0.01 - w_alpha)*0.1
 				
 			if guarding_now = 1 || charge_attack > 0 || pering > 0
 			{
-			global.stemina -= cal_m_ste
+			global.stamina -= cal_m_ste
 			
 		
 				if guard_cool_time = 0
@@ -2133,14 +2133,14 @@ w_alpha += (-0.01 - w_alpha)*0.1
 			}
 				
 			var cal_m_ste = (1/global.guard_power)*0.1
-			if guarding > 0 && global.stemina >= cal_m_ste && check_guard = sign(image_xscale)
+			if guarding > 0 && global.stamina >= cal_m_ste && check_guard = sign(image_xscale)
 			{
 			guarding_now = 1
 			}
 				
 			if guarding_now = 1 || charge_attack > 0 || pering > 0
 			{
-			global.stemina -= cal_m_ste
+			global.stamina -= cal_m_ste
 			
 		
 				if guard_cool_time = 0
@@ -2223,7 +2223,7 @@ w_alpha += (-0.01 - w_alpha)*0.1
 			vspeed = -6-global.jump_plus
 			jump_end_motion = 0
 			b_movement_speed = 0
-			global.stemina_cooltime = 0
+			global.stamina_cooltime = 0
 			y -= 3
 			jump = 1
 			dont_check_jump_now = 2
@@ -2286,7 +2286,7 @@ w_alpha += (-0.01 - w_alpha)*0.1
 				spin = 1
 				cannot_move = 1
 				cooltime = 1
-				global.stemina_cooltime = 0
+				global.stamina_cooltime = 0
 				
 					if hurt > 0
 					{
@@ -2322,39 +2322,39 @@ w_alpha += (-0.01 - w_alpha)*0.1
 		}
 	}
 	
-	if global.cannot_use_stemina = 0
+	if global.cannot_use_stamina = 0
 	{
 		if (sprite_index = move_sprite || sprite_index = spr_crouch || sprite_index = guard_sprite || sprite_index = jump_sprite) && gravity <= 0 && attack_gun_ = 0
 		{
-		global.stemina_cooltime += 2
+		global.stamina_cooltime += 2
 		}
 		else
 		{
-		global.stemina_cooltime = 0
+		global.stamina_cooltime = 0
 		}
 
-		if global.stemina_cooltime > 10
+		if global.stamina_cooltime > 10
 		{
-		global.stemina += 0.15
+		global.stamina += 0.15
 			if (sprite_index = spr_crouch)
 			{
-			global.stemina += 0.15
+			global.stamina += 0.15
 			}
 			
 			if (sprite_index = guard_sprite || sprite_index = jump_sprite)
 			{
-			global.stemina -= 0.08
+			global.stamina -= 0.08
 			}
 		}
 
-		if global.stemina > 10+global.max_stemina_plus
+		if global.stamina > 10+global.max_stamina_plus
 		{
-		global.stemina = 10+global.max_stemina_plus
+		global.stamina = 10+global.max_stamina_plus
 		}
 	}
 	else
 	{
-	global.stemina = 0
+	global.stamina = 0
 	}
 	
 	
@@ -2538,14 +2538,14 @@ w_alpha += (-0.01 - w_alpha)*0.1
 
 if ((attack_ > 2 && attack_ <= 4) || (attack_ > 5 && attack_ <= 7) || (attack_ > 8 && attack_ <= 11) || attack_ > 14) && global.n_sword != 0 && global.n_sword != 5
 {
-	if global.skill_jump_attack > 0 && global.stemina > 2.5 && keyboard_check_pressed(ord(string(global.w_key))) && attack_ >= 12 && global.chat_activity = false
+	if global.skill_jump_attack > 0 && global.stamina > 2.5 && keyboard_check_pressed(ord(string(global.w_key))) && attack_ >= 12 && global.chat_activity = false
 	{
 	red_glow_effect(sprite_index,image_index,0.6)
 	
 	skill_combo_cancle_n_motion(1)
 	}
 	
-	if global.skill_turning_attack > 0 && global.stemina > 3.8 && keyboard_check_pressed(ord(string(global.q_key))) && attack_ >= 12 && global.chat_activity = false
+	if global.skill_turning_attack > 0 && global.stamina > 3.8 && keyboard_check_pressed(ord(string(global.q_key))) && attack_ >= 12 && global.chat_activity = false
 	{
 	red_glow_effect(sprite_index,image_index,0.6)
 	
@@ -2576,7 +2576,7 @@ if ((attack_ > 2 && attack_ <= 4) || (attack_ > 5 && attack_ <= 7) || (attack_ >
 		spin = 1
 		cannot_move = 1
 		cooltime = 1
-		global.stemina_cooltime = 0
+		global.stamina_cooltime = 0
 			repeat(choose(6,7,7,8,8,9,9,9,10,10,11,12))
 			{
 			randomize()
@@ -2598,13 +2598,13 @@ if ((attack_ > 2 && attack_ <= 4) || (attack_ > 5 && attack_ <= 7) || (attack_ >
 
 if down_attack > 13 && global.n_sword != 0 && global.n_sword != 5
 {
-	if global.skill_jump_attack > 0 && global.stemina > 2.5 && keyboard_check_pressed(ord(string(global.w_key))) && global.chat_activity = false
+	if global.skill_jump_attack > 0 && global.stamina > 2.5 && keyboard_check_pressed(ord(string(global.w_key))) && global.chat_activity = false
 	{
 	red_glow_effect(sprite_index,image_index,0.6)
 	skill_combo_cancle_n_motion(1)
 	}
 	
-	if global.skill_turning_attack > 0 && global.stemina > 3.8 && keyboard_check_pressed(ord(string(global.q_key))) && global.chat_activity = false
+	if global.skill_turning_attack > 0 && global.stamina > 3.8 && keyboard_check_pressed(ord(string(global.q_key))) && global.chat_activity = false
 	{
 	red_glow_effect(sprite_index,image_index,0.6)
 	skill_combo_cancle_n_motion(1)
@@ -2634,7 +2634,7 @@ if down_attack > 13 && global.n_sword != 0 && global.n_sword != 5
 		spin = 1
 		cannot_move = 1
 		cooltime = 1
-		global.stemina_cooltime = 0
+		global.stamina_cooltime = 0
 			repeat(choose(6,7,7,8,8,9,9,9,10,10,11,12))
 			{
 			randomize()
@@ -2655,7 +2655,7 @@ if down_attack > 13 && global.n_sword != 0 && global.n_sword != 5
 
 if dash_attack >= 4.6 && global.n_sword != 0 && global.n_sword != 5
 {
-	if global.skill_jump_attack > 0 && global.stemina > 2.5 && keyboard_check_pressed(ord(string(global.w_key))) && global.chat_activity = false
+	if global.skill_jump_attack > 0 && global.stamina > 2.5 && keyboard_check_pressed(ord(string(global.w_key))) && global.chat_activity = false
 	{
 	red_glow_effect(sprite_index,image_index,0.6)
 	skill_combo_cancle_n_motion(1)
@@ -2681,7 +2681,7 @@ if dash_attack >= 4.6 && global.n_sword != 0 && global.n_sword != 5
 		spin = 1
 		cannot_move = 1
 		cooltime = 1
-		global.stemina_cooltime = 0
+		global.stamina_cooltime = 0
 			repeat(choose(6,7,7,8,8,9,9,9,10,10,11,12))
 			{
 			randomize()
@@ -2716,7 +2716,7 @@ if dash_attack >= 4.6 && global.n_sword != 0 && global.n_sword != 5
 				sfx_for_multiplayer(jump_sfx,0,0.6)
 				vspeed = -6-global.jump_plus
 				jump_end_motion = 0
-				global.stemina_cooltime = 0
+				global.stamina_cooltime = 0
 				y -= 3
 				jump = 1
 				dont_check_jump_now = 2
@@ -2800,8 +2800,8 @@ if guarding >= 2.5
 	d_ef.image_yscale = 1.4
 	d_ef.target = -4
 	
-	var cal__st = abs(10-global.stemina)
-	global.stemina += cal__st/1.5
+	var cal__st = abs(10-global.stamina)
+	global.stamina += cal__st/1.5
 	global.rage_gauge += cal__st
 	fast_guarding = 0
 	}
@@ -2819,7 +2819,7 @@ if guarding >= 2.5
 	d_ef.image_xscale = 1.4
 	d_ef.image_yscale = 1.4
 	d_ef.target = -4
-	global.stemina = 0
+	global.stamina = 0
 	super_armor_delay = 1
 	alarm[11] = 10
 	}
@@ -2916,7 +2916,7 @@ if global.never_move = 0 && global.never_move_in_setting = 0 && keyboard_check_p
 		{
 			if (attack_ < 7 && cannot_move = 0 && cooltime = 0 && hurt = 0 && hurt_little = 0) && (gravity <= 0 || attack_in_air_cool = 1)
 			{
-			global.stemina_cooltime = 0
+			global.stamina_cooltime = 0
 			attack_ = 1
 			cooltime = 1
 			cannot_move = 1
@@ -2936,13 +2936,13 @@ if global.never_move = 0 && global.never_move_in_setting = 0 && keyboard_check_p
 	}
 	else
 	{
-		if global.stemina >= 7.7
+		if global.stamina >= 7.7
 		{
 			if gravity = 0 && charge_attack = 0 && cannot_move = 0 && cooltime = 0 && spin = 0 && down_attack_plusing = 0 && hurt = 0 && hurt_little = 0
 			{
 			movement_speed = -image_xscale*13
-			global.stemina -= 6.7
-			global.stemina_cooltime = 0
+			global.stamina -= 6.7
+			global.stamina_cooltime = 0
 			charge_attack = 1
 			cannot_move = 1
 			}
@@ -3052,7 +3052,7 @@ if global.never_move = 0 && global.never_move_in_setting = 0 && keyboard_check_r
 	//cooltime = 1
 	//movement_speed = 0
 
-	//global.stemina_cooltime = 0
+	//global.stamina_cooltime = 0
 	//global.rage_gauge -= 27
 				
 
@@ -3102,7 +3102,7 @@ if global.never_move = 0 && global.never_move_in_setting = 0 && keyboard_check_r
 	//	attack_in_air_cool = 1
 	//	cooltime = 1
 	//	cannot_move = 1
-	//	global.stemina_cooltime = 0
+	//	global.stamina_cooltime = 0
 	//	global.rage_gauge -= 25
 	//	
 	//		if global.awakening >= 1
@@ -3146,7 +3146,7 @@ if global.never_move = 0 && global.never_move_in_setting = 0 && keyboard_check_r
 				jump_end_motion = 0
 				jump_vsp_up = 1
 				cooltime = 1
-				global.stemina_cooltime = 0
+				global.stamina_cooltime = 0
 				global.rage_gauge -= 80
 				
 					if skill_red_ball_effect = -1
@@ -3186,7 +3186,7 @@ if global.never_move = 0 && global.never_move_in_setting = 0 && keyboard_check_r
 				cooltime = 1
 				cannot_move = 1
 				cooltime = 1
-				global.stemina_cooltime = 0
+				global.stamina_cooltime = 0
 				if global.n_sword = 1
 				{
 				global.rage_gauge -= 80
@@ -3237,7 +3237,7 @@ if global.never_move = 0 && global.never_move_in_setting = 0 && keyboard_check_r
 				cooltime = 1
 				cannot_move = 1
 				cooltime = 1
-				global.stemina_cooltime = 0
+				global.stamina_cooltime = 0
 				global.rage_gauge -= 80
 				sfx_for_multiplayer(laser_skill_ready,0,0.15)
 				
@@ -3294,15 +3294,15 @@ if global.never_move = 0 && global.n_sword != 0 && global.n_sword != 5 && global
 {
 	if global.skill_turning_attack > 0 && turning_attack_used < global.skill_turning_attack
 	{
-		if global.stemina > 3.8
+		if global.stamina > 3.8
 		{
 			if spin_attack = 0 && cannot_move = 0 && cooltime = 0 && hurt = 0 && hurt_little = 0
 			{
 			turning_attack_used ++
 			cannot_move = 1
 			cooltime = 1
-			global.stemina_cooltime = 0
-			global.stemina -= 2.8
+			global.stamina_cooltime = 0
+			global.stamina -= 2.8
 				if on_floor = true
 				{
 				spin_attack = 1
@@ -3327,7 +3327,7 @@ if global.never_move = 0 && global.n_sword != 0 && global.n_sword != 5 && global
 
 		if (!place_meeting(x,y+10,floor_parents)) && hurt = 0 && hurt_little = 0
 		{
-			if global.stemina > 3.8
+			if global.stamina > 3.8
 			{
 				if spin_attack = 0 && cannot_move = 1 && cooltime = 0 && jump > 0
 				{
@@ -3338,8 +3338,8 @@ if global.never_move = 0 && global.n_sword != 0 && global.n_sword != 5 && global
 				cooltime = 1
 				gravity = 0
 				vspeed = 0
-				global.stemina_cooltime = 0
-				global.stemina -= 2.8
+				global.stamina_cooltime = 0
+				global.stamina -= 2.8
 				}
 			}
 			else
@@ -3361,7 +3361,7 @@ if global.never_move = 0 && global.n_sword != 0 && global.n_sword != 5 && global
 {
 	if on_floor != true
 	{
-		if global.stemina > 2.8
+		if global.stamina > 2.8
 		{
 			if down_attack = 0 && cannot_move = 0 && cooltime = 0 && spin = 0 && down_attack_plusing = 0 && hurt = 0 && hurt_little = 0 && down_attack_with_rage = 0
 			{
@@ -3370,8 +3370,8 @@ if global.never_move = 0 && global.n_sword != 0 && global.n_sword != 5 && global
 			cannot_move = 1
 			jump_vsp_up = 1
 			cooltime = 1
-			global.stemina_cooltime = 0
-			global.stemina -= 1.8
+			global.stamina_cooltime = 0
+			global.stamina -= 1.8
 			var _ef = instance_create_depth(x,y-32,depth+1,effect_down_attack)
 			_ef.sprite_index = pl_move_skeleton_down_attack1
 			_ef.image_index = global.n_sword
@@ -3388,7 +3388,7 @@ if global.never_move = 0 && global.n_sword != 0 && global.n_sword != 5 && global
 		audio_sound_gain(sfx,0.2*global.master_volume*2*global.sfx_volume,0)
 		}
 	
-		if global.stemina > 2.8
+		if global.stamina > 2.8
 		{
 			if down_attack = 0 && cannot_move = 1 && jump > 0 && cooltime = 0 && spin = 0 && down_attack_plusing = 0 && hurt = 0 && hurt_little = 0
 			{
@@ -3399,8 +3399,8 @@ if global.never_move = 0 && global.n_sword != 0 && global.n_sword != 5 && global
 			jump_end_motion = 0
 			jump_vsp_up = 1
 			cooltime = 1
-			global.stemina_cooltime = 0
-			global.stemina -= 1.8
+			global.stamina_cooltime = 0
+			global.stamina -= 1.8
 			var _ef = instance_create_depth(x,y-6,depth+1,effect_down_attack)
 			_ef.sprite_index = pl_move_skeleton_down_attack1
 			_ef.image_index = global.n_sword
@@ -3419,11 +3419,11 @@ if global.never_move = 0 && global.n_sword != 0 && global.n_sword != 5 && global
 	}
 	else
 	{
-		if global.n_sword != 0 && global.n_sword != 5 && abs(global.movement_speed) > 0 && global.stemina >= 10
+		if global.n_sword != 0 && global.n_sword != 5 && abs(global.movement_speed) > 0 && global.stamina >= 10
 		{
 			if gravity = 0 && dash_attack = 0 && cannot_move = 0 && cooltime = 0 && spin = 0 && down_attack_plusing = 0 && hurt = 0 && hurt_little = 0
 			{
-			global.stemina = 0
+			global.stamina = 0
 			dash_attack = 1
 			cannot_move = 1
 			}
@@ -3451,7 +3451,7 @@ if global.never_move = 0 && global.n_sword != 0 && global.n_sword != 5 && global
 {
 	if global.skill_jump_attack > 0 && jump_attack_used < global.skill_jump_attack
 	{
-		if global.stemina > 2.5
+		if global.stamina > 2.5
 		{
 			if jump_attack = 0 && cannot_move = 0 && cooltime = 0 && hurt = 0 && hurt_little = 0
 			{
@@ -3464,8 +3464,8 @@ if global.never_move = 0 && global.n_sword != 0 && global.n_sword != 5 && global
 			cooltime = 1
 			vspeed = 0
 			gravity = 0
-			global.stemina -= 2.5
-			global.stemina_cooltime = 0
+			global.stamina -= 2.5
+			global.stamina_cooltime = 0
 			}
 		}
 		else
@@ -3476,7 +3476,7 @@ if global.never_move = 0 && global.n_sword != 0 && global.n_sword != 5 && global
 
 		if !place_meeting(x,y+10,floor_parents)
 		{
-			if global.stemina > 3
+			if global.stamina > 3
 			{
 				if jump_attack = 0 && cannot_move = 1 && cooltime = 0 && jump > 0 && hurt = 0 && hurt_little = 0
 				{
@@ -3497,8 +3497,8 @@ if global.never_move = 0 && global.n_sword != 0 && global.n_sword != 5 && global
 				cannot_move = 1
 				jump_vsp_up = 1
 				cooltime = 1
-				global.stemina -= 2
-				global.stemina_cooltime = 0
+				global.stamina -= 2
+				global.stamina_cooltime = 0
 				}
 			}
 			else
@@ -3536,8 +3536,8 @@ red_glow_effect(sprite_index,image_index,0.2)
 	if dont_shine = 0
 	{
 	global.rage_gauge = 100*(global.awakening-1)
-	global.stemina += 0.15
-	global.stemina_cooltime = 0
+	global.stamina += 0.15
+	global.stamina_cooltime = 0
 	}
 
 	if global.awakening = 1 && global.stop_awakening = 0
@@ -3665,7 +3665,7 @@ if (on_floor != true) && hurt = 0 && hurt_little = 0
 
 if attack_gun_ > 0
 {
-global.stemina -= 0.01
+global.stamina -= 0.01
 attack_gun_ ++
 cannot_move = 1
 	if attack_gun_ = 2
@@ -3738,7 +3738,7 @@ sting_attack += 0.3
 	spin = 1
 	cannot_move = 1
 	cooltime = 1
-	global.stemina_cooltime = 0
+	global.stamina_cooltime = 0
 	global.movement_speed = 0
 	movement_speed *= 0.35
 	
@@ -5033,7 +5033,7 @@ cooltime = 1
 
 	if attack_sfx_on = 0 && (floor(image_index) = 2)
 	{
-	global.stemina_cooltime = 0
+	global.stamina_cooltime = 0
 	sfx_for_multiplayer(swing_sfx1,0,0.4)
 
 	sfx_for_multiplayer(swing_lightsaber_sfx1,0,0.1)
@@ -5052,7 +5052,7 @@ cooltime = 1
 
 	if attack_sfx_on = 0 && (floor(image_index) = 5) // 6
 	{
-	global.stemina_cooltime = 0
+	global.stamina_cooltime = 0
 	sfx_for_multiplayer(swing_sfx2,0,0.4)
 	sfx_for_multiplayer(swing_lightsaber_sfx2,0,0.1)
 
@@ -5071,7 +5071,7 @@ cooltime = 1
 
 	if attack_sfx_on = 0 && (floor(image_index) = 8) // 11
 	{
-	global.stemina_cooltime = 0
+	global.stamina_cooltime = 0
 	sfx_for_multiplayer(swing_sfx3,0,0.4)
 	sfx_for_multiplayer(swing_lightsaber_sfx3,0,0.1)
 
@@ -5091,7 +5091,7 @@ cooltime = 1
 
 	if attack_sfx_on = 0 && (floor(image_index) = 14)//new
 	{
-	global.stemina_cooltime = 0
+	global.stamina_cooltime = 0
 	sfx_for_multiplayer(swing_sfx3,0,0.4)
 	sfx_for_multiplayer(swing_lightsaber_sfx3,0,0.1)
 
@@ -5414,10 +5414,10 @@ image_index = dash_attack
 			else
 			{
 			run_time ++
-			global.stemina_cooltime = 0
+			global.stamina_cooltime = 0
 				if run_time > 100
 				{
-				global.stemina -= 0.02
+				global.stamina -= 0.02
 				}
 				
 				if gravity <= 0

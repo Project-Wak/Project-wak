@@ -46,7 +46,7 @@ if w_alpha > 0.05 && guarding > 0
 		spin = 1
 		cannot_move = 1
 		cooltime = 1
-		global.stemina_cooltime = 0
+		global.stamina_cooltime = 0
 			repeat(choose(6,7,7,8,8,9,9,9,10,10,11,12))
 			{
 			randomize()
@@ -91,7 +91,7 @@ if w_alpha > 0.05 && guarding > 0
 
 if (attack_ > 4 && attack_ <= 5) || (attack_ > 6.5 && attack_ <= 9) || (attack_ >= 12)
 {
-	if global.skill_jump_attack > 0 && global.stemina > 2.5 && keyboard_check_pressed(ord(string(global.w_key))) && attack_ >= 12
+	if global.skill_jump_attack > 0 && global.stamina > 2.5 && keyboard_check_pressed(ord(string(global.w_key))) && attack_ >= 12
 	{
 		repeat(3)
 		{
@@ -127,7 +127,7 @@ if (attack_ > 4 && attack_ <= 5) || (attack_ > 6.5 && attack_ <= 9) || (attack_ 
 	skill_combo_cancle_n_motion(1)
 	}
 	
-	if global.skill_turning_attack > 0 && global.stemina > 3.8 && keyboard_check_pressed(ord(string(global.q_key))) && attack_ >= 12
+	if global.skill_turning_attack > 0 && global.stamina > 3.8 && keyboard_check_pressed(ord(string(global.q_key))) && attack_ >= 12
 	{
 		repeat(3)
 		{
@@ -216,7 +216,7 @@ if (attack_ > 4 && attack_ <= 5) || (attack_ > 6.5 && attack_ <= 9) || (attack_ 
 		spin = 1
 		cannot_move = 1
 		cooltime = 1
-		global.stemina_cooltime = 0
+		global.stamina_cooltime = 0
 			repeat(choose(6,7,7,8,8,9,9,9,10,10,11,12))
 			{
 			randomize()
@@ -274,7 +274,7 @@ if (attack_ > 4 && attack_ <= 5) || (attack_ > 6.5 && attack_ <= 9) || (attack_ 
 
 if down_attack > 13
 {
-	if global.skill_jump_attack > 0 && global.stemina > 2.5 && keyboard_check_pressed(ord(string(global.w_key)))
+	if global.skill_jump_attack > 0 && global.stamina > 2.5 && keyboard_check_pressed(ord(string(global.w_key)))
 	{
 		repeat(3)
 		{
@@ -298,7 +298,7 @@ if down_attack > 13
 	skill_combo_cancle_n_motion(1)
 	}
 	
-	if global.skill_turning_attack > 0 && global.stemina > 3.8 && keyboard_check_pressed(ord(string(global.q_key)))
+	if global.skill_turning_attack > 0 && global.stamina > 3.8 && keyboard_check_pressed(ord(string(global.q_key)))
 	{
 		repeat(3)
 		{
@@ -364,7 +364,7 @@ if down_attack > 13
 		spin = 1
 		cannot_move = 1
 		cooltime = 1
-		global.stemina_cooltime = 0
+		global.stamina_cooltime = 0
 			repeat(choose(6,7,7,8,8,9,9,9,10,10,11,12))
 			{
 			randomize()
@@ -410,7 +410,7 @@ if down_attack > 13
 
 if dash_attack >= 4.6
 {
-	if global.skill_jump_attack > 0 && global.stemina > 2.5 && keyboard_check_pressed(ord(string(global.w_key)))
+	if global.skill_jump_attack > 0 && global.stamina > 2.5 && keyboard_check_pressed(ord(string(global.w_key)))
 	{
 		repeat(3)
 		{
@@ -484,7 +484,7 @@ if dash_attack >= 4.6
 		spin = 1
 		cannot_move = 1
 		cooltime = 1
-		global.stemina_cooltime = 0
+		global.stamina_cooltime = 0
 			repeat(choose(6,7,7,8,8,9,9,9,10,10,11,12))
 			{
 			randomize()
@@ -577,7 +577,7 @@ if dash_attack >= 4.6
 	
 				vspeed = -6
 				jump_end_motion = 0
-				global.stemina_cooltime = 0
+				global.stamina_cooltime = 0
 				y -= 1.2
 				jump = 1
 	
@@ -648,7 +648,7 @@ else
 
 if guarding > 0
 {
-global.stemina_cooltime = 0
+global.stamina_cooltime = 0
 movement_speed += (0 - movement_speed)*0.1
 double_pressed_run_key = 0
 double_pressed_run_key = 0
@@ -793,7 +793,7 @@ if global.grabed > 0 || hurt > 0 || skill_combo >= 1
 		if fast_guarding > 0
 		{
 		w_alpha = 1
-		global.stemina_cooltime = 999
+		global.stamina_cooltime = 999
 		image_index = 0
 		attack_in_air = 2.92
 		attack_in_air_cool = 1
@@ -817,7 +817,7 @@ if global.got_wakchori > 0
 {
 	if (attack_ < 7 && cannot_move = 0 && cooltime = 0 && hurt = 0 && hurt_little = 0) && (gravity <= 0 || attack_in_air_cool = 1)
 	{
-	global.stemina_cooltime = 0
+	global.stamina_cooltime = 0
 	attack_ = 1
 	cooltime = 1
 	cannot_move = 1
@@ -952,7 +952,7 @@ if global.never_move = 0 && global.never_move_in_setting = 0 && keyboard_check_r
 				{
 				movement_speed = -image_xscale*8
 				}
-				global.stemina_cooltime = 0
+				global.stamina_cooltime = 0
 				global.rage_gauge -= 27
 				
 
@@ -1010,7 +1010,7 @@ if global.never_move = 0 && global.never_move_in_setting = 0 && keyboard_check_r
 				jump_end_motion = 0
 				jump_vsp_up = 1
 				cooltime = 1
-				global.stemina_cooltime = 0
+				global.stamina_cooltime = 0
 				global.rage_gauge -= 80
 				
 				if skill_red_ball_effect = -1
@@ -1074,7 +1074,7 @@ if global.skill_turning_attack > 0 && turning_attack_used < global.skill_turning
 {
 if global.got_wakchori > 0
 {
-	if global.stemina > 3.8
+	if global.stamina > 3.8
 	{
 		if spin_attack = 0 && cannot_move = 0 && cooltime = 0 && hurt = 0 && hurt_little = 0
 		{
@@ -1084,8 +1084,8 @@ if global.got_wakchori > 0
 		jump_end_motion = 0
 		jump_vsp_up = 1
 		cooltime = 1
-		global.stemina_cooltime = 0
-		global.stemina -= 2.8
+		global.stamina_cooltime = 0
+		global.stamina -= 2.8
 			if place_meeting(x,y+2,floor_parents)
 			{
 			spin_attack = 1
@@ -1113,7 +1113,7 @@ if global.got_wakchori > 0
 
 	if !place_meeting(x,y+10,floor_parents) && hurt = 0 && hurt_little = 0
 	{
-		if global.stemina > 3.8
+		if global.stamina > 3.8
 		{
 			if spin_attack = 0 && cannot_move = 1 && cooltime = 0 && jump > 0
 			{
@@ -1126,8 +1126,8 @@ if global.got_wakchori > 0
 			cooltime = 1
 			gravity = 0
 			vspeed = 0
-			global.stemina_cooltime = 0
-			global.stemina -= 2.8
+			global.stamina_cooltime = 0
+			global.stamina -= 2.8
 			}
 		}
 		else
@@ -1157,7 +1157,7 @@ if !place_meeting(x,y+2,floor_parents)
 	{
 	if global.got_wakchori > 0
 	{
-		if global.stemina > 2.8
+		if global.stamina > 2.8
 		{
 			if down_attack = 0 && cannot_move = 0 && cooltime = 0 && spin = 0 && down_attack_plusing = 0 && hurt = 0 && hurt_little = 0
 			{
@@ -1168,8 +1168,8 @@ if !place_meeting(x,y+2,floor_parents)
 			jump_end_motion = 0
 			jump_vsp_up = 1
 			cooltime = 1
-			global.stemina_cooltime = 0
-			global.stemina -= 1.8
+			global.stamina_cooltime = 0
+			global.stamina -= 1.8
 			var _ef = instance_create_depth(x,y-32,depth+1,effect_down_attack)
 			_ef.sprite_index = pl_move_skeleton_down_attack1
 			_ef.image_index = 1
@@ -1190,7 +1190,7 @@ if !place_meeting(x,y+2,floor_parents)
 		}
 	
 	
-		if global.stemina > 2.8
+		if global.stamina > 2.8
 		{
 			if down_attack = 0 && cannot_move = 1 && jump > 0 && cooltime = 0 && spin = 0 && down_attack_plusing = 0 && hurt = 0 && hurt_little = 0
 			{
@@ -1201,8 +1201,8 @@ if !place_meeting(x,y+2,floor_parents)
 			jump_end_motion = 0
 			jump_vsp_up = 1
 			cooltime = 1
-			global.stemina_cooltime = 0
-			global.stemina -= 1.8
+			global.stamina_cooltime = 0
+			global.stamina -= 1.8
 			var _ef = instance_create_depth(x,y-6,depth+1,effect_down_attack)
 			_ef.sprite_index = pl_move_skeleton_down_attack1
 			_ef.image_index = 1
@@ -1265,7 +1265,7 @@ if global.skill_jump_attack > 0 && jump_attack_used < global.skill_jump_attack
 {
 if global.got_wakchori > 0
 {
-	if global.stemina > 2.5
+	if global.stamina > 2.5
 	{
 		if jump_attack = 0 && cannot_move = 0 && cooltime = 0 && hurt = 0 && hurt_little = 0
 		{
@@ -1286,8 +1286,8 @@ if global.got_wakchori > 0
 		cooltime = 1
 		vspeed = 0
 		gravity = 0
-		global.stemina -= 1.5
-		global.stemina_cooltime = 0
+		global.stamina -= 1.5
+		global.stamina_cooltime = 0
 		}
 	}
 	else
@@ -1301,7 +1301,7 @@ if global.got_wakchori > 0
 
 if !place_meeting(x,y+10,floor_parents)
 {
-	if global.stemina > 3
+	if global.stamina > 3
 	{
 		if jump_attack = 0 && cannot_move = 1 && cooltime = 0 && jump > 0 && hurt = 0 && hurt_little = 0
 		{
@@ -1322,8 +1322,8 @@ if !place_meeting(x,y+10,floor_parents)
 		cannot_move = 1
 		jump_vsp_up = 1
 		cooltime = 1
-		global.stemina -= 2
-		global.stemina_cooltime = 0
+		global.stamina -= 2
+		global.stamina_cooltime = 0
 		}
 	}
 	else
@@ -1361,7 +1361,7 @@ if !place_meeting(x,y+10,floor_parents)
 
 
 
-if global.stemina <= 1 || global.nickname = "씹찐따"
+if global.stamina <= 1 || global.nickname = "씹찐따"
 {
 double_pressed_run_key = 0
 double_pressed_run_key = 0
@@ -1410,8 +1410,8 @@ ef.image_angle = image_angle;
 	if dont_shine = 0
 	{
 	global.rage_gauge = 100*(global.awakening-1)
-	global.stemina += 0.1
-	global.stemina_cooltime = 0
+	global.stamina += 0.1
+	global.stamina_cooltime = 0
 	}
 
 	if global.awakening = 1 && global.stop_awakening = 0

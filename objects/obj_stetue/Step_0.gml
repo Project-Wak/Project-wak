@@ -171,6 +171,7 @@ global.playing_scene = 1
 	global.playing_scene = 0
 	interecting_now = 0
 	instance_destroy()
+	instance_destroy(check__)
 	}
 }
 

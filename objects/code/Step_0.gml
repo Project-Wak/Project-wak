@@ -223,9 +223,9 @@ if global.free_hp = 1
 global.hp = 1000
 }
 
-if global.free_stemina = 1
+if global.free_stamina = 1
 {
-global.stemina = 11
+global.stamina = 11
 }
 
 
@@ -432,9 +432,9 @@ global.matched_pl1_ready = 0
 global.matched_pl2_ready = 0
 }
 
-if global.stemina < 0
+if global.stamina < 0
 {
-global.stemina = 0
+global.stamina = 0
 }
 
 light_scaling_time++

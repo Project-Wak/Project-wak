@@ -3,6 +3,6 @@
 //command_buffer = buffer_create(3, buffer_grow, 1);
 image_speed = 0
 
-global.stemina -= 0.1
+global.stamina -= 0.1
 
 alarm[1] = 1

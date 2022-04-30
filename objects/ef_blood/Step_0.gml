@@ -1,5 +1,12 @@
 /// @description Insert description here
 // You can write your code in this editor
+
+if !variable_instance_exists(id,"sfx_play")
+{
+sfx_play = -4
+}
+
+
 image_alpha -= 0.05
 
 if image_alpha <= 0

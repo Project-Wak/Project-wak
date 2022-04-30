@@ -35,7 +35,7 @@ movement_speed += (0 - movement_speed)*0.1
 
 global.gold += 1600
 
-	if room = room_sector_B02_2
+	if room = room_sector_B03_2
 	{
 	give_item(2,4)
 	}

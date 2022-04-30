@@ -1,3 +1,4 @@
+
 //window()
 
 
@@ -38,7 +39,7 @@ global.back_stage_guide = 0
 global.gold_for_draw = 0
 global.dreamy_alpha = 0
 global.back_to_origin_stage = 0
-global.free_stemina = 0
+global.free_stamina = 0
 global.night_vision = 0
 global.gold_draw_alpha = 0
 global.super_easy = 1
@@ -171,7 +172,7 @@ global.draw_partici = 0
 
 global.never_move = 0
 global.awakening = 0
-global.stemina_cooltime = 0
+global.stamina_cooltime = 0
 global.rage_w_alpha = 0
 r_w_alpha_time = 0
 global.voice_option = 0
@@ -201,10 +202,10 @@ global.skill_turning_attack = 2
 global.skill_jump_attack = 2
 global.stop_awakening = 0
 global.movement_speed = 0
-global.cannot_use_stemina = 0
+global.cannot_use_stamina = 0
 global.hp = 1000
 global.p_floor = 903
-global.stemina = 0
+global.stamina = 0
 global.tutorial = 0
 
 global.hit_sfx_1 = hit_sfx1
@@ -384,7 +385,7 @@ global.item_name_owned[15] = "Sector-B11 키카드"
 global.item_name_owned[16] = "Sector-B12 키카드"
 
 
-global.max_stemina_plus = 0 //최대 스테미나 증가 +10%
+global.max_stamina_plus = 0 //최대 스테미나 증가 +10%
 
 global.jump_plus = 0 //점프력 증가 +15%
 global.low_gravity_plus = 1 //중력 감소 -10%

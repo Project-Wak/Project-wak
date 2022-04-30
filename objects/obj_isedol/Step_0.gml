@@ -585,8 +585,8 @@ global.playing_scene = 1
 							{
 							image_xscale = sign_k(x - player.x)
 							check__ = instance_create_depth(x,y,depth-1,player_message)
-							check__.text = "!"
-							check__.target = player.id
+							check__.text = string(global.nickname)+"! 한가지 알려 드릴게 있어요!"
+							check__.target = id
 							check__.parents = id
 							}
 			

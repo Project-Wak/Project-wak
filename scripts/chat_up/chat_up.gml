@@ -63,10 +63,10 @@ audio_sound_gain(sfx,0.07*global.master_volume*2*global.sfx_volume,0)
 		global.free_hp *= -1
 		chat_up("debug) global.free_hp = "+string(global.free_hp))
 		}
-		else if (argument0 = "/free_ste" || argument0 = "/free_stemina")
+		else if (argument0 = "/free_ste" || argument0 = "/free_stamina")
 		{
-		global.free_stemina *= -1
-		chat_up("debug) global.free_stemina = "+string(global.free_stemina))
+		global.free_stamina *= -1
+		chat_up("debug) global.free_stamina = "+string(global.free_stamina))
 		}
 		else if (argument0 = "/room_main" || argument0 = "/rm")
 		{

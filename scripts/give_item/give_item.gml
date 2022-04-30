@@ -80,6 +80,7 @@ function give_item(argument0,argument1)
 		if _cal__ = 1
 		{
 		chat_up("'양손 광선검'을 획득하였다!")
+		global.n_sword = 1
 		}
 	
 		if _cal__ = 2

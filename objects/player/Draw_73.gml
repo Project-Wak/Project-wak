@@ -81,11 +81,11 @@ if image_alpha > 0 && global.hp > 0 && global.playing_scene <= 0 && global.t_b_a
 	
 		if hp_bar_alpha > 0 && global.slow_motion = 0 && global.show_challenger = 0
 		{
-		draw_stemina += (global.stemina-global.max_stemina_plus - draw_stemina)*0.1
+		draw_stamina += (global.stamina-global.max_stamina_plus - draw_stamina)*0.1
 		draw_sprite_ext(sprite20,0,xx+66*v_x,yy+64*v_x,5.1*v_x,v_x*1.55,0,c_white,hp_bar_alpha)
-			if global.stemina/(10+global.max_stemina_plus) > 0
+			if global.stamina/(10+global.max_stamina_plus) > 0
 			{
-			draw_sprite_ext(sprite20,4,xx+69*v_x,yy+64*v_x,(draw_stemina/10)*5.5*v_x,v_x*1.5,0,c_white,hp_bar_alpha)
+			draw_sprite_ext(sprite20,4,xx+69*v_x,yy+64*v_x,(draw_stamina/10)*5.5*v_x,v_x*1.5,0,c_white,hp_bar_alpha)
 			}
 		}
 	

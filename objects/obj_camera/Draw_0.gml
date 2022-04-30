@@ -135,7 +135,7 @@ if room != menu && global.playing_scene = 0 && global.never_move_in_setting = 0 
 	if global.slow_motion = 0 && global.show_challenger = 0 && global.select_dev_setting = 0
 	{
 	var hp__ = "HP"
-	var ste__ = "Stemina"
+	var ste__ = "Stamina"
 	var rage__ = "Rage"
 		if global.korean_text = 1
 		{
