@@ -11,6 +11,8 @@ _effect_line[i] = -1
 
 
 scale_plus = 0
+view_shake(1,2,3)
+global.player_blur = choose(-1,1)*(irandom_range(20,30)/5)
 alarm[1] = 40
 alarm[2] = 80
 alarm[3] = 15

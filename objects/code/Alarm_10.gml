@@ -13,6 +13,7 @@ if global.key_setting_message = 0
 	instance_create_depth(x,y,-9999,sfx_volume_setting)
 	instance_create_depth(x,y,-9999,full_screen_option)
 	instance_create_depth(x,y,-9999,change_a_key_to_other)
+	instance_create_depth(x,y,-9999,console_mode)
 	instance_create_depth(x,y,-9999,change_w_key_to_other)
 	instance_create_depth(x,y,-9999,change_s_key_to_other)
 	instance_create_depth(x,y,-9999,change_q_key_to_other)

@@ -1,5 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
+
+
 for(var i = 0; i <= 32; i ++)
 {
 	if _effect_line[i] = -1

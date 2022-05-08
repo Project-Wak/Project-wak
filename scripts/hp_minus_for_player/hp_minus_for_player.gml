@@ -4,19 +4,24 @@ bloody(x,y,1)
 var img_bnd = c_white
 var argu_0 = argument0
 var random_plus_damage = global.n_night*15
+var using_special_skill = sign(player.attack_laser+player.attack_laser_sec)
 
 player.assult_mode = 600
-
+	var dmg_min = 1
+	if using_special_skill = 1
+	{
+	dmg_min = 0
+	}
 
 	
 	var calcul_damage = ((((argu_0+random_plus_damage)/(global.max_armor_plus))*global.difficulty)/global.super_easy)
 
 	var d_ef = instance_create_depth(player.x,player.y,depth-1,draw_hp_m)
-	d_ef.d_text = round(calcul_damage)
+	d_ef.d_text = round(calcul_damage)*dmg_min
 	d_ef.target = id
 
 	
-	if calcul_damage <= argu_0
+	if calcul_damage*dmg_min <= argu_0
 	{
 	img_bnd = $FF2019FF
 	d_ef.image_blend = img_bnd
@@ -54,9 +59,9 @@ player.assult_mode = 600
 	}
 
 
-	if global.hp > 0 && (calcul_damage) > 0
+	if global.hp > 0 && (calcul_damage*dmg_min) > 0
 	{
-	global.rage_gauge += 5
+	global.rage_gauge += 5*dmg_min
 
 
 
@@ -66,7 +71,7 @@ player.assult_mode = 600
 		code.before_hp = global.hp
 		}
 
-		if calcul_damage <= argu_0
+		if calcul_damage*dmg_min <= argu_0
 		{
 		img_bnd = $FF1E9DFF
 		d_ef.image_blend = img_bnd
@@ -94,17 +99,9 @@ player.assult_mode = 600
 	//}
 
 	
-	if global.playing_scene = 0 && instance_exists(normal_mob)
+	if global.playing_scene = 0
 	{
-	global.hp -= (calcul_damage)
-		if instance_exists(obj_last_boss)
-		{
-		obj_last_boss.hp += calcul_damage/10
-		}
-	}
-	else
-	{
-	global.hp -= (calcul_damage)
+	global.hp -= (calcul_damage)*dmg_min
 		if instance_exists(obj_last_boss)
 		{
 		obj_last_boss.hp += calcul_damage/10

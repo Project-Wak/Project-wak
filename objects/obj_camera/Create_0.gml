@@ -22,6 +22,7 @@ portensial_y = 0
 guide_sfx = 0
 draw_rage_gagement = 0
 spining_speed = 3
+o2_alpha = 0
 
 instance_create_depth(x,y,depth,obj_potential_camera)
 

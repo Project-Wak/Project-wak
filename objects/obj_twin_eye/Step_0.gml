@@ -161,8 +161,11 @@ else
 	{
 		if global.show_credits = 0
 		{
-		obj_camera.tv_x = 1280*0.9
-		obj_camera.tv_y = 720*0.9
+			if player.attack_laser_sec = 0 && player.attack_laser = 0 && player.suicide = 0
+			{
+			obj_camera.tv_x = 1280*0.9
+			obj_camera.tv_y = 720*0.9
+			}
 		obj_camera.t_x = xstart
 		obj_camera.t_y = y+180
 		}
@@ -196,8 +199,11 @@ else
 			{
 			global.boss_target = id
 			global.boss_name = "객관안과 스킵안"
-			obj_camera.tv_x = 1280
-			obj_camera.tv_y = 720
+				if player.attack_laser_sec = 0 && player.attack_laser = 0 && player.suicide = 0
+				{
+				obj_camera.tv_x = 1280
+				obj_camera.tv_y = 720
+				}
 			obj_camera.t_x = xstart
 			obj_camera.t_y = player.y
 			}
@@ -227,6 +233,9 @@ else
 		wall2 = instance_create_depth(xstart+650,ystart-1200,player.depth+3,obj_floor_tile3)
 		wall2.image_yscale = 32
 		wall2.image_xscale = -1
+		
+		wall3 = instance_create_depth(6048,2304,player.depth+3,obj_floor_tile1)
+		wall3.image_xscale = 3.25
 		instance_destroy(normal_mob)
 		}
 		
@@ -305,12 +314,24 @@ else
 		left_eye.cannot_step = 0
 		cannot_step = 0
 	
-		if global.hp > 0
-		{
-		timer ++
-		}
+			if global.hp > 0
+			{
+			timer ++
+			}
+		
+			var cal_ = (hp/max_hp)*1.2
 	
-			if timer > 200
+			if cal_ < 0.5
+			{
+			cal_ = 0.5
+			}
+	
+			if cal_ > 1
+			{
+			cal_ = 1
+			}
+	
+			if timer > 200*cal_
 			{
 			patturn = choose(1,1,1,2,2,2,3,3,4,4)
 			timer = 0
@@ -719,19 +740,25 @@ else
 				bullet__ ++
 					if bullet__%6 = 0
 					{
+					var scale_ = 40
 						if global.show_credits = 0
 						{
 						var sfx = audio_play_sound(gun_sfx_single,0,0)
 						audio_sound_gain(sfx,0.22*global.master_volume*2*global.sfx_volume,0)
 						}
+						
+						if abs(global.movement_speed) < 6
+						{
+						scale_ = 80
+						}
 			
 					var _bullet__ = instance_create_depth(left_eye.x,left_eye.y,depth+1,obj_bullet)
 					_bullet__.bullet_speed = 13;
-					_bullet__.direction = point_direction(left_eye.x,left_eye.y,player.x+sign(global.movement_speed)*40,player.y)
+					_bullet__.direction = point_direction(left_eye.x,left_eye.y,player.x+sign(global.movement_speed)*scale_,player.y)
 			
 					var _bullet__ = instance_create_depth(x,y,depth+1,obj_bullet)
 					_bullet__.bullet_speed = 13;
-					_bullet__.direction = point_direction(x,y,player.x+sign(global.movement_speed)*40,player.y)
+					_bullet__.direction = point_direction(x,y,player.x+sign(global.movement_speed)*scale_,player.y)
 					}
 				}
 				

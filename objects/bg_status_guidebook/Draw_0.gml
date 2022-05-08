@@ -23,7 +23,7 @@ if (pressed > 0 && global.key_setting_message > 0) || global.key_setting_message
 	
 	draw_sprite_ext(sprite_index,image_index,xx,yy,_c_x*0.8,_c_x*0.8,0,c_white,1)
 	
-	//악세사리 이미지
+	//탈리스만 이미지
 
 	var cal__img = 0
 		if pressed > 0

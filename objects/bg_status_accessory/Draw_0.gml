@@ -21,7 +21,7 @@ if (pressed > 0 && global.key_setting_message > 0) || global.key_setting_message
 		
 	draw_sprite_ext(sprite_index,image_index,xx,yy,_c_x*0.8,_c_x*0.8,0,c_white,1)
 	
-	//악세사리 이미지
+	//탈리스만 이미지
 	if global.accessories_equip[accesssory_num] != -1
 	{
 	var cal__img = global.accessories_equip[accesssory_num]
@@ -34,7 +34,7 @@ if (pressed > 0 && global.key_setting_message > 0) || global.key_setting_message
 	
 	
 	var item_name__ = "장착 안함"
-	var item_desc__ = "악세사리를 장착하지 않음"
+	var item_desc__ = "탈리스만를 장착하지 않음"
 	if cal__img = 2
 	{
 	item_name__ =  "Re:wind 시계"
@@ -125,7 +125,7 @@ if (pressed > 0 && global.key_setting_message > 0) || global.key_setting_message
 	draw_text_kl_scale(xx+50*_c_x-global.key_setting_message*_c_x*70,yy+global.key_setting_message*_c_x*80,item_desc__,54*_c_x,2300*_c_x,0.4,image_blend,0,-1,font0,1/4*_c_x,1/4*_c_x,image_angle)
 	if accesssory_num = 0
 	{
-	draw_text_kl_scale(xx-24*_c_x,yy-70*_c_x,"장비 중인 악세사리",16,999,0.8,image_blend,0,-1,font0,1/3*_c_x,1/3*_c_x,image_angle)
+	draw_text_kl_scale(xx-24*_c_x,yy-70*_c_x,"장비 중인 탈리스만",16,999,0.8,image_blend,0,-1,font0,1/3*_c_x,1/3*_c_x,image_angle)
 	}
 	
 	if global.key_setting_message = 1 && pressed > 0

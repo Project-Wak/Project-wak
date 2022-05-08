@@ -32,7 +32,7 @@ var check_esc = keyboard_check_pressed(vk_escape)
 
 	if !check_esc
 	{
-		if keyboard_check_pressed(vk_left)
+		if keyboard_check_pressed(global.left_key)
 		{
 		var sfx = audio_play_sound(message_sfx,0,0)
 		audio_sound_gain(sfx,0.1*global.master_volume*2*global.sfx_volume,0)
@@ -40,7 +40,7 @@ var check_esc = keyboard_check_pressed(vk_escape)
 		event_user(0)
 		}
 		
-		if keyboard_check_pressed(vk_right)
+		if keyboard_check_pressed(global.right_key)
 		{
 		var sfx = audio_play_sound(message_sfx,0,0)
 		audio_sound_gain(sfx,0.1*global.master_volume*2*global.sfx_volume,0)

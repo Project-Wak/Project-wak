@@ -25,16 +25,12 @@ if global.accessories_owned[2] = 1 && first_tuto = 1 && global.accessories_equip
 	player.x -= 1
 	global.movement_speed = 12
 	
-	global.show_guide_mes = "Tab키를 눌러 방금 받은 악세사리를 착용해보자"
+	global.show_guide_mes = "Tab키를 눌러 방금 받은 탈리스만를 착용해보자"
 	global.show_guide_mes_spr = 6
 	}
 }
 
-if global.real_ending = 0 && instance_exists(obj_wakdroid_ending)
-{
-wall_1 = instance_create_depth(1565,160,depth,obj_floor_tile3)
-wall_1.image_yscale = 4.75
-}
+
 
 if global.real_ending != 0
 {
@@ -278,7 +274,7 @@ global.playing_scene = 1
 							if !instance_exists(check__) && message_phase = 3
 							{
 							check__ = instance_create_depth(x,y,depth-1,player_message)
-							check__.text = "(악세사리을 건네받았다!)"
+							check__.text = "(탈리스만을 건네받았다!)"
 							check__.target = player.id
 							check__.parents = id
 							}
@@ -333,7 +329,7 @@ global.playing_scene = 1
 								if !instance_exists(check__) && message_phase = 3
 								{
 								check__ = instance_create_depth(x,y,depth-1,player_message)
-								check__.text = "(악세사리을 건네받았다!)"
+								check__.text = "(탈리스만을 건네받았다!)"
 								check__.target = player.id
 								check__.parents = id
 								}
@@ -409,7 +405,7 @@ global.playing_scene = 1
 							if !instance_exists(check__) && message_phase = 2
 							{
 							check__ = instance_create_depth(x,y,depth-1,player_message)
-							check__.text = "(악세사리을 건네받았다!)"
+							check__.text = "(탈리스만을 건네받았다!)"
 							check__.target = player.id
 							check__.parents = id
 							}
@@ -483,7 +479,7 @@ global.playing_scene = 1
 							if !instance_exists(check__) && message_phase = 2
 							{
 							check__ = instance_create_depth(x,y,depth-1,player_message)
-							check__.text = "(악세사리을 건네받았다!)"
+							check__.text = "(탈리스만을 건네받았다!)"
 							check__.target = player.id
 							check__.parents = id
 							}
@@ -510,21 +506,30 @@ global.playing_scene = 1
 							{
 							image_xscale = sign_k(x - player.x)
 							check__ = instance_create_depth(x,y,depth-1,player_message)
-							check__.text = "!"
-							check__.target = player.id
+							check__.text = string(global.nickname)+"님! 팁하나 드릴게요!"
+							check__.target = id
 							check__.parents = id
 							}
 			
 							if !instance_exists(check__) && message_phase = 1
 							{
 							check__ = instance_create_depth(x,y,depth-1,player_message)
-							check__.text = "(고세구다)"
-							check__.target = player.id
+							check__.text = "차지 공격 도중 공격을 받게되면"
+							check__.target = id
+							check__.parents = id
+							can_interect = 0
+							}
+							
+							if !instance_exists(check__) && message_phase = 2
+							{
+							check__ = instance_create_depth(x,y,depth-1,player_message)
+							check__.text = "'슈퍼 아머'상태가 되서 스테미나가 없어도 가드 판정이 나요!"
+							check__.target = id
 							check__.parents = id
 							can_interect = 0
 							}
 			
-							if !instance_exists(check__) && message_phase = 2
+							if !instance_exists(check__) && message_phase = 3
 							{
 							message_phase = 0
 							alarm[1] = 1
@@ -566,7 +571,7 @@ global.playing_scene = 1
 							if !instance_exists(check__) && message_phase = 3
 							{
 							check__ = instance_create_depth(x,y,depth-1,player_message)
-							check__.text = "(악세사리을 건네받았다!)"
+							check__.text = "(탈리스만을 건네받았다!)"
 							check__.target = player.id
 							check__.parents = id
 							}
@@ -593,8 +598,8 @@ global.playing_scene = 1
 							if !instance_exists(check__) && message_phase = 1
 							{
 							check__ = instance_create_depth(x,y,depth-1,player_message)
-							check__.text = "(비챤이다)"
-							check__.target = player.id
+							check__.text = "일반 공격 도중 가드를 올리면 공격이 캔슬 되요!"
+							check__.target = id
 							check__.parents = id
 							can_interect = 0
 							}
@@ -633,7 +638,7 @@ global.playing_scene = 1
 							if !instance_exists(check__) && message_phase = 2
 							{
 							check__ = instance_create_depth(x,y,depth-1,player_message)
-							check__.text = "(악세사리을 건네받았다!)"
+							check__.text = "(탈리스만을 건네받았다!)"
 							check__.target = player.id
 							check__.parents = id
 							}
@@ -652,21 +657,30 @@ global.playing_scene = 1
 							{
 							image_xscale = sign_k(x - player.x)
 							check__ = instance_create_depth(x,y,depth-1,player_message)
-							check__.text = "!"
-							check__.target = player.id
+							check__.text = string(global.nickname)+"님! 팁하나 드릴게요!"
+							check__.target = id
 							check__.parents = id
 							}
 			
 							if !instance_exists(check__) && message_phase = 1
 							{
 							check__ = instance_create_depth(x,y,depth-1,player_message)
-							check__.text = "(징버거다)"
-							check__.target = player.id
+							check__.text = "내려찍기 사용 후 땅 위에서 딜레이가 있을 때,"
+							check__.target = id
+							check__.parents = id
+							can_interect = 0
+							}
+							
+							if !instance_exists(check__) && message_phase = 2
+							{
+							check__ = instance_create_depth(x,y,depth-1,player_message)
+							check__.text = "구르기나 가드, 올려치기를 사용하면 딜레이가 캔슬 되요!"
+							check__.target = id
 							check__.parents = id
 							can_interect = 0
 							}
 			
-							if !instance_exists(check__) && message_phase = 2
+							if !instance_exists(check__) && message_phase = 3
 							{
 							message_phase = 0
 							alarm[1] = 1
@@ -707,7 +721,7 @@ global.playing_scene = 1
 							if !instance_exists(check__) && message_phase = 3
 							{
 							check__ = instance_create_depth(x,y,depth-1,player_message)
-							check__.text = "(악세사리을 건네받았다!)"
+							check__.text = "(탈리스만을 건네받았다!)"
 							check__.target = player.id
 							check__.parents = id
 							}
@@ -780,7 +794,7 @@ global.playing_scene = 1
 					if !instance_exists(check__) && message_phase = 3
 					{
 					check__ = instance_create_depth(x,y,depth-1,player_message)
-					check__.text = "천양님이랑 팬치들한테도 미리 대피하라고 전해둘게요!"
+					check__.text = "천양님이랑 팬치들한테도 미리 대피 하라고 전해둘게요!"
 					check__.target = id
 					check__.parents = id
 					can_interect = 0
@@ -811,6 +825,7 @@ global.playing_scene = 1
 					check__.target = id
 					check__.parents = id
 					can_interect = 0
+					instance_destroy(wall_1)
 					}
 			
 					if !instance_exists(check__) && message_phase = 7
@@ -820,10 +835,12 @@ global.playing_scene = 1
 					check__.target = id
 					check__.parents = id
 					can_interect = 0
+					instance_destroy(wall_1)
 					}
 		
 					if !instance_exists(check__) && message_phase = 8
 					{
+					instance_destroy(wall_1)
 					global.real_ending = 1
 					message_phase = 4
 					can_interect = 0
@@ -1048,14 +1065,14 @@ global.playing_scene = 1
 						check__.text = "<-     (체력 강화 하기)     ->"
 						}
 				
-						if keyboard_check_pressed(vk_left)
+						if keyboard_check_pressed(global.left_key)
 						{
 						set_time --
 						var sfx = audio_play_sound(message_sfx,0,0)
 						audio_sound_gain(sfx,0.12*global.master_volume*2*global.sfx_volume,0)
 						}
 		
-						if keyboard_check_pressed(vk_right)
+						if keyboard_check_pressed(global.right_key)
 						{
 						set_time ++
 						var sfx = audio_play_sound(message_sfx,0,0)
@@ -1166,14 +1183,14 @@ global.playing_scene = 1
 					}
 
 				
-					if keyboard_check_pressed(vk_left)
+					if keyboard_check_pressed(global.left_key)
 					{
 					set_time --
 					var sfx = audio_play_sound(message_sfx,0,0)
 					audio_sound_gain(sfx,0.12*global.master_volume*2*global.sfx_volume,0)
 					}
 		
-					if keyboard_check_pressed(vk_right)
+					if keyboard_check_pressed(global.right_key)
 					{
 					set_time ++
 					var sfx = audio_play_sound(message_sfx,0,0)
@@ -1240,14 +1257,14 @@ global.playing_scene = 1
 						}
 					}
 				
-					if keyboard_check_pressed(vk_left)
+					if keyboard_check_pressed(global.left_key)
 					{
 					set_time --
 					var sfx = audio_play_sound(message_sfx,0,0)
 					audio_sound_gain(sfx,0.12*global.master_volume*2*global.sfx_volume,0)
 					}
 		
-					if keyboard_check_pressed(vk_right)
+					if keyboard_check_pressed(global.right_key)
 					{
 					set_time ++
 					var sfx = audio_play_sound(message_sfx,0,0)

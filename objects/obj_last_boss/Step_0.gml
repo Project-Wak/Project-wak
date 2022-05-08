@@ -114,8 +114,11 @@ else
 
 	if scene__ > 0 && activated != 2
 	{
-	obj_camera.tv_x = 1280*0.9
-	obj_camera.tv_y = 720*0.9
+		if player.attack_laser_sec = 0 && player.attack_laser = 0 && player.suicide = 0
+		{
+		obj_camera.tv_x = 1280*0.9
+		obj_camera.tv_y = 720*0.9
+		}
 	obj_camera.t_x = xstart
 	obj_camera.t_y = y+180
 	
@@ -137,8 +140,11 @@ else
 		{
 		global.boss_target = id
 		global.boss_name = "폭주한 왁드로이드"
-		obj_camera.tv_x = 1280*1.1
-		obj_camera.tv_y = 720*1.1
+			if player.attack_laser_sec = 0 && player.attack_laser = 0 && player.suicide = 0
+			{
+			obj_camera.tv_x = 1280*1.1
+			obj_camera.tv_y = 720*1.1
+			}
 		obj_camera.t_x = xstart
 		obj_camera.t_y = player.y
 	

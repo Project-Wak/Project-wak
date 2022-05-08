@@ -7,6 +7,7 @@ var cm_x = camera_get_view_x(view_camera[0])
 var xx = cm_x+v_x*16
 var yy = camera_get_view_y(view_camera[0])+v_x*16
 
+
 if image_alpha > 0 && global.hp > 0 && global.playing_scene <= 0 && global.t_b_alpha < 1 && global.b_alpha < 0.2 && global.never_move_in_setting = 0
 {
 	if global.slow_motion = 0 && global.select_dev_setting = 0
@@ -98,6 +99,17 @@ if image_alpha > 0 && global.hp > 0 && global.playing_scene <= 0 && global.t_b_a
 			draw_sprite_ext(sprite20,2,xx+69*v_x,yy+96*v_x,(draw_rage/100)*1.9*v_x,2*v_x,0,c_white,hp_bar_alpha)
 			}
 		draw_sprite_ext(sprite20,3,xx+67*v_x,yy+96*v_x,1.82*v_x,1.71*v_x,0,c_white,global.rage_w_alpha)
+		}
+		
+		
+		if obj_camera.o2_alpha > 0 && global.slow_motion = 0 && global.show_challenger = 0
+		{
+		draw_o2 += (global.o2 - draw_o2)*0.1
+		draw_sprite_ext(sprite20,0,x-24*v_x,y-56*v_x,1.82*v_x,1.71*v_x,0,c_white,obj_camera.o2_alpha)
+			if global.o2/100 > 0
+			{
+			draw_sprite_ext(sprite20,7,x-22*v_x,y-56*v_x,(draw_o2/100)*1.9*v_x,2*v_x,0,c_white,obj_camera.o2_alpha)
+			}
 		}
 	}
 }

@@ -9,7 +9,7 @@ if global.left_time <= 24
 {
 global.left_time = 24
 }
-global.save_point_x = player.x
+
 
 t_x = player.x
 t_y = 2459
@@ -26,7 +26,14 @@ knocked_down_ef = 0
 hit_motion = 0
 can_attack = 0
 bgm = -4
+if global.real_ending = 0
+{
 hp = 1900
+}
+else
+{
+hp = 500
+}
 check_floor = 0
 max_hp = hp
 check_hp = hp

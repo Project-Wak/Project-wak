@@ -30,7 +30,7 @@ inside_.image_index = 2
 
 
 var droped_item__ = instance_create_depth(2175,167,0,obj_droped_item)
-droped_item__.item_var = 2
+droped_item__.item_var = 116
 
 var inside_ = instance_create_depth(1243,966,0,obj_isedol)
 inside_.image_index = 6

@@ -137,16 +137,27 @@ if room != menu && global.playing_scene = 0 && global.never_move_in_setting = 0 
 	var hp__ = "HP"
 	var ste__ = "Stamina"
 	var rage__ = "Rage"
+	var o2 = "O2"
 		if global.korean_text = 1
 		{
 		hp__ = "체력"
 		ste__ = "스테미나"
 		rage__ = "분노"
+		o2 = "산소"
 		}
 	var xx3 = camera_get_view_x(view_camera[0])+v_x_*16
 	draw_text_kl_scale(xx3,yy+40*v_x_,hp__,(v_x_)*76,-1,__alpha_set,c_white,0,-1,font0,v_x_*0.35,v_x_*0.35,0);
 	draw_text_kl_scale(xx3,yy+72*v_x_,ste__,v_x_*64,-1,__alpha_set,c_white,0,-1,font0,v_x_*0.35,v_x_*0.35,0);
 	draw_text_kl_scale(xx3,yy+101*v_x_,rage__,v_x_*64,-1,__alpha_set,c_white,0,-1,font0,v_x_*0.35,v_x_*0.35,0);
+	if global.o2 != 100
+	{
+	o2_alpha += (1 - o2_alpha)*0.1
+	draw_text_kl_scale(player.x-48*v_x_,player.y-64*v_x_,"O2",v_x_*64,-1,__alpha_set*o2_alpha,c_white,0,-1,font0,v_x_*0.3,v_x_*0.3,0);
+	}
+	else
+	{
+	o2_alpha += (-0.01 - o2_alpha)*0.1
+	}
 	
 	if global.gold_draw_alpha > 0
 	{

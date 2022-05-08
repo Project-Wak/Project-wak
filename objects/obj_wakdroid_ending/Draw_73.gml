@@ -30,8 +30,30 @@ scale_ = 0.9
 }
 var play_time__ = global.playtime
 var cal_play_time__ = floor(global.playtime/60)
+var difficulty__ = "하드 코어"
+if global.difficulty = 2
+{
+difficulty__ = "매우 어려움"
+}
+if global.difficulty = 1.5
+{
+difficulty__ = "어려움"
+}
+if global.difficulty = 1
+{
+difficulty__ = "보통"
+	if global.time_plusment = 2
+	{
+	difficulty__ = "쉬움"
+		if global.super_easy = 2
+		{
+		difficulty__ = "매우 쉬움"
+		}
+	}
+}
 
-draw_text_k_scale(xx+wid*0.5,yy-v_x*(global.show_credits*scale_-940),string(global.credit_message)+"\n\n\n\n\n\n\n총 플레이 타임\n"+string(cal_play_time__)+"시간 "+string(play_time__-cal_play_time__*60)+"분",200,-1,alpha,c_white,0,0,font_title,v_x/5,v_x/5,0)
+
+draw_text_k_scale(xx+wid*0.5,yy-v_x*(global.show_credits*scale_-940),string(global.credit_message)+"\n\n\n\n\n총 사망 횟수\n"+string(global.total_died)+"회\n\n\n선택한 난이도\n"+string(difficulty__)+"\n\n\n총 플레이 타임\n"+string(cal_play_time__)+"시간 "+string(play_time__-cal_play_time__*60)+"분",200,-1,alpha,c_white,0,0,font_title,v_x/5,v_x/5,0)
 
 	if keyboard_check(ord(string(global.skip_key)))
 	{

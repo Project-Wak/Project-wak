@@ -157,12 +157,15 @@ alpha += (0 - alpha)*0.1
 
 if scene__ > 0 && activated != 2
 {
-	if global.show_credits = 0
+	if player.attack_laser_sec = 0 && player.attack_laser = 0 && player.suicide = 0
 	{
-	obj_camera.tv_x = 1280*0.9
-	obj_camera.tv_y = 720*0.9
-	obj_camera.t_x = x
-	obj_camera.t_y = y+180
+		if global.show_credits = 0
+		{
+		obj_camera.tv_x = 1280*0.9
+		obj_camera.tv_y = 720*0.9
+		obj_camera.t_x = x
+		obj_camera.t_y = y+180
+		}
 	}
 }
 else

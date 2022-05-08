@@ -84,7 +84,7 @@
     "eventStubScript": null,
     "parent": {"name":"blood_effect","path":"sprites/blood_effect/blood_effect.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "blood_effect",
     "tags": [],
     "resourceType": "GMSequence",
   },

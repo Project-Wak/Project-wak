@@ -104,7 +104,7 @@ player.guard_sprite = pl_move_skeleton_guard
 }
 		
 		
-//악세사리
+//탈리스만
 global.clock = sign(check_equipment(global.accessories_equip[0]/2)+check_equipment(global.accessories_equip[1]/2))
 
 global.lockon = sign(check_equipment(global.accessories_equip[0]/3)+check_equipment(global.accessories_equip[1]/3))

@@ -49,7 +49,7 @@ global.slow_motion += global.slow_motion*0.03
 			}
 		}
 		
-		if global.aed > 0 && global.already_aed_used = 0 && global.left_time > 0 && global.clock = 1 && player.y < room_height
+		if global.aed > 0 && global.already_aed_used = 0 && global.left_time > 0 && global.clock = 1 && player.y < room_height && (!instance_exists(obj_wakdroid_ending) || global.real_ending = 1) && player.suicide = 0
 		{
 			if global.slow_motion < 20
 			{
@@ -211,6 +211,7 @@ global.slow_motion += global.slow_motion*0.03
 		{
 		player.suicided = 0
 		global.hp = player.max_hp
+		global.o2 = 100
 		}
 		room_speed = 60
 		global.never_move = 0
@@ -220,6 +221,7 @@ global.slow_motion += global.slow_motion*0.03
 		global.boss_target = -4
 		global.gameover_reason = -4
 		global.total_died ++
+		save_and_load_data(1,0)
 		
 		if instance_exists(obj_wakdroid_ending)
 		{
@@ -295,6 +297,8 @@ global.slow_motion += global.slow_motion*0.03
 			instance_destroy(obj_wak_doo.wall2)
 			instance_destroy(obj_wak_doo.left_hand)
 			instance_destroy(obj_wak_doo.right_hand)
+			instance_destroy(obj_wak_doo.laser1)
+			instance_destroy(obj_wak_doo.laser2)
 			}
 			
 			if instance_exists(obj_messi)
@@ -324,6 +328,8 @@ global.slow_motion += global.slow_motion*0.03
 			instance_destroy(obj_messi.wall2)
 			instance_destroy(obj_messi.left_hand)
 			instance_destroy(obj_messi.right_hand)
+			instance_destroy(obj_messi.laser1)
+			instance_destroy(obj_messi.laser2)
 			}
 		
 			if instance_exists(obj_angel)
@@ -396,9 +402,38 @@ global.slow_motion += global.slow_motion*0.03
 			obj_simhae_doo.cannot_step = 1
 			obj_simhae_doo.alarm[0] = 1
 			obj_simhae_doo.dead_scene = 0
+			obj_simhae_doo.depth = 1200
 			instance_destroy(obj_simhae_doo.wall1)
 			instance_destroy(obj_simhae_doo.wall2)
 			instance_destroy(obj_simhae_doo._light_)
+			instance_destroy(simhae_doo_bullet)
+			}
+			
+			if instance_exists(obj_guisangadoo)
+			{
+			audio_stop_sound(boss_bgm)
+			global.room_brightness = 0.2
+			obj_guisangadoo.image_xscale = -abs(obj_guisangadoo.image_xscale)
+			obj_guisangadoo.hp = obj_guisangadoo.max_hp
+			obj_guisangadoo.x = obj_guisangadoo.xstart
+			obj_guisangadoo.y = obj_guisangadoo.ystart+500
+			obj_guisangadoo.patturn = 0
+			obj_guisangadoo.timer = 0
+			obj_guisangadoo.patturn = 0
+			obj_guisangadoo.scene__ = 0
+			obj_guisangadoo.activated = 0
+			obj_guisangadoo.bgm = -4
+			obj_guisangadoo.cannot_step = 1
+			obj_guisangadoo.alarm[0] = 1
+			obj_guisangadoo.dead_scene = 0
+			obj_guisangadoo.depth = 1200
+			obj_guisangadoo.w_alpha = 0
+			obj_guisangadoo.random_movement = -1
+			obj_guisangadoo.b_alpha_ = 0
+			instance_destroy(obj_guisangadoo.wall1)
+			instance_destroy(obj_guisangadoo.wall2)
+			instance_destroy(obj_guisangadoo._light_)
+			instance_destroy(obj_guisangadoo.skill_red_ball_effect_rage)
 			instance_destroy(simhae_doo_bullet)
 			}
 		
@@ -473,6 +508,16 @@ global.slow_motion += global.slow_motion*0.03
 			if instance_exists(obj_map_tile8)
 			{
 			obj_map_tile8.alarm[1] = 1
+			}
+			
+			if instance_exists(obj_map_tile9222223)
+			{
+			obj_map_tile9222223.alarm[1] = 1
+			}
+			
+			if room = room_sector_B03_3_remaked && global.save_point_y != player.y
+			{
+			room_goto(room_sector_B03_2_remaked)
 			}
 			
 			

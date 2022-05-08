@@ -64,8 +64,9 @@ if damage_able > 0
 			{
 				if player.hurt_cooltime = 0 && global.hp > 0 && player.dash_attack = 0
 				{
-				global.movement_speed = player.image_xscale*12
+				player.movement_speed = player.image_xscale*6
 				player.vspeed = -5
+				player.y -= 24
 				player.hurt = 1
 				player.hurt_cooltime = 30
 				hp_minus_for_player(damage_able,player.id)

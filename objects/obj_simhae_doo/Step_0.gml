@@ -99,7 +99,7 @@ y += 1.2
 	
 	dead_scene = 0
 	
-	var test_mob = instance_create_depth(xstart-1100,ystart+600,player.depth+3,mob_spawn_here)
+	var test_mob = instance_create_depth(xstart-1100,1625,player.depth+3,mob_spawn_here)
 	test_mob.t_y = -900
 	test_mob.mob_type = obj_simhae_doo
 	test_mob.xscale = 1.1
@@ -117,7 +117,7 @@ else
 b_alpha_ += (t_b_alpha_ - b_alpha_)*0.08
 	if cannot_step = 1
 	{
-	depth = 1000
+	depth = 1200
 	portential_xscale += (1.7 - portential_xscale)*0.1
 	image_yscale += (1.7 - image_yscale)*0.1
 	sprite_index = simhae_doo_none_clip
@@ -138,12 +138,15 @@ b_alpha_ += (t_b_alpha_ - b_alpha_)*0.08
 
 	if scene__ > 0 && activated != 2
 	{
-		if global.show_credits = 0
+		if player.attack_laser_sec = 0 && player.attack_laser = 0 && player.suicide = 0
 		{
-		obj_camera.tv_x = 1280*0.9
-		obj_camera.tv_y = 720*0.9
-		obj_camera.t_x = xstart
-		obj_camera.t_y = y+180
+			if global.show_credits = 0
+			{
+			obj_camera.tv_x = 1280*0.9
+			obj_camera.tv_y = 720*0.9
+			obj_camera.t_x = xstart
+			obj_camera.t_y = ystart
+			}
 		}
 	}
 	else
@@ -154,10 +157,13 @@ b_alpha_ += (t_b_alpha_ - b_alpha_)*0.08
 			{
 			global.boss_target = id
 			global.boss_name = "암흑속의 심해두"
+			if player.attack_laser_sec = 0 && player.attack_laser = 0 && player.suicide = 0
+			{
 			obj_camera.tv_x = 1280
 			obj_camera.tv_y = 720
+			}
 			obj_camera.t_x = xstart
-			obj_camera.t_y = player.y
+			obj_camera.t_y = ystart
 			}
 	
 			if saved_real_x = -4
@@ -181,11 +187,11 @@ b_alpha_ += (t_b_alpha_ - b_alpha_)*0.08
 		if !instance_exists(wall1)
 		{
 		instance_destroy(normal_mob)
-		wall1 = instance_create_depth(xstart-520,576,player.depth+3,obj_floor_tile3)
+		wall1 = instance_create_depth(xstart-520,992,player.depth+3,obj_floor_tile3)
 		wall1.image_xscale = -1
 		wall1.image_yscale = 5
 
-		wall2 = instance_create_depth(xstart+520,576,player.depth+3,obj_floor_tile3)
+		wall2 = instance_create_depth(xstart+520,992,player.depth+3,obj_floor_tile3)
 		wall2.image_yscale = 5
 		}
 		
@@ -264,8 +270,21 @@ b_alpha_ += (t_b_alpha_ - b_alpha_)*0.08
 			{
 			timer ++
 			}
+			
+			
+			var cal_ = (hp/max_hp)*1.2
 	
-			if timer > 300
+			if cal_ < 0.5
+			{
+			cal_ = 0.5
+			}
+	
+			if cal_ > 1
+			{
+			cal_ = 1
+			}
+	
+			if timer > 300*cal_
 			{
 			var random_patturn = choose(1,1,2,2,3)
 				if random_patturn != b_patturn
@@ -473,7 +492,7 @@ b_alpha_ += (t_b_alpha_ - b_alpha_)*0.08
 			
 			if patturn = 3.45
 			{
-			var __ins__ = instance_create_depth(saved_player_x,1083,player.depth-1,effect_special_skill_attacked)
+			var __ins__ = instance_create_depth(saved_player_x,1625,player.depth-1,effect_special_skill_attacked)
 			__ins__.color_1 = c_white
 			__ins__.color_2 = $FF2C75FF
 			__ins__.color_3 = $FF75F2FF

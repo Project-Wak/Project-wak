@@ -21,7 +21,7 @@ if global.choice > 0
 		}
 	}
 	
-	if instance_exists(obj_wakdroid_ending)
+	if instance_exists(obj_wakdroid_ending) && room = room_sector_B07
 	{
 		if global.show_credits > 0
 		{

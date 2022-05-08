@@ -1,3 +1,60 @@
+if place_meeting(x,y,obj_water_inside) || place_meeting(x,y-18,obj_water_front)
+{
+o2_timer ++
+jump_attack_used = 0
+turning_attack_used = 0
+	if attack_ > 0
+	{
+	attack_in_air_cool = 0
+	}
+global.o2 -= 0.03
+global.movement_speed += (0 - global.movement_speed)*0.05
+	
+	if abs(global.movement_speed) >= 6
+	{
+	global.movement_speed += (0 - global.movement_speed)*0.05
+	}
+	
+	if global.o2 < 0
+	{
+	global.hp -= 1
+	global.o2 = 0
+	}
+	
+	if global.o2 > 100
+	{
+	global.o2 = 100
+	}
+	
+	if vspeed > 2.6 && down_attack = 0
+	{
+	vspeed = 2.6
+	}
+
+	if o2_timer > 130
+	{
+		repeat(choose(1,2))
+		{
+		var ins_bb = instance_create_depth(x-image_xscale*25+irandom_range(-16,16),y,depth,bubble_effect)
+		ins_bb.t_scale = irandom_range(3,10)*0.5
+		ins_bb.can_interect = false
+		}
+	o2_timer = 0
+	}
+}
+else
+{
+	if global.o2 < 100
+	{
+	global.o2++
+	}
+	else
+	{
+	global.o2 = 100
+	}
+}
+
+
 
 if global.broken_clock != n_broken_clock && global.b_alpha < 0.5 && global.slow_motion = 0 && code.playing_gameover_scene = 0
 {
@@ -176,7 +233,7 @@ hspeed += (0 - hspeed)*0.1
 
 if global.never_move_in_setting = 0 && global.playing_scene = 0
 {
-	if global.n_sword = 1 && global.explosion_tuto = 0
+	if global.n_sword = 1 && global.explosion_tuto = 0 && !instance_exists(draw_key_)
 	{
 	global.explosion_tuto = 1
 
@@ -194,7 +251,7 @@ if global.never_move_in_setting = 0 && global.playing_scene = 0
 	global.rage_gauge = 100
 	}
 
-	if global.n_sword = 6 && global.suicide_skill_tuto = 0
+	if global.n_sword = 6 && global.suicide_skill_tuto = 0 && !instance_exists(draw_key_)
 	{
 	global.suicide_skill_tuto = 1
 
@@ -209,7 +266,7 @@ if global.never_move_in_setting = 0 && global.playing_scene = 0
 	key_guide.img_index = 14
 	}
 	
-	if global.energy_laser = 0 && global.weapon_upgraded[global.n_sword] > 0 && global.n_sword != 5
+	if global.energy_laser = 0 && global.weapon_upgraded[global.n_sword] > 0 && global.n_sword != 5 && !instance_exists(draw_key_)
 	{
 	global.rage_gauge = 100
 	global.energy_laser = 1
@@ -233,22 +290,22 @@ if global.noclip = 1
 {
 gravity = 0
 vspeed = 0
-	if keyboard_check(vk_left)
+	if keyboard_check(global.left_key) || gamepad_button_check(0,gp_padl)
 	{
 	x -= 20
 	}
 	
-	if keyboard_check(vk_right)
+	if keyboard_check(global.right_key) || gamepad_button_check(0,gp_padr)
 	{
 	x += 20
 	}
 	
-	if keyboard_check(vk_space) || keyboard_check(vk_up)
+	if keyboard_check(global.jump_key) || keyboard_check(global.guard_key) || gamepad_button_check(0,gp_padu)
 	{
 	y -= 8
 	}
 	
-	if keyboard_check(ord(string(global.s_key))) || keyboard_check(vk_down)
+	if keyboard_check(ord(string(global.s_key))) || keyboard_check(global.down_key) || gamepad_button_check(0,gp_padd)
 	{
 	y += 8
 	}
@@ -297,7 +354,7 @@ if guarding > 0
 guarded = 1
 }
 
-if (keyboard_check_released(string(global.guard_key_for_code)) || jump > 0 || gravity != 0 || vspeed < 0)
+if (keyboard_check_released(global.guard_key_for_code) || gamepad_button_check_released(0,gp_padu) || jump > 0 || gravity != 0 || vspeed < 0)
 {
 guarded = 0
 }
@@ -333,7 +390,7 @@ guard_success = 0
 
 if guarding >= 0.8 && pering = 0 && guard_success = 1 && global.n_sword != 0 && global.n_sword != 5 && global.playing_scene = 0 && global.never_move = 0
 {
-	if keyboard_check_pressed(ord(string(global.a_key)))
+	if keyboard_check_pressed(ord(string(global.a_key))) || gamepad_button_check_pressed(0,gp_face2)
 	{
 	guard_success = 0
 	guarding = 0
@@ -354,10 +411,10 @@ if guarding >= 0.8 && pering = 0 && guard_success = 1 && global.n_sword != 0 && 
 }
 
 
-if guarded = 1 && hurt != 0
+if guarded = 1 && hurt != 0 && (!instance_exists(obj_wakdroid_ending) || global.real_ending != 0)
 {
 var d_ef = instance_create_depth(player.x,player.y-64,depth-1,draw_hp_m)
-var text__ = "Low stenima"
+var text__ = "Low stanima"
 if global.korean_text = 1
 {
 text__ = "스테미나 부족"
@@ -476,7 +533,7 @@ skill_combo_cancle_n_motion(0)
 	{
 		if (global.medical_slincer1 > 0 || global.medical_slincer2 > 0) && global.can_use_sylinge > 0
 		{
-			if keyboard_check_pressed(ord("R"))
+			if keyboard_check_pressed(ord("R")) || gamepad_button_check_pressed(0,gp_shoulderlb)
 			{
 			global.poisoning = 0
 			sfx_for_multiplayer(medical_sylinge_sfx,0,0.1)
@@ -631,7 +688,7 @@ returned_id = global.return_player_id;
 		
 		if pering >= 4 && pering < 6 && global.n_sword != 0 && global.n_sword != 5
 		{
-			if keyboard_check_pressed(ord(string(global.a_key)))
+			if keyboard_check_pressed(ord(string(global.a_key))) || gamepad_button_check_pressed(0,gp_face2)
 			{
 			pering = 0
 			pering_sfx = 0
@@ -665,8 +722,8 @@ returned_id = global.return_player_id;
 	global.movement_speed = 0
 	movement_speed = 0
 	global.playing_scene = 1
-	obj_camera.v_x = 1280*0.6
-	obj_camera.v_y = 720*0.6
+	obj_camera.tv_x = 1280*0.6
+	obj_camera.tv_y = 720*0.6
 	cannot_move = 1
 	sprite_index = suicide_sprite
 	image_index = suicide
@@ -702,7 +759,7 @@ w_alpha += (-0.01 - w_alpha)*0.1
 		var random_message = choose(message_1,message_2,message_3)
 		dev_mes(random_message)
 		
-		if global.left_time > 0
+		if global.left_time > 0 && (!instance_exists(obj_wakdroid_ending) || global.real_ending != 0)
 		{
 		sfx_for_multiplayer(choose(wakgood_hurt,wakgood_hurt2,kiyahou,died_sfx),0,0.85)
 		}
@@ -804,6 +861,29 @@ w_alpha += (-0.01 - w_alpha)*0.1
 		}
 	
 	
+			var _placed_obj = instance_place(x,y,obj_obstacle)
+			if _placed_obj >= 0
+			{
+				if hurt_cooltime = 0
+				{
+				hurt = 16
+				hurt_cooltime = 16
+				movement_speed = sign_k(image_xscale)*3
+				hp_minus_for_player(123,_placed_obj)
+				
+			
+				
+					if !place_meeting(x,y+3,floor_parents)
+					{
+					y -= 2
+					}
+				vspeed = -3
+				sfx_for_multiplayer(choose(global.hit_sfx_1,global.hit_sfx_2,global.hit_sfx_3),0,0.2)
+				}
+			}
+	
+	
+	
 			var _placed_obj = instance_place(x,y,obj_bullet)
 			if _placed_obj >= 0 && spin = 0
 			{
@@ -828,7 +908,10 @@ w_alpha += (-0.01 - w_alpha)*0.1
 		
 					if guard_cool_time = 0
 					{
-					movement_speed = image_xscale
+						if charge_attack = 0
+						{
+						movement_speed = image_xscale
+						}
 					guarding = 2.5
 					w_alpha = 1
 					guard_cool_time = 1
@@ -869,7 +952,7 @@ w_alpha += (-0.01 - w_alpha)*0.1
 			
 			
 			var _placed_obj = instance_place(x,y,ef_blood_dash_attack_attacked)
-			if _placed_obj >= 0 && spin = 0
+			if _placed_obj >= 0 && spin = 0 && dash_attack = 0
 			{
 			var check_guard = sign(x - _placed_obj.x)
 		
@@ -892,7 +975,10 @@ w_alpha += (-0.01 - w_alpha)*0.1
 		
 					if guard_cool_time = 0
 					{
-					movement_speed = image_xscale
+						if charge_attack = 0
+						{
+						movement_speed = image_xscale
+						}
 					guarding = 2.5
 					w_alpha = 1
 					guard_cool_time = 40
@@ -921,24 +1007,11 @@ w_alpha += (-0.01 - w_alpha)*0.1
 					
 					if instance_exists(obj_wakdroid)
 					{
-					hp_minus_for_player(252,_placed_obj)
+					hp_minus_for_player(352,_placed_obj)
 					}
 					else
 					{
-						if room = room_sector_B03_2
-						{
-						hp_minus_for_player(252,_placed_obj)
-						}
-						
-						if room = room_sector_B04_2
-						{
-						hp_minus_for_player(452,_placed_obj)
-						}
-						
-						if room = room_sector_B06_2
-						{
-						hp_minus_for_player(652,_placed_obj)
-						}
+					hp_minus_for_player(652,_placed_obj)
 					}
 				
 			
@@ -977,7 +1050,10 @@ w_alpha += (-0.01 - w_alpha)*0.1
 		
 					if guard_cool_time = 0
 					{
-					movement_speed = image_xscale
+						if charge_attack = 0
+						{
+						movement_speed = image_xscale
+						}
 					guarding = 2.5
 					w_alpha = 1
 					guard_cool_time = 5
@@ -1019,6 +1095,165 @@ w_alpha += (-0.01 - w_alpha)*0.1
 			}
 			
 			
+			
+			var _placed_obj = instance_place(x,y,obj_jellyfish)
+			if _placed_obj >= 0 && spin = 0
+			{
+				if hurt_cooltime = 0
+				{
+				hurt = 1
+				hurt_cooltime = 30
+				movement_speed = -sign(_placed_obj.image_xscale)*4
+				hp_minus_for_player(64,_placed_obj)
+				
+			
+				
+					if !place_meeting(x,y+3,floor_parents)
+					{
+					y -= 2
+					}
+				vspeed = -3
+				sfx_for_multiplayer(choose(global.hit_sfx_1,global.hit_sfx_2,global.hit_sfx_3),0,0.2)
+				}
+			}
+			
+			
+			
+			
+			
+			var _placed_obj = instance_place(x,y,obj_lightning_sec)
+			if _placed_obj >= 0 && spin = 0 && _placed_obj.image_index >= 3 && _placed_obj.image_index < 10
+			{
+			var check_guard = sign(x - _placed_obj.x)
+		
+			
+				if check_guard = 0
+				{
+				check_guard = choose(-1,1)
+				}
+				
+				var cal_m_ste = (1.8/global.guard_power)*8.7
+				if guarding > 0 && global.stamina >= cal_m_ste && check_guard = sign(image_xscale)
+				{
+				guarding_now = 1
+				}
+				
+				if guarding_now = 1 || charge_attack > 0 || pering > 0
+				{
+				global.stamina -= cal_m_ste
+			
+		
+					if guard_cool_time = 0
+					{
+						if charge_attack = 0
+						{
+						movement_speed = image_xscale
+						}
+					guarding = 2.5
+					w_alpha = 1
+					guard_cool_time = 5
+					sfx_for_multiplayer(guard,0,0.1)
+					sfx_for_multiplayer(sparking_sound,0,0.1)
+	
+					var random_dir = -image_xscale
+
+						repeat(8)
+						{
+						var _ef = instance_create_depth(x-image_xscale*4,y+irandom_range(-13,0),depth-1,effect_spark)
+						_ef.hspeed = irandom_range(5,20)*random_dir
+						_ef.vspeed = irandom_range(-4,2)
+						}
+					}
+				}
+				else
+				{
+					if hurt_cooltime = 0
+					{
+					global.stamina = 0
+					hurt = 1
+					hurt_cooltime = 20
+					movement_speed = -sign(_placed_obj.image_xscale)*4
+					hp_minus_for_player(742,_placed_obj)
+					sfx_for_multiplayer(sparking_sound,0,0.1)
+
+				
+					y -= 4
+					vspeed = -4
+					sfx_for_multiplayer(choose(global.hit_sfx_1,global.hit_sfx_2,global.hit_sfx_3),0,0.2)
+					}
+				}
+			}
+			
+			
+			
+			
+			var _placed_obj = instance_place(x,y,obj_lightning)
+			if _placed_obj >= 0 && spin = 0 && _placed_obj.image_index >= 3 && _placed_obj.image_index < 6
+			{
+			var check_guard = sign(x - _placed_obj.x)
+		
+			
+				if check_guard = 0
+				{
+				check_guard = choose(-1,1)
+				}
+				
+				var cal_m_ste = (1.8/global.guard_power)*8
+				if guarding > 0 && global.stamina >= cal_m_ste && check_guard = sign(image_xscale)
+				{
+				guarding_now = 1
+				}
+				
+				if guarding_now = 1 || charge_attack > 0 || pering > 0
+				{
+				global.stamina -= cal_m_ste
+			
+		
+					if guard_cool_time = 0
+					{
+						if charge_attack = 0
+						{
+						movement_speed = image_xscale
+						}
+					guarding = 2.5
+					w_alpha = 1
+					guard_cool_time = 5
+					sfx_for_multiplayer(guard,0,0.1)
+					sfx_for_multiplayer(sparking_sound,0,0.1)
+	
+					var random_dir = -image_xscale
+
+						repeat(8)
+						{
+						var _ef = instance_create_depth(x-image_xscale*4,y+irandom_range(-13,0),depth-1,effect_spark)
+						_ef.hspeed = irandom_range(5,20)*random_dir
+						_ef.vspeed = irandom_range(-4,2)
+						}
+					}
+				}
+				else
+				{
+					if hurt_cooltime = 0
+					{
+					global.stamina = 0
+					hurt = 1
+					hurt_cooltime = 20
+					movement_speed = -sign(_placed_obj.image_xscale)*4
+					hp_minus_for_player(389,_placed_obj)
+					sfx_for_multiplayer(sparking_sound,0,0.1)
+
+				
+					y -= 4
+					vspeed = -4
+					sfx_for_multiplayer(choose(global.hit_sfx_1,global.hit_sfx_2,global.hit_sfx_3),0,0.2)
+					}
+				}
+			}
+			
+			
+			
+			
+			
 			var _placed_obj = instance_place(x,y,new_simhaedoo)
 			if _placed_obj >= 0 && spin = 0 && abs(_placed_obj.speed) >= 1
 			{
@@ -1043,7 +1278,10 @@ w_alpha += (-0.01 - w_alpha)*0.1
 		
 					if guard_cool_time = 0
 					{
-					movement_speed = image_xscale
+						if charge_attack = 0
+						{
+						movement_speed = image_xscale
+						}
 					guarding = 2.5
 					w_alpha = 1
 					guard_cool_time = 5
@@ -1108,7 +1346,10 @@ w_alpha += (-0.01 - w_alpha)*0.1
 		
 					if guard_cool_time = 0
 					{
-					movement_speed = image_xscale
+						if charge_attack = 0
+						{
+						movement_speed = image_xscale
+						}
 					guarding = 2.5
 					w_alpha = 1
 					guard_cool_time = 1
@@ -1175,7 +1416,10 @@ w_alpha += (-0.01 - w_alpha)*0.1
 		
 					if guard_cool_time = 0
 					{
-					movement_speed = check_guard*5
+						if charge_attack = 0
+						{
+						movement_speed = check_guard*5
+						}
 					guarding = 2.5
 					w_alpha = 1
 					guard_cool_time = 6
@@ -1241,7 +1485,10 @@ w_alpha += (-0.01 - w_alpha)*0.1
 		
 					if guard_cool_time = 0
 					{
-					movement_speed = check_guard*5
+						if charge_attack = 0
+						{
+						movement_speed = check_guard*5
+						}
 					guarding = 2.5
 					w_alpha = 1
 					guard_cool_time = 6
@@ -1306,7 +1553,10 @@ w_alpha += (-0.01 - w_alpha)*0.1
 		
 					if guard_cool_time = 0
 					{
-					movement_speed = image_xscale
+						if charge_attack = 0
+						{
+						movement_speed = image_xscale
+						}
 					guarding = 2.5
 					w_alpha = 1
 					guard_cool_time = 6
@@ -1371,7 +1621,10 @@ w_alpha += (-0.01 - w_alpha)*0.1
 		
 					if guard_cool_time = 0
 					{
-					movement_speed = image_xscale
+						if charge_attack = 0
+						{
+						movement_speed = image_xscale
+						}
 					guarding = 2.5
 					w_alpha = 1
 					guard_cool_time = 6
@@ -1661,7 +1914,10 @@ w_alpha += (-0.01 - w_alpha)*0.1
 		
 					if guard_cool_time = 0
 					{
-					movement_speed = image_xscale*2.2
+						if charge_attack = 0
+						{
+						movement_speed = image_xscale*2.2
+						}
 					guarding = 2.5
 					w_alpha = 1
 					guard_cool_time = 7
@@ -1723,7 +1979,10 @@ w_alpha += (-0.01 - w_alpha)*0.1
 		
 					if guard_cool_time = 0
 					{
-					movement_speed = image_xscale*0.5
+						if charge_attack = 0
+						{
+						movement_speed = image_xscale*0.5
+						}
 					guarding = 2.5
 					w_alpha = 1
 					guard_cool_time = 5
@@ -1784,7 +2043,10 @@ w_alpha += (-0.01 - w_alpha)*0.1
 		
 					if guard_cool_time = 0
 					{
-					movement_speed = image_xscale*1.8
+						if charge_attack = 0
+						{
+						movement_speed = image_xscale*1.8
+						}
 					guarding = 2.5
 					w_alpha = 1
 					guard_cool_time = 3
@@ -1843,7 +2105,10 @@ w_alpha += (-0.01 - w_alpha)*0.1
 		
 					if guard_cool_time = 0
 					{
-					movement_speed = image_xscale*3
+						if charge_attack = 0
+						{
+						movement_speed = image_xscale*3
+						}
 					guarding = 2.5
 					w_alpha = 1
 					guard_cool_time = 13
@@ -1904,7 +2169,10 @@ w_alpha += (-0.01 - w_alpha)*0.1
 		
 					if guard_cool_time = 0
 					{
-					movement_speed = image_xscale*2
+						if charge_attack = 0
+						{
+						movement_speed = image_xscale*2
+						}
 					guarding = 2.5
 					w_alpha = 1
 					guard_cool_time = 10
@@ -1963,7 +2231,10 @@ w_alpha += (-0.01 - w_alpha)*0.1
 		
 					if guard_cool_time = 0
 					{
-					movement_speed = image_xscale
+						if charge_attack = 0
+						{
+						movement_speed = image_xscale
+						}
 					guarding = 2.5
 					w_alpha = 1
 					guard_cool_time = 10
@@ -2020,7 +2291,10 @@ w_alpha += (-0.01 - w_alpha)*0.1
 		
 					if guard_cool_time = 0
 					{
-					movement_speed = image_xscale*7
+						if charge_attack = 0
+						{
+						movement_speed = image_xscale*7
+						}
 					guarding = 2.5
 					w_alpha = 1
 					guard_cool_time = 10
@@ -2079,7 +2353,7 @@ w_alpha += (-0.01 - w_alpha)*0.1
 		
 				if guard_cool_time = 0
 				{
-					if charge_attack <= 0
+					if charge_attack = 0
 					{
 					movement_speed = image_xscale
 					}
@@ -2145,7 +2419,7 @@ w_alpha += (-0.01 - w_alpha)*0.1
 		
 				if guard_cool_time = 0
 				{
-					if charge_attack <= 0
+					if charge_attack = 0
 					{
 					movement_speed = image_xscale*4
 					}
@@ -2194,7 +2468,7 @@ w_alpha += (-0.01 - w_alpha)*0.1
 				
 /////////////////////////////////////////////////////////////////////////////////////////	
 	
-	if keyboard_check(vk_space)
+	if keyboard_check(global.jump_key) || gamepad_button_check(0,global.jump_key)
 	{
 		if pressed_space = 1
 		{
@@ -2202,13 +2476,17 @@ w_alpha += (-0.01 - w_alpha)*0.1
 		}
 	}
 	
-	if keyboard_check_pressed(vk_space) && global.chat_activity = false
+	if (keyboard_check_pressed(global.jump_key) || gamepad_button_check_pressed(0,global.jump_key)) && global.chat_activity = false
 	{
-		if global.never_move = 0 && global.never_move_in_setting = 0 && (gravity = 0 || hurt > 5)
+		if global.never_move = 0 && global.never_move_in_setting = 0 && (gravity = 0 || hurt > 5 || place_meeting(x,y,obj_water_inside) || place_meeting(x,y,obj_water_front))
 		{
-			if (jump = 0 && cannot_move = 0 && cooltime = 0) || hurt > 5
+			if (jump = 0 && cannot_move = 0 && cooltime = 0) || hurt > 5 || ((place_meeting(x,y,obj_water_inside) || place_meeting(x,y,obj_water_front)) && down_attack = 0 && spin_attack = 0 && jump_attack = 0 && spin = 0)
 			{
-			sfx_for_multiplayer(jump_sfx,0,0.6)
+				if !place_meeting(x,y,obj_water_inside) && !place_meeting(x,y,obj_water_front)
+				{
+				sfx_for_multiplayer(jump_sfx,0,0.6)
+				}
+
 	
 			var effect_ = instance_create_depth(x,y+27,player.depth+1,down_effect_for_laser)
 			effect_.image_blend = c_white
@@ -2220,10 +2498,16 @@ w_alpha += (-0.01 - w_alpha)*0.1
 			effect_.image_xscale = 2.5*0.1
 			effect_.image_yscale = 0.8*0.1
 			pressed_space = 1
+			if place_meeting(x,y-32,obj_water_front)
+			{
+			vspeed = (-6-global.jump_plus)*0.7
+			}
+			else
+			{
 			vspeed = -6-global.jump_plus
+			}
 			jump_end_motion = 0
 			b_movement_speed = 0
-			global.stamina_cooltime = 0
 			y -= 3
 			jump = 1
 			dont_check_jump_now = 2
@@ -2264,7 +2548,7 @@ w_alpha += (-0.01 - w_alpha)*0.1
 	}
 	
 	
-	if keyboard_check_pressed(vk_down) && global.chat_activity = false && attack_ = 0 && pering = 0 && global.never_move_in_setting = 0
+	if (keyboard_check_pressed(global.down_key) || gamepad_button_check_pressed(0,gp_padd)) && global.chat_activity = false && attack_ = 0 && pering = 0 && global.never_move_in_setting = 0
 	{
 		if global.never_move = 0
 		{
@@ -2272,12 +2556,12 @@ w_alpha += (-0.01 - w_alpha)*0.1
 			{
 				if (spin = 0 && cannot_move = 0 && cooltime = 0 && down_attack = 0 && down_attack_plusing = 0 && hurt = 0 && hurt_little = 0) || (spin = 0 && hurt > 5)
 				{
-					if keyboard_check(vk_left)
+					if keyboard_check(global.left_key) || gamepad_button_check(0,gp_padl)
 					{
 					image_xscale = 1
 					}
 					
-					if keyboard_check(vk_right)
+					if keyboard_check(global.right_key) || gamepad_button_check(0,gp_padr)
 					{
 					image_xscale = -1
 					}
@@ -2324,7 +2608,7 @@ w_alpha += (-0.01 - w_alpha)*0.1
 	
 	if global.cannot_use_stamina = 0
 	{
-		if (sprite_index = move_sprite || sprite_index = spr_crouch || sprite_index = guard_sprite || sprite_index = jump_sprite) && gravity <= 0 && attack_gun_ = 0
+		if (sprite_index = move_sprite || sprite_index = spr_crouch || sprite_index = guard_sprite || sprite_index = jump_sprite) && attack_gun_ = 0
 		{
 		global.stamina_cooltime += 2
 		}
@@ -2341,9 +2625,14 @@ w_alpha += (-0.01 - w_alpha)*0.1
 			global.stamina += 0.15
 			}
 			
-			if (sprite_index = guard_sprite || sprite_index = jump_sprite)
+			if (sprite_index = guard_sprite)
 			{
 			global.stamina -= 0.08
+			}
+			
+			if (sprite_index = jump_sprite)
+			{
+			global.stamina -= 0.12
 			}
 		}
 
@@ -2536,30 +2825,30 @@ w_alpha += (-0.01 - w_alpha)*0.1
 	}
 }
 
-if ((attack_ > 2 && attack_ <= 4) || (attack_ > 5 && attack_ <= 7) || (attack_ > 8 && attack_ <= 11) || attack_ > 14) && global.n_sword != 0 && global.n_sword != 5
+if ((attack_ > 3.9 && attack_ <= 4.1) || (attack_ > 6.8 && attack_ <= 7) || (attack_ > 9.8 && attack_ <= 10) || attack_ > 14) && global.n_sword != 0 && global.n_sword != 5
 {
-	if global.skill_jump_attack > 0 && global.stamina > 2.5 && keyboard_check_pressed(ord(string(global.w_key))) && attack_ >= 12 && global.chat_activity = false
+	if global.skill_jump_attack > 0 && global.stamina > 2.5 && (keyboard_check(ord(string(global.w_key))) || gamepad_button_check(0,gp_face4)) && attack_ >= 12 && global.chat_activity = false
 	{
 	red_glow_effect(sprite_index,image_index,0.6)
 	
 	skill_combo_cancle_n_motion(1)
 	}
 	
-	if global.skill_turning_attack > 0 && global.stamina > 3.8 && keyboard_check_pressed(ord(string(global.q_key))) && attack_ >= 12 && global.chat_activity = false
+	if global.skill_turning_attack > 0 && global.stamina > 3.8 && (keyboard_check(ord(string(global.q_key))) || gamepad_button_check(0,gp_face3)) && attack_ >= 12 && global.chat_activity = false
 	{
 	red_glow_effect(sprite_index,image_index,0.6)
 	
 	skill_combo_cancle_n_motion(1)
 	}
 
-	if keyboard_check_pressed(string(global.guard_key_for_code)) && global.chat_activity = false
+	if (keyboard_check(string(global.guard_key_for_code)) || gamepad_button_check(0,gp_padu)) && global.chat_activity = false
 	{
 	red_glow_effect(sprite_index,image_index,0.6)
 	
 	skill_combo_cancle_n_motion(1)
 	}
 	
-	if keyboard_check_pressed(vk_down) && global.chat_activity = false && spin = 0 && global.never_move_in_setting = 0
+	if (keyboard_check(global.down_key) || gamepad_button_check(0,gp_padd)) && global.chat_activity = false && spin = 0 && global.never_move_in_setting = 0
 	{
 		if on_floor = true && hurt = 0 && hurt_little = 0
 		{
@@ -2598,25 +2887,25 @@ if ((attack_ > 2 && attack_ <= 4) || (attack_ > 5 && attack_ <= 7) || (attack_ >
 
 if down_attack > 13 && global.n_sword != 0 && global.n_sword != 5
 {
-	if global.skill_jump_attack > 0 && global.stamina > 2.5 && keyboard_check_pressed(ord(string(global.w_key))) && global.chat_activity = false
+	if global.skill_jump_attack > 0 && global.stamina > 2.5 && (keyboard_check_pressed(ord(string(global.w_key))) || gamepad_button_check_pressed(0,gp_face4)) && global.chat_activity = false
 	{
 	red_glow_effect(sprite_index,image_index,0.6)
 	skill_combo_cancle_n_motion(1)
 	}
 	
-	if global.skill_turning_attack > 0 && global.stamina > 3.8 && keyboard_check_pressed(ord(string(global.q_key))) && global.chat_activity = false
+	if global.skill_turning_attack > 0 && global.stamina > 3.8 && (keyboard_check_pressed(ord(string(global.q_key))) || gamepad_button_check_pressed(0,gp_face3)) && global.chat_activity = false
 	{
 	red_glow_effect(sprite_index,image_index,0.6)
 	skill_combo_cancle_n_motion(1)
 	}
 	
-	if keyboard_check_pressed(string(global.guard_key_for_code)) && global.chat_activity = false
+	if (keyboard_check_pressed(string(global.guard_key_for_code)) || gamepad_button_check_pressed(0,gp_padu)) && global.chat_activity = false
 	{
 	red_glow_effect(sprite_index,image_index,0.6)
 	skill_combo_cancle_n_motion(1)
 	}
 	
-	if keyboard_check_pressed(vk_down) && global.chat_activity = false && spin = 0 && global.never_move_in_setting = 0
+	if (keyboard_check_pressed(global.down_key) || gamepad_button_check_pressed(0,gp_padd)) && global.chat_activity = false && spin = 0 && global.never_move_in_setting = 0
 	{
 		if (on_floor = true) && hurt = 0 && hurt_little = 0
 		{
@@ -2655,19 +2944,19 @@ if down_attack > 13 && global.n_sword != 0 && global.n_sword != 5
 
 if dash_attack >= 4.6 && global.n_sword != 0 && global.n_sword != 5
 {
-	if global.skill_jump_attack > 0 && global.stamina > 2.5 && keyboard_check_pressed(ord(string(global.w_key))) && global.chat_activity = false
+	if global.skill_jump_attack > 0 && global.stamina > 2.5 && (keyboard_check_pressed(ord(string(global.w_key))) || gamepad_button_check_pressed(0,gp_face4)) && global.chat_activity = false
 	{
 	red_glow_effect(sprite_index,image_index,0.6)
 	skill_combo_cancle_n_motion(1)
 	}
 	
-	if keyboard_check_pressed(string(global.guard_key_for_code)) && global.chat_activity = false
+	if (keyboard_check_pressed(string(global.guard_key_for_code)) || gamepad_button_check_pressed(0,gp_padu)) && global.chat_activity = false
 	{
 	red_glow_effect(sprite_index,image_index,0.6)
 	skill_combo_cancle_n_motion(1)
 	}
 	
-	if keyboard_check_pressed(vk_down) && global.chat_activity = false && spin = 0 && global.never_move_in_setting = 0
+	if (keyboard_check_pressed(global.down_key) || gamepad_button_check_pressed(0,gp_padd)) && global.chat_activity = false && spin = 0 && global.never_move_in_setting = 0
 	{
 		if (on_floor = true) && hurt = 0 && hurt_little = 0
 		{
@@ -2698,7 +2987,7 @@ if dash_attack >= 4.6 && global.n_sword != 0 && global.n_sword != 5
 	}
 	
 	
-	if keyboard_check_pressed(vk_space) && global.chat_activity = false
+	if (keyboard_check_pressed(global.jump_key) || gamepad_button_check_pressed(0,global.jump_key)) && global.chat_activity = false
 	{
 		if global.nickname != "썩은물" && global.nickname != "씹찐따"
 		{
@@ -2714,9 +3003,15 @@ if dash_attack >= 4.6 && global.n_sword != 0 && global.n_sword != 5
 				image_index = 0
 		
 				sfx_for_multiplayer(jump_sfx,0,0.6)
+				if place_meeting(x,y-32,obj_water_front)
+				{
+				vspeed = (-6-global.jump_plus)*0.7
+				}
+				else
+				{
 				vspeed = -6-global.jump_plus
+				}
 				jump_end_motion = 0
-				global.stamina_cooltime = 0
 				y -= 3
 				jump = 1
 				dont_check_jump_now = 2
@@ -2763,7 +3058,7 @@ if dash_attack >= 4.6 && global.n_sword != 0 && global.n_sword != 5
 
 /////////////////////////////////////////////////////////////////////////////////
 
-if keyboard_check_pressed(vk_up) && hurt > 0 && global.hp > 0 && global.playing_scene = 0
+if (keyboard_check_pressed(global.guard_key_for_code) || gamepad_button_check_pressed(0,gp_padu)) && hurt > 0 && global.hp > 0 && global.playing_scene = 0
 {
 hurt = 0
 hurt_cooltime = 0
@@ -2825,7 +3120,7 @@ if guarding >= 2.5
 	}
 }
 
-if keyboard_check(string(global.guard_key_for_code)) && hurt = 0 && hurt_little = 0 && global.chat_activity = false && global.playing_scene = 0 && global.never_move_in_setting = 0
+if (keyboard_check(string(global.guard_key_for_code)) || gamepad_button_check(0,gp_padu)) && hurt = 0 && hurt_little = 0 && global.chat_activity = false && global.playing_scene = 0 && global.never_move_in_setting = 0
 {
 	if guarding = -1 && gravity <= 0 && vspeed >= 0
 	{
@@ -2873,12 +3168,12 @@ cannot_move = 1
 	image_index = guarding
 	}
 	
-	if keyboard_check_pressed(vk_left) && global.never_move = 0 && global.playing_scene = 0
+	if (keyboard_check_pressed(global.left_key) || gamepad_button_check_pressed(0,gp_padl)) && global.never_move = 0 && global.playing_scene = 0
 	{
 	image_xscale = 1
 	}
 		
-	if keyboard_check_pressed(vk_right) && global.never_move = 0 && global.playing_scene = 0
+	if (keyboard_check_pressed(global.right_key) || gamepad_button_check_pressed(0,gp_padr)) && global.never_move = 0 && global.playing_scene = 0
 	{
 	image_xscale = -1
 	}
@@ -2890,7 +3185,7 @@ cannot_move = 1
 
 
 
-if global.never_move = 0 && global.never_move_in_setting = 0 && keyboard_check_pressed(ord(string(global.a_key))) && global.chat_activity = false && pering = 0
+if global.never_move = 0 && global.never_move_in_setting = 0 && (keyboard_check_pressed(ord(string(global.a_key))) || gamepad_button_check_pressed(0,gp_face2)) && global.chat_activity = false && pering = 0
 {
 	if (attack_in_air < 7 && gravity > 0 && cooltime = 0 && hurt = 0 && hurt_little = 0 && attack_in_air_cool = 0 && ((!place_meeting(x,y+45,floor_parents) || vspeed < 0))) && charge_attack <= 0 && global.n_sword != 0 && global.n_sword != 5
 	{
@@ -2963,12 +3258,12 @@ if global.never_move = 0 && global.never_move_in_setting = 0 && keyboard_check_p
 var pressing = 0
 if global.chat_activity = false
 {
-	if global.run_key != "Non" && keyboard_check_pressed(ord(string(global.run_key)))
+	if global.run_key != "Non" && (keyboard_check(ord(string(global.run_key))) || gamepad_button_check(0,gp_shoulderr))
 	{
 	pressing = 1
 	}
 
-	if (global.run_key = vk_shift || global.run_key = vk_up) && keyboard_check_pressed(string(global.run_key))
+	if global.run_key != "Non" && (global.run_key = vk_shift || global.run_key = vk_up) && (keyboard_check(string(global.run_key)) || gamepad_button_check(0,gp_shoulderr))
 	{
 	pressing = 1
 	}
@@ -2976,7 +3271,7 @@ if global.chat_activity = false
 
 
 
-if global.never_move = 0 && global.never_move_in_setting = 0 && global.run_key != "Non" && pressing = 1
+if global.never_move = 0 && global.never_move_in_setting = 0 && pressing = 1
 {
 double_pressed_run_key = 2
 }
@@ -2985,17 +3280,17 @@ double_pressed_run_key = 2
 
 var pressing = 0
 
-if global.e_key != "Non" && keyboard_check(ord(string(global.e_key))) && global.chat_activity = false
+if global.e_key != "Non" && (keyboard_check(ord(string(global.e_key))) || gamepad_button_check(0,gp_shoulderlb)) && global.chat_activity = false
 {
 pressing = 1
 }
 
-if global.e_key = vk_shift && keyboard_check(string(global.e_key)) && global.chat_activity = false
+if global.e_key = vk_shift && (keyboard_check(ord(string(global.e_key))) || gamepad_button_check(0,gp_shoulderlb)) && global.chat_activity = false
 {
 pressing = 1
 }
 
-if global.e_key = vk_up && keyboard_check(string(global.e_key)) && global.chat_activity = false
+if global.e_key = vk_up && (keyboard_check(ord(string(global.e_key))) || gamepad_button_check(0,gp_shoulderlb)) && global.chat_activity = false
 {
 pressing = 1
 }
@@ -3131,7 +3426,7 @@ if global.never_move = 0 && global.never_move_in_setting = 0 && keyboard_check_r
 			
 		if on_floor = true && gravity <= 0
 		{
-			if global.nickname = "아버" && global.n_sword != 0 && global.n_sword != 5 && !keyboard_check(vk_down) && !keyboard_check(vk_left) && !keyboard_check(vk_right) && keyboard_check(string(global.guard_key_for_code)) && down_attack_with_rage = 0 && global.chat_activity = false
+			if global.nickname = "아버" && global.n_sword != 0 && global.n_sword != 5 && !keyboard_check(global.down_key) && !keyboard_check(global.left_key) && !keyboard_check(global.right_key) && (keyboard_check(string(global.guard_key_for_code)) || gamepad_button_check(0,gp_padu)) && down_attack_with_rage = 0 && global.chat_activity = false
 			{
 				if attack_laser_thi = 0 && spin = 0 && hurt = 0 && hurt_little = 0 && global.rage_gauge >= 80
 				{
@@ -3149,7 +3444,7 @@ if global.never_move = 0 && global.never_move_in_setting = 0 && keyboard_check_r
 				global.stamina_cooltime = 0
 				global.rage_gauge -= 80
 				
-					if skill_red_ball_effect = -1
+					if !instance_exists(skill_red_ball_effect)
 					{
 					skill_red_ball_effect = instance_create_depth(x+10*image_xscale,y+15,player.depth-1,red_circle_effect)
 					skill_red_ball_effect.image_xscale = 0.35
@@ -3174,7 +3469,7 @@ if global.never_move = 0 && global.never_move_in_setting = 0 && keyboard_check_r
 				}
 			}
 			
-			if (global.n_sword = 1 || global.n_sword = 6) && !keyboard_check(vk_left) && !keyboard_check(vk_right) && keyboard_check(string(global.guard_key_for_code)) && down_attack_with_rage = 0 && global.chat_activity = false && global.used_suicide_skill = 0
+			if (global.n_sword = 1 || global.n_sword = 6) && !keyboard_check(global.left_key) && !keyboard_check(global.right_key) && (keyboard_check(string(global.guard_key_for_code)) || gamepad_button_check(0,gp_padu)) && down_attack_with_rage = 0 && global.chat_activity = false && global.used_suicide_skill = 0
 			{
 				if attack_laser = 0 && (cannot_move = 0 || guarding > 0) && cooltime = 0 && spin = 0 && hurt = 0 && hurt_little = 0 && ((global.n_sword = 1 && global.rage_gauge >= 80) || global.n_sword = 6)
 				{
@@ -3195,7 +3490,7 @@ if global.never_move = 0 && global.never_move_in_setting = 0 && keyboard_check_r
 					global.awakening -= 0.8
 					}
 					
-					if skill_red_ball_effect = -1
+					if !instance_exists(skill_red_ball_effect)
 					{
 					skill_red_ball_effect = instance_create_depth(x+10*image_xscale,y+15,player.depth-1,red_circle_effect)
 					skill_red_ball_effect.image_xscale = 0.35
@@ -3227,7 +3522,7 @@ if global.never_move = 0 && global.never_move_in_setting = 0 && keyboard_check_r
 			}
 			
 			
-			if !keyboard_check(vk_down) && !keyboard_check(string(global.guard_key_for_code)) && (keyboard_check(vk_left) || keyboard_check(vk_right)) && down_attack_with_rage = 0 && global.chat_activity = false && global.n_sword != 6 && global.weapon_upgraded[global.n_sword] > 0
+			if !keyboard_check(global.down_key) && !keyboard_check(string(global.guard_key_for_code)) && (keyboard_check(global.left_key) || keyboard_check(global.right_key) || gamepad_button_check(0,gp_padl) || gamepad_button_check(0,gp_padr)) && down_attack_with_rage = 0 && global.chat_activity = false && global.n_sword != 6 && global.weapon_upgraded[global.n_sword] > 0
 			{
 				if attack_laser_sec = 0 && cannot_move = 0 && cooltime = 0 && spin = 0 && hurt = 0 && hurt_little = 0 && global.rage_gauge >= 80
 				{
@@ -3241,7 +3536,7 @@ if global.never_move = 0 && global.never_move_in_setting = 0 && keyboard_check_r
 				global.rage_gauge -= 80
 				sfx_for_multiplayer(laser_skill_ready,0,0.15)
 				
-				if skill_red_ball_effect = -1
+				if !instance_exists(skill_red_ball_effect)
 				{
 				skill_red_ball_effect = instance_create_depth(x+10*image_xscale,y+15,player.depth-1,red_circle_effect)
 				skill_red_ball_effect.image_xscale = 0.35
@@ -3290,7 +3585,7 @@ check_d_press_e = 0
 
 
 
-if global.never_move = 0 && global.n_sword != 0 && global.n_sword != 5 && global.never_move_in_setting = 0 && keyboard_check_pressed(ord(string(global.q_key))) && global.chat_activity = false && charge_attack <= 0
+if global.never_move = 0 && global.n_sword != 0 && global.n_sword != 5 && global.never_move_in_setting = 0 && (keyboard_check_pressed(ord(string(global.q_key))) || gamepad_button_check_pressed(0,gp_face3)) && global.chat_activity = false && charge_attack <= 0
 {
 	if global.skill_turning_attack > 0 && turning_attack_used < global.skill_turning_attack
 	{
@@ -3357,7 +3652,7 @@ if global.never_move = 0 && global.n_sword != 0 && global.n_sword != 5 && global
 
 
 
-if global.never_move = 0 && global.n_sword != 0 && global.n_sword != 5 && global.never_move_in_setting = 0 && keyboard_check_pressed(ord(string(global.s_key))) && global.chat_activity = false && charge_attack <= 0
+if global.never_move = 0 && global.n_sword != 0 && global.n_sword != 5 && global.never_move_in_setting = 0 && (keyboard_check_pressed(ord(string(global.s_key))) || gamepad_button_check_pressed(0,gp_face1)) && global.chat_activity = false && charge_attack <= 0
 {
 	if on_floor != true
 	{
@@ -3447,7 +3742,7 @@ if global.never_move = 0 && global.n_sword != 0 && global.n_sword != 5 && global
 
 
 
-if global.never_move = 0 && global.n_sword != 0 && global.n_sword != 5 && global.never_move_in_setting = 0 && keyboard_check_pressed(ord(string(global.w_key))) && global.chat_activity = false && charge_attack <= 0
+if global.never_move = 0 && global.n_sword != 0 && global.n_sword != 5 && global.never_move_in_setting = 0 && (keyboard_check_pressed(ord(string(global.w_key))) || gamepad_button_check_pressed(0,gp_face4)) && global.chat_activity = false && charge_attack <= 0
 {
 	if global.skill_jump_attack > 0 && jump_attack_used < global.skill_jump_attack
 	{
@@ -3838,14 +4133,14 @@ global.movement_speed = 0
 	if spin = 1
 	{
 	spin_speed = 1
-	sfx_for_multiplayer(spin_sfx,0,0.12/(global.playing_scene+1))
+	sfx_for_multiplayer(spin_sfx,0,0.08/(global.playing_scene+1))
 	
 	var random_val = choose(1,0)
 		if random_val = 1
 		{
 			if global.voice_option = 0 && global.playing_scene = 0
 			{
-			sfx_for_multiplayer(zzae_ggi_chun,0,0.3)
+			sfx_for_multiplayer(zzae_ggi_chun,0,0.2)
 			}
 		}
 	}
@@ -3948,8 +4243,8 @@ spin_attack += 0.3
 		vspeed += (0 - vspeed)*0.05
 			if global.chat_activity = false
 			{
-			var _pressing_a = keyboard_check(vk_left)
-			var _pressing_d = keyboard_check(vk_right)
+			var _pressing_a = (keyboard_check(global.left_key) || gamepad_button_check(0,gp_padl))
+			var _pressing_d = (keyboard_check(global.right_key) || gamepad_button_check(0,gp_padr))
 			}
 			else
 			{
@@ -4013,11 +4308,11 @@ spin_attack += 0.3
 			}
 		
 		
-			if keyboard_check(vk_left)
+			if (keyboard_check(global.left_key) || gamepad_button_check(0,gp_padl))
 			{
 			pressing_key__ = -1
 			}
-			if keyboard_check(vk_right)
+			if (keyboard_check(global.right_key) || gamepad_button_check(0,gp_padr))
 			{
 			pressing_key__ = 1
 			}
@@ -4048,7 +4343,7 @@ spin_attack += 0.3
 				}
 			}
 		
-			if keyboard_check(vk_down)
+			if keyboard_check(global.down_key)
 			{
 			pressing_key__s = 1
 			}
@@ -4406,8 +4701,11 @@ sprite_index = attack_laser_sprite_sec
 	global.black_bg_ef = 1
 	}
 
-	if skill_red_ball_effect != -1
+	if instance_exists(skill_red_ball_effect)
 	{
+	obj_camera.x = player.x
+	obj_camera.tv_x -= 1280*0.1
+	obj_camera.tv_y -= 720*0.1
 		if floor(image_index) < 1
 		{
 		skill_red_ball_effect.x = x+10*image_xscale
@@ -4443,7 +4741,6 @@ sprite_index = attack_laser_sprite_sec
 		skill_red_ball_effect.x = x-9*image_xscale
 		skill_red_ball_effect.y = y+15
 		skill_red_ball_effect.des = 1
-		skill_red_ball_effect = -1
 		}
 	}
 	
@@ -4456,12 +4753,21 @@ sprite_index = attack_laser_sprite_sec
 	{
 	image_index = 12
 	}
+	
+	if floor(image_index) >= 11
+	{
+	obj_camera.x += (player.x - player.image_xscale*480 - obj_camera.x)*0.17
+	obj_camera.tv_x = 1280*0.9
+	obj_camera.tv_y = 720*0.9
+	obj_camera.v_x += (1280*0.9 - obj_camera.v_x)*0.17
+	obj_camera.v_y += (720*0.9 - obj_camera.v_y)*0.17
+	view_shake(1,1,1)
+	}
 
 	if floor(image_index) >= 11 && attack_laser_sfx = 0
 	{
 	attack_laser_sfx = 1
-	
-	
+	global.w_alpha = 1
 	var effect_ = instance_create_depth(x-image_xscale*16,y-18,player.depth+1,down_effect_for_laser)
 	effect_.image_blend = c_black
 	effect_.t_image_xscale = 0.3*4*image_yscale/2
@@ -4470,7 +4776,7 @@ sprite_index = attack_laser_sprite_sec
 	effect_.image_yscale = 0.8/2
 	effect_.image_xscale = 2.5
 	effect_.image_yscale = 0.8
-	effect_.alarm[1] = 2
+	effect_.alarm[1] = 15
 	
 		if image_xscale = -1
 		{
@@ -4521,8 +4827,6 @@ if attack_laser > 0 && spin_attack = 0
 {
 	if global.n_sword != 6
 	{
-	obj_camera.v_x = 1280*0.9
-	obj_camera.v_y = 720*0.9
 	vspeed = 0
 	cannot_move = 1
 	global.never_move = 1
@@ -4535,8 +4839,12 @@ if attack_laser > 0 && spin_attack = 0
 		global.black_bg_ef = 1
 		}
 
-		if skill_red_ball_effect != -1
+		if instance_exists(skill_red_ball_effect)
 		{
+		obj_camera.x = player.x
+		obj_camera.tv_x -= 1280*0.1
+		obj_camera.tv_y -= 720*0.1
+		
 			if round(image_index) < 1
 			{
 			skill_red_ball_effect.x = x+10*image_xscale
@@ -4572,7 +4880,6 @@ if attack_laser > 0 && spin_attack = 0
 			skill_red_ball_effect.x = x-9*image_xscale
 			skill_red_ball_effect.y = y+15
 			skill_red_ball_effect.des = 1
-			skill_red_ball_effect = -1
 			}
 		}
 	
@@ -4597,6 +4904,11 @@ if attack_laser > 0 && spin_attack = 0
 		
 		
 		sfx_for_multiplayer(sword_ready,0,0.12)
+		view_shake(5,2,3)
+		global.w_alpha = 0.1
+		obj_camera.x = player.x
+		obj_camera.tv_x = 1280*0.6
+		obj_camera.tv_y = 720*0.6
 
 	
 		attack_target_x = x
@@ -4606,13 +4918,21 @@ if attack_laser > 0 && spin_attack = 0
 	
 		if attack_laser > 12.6
 		{
+			if total_laser_num <= 4
+			{
+			obj_camera.tv_x = 1280*(0.6+total_laser_num*0.1)
+			obj_camera.tv_y = 720*(0.6+total_laser_num*0.1)
+			obj_camera.v_x += (1280*(0.6+total_laser_num*0.1) - obj_camera.v_x)*0.17
+			obj_camera.v_y += (720*(0.6+total_laser_num*0.1) - obj_camera.v_y)*0.17
+			obj_camera.y += (player.y - total_laser_num*64 - obj_camera.y)*0.17
+			}
 		movement_speed = 0
 		down_attack_plusing ++
 			if down_attack_plusing > 34
 			{
 			instance_create_depth(attack_target_x+down_attack_with_rage_dis,global.p_floor+32,player.depth-1,effect_special_skill)
 			instance_create_depth(attack_target_x-down_attack_with_rage_dis,global.p_floor+32,player.depth-1,effect_special_skill)
-		
+			total_laser_num++
 			down_attack_plusing = 3
 			down_attack_with_rage_dis += 151
 			}
@@ -4629,6 +4949,7 @@ if attack_laser > 0 && spin_attack = 0
 		sprite_index = move_sprite
 		image_index = 0
 		global.never_move = 0
+		total_laser_num = 0
 		}
 	}
 	else
@@ -4758,7 +5079,7 @@ global.movement_speed = 0
 	if charge_attack < 7
 	{
 	var __check__ = instance_place(x-sign(movement_speed)*7,y,mob_parents)
-		if (place_meeting(x+sign(movement_speed)*18,y,floor_parents) && !place_meeting(x+sign(movement_speed)*18,y,stair_parents)) || (instance_exists(__check__) && __check__ > 0 && __check__.spin = 0) 
+		if (place_meeting(x+sign(movement_speed)*18,y,floor_parents) && !place_meeting(x+sign(movement_speed)*18,y,stair_parents)) || (instance_exists(__check__) && __check__ > 0) 
 		{
 		var ins_pl___ = instance_place(x+sign(movement_speed)*18+5,y,fire_turret)
 			if instance_exists(ins_pl___)
@@ -4912,6 +5233,15 @@ global.movement_speed = 0
 		down_attack_sfx_on = 1
 		sfx_for_multiplayer(down_attack_sfx,0,0.5)
 		
+		if place_meeting(x,y,obj_water_inside)
+		{
+			repeat(abs(vspeed)*0.1)
+			{
+			var ins_bb = instance_create_depth(x-image_xscale*25+irandom_range(-16,16),y+27,depth,bubble_effect)
+			ins_bb.t_scale = irandom_range(3,10)*0.5
+			ins_bb.can_interect = true
+			}
+		}
 		
 		down_effect_line.image_alpha = 1
 		view_shake(4,15+down_dis,4)
@@ -5018,7 +5348,7 @@ attack_ += 0.15
 	
 		if global.n_sword = 2
 		{
-		attack_ += 0.02
+		attack_ += 0.03
 		}
 	}
 sprite_index = attack_sprite
@@ -5287,7 +5617,7 @@ image_index = dash_attack
 	var press_l = 0
 	var press_r = 0
 	
-	if keyboard_check_pressed(vk_left) && global.chat_activity = false
+	if (keyboard_check_pressed(global.left_key) || gamepad_button_check_pressed(0,gp_padl)) && global.chat_activity = false
 	{
 		if run_dir = 1
 		{
@@ -5300,7 +5630,7 @@ image_index = dash_attack
 	run_dir = -1
 	}
 	
-	if keyboard_check_pressed(vk_right) && global.chat_activity = false
+	if (keyboard_check_pressed(global.right_key) || gamepad_button_check_pressed(0,gp_padr)) && global.chat_activity = false
 	{
 		if run_dir = -1
 		{
@@ -5313,7 +5643,7 @@ image_index = dash_attack
 	run_dir = 1
 	}
 	
-	if keyboard_check(vk_left) && global.chat_activity = false
+	if (keyboard_check(global.left_key) || gamepad_button_check(0,gp_padl)) && global.chat_activity = false
 	{
 	pressed_a_key = -1
 	press_l = 1
@@ -5323,7 +5653,7 @@ image_index = dash_attack
 	pressed_a_key = 0
 	}
 	
-	if keyboard_check(vk_right) && global.chat_activity = false
+	if (keyboard_check(global.right_key) || gamepad_button_check(0,gp_padr)) && global.chat_activity = false
 	{
 	pressed_d_key = 1
 	press_r = 1

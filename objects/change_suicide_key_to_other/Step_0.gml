@@ -49,7 +49,7 @@ var check_esc = keyboard_check_pressed(vk_escape)
 		
 		if keyboard_check_pressed(string(global.guard_key_for_code))
 		{
-		global.suicide_key = vk_up
+		global.suicide_key = global.guard_key
 		}
 	pressed = 0
 	global.key_setting_message = 2

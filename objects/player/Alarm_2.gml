@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-if keyboard_check(vk_left) || keyboard_check(vk_right)
+if keyboard_check(global.left_key) || keyboard_check(global.right_key)
 {
 movement_speed = 0
 }

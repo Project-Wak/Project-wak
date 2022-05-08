@@ -5,11 +5,14 @@ image_speed = 0
 image_xscale = -1
 gravity = 0.3
 
+global.t_b_alpha = -0.01
+global.credit_b_alpha = 0
+global.show_credits = 0
 can_interect = 0
 message_phase = 0
 check__ = -4
 story = 0
-global.credit_b_alpha = 0
+
 
 clock_throw_scene = 0
 interecting_now = 0

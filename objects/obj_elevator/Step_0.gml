@@ -12,7 +12,7 @@ if activated = 1
 
 	if player.image_alpha > 0
 	{
-		if global.back_to_origin_stage = 0 && !audio_is_playing(follower_bgm)
+		if global.back_to_origin_stage = 0 && !audio_is_playing(follower_bgm) && global.simhaedoo_stage != 1
 		{
 		global.never_move = 1
 		global.playing_scene = 1
@@ -37,9 +37,12 @@ if activated = 1
 			{
 			player.y += (y - player.y)*0.34
 			}
-
-		obj_camera.tv_x = 1280*0.7
-		obj_camera.tv_y = 720*0.7
+			
+			if player.attack_laser_sec = 0 && player.attack_laser = 0 && player.suicide = 0
+			{
+			obj_camera.tv_x = 1280*0.7
+			obj_camera.tv_y = 720*0.7
+			}
 		player.image_xscale = sign_k(player.x - real_t_x)
 		}
 		else
@@ -116,7 +119,6 @@ t_y += (real_t_y - t_y)*0.1
 		
 			if global.b_alpha > 1
 			{
-			global.left_time -= 2
 				if global.show_credits = 0
 				{
 				global.t_b_alpha = -0.01

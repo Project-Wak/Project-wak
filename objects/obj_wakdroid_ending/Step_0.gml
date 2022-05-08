@@ -674,7 +674,7 @@ if interecting_now = 1 && (global.real_ending = 0 || (message_phase >= 61 && mes
 	}
 }
 
-if global.show_credits > 9600
+if global.show_credits > 10000
 {
 volume_downer -= 0.001
 audio_sound_gain(bgm,0.23*global.master_volume*2*global.bgm_volume*volume_downer,0)
@@ -1094,4 +1094,5 @@ global.never_move = 1
 	}
 }
 
+global.left_time = 99
 

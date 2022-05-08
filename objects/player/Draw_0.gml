@@ -1,5 +1,3 @@
-
-
 var v_x = obj_camera.v_x/1280
 var cm_width = camera_get_view_width(view_camera[0])
 var cm_height = camera_get_view_height(view_camera[0])
@@ -63,6 +61,8 @@ var spr = sprite_index
 	spr = spr_move_run
 	}
 draw_sprite_ext(spr,image_index,floor(x),floor(y),image_xscale,image_yscale,image_angle,image_blend,image_alpha)
+draw_sprite_ext(spr,image_index,floor(x)+global.player_blur,floor(y),image_xscale,image_yscale,image_angle,image_blend,image_alpha*0.7)
+draw_sprite_ext(spr,image_index,floor(x)-global.player_blur,floor(y),image_xscale,image_yscale,image_angle,image_blend,image_alpha*0.7)
 }
 
 

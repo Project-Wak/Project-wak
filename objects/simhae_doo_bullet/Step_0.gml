@@ -60,8 +60,13 @@ if timer > 60
 
 	if timer < 183
 	{
+	var scale_ = 40
+		if abs(global.movement_speed) < 6
+		{
+		scale_ = 80
+		}
 	speed = 0
-	direction = point_direction(x,y,player.x,player.y+sign(global.movement_speed)*40)
+	direction = point_direction(x,y,player.x+sign(global.movement_speed)*scale_,player.y)
 	timer = 183
 	}
 }

@@ -1,32 +1,35 @@
 /// @description Insert description here
 // You can write your code in this editor
-if !instance_exists(obj_wakdroid_ending)
+if player.attack_laser_sec = 0 && player.attack_laser = 0 && player.suicide = 0
 {
-obj_camera.tv_x = 1280
-obj_camera.tv_y = 720
-obj_camera.v_x = 1280
-obj_camera.v_y = 720
-}
-else
-{
-	if explo_anime = 0
+	if !instance_exists(obj_wakdroid_ending)
 	{
-	obj_wakdroid_ending.volume__ += (1 - obj_wakdroid_ending.volume__)*0.1 
-		if global.playing_scene = 0
-		{
-		obj_camera.tv_x = 1280*0.7
-		obj_camera.tv_y = 720*0.7
-		obj_camera.v_x = 1280*0.7
-		obj_camera.v_y = 720*0.7
-		}
-	}
-	else
-	{
-	obj_wakdroid_ending.volume__ += (-0.1 - obj_wakdroid_ending.volume__)*0.1
 	obj_camera.tv_x = 1280
 	obj_camera.tv_y = 720
 	obj_camera.v_x = 1280
 	obj_camera.v_y = 720
+	}
+	else
+	{
+		if explo_anime = 0
+		{
+		obj_wakdroid_ending.volume__ += (1 - obj_wakdroid_ending.volume__)*0.1 
+			if global.playing_scene = 0
+			{
+			obj_camera.tv_x = 1280*0.7
+			obj_camera.tv_y = 720*0.7
+			obj_camera.v_x = 1280*0.7
+			obj_camera.v_y = 720*0.7
+			}
+		}
+		else
+		{
+		obj_wakdroid_ending.volume__ += (-0.1 - obj_wakdroid_ending.volume__)*0.1
+		obj_camera.tv_x = 1280
+		obj_camera.tv_y = 720
+		obj_camera.v_x = 1280
+		obj_camera.v_y = 720
+		}
 	}
 }
 

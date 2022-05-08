@@ -86,27 +86,27 @@ function skill_combo_cancle_n_motion(argument0)
 		jump_attack = 999
 		}
 	
-		if attack_laser > 0
-		{
-		attack_laser_sfx = 0
-		down_attack_plusing = 0
-		attack_laser = 0
-		down_attack_with_rage_dis = 0
-		cannot_move = 0
-		cooltime = 0
-		global.never_move = 0
-		}
+		//if attack_laser > 0
+		//{
+		//attack_laser_sfx = 0
+		//down_attack_plusing = 0
+		//attack_laser = 0
+		//down_attack_with_rage_dis = 0
+		//cannot_move = 0
+		//cooltime = 0
+		//global.never_move = 0
+		//}
 	
-		if attack_laser_sec > 0
-		{
-		attack_laser_sfx = 0
-		down_attack_plusing = 0
-		attack_laser_sec = 0
-		down_attack_with_rage_dis = 0
-		cannot_move = 0
-		cooltime = 0
-		global.never_move = 0
-		}
+		//if attack_laser_sec > 0
+		//{
+		//attack_laser_sfx = 0
+		//down_attack_plusing = 0
+		//attack_laser_sec = 0
+		//down_attack_with_rage_dis = 0
+		//cannot_move = 0
+		//cooltime = 0
+		//global.never_move = 0
+		//}
 	
 		if down_attack_with_rage > 0
 		{
@@ -129,10 +129,9 @@ function skill_combo_cancle_n_motion(argument0)
 		cannot_move = 0
 		}
 	
-		if skill_red_ball_effect != -1
+		if instance_exists(skill_red_ball_effect)
 		{
 		instance_destroy(skill_red_ball_effect)
-		skill_red_ball_effect = -1
 		}
 	
 		if guarding > 0

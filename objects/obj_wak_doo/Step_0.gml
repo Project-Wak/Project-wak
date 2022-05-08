@@ -157,10 +157,13 @@ if scene__ > 0 && activated != 2
 {
 	if global.show_credits = 0
 	{
-	obj_camera.tv_x = 1280*0.9
-	obj_camera.tv_y = 720*0.9
-	obj_camera.t_x = x
-	obj_camera.t_y = y+180
+		if player.attack_laser_sec = 0 && player.attack_laser = 0 && player.suicide = 0
+		{
+		obj_camera.tv_x = 1280*0.9
+		obj_camera.tv_y = 720*0.9
+		obj_camera.t_x = x
+		obj_camera.t_y = y+180
+		}
 	}
 }
 else
@@ -171,8 +174,11 @@ else
 		{
 		global.boss_target = id
 		global.boss_name = "프로토타입 거대 왁두 mk.2"
-		obj_camera.tv_x = 1280
-		obj_camera.tv_y = 720
+			if player.attack_laser_sec = 0 && player.attack_laser = 0 && player.suicide = 0
+			{
+			obj_camera.tv_x = 1280
+			obj_camera.tv_y = 720
+			}
 		obj_camera.t_x = x
 		obj_camera.t_y = player.y
 		}
@@ -277,7 +283,20 @@ activated = 2
 	timer ++
 	}
 	
-		if timer > 300
+	var cal_ = (hp/max_hp)*1.2
+	
+	if cal_ < 0.5
+	{
+	cal_ = 0.5
+	}
+	
+	if cal_ > 1
+	{
+	cal_ = 1
+	}
+	
+	
+		if timer > 300*cal_
 		{
 		var random_patturn = choose(1,2,2,3,3)
 			if random_patturn != b_patturn

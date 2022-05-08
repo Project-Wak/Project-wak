@@ -24,7 +24,7 @@ image_index = 9
 	{
 	pressed = 0
 	global.key_setting_message = 2
-	global.guard_key = vk_up
+	global.guard_key = global.guard_key
 	
 	var sfx = audio_play_sound(cannot_buy,0,0)
 	audio_sound_gain(sfx,0.1*global.master_volume*2*global.sfx_volume,0)

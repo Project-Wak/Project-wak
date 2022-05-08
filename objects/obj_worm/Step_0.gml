@@ -333,8 +333,11 @@ else
 
 		if patturn = 0
 		{
-		obj_camera.tv_x = 1280*1.1
-		obj_camera.tv_y = 720*1.1
+			if player.attack_laser_sec = 0 && player.attack_laser = 0 && player.suicide = 0
+			{
+			obj_camera.tv_x = 1280*1.1
+			obj_camera.tv_y = 720*1.1
+			}
 		cannot_step = 0
 		
 			if abs(y - saved_real_y) > 32
@@ -357,6 +360,7 @@ else
 			{
 			timer ++
 			}
+			
 	
 			if timer > 250
 			{
@@ -398,8 +402,11 @@ else
 		
 		if patturn >= 1 && patturn < 2
 		{
-		obj_camera.tv_x = 1280*1.1
-		obj_camera.tv_y = 720*1.1
+			if player.attack_laser_sec = 0 && player.attack_laser = 0 && player.suicide = 0
+			{
+			obj_camera.tv_x = 1280*1.1
+			obj_camera.tv_y = 720*1.1
+			}
 		patturn += 0.001
 			
 			if patturn < 1.3
@@ -463,8 +470,11 @@ else
 		
 		if patturn >= 2 && patturn < 3
 		{
-		obj_camera.tv_x = 1280*1.1
-		obj_camera.tv_y = 720*1.1
+			if player.attack_laser_sec = 0 && player.attack_laser = 0 && player.suicide = 0
+			{
+			obj_camera.tv_x = 1280*1.1
+			obj_camera.tv_y = 720*1.1
+			}
 		patturn += 0.001
 			
 			if patturn < 2.3
@@ -549,8 +559,12 @@ else
 			{
 			image_angle += (point_direction(x,y,player.x,player.y) - image_angle)*0.03
 			}
-		obj_camera.tv_x = 1280*1.1
-		obj_camera.tv_y = 720*1.1
+			
+			if player.attack_laser_sec = 0 && player.attack_laser = 0 && player.suicide = 0
+			{
+			obj_camera.tv_x = 1280*1.1
+			obj_camera.tv_y = 720*1.1
+			}
 		patturn += 0.001
 			
 			if patturn < 3.2
@@ -587,8 +601,11 @@ else
 		
 		if patturn >= 4 && patturn < 5
 		{
-		obj_camera.tv_x = 1280*1.1
-		obj_camera.tv_y = 720*1.1
+			if player.attack_laser_sec = 0 && player.attack_laser = 0 && player.suicide = 0
+			{
+			obj_camera.tv_x = 1280*1.1
+			obj_camera.tv_y = 720*1.1
+			}
 		patturn += 0.001
 			
 			if patturn < 4.05
@@ -619,7 +636,7 @@ else
 			{
 				if !instance_exists(_aaa) && patturn < 4.13
 				{
-				_aaa = instance_create_depth(x,y+32,depth-10,effect_special_skill_sec_attacked)
+				_aaa = instance_create_depth(x,y+32,depth-20,effect_special_skill_sec_attacked)
 				_aaa.image_angle = 90+bullet_time+300
 				_aaa.direction = 90+bullet_time+300
 				_aaa.color_1 = $FF70FFDC
@@ -669,8 +686,11 @@ else
 		
 		if patturn >= 5 && patturn < 6
 		{
-		obj_camera.tv_x = 1280*1.1
-		obj_camera.tv_y = 720*1.1
+			if player.attack_laser_sec = 0 && player.attack_laser = 0 && player.suicide = 0
+			{
+			obj_camera.tv_x = 1280*1.1
+			obj_camera.tv_y = 720*1.1
+			}
 		patturn += 0.001
 			
 			if patturn < 5.3

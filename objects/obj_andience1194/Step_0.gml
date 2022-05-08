@@ -426,6 +426,8 @@ if cre_boss = 1
 {
 	if !instance_exists(obj_wakdroid)
 	{
+	player.x = 5130
+	global.save_point_x = 5130
 	var test_mob = instance_create_depth(5703,2327,player.depth+3,obj_wakdroid)
 	test_mob.image_xscale = 1
 	test_mob.image_yscale = 1

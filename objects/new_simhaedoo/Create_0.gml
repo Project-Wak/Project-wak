@@ -25,3 +25,5 @@ attack = 0
 damaged_hp = 0
 hurt_sprite = Sprite209
 move_sprite = Sprite209
+image_speed = 0
+image_index = 0

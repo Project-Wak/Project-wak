@@ -1,10 +1,13 @@
 /// @description Insert description here
 // You can write your code in this editor
-
-obj_camera.tv_x = 1280*0.9
-obj_camera.tv_y = 720*0.9
-obj_camera.v_x = 1280*0.9
-obj_camera.v_y = 720*0.9
+	if player.attack_laser_sec = 0 && player.attack_laser = 0 && player.suicide = 0
+	{
+	obj_camera.tv_x = 1280*0.9
+	obj_camera.tv_y = 720*0.9
+	obj_camera.v_x = 1280*0.9
+	obj_camera.v_y = 720*0.9
+	}
+	
 if global.got_sec_phase = 1 && hp > 300
 {
 hp = 300
@@ -24,8 +27,10 @@ damaged_count = 0
 
 if !instance_exists(wall_1)
 {
-wall_1 = instance_create_depth(4896,1728,depth,obj_floor_tile3)
+wall_1 = instance_create_depth(4940,1728,depth,obj_floor_tile3)
 wall_1.image_yscale = 5
+player.x = 5130
+global.save_point_x = 5130
 }
 
 check_floor = -4
@@ -731,7 +736,7 @@ obj_camera.t_x = 5650
 	attack_laser_sec += 0.12
 
 
-		if skill_red_ball_effect != -1
+		if instance_exists(skill_red_ball_effect)
 		{
 			if floor(image_index) < 1
 			{
@@ -768,7 +773,6 @@ obj_camera.t_x = 5650
 			skill_red_ball_effect.x = x-9*image_xscale
 			skill_red_ball_effect.y = y+15
 			skill_red_ball_effect.des = 1
-			skill_red_ball_effect = -1
 			}
 		}
 	

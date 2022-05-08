@@ -56,6 +56,7 @@ function save_and_load_data(argument0,argument1)
 	ini_write_string("korean_text","a",global.korean_text)
 	ini_write_string("guard_key","a",global.guard_key)
 	ini_write_string("g_key","a",global.g_key)
+	ini_write_string("console_mode","a",global.console_mode)
 	ini_write_string("brightness_setting","a",global.brightness_setting)
 
 
@@ -94,6 +95,7 @@ function save_and_load_data(argument0,argument1)
 	ini_write_real("energy_laser","a",global.energy_laser)
 	ini_write_real("first_sleep","a",global.first_sleep)
 	ini_write_real("first_rewind","a",global.first_rewind)
+	ini_write_real("real_ending","a",global.real_ending)
 
 
 	//튜토리얼
@@ -121,7 +123,7 @@ function save_and_load_data(argument0,argument1)
 	
 		for(var i = 0; i < 2; i++)
 		{
-		//악세사리 장착 유무
+		//탈리스만 장착 유무
 		ini_write_real("accessories_equip",string(i),global.accessories_equip[i])
 		}
 		//웨폰 장착 유무
@@ -136,7 +138,7 @@ function save_and_load_data(argument0,argument1)
 	
 		for(var i = 0; i <= global.total_accessories_num; i++)
 		{
-		//악세사리 보유 유무
+		//탈리스만 보유 유무
 		ini_write_real("accessories_owned",string(i),global.accessories_owned[i])
 		}
 		
@@ -150,6 +152,9 @@ function save_and_load_data(argument0,argument1)
 	if argument1 = 2 //아이템 정보도 저장 (다회차용)
 	{
 	//웨폰 보유 유무
+	ini_write_real("explosion_tuto","a",global.explosion_tuto)
+	ini_write_real("suicide_skill_tuto","a",global.suicide_skill_tuto)
+	ini_write_real("killed_first_boss","a",global.killed_first_boss)
 	var i = global.n_sword
 	ini_write_real("weapon_owned",string(i),global.weapon_owned[i])
 	ini_write_real("weapon_upgraded",string(i),global.weapon_upgraded[i])
@@ -209,9 +214,10 @@ function save_and_load_data(argument0,argument1)
 	global.e_key = ini_read_string("e_key","a","E")
 	global.suicide_key = ini_read_string("sui_key","a","P")
 	global.skip_key = ini_read_string("skip_key","a","D")
-	global.korean_text = ini_read_string("korean_text","a",0)
-	global.guard_key = ini_read_string("guard_key","a",vk_up)
+	global.korean_text = ini_read_real("korean_text","a",0)
+	global.guard_key = ini_read_string("guard_key","a",global.guard_key)
 	global.g_key = ini_read_string("g_key","a","G")
+	global.console_mode = ini_read_real("console_mode","a",0)
 
 	//키 가이드
 	global.guide = ini_read_real("guide","a",0)
@@ -256,6 +262,9 @@ function save_and_load_data(argument0,argument1)
 	global.time_plusment = ini_read_real("time_plusment","a",1);
 	
 	//연승
+	global.real_ending = ini_read_real("real_ending","a",0);
+	
+	//연승
 	global.lenturn = ini_read_real("lenturn","a",0);
 	
 	//현재 시각
@@ -271,7 +280,7 @@ function save_and_load_data(argument0,argument1)
 	
 	for(var i = 0; i <= global.total_accessories_num; i++)
 	{
-	//악세사리 보유 유무
+	//탈리스만 보유 유무
 	global.accessories_owned[i] = ini_read_real("accessories_owned",string(i),0)
 	}
 	global.accessories_owned[0] = 1
@@ -279,7 +288,7 @@ function save_and_load_data(argument0,argument1)
 	
 	for(var i = 0; i < 2; i++)
 	{
-	//악세사리 장착 유무
+	//탈리스만 장착 유무
 	global.accessories_equip[i] = ini_read_real("accessories_equip",string(i),1)
 	}
 	//웨폰 장착 유무

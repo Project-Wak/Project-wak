@@ -65,7 +65,7 @@ string_ = string(global.guard_key)
 if img_index = 14
 {
 string_ = string(global.guard_key)
-	if global.guard_key = vk_up
+	if global.guard_key = global.guard_key
 	{
 	string_ = "<-"
 	}
@@ -218,17 +218,17 @@ if img_index = 14
 var xx_sec = camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5
 	if global.n_sword != 6
 	{
-	draw_text_kl_scale(xx_sec,yy+85*cm_vx,"익스플로전\n\n\n\n(방향키 '먼저' 누르던 도중 "+string(global.e_key)+"키)",16,9999,1,image_blend,0,0,font0,cm_vx*1/3,cm_vx*1/3,image_angle)
+	draw_text_kl_scale(xx_sec,yy+85*cm_vx,"익스플로전\n\n\n\n(가드키 '먼저' 누르던 도중 "+string(global.e_key)+"키)",16,9999,1,image_blend,0,0,font0,cm_vx*1/3,cm_vx*1/3,image_angle)
 	}
 	else
 	{
-	draw_text_kl_scale(xx_sec,yy+85*cm_vx,"할복\n\n\n\n(방향키 '먼저' 누르던 도중 "+string(global.e_key)+"키)",16,9999,1,image_blend,0,0,font0,cm_vx*1/3,cm_vx*1/3,image_angle)
+	draw_text_kl_scale(xx_sec,yy+85*cm_vx,"할복\n\n\n\n(가드키 '먼저' 누르던 도중 "+string(global.e_key)+"키)",16,9999,1,image_blend,0,0,font0,cm_vx*1/3,cm_vx*1/3,image_angle)
 	}
 }
 
 if img_index = 15
 {
-draw_text_kl_scale(xx,yy+85*cm_vx,"회전 베기\n\n\n\n(사용 도중 좌우 및 아래 방향키를 누를시 해당 방향으로 돌진)\n(공중에서 사용시 후딜 감소)",16,9999,1,image_blend,0,0,font0,cm_vx*1/3,cm_vx*1/3,image_angle)
+draw_text_kl_scale(xx,yy+85*cm_vx,"회전 베기\n\n\n\n(사용 도중 좌우 및 아래 방향키를 누를시 해당 방향으로 돌진)\n\n\n(공중에서 사용시 후딜 감소)",16,9999,1,image_blend,0,0,font0,cm_vx*1/3,cm_vx*1/3,image_angle)
 }
 
 if img_index = 22

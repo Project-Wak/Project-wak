@@ -544,7 +544,7 @@ player.x += (x-90 - player.x)*0.1
 
 
 
-if abs(x - player.x) <= 32 && player.cannot_move = 0 && global.never_move = 0 && global.playing_scene = 0 && global.never_move_in_setting = 0
+if abs(x - player.x) <= 32 && player.cannot_move = 0 && global.never_move = 0 && global.playing_scene = 0 && global.never_move_in_setting = 0 && global.b_alpha < 0.1
 {
 can_interect = 1
 }

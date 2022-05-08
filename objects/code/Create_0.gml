@@ -3,13 +3,15 @@
 
 
 ////////////////////////////////////////////////////////////////////////
-
-global.credit_message = "\n\n\n\nDirector\n아버 (1인 개발)\n\n\nProgramer\n아버\n\n\nStory\n아버\n\n\nEnemy design\n아버\n\n\nBoss design\n아버\n\n\nStage design\n아버\n\n\nEffect design\n아버\n\n\n\n\n\nBackground Music\nSymphony of Specters - Intense Cinematic Trailer\n\nSharo - Atorie to denno sekai\n\nBrightwaltz - Touch a flower softly\n\nBrightwaltz - Trifolium repens f. roseum\n\nSharou - Jinro no tame no komori uta\n\nBrightwaltz - Piano Improvisation 2020 Spring No2\n\nBrightwaltz - Dance in the Air\n\n\nilodolly - Raison d'etre\n\nMakai Symphony - Dragon Castle\n\n\nTrailer Music\nak+q - Ignotus\nZekk - Libertas\n\n\n\n\n\n\n\n참고한 게임\n\n\nThe Legend of Gockgang-E - 공격 모션이나 스킬 제작, 스토리 및 이펙트 디자인\n\nElden Ring - 보스 패턴 및 맵 디자인\n\nTerraria - 객관안 및 쌉벌래두\n\n\n\n\n참고한 디자인\n\n\n심해두 팬아트 - 보스 및 잡몹\n\n메시 팬아트 - 보스\n\n왁두 팬아트 - 주인공 디자인 및 보스\n\n말레니아(Elden Ring) / 캬루(프리코네) - 엔젤로이드 보스\n\nNier:Automata - 드론형 터렛\n\n이세돌 팬아트 - 이세돌 NPC 및 악세사리 디자인\n\nRe:wind 뮤비 - Re:wind 시계 악세사리 디자인\n\nTakt op destiny - 스킬 이펙트 디자인\n\n\n\n\n\nQA\n(피드백 주신분들)\n\n\nStellarSea\n\n서장님\n\n오코츠유타\n\n옥수수칲\n\n탄창\n\n황금뿌리\n\n러머\n\nSsab\n\n공벌\n\n화염뽱어\n\n젓가락아저씨\n\n진성e\n\n벼슬\n\n페르마벤\n\n댐쿵이\n\n쓰레기맛캔디\n\n1잡탕1\n\nzun\n\nDillionaire\n\nalpamin\n\nBackSang\n\nNANFREE\n\n쥬기\n\n참이프\n\n광부\n\nContra\n\nQuiettBee\n\n사미니\n\n(이외의 많은 여러 사람들)\n\n\n\n\nSpecial Thanks\n(개발에 큰 도움 주신분들과 추가 아이디어 제공자)\n\n\n\nBackSang\n\n쓰레기맛캔디\n\nzun\n\nDillionaire\n\nNANFREE\n\nalpamin\n\n1잡탕1\n\n쥬기\n\n댐쿵이\n\n\n\n\n\n\n\nThanks for playing\n\n\n\n\n\n\n\nMade with Gamemaker studio 2"
+global.simhaedoo_stage = 0
+global.credit_message = "\n\n\n\nDirector\n아버 (1인 개발)\n\n\nProgramer\n아버\n\n\nStory\n아버\n\n\nEnemy design\n아버\n\n\nBoss design\n아버\n\n\nStage design\n아버\n\n\nEffect design\n아버\n\n\n\n\n\nBackground Music\nSymphony of Specters - Intense Cinematic Trailer\n\nSharo - Atorie to denno sekai\n\nBrightwaltz - Touch a flower softly\n\nBrightwaltz - Trifolium repens f. roseum\n\nSharou - Jinro no tame no komori uta\n\nBrightwaltz - Piano Improvisation 2020 Spring No2\n\nBrightwaltz - Dance in the Air\n\n\nilodolly - Raison d'etre\n\nMakai Symphony - Dragon Castle\n\n\nTrailer Music\nak+q - Ignotus\nZekk - Libertas\n\n\n\n\n\n\n\n참고한 게임\n\n\nThe Legend of Gockgang-E - 공격 모션이나 스킬 제작, 스토리 및 이펙트 디자인\n\nElden Ring - 보스 패턴 및 맵 디자인\n\nTerraria - 객관안 및 쌉벌래두\n\n\n\n\n참고한 디자인\n\n\n심해두 팬아트 - 보스 및 잡몹\n\n메시 팬아트 - 보스\n\n왁두 팬아트 - 주인공 디자인 및 보스\n\n말레니아(Elden Ring) / 캬루(프리코네) - 엔젤로이드 보스\n\nNier:Automata - 드론형 터렛\n\n이세돌 팬아트 - 이세돌 NPC 및 탈리스만 디자인\n\nRe:wind 뮤비 - Re:wind 시계 탈리스만 디자인\n\nTakt op destiny - 스킬 이펙트 디자인\n\n\n\n\n\nQA\n(피드백 주신분들)\n\n\nStellarSea\n\n서장님\n\n오코츠유타\n\n옥수수칲\n\n탄창\n\n황금뿌리\n\n러머\n\nSsab\n\n공벌\n\n화염뽱어\n\n젓가락아저씨\n\n진성e\n\n벼슬\n\n페르마벤\n\n댐쿵이\n\n쓰레기맛캔디\n\n1잡탕1\n\nzun\n\nDillionaire\n\nalpamin\n\nBackSang\n\nNANFREE\n\n쥬기\n\n참이프\n\n광부\n\nContra\n\nQuiettBee\n\n사미니\n\n(이외의 많은 여러 사람들)\n\n\n\n\nSpecial Thanks\n(개발에 큰 도움 주신분들과 추가 아이디어 제공자)\n\n\n\nBackSang\n\n쓰레기맛캔디\n\nzun\n\nDillionaire\n\nNANFREE\n\nalpamin\n\n1잡탕1\n\n쥬기\n\n댐쿵이\n\n\n\n\n\n\n\nThanks for playing\n\n\n\n\n\n\n\nMade with Gamemaker studio 2"
 //text_color = 0 //Initialize text color variable
 ip_for_calcul = ""
 //created_platfrom = 0
 sfx_broken = 0
 last_bgm = -4
+in_dg_bgm = -4
+dg_vol = 0
 
 ///////////////////////////////////////////////////////////////////////
 global.choice = 0
@@ -19,6 +21,8 @@ global.poisoning = 0
 global.clock_far_from = 0
 global.cursor = 1
 global.replayed = 0
+global.player_blur = 0
+global.player_blur_time = 0
 for(var i = 0; i <= 6; i++)
 {
 global.achievement[i] = -4
@@ -52,6 +56,7 @@ global.poison_tuto = 0
 global.chunyang = 0
 global.hp_upgrage_money = 0
 global.add_max_hp = 0
+global.o2 = 100
 
 
 
@@ -61,7 +66,7 @@ global.already_aed_used = 0
 alarm[1] = 3600
 global.key_setting_message = 0
 global.never_move_in_setting = 0
-global.game_ver = "Beta 2.0"
+global.game_ver = "Beta 2.02"
 playing_gameover_scene = 0
 global.graphics_for_code = 0
 global.show_guide_mes = -4
@@ -279,6 +284,8 @@ global.full_screen = 1
 //그래픽
 global.graphics = 3
 
+global.console_mode = 0
+
 //키세팅
 global.a_key = "A"
 global.q_key = "Q"
@@ -288,8 +295,13 @@ global.run_key = string(vk_shift)
 global.e_key = "E"
 global.suicide_key = "P"
 global.skip_key = "D"
-global.korean_text = 0
+global.jump_key = vk_space
+global.left_key = vk_left
+global.right_key = vk_right
 global.guard_key = vk_up
+global.down_key = vk_down
+
+global.korean_text = 0
 
 //키 가이드
 global.guide = 0
@@ -344,14 +356,14 @@ var total_accessories = 18
 global.total_accessories_num = total_accessories
 for(var i = 0; i <= total_accessories; i++)
 {
-//악세사리 보유 유무
+//탈리스만 보유 유무
 global.accessories_owned[i] = 0
 }
 
 	
 for(var i = 0; i < 2; i++)
 {
-//악세사리 장착 유무
+//탈리스만 장착 유무
 global.accessories_equip[i] = 0
 }
 //웨폰 장착 유무

@@ -43,7 +43,7 @@ surface_resize(application_surface, display_get_width (), display_get_height ())
 }
 
 
-if global.guard_key != vk_shift && global.guard_key != vk_up
+if global.guard_key != vk_shift && global.guard_key != global.guard_key
 {
 global.guard_key_for_code = ord(global.guard_key)
 }

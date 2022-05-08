@@ -28,3 +28,10 @@ if global.tutorial = 0
 wall2 = instance_create_depth(736,160,depth,obj_floor_tile3)
 wall2.image_yscale = 6
 }
+
+if global.real_ending = 0 && instance_exists(obj_wakdroid_ending)
+{
+wall_1 = instance_create_depth(1565,160,depth,obj_floor_tile3)
+wall_1.image_yscale = 4.75
+}
+

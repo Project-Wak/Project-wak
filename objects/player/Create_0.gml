@@ -17,11 +17,13 @@ message_phase = 0
 show_left_time = 0
 check__ = -4
 pressed_space = 0
+o2_timer = 0
 _light_ = -4
 light_timer = 0
 tiredness = 0
 
 poison_alpha = 0
+total_laser_num = 0
 n_broken_clock = 0
 
 //if global.guide_message_chat = 0
@@ -106,7 +108,7 @@ attack_laser_sfx = 0
 attack_laser_sec = 0
 attack_laser_thi = 0
 down_attack_with_rage_dis = 0
-skill_red_ball_effect = -1
+skill_red_ball_effect = -4
 w_alpha = 0
 attack_in_air_cool = 0
 rage_mode_sfx = -1
@@ -148,6 +150,7 @@ suicide_sfx = 0
 pering = 0
 pering_sfx = 0
 
+draw_o2 = 100
 move_sprite = spr_move
 attack_sprite = pl_move_skeleton_attack_beat_saber
 spin_attack_sprite = pl_move_skeleton_spin_attack_beat_saber

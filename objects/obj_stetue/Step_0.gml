@@ -48,7 +48,10 @@ interecting_now = 1
 
 if interecting_now = 1
 {
-player.x += (x + player.image_xscale*96 - player.x)*0.1
+	if message_phase = 0
+	{
+	player.x += (x + player.image_xscale*96 - player.x)*0.1
+	}
 global.never_move = 1
 global.playing_scene = 1
 	if can_give_item = 1
@@ -59,6 +62,7 @@ global.playing_scene = 1
 			{
 			global.choice_name[0] = "제단에 붉은 광선검과 푸른 광선검을 바친다"
 			global.choice_name[1] = "취소 한다"
+			global.choice_name[2] = -4
 			global.choice += (1 - global.choice)*0.1
 			}
 			else
@@ -77,7 +81,7 @@ global.playing_scene = 1
 			global.choosed = 0
 			global.choice_name[0] = -4
 			global.choice_name[1] = -4
-			global.choice += (-1 - global.choice)*0.1
+			global.choice = 0
 			}
 		}
 		

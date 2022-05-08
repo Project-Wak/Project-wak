@@ -20,6 +20,9 @@ damage_calcul__ = 0
 t_hp_bar_alpha = 0
 armored_level = 2
 draw_hp = 0
+rage_mode = 0
+rage_active = 0
+hp_min = hp
 
 global.gumseong_met_time++
 

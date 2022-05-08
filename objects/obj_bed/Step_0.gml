@@ -61,14 +61,14 @@ global.playing_scene = 1
 		}
 		
 		
-		if keyboard_check_pressed(vk_left)
+		if keyboard_check_pressed(global.left_key)
 		{
 		set_time --
 		var sfx = audio_play_sound(message_sfx,0,0)
 		audio_sound_gain(sfx,0.12*global.master_volume*2*global.sfx_volume,0)
 		}
 		
-		if keyboard_check_pressed(vk_right)
+		if keyboard_check_pressed(global.right_key)
 		{
 		set_time ++
 		var sfx = audio_play_sound(message_sfx,0,0)

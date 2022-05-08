@@ -48,7 +48,7 @@ image_index = 9
 		
 		if keyboard_check_pressed(string(global.guard_key_for_code))
 		{
-		global.skip_key = vk_up
+		global.skip_key = global.guard_key
 		}
 	pressed = 0
 	global.key_setting_message = 2

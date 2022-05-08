@@ -2,12 +2,12 @@
 time ++
 
 
-if img_index = 0 && keyboard_check(vk_left)
+if img_index = 0 && keyboard_check(global.left_key)
 {
 a = 1
 }
 
-if img_index = 1 && keyboard_check(vk_right)
+if img_index = 1 && keyboard_check(global.right_key)
 {
 a = 1
 }
@@ -37,7 +37,7 @@ if img_index = 6 && player.spin > 0
 a = 1
 }
 
-if img_index = 7 && keyboard_check(vk_space)
+if img_index = 7 && keyboard_check(global.jump_key)
 {
 a = 1
 }

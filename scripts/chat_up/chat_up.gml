@@ -113,6 +113,16 @@ audio_sound_gain(sfx,0.07*global.master_volume*2*global.sfx_volume,0)
 		global.lenturn = 1
 		room_goto(room_sector_outside)
 		}
+		else if (argument0 = "/test2" || argument0 = "/ts2")
+		{
+		global.lenturn = 1
+		room_goto(room_sector_B03_2_remaked)
+		}
+		else if (argument0 = "/test3" || argument0 = "/ts3")
+		{
+		global.lenturn = 1
+		room_goto(room_sector_B03_3_remaked)
+		}
 		else if (argument0 = "/b07" || argument0 = "/B07")
 		{
 		global.lenturn = 1

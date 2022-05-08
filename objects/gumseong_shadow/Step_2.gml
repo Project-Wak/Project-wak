@@ -40,12 +40,12 @@ global.gold += 1600
 	give_item(2,4)
 	}
 
-	if room = room_sector_B04_2
+	if room = room_sector_B05_2
 	{
 	give_item(2,2)
 	}
 	
-	if room = room_sector_B05_2
+	if room = room_sector_B04_2
 	{
 	give_item(2,5)
 	}
@@ -112,7 +112,7 @@ if place_meeting(x,y,obj_bullet_for_player) && spin = 0 && attack_ = 0 && attack
 	bloody(_attacker_ef.x,_attacker_ef.y,1)
 	hit_cooltime = 1
 	last_hit = 1
-	if test_mob_type = 0
+	if rage_active = 0
 	{
 	movement_speed = __i*1.8
 	cannot_move = 1
@@ -151,7 +151,7 @@ if place_meeting(x,y,effect) && spin = 0 && attack_ = 0 && attack_ = 0
 	bloody(_attacker_ef.x,_attacker_ef.y,1)
 	hit_cooltime = 1
 	last_hit = 1
-	if test_mob_type = 0
+	if rage_active = 0
 	{
 	movement_speed = __i*1.8
 	cannot_move = 1
@@ -186,7 +186,7 @@ if place_meeting(x,y,effect_jump_attack) && spin = 0 && attack_ = 0
 	bloody(_attacker_ef.x,_attacker_ef.y,1)
 	hit_cooltime = 1
 	last_hit = 1
-	if test_mob_type = 0
+	if rage_active = 0
 	{
 	movement_speed = __i*0.4
 	cannot_move = 1
@@ -209,7 +209,7 @@ if place_meeting(x,y,effect_down_attack) && spin = 0 && attack_ = 0
 	if hit_cooltime = 0
 	{
 	var _attacker_ef = instance_place(x,y,effect_down_attack)
-	if test_mob_type = 0
+	if rage_active = 0
 	{
 	movement_speed = __i*0.9
 	cannot_move = 1
@@ -263,7 +263,7 @@ if place_meeting(x,y,effect_attack1) && spin = 0 && attack_ = 0
 	bloody(_attacker_ef.x,_attacker_ef.y,1)
 	last_hit = 1
 	gravity = 0.36
-	if test_mob_type = 0
+	if rage_active = 0
 	{
 	movement_speed = __i*2
 	cannot_move = 1
@@ -302,7 +302,7 @@ if place_meeting(x,y,effect_attack2) && spin = 0 && attack_ = 0
 	bloody(_attacker_ef.x,_attacker_ef.y,1)
 	last_hit = 1
 	gravity = 0.2
-	if test_mob_type = 0
+	if rage_active = 0
 	{
 	movement_speed = __i*2
 	cannot_move = 1
@@ -344,7 +344,7 @@ if place_meeting(x,y,effect_attack3) && spin = 0 && attack_ = 0
 	last_hit = 1
 	gravity = 0.2
 	hit_cooltime = 1
-	if test_mob_type = 0
+	if rage_active = 0
 	{
 	movement_speed = __i*2.5
 	cannot_move = 1
@@ -380,7 +380,7 @@ if place_meeting(x,y,effect_attack4) && spin = 0 && attack_ = 0
 	last_hit = 1
 	gravity = 0.36
 	hit_cooltime = 1
-	if test_mob_type = 0
+	if rage_active = 0
 	{
 	movement_speed = __i*7
 	cannot_move = 1
@@ -425,7 +425,7 @@ if place_meeting(x,y,effect_attack_s) && spin = 0 && attack_ = 0
 	last_hit = 1
 	gravity = 0.2
 	hit_cooltime = 1
-	if test_mob_type = 0
+	if rage_active = 0
 	{
 	movement_speed = __i*2.5
 	cannot_move = 1
@@ -455,7 +455,7 @@ if (place_meeting(x,y,rage_mode_knockback) || place_meeting(x,y,down_effect)) &&
 	last_hit = 1
 	gravity = 0.2
 	hit_cooltime = 1
-	if test_mob_type = 0
+	if rage_active = 0
 	{
 	movement_speed = 0
 	cannot_move = 1
@@ -496,7 +496,7 @@ if place_meeting(x,y,ef_blood_dash_attack) && spin = 0 && attack_ = 0
 	last_hit = 1
 	hit_cooltime = 1
 	gravity = 0.2
-	if test_mob_type = 0
+	if rage_active = 0
 	{
 	movement_speed += __i*2.5
 	vspeed -= 0.5
@@ -529,7 +529,7 @@ if place_meeting(x,y,charging_attack) && spin = 0 && attack_ = 0
 	hp_minus_for_mob(0,62)
 	gravity = 0.2
 	y --
-	if test_mob_type = 0
+	if rage_active = 0
 	{
 	movement_speed = -sign_k(-global.movement_speed)*13
 	cannot_move = 1
@@ -575,7 +575,7 @@ if place_meeting(x,y,effect_special_skill_sec) && spin = 0 && attack_ = 0
 	hp_minus_for_mob(0,14)
 	last_hit = 1
 	gravity = 0.2
-	if test_mob_type = 0
+	if rage_active = 0
 	{
 	movement_speed = __i*2.5
 	vspeed -= 0.1
@@ -610,7 +610,7 @@ if place_meeting(x,y,effect_special_skill) && spin = 0 && attack_ = 0
 	{
 	y -= 1
 	}
-	if test_mob_type = 0
+	if rage_active = 0
 	{
 	vspeed -= 0.6
 	}
@@ -631,7 +631,7 @@ if place_meeting(x,y,effect_special_skill) && spin = 0 && attack_ = 0
 	last_hit = 1
 	hit_cooltime = 1
 	gravity = 0.2
-	if test_mob_type = 0
+	if rage_active = 0
 	{
 	movement_speed = __i*4.3
 	vspeed -= 1

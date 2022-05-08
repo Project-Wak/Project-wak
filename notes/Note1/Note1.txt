@@ -1,3 +1,10 @@
+9 10 15 18
+
+
+
+
+
+
 if w_alpha > 0.05 && guarding > 0
 {
 	if keyboard_check_pressed(ord(string(global.a_key))) && fast_guarding > 0
@@ -29,7 +36,7 @@ if w_alpha > 0.05 && guarding > 0
 		}
 	}
 	
-	if keyboard_check_pressed(vk_down)
+	if keyboard_check_pressed(global.down_key)
 	{
 		if place_meeting(x,y+2,floor_parents) && hurt = 0 && hurt_little = 0
 		{
@@ -199,7 +206,7 @@ if (attack_ > 4 && attack_ <= 5) || (attack_ > 6.5 && attack_ <= 9) || (attack_ 
 	skill_combo_cancle_n_motion(1)
 	}
 	
-	if keyboard_check_pressed(vk_down)
+	if keyboard_check_pressed(global.down_key)
 	{
 		if place_meeting(x,y+2,floor_parents) && hurt = 0 && hurt_little = 0
 		{
@@ -346,7 +353,7 @@ if down_attack > 13
 	skill_combo_cancle_n_motion(1)
 	}
 	
-	if keyboard_check_pressed(vk_down)
+	if keyboard_check_pressed(global.down_key)
 	{
 		if place_meeting(x,y+2,floor_parents) && hurt = 0 && hurt_little = 0
 		{
@@ -470,7 +477,7 @@ if dash_attack >= 4.6
 	skill_combo_cancle_n_motion(1)
 	}
 	
-	if keyboard_check_pressed(vk_down)
+	if keyboard_check_pressed(global.down_key)
 	{
 		if place_meeting(x,y+2,floor_parents) && hurt = 0 && hurt_little = 0
 		{
@@ -527,7 +534,7 @@ if dash_attack >= 4.6
 	}
 	
 	
-	if keyboard_check_pressed(vk_space)
+	if keyboard_check_pressed(global.jump_key)
 	{
 		if global.nickname != "썩은물" && global.nickname != "씹찐따"
 		{
@@ -776,10 +783,10 @@ if global.grabed > 0 || hurt > 0 || skill_combo >= 1
 	image_index = 0
 	}
 	
-	if skill_red_ball_effect != -1
+	if instance_exists(skill_red_ball_effect)
 	{
 	instance_destroy(skill_red_ball_effect)
-	skill_red_ball_effect = -1
+	!instance_exists(skill_red_ball_effect)
 	}
 	
 	if guarding > 0
@@ -866,7 +873,7 @@ if global.run_key = vk_shift && keyboard_check_pressed(string(global.run_key))
 pressing = 1
 }
 
-if global.run_key = vk_up && keyboard_check_pressed(string(global.run_key))
+if global.run_key = global.guard_key && keyboard_check_pressed(string(global.run_key))
 {
 pressing = 1
 }
@@ -893,7 +900,7 @@ if global.e_key = vk_shift && keyboard_check(string(global.e_key))
 pressing = 1
 }
 
-if global.e_key = vk_up && keyboard_check(string(global.e_key))
+if global.e_key = global.guard_key && keyboard_check(string(global.e_key))
 {
 pressing = 1
 }
@@ -934,7 +941,7 @@ if global.never_move = 0 && global.never_move_in_setting = 0 && keyboard_check_r
 	{
 		if gravity = 0
 		{
-			if !keyboard_check(vk_down) && attack_laser = 0
+			if !keyboard_check(global.down_key) && attack_laser = 0
 			{
 				if down_attack_with_rage = 0 && cannot_move = 0 && cooltime = 0 && spin = 0 && down_attack_plusing = 0 && hurt = 0 && hurt_little = 0 && global.rage_gauge >= 27
 				{
@@ -997,7 +1004,7 @@ if global.never_move = 0 && global.never_move_in_setting = 0 && keyboard_check_r
 				}
 			}
 			
-			if keyboard_check(vk_down) && global.normal_attack_dmg >= 5 && down_attack_with_rage = 0
+			if keyboard_check(global.down_key) && global.normal_attack_dmg >= 5 && down_attack_with_rage = 0
 			{
 				if attack_laser = 0 && cannot_move = 0 && cooltime = 0 && spin = 0 && hurt = 0 && hurt_little = 0 && global.rage_gauge >= 80
 				{
@@ -1013,7 +1020,7 @@ if global.never_move = 0 && global.never_move_in_setting = 0 && keyboard_check_r
 				global.stamina_cooltime = 0
 				global.rage_gauge -= 80
 				
-				if skill_red_ball_effect = -1
+				if !instance_exists(skill_red_ball_effect)
 				{
 				skill_red_ball_effect = instance_create_depth(x+10*image_xscale,y+15,player.depth-1,red_circle_effect)
 				skill_red_ball_effect.image_xscale = 0.35
@@ -1852,8 +1859,8 @@ image_index = 7
 	
 		if spin_attack <= 7
 		{
-		var _pressing_a = keyboard_check(vk_left)
-		var _pressing_d = keyboard_check(vk_right)
+		var _pressing_a = keyboard_check(global.left_key)
+		var _pressing_d = keyboard_check(global.right_key)
 		
 		if image_xscale < 0
 		{
@@ -2243,7 +2250,7 @@ global.never_move = 1
 movement_speed = 0
 attack_laser += 0.1
 
-if skill_red_ball_effect != -1
+if instance_exists(skill_red_ball_effect)
 {
 	if round(image_index) < 1
 	{
@@ -2280,7 +2287,7 @@ if skill_red_ball_effect != -1
 	skill_red_ball_effect.x = x-9*image_xscale
 	skill_red_ball_effect.y = y+15
 	skill_red_ball_effect.des = 1
-	skill_red_ball_effect = -1
+	!instance_exists(skill_red_ball_effect)
 	}
 }
 	

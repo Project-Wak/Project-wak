@@ -10,6 +10,54 @@ for(var i = 0; i < 64; i++)
 	}
 }
 
+if vspeed < 0 && place_meeting(x,y+vspeed,floor_parents)
+{
+vspeed = 0
+}
+
+
+
+
+if hp_min != hp
+{
+rage_mode += hp_min - hp
+hp_min = hp
+}
+
+if rage_mode >= 300
+{
+rage_mode = 0
+rage_active = 1
+	repeat(2)
+	{
+	var __i = choose(-1,1)
+	var bl_ef = instance_create_depth(x,y,depth-1,ef_blood)
+	var img_scale = -__i*2
+	bl_ef.image_xscale = img_scale
+	bl_ef.image_yscale = abs(img_scale)
+	bl_ef.t_x = __i
+	bl_ef.image_angle = irandom_range(-90,90)
+	bl_ef.sfx_play = true
+	}
+damaged_count = 0
+var a_____ = instance_create_depth(x,y,depth,rage_mode_knockback_attacked)
+a_____.image_xscale = 3
+a_____.image_yscale = 3
+var skill_red_ball_effect_rage = instance_create_depth(x,y,depth-1,red_circle_effect)
+skill_red_ball_effect_rage.image_xscale = 0.45
+skill_red_ball_effect_rage.image_yscale = 0.45
+skill_red_ball_effect_rage.t_scale = 0.65
+skill_red_ball_effect_rage.alarm[11] = 7
+}
+
+if rage_active > 0
+{
+red_glow_effect(sprite_index,image_index,0.2)
+rage_active -= 0.003
+}
+
+
+
 
 if check_floor = -4 && force_move != 0
 {

@@ -1,11 +1,11 @@
 /// @description Insert description here
 // You can write your code in this editor
-depth = 1000
+depth = 1200
 image_speed = 0
 image_index = 0
 image_xscale = 1.5
 image_yscale = 1.5
-image_blend = c_black
+image_blend = c_white
 scene__ = 0
 spin = 0
 p_xscale = -1
@@ -25,8 +25,8 @@ laser2 = -4
 saved_player_dir = 0
 message_phase = 0
 check__ = -4
-hp = 2600
-max_hp = 2600
+hp = 2000
+max_hp = 2000
 cannot_move = 0
 cannot_step = 1
 random_quake = -1

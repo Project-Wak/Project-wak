@@ -24,8 +24,11 @@ if can_interect = 1 && keyboard_check_pressed(ord(string(global.skip_key))) && t
 //var sfx = audio_play_sound(activate_sfx,0,0)
 //audio_sound_gain(sfx,global.master_volume*2*global.sfx_volume,0)
 t_y = -64
-var	sfx__ = audio_play_sound(walk_sfx,0,false)
-audio_sound_gain(sfx__,0.3,0)
+	if room = room_sector_B06_2
+	{
+	var	sfx__ = audio_play_sound(walk_sfx,0,false)
+	audio_sound_gain(sfx__,0.3,0)
+	}
 global.never_move = 1
 global.t_b_alpha = 2.1
 }

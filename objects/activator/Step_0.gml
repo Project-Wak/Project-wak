@@ -112,33 +112,37 @@ if message_phase = 1
 		{
 		global.never_move = 1
 		global.playing_scene = 1
-			if keyboard_check_pressed(vk_left)
+			if keyboard_check_pressed(global.left_key)
 			{
 			var sfx = audio_play_sound(activate_sfx,0,0)
 			audio_sound_gain(sfx,global.master_volume*2*global.sfx_volume,0)
 			selected_sector --
 			}
 		
-			if keyboard_check_pressed(vk_right)
+			if keyboard_check_pressed(global.right_key)
 			{
 			var sfx = audio_play_sound(activate_sfx,0,0)
 			audio_sound_gain(sfx,global.master_volume*2*global.sfx_volume,0)
 			selected_sector ++
 			}
 		
-			if selected_sector < 2
+			if selected_sector < 1
 			{
 			selected_sector = global.opened_sector
 			}
 		
 			if selected_sector > global.opened_sector
 			{
-			selected_sector = 2
+			selected_sector = 1
 			}
 		
 			if selected_sector < 10
 			{
-				if selected_sector = 6
+				if selected_sector = 1
+				{
+				check__.text = "<-     (취소 하기)     ->"
+				}
+				else if selected_sector = 6
 				{
 				check__.text = "<-     (지하 하수도)     ->"
 				}
@@ -163,7 +167,7 @@ if message_phase = 1
 
 if global.tutorial = 1 && room = room_main
 {
-	if message_phase = 2 && !instance_exists(check__)
+	if message_phase = 2 && !instance_exists(check__) && selected_sector != 1
 	{
 	parents.destination = selected_sector
 	global.never_move = 1
@@ -172,6 +176,13 @@ if global.tutorial = 1 && room = room_main
 		{
 		activated *= -1
 		}
+	message_phase = 0
+	}
+	
+	if message_phase = 2 && !instance_exists(check__) && selected_sector = 1
+	{
+	global.never_move = 0
+	global.playing_scene = 0
 	message_phase = 0
 	}
 }

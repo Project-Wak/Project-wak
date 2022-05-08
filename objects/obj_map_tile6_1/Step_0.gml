@@ -53,7 +53,7 @@ global.back_stage_guide = 1
 }
 
 
-if global.b_alpha < 0.06 && global.show_guide_mes = -4
+if global.b_alpha < 0.06 && global.show_guide_mes = -4 && !instance_exists(master_volume_setting)
 {
 var xx = 1000
 var yy = irandom_range(120,0)

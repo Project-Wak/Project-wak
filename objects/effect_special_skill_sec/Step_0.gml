@@ -10,7 +10,7 @@ image_yscale += 0.026*4
 image_yscale += image_yscale*0.2
 
 
-if image_xscale < 0.7 && time <= 58
+if image_xscale < 0.5 && time <= 58
 {
 image_xscale += 0.026
 image_xscale += image_xscale*0.1
@@ -19,9 +19,9 @@ image_xscale += image_xscale*0.1
 
 
 
-if image_xscale > 0.7 && time <= 58
+if image_xscale > 0.4 && time <= 58
 {
-image_xscale = 0.7
+image_xscale = 0.4
 	if time = 0
 	{
 	time ++
@@ -76,7 +76,7 @@ a++
 
 if time > 48
 {
-image_xscale -= 0.026
+image_xscale -= 0.1
 image_xscale -= image_xscale*0.1
 	if image_xscale <= 0
 	{

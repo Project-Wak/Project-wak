@@ -48,7 +48,7 @@ if global.cursor = 1
 {
 image_alpha = 1
 
-	if keyboard_check(vk_left)
+	if keyboard_check(vk_left) || gamepad_button_check(0,gp_padl)
 	{
 	n_mouse_xx = mouse_x
 	n_mouse_yy = mouse_y
@@ -56,7 +56,7 @@ image_alpha = 1
 	mouse_move = 1
 	}
 	
-	if keyboard_check(vk_right)
+	if keyboard_check(vk_right) || gamepad_button_check(0,gp_padr)
 	{
 	n_mouse_xx = mouse_x
 	n_mouse_yy = mouse_y
@@ -64,7 +64,7 @@ image_alpha = 1
 	mouse_move = 1
 	}
 	
-	if keyboard_check(vk_up)
+	if keyboard_check(vk_up) || gamepad_button_check(0,gp_padu)
 	{
 	n_mouse_xx = mouse_x
 	n_mouse_yy = mouse_y
@@ -72,7 +72,7 @@ image_alpha = 1
 	mouse_move = 1
 	}
 	
-	if keyboard_check(vk_down)
+	if keyboard_check(vk_down) || gamepad_button_check(0,gp_padd)
 	{
 	n_mouse_xx = mouse_x
 	n_mouse_yy = mouse_y
