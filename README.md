@@ -7,3 +7,8 @@
 1인 개발로 만들었고, 음악 빼고 그림부터 코드까지 싹다 혼자 작업함;;
 
 플레이 해본 사람들 말로는 팬게임 수준을 넘어서 스팀 판매해도 되는 급 정도라고 해주심 (감사합니다 :D)
+
+
+![preview_1](imgs/prewview_1.gif)
+![preview_2](imgs/prewview_2.gif)
+![preview_3](imgs/prewview_3.gif)
