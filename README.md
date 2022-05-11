@@ -9,6 +9,6 @@
 플레이 해본 사람들 말로는 팬게임 수준을 넘어서 스팀 판매해도 되는 급 정도라고 해주심 (감사합니다 :D)
 
 
-![preview_1](imgs/prewview_1.gif)
-![preview_2](imgs/prewview_2.gif)
-![preview_3](imgs/prewview_3.gif)
+![preview_1](imgs/preview_1.gif)
+![preview_2](imgs/preview_2.gif)
+![preview_3](imgs/preview_3.gif)
