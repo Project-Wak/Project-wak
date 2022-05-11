@@ -1,18 +1,30 @@
 /// @description Insert description here
 // You can write your code in this editor
-if global.graphics_for_code <= 2
+if des = 1
 {
-image_alpha -= 0.02/global.graphics_for_code;
+	if global.graphics_for_code <= 2
+	{
+	image_alpha -= 0.1/global.graphics_for_code;
+	}
+	else
+	{
+	image_alpha -= 0.0125;
+	}
+
+	if image_alpha <= 0
+	{
+	instance_destroy();
+	};
 }
 else
 {
-image_alpha -= 0.005;
+a += (0  - a)*0.05;
+image_alpha += (alpha*1.5 - image_alpha)*0.1
+	if image_alpha > a
+	{
+	image_alpha = alpha
+	des = 1
+	}
 }
-a += 0.02;
-
-if image_alpha <= 0
-{
-instance_destroy();
-};
 
 hspeed += (0 - hspeed)*0.1;

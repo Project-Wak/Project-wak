@@ -23,6 +23,13 @@ if global.show_credits = 0
 }
 
 
+if global.visible_player = -1
+{
+v_x = 1280
+v_y = 720
+}
+
+
 var ins_ = global.boss_target
 if instance_exists(ins_)
 {

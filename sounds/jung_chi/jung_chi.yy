@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "jung_chi.mp3",
-  "duration": 7.2347,
+  "duration": 7.2297,
   "parent": {
     "name": "소리",
     "path": "folders/소리.yy",

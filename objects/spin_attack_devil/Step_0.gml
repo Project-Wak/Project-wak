@@ -34,7 +34,7 @@ ef.sprite_index = sprite_index
 ef.image_index = 7
 ef.image_xscale = image_xscale
 ef.image_yscale = image_yscale
-ef.image_alpha = 0.3
+ef.alpha = 0.3
 ef.image_angle = image_angle+_angle
 
 	if spin_attack_delay > 1

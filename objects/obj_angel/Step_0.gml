@@ -157,7 +157,7 @@ alpha += (0 - alpha)*0.1
 
 if scene__ > 0 && activated != 2
 {
-	if player.attack_laser_sec = 0 && player.attack_laser = 0 && player.suicide = 0
+	if player.attack_laser_sec = 0 && player.attack_laser = 0 && player.suicide = 0 && player.sting_attack = 0
 	{
 		if global.show_credits = 0
 		{

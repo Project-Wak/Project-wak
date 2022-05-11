@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "spin_sfx.mp3",
-  "duration": 0.6836,
+  "duration": 0.6786,
   "parent": {
     "name": "소리",
     "path": "folders/소리.yy",

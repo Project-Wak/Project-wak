@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-if can_draw = 1 && global.show_guide_mes = -4
+if can_draw = 1 && global.show_guide_mes = -4 && global.show_ui = 1
 {
 draw_set_alpha(image_alpha)
 draw_self()

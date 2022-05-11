@@ -1,7 +1,7 @@
 {
   "conversionMode": 0,
   "compression": 0,
-  "volume": 0.3,
+  "volume": 0.31,
   "preload": false,
   "bitRate": 512,
   "sampleRate": 48000,
@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "sagaji",
-  "duration": 1.3361,
+  "duration": 1.3311,
   "parent": {
     "name": "소리",
     "path": "folders/소리.yy",

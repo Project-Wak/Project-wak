@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-if global.show_credits = 0
+if global.show_credits = 0 && global.show_ui = 1
 {
 var v_x = obj_camera.v_x/1280
 var cm_x = camera_get_view_x(view_camera[0])

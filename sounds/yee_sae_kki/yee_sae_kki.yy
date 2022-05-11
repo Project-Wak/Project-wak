@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "yee_sae_kki.mp3",
-  "duration": 1.39700007,
+  "duration": 1.392,
   "parent": {
     "name": "소리",
     "path": "folders/소리.yy",

@@ -30,12 +30,13 @@ draw_text_k_scale(xx,yy+v_x*350,"accessories : "+string(global.accessories_equip
 
 
 
-
+if global.show_ui = 1
+{
 var xx = camera_get_view_x(view_camera[0])
 var yy = camera_get_view_y(view_camera[0])+camera_get_view_height(view_camera[0])*0.35
 
 draw_text_kl_scale(camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])-v_x*16,camera_get_view_y(view_camera[0])+camera_get_view_height(view_camera[0])-40*v_x,"* "+string(global.dev_message),32,-1,global.dev_message_alpha,c_gray,0,1,font0,1/3*v_x,1/3*v_x,0)
-
+}
 
 
 

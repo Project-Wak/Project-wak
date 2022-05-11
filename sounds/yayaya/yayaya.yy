@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "yayaya",
-  "duration": 1.2056,
+  "duration": 1.2006,
   "parent": {
     "name": "소리",
     "path": "folders/소리.yy",

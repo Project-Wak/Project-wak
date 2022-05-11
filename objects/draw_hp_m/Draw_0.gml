@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-if can_draw = 1 && global.playing_scene = 0
+if can_draw = 1 && global.playing_scene = 0 && global.show_ui = 1
 {
 a ++
 

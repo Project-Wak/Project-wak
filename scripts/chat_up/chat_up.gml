@@ -58,6 +58,14 @@ audio_sound_gain(sfx,0.07*global.master_volume*2*global.sfx_volume,0)
 		global.noclip *= -1
 		chat_up("debug) global.noclip = "+string(global.noclip))
 		}
+		else if argument0 = "/ui"
+		{
+		global.show_ui *= -1
+		}
+		else if argument0 = "/pv"
+		{
+		global.visible_player *= -1
+		}
 		else if argument0 = "/free_hp"
 		{
 		global.free_hp *= -1

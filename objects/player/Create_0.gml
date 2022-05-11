@@ -25,6 +25,8 @@ tiredness = 0
 poison_alpha = 0
 total_laser_num = 0
 n_broken_clock = 0
+sting_attack_obj = 0
+sting_attack_timer = 0
 
 //if global.guide_message_chat = 0
 //{

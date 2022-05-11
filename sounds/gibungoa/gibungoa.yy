@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "gibungoa",
-  "duration": 1.3622,
+  "duration": 1.3572,
   "parent": {
     "name": "소리",
     "path": "folders/소리.yy",

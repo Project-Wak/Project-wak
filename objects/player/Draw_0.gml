@@ -1,3 +1,5 @@
+if global.visible_player = 1
+{
 var v_x = obj_camera.v_x/1280
 var cm_width = camera_get_view_width(view_camera[0])
 var cm_height = camera_get_view_height(view_camera[0])
@@ -153,4 +155,5 @@ if instance_exists(obj_worm)
 	draw_set_alpha(obj_worm.w_alpha)
 	draw_line_width(player.x,2329,player.x,player.y-1000,obj_worm.w_alpha)
 	}
+}
 }

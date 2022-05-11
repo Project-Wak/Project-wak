@@ -138,7 +138,7 @@ b_alpha_ += (t_b_alpha_ - b_alpha_)*0.08
 
 	if scene__ > 0 && activated != 2
 	{
-		if player.attack_laser_sec = 0 && player.attack_laser = 0 && player.suicide = 0
+		if player.attack_laser_sec = 0 && player.attack_laser = 0 && player.suicide = 0 && player.sting_attack = 0
 		{
 			if global.show_credits = 0
 			{
@@ -157,7 +157,7 @@ b_alpha_ += (t_b_alpha_ - b_alpha_)*0.08
 			{
 			global.boss_target = id
 			global.boss_name = "암흑속의 심해두"
-			if player.attack_laser_sec = 0 && player.attack_laser = 0 && player.suicide = 0
+			if player.attack_laser_sec = 0 && player.attack_laser = 0 && player.suicide = 0 && player.sting_attack = 0
 			{
 			obj_camera.tv_x = 1280
 			obj_camera.tv_y = 720

@@ -38,7 +38,7 @@ if activated = 1
 			player.y += (y - player.y)*0.34
 			}
 			
-			if player.attack_laser_sec = 0 && player.attack_laser = 0 && player.suicide = 0
+			if player.attack_laser_sec = 0 && player.attack_laser = 0 && player.suicide = 0 && player.sting_attack = 0
 			{
 			obj_camera.tv_x = 1280*0.7
 			obj_camera.tv_y = 720*0.7

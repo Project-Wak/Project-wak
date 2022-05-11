@@ -132,7 +132,7 @@ global.poison_tuto = 1
 
 
 
-if global.room_brightness/(global.n_night+1) <= 0.35 && room != room_sector_outside
+if global.room_brightness/(global.n_night+1) <= 0.35 && room != room_sector_outside && image_alpha > 0 && global.visible_player = 1
 {
 	if global.lenturn = 1
 	{
@@ -185,6 +185,12 @@ else
 
 var on_floor = place_meeting(x,y+1,floor_parents)
 var on_stair = place_meeting(x,y+5,stair_parents)
+
+if global.noclip = 1
+{
+on_floor = true
+}
+
 
 if on_stair = true && on_floor = false
 {
@@ -290,14 +296,28 @@ if global.noclip = 1
 {
 gravity = 0
 vspeed = 0
-	if keyboard_check(global.left_key) || gamepad_button_check(0,gp_padl)
+	if (keyboard_check(global.left_key) || gamepad_button_check(0,gp_padl))
 	{
-	x -= 20
+		if global.visible_player = 1
+		{
+		x -= 20
+		}
+		else
+		{
+		global.movement_speed += (0 - global.movement_speed)*0.1
+		}
 	}
 	
-	if keyboard_check(global.right_key) || gamepad_button_check(0,gp_padr)
+	if (keyboard_check(global.right_key) || gamepad_button_check(0,gp_padr))
 	{
-	x += 20
+		if global.visible_player = 1
+		{
+		x += 20
+		}
+		else
+		{
+		global.movement_speed += (0 - global.movement_speed)*0.1
+		}
 	}
 	
 	if keyboard_check(global.jump_key) || keyboard_check(global.guard_key) || gamepad_button_check(0,gp_padu)
@@ -3327,92 +3347,66 @@ global.awakening = 0
 
 if global.never_move = 0 && global.never_move_in_setting = 0 && keyboard_check_released(ord(string(global.e_key))) && w_alpha < 0.17 && global.chat_activity = false
 {
-	//if !on_floor = true
-	//{
+	if on_floor != true && (global.accessories_equip[0] = 19 || global.accessories_equip[1] = 19)
+	{
 	//지진파 
 	//show_debug_message(string(cannot_move)+" / "+string(spin)+" / "+string(down_attack_plusing)+" / "+string(hurt)+" / "+string(global.rage_gauge)+" / "+string(hurt_little)+" / ")
-	//if down_attack_with_rage = 0 && global.rage_gauge >= 27 && down_attack = 0 && cannot_move = 1 && jump > 0 && cooltime = 0 && spin = 0 && down_attack_plusing = 0 && hurt = 0 && hurt_little = 0
-	//{
-	//vspeed = 2
-	//	if instance_exists(obj_platform)
-	//	{
-	//	obj_platform.on_platform = 0
-	//	}
-	//down_attack_with_rage = 1
-	//cooltime = 1
-	//cannot_move = 1
-	//jump = 0
-	//jump_end_motion = 0
-	//jump_vsp_up = 1
-	//cooltime = 1
-	//movement_speed = 0
+		if sting_attack = 0 && global.rage_gauge >= 90 && down_attack = 0 && cannot_move = 1 && jump > 0 && cooltime = 0 && spin = 0 && down_attack_plusing = 0 && hurt = 0 && hurt_little = 0
+		{
+		vspeed = -4
+		sfx_for_multiplayer(choose(swing_lightsaber_sfx2,swing_lightsaber_sfx3),0,0.1)
+		
+		if global.voice_option = 0
+		{
+		sfx_for_multiplayer(ready_swording,0,0.3)
+		}
+		sting_attack = 1
+		cooltime = 1
+		cannot_move = 1
+		jump = 0
+		jump_end_motion = 0
+		jump_vsp_up = 1
+		cooltime = 1
+		movement_speed = 0
 
-	//global.stamina_cooltime = 0
-	//global.rage_gauge -= 27
+		global.stamina_cooltime = 0
+		global.rage_gauge -= 90
 				
 
-	//var skill_red_ball_effect_rage = instance_create_depth(x,y,player.depth-1,red_circle_effect)
-	//skill_red_ball_effect_rage.image_xscale = 0.8
-	//skill_red_ball_effect_rage.image_yscale = 0.8
-	//skill_red_ball_effect_rage.t_scale = 0.8
-	//skill_red_ball_effect_rage.alarm[11] = 7
+		var skill_red_ball_effect_rage = instance_create_depth(x,y,player.depth-1,red_circle_effect)
+		skill_red_ball_effect_rage.image_xscale = 0.8
+		skill_red_ball_effect_rage.image_yscale = 0.8
+		skill_red_ball_effect_rage.t_scale = 0.8
+		skill_red_ball_effect_rage.alarm[11] = 7
+	
+		var skill_red_ball_effect_rage = instance_create_depth(x,y,player.depth-1,obj_lightning_player)
+	
 
 			
-	//	if global.awakening >= 1
-	//	{
-	//	global.awakening -= 0.3
-	//	}
+			if global.awakening >= 1
+			{
+			global.awakening -= 0.9
+			}
 			
-	//sfx_for_multiplayer(sound5,0,0.13)
+		sfx_for_multiplayer(sound5,0,0.1)
 				
 				
-			
-	//w_alpha = 1
+		w_alpha = 1
 
-	//var __i = choose(-1,1)
-	//var bl_ef = instance_create_depth(x,y,depth-1,ef_blood)
-	//var img_scale = -__i*irandom_range(8,15)/5
-	//bl_ef.image_xscale = img_scale*0.5
-	//bl_ef.image_yscale = abs(img_scale)*0.5
-	//bl_ef.t_x = __i
-	//bl_ef.image_angle = irandom_range(-90,90)
+		var __i = choose(-1,1)
+		var bl_ef = instance_create_depth(x,y,depth-1,ef_blood)
+		var img_scale = -__i*irandom_range(8,15)/5
+		bl_ef.image_xscale = img_scale*0.5
+		bl_ef.image_yscale = abs(img_scale)*0.5
+		bl_ef.t_x = __i
+		bl_ef.image_angle = irandom_range(-90,90)
 			
 
 				
-	//sfx_for_multiplayer(swing_lightsaber_sfx1,0,0.1)
-	//show_debug_message("down_with_rage")
-	//}
-	//else
-	//{
-	//var sfx = audio_play_sound(cannot_buy,0,0)
-	//audio_sound_gain(sfx,0.2*global.master_volume*2*global.sfx_volume,0)
-	//show_debug_message("down_with_rage")
-	//}
-//if down_attack_with_rage = 0 && global.chat_activity = false
-	//{
-	//	if attack_in_air = 0 && cooltime = 0 && spin = 0 && hurt = 0 && hurt_little = 0 && global.rage_gauge >= 25
-	//	{
-	//	image_index = 0
-	//	attack_in_air = 2.92
-	//	attack_in_air_cool = 1
-	//	cooltime = 1
-	//	cannot_move = 1
-	//	global.stamina_cooltime = 0
-	//	global.rage_gauge -= 25
-	//	
-	//		if global.awakening >= 1
-	//		{
-	//		global.awakening -= 0.25
-	//		}
-	//	alarm[5] = 10
-	//	}
-	//	else
-	//	{
-	//	var sfx = audio_play_sound(cannot_buy,0,0)
-	//	audio_sound_gain(sfx,0.2*global.master_volume*2*global.sfx_volume,0)
-	//	}
-	//}
-	//}
+		sfx_for_multiplayer(swing_lightsaber_sfx1,0,0.1)
+		show_debug_message("down_with_rage")
+		}
+	}
 	
 	
 	if check_d_press_e = 0
@@ -3822,7 +3816,7 @@ red_glow_effect(sprite_index,image_index,0.2)
 	ef.image_index = image_index
 	ef.image_xscale = image_xscale
 	ef.image_yscale = image_yscale
-	ef.image_alpha = 0.2*image_alpha
+	ef.alpha = 0.2*image_alpha
 	ef.image_angle = image_angle+spin_attack_angle_p*60*(abs(image_xscale)/image_xscale)+10*(abs(image_xscale)/image_xscale);
 	}
 
@@ -3992,65 +3986,82 @@ movement_speed += (0 - movement_speed)*0.1
 
 if sting_attack > 0 && jump_attack = 0 && down_attack = 0
 {
-sprite_index = sting_sprite
-sting_attack += 0.3
+obj_camera.tv_x = 1280
+obj_camera.tv_y = 720
+sprite_index = spr_throw
+gravity = 0
+vspeed += (-0.5 - vspeed)*0.07
+sting_attack_timer ++
+cannot_move = 1
+global.movement_speed = 0
 
-	if attack_sting_sfx = 0
+	if sting_attack_timer > 90
 	{
-	y -= 1
-	sfx_for_multiplayer(charging_sfx,false,0.3)
+	sting_attack += 0.3
+	image_index = sting_attack
+	}
+
+var target_ = instance_nearest(x,y,mob_parents)
+var t_angle = point_direction(x,y,x-image_xscale*64,y+64)
+	if instance_exists(target_)
+	{
+	t_angle = point_direction(x,y,target_.x,target_.y+160)
+	}
+
+	if sting_attack_obj = 0
+	{
+	obj_camera.t_x = player.x
+	obj_camera.t_y = player.y+128
+	sting_attack_obj = 1
+	var lightning__ = instance_create_depth(player.x-image_xscale*64,player.y,player.depth-1,lightning_spear)
+	lightning__.direction = 180+image_xscale*5
+	lightning__.des = -1
+	w_alpha = 1
+	}
+
+
+	if attack_sting_sfx = 0 && image_index > 2.5 && sting_attack_timer > 90
+	{
+	obj_camera.t_x = player.x-image_xscale*480
+	obj_camera.x += (player.x-image_xscale*480 - obj_camera.x)*0.17
+	view_shake(2,15,5)
+	//movement_speed = image_xscale*7
+		if instance_exists(lightning_spear)
+		{
+		lightning_spear.des = 0
+		lightning_spear.direction = t_angle
+		}
+	y -= 3
+	vspeed = -4
+	sfx_for_multiplayer(jump_attack_sfx,false,0.3)
 	attack_sting_sfx = 1
 	
-	var effect_ = instance_create_depth(x-global.movement_speed*13,y-16,player.depth+1,down_effect)
-	effect_.t_image_yscale = 0.4*3
-	effect_.t_image_xscale = 0.05*3
-	effect_.received = 0
+	var effect_ = instance_create_depth(x-image_xscale*16,y-18,player.depth+1,down_effect_for_laser)
+	effect_.image_blend = c_black
+	effect_.t_image_xscale = 0.3*4*image_yscale/2
+	effect_.t_image_yscale = 0.05*3*image_yscale/2
+	effect_.image_xscale = 2.5/2
+	effect_.image_yscale = 0.8/2
+	effect_.image_xscale = 2.5
+	effect_.image_yscale = 0.8
+	effect_.alarm[1] = 15
+	effect_.image_angle = t_angle+90
 	}
 	
-	if image_angle < 6*image_xscale
+	if image_index >= 5 && sting_attack_timer > 90
 	{
-	image_angle += 0.5*image_xscale
-	}
-	
-	if image_angle > 6*image_xscale
-	{
-	image_angle += 0.5*image_xscale
-	}
-
-	
-	
-	
-	if on_floor = true && sting_attack > 1 && spin = 0
-	{
-	image_angle = 0
-	image_index = 0
-	sting_attack = 0
+	sprite_index = jump_sprite
+	jump = 1
+	sting_attack_obj = 0
 	attack_sting_sfx = 0
-	sting_attack_effect = 0
-	gravity = 0
-	vspeed = 0
-	
-	spin = 1
-	cannot_move = 1
-	cooltime = 1
-	global.stamina_cooltime = 0
-	global.movement_speed = 0
-	movement_speed *= 0.35
-	
-		repeat(choose(6,7,7,8,8,9,9,9,10,10,11,12))
-		{
-		randomize()
-		var dust = instance_create_depth(x+irandom_range(-2,2),y+28+irandom_range(-2,2),depth+1,pepsi_effect)
-		dust.image_xscale = 0.13
-		dust.image_yscale = 0.13
-		dust.vspeed = -irandom_range(100,200)/200
-		dust.hspeed = (-global.movement_speed*irandom_range(10,50)/50)+irandom_range(-20,20)/5
-		dust.image_alpha = 0.4
-		}
-	}
-	else
-	{
-	gravity = 0.2/global.low_gravity_plus
+	sting_attack = 0
+	sting_attack_timer = 0
+	cannot_move = 0
+	cooltime = 0
+	cannot_move = 0
+	guarding = -1
+	obj_camera.t_x = -4
+	obj_camera.t_y = -4
 	}
 }
 
@@ -4703,6 +4714,7 @@ sprite_index = attack_laser_sprite_sec
 
 	if instance_exists(skill_red_ball_effect)
 	{
+	red_glow_effect(sprite_index,image_index,0.5)
 	obj_camera.x = player.x
 	obj_camera.tv_x -= 1280*0.1
 	obj_camera.tv_y -= 720*0.1
@@ -4841,6 +4853,7 @@ if attack_laser > 0 && spin_attack = 0
 
 		if instance_exists(skill_red_ball_effect)
 		{
+		red_glow_effect(sprite_index,image_index,0.5)
 		obj_camera.x = player.x
 		obj_camera.tv_x -= 1280*0.1
 		obj_camera.tv_y -= 720*0.1

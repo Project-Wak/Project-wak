@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "go_out_die.mp3",
-  "duration": 1.2839,
+  "duration": 1.2789,
   "parent": {
     "name": "소리",
     "path": "folders/소리.yy",

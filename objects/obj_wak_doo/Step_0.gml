@@ -157,7 +157,7 @@ if scene__ > 0 && activated != 2
 {
 	if global.show_credits = 0
 	{
-		if player.attack_laser_sec = 0 && player.attack_laser = 0 && player.suicide = 0
+		if player.attack_laser_sec = 0 && player.attack_laser = 0 && player.suicide = 0 && player.sting_attack = 0
 		{
 		obj_camera.tv_x = 1280*0.9
 		obj_camera.tv_y = 720*0.9
@@ -174,7 +174,7 @@ else
 		{
 		global.boss_target = id
 		global.boss_name = "프로토타입 거대 왁두 mk.2"
-			if player.attack_laser_sec = 0 && player.attack_laser = 0 && player.suicide = 0
+			if player.attack_laser_sec = 0 && player.attack_laser = 0 && player.suicide = 0 && player.sting_attack = 0
 			{
 			obj_camera.tv_x = 1280
 			obj_camera.tv_y = 720

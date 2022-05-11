@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-	if player.attack_laser_sec = 0 && player.attack_laser = 0 && player.suicide = 0
+	if player.attack_laser_sec = 0 && player.attack_laser = 0 && player.suicide = 0 && player.sting_attack = 0
 	{
 	obj_camera.tv_x = 1280*0.9
 	obj_camera.tv_y = 720*0.9
@@ -684,7 +684,7 @@ obj_camera.t_x = 5650
 			ef.image_index = 7
 			ef.image_xscale = image_xscale
 			ef.image_yscale = image_yscale
-			ef.image_alpha = 0.2*image_alpha
+			ef.alpha = 0.2*image_alpha
 			ef.image_angle = image_angle+_angle
 			}
 			

@@ -10,7 +10,7 @@ ef.sprite_index = argument0
 ef.image_index = argument1
 ef.image_xscale = image_xscale
 ef.image_yscale = image_yscale
-ef.image_alpha = argument2*image_alpha
+ef.alpha = argument2*image_alpha
 ef.image_angle = image_angle
 return ef;
 }

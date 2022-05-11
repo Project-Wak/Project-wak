@@ -333,7 +333,7 @@ else
 
 		if patturn = 0
 		{
-			if player.attack_laser_sec = 0 && player.attack_laser = 0 && player.suicide = 0
+			if player.attack_laser_sec = 0 && player.attack_laser = 0 && player.suicide = 0 && player.sting_attack = 0
 			{
 			obj_camera.tv_x = 1280*1.1
 			obj_camera.tv_y = 720*1.1
@@ -402,7 +402,7 @@ else
 		
 		if patturn >= 1 && patturn < 2
 		{
-			if player.attack_laser_sec = 0 && player.attack_laser = 0 && player.suicide = 0
+			if player.attack_laser_sec = 0 && player.attack_laser = 0 && player.suicide = 0 && player.sting_attack = 0
 			{
 			obj_camera.tv_x = 1280*1.1
 			obj_camera.tv_y = 720*1.1
@@ -470,7 +470,7 @@ else
 		
 		if patturn >= 2 && patturn < 3
 		{
-			if player.attack_laser_sec = 0 && player.attack_laser = 0 && player.suicide = 0
+			if player.attack_laser_sec = 0 && player.attack_laser = 0 && player.suicide = 0 && player.sting_attack = 0
 			{
 			obj_camera.tv_x = 1280*1.1
 			obj_camera.tv_y = 720*1.1
@@ -560,7 +560,7 @@ else
 			image_angle += (point_direction(x,y,player.x,player.y) - image_angle)*0.03
 			}
 			
-			if player.attack_laser_sec = 0 && player.attack_laser = 0 && player.suicide = 0
+			if player.attack_laser_sec = 0 && player.attack_laser = 0 && player.suicide = 0 && player.sting_attack = 0
 			{
 			obj_camera.tv_x = 1280*1.1
 			obj_camera.tv_y = 720*1.1
@@ -601,7 +601,7 @@ else
 		
 		if patturn >= 4 && patturn < 5
 		{
-			if player.attack_laser_sec = 0 && player.attack_laser = 0 && player.suicide = 0
+			if player.attack_laser_sec = 0 && player.attack_laser = 0 && player.suicide = 0 && player.sting_attack = 0
 			{
 			obj_camera.tv_x = 1280*1.1
 			obj_camera.tv_y = 720*1.1
@@ -686,7 +686,7 @@ else
 		
 		if patturn >= 5 && patturn < 6
 		{
-			if player.attack_laser_sec = 0 && player.attack_laser = 0 && player.suicide = 0
+			if player.attack_laser_sec = 0 && player.attack_laser = 0 && player.suicide = 0 && player.sting_attack = 0
 			{
 			obj_camera.tv_x = 1280*1.1
 			obj_camera.tv_y = 720*1.1

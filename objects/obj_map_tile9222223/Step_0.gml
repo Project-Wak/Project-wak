@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 
-if player.attack_laser_sec = 0 && player.attack_laser = 0 && player.suicide = 0
+if player.attack_laser_sec = 0 && player.attack_laser = 0 && player.suicide = 0 && player.sting_attack = 0
 {
 	if !instance_exists(obj_simhae_doo) && !instance_exists(obj_guisangadoo)
 	{

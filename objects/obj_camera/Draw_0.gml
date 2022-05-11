@@ -7,7 +7,7 @@ var yy2 = yy+camera_get_view_height(view_camera[0])
 var v_x_ = obj_camera.v_x/1280
 var __alpha_set = 1-global.b_alpha_prt-global.b_alpha
 
-if global.left_time > 0 && global.show_credits = 0
+if global.left_time > 0 && global.show_credits = 0 && global.show_ui = 1
 {
 	if (instance_exists(player) && global.clock > 0) && (global.playing_scene = 0 && global.never_move_in_setting = 0 && global.b_alpha < 0.2)
 	{

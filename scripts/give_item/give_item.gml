@@ -77,6 +77,11 @@ function give_item(argument0,argument1)
 		{
 		chat_up("탈리스만 '하트 크리스탈'를 획득하였다!")
 		}
+		
+		if _cal__ = 19
+		{
+		chat_up("탈리스만 '바다의 왕의 삼지창'를 획득하였다!")
+		}
 	}
 	else if argument0 = 2
 	{

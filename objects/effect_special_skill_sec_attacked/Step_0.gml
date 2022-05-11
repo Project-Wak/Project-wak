@@ -64,7 +64,7 @@ a++
 	ef.image_index = 0
 	ef.image_xscale = saved_xscale
 	ef.image_yscale = saved_yscale*0.8
-	ef.image_alpha = 0.05*image_alpha
+	ef.alpha = 0.05*image_alpha
 	ef.image_angle = image_angle
 	}
 }

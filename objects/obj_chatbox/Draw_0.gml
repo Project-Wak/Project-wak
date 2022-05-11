@@ -1,3 +1,5 @@
+if global.show_ui = 1
+{
 var xx = camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])
 var yy = camera_get_view_y(view_camera[0])+camera_get_view_height(view_camera[0])-global.camera_vx*64
 var v_x = global.camera_vx
@@ -36,4 +38,5 @@ else
 		draw_text_kl_scale(xx-v_x*(320-16),yy+32*v_x-v_x*i*24,chat[i],v_x*64,-1,alpha_for_newchat,c_white,0,-1,font0,v_x*0.3,v_x*0.3,0);
 		}
 	}
+}
 }

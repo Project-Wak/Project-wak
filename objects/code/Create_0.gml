@@ -23,6 +23,8 @@ global.cursor = 1
 global.replayed = 0
 global.player_blur = 0
 global.player_blur_time = 0
+global.show_ui = 1
+global.visible_player = 1
 for(var i = 0; i <= 6; i++)
 {
 global.achievement[i] = -4
@@ -352,7 +354,7 @@ global.weapon_owned[i] = 0
 global.weapon_upgraded[i] = 0
 }
 	
-var total_accessories = 18
+var total_accessories = 19
 global.total_accessories_num = total_accessories
 for(var i = 0; i <= total_accessories; i++)
 {

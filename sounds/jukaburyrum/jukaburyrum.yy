@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "jukaburyrum.mp3",
-  "duration": 1.2578,
+  "duration": 1.2528,
   "parent": {
     "name": "소리",
     "path": "folders/소리.yy",
