@@ -1,5 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
+image_blend = c_white
 var xx_ = x+irandom_range(-16,16)
 var yy_ = y+irandom_range(-16,16)
 repeat(2)
@@ -705,6 +706,7 @@ else
 			_aaa = instance_create_depth(x-random_dir*24,y-16,depth-1,effect_special_skill_sec_attacked)
 			_aaa.image_angle = point_direction(x,y,player.x,player.y)-90
 			_aaa.direction = point_direction(x,y,player.x,player.y)-90
+			_aaa.maximum_size = 0.7
 			_aaa.color_1 = c_white
 			_aaa.color_2 = $FF1C1CB2
 			_aaa.color_3 = $FF6D52F2

@@ -41,24 +41,27 @@ global.n_night = 0
 }
 
 
-if (room = room_sector_B02_1 || room = room_sector_B02_2 || room = room_sector_B03_1 || room = room_sector_B03_2 || room = room_sector_B04_2 || room = room_sector_B05_2 || room = room_sector_B06_2 || room = room_sector_B03_2_remaked || room = room_sector_B03_3_remaked) && !audio_is_playing(boss_bgm)
+if instance_exists(player) && player.image_alpha > 0
 {
-	if audio_is_playing(dungeon_bgm)
+	if (room = room_sector_B02_1 || room = room_sector_B02_2 || room = room_sector_B03_1 || room = room_sector_B03_2 || room = room_sector_B04_2 || room = room_sector_B05_2 || room = room_sector_B06_2 || room = room_sector_B03_2_remaked || room = room_sector_B03_3_remaked) && !audio_is_playing(boss_bgm)
 	{
-	dg_vol += (1 - dg_vol)*0.08
-	audio_sound_gain(in_dg_bgm,0.3*global.master_volume*global.bgm_volume*dg_vol,0)
+		if audio_is_playing(dungeon_bgm)
+		{
+		dg_vol += (1 - dg_vol)*0.08
+		audio_sound_gain(in_dg_bgm,0.3*global.master_volume*global.bgm_volume*dg_vol,0)
+		}
+		else
+		{
+		in_dg_bgm = audio_play_sound(dungeon_bgm,0,true)
+		}
 	}
 	else
 	{
-	in_dg_bgm = audio_play_sound(dungeon_bgm,0,true)
-	}
-}
-else
-{
-dg_vol += (-0.1 - dg_vol)*0.08
-	if dg_vol <= 0
-	{
-	audio_stop_sound(dungeon_bgm)
+	dg_vol += (-0.1 - dg_vol)*0.08
+		if dg_vol <= 0
+		{
+		audio_stop_sound(dungeon_bgm)
+		}
 	}
 }
 

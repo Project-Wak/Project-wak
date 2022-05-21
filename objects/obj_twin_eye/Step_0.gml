@@ -1,5 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
+image_blend = c_white
 if hp <= 0
 {
 global.boss_target = -4
@@ -754,11 +755,11 @@ else
 			
 					var _bullet__ = instance_create_depth(left_eye.x,left_eye.y,depth+1,obj_bullet)
 					_bullet__.bullet_speed = 13;
-					_bullet__.direction = point_direction(left_eye.x,left_eye.y,player.x+sign(global.movement_speed)*scale_,player.y)
+					_bullet__.direction = point_direction(left_eye.x,left_eye.y,player.x+sign(floor(global.movement_speed))*scale_,player.y)
 			
 					var _bullet__ = instance_create_depth(x,y,depth+1,obj_bullet)
 					_bullet__.bullet_speed = 13;
-					_bullet__.direction = point_direction(x,y,player.x+sign(global.movement_speed)*scale_,player.y)
+					_bullet__.direction = point_direction(x,y,player.x+sign(floor(global.movement_speed))*scale_,player.y)
 					}
 				}
 				

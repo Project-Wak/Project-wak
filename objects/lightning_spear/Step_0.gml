@@ -8,8 +8,16 @@ speed += (42 - speed)*0.1
 
 if des = -1
 {
-x = player.x+lengthdir_x(64,direction)
-y = player.y+6
+	if direction != 270
+	{
+	x = player.x+lengthdir_x(64,direction)
+	y = player.y+6
+	}
+	else
+	{
+	x = player.x+player.image_xscale*10
+	y = player.y
+	}
 }
 
 

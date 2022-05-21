@@ -832,6 +832,7 @@ obj_camera.t_x = 5650
 		_aaa.color_1 = c_white
 		_aaa.color_2 = $FF1C1CB2
 		_aaa.color_3 = $FF6D52F2
+		_aaa.maximum_size = 0.4
 		}
 	
 		if attack_laser_sec > 18

@@ -4,6 +4,8 @@ function skill_combo_cancle_n_motion(argument0)
 {
 	if (argument0 = 1) || (hurt > 0 || cancled_attack > 0)
 	{
+	pressed_space = 0
+	
 		if sting_attack > 0
 		{
 		global.movement_speed *= 0.5

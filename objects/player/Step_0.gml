@@ -1,3 +1,9 @@
+if keep_spinning > 0
+{
+keep_spinning --
+global.stamina_cooltime = -keep_spinning
+}
+
 if place_meeting(x,y,obj_water_inside) || place_meeting(x,y-18,obj_water_front)
 {
 o2_timer ++
@@ -1548,6 +1554,26 @@ w_alpha += (-0.01 - w_alpha)*0.1
 				instance_destroy(_placed_obj)
 				}
 			}
+			
+			
+			var _placed_obj = instance_place(x,y,obj_simhaedoo_ring)
+			if _placed_obj >= 0 && _placed_obj.image_alpha > 0.4
+			{
+			var check_guard = sign(x - _placed_obj.x)
+				if hurt_cooltime = 0
+				{
+				hurt = 1
+				hurt_cooltime = 8
+				movement_speed = check_guard*6
+				hp_minus_for_player(333,_placed_obj)
+				
+			
+				
+				y -= 2.5
+				vspeed = -4
+				sfx_for_multiplayer(choose(global.hit_sfx_1,global.hit_sfx_2,global.hit_sfx_3),0,0.2)
+				}
+			}
 		
 		
 			var _placed_obj = instance_place(x,y,angel_ring_attack)
@@ -2487,15 +2513,6 @@ w_alpha += (-0.01 - w_alpha)*0.1
 			
 				
 /////////////////////////////////////////////////////////////////////////////////////////	
-	
-	if keyboard_check(global.jump_key) || gamepad_button_check(0,global.jump_key)
-	{
-		if pressed_space = 1
-		{
-		pressed_space = 0
-		}
-	}
-	
 	if (keyboard_check_pressed(global.jump_key) || gamepad_button_check_pressed(0,global.jump_key)) && global.chat_activity = false
 	{
 		if global.never_move = 0 && global.never_move_in_setting = 0 && (gravity = 0 || hurt > 5 || place_meeting(x,y,obj_water_inside) || place_meeting(x,y,obj_water_front))
@@ -2520,11 +2537,11 @@ w_alpha += (-0.01 - w_alpha)*0.1
 			pressed_space = 1
 			if place_meeting(x,y-32,obj_water_front)
 			{
-			vspeed = (-6-global.jump_plus)*0.7
+			vspeed = (-5-global.jump_plus)*0.7
 			}
 			else
 			{
-			vspeed = -6-global.jump_plus
+			vspeed = -5-global.jump_plus
 			}
 			jump_end_motion = 0
 			b_movement_speed = 0
@@ -2574,53 +2591,61 @@ w_alpha += (-0.01 - w_alpha)*0.1
 		{
 			if on_floor = true
 			{
-				if (spin = 0 && cannot_move = 0 && cooltime = 0 && down_attack = 0 && down_attack_plusing = 0 && hurt = 0 && hurt_little = 0) || (spin = 0 && hurt > 5)
+				if global.stamina > 0
 				{
-					if keyboard_check(global.left_key) || gamepad_button_check(0,gp_padl)
+					if (spin = 0 && cannot_move = 0 && cooltime = 0 && down_attack = 0 && down_attack_plusing = 0 && hurt = 0 && hurt_little = 0) || (spin = 0 && hurt > 5)
 					{
-					image_xscale = 1
-					}
+						if keyboard_check(global.left_key) || gamepad_button_check(0,gp_padl)
+						{
+						image_xscale = 1
+						}
 					
-					if keyboard_check(global.right_key) || gamepad_button_check(0,gp_padr)
-					{
-					image_xscale = -1
-					}
-				hurt = 0
-				hurt_cooltime = 0
-				spin = 1
-				cannot_move = 1
-				cooltime = 1
-				global.stamina_cooltime = 0
+						if keyboard_check(global.right_key) || gamepad_button_check(0,gp_padr)
+						{
+						image_xscale = -1
+						}
+					hurt = 0
+					hurt_cooltime = 0
+					spin = 1
+					cannot_move = 1
+					cooltime = 1
+					global.stamina_cooltime = 0
 				
-					if hurt > 0
-					{
-					red_glow_effect(sprite_index,image_index,0.5)
+						if hurt > 0
+						{
+						red_glow_effect(sprite_index,image_index,0.5)
 					
-					sfx_for_multiplayer(critical_sfx,0,0.05)
-					var d_ef = instance_create_depth(player.x,player.y-64,depth-1,draw_hp_m)
-					var text__ = "Stand up!"
-					if global.korean_text = 1
-					{
-					text__ = "일어남!"
-					}
-					d_ef.d_text = text__
-					d_ef.image_blend = c_white
-					d_ef.image_xscale = 1.2
-					d_ef.image_yscale = 1.2
-					d_ef.target = -4
-					w_alpha = 1
-					}
+						sfx_for_multiplayer(critical_sfx,0,0.05)
+						var d_ef = instance_create_depth(player.x,player.y-64,depth-1,draw_hp_m)
+						var text__ = "Stand up!"
+						if global.korean_text = 1
+						{
+						text__ = "일어남!"
+						}
+						d_ef.d_text = text__
+						d_ef.image_blend = c_white
+						d_ef.image_xscale = 1.2
+						d_ef.image_yscale = 1.2
+						d_ef.target = -4
+						w_alpha = 1
+						}
 					
-					repeat(choose(6,7,7,8,8,9,9,9,10,10,11,12))
-					{
-					randomize()
-					var dust = instance_create_depth(x+irandom_range(-2,2),y+28+irandom_range(-2,2),depth+1,pepsi_effect)
-					dust.image_xscale = 0.13
-					dust.image_yscale = 0.13
-					dust.vspeed = -irandom_range(100,200)/200
-					dust.hspeed = (-global.movement_speed*irandom_range(10,50)/50)+irandom_range(-20,20)/5
-					dust.image_alpha = 0.4
+						repeat(choose(6,7,7,8,8,9,9,9,10,10,11,12))
+						{
+						randomize()
+						var dust = instance_create_depth(x+irandom_range(-2,2),y+28+irandom_range(-2,2),depth+1,pepsi_effect)
+						dust.image_xscale = 0.13
+						dust.image_yscale = 0.13
+						dust.vspeed = -irandom_range(100,200)/200
+						dust.hspeed = (-global.movement_speed*irandom_range(10,50)/50)+irandom_range(-20,20)/5
+						dust.image_alpha = 0.4
+						}
 					}
+				}
+				else
+				{
+				var sfx = audio_play_sound(cannot_buy,0,0)
+				audio_sound_gain(sfx,0.2*global.master_volume*2*global.sfx_volume,0)
 				}
 			}
 		}
@@ -3124,10 +3149,10 @@ if guarding >= 2.5
 	if charge_attack > 0 && super_armor_delay = 0
 	{
 	var d_ef = instance_create_depth(player.x,player.y-64,depth-1,draw_hp_m)
-	var text__ = "Super guard"
+	var text__ = "0"
 	if global.korean_text = 1
 	{
-	text__ = "슈퍼 가드"
+	text__ = "0"
 	}
 	d_ef.d_text = text__
 	d_ef.image_blend = c_white
@@ -3378,8 +3403,6 @@ if global.never_move = 0 && global.never_move_in_setting = 0 && keyboard_check_r
 		skill_red_ball_effect_rage.image_yscale = 0.8
 		skill_red_ball_effect_rage.t_scale = 0.8
 		skill_red_ball_effect_rage.alarm[11] = 7
-	
-		var skill_red_ball_effect_rage = instance_create_depth(x,y,player.depth-1,obj_lightning_player)
 	
 
 			
@@ -3988,14 +4011,47 @@ if sting_attack > 0 && jump_attack = 0 && down_attack = 0
 {
 obj_camera.tv_x = 1280
 obj_camera.tv_y = 720
-sprite_index = spr_throw
 gravity = 0
 vspeed += (-0.5 - vspeed)*0.07
 sting_attack_timer ++
 cannot_move = 1
 global.movement_speed = 0
 
-	if sting_attack_timer > 90
+	if sting_attack_timer < 45
+	{
+	sprite_index = pl_move_skeleton_guard_red244
+	image_index = sting_attack_timer/8
+	}
+	else
+	{
+	sprite_index = pl_move_skeleton_guard_red244
+	image_index = 7
+	}
+	
+	if sting_attack_timer >= 130
+	{
+	sprite_index = spr_throw
+	}
+
+	if sting_attack_timer = 35
+	{
+	image_index = 0
+	var skill_red_ball_effect_rage = instance_create_depth(x+image_xscale*10,y,player.depth-1,obj_lightning_player)
+	obj_camera.t_x = player.x
+	obj_camera.t_y = player.y+128
+	sting_attack_obj = 1
+	var lightning__ = instance_create_depth(player.x+image_xscale*16,player.y,player.depth-1,lightning_spear)
+	lightning__.direction = 270
+	lightning__.des = -1
+	w_alpha = 1
+	}
+	
+	if sting_attack_timer = 130
+	{
+	lightning_spear.direction = 180+image_xscale*5
+	}
+
+	if sting_attack_timer > 130
 	{
 	sting_attack += 0.3
 	image_index = sting_attack
@@ -4008,19 +4064,9 @@ var t_angle = point_direction(x,y,x-image_xscale*64,y+64)
 	t_angle = point_direction(x,y,target_.x,target_.y+160)
 	}
 
-	if sting_attack_obj = 0
-	{
-	obj_camera.t_x = player.x
-	obj_camera.t_y = player.y+128
-	sting_attack_obj = 1
-	var lightning__ = instance_create_depth(player.x-image_xscale*64,player.y,player.depth-1,lightning_spear)
-	lightning__.direction = 180+image_xscale*5
-	lightning__.des = -1
-	w_alpha = 1
-	}
 
 
-	if attack_sting_sfx = 0 && image_index > 2.5 && sting_attack_timer > 90
+	if attack_sting_sfx = 0 && image_index > 2.5 && sting_attack_timer > 130
 	{
 	obj_camera.t_x = player.x-image_xscale*480
 	obj_camera.x += (player.x-image_xscale*480 - obj_camera.x)*0.17
@@ -4048,7 +4094,7 @@ var t_angle = point_direction(x,y,x-image_xscale*64,y+64)
 	effect_.image_angle = t_angle+90
 	}
 	
-	if image_index >= 5 && sting_attack_timer > 90
+	if image_index >= 5 && sting_attack_timer > 130
 	{
 	sprite_index = jump_sprite
 	jump = 1
@@ -4138,6 +4184,11 @@ pressed_d_key = 0
 
 if spin > 0 && down_attack = 0 && hurt = 0
 {
+	if keep_spinning > 0 && spin = 1
+	{
+	global.stamina -= keep_spinning/10
+	}
+	
 sprite_index = spin_sprite
 image_index = spin
 global.movement_speed = 0
@@ -4180,6 +4231,7 @@ global.movement_speed = 0
 	
 	if spin >= 11
 	{
+	keep_spinning += 40
 	sprite_index = move_sprite
 	spin = 0
 	cooltime = 1
@@ -4757,16 +4809,16 @@ sprite_index = attack_laser_sprite_sec
 	}
 	
 
-	if attack_laser_sec < 13
+	if attack_laser_sec < 14
 	{
 	image_index = floor(attack_laser_sec)
 	}
 	else
 	{
-	image_index = 12
+	image_index = 13
 	}
 	
-	if floor(image_index) >= 11
+	if attack_laser_sec > 12.3
 	{
 	obj_camera.x += (player.x - player.image_xscale*480 - obj_camera.x)*0.17
 	obj_camera.tv_x = 1280*0.9
@@ -4788,7 +4840,7 @@ sprite_index = attack_laser_sprite_sec
 	effect_.image_yscale = 0.8/2
 	effect_.image_xscale = 2.5
 	effect_.image_yscale = 0.8
-	effect_.alarm[1] = 15
+	effect_.alarm[1] = 20
 	
 		if image_xscale = -1
 		{
@@ -4803,7 +4855,7 @@ sprite_index = attack_laser_sprite_sec
 	sfx_for_multiplayer(choose(swing_lightsaber_sfx2,swing_lightsaber_sfx3),0,0.1)
 	}
 	
-	if floor(image_index) > 11 && attack_laser_sfx = 1
+	if attack_laser_sec > 12.3 && attack_laser_sfx = 1
 	{
 	attack_laser_sfx = 2
 	var _aaa = instance_create_depth(x-image_xscale*24,y-16,player.depth-1,effect_special_skill_sec)
@@ -5092,9 +5144,9 @@ global.movement_speed = 0
 	if charge_attack < 7
 	{
 	var __check__ = instance_place(x-sign(movement_speed)*7,y,mob_parents)
-		if (place_meeting(x+sign(movement_speed)*18,y,floor_parents) && !place_meeting(x+sign(movement_speed)*18,y,stair_parents)) || (instance_exists(__check__) && __check__ > 0) 
+		if (place_meeting(x+sign(movement_speed)*18+15,y,floor_parents) && !place_meeting(x+sign(movement_speed)*18,y,stair_parents)) || (instance_exists(__check__) && __check__ > 0) 
 		{
-		var ins_pl___ = instance_place(x+sign(movement_speed)*18+5,y,fire_turret)
+		var ins_pl___ = instance_place(x+sign(movement_speed)*18+15,y,fire_turret)
 			if instance_exists(ins_pl___)
 			{
 			ins_pl___.image_index = 1
@@ -5108,7 +5160,7 @@ global.movement_speed = 0
 		gravity = 0
 		vspeed = 0
 	
-		var effect_ = instance_create_depth(x+sign(movement_speed)*18,y-12,player.depth+1,down_effect)
+		var effect_ = instance_create_depth(x+sign(movement_speed)*18+15,y-12,player.depth+1,down_effect)
 		effect_.t_image_yscale = 0.6*3
 		effect_.t_image_xscale = 0.1*3
 		effect_.received = 0

@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+image_blend = c_white
 if image_alpha <= 0
 {
 	if sign(player.x - x) != 0
@@ -126,7 +126,7 @@ b_alpha_ += (t_b_alpha_ - b_alpha_)*0.08
 	}
 	else
 	{
-	depth = player.depth+1
+	depth = player.depth+15
 	image_xscale = p_xscale*portential_xscale
 	portential_xscale += (2 - portential_xscale)*0.1
 	image_yscale += (2 - image_yscale)*0.1
@@ -443,70 +443,93 @@ b_alpha_ += (t_b_alpha_ - b_alpha_)*0.08
 		if patturn < 3.2
 		{
 		patturn += 0.001
-		vspeed -= 1
-		}
-		
-		if patturn >= 3.2 && patturn < 3.3
-		{
-			if patturn != 3.3
+			if patturn > 3.1
 			{
-			patturn = 3.3
-			var effect_ = instance_create_depth(player.x,player.y+27,player.depth+1,down_effect_for_laser)
-			effect_.image_blend = c_white
-			effect_.t_image_xscale = 2.5*0.4
-			effect_.t_image_yscale = 0.8*0.4
-			effect_.image_alpha = 0.7
-			effect_.alarm[1] = 3
-			effect_.image_angle = 0
-			effect_.image_xscale = 2.5*0.1
-			effect_.image_yscale = 0.8*0.1
+			vspeed -= abs(vspeed)*0.1
+			}
+			else
+			{
+			vspeed -= 0.01
+			}
 			
-				repeat(5)
+			if patturn < 3.1 && patturn > 3.05
+			{
+			bullet_cre ++
+				if bullet_cre%6 = 0
 				{
-				var bullet__ = instance_create_depth(player.x+irandom_range(-120,120),player.y-200+irandom_range(-120,120),player.depth-1,simhae_doo_bullet)
+				var bullet__ = instance_create_depth(x+irandom_range(-120,120),y-150+irandom_range(-120,120),player.depth-1,simhae_doo_bullet)
 				bullet__.bullet_speed = 0.7
 				}
+			}
+		}
+		
+		if patturn >= 3.2 && patturn < 3.7
+		{
+			if patturn < 3.61
+			{
+			patturn += 0.001
+			}
+		var cal = 1
+		
+			if hp < max_hp*0.8
+			{
+			cal = 2
+			}
+			
+			if hp < max_hp*0.5
+			{
+			cal = 3
+			}
+			
+			if hp < max_hp*0.3
+			{
+			cal = 4
+			}
+			
+
+			if patturn = 3.2 || patturn = 3.3 || patturn = 3.4 || patturn = 3.5
+			{
+			instance_create_depth(xstart,1600,player.depth-32,obj_simhaedoo_ring)
+			}
+
+			
+			if patturn > (3.13+cal/10) && !instance_exists(obj_simhaedoo_ring)
+			{
+			var __ins__ = instance_create_depth(xstart,1625,player.depth-1,effect_special_skill_attacked)
+			__ins__.color_1 = c_white
+			__ins__.color_2 = $FF2C75FF
+			__ins__.color_3 = $FF75F2FF
+			patturn = 3.7
 			}
 		vspeed = 0
 		}
 		
-		if patturn >= 3.3 && patturn < 3.6
+		if patturn >= 3.7
 		{
-		patturn += 0.001
-		var check_ = 0
-			with(simhae_doo_bullet)
+		patturn += 0.002
+			if patturn > 3.75
 			{
-				if object_index = simhae_doo_bullet
-				{
-					if des_time = 0
-					{
-					check_ = 1
-					}
-				}
+			x += (saved_real_x - x)*0.1
+			y += (saved_real_y - y)*0.07
 			}
 			
-			if check_ = 1
-			{
-			saved_player_x = player.x
-			}
-			
-			if patturn = 3.45
-			{
-			var __ins__ = instance_create_depth(saved_player_x,1625,player.depth-1,effect_special_skill_attacked)
-			__ins__.color_1 = c_white
-			__ins__.color_2 = $FF2C75FF
-			__ins__.color_3 = $FF75F2FF
-			}
-		}
-		
-		if patturn >= 3.6
-		{
-		patturn += 0.005
-		x += (saved_real_x - x)*0.1
-		y += (saved_real_y - y)*0.1
-			if patturn > 3.9
+			if patturn > 3.99
 			{
 			patturn = 0
+			}
+		}
+		else
+		{
+			if patturn < 3.55
+			{
+			var xx_ = xstart + irandom_range(-24,24)
+			var yy_ = 1600 + irandom_range(-16,16)
+			var random_val___ = percentage_k(global.graphics_for_code*3)
+				if random_val___ = 1
+				{
+				var random_val___2 = percentage_k(1)
+				create_buble_effect(0.2,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.07,0.07,$FF62D1F7,$FF6C60CD,2,$FF191919,xx_,yy_,player.depth-random_val___2,1,false,false)
+				}
 			}
 		}
 	}

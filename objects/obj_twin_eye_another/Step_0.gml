@@ -1,5 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
+image_blend = c_white
 if n_hp != hp
 {
 obj_twin_eye.hp -= n_hp-hp

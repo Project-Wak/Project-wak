@@ -21,7 +21,9 @@ o2_timer = 0
 _light_ = -4
 light_timer = 0
 tiredness = 0
+keep_spinning = 0
 
+jump_scale = 0
 poison_alpha = 0
 total_laser_num = 0
 n_broken_clock = 0

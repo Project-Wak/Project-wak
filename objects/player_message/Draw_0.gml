@@ -2,9 +2,8 @@
 // You can write your code in this editor
 if can_draw = 1 && global.show_guide_mes = -4 && global.show_ui = 1
 {
+draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,image_blend,image_alpha*0.8)
 draw_set_alpha(image_alpha)
-draw_self()
-
 draw_text_kl_scale(x,y-50*image_yscale,real_text,16,9999,image_alpha,image_blend,0,0,font0,image_xscale*1/3,image_yscale*1/3,image_angle)
 
 

@@ -1,5 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
+image_blend = c_white
 //global.boss_target = id
 //global.boss_name = "쌉벌래두"
 
@@ -642,6 +643,7 @@ else
 				_aaa.color_1 = $FF70FFDC
 				_aaa.color_2 = $FF5A8539
 				_aaa.color_3 = $FF4CE083
+				_aaa.maximum_size = 0.7
 			
 				view_shake(11,11,1)
 				

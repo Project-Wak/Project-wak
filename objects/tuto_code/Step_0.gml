@@ -140,7 +140,7 @@ if global.show_credits = 0
 	var key_guide = instance_create_depth(-100,-100,-999994,draw_key_)
 	key_guide.location = 2.8
 	key_guide.img_index = 27
-	global.show_guide_mes = "회피 및 가드\n\n가드시 상대 공격의 공격력에 비례하여 체력 대신 스테미나가 소모되며,\n스테미나가 부족한 경우, 가드가 되지 않는다.\n\n또한 적의 공격을 가드후, 즉시 "+string(global.a_key)+"키(일반공격)를 누르면, 패링이 된다.\n\n구르기시, 대부분의 공격을 피할수 있다\n\n또한, 기절 상태가 되었을때, 땅 위에서 '구르기' 혹은 'Space키'를 눌러주면\n빠르게 기절 상태를 캔슬할 수 있다."
+	global.show_guide_mes = "회피 및 가드\n\n가드시 상대 공격의 공격력에 비례하여 체력 대신 스테미나가 소모되며,\n스테미나가 부족한 경우, 가드가 되지 않는다.\n\n또한 적의 공격을 가드후, 즉시 "+string(global.a_key)+"키(일반공격)를 누르면, 패링이 된다.\n\n구르기시, 대부분의 공격을 피할수 있지만,\n너무 연속적으로 사용하게 되면 스테미나가 소모된다.\n\n또한, 기절 상태가 되었을때, 땅 위에서 '구르기' 혹은 'Space키'를 눌러주면\n빠르게 기절 상태를 캔슬할 수 있다."
 	global.show_guide_mes_spr = 3
 	}
 

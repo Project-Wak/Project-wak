@@ -11,3 +11,5 @@
 //bl_ef.image_angle = irandom_range(-90,90)
 //bl_ef.sfx_play = true
 //}
+
+instance_create_depth(x,y,player.depth-1,obj_simhaedoo_ring)

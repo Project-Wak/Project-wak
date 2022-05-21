@@ -38,7 +38,7 @@ draw_set_color(c_black)
 draw_rectangle(xx-32,yy-32,xx+xxx+32,yy-32+global.playing_scene_black_bg*v_x_,0)
 draw_rectangle(xx-32,yy+yyy+32,xx+xxx+32,yy+yyy+32-global.playing_scene_black_bg*v_x_,0)
 
-	if global.hp > 0 && instance_exists(player_message)
+	if global.hp > 0 && instance_exists(player_message) && global.show_ui = 1
 	{
 		if audio_is_playing(boss_bgm) || audio_is_playing(final_battle)
 		{

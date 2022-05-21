@@ -254,7 +254,7 @@ instance_destroy(setting_parents)
 	draw_sprite_ext(spr_icon,global.show_guide_mes_spr,g_xx-v_x_*170,g_yy-v_x_*11,v_x_*0.6,v_x_*0.6,0,c_white,0.8)
 	draw_text_kl_scale(g_xx,g_yy,string(global.show_guide_mes),v_x_*73,-1,0.67,c_white,0,0,font0,v_x_/3.5,v_x_/3.5,0);
 	
-		if !audio_is_playing(boss_bgm) && !audio_is_playing(quake_sfx)
+		if !audio_is_playing(boss_bgm) && !audio_is_playing(quake_sfx) && global.show_ui = 1
 		{
 		draw_text_kl_scale(g_xx+v_x_*190,g_yy,"\n\n\n\n\n\n\n\n\n\n\n\n\n("+string(global.skip_key)+"키를 눌러 기기)",v_x_*64,-1,0.5,c_white,0,1,font0,v_x_*0.3,v_x_*0.3,0);
 		}
@@ -267,7 +267,7 @@ instance_destroy(setting_parents)
 	draw_rectangle(g_xx-v_x_*200,g_yy-v_x_*27,g_xx+v_x_*200,g_yy+v_x_*40,false)
 	draw_text_kl_scale(g_xx,g_yy,string(global.show_guide_mes),v_x_*73,-1,0.67,c_white,0,0,font0,v_x_/3.5,v_x_/3.5,0);
 	
-		if !audio_is_playing(boss_bgm) && !audio_is_playing(quake_sfx)
+		if !audio_is_playing(boss_bgm) && !audio_is_playing(quake_sfx) && global.show_ui = 1
 		{
 		draw_text_kl_scale(g_xx+v_x_*190,g_yy,"\n\n\n\n("+string(global.skip_key)+"키를 눌러 넘기기)",v_x_*64,-1,0.5,c_white,0,1,font0,v_x_*0.3,v_x_*0.3,0);
 		}

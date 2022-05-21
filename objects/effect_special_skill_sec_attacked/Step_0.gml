@@ -3,7 +3,7 @@
 alpha1 -= 0.1
 w_alpha__ += (-0.01 - w_alpha__)*0.2
 
-if image_xscale < 0.4 && time <= 58
+if image_xscale < maximum_size && time <= 58
 {
 image_xscale += 0.026
 image_xscale += image_xscale*0.1
@@ -15,10 +15,10 @@ image_xscale += image_xscale*0.1
 image_yscale += 0.026*4
 image_yscale += image_yscale*0.2
 
-
-if image_xscale > 0.4 && time <= 58
+//maximum_size = 0.4
+if image_xscale > maximum_size && time <= 58
 {
-image_xscale = 0.4
+image_xscale = maximum_size
 	if time = 0
 	{
 	time ++

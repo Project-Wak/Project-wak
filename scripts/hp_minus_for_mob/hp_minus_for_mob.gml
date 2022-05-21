@@ -82,13 +82,10 @@ function hp_minus_for_mob(argument0,argument1)
 
 	if argument1 > 0
 	{
-		if instance_number(effect_special_skill) = 0 && instance_number(effect_attack_s) = 0
+	global.rage_gauge += damage_calcul/19/(1+instance_exists(effect_special_skill_sec)+instance_exists(effect_special_skill))
+		if global.awakening > 1 && global.stop_awakening = 0
 		{
-		global.rage_gauge += damage_calcul/19
-			if global.awakening > 1 && global.stop_awakening = 0
-			{
-			global.awakening += 0.1
-			}
+		global.awakening += 0.1/(1+instance_exists(effect_special_skill_sec)+instance_exists(effect_special_skill))
 		}
 	}
 
