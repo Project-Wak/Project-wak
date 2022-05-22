@@ -6,8 +6,38 @@ w_alpha__ += (-0.01 - w_alpha__)*0.2
 
 
 
-image_yscale += 0.026*4
-image_yscale += image_yscale*0.2
+
+
+
+if image_angle = 90
+{
+	for(var i = 1; i < 2500; i++)
+	{
+		if (place_meeting(x+i,y,mob_parents) || position_meeting(x+i,y,floor_parents))
+		{
+		break;
+		}
+		else
+		{
+		image_yscale = i
+		}
+	}
+}
+else
+{
+	for(var i = 1; i < 2500; i++)
+	{
+		if (place_meeting(x-i,y,mob_parents) || position_meeting(x-i,y,floor_parents))
+		{
+		break;
+		}
+		else
+		{
+		image_yscale = i
+		}
+	}
+}
+
 
 
 if image_xscale < 0.5 && time <= 58

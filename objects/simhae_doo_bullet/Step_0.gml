@@ -2,7 +2,7 @@
 // You can write your code in this editor
 for(var i = 0; i <= 32; i++)
 {
-alpha[i] -= 0.05
+alpha[i] -= 0.1
 	if des_time = 1
 	{
 	alpha[i] -= 0.05
@@ -24,15 +24,15 @@ else
 {
 angle += sign_k(x - player.x)*16
 
-image_xscale += (1.1 - image_xscale)*0.1
-image_yscale += (1.1 - image_yscale)*0.1
+image_xscale += (0.7 - image_xscale)*0.1
+image_yscale += (0.7 - image_yscale)*0.1
 image_alpha += (1.01 - image_alpha)*0.1
 image_angle += (angle - image_angle)*0.1
 }
 
 
 
-ii += 1
+ii += 0.5
 
 if ii > 32
 {
@@ -45,36 +45,69 @@ if ii = floor(ii) && des_time = 0
 	{
 	xx[ii] = x
 	yy[ii] = y
-	alpha[ii] = 1*image_alpha
+	alpha[ii] = 1
 	}
 }
 
 
-
-if timer > 60
+if attack_type != 2
 {
-	if speed < 14 && des_time = 0
+	if timer > 60
 	{
-	speed += bullet_speed
-	}
-
-	if timer < 183
-	{
-	var scale_ = 40
-		if abs(global.movement_speed) < 6
+		if attack_type = 0
 		{
-		scale_ = 80
+			if speed < 14 && des_time = 0
+			{
+			speed += bullet_speed
+			}
+
+			if timer < 183
+			{
+			var scale_ = 40
+				if abs(global.movement_speed) < 6
+				{
+				scale_ = 80
+				}
+			speed = 0
+			direction = point_direction(x,y,player.x+sign(floor(global.movement_speed))*scale_,player.y)
+			timer = 183
+			}
 		}
-	speed = 0
-	direction = point_direction(x,y,player.x+sign(floor(global.movement_speed))*scale_,player.y)
-	timer = 183
+	
+		if attack_type = 1
+		{
+			if timer < 140
+			{
+			speed += bullet_speed
+			direction = 90
+				if timer >= 60
+				{
+				timer ++
+				}
+			}
+			else
+			{
+			speed = 20
+			direction = point_direction(x,y,player.x,player.y)
+			}
+		}
+	}
+	else
+	{
+	speed = 2
+	direction = image_angle
+	timer ++
 	}
 }
 else
 {
-speed = 2
-direction = image_angle
-timer ++
+var scale_ = 40
+	if abs(global.movement_speed) < 6
+	{
+	scale_ = 80
+	}
+speed += (bullet_speed*3 - speed)*0.01
+direction = point_direction(x,y,player.x,player.y)
 }
 
 

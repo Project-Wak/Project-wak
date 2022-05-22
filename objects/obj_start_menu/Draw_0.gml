@@ -29,7 +29,7 @@ var scale__sec = 1
 var message_1 = "Start Game"
 var message_2 = "Setting"
 var message_3 = "Credits"
-var message_4 = "Support"
+var message_4 = "Contact"
 var message_5 = "Quit"
 var message_6 = ""
 var text_scale = 1
@@ -38,7 +38,7 @@ if global.korean_text = 1
 message_1 = "게임 시작"
 message_2 = "환경 설정"
 message_3 = "크레딧"
-message_4 = "서포트"
+message_4 = "문의"
 message_5 = "종료"
 }
 

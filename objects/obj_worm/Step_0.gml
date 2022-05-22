@@ -514,6 +514,7 @@ else
 				{
 				var bullet__ = instance_create_depth(x+irandom_range(-120,120),y-150+irandom_range(-120,120),player.depth-1,simhae_doo_bullet)
 				bullet__.bullet_speed = 0.7
+				bullet__.attack_type = 0
 				}
 			t_y -= 20
 			}
@@ -582,6 +583,7 @@ else
 				var yy = y+lengthdir_y(128,start_cre_dir)
 				var bullet__ = instance_create_depth(xx,yy-100,player.depth-1,simhae_doo_bullet)
 				bullet__.bullet_speed = 0.7
+				bullet__.attack_type = 0
 				start_cre_dir += 15
 				}
 				else

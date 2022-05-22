@@ -13,6 +13,7 @@ portential_xscale = -1
 b_alpha_ = 0
 t_b_alpha_ = 0
 b_patturn = 0
+skill_red_ball_effect_rage = -4
 
 dead_scene = 0
 shake_boss = 1

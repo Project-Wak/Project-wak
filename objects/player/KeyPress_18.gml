@@ -12,4 +12,6 @@
 //bl_ef.sfx_play = true
 //}
 
-instance_create_depth(x,y,player.depth-1,obj_simhaedoo_ring)
+//var test_ = instance_create_depth(x,y-128,player.depth-1,simhae_doo_bullet)
+//test_.bullet_speed = 0.7
+//test_.attack_type = irandom_range(0,2)

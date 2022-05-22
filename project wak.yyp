@@ -116,6 +116,7 @@
     {"id":{"name":"change_running_key_to_other","path":"objects/change_running_key_to_other/change_running_key_to_other.yy",},"order":32,},
     {"id":{"name":"pl_move_skeleton_attack1","path":"sprites/pl_move_skeleton_attack1/pl_move_skeleton_attack1.yy",},"order":8,},
     {"id":{"name":"http_ip_get","path":"scripts/http_ip_get/http_ip_get.yy",},"order":27,},
+    {"id":{"name":"simhaedoo_bullet","path":"sprites/simhaedoo_bullet/simhaedoo_bullet.yy",},"order":244,},
     {"id":{"name":"Sprite179","path":"sprites/Sprite179/Sprite179.yy",},"order":68,},
     {"id":{"name":"mob_parents","path":"objects/mob_parents/mob_parents.yy",},"order":12,},
     {"id":{"name":"spr_lilla_hurt166","path":"sprites/spr_lilla_hurt166/spr_lilla_hurt166.yy",},"order":119,},

@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "item_shine",
-    "path": "sprites/item_shine/item_shine.yy",
+    "name": "simhaedoo_bullet",
+    "path": "sprites/simhaedoo_bullet/simhaedoo_bullet.yy",
   },
   "solid": false,
   "visible": true,

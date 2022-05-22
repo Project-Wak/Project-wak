@@ -469,6 +469,7 @@ activated = 2
 				{
 				var bullet__ = instance_create_depth(spear__.x+irandom_range(-120,120),spear__.y-150+irandom_range(-120,120),spear__.depth-1,simhae_doo_bullet)
 				bullet__.bullet_speed = 0.7
+				bullet__.attack_type = 0
 				}
 				
 			var effect_ = instance_create_depth(spear__.x,spear__.y,spear__.depth+10,down_effect)

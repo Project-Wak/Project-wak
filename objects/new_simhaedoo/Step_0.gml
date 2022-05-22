@@ -36,6 +36,7 @@ attack ++
 	{
 	var bullet__ = instance_create_depth(x+irandom_range(-64,64),y-16+irandom_range(-64,64),player.depth-1,simhae_doo_bullet)
 	bullet__.bullet_speed = 0.7
+	bullet__.attack_type = 0
 	}
 	
 	if attack >= 18
