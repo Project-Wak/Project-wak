@@ -40,8 +40,8 @@ wheel_cooltime --
 	_light_.gravity = 0.2
 	_light_.vspeed = 5
 	_light_.hspeed = irandom_range(-10,10)/10
-
-	cre_buble_ef(irandom_range(0,room_width),room_height+irandom_range(100,200),c_white,$FF75F2FF,-irandom_range(20,50)/10,irandom_range(-15,15)/10,0.08,0.08,scale,scale,5*irandom_range(100,200)/100,1,1)
+	create_buble_effect(0.4,270+irandom_range(-10,10),0,choose(-1)*irandom_range(100,150)/4,0.1,0.1,$FF3E2D24,$FF473021,2,$FF513524,irandom_range(0,room_width),room_height+irandom_range(100,200),depth+21,0,false,false)
+	create_buble_effect(0.55,270+irandom_range(-10,10),0,choose(-1)*irandom_range(100,150)/4,0.1,0.1,$FF62D1F7,$FF6C60CD,2,$FF191919,irandom_range(0,room_width),room_height+irandom_range(100,200),depth+20,1,false,false)
 	}
 
 	set_menu_choose += (t_set_menu_choose - set_menu_choose)*0.1

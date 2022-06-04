@@ -1,6 +1,11 @@
 /// @description Insert description here
 // You can write your code in this editor
 image_blend = c_white
+
+if global.none_wakgood_mode = true
+{
+sprite_index = spr_ssab_bulrae263
+}
 //global.boss_target = id
 //global.boss_name = "쌉벌래두"
 
@@ -242,6 +247,10 @@ else
 			{
 			global.boss_target = id
 			global.boss_name = "하수도 속의 거대 쌉벌레두"
+				if global.none_wakgood_mode = true
+				{
+				global.boss_name = "하수도 속의 거대 벌레"
+				}
 			obj_camera.t_x = 3300
 			obj_camera.t_y = player.y
 			}

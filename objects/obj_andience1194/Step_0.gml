@@ -403,9 +403,12 @@ global.playing_scene = 1
 	
 	if !instance_exists(check__) && message_phase = 30
 	{
-	instance_destroy(obj_wakdroid.wall_1)
+		if instance_exists(obj_wakdroid)
+		{
+		instance_destroy(obj_wakdroid.wall_1)
+		instance_destroy(obj_wakdroid)
+		}
 	instance_create_depth(3328,2240,depth,obj_last_boss)
-	instance_destroy(obj_wakdroid)
 	global.never_move = 0
 	global.playing_scene = 0
 	obj_camera.t_x = -4
@@ -437,15 +440,16 @@ if cre_boss = 1
 }
 
 
-
-if player.x > 5000 && global.never_move = 0 && global.playing_scene = 0 && global.ending_story = 0
+if message_phase != 31
 {
-interecting_now = 1
-global.ending_story = 1
+	if player.x > 5000 && global.never_move = 0 && global.playing_scene = 0 && global.ending_story = 0
+	{
+	interecting_now = 1
+	global.ending_story = 1
+	}
+	else
+	{
+	can_interect = 0
+	}
 }
-else
-{
-can_interect = 0
-}
-
 

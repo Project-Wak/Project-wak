@@ -20,6 +20,7 @@
         {"properties":[],"isDnd":false,"objectId":{"name":"obj_obstacle","path":"objects/obj_obstacle/obj_obstacle.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":-90.0,"scaleX":1.0,"scaleY":-1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":5399.0,"y":948.0,"resourceVersion":"1.0","name":"inst_7B75E785","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"obj_obstacle","path":"objects/obj_obstacle/obj_obstacle.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":-90.0,"scaleX":-1.0,"scaleY":-1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":5389.0,"y":1320.0,"resourceVersion":"1.0","name":"inst_787221DF","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"obj_obstacle","path":"objects/obj_obstacle/obj_obstacle.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":-90.0,"scaleX":-1.125,"scaleY":-1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":5395.0,"y":1821.0,"resourceVersion":"1.0","name":"inst_765435D6","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"blinder_wall_from_water2","path":"objects/blinder_wall_from_water2/blinder_wall_from_water2.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1081.0,"y":292.0,"resourceVersion":"1.0","name":"inst_1BA2765D","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":-200,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],"resourceVersion":"1.0","name":"Instances_2","tags":[],"resourceType":"GMRInstanceLayer",},
     {"instances":[
         {"properties":[],"isDnd":false,"objectId":{"name":"obj_floor_tile3","path":"objects/obj_floor_tile3/obj_floor_tile3.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":-1.0,"scaleY":3.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1132.0,"y":-32.0,"resourceVersion":"1.0","name":"inst_7C375F50","tags":[],"resourceType":"GMRInstance",},
@@ -187,6 +188,7 @@
     {"name":"inst_7B75E785","path":"rooms/room_sector_B03_2_remaked/room_sector_B03_2_remaked.yy",},
     {"name":"inst_787221DF","path":"rooms/room_sector_B03_2_remaked/room_sector_B03_2_remaked.yy",},
     {"name":"inst_765435D6","path":"rooms/room_sector_B03_2_remaked/room_sector_B03_2_remaked.yy",},
+    {"name":"inst_1BA2765D","path":"rooms/room_sector_B03_2_remaked/room_sector_B03_2_remaked.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,

@@ -91,7 +91,7 @@
     "eventStubScript": null,
     "parent": {"name":"pl_move_skeleton_spin_attack1","path":"sprites/pl_move_skeleton_spin_attack1/pl_move_skeleton_spin_attack1.yy",},
     "resourceVersion": "1.4",
-    "name": "",
+    "name": "pl_move_skeleton_spin_attack1",
     "tags": [],
     "resourceType": "GMSequence",
   },

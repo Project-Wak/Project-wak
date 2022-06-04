@@ -3,6 +3,8 @@
 depth = player.depth-10
 obj_camera.t_x = 5181
 obj_camera.t_y = 880
+obj_camera.x = 5181
+obj_camera.y = 880
 image_angle = -23
 timer = 0
 x = 5181

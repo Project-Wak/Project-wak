@@ -4,16 +4,33 @@ depth = player.depth-5
 timer ++
 
 
-if image_alpha < 0.08 && global.room_brightness > 0
+if global.rainy = 0
 {
-image_yscale += 0.00005
-image_alpha += 0.0005
+	if image_alpha < 0.1 && global.room_brightness > 0
+	{
+	image_yscale += 0.00005
+	image_alpha += 0.0005
+	}
+
+	if image_alpha > 0.1
+	{
+	image_alpha = 0.1
+	}
+}
+else
+{
+	if image_alpha < 0.08 && global.room_brightness > 0
+	{
+	image_yscale += 0.00005
+	image_alpha += 0.0005
+	}
+
+	if image_alpha > 0.08
+	{
+	image_alpha = 0.08
+	}
 }
 
-if image_alpha > 0.08
-{
-image_alpha = 0.08
-}
 
 
 

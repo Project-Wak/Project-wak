@@ -32,7 +32,7 @@ if player.x > 1000 && player.y >= room_height-32
 {
 global.t_b_alpha = 2.01
 player.y = room_height-32
-	if global.b_alpha > 1
+	if global.b_alpha > 1 && global.back_to_origin_stage != 1
 	{
 	room_goto(room_sector_B03_3_remaked)
 	}

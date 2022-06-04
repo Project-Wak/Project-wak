@@ -132,7 +132,7 @@ poison_alpha += (-0.01 - poison_alpha)*0.1
 if global.poison_tuto = 0 && room = room_sector_B06_2
 {
 global.show_guide_mes_spr = 5
-global.show_guide_mes = "상태 이상 - 독\n\n독 상태에 걸리게 될경우,\n체력이 1이 남을때 까지 지속적으로 체력이 닳는다.\n(상태 이상은 특정 아이템을 사용하거나 사망 혹은 숙면 시에만 해제된다)"
+global.show_guide_mes = "상태 이상 (디버프)\n\n디버프 상태에 걸리게 될경우,\n체력이 1이 남을때 까지 지속적으로 체력이 닳는다.\n(상태 이상은 특정 아이템을 사용하거나 사망 혹은 수면 시에만 해제된다)"
 global.poison_tuto = 1
 }
 
@@ -785,7 +785,7 @@ w_alpha += (-0.01 - w_alpha)*0.1
 		var random_message = choose(message_1,message_2,message_3)
 		dev_mes(random_message)
 		
-		if global.left_time > 0 && (!instance_exists(obj_wakdroid_ending) || global.real_ending != 0)
+		if global.none_wakgood_mode = false && global.left_time > 0 && (!instance_exists(obj_wakdroid_ending) || global.real_ending != 0)
 		{
 		sfx_for_multiplayer(choose(wakgood_hurt,wakgood_hurt2,kiyahou,died_sfx),0,0.85)
 		}
@@ -2537,11 +2537,11 @@ w_alpha += (-0.01 - w_alpha)*0.1
 			pressed_space = 1
 			if place_meeting(x,y-32,obj_water_front)
 			{
-			vspeed = (-5-global.jump_plus)*0.7
+			vspeed = (-5.5-global.jump_plus)*0.7
 			}
 			else
 			{
-			vspeed = -5-global.jump_plus
+			vspeed = -5.5-global.jump_plus
 			}
 			jump_end_motion = 0
 			b_movement_speed = 0
@@ -3050,11 +3050,11 @@ if dash_attack >= 4.6 && global.n_sword != 0 && global.n_sword != 5
 				sfx_for_multiplayer(jump_sfx,0,0.6)
 				if place_meeting(x,y-32,obj_water_front)
 				{
-				vspeed = (-6-global.jump_plus)*0.7
+				vspeed = (-5.5-global.jump_plus)*0.7
 				}
 				else
 				{
-				vspeed = -6-global.jump_plus
+				vspeed = -5.5-global.jump_plus
 				}
 				jump_end_motion = 0
 				y -= 3
@@ -3103,7 +3103,7 @@ if dash_attack >= 4.6 && global.n_sword != 0 && global.n_sword != 5
 
 /////////////////////////////////////////////////////////////////////////////////
 
-if (keyboard_check_pressed(global.guard_key_for_code) || gamepad_button_check_pressed(0,gp_padu)) && hurt > 0 && global.hp > 0 && global.playing_scene = 0
+if (keyboard_check_pressed(global.guard_key_for_code) || gamepad_button_check_pressed(0,gp_padu)) && hurt > 0 && global.hp > 0 && global.playing_scene = 0 && on_floor = true
 {
 hurt = 0
 hurt_cooltime = 0
@@ -5891,4 +5891,27 @@ if instance_exists(global.lockon_target)
 	{
 	image_xscale = sign_k(x-global.lockon_target.x)
 	}
+}
+
+
+
+
+
+if instance_exists(full_screen_option)
+{
+	if saved_vspeed = 0
+	{
+	saved_vspeed = vspeed
+	saved_hspeed = hspeed
+	saved_gravity = gravity
+	saved_x_ = x
+	saved_y_ = y
+	
+	vspeed = 0
+	hspeed = 0
+	gravity = 0
+	}
+	
+x = saved_x_
+y = saved_y_
 }

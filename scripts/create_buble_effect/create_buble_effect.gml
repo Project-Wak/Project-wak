@@ -16,6 +16,7 @@
 
 function create_buble_effect(argument0,argument1,argument2,argument3,argument4,argument5,argument6,argument7,argument8,argument9,argument10,argument11,argument12,argument13,argument14,argument15)
 {
+//var my_id = id
 var ef_ins__ = instance_create_depth(argument10,argument11,argument12,obj_bubble_effect)
 ef_ins__.image_xscale = argument0
 ef_ins__.image_yscale = argument0
@@ -29,5 +30,18 @@ ef_ins__.image_blend = argument7
 ef_ins__.sec_alpha = argument8
 ef_ins__.thi_col = argument9
 ef_ins__.cannot_through_floor = argument15
+	if argument12 > depth
+	{
+	ef_ins__.sepa_surf = true
+	ef_ins__.surf_owner = id
+		if !variable_instance_exists(id,"owner_surface")
+		{
+		owner_surface = surface_create(1920,1080);
+		}
+	}
+	else
+	{
+	ef_ins__.sepa_surf = -4
+	}
 return ef_ins__;
 }

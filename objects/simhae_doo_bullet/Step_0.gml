@@ -130,13 +130,14 @@ des_time = 1
 
 
 
-var s_x = camera_get_view_x(view_camera[0])
-var s_y = camera_get_view_y(view_camera[0])
+
 //var s_w = camera_get_view_width(view_camera[0])
 //var s_h = camera_get_view_height(view_camera[0])
 
 if surface_exists(global.light_surf)
 {
+var s_x = camera_get_view_x(view_camera[0])
+var s_y = camera_get_view_y(view_camera[0])
 surface_set_target(global.light_surf)
 gpu_set_blendmode(bm_add);
 var xx = other.x - s_x

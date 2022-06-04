@@ -20,7 +20,20 @@ var __check = instance_place(x,y+ii,floor_parents)
 }
 draw_sprite_ext(spr_shadow,0,x,p_floor+20,1-abs(y-p_floor)/48,1-abs(y-p_floor)/64,0,c_white,(1-abs(y-p_floor)/48)*0.3*image_alpha)
 
+if global.none_wakgood_mode = true
+{
+var ind__ = 7
+	if image_index = 6
+	{
+	ind__ = 8
+	}
+draw_sprite_ext(sprite_index,ind__,x,y,image_xscale,image_yscale,image_angle,c_white,image_alpha)
+}
+else
+{
 draw_self()
+}
+
 //draw_set_alpha(1)
 //draw_text(x,y,message_phase)
 

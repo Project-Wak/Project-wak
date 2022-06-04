@@ -1,5 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
+if image_index > 6
+{
+image_index = 6
+}
 
 if global.tutorial != 0 && instance_exists(wall2)
 {
@@ -89,6 +93,11 @@ if image_index != 6 && !instance_number(obj_wakdroid_ending)
 			if global.n_time > 17 && global.n_time <= 20
 			{
 			image_index = 5
+			}
+			
+			if global.none_wakgood_mode = true
+			{
+			image_index = 0
 			}
 		}
 	}
@@ -365,7 +374,14 @@ global.playing_scene = 1
 								if !instance_exists(check__) && message_phase = 1
 								{
 								check__ = instance_create_depth(x,y,depth-1,player_message)
-								check__.text = "(아이네다)"
+									if global.none_wakgood_mode = false
+									{
+									check__.text = "(아이네다)"
+									}
+									else
+									{
+									check__.text = "(...)"
+									}
 								check__.target = player.id
 								check__.parents = id
 								can_interect = 0

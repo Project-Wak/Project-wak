@@ -16,26 +16,29 @@ if activated = 1
 		{
 		global.never_move = 1
 		global.playing_scene = 1
-			if (x - player.x) > 100
+			if room != room_sector_B03_1
 			{
-			obj_camera.x = x
-			obj_camera.y = y
-			player.x = x
-			}
-			else
-			{
-			obj_camera.x = x
-			obj_camera.y = y
-			player.x += (x - player.x)*0.34
-			}
+				if (x - player.x) > 100
+				{
+				obj_camera.x = x
+				obj_camera.y = y
+				player.x = x
+				}
+				else
+				{
+				obj_camera.x = x
+				obj_camera.y = y
+				player.x += (x - player.x)*0.34
+				}
 
-			if (y - player.y) > 100
-			{
-			player.y = y
-			}
-			else
-			{
-			player.y += (y - player.y)*0.34
+				if (y - player.y) > 100
+				{
+				player.y = y
+				}
+				else
+				{
+				player.y += (y - player.y)*0.34
+				}
 			}
 			
 			if player.attack_laser_sec = 0 && player.attack_laser = 0 && player.suicide = 0 && player.sting_attack = 0
@@ -171,7 +174,7 @@ t_y += (real_t_y - t_y)*0.1
 				
 				if destination = 30
 				{
-				room_goto(room_sector_B03_2);
+				room_goto(room_sector_B03_2_remaked);
 				}
 				
 				if destination = 20

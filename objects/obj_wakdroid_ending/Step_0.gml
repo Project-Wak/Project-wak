@@ -741,7 +741,51 @@ global.never_move = 1
 	check__.text = "..."
 	check__.target = player.id
 	check__.parents = id
-	show_cinematic ++
+	show_cinematic += 0.1
+	}
+	
+	if !instance_exists(check__) && show_cinematic = 1.1
+	{
+	obj_camera.t_x = player.x
+	player.image_xscale = 1
+	check__ = instance_create_depth(x,y,depth-1,player_message)
+	check__.text = "(전부 연구소 밖으로 대피해서 큰 피해는 없는 듯 하다)"
+	check__.target = player.id
+	check__.parents = id
+	show_cinematic += 0.1
+	}
+	
+	if !instance_exists(check__) && show_cinematic = 1.2
+	{
+	obj_camera.t_x = player.x
+	player.image_xscale = 1
+	check__ = instance_create_depth(x,y,depth-1,player_message)
+	check__.text = "(박사의 계획 또한 저지되었다)"
+	check__.target = player.id
+	check__.parents = id
+	show_cinematic += 0.1
+	}
+	
+	if !instance_exists(check__) && show_cinematic = 1.3
+	{
+	obj_camera.t_x = player.x
+	player.image_xscale = 1
+	check__ = instance_create_depth(x,y,depth-1,player_message)
+	check__.text = "..."
+	check__.target = player.id
+	check__.parents = id
+	show_cinematic += 0.1
+	}
+	
+	if !instance_exists(check__) && show_cinematic = 1.4
+	{
+	obj_camera.t_x = player.x
+	player.image_xscale = 1
+	check__ = instance_create_depth(x,y,depth-1,player_message)
+	check__.text = "(돌아가자)"
+	check__.target = player.id
+	check__.parents = id
+	show_cinematic = 2
 	}
 	
 	if show_cinematic > 1 && show_cinematic_sec = 0 && !instance_exists(check__)
@@ -1047,18 +1091,26 @@ global.never_move = 1
 			{
 			obj_camera.t_x ++
 			}
+			
+			if show_cinematic_sec > 6400
+			{
+			global.rainy = 0
+			}
 		}
 		
 		if show_cinematic_sec >= 7200 && show_cinematic_sec < 8280
 		{
 			if show_cinematic_sec <= 7201
 			{
+			global.rainy = 1
 			room_goto(room_main)
 			global.t_b_alpha = -0.1
 			obj_camera.x = 669
 			obj_camera.t_x = 669
 			obj_camera.y = 664
 			obj_camera.t_y = 664
+			global.guisanga_doo_event = 1
+			global.already_played_platform_scene = 1
 			}
 			else
 			{
@@ -1083,12 +1135,78 @@ global.never_move = 1
 			}
 		}
 		
-		if show_cinematic_sec >= 8280
+		if show_cinematic_sec >= 8280 && show_cinematic_sec < 8500
 		{
 		global.t_b_alpha = 2.1
-			if global.b_alpha >= 1
+		}
+		
+		if show_cinematic_sec >= 8500 && show_cinematic_sec < 9300
+		{
+			if show_cinematic_sec = 8500
 			{
+			room_goto(room_sector_B03_2_remaked)
+			}
+			
+			if show_cinematic_sec <= 8501
+			{
+			global.t_b_alpha = -0.1
+			obj_camera.x = 5181
+			obj_camera.t_x = 5181
+			obj_camera.y = 811
+			obj_camera.t_y = 811
+			}
+			else
+			{
+			obj_camera.t_y ++
+			}
+		}
+		
+		if show_cinematic_sec >= 9300 && show_cinematic_sec < 10000
+		{
+			if show_cinematic_sec = 9300
+			{
+			room_goto(room_sector_B03_3_remaked)
+			}
+			
+			if show_cinematic_sec <= 9301
+			{
+			global.t_b_alpha = -0.1
+			obj_camera.x = 500
+			obj_camera.t_x = 500
+			obj_camera.y = 325
+			obj_camera.t_y = 325
+			}
+			else
+			{
+			obj_camera.t_y ++
+			}
+		}
+		
+		if show_cinematic_sec >= 10000 && show_cinematic_sec < 11600
+		{
+			if show_cinematic_sec <= 10000
+			{
+			global.t_b_alpha = -0.1
+			obj_camera.x = 3071
+			obj_camera.t_x = 3071
+			obj_camera.y = 1492
+			obj_camera.t_y = 1492
+			}
+			else
+			{
+			obj_camera.t_x ++
+			}
+		}
+		
+		if show_cinematic_sec >= 11600
+		{
+		global.t_b_alpha = 2.1
+			if global.b_alpha >= 1 && room != room_main
+			{
+			global.guisanga_doo_event = 0
+			global.already_played_platform_scene = 0
 			global.playing_scene = 0
+			room_goto(room_main)
 			}
 		}
 	}

@@ -100,6 +100,7 @@ y += 1.2
 	
 	give_item(1,19)
 	
+	
 	dead_scene = 0
 	
 	var test_mob = instance_create_depth(xstart-1100,1625,player.depth+3,mob_spawn_here)

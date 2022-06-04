@@ -1,5 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
+owner_surface = surface_create(1920,1080)
+
 depth = 1000
 image_speed = 1.2
 image_index = 0
@@ -11,6 +13,7 @@ spin = 0
 random_dir = choose(-1,1)
 change_dir = 0
 global.got_sec_phase = 1
+_light_3 = -4
 _aaa = -4
 back_my_point = 0
 bgm = -4
@@ -26,7 +29,7 @@ saved_player_dir = 0
 skill_red_ball_effect_rage = -4
 message_phase = 0
 check__ = -4
-bgm_timer = 0
+//bgm_timer = 0
 hp = 900
 max_hp = 900
 bullet__ = 0

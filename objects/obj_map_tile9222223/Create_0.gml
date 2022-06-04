@@ -12,6 +12,8 @@ alarm[2] = 100
 
 player.x = 503
 player.y = 96
+global.save_point_x = 503
+global.save_point_y = 96
 
 obj_camera.x = 503
 obj_camera.y = 96
@@ -23,6 +25,15 @@ obj_camera.y = 96
 
 
 global.platform_speed = 0
+
+if global.guisanga_doo_event = 0
+{
+instance_create_depth(4576,1504,depth,obj_simhae_doo)
+}
+else
+{
+instance_create_depth(4608,1440,depth,obj_guisangadoo)
+}
 
 
 

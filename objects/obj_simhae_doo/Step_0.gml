@@ -121,6 +121,10 @@ b_alpha_ += (t_b_alpha_ - b_alpha_)*0.08
 	portential_xscale += (1.7 - portential_xscale)*0.1
 	image_yscale += (1.7 - image_yscale)*0.1
 	sprite_index = simhae_doo_none_clip
+	if global.none_wakgood_mode = true
+	{
+	sprite_index = simhae_doo_none_clip268
+	}
 	alpha += (1 - alpha)*0.1
 	image_xscale = p_xscale*portential_xscale
 	}
@@ -131,6 +135,10 @@ b_alpha_ += (t_b_alpha_ - b_alpha_)*0.08
 	portential_xscale += (2 - portential_xscale)*0.1
 	image_yscale += (2 - image_yscale)*0.1
 	sprite_index = simhae_doo
+	if global.none_wakgood_mode = true
+	{
+	sprite_index = simhae_doo265
+	}
 	alpha += (0 - alpha)*0.1
 	}
 	
@@ -157,6 +165,11 @@ b_alpha_ += (t_b_alpha_ - b_alpha_)*0.08
 			{
 			global.boss_target = id
 			global.boss_name = "암흑속의 심해두"
+			if global.none_wakgood_mode = true
+			{
+			global.boss_name = "암흑속의 심해어"
+			}
+			
 			if player.attack_laser_sec = 0 && player.attack_laser = 0 && player.suicide = 0 && player.sting_attack = 0
 			{
 			obj_camera.tv_x = 1280

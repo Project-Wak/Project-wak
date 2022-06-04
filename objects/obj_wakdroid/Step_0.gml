@@ -8,10 +8,15 @@
 	obj_camera.v_y = 720*0.9
 	}
 	
-if global.got_sec_phase = 1 && hp > 300
+if global.got_sec_phase = 1
 {
-hp = 300
+	if hp > 300
+	{
+	hp = 100
+	check_hp = 100
+	}
 }
+
 global.room_brightness += (0.6 - global.room_brightness)*0.04
 
 if y > 2404
@@ -23,6 +28,11 @@ gravity = 0
 if damaged_count < 0
 {
 damaged_count = 0
+}
+
+if damaged_count >= 150
+{
+damaged_count = 150
 }
 
 if !instance_exists(wall_1)
@@ -60,6 +70,10 @@ code.last_bgm = audio_play_sound(follower_bgm,0,1)
 	{
 	movement_speed += (0 - movement_speed)*0.03
 	sprite_index = pl_move_skeleton_rush_slice_black
+		if global.none_wakgood_mode = true
+		{
+		sprite_index = pl_move_skeleton_rush_slice_black278
+		}
 	dash_attack += 0.2
 
 
@@ -296,7 +310,7 @@ obj_camera.t_x = 5650
 	test_mob_type = 0
 	
 	
-		if attack_delay < 230 && (sprite_index = move_sprite || sprite_index = pl_move_skeleton_attack_beat_saber_black || sprite_index = pl_move_wakdroid_spin)
+		if attack_delay < 230 && (sprite_index = move_sprite || sprite_index = attack_spr || sprite_index = move_spin)
 		{
 			if (abs(x - player.x) <= 75 && attack_ = 0) && spin = 0 && dash_attack = 0
 			{
@@ -316,7 +330,7 @@ obj_camera.t_x = 5650
 		
 			if spin > 0
 			{
-			sprite_index = pl_move_wakdroid_spin
+			sprite_index = move_spin
 			spin += 0.3
 			cannot_move = 1
 			image_index = spin
@@ -394,7 +408,7 @@ obj_camera.t_x = 5650
 		
 			if (abs(x - player.x) <= 64 || attack_ > 0) && spin = 0
 			{
-			sprite_index = pl_move_skeleton_attack_beat_saber_black
+			sprite_index = attack_spr
 			image_index = attack_
 			movement_speed += (0 - movement_speed)*0.1
 			attack_ += 0.15
@@ -629,7 +643,7 @@ obj_camera.t_x = 5650
 			audio_sound_gain(sfx,0.4*global.master_volume*2*global.sfx_volume,0)
 			sfx_for_multiplayer(swing_lightsaber_sfx2,0,0.1)
 			image_xscale = -sign_k(player.x - x)
-			sprite_index = spr_jump_wakdroid
+			sprite_index = jump_spr
 			attack_paturn = 1.2
 			vspeed = 0
 			}
@@ -655,7 +669,7 @@ obj_camera.t_x = 5650
 			gravity = 0.1
 			vspeed = -3.5
 			image_xscale = -sign_k(player.x - x)
-			sprite_index = spr_jump_wakdroid
+			sprite_index = jump_spr
 			}
 		
 			if attack_paturn >= 1.2 && attack_paturn < 1.3
@@ -666,6 +680,10 @@ obj_camera.t_x = 5650
 			vspeed = 0
 			gravity_ignore = 1
 			sprite_index = pl_move_skeleton_spin_attack1_1
+			if global.none_wakgood_mode = true
+			{
+			sprite_index = pl_move_skeleton_spin_attack1249
+			}
 			image_index = 8
 		
 			spin_attack_delay++
@@ -716,7 +734,7 @@ obj_camera.t_x = 5650
 			image_angle = 0
 			movement_speed += (0 - movement_speed)*0.04
 			image_index = 0
-			sprite_index = spr_crouch_wakdroid
+			sprite_index = crouch_spr
 				if abs(movement_speed) < 1
 				{
 				sprite_index = move_sprite
@@ -776,8 +794,14 @@ obj_camera.t_x = 5650
 			}
 		}
 	
-	
 	sprite_index = pl_move_skeleton_laser_skill_sec_black
+	if global.none_wakgood_mode = true
+	{
+	sprite_index = pl_move_skeleton_laser_skill_sec_black279
+	}
+	
+	
+	
 		if attack_laser_sec < 13
 		{
 		image_index = floor(attack_laser_sec)
@@ -858,7 +882,7 @@ obj_camera.t_x = 5650
 			audio_sound_gain(sfx,0.4*global.master_volume*2*global.sfx_volume,0)
 			sfx_for_multiplayer(swing_lightsaber_sfx2,0,0.1)
 			image_xscale = -sign_k(player.x - x)
-			sprite_index = spr_jump_wakdroid
+			sprite_index = jump_spr
 			attack_paturn = 3.2
 			vspeed = 0
 			}
@@ -882,7 +906,7 @@ obj_camera.t_x = 5650
 			y -= 2
 			vspeed = -8
 			image_xscale = -sign_k(player.x - x)
-			sprite_index = spr_jump_wakdroid
+			sprite_index = jump_spr
 			}
 		
 			if attack_paturn >= 3.2
@@ -924,7 +948,7 @@ obj_camera.t_x = 5650
 					attack_target_x = x
 					attack_paturn = 3.3
 					movement_speed = -4*sign_k(image_xscale)
-					sprite_index = spr_jump_wakdroid
+					sprite_index = jump_spr
 					sfx_for_multiplayer(guard,0,0.1)
 						repeat(8)
 						{
@@ -973,7 +997,7 @@ obj_camera.t_x = 5650
 			image_angle = 0
 			movement_speed += (0 - movement_speed)*0.04
 			image_index = 0
-			sprite_index = spr_crouch_wakdroid
+			sprite_index = crouch_spr
 				if gravity <= 0
 				{
 				down_attack_motion_dilay = 0

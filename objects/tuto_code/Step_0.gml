@@ -83,7 +83,7 @@ if global.show_credits = 0
 	key_guide.location = 0
 	key_guide.img_index = 15
 
-	global.show_guide_mes = "회전베기("+string(global.q_key)+")\n\n적의 총알을 향해 회전 베기를 사용하면 총알을 도탄 시킬 수 있다.\n이때, 일부 적의 경우, 도탄된 총알을 맞게 되면 막대한 데미지를 입게된다."
+	global.show_guide_mes = "회전베기("+string(global.q_key)+")\n\n적의 총알을 향해 회전 베기를 사용하면 총알을 도탄 시킬 수 있다.\n이때, 터렛의 경우, 도탄된 총알을 맞게 되면 막대한 데미지를 입게된다."
 	global.show_guide_mes_spr = 4
 	}
 

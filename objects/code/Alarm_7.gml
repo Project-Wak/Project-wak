@@ -101,6 +101,25 @@ player.guard_sprite = pl_move_skeleton_guard
 	player.suicide_sprite = pl_move_skeleton_suicide_katana
 	player.pering_sprite = pl_move_skeleton_pering_katana
 	}
+	
+	if global.none_wakgood_mode = true
+	{
+	player.move_sprite = spr_move274
+	player.attack_sprite = pl_move_skeleton_attack_beat_saber_red256
+	player.spin_attack_sprite = pl_move_skeleton_spin_attack_beat_saber_red260
+	player.down_attack_sprite = pl_move_skeleton_down_attack_beat_saber_red261
+	player.jump_attack_sprite = pl_move_skeleton_jump_attack_beat_saber_red258
+	player.spin_sprite = pl_move_skeleton_spin267
+	player.jump_sprite = spr_jump261
+	player.hurt_sprite = pl_hurt273
+	player.attack_laser_sprite = pl_move_skeleton_laser_skill_sec_red253
+	player.guard_sprite = pl_move_skeleton_guard_red255
+	player.sting_sprite = pl_move_skeleton_sting_skill
+	player.attack_laser_sprite_sec = pl_move_skeleton_laser_skill_sec_red253
+	player.rush_sprite = pl_move_skeleton_rush_slice_red257
+	player.suicide_sprite = pl_move_skeleton_rush_slice_red257
+	player.pering_sprite = pl_move_skeleton_pering_beat_saber_red252
+	}
 }
 		
 		

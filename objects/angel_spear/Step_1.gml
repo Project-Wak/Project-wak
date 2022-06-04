@@ -18,15 +18,31 @@ var random_val___2 = percentage_k(1)
 create_buble_effect(0.3,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.07,0.07,$FF62D1F7,$FF6C60CD,2,$FF191919,xx_,yy_,depth-random_val___2,1,false,false)
 }
 
-if obj_angel.y+240 < y
+if instance_exists(obj_angel)
 {
-vspeed = 0
-gravity = 0
-on_floor = 1
+	if obj_angel.y+240 < y
+	{
+	vspeed = 0
+	gravity = 0
+	on_floor = 1
+	}
+	else
+	{
+	on_floor = 0
+	}
 }
 else
 {
-on_floor = 0
+	if 2361 < y
+	{
+	vspeed = 0
+	gravity = 0
+	on_floor = 1
+	}
+	else
+	{
+	on_floor = 0
+	}
 }
 
 

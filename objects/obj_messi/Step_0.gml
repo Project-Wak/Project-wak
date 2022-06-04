@@ -17,7 +17,7 @@ if hp <= 0
 	if random_val___ = 1
 	{
 	var random_val___2 = percentage_k(5)
-	create_buble_effect(1,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.1,0.1,$FF47BBFF,$FF4C81FF,2,$FF534CFF,xx_-18-image_xscale*5,yy_+170+image_yscale*12,depth-random_val___2,0,false,false)
+	create_buble_effect(1,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.1,0.1,$FF47BBFF,$FF4C81FF,2,$FF534CFF,xx_-18-image_xscale*5,yy_+170+image_yscale*12,depth+5-random_val___2*5,0,false,false)
 	}
 	
 	var random_val___ = percentage_k(10)
@@ -31,7 +31,7 @@ if hp <= 0
 	if random_val___ = 1
 	{
 	var random_val___2 = percentage_k(5)
-	create_buble_effect(1,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.1,0.1,$FF47BBFF,$FF4C81FF,2,$FF534CFF,xx_+18+image_xscale*5,yy_+170+image_yscale*12,depth-random_val___2,0,false,false)
+	create_buble_effect(1,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.1,0.1,$FF47BBFF,$FF4C81FF,2,$FF534CFF,xx_+18+image_xscale*5,yy_+170+image_yscale*12,depth+5-random_val___2*5,0,false,false)
 	}
 
 	
@@ -47,7 +47,7 @@ if hp <= 0
 	if random_val___ = 1
 	{
 	var random_val___2 = percentage_k(1)
-	create_buble_effect(1,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.1,0.1,$FF47BBFF,$FF4C81FF,2,$FF534CFF,xx_+170,yy_+260,depth-random_val___2,0,false,false)
+	create_buble_effect(1,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.1,0.1,$FF47BBFF,$FF4C81FF,2,$FF534CFF,xx_+170,yy_+260,depth+5-random_val___2*5,0,false,false)
 	}
 
 	
@@ -61,7 +61,7 @@ if hp <= 0
 	if random_val___ = 1
 	{
 	var random_val___2 = percentage_k(1)
-	create_buble_effect(1,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.1,0.1,$FF47BBFF,$FF4C81FF,2,$FF534CFF,xx_-150,yy_+260,depth-random_val___2,0,false,false)
+	create_buble_effect(1,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.1,0.1,$FF47BBFF,$FF4C81FF,2,$FF534CFF,xx_-150,yy_+260,depth+5-random_val___2*5,0,false,false)
 	}
 	
 	var random_val___ = percentage_k(10)
@@ -263,7 +263,7 @@ else
 				{
 
 				var random_val___2 = percentage_k(5)
-				create_buble_effect(1,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.1,0.1,$FF47BBFF,$FF4C81FF,2,$FF534CFF,xx_-18-image_xscale*5,yy_+170+image_yscale*12,depth-random_val___2,0,false,false)
+				create_buble_effect(1,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.1,0.1,$FF47BBFF,$FF4C81FF,2,$FF534CFF,xx_-18-image_xscale*5,yy_+170+image_yscale*12,depth+5-random_val___2*5,0,false,false)
 				}
 			}
 	
@@ -279,7 +279,7 @@ else
 				if random_val___ = 1
 				{
 				var random_val___2 = percentage_k(5)
-				create_buble_effect(1,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.1,0.1,$FF47BBFF,$FF4C81FF,2,$FF534CFF,xx_+18+image_xscale*5,yy_+170+image_yscale*12,depth-random_val___2,0,false,false)
+				create_buble_effect(1,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.1,0.1,$FF47BBFF,$FF4C81FF,2,$FF534CFF,xx_+18+image_xscale*5,yy_+170+image_yscale*12,depth+5-random_val___2*5,0,false,false)
 				}
 			}
 	
@@ -297,7 +297,7 @@ else
 				if random_val___ = 1
 				{
 				var random_val___2 = percentage_k(1)
-				create_buble_effect(1,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.1,0.1,$FF47BBFF,$FF4C81FF,2,$FF534CFF,xx_+170,yy_+260,depth-random_val___2,0,false,false)
+				create_buble_effect(1,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.1,0.1,$FF47BBFF,$FF4C81FF,2,$FF534CFF,xx_+170,yy_+260,depth+5-random_val___2*5,0,false,false)
 				}
 			}
 	
@@ -313,7 +313,7 @@ else
 				if random_val___ = 1
 				{
 				var random_val___2 = percentage_k(1)
-				create_buble_effect(1,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.1,0.1,$FF47BBFF,$FF4C81FF,2,$FF534CFF,xx_-150,yy_+260,depth-random_val___2,0,false,false)
+				create_buble_effect(1,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.1,0.1,$FF47BBFF,$FF4C81FF,2,$FF534CFF,xx_-150,yy_+260,depth+5-random_val___2*5,0,false,false)
 				}
 			}
 	
@@ -335,7 +335,7 @@ else
 					{
 
 					var random_val___2 = percentage_k(5)
-					create_buble_effect(1,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.1,0.1,$FF47BBFF,$FF4C81FF,2,$FF534CFF,xx_-18-image_xscale*5,yy_+32+image_yscale*12,left_hand.depth-random_val___2,0,false,false)
+					create_buble_effect(1,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.1,0.1,$FF47BBFF,$FF4C81FF,2,$FF534CFF,xx_-18-image_xscale*5,yy_+32+image_yscale*12,left_hand.depth+5-random_val___2*5,0,false,false)
 					}
 				}
 	
@@ -351,7 +351,7 @@ else
 					if random_val___ = 1
 					{
 					var random_val___2 = percentage_k(5)
-					create_buble_effect(1,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.1,0.1,$FF47BBFF,$FF4C81FF,2,$FF534CFF,xx_+18+image_xscale*5,yy_+32+image_yscale*12,left_hand.depth-random_val___2,0,false,false)
+					create_buble_effect(1,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.1,0.1,$FF47BBFF,$FF4C81FF,2,$FF534CFF,xx_+18+image_xscale*5,yy_+32+image_yscale*12,left_hand.depth+5-random_val___2*5,0,false,false)
 					}
 				}
 	
@@ -370,7 +370,7 @@ else
 					{
 
 					var random_val___2 = percentage_k(5)
-					create_buble_effect(1,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.1,0.1,$FF47BBFF,$FF4C81FF,2,$FF534CFF,xx_-18-image_xscale*5,yy_+32+image_yscale*12,right_hand.depth-random_val___2,0,false,false)
+					create_buble_effect(1,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.1,0.1,$FF47BBFF,$FF4C81FF,2,$FF534CFF,xx_-18-image_xscale*5,yy_+32+image_yscale*12,right_hand.depth+5-random_val___2*5,0,false,false)
 					}
 				}
 	
@@ -386,7 +386,7 @@ else
 					if random_val___ = 1
 					{
 					var random_val___2 = percentage_k(5)
-					create_buble_effect(1,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.1,0.1,$FF47BBFF,$FF4C81FF,2,$FF534CFF,xx_+18+image_xscale*5,yy_+32+image_yscale*12,right_hand.depth-random_val___2,0,false,false)
+					create_buble_effect(1,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.1,0.1,$FF47BBFF,$FF4C81FF,2,$FF534CFF,xx_+18+image_xscale*5,yy_+32+image_yscale*12,right_hand.depth+5-random_val___2*5,0,false,false)
 					}
 				}
 	
@@ -440,6 +440,12 @@ else
 		{
 		global.boss_target = id
 		global.boss_name = "거대 왁두의 권속 - 화염의 거대 안드로이드 메시"
+		
+			if global.none_wakgood_mode = true
+			{
+			global.boss_name = "거대 경비병의 권속 - 화염의 기사"
+			}
+		
 			if player.attack_laser_sec = 0 && player.attack_laser = 0 && player.suicide = 0 && player.sting_attack = 0
 			{
 			obj_camera.tv_x = 1280

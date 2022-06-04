@@ -38,3 +38,23 @@ if can_interect = 1
 draw_text_kl_scale(x,y-v_x*64,"상호작용 ("+string(global.skip_key)+")",v_x*64,-1,1,c_white,0,0,font0,v_x*0.3,v_x*0.3,0);
 }
 
+
+if room = room_sector_outside && global.real_ending > 0 && obj_map_tile_outside.explo_anime = 0
+{
+var start_i_var = 0
+var total_people = 6
+
+	if global.none_wakgood_mode = true
+	{
+	total_people = 1
+	start_i_var = 7
+	}
+
+	for(var i = 0; i <= total_people; i++)
+	{
+	depth = player.depth+15
+	var my_xx = 1054+i*64
+	draw_sprite_ext(audience_3,i+start_i_var,my_xx,1097,sign_k(my_xx - player.x),1,0,c_white,1)
+	draw_sprite_ext(spr_shadow,0,my_xx,1097+20,1,1,0,c_white,0.3*image_alpha)
+	}
+}

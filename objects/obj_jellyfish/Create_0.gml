@@ -3,7 +3,7 @@
 targeted = 0
 timer = 0
 light_timer = 0
-_light_ = 0
+_light_ = -4
 cannot_move = 0
 hit_cooltime = 0
 move_sprite = Sprite209

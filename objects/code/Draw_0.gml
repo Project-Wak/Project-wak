@@ -20,8 +20,10 @@ if playing_gameover_scene >= 120
 if global.fps_draw > 0
 {
 //draw_text_k_scale(xx,yy+v_x*160,string(global.return_player_id),v_x*64,-1,1,c_white,0,0,font0,v_x*0.35,v_x*0.35,0);
-
-draw_text_k_scale(xx,yy+v_x*220,string(string(player.x)+" , "+string(player.y)+" / hurt : "+string(player.hurt)+" / hp : "+string(global.hp)),v_x*64,-1,1,c_white,0,-1,font0,v_x*0.35,v_x*0.35,0);
+	if instance_exists(player)
+	{
+	draw_text_k_scale(xx,yy+v_x*220,string(string(player.x)+" , "+string(player.y)+" / hurt : "+string(player.hurt)+" / hp : "+string(global.hp)),v_x*64,-1,1,c_white,0,-1,font0,v_x*0.35,v_x*0.35,0);
+	}
 draw_text_k_scale(xx,yy+v_x*280,"(F2 to console)\n\nBest fps (maximum fps) : "+string(max_fps)+" (F1 to reset)",v_x*64,-1,1,c_white,0,-1,font0,v_x*0.35,v_x*0.35,0);
 draw_text_k_scale(xx,yy+v_x*350,"accessories : "+string(global.accessories_equip[0])+" / "+string(global.accessories_equip[1])+"   fixed_camera : "+string(global.fix_camera),v_x*64,-1,1,c_white,0,-1,font0,v_x*0.35,v_x*0.35,0);
 }

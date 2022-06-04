@@ -10,7 +10,12 @@ if sprite_index = move_sprite
 {
 	if abs(movement_speed) > 5
 	{
-	draw_sprite_ext(spr_move_run_wakdroid,image_index,x,y,image_xscale,image_yscale,image_angle,c_white,image_alpha)
+	var spr__ = spr_move_run_wakdroid
+	if global.none_wakgood_mode = true
+	{
+	spr__ = spr_move_run_wakdroid246
+	}
+	draw_sprite_ext(spr__,image_index,x,y,image_xscale,image_yscale,image_angle,c_white,image_alpha)
 	}
 	else
 	{

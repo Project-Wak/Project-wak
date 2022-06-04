@@ -101,7 +101,7 @@
     "eventStubScript": null,
     "parent": {"name":"pl_move_skeleton_guard_red244","path":"sprites/pl_move_skeleton_guard_red244/pl_move_skeleton_guard_red244.yy",},
     "resourceVersion": "1.4",
-    "name": "pl_move_skeleton_guard_red",
+    "name": "pl_move_skeleton_guard_red244",
     "tags": [],
     "resourceType": "GMSequence",
   },

@@ -5,8 +5,8 @@ if image_alpha <= 0 || image_xscale <= 0 || image_yscale <= 0
 instance_destroy()
 }
 
-image_alpha += (-0.01 - image_alpha)*alpha_m_sp
-sec_alpha += (1 - sec_alpha)*alpha_m_sp*1.1
+image_alpha += (0 - image_alpha)*alpha_m_sp
+sec_alpha += (1 - sec_alpha)*alpha_m_sp
 image_xscale += (txscale - image_xscale)*scale_m_sp
 image_yscale += (tyscale - image_yscale)*scale_m_sp
 

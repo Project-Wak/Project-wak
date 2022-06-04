@@ -6,6 +6,17 @@ var yy = camera_get_view_y(view_camera[0])
 var wid = camera_get_view_width(view_camera[0])
 var hei = camera_get_view_height(view_camera[0])
 
+
+if surface_exists(owner_surface)
+{
+var surf__ = owner_surface
+draw_outline(surf__,1.5)
+}
+else
+{
+owner_surface = surface_create(1920,1080)
+}
+
 if set_brightness = 0
 {
 var alpha_____ = 1 - global.b_alpha

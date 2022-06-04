@@ -281,10 +281,15 @@ else
 			{
 			var random_patturn = choose(1,2,2,3,4,4)
 			
-			if count_three > 3
-			{
-			random_patturn = 3
-			}
+				if instance_exists(obj_wakdroid_ending)
+				{
+				random_patturn = choose(1,2,2,3,4,4,5,5,5)
+				}
+			
+				if count_three > 3
+				{
+				random_patturn = 3
+				}
 			
 				if random_patturn != b_patturn
 				{
@@ -301,7 +306,16 @@ else
 						random_patturn = 3
 						break;
 						}
-					random_patturn = choose(1,2,2,3,4,4)
+					
+						if instance_exists(obj_wakdroid_ending)
+						{
+						random_patturn = choose(1,2,2,3,4,4,5,5,5)
+						}
+						else
+						{
+						random_patturn = choose(1,2,2,3,4,4)
+						}
+						
 					
 						if random_patturn != b_patturn
 						{
@@ -472,7 +486,7 @@ else
 			if patturn > 2.1 && patturn <= 2.4
 			{
 			bullet__ ++
-				if bullet__%50 = 0
+				if bullet__%60 = 0
 				{
 				view_shake(11,11,1)
 				var sfx = audio_play_sound(choose(swing_lightsaber_sfx1,swing_lightsaber_sfx2,swing_lightsaber_sfx3),0,0)
@@ -706,7 +720,7 @@ else
 			_aaa = instance_create_depth(x-random_dir*24,y-16,depth-1,effect_special_skill_sec_attacked)
 			_aaa.image_angle = point_direction(x,y,player.x,player.y)-90
 			_aaa.direction = point_direction(x,y,player.x,player.y)-90
-			_aaa.maximum_size = 0.7
+			_aaa.maximum_size = 0.5
 			_aaa.color_1 = c_white
 			_aaa.color_2 = $FF1C1CB2
 			_aaa.color_3 = $FF6D52F2
@@ -748,6 +762,160 @@ else
 			}
 		}
 		
+		
+		if patturn >= 5 && patturn < 6
+		{
+			if instance_exists(angel_spear)
+			{
+			_light_3.x = angel_spear.x
+			_light_3.y = angel_spear.y
+			_light_3.image_angle = angel_spear.image_angle
+			_light_3.alpha = angel_spear.image_alpha*0.8
+			_light_3.image_xscale += (3*angel_spear.image_xscale - _light_3.image_xscale)*0.1
+			_light_3.image_yscale += (3*angel_spear.image_yscale - _light_3.image_yscale)*0.1
+			}
+			
+			if patturn = 5
+			{
+			instance_create_depth(xstart,ystart+360,1050,angel_spear)
+			_light_3 = instance_create_depth(x,y-30,depth,obj_light)
+			_light_3.p_id = id
+			_light_3.alpha = 0.7
+			_light_3.sprite_index = sprite64
+			_light_3.image_blend = $FF75F2FF
+			_light_3.light_type = 0
+			_light_3.image_xscale = (3*angel_spear.image_xscale)
+			_light_3.image_yscale = (3*angel_spear.image_yscale)
+			}
+			
+			if patturn < 5.1
+			{
+			patturn += 0.001
+			angel_spear.image_angle += (point_direction(angel_spear.x,angel_spear.y,player.x,player.y)+90 - angel_spear.image_angle)*0.1
+			angel_spear.x += (x - angel_spear.x)*0.09
+			angel_spear.y += (y - angel_spear.y)*0.09
+			angel_spear.image_xscale = 1.6
+			angel_spear.image_yscale = 1.6
+			}
+			
+			if patturn >= 5.05
+			{
+			angel_spear.depth = player.depth-15
+			angel_spear.image_xscale += (1.7 - angel_spear.image_xscale)*0.1
+			angel_spear.image_yscale += (1.7 - angel_spear.image_yscale)*0.1
+			}
+			
+			if patturn = 5.1
+			{
+			angel_spear.direction = angel_spear.image_angle-90
+				if angel_spear.speed < 20
+				{
+				angel_spear.speed = 20
+				angel_spear.w_alpha = 1.2
+				var sfx = audio_play_sound(jump_attack_sfx,0,0)
+				audio_sound_gain(sfx,0.1*global.master_volume*2*global.sfx_volume,0)
+				var sfx = audio_play_sound(choose(swing_lightsaber_sfx1,swing_lightsaber_sfx2,swing_lightsaber_sfx3),0,0)
+				audio_sound_gain(sfx,0.1*global.master_volume*2*global.sfx_volume,0)
+				}
+				else
+				{
+				angel_spear.speed += 1
+				}
+				
+				if angel_spear.on_floor > 0
+				{
+				angel_spear.speed = 0
+					repeat(choose(6,7,7,8,8,9,9,9,10,10,11,12))
+					{
+					randomize()
+					var random_target = angel_spear
+					var dust = instance_create_depth(random_target.x+irandom_range(-5,5),y+300+irandom_range(-5,5),random_target.depth-1,pepsi_effect_received)
+					var scale = irandom_range(20,40)/50
+					dust.image_xscale = scale
+					dust.image_yscale = scale
+					dust.vspeed = irandom_range(-50,50)/25
+					dust.hspeed = irandom_range(-50,50)/25
+					dust.image_alpha = 1
+					}
+				
+					repeat(irandom_range(4,6))
+					{
+					var bullet_ = instance_create_depth(angel_spear.x+irandom_range(-120,120),angel_spear.y-150+irandom_range(-120,120),angel_spear.depth-1,simhae_doo_bullet)
+					bullet_.bullet_speed = 0.7
+					bullet_.attack_type = 0
+					}
+				
+				var effect_ = instance_create_depth(angel_spear.x,angel_spear.y,angel_spear.depth+10,down_effect)
+				effect_.t_image_yscale = 0.4*3
+				effect_.t_image_xscale = 0.05*3
+				effect_.received = 0
+			
+				
+				var a___ = instance_create_depth(angel_spear.x,angel_spear.y,depth,rage_mode_knockback_attacked)
+				a___.image_xscale = 5
+				a___.image_yscale = 2
+				
+					if global.show_credits = 0
+					{
+					var sfx = audio_play_sound(down_attack_sfx,0,0)
+					audio_sound_gain(sfx,0.32*global.master_volume*2*global.sfx_volume,0)
+		
+					var a___ = audio_play_sound(guard,0,0)
+					audio_sound_gain(a___,0.07*global.master_volume*2*global.sfx_volume,0)
+		
+					var sfx = audio_play_sound(mob_faint,0,0)
+					audio_sound_gain(sfx,0.4*global.master_volume*2*global.sfx_volume,0)
+					}
+				view_shake(11,38,1)
+				patturn = 5.15
+				}
+			}
+			
+			if patturn >= 5.15 && patturn < 5.2
+			{
+				if !audio_is_playing(quake_sfx) && global.show_credits = 0
+				{
+				var sfx = audio_play_sound(quake_sfx,0,0)
+				audio_sound_gain(sfx,0.33*global.master_volume*2*global.sfx_volume,0)
+				}
+			patturn += 0.001
+			view_shake(0,1.1,1)
+			}
+			
+			
+			if patturn = 5.2
+			{
+			angel_spear.image_alpha += (-0.01 - angel_spear.image_alpha)*0.08
+				if angel_spear.image_alpha <= 0
+				{
+					repeat(4)
+					{
+					var _ef = instance_create_depth(angel_spear.x,y+240,depth-1,effect_spark)
+					_ef.hspeed = irandom_range(-20,20)
+					_ef.vspeed = irandom_range(-4,2)
+					}
+				instance_destroy(angel_spear)
+				instance_destroy(_light_3)
+				patturn = 0
+				var xx___ = x
+				var yy___ = y
+					repeat(choose(6,7,7,8,8,9,9,9,10,10,11,12))
+					{
+					randomize()
+					var dust = instance_create_depth(xx___+irandom_range(-5,5),yy___+irandom_range(-5,5),depth-1,pepsi_effect_received)
+					var scale = irandom_range(20,40)/50
+					dust.image_xscale = scale
+					dust.image_yscale = scale
+					dust.vspeed = irandom_range(-50,50)/37
+					dust.hspeed = irandom_range(-50,50)/37
+					dust.image_alpha = 1
+					}
+				var sfx = audio_play_sound(mob_faint,0,0)
+				audio_sound_gain(sfx,0.4*global.master_volume*2*global.sfx_volume,0)
+				y = 0
+				}
+			}
+		}
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 	}
 }

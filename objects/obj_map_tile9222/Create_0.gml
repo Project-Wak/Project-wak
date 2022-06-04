@@ -28,15 +28,15 @@ obj_camera.x = 547
 obj_camera.y = 448
 }
 
-var ele__ = instance_create_depth(-2100,448,0,obj_elevator)
-ele__.t_x = -1000
-ele__.t_y = 448
-ele__.real_t_x = 224
-ele__.real_t_y = 448
-ele__.activated = 1
-ele__.cannot_active_more = 1
-ele__.destination = 0
-ele__.line_length = 2500
+//var ele__ = instance_create_depth(-2100,448,0,obj_elevator)
+//ele__.t_x = -1000
+//ele__.t_y = 448
+//ele__.real_t_x = 224
+//ele__.real_t_y = 448
+//ele__.activated = 1
+//ele__.cannot_active_more = 1
+//ele__.destination = 0
+//ele__.line_length = 2500
 
 
 var door__ = instance_create_depth(1719,640,0,obj_tp_door_basement)
@@ -64,4 +64,11 @@ global.save_point_y = 449
 
 global.platform_speed = 0
 alarm[3] = 5
+
+
+
+if global.guisanga_doo_event = 1 && !instance_exists(obj_wakdroid_ending)
+{
+instance_create_depth(0,0,0,broken_platfrom)
+}
 

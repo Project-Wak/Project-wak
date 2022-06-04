@@ -200,6 +200,12 @@ else
 			{
 			global.boss_target = id
 			global.boss_name = "객관안과 스킵안"
+			
+			if global.none_wakgood_mode = true
+			{
+			global.boss_name = "연구소의 감시자 - 쌍둥이 눈"
+			}
+			
 				if player.attack_laser_sec = 0 && player.attack_laser = 0 && player.suicide = 0 && player.sting_attack = 0
 				{
 				obj_camera.tv_x = 1280
@@ -814,12 +820,12 @@ else
 					a___.image_yscale = 1
 					
 					var a___ = instance_create_depth(left_eye.x,left_eye.y,depth,rage_mode_knockback_attacked)
-					a___.image_xscale = 3.2
-					a___.image_yscale = 3.2
+					a___.image_xscale = 3.1
+					a___.image_yscale = 3.1
 					
 					var a___ = instance_create_depth(x,y,depth,rage_mode_knockback_attacked)
-					a___.image_xscale = 3.2
-					a___.image_yscale = 3.2
+					a___.image_xscale = 3.1
+					a___.image_yscale = 3.1
 
 					var effect_ = instance_create_depth(x,y+70,depth+1,down_effect)
 					effect_.t_image_yscale = 0.4*3

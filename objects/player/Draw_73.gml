@@ -1,11 +1,35 @@
 /// @description Insert description here
 // You can write your code in this editor
+if surface_exists(owner_surface)
+{
+surface_set_target(owner_surface);
+draw_clear_alpha(0,0);  // It doesn't matter what colour you give it - it's going to be transparent.
+surface_reset_target();
+}
+
+
+if surface_exists(global.bubble_surf)
+{
+surface_set_target(global.bubble_surf);
+draw_clear_alpha(0,0);  // It doesn't matter what colour you give it - it's going to be transparent.
+surface_reset_target();
+}
+
+if surface_exists(global.rage_surf)
+{
+surface_set_target(global.rage_surf);
+draw_clear_alpha(0,0);  // It doesn't matter what colour you give it - it's going to be transparent.
+surface_reset_target();
+}
+
+
 if global.show_credits = 0 && global.show_ui = 1
 {
 var v_x = obj_camera.v_x/1280
 var cm_x = camera_get_view_x(view_camera[0])
 var xx = cm_x+v_x*16
-var yy = camera_get_view_y(view_camera[0])+v_x*16
+var yy____ = camera_get_view_y(view_camera[0])
+var yy = yy____+v_x*16
 
 
 if image_alpha > 0 && global.hp > 0 && global.playing_scene <= 0 && global.t_b_alpha < 1 && global.b_alpha < 0.2 && global.never_move_in_setting = 0

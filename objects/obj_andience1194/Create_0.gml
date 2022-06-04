@@ -18,3 +18,15 @@ b_alpha_ = 0
 
 play_scene__ = 0
 bgm = -4
+
+if instance_exists(obj_wakdroid_ending)
+{
+instance_create_depth(3328,2240,depth,obj_last_boss)
+global.never_move = 0
+global.playing_scene = 0
+obj_camera.t_x = -4
+interecting_now = 0
+message_phase = 31
+sprite_index = pl_hurt_hyumpanchi_hakase
+image_index = 1
+}

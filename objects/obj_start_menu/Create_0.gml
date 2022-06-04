@@ -21,5 +21,6 @@ global.show_credits = 0
 go_start = 0
 audio_stop_sound(it_s_over)
 
+owner_surface = surface_create(1920,1080)
 really = 0
 timer_des = 0

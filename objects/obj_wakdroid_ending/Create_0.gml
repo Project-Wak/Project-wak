@@ -1,5 +1,11 @@
 /// @description Insert description here
 // You can write your code in this editor
+global.got_sec_phase = 1
+if global.none_wakgood_mode = true
+{
+sprite_index = pl_hurt_hyumpanchi271
+}
+
 image_index = 1
 image_speed = 0
 image_xscale = -1

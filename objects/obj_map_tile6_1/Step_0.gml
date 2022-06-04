@@ -19,6 +19,11 @@ global.playing_scene = 0
 	}
 }
 
+if room = room_sector_B03_1
+{
+global.room_brightness = 0.35
+}
+
 
 if global.slow_motion > 8000
 {
@@ -137,8 +142,6 @@ var yy = irandom_range(120,0)
 	
 	if room = room_sector_B03_1
 	{
-	global.room_brightness = 0.35
-	
 		if !instance_exists(check__) && message_phase = 0
 		{
 		global.never_move = 1
@@ -149,53 +152,181 @@ var yy = irandom_range(120,0)
 		check__.parents = id
 		}
 		
-		if !instance_exists(check__) && message_phase = 1
-		{
-		global.never_move = 1
-		player.image_xscale = -1
-		check__ = instance_create_depth(x,y,depth-1,player_message)
-		check__.text = "(이전보다 가는 길이 굉장히 어두운거 같다)"
-		check__.target = player.id
-		check__.parents = id
-		}
-		
-		if message_phase = 2 && !instance_exists(mob_parents)
+		if message_phase = 1 && !instance_exists(mob_parents)
 		{
 		global.never_move = 0
 		var test_mob = instance_create_depth(xx-150,0+yy,player.depth+3,wak_drone)
-		test_mob.image_xscale = -1.1
-		test_mob.image_yscale = 1.1
+		test_mob.image_xscale = -0.8
+		test_mob.image_yscale = 0.8
 		test_mob.test_mob_type = 1
 
 		message_phase++
 		}
 
-		if message_phase = 3 && !instance_exists(mob_parents)
+		if message_phase = 2 && !instance_exists(mob_parents)
 		{
 		global.never_move = 0
 		var test_mob = instance_create_depth(xx+150,0+yy,player.depth+3,wak_drone)
-		test_mob.image_xscale = 1.1
-		test_mob.image_yscale = 1.1
+		test_mob.image_xscale = 0.8
+		test_mob.image_yscale = 0.8
 		test_mob.test_mob_type = 1
 
 		message_phase++
 		}
 		
-		if !instance_exists(check__) && message_phase = 4 && !instance_exists(mob_parents)
+		
+		if broken_platform = 0
 		{
-		global.never_move = 1
-		player.image_xscale = -1
-		check__ = instance_create_depth(x,y,depth-1,player_message)
-		check__.text = "..."
-		check__.target = player.id
-		check__.parents = id
+			if !instance_exists(check__) && message_phase = 3 && !instance_exists(mob_parents)
+			{
+			global.never_move = 1
+			player.image_xscale = -1
+			check__ = instance_create_depth(x,y,depth-1,player_message)
+			check__.text = "..."
+			check__.target = player.id
+			check__.parents = id
+			}
+		
+		
+			if message_phase = 4 && !instance_exists(mob_parents)
+			{
+			obj_elevator.activated = 1
+			message_phase ++
+			}
 		}
-		
-		
-		if message_phase = 5 && !instance_exists(mob_parents)
+		else
 		{
-		obj_elevator.activated = 1
-		message_phase ++
+			if message_phase >= 90 && !instance_exists(mob_parents)
+			{
+			global.platform_speed += (0 - global.platform_speed)*0.1
+			player.guarding = 1.3
+			}
+			
+			if !instance_exists(check__) && message_phase = 3 && !instance_exists(mob_parents)
+			{
+			global.never_move = 1
+			player.image_xscale = -1
+			check__ = instance_create_depth(x,y,depth-1,player_message)
+			check__.text = "..."
+			check__.target = player.id
+			check__.parents = id
+			}
+		
+		
+			if message_phase >= 4
+			{
+			global.playing_scene = 1
+			global.never_move = 1
+				if !instance_exists(check__) 
+				{
+				message_phase ++
+				plusment += 0.7+plusment/100
+				}
+				
+				if instance_exists(obj_elevator)
+				{
+					if message_phase >= 90
+					{
+					depth = obj_elevator.depth
+					var xx_ = obj_elevator.x
+					var yy_ = obj_elevator.y
+					repeat(2)
+					{
+						var random_val___ = percentage_k(45)
+						if random_val___ = 1
+						{
+
+						var random_val___2 = percentage_k(5)
+						create_buble_effect(1,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.1,0.1,$FF47BBFF,$FF4C81FF,2,$FF534CFF,xx_-18-image_xscale*5,yy_+32+image_yscale*12,obj_elevator.depth+5-random_val___2*5,0,false,false)
+						}
+					}
+	
+					var random_val___ = percentage_k(10)
+					if random_val___ = 1
+					{
+					create_buble_effect(1.1,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.07,0.07,$FF62D1F7,$FF6C60CD,2,$FF191919,xx_-18-image_xscale*5,yy_+32+image_yscale*12,obj_elevator.depth+10,1,false,false)
+					}
+	
+					repeat(2)
+					{
+						var random_val___ = percentage_k(45)
+						if random_val___ = 1
+						{
+						var random_val___2 = percentage_k(5)
+						create_buble_effect(1,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.1,0.1,$FF47BBFF,$FF4C81FF,2,$FF534CFF,xx_+18+image_xscale*5,yy_+32+image_yscale*12,obj_elevator.depth+5-random_val___2*5,0,false,false)
+						}
+					}
+	
+					var random_val___ = percentage_k(10)
+					if random_val___ = 1
+					{
+					create_buble_effect(1.1,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.07,0.07,$FF62D1F7,$FF6C60CD,2,$FF191919,xx_+18+image_xscale*5,yy_+32+image_yscale*12,obj_elevator.depth+10,1,false,false)
+					}
+					}
+					
+					if message_phase > 140
+					{
+					obj_elevator.real_t_y += plusment+1
+					}
+					else
+					{
+					obj_elevator.y += (obj_elevator.real_t_y - obj_elevator.y)*0.1
+					}
+				}
+				
+				if message_phase > 140 && message_phase < 240
+				{
+				obj_elevator.activated = 1
+				player.jump = 1
+				player.vspeed = -1
+				}
+				
+				if message_phase >= 240
+				{
+				global.t_b_alpha = -0.1
+				room_goto(room_sector_B03_2_remaked)
+				}
+				
+				
+				if message_phase = 90
+				{
+				var a___ = audio_play_sound(guard,0,0)
+				audio_sound_gain(a___,0.07*global.master_volume*2*global.sfx_volume,0)
+			
+				var sfx = audio_play_sound(mob_faint,0,0)
+				audio_sound_gain(sfx,0.4*global.master_volume*2*global.sfx_volume,0)
+				///////////////////////////////////////////
+				repeat(irandom_range(14,17))
+				{
+				create_buble_effect(1.2,irandom_range(0,359),0,choose(-1)*irandom_range(1,100)/7,0.08,0.08,$FF00D2FE,$FF076BFE,1.5,$FF737272,obj_elevator.x,obj_elevator.y,-room_width*1.5,0,true,false)
+				}
+	
+				repeat(irandom_range(7,10))
+				{
+				create_buble_effect(1.45,irandom_range(0,359),0,choose(-1)*irandom_range(1,100)/7,0.07,0.07,c_white,$FF00D2FE,1.5,$FF342F32,obj_elevator.x,obj_elevator.y,-room_width*1.5,1,true,false)
+				}
+	
+				view_shake(choose(0,0,0,0,1),irandom_range(10,15),choose(0,1))
+				var y_set = obj_elevator.y+irandom_range(-16,16)
+				repeat(8)
+				{
+				var _ef = instance_create_depth(obj_elevator.x,y_set,obj_elevator.depth-1,effect_spark)
+				_ef.hspeed = irandom_range(5,20)*choose(-1,1)
+				_ef.vspeed = irandom_range(-8,-3)
+				}
+				
+					if !instance_exists(check__) && !instance_exists(mob_parents)
+					{
+					global.never_move = 1
+					player.image_xscale = -1
+					check__ = instance_create_depth(x,y,depth-1,player_message)
+					check__.text = "!"
+					check__.target = player.id
+					check__.parents = id
+					}
+				message_phase ++
+				}
+			}
 		}
 	}
 }

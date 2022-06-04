@@ -30,6 +30,12 @@ timer_ = 0
 move_sprite = spr_wakrugot_turret
 hurt_sprite = spr_wakrugot_turret
 attack_sprite = spr_wakrugot_turret
+if global.none_wakgood_mode = true
+{
+move_sprite = spr_wakrugot_turret262
+hurt_sprite = spr_wakrugot_turret262
+attack_sprite = spr_wakrugot_turret262
+}
 attack_ = 0
 attack_dilay = 0
 random_attack_chance = 0

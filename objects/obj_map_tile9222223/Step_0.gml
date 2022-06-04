@@ -28,7 +28,7 @@ if player.attack_laser_sec = 0 && player.attack_laser = 0 && player.suicide = 0 
 	}
 }
 
-if player.y <= 16
+if player.y <= 16 && global.back_to_origin_stage != 1
 {
 global.t_b_alpha = 2.01
 global.simhaedoo_stage = 1

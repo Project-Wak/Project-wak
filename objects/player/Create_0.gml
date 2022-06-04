@@ -1,5 +1,8 @@
 //command_buffer = buffer_create(3, buffer_grow, 1);
 //match_buffer = buffer_create(3, buffer_grow, 1);
+//handler = shader_get_uniform(shader_outline,"texture_Pixel")
+//handler_1 = shader_get_uniform(shader_outline,"thickness_power")
+//handler_2 = shader_get_uniform(shader_outline,"RGBA")
 
 if instance_number(player) > 1
 {
@@ -22,6 +25,12 @@ _light_ = -4
 light_timer = 0
 tiredness = 0
 keep_spinning = 0
+
+saved_vspeed = 0
+saved_hspeed = 0
+saved_gravity = 0
+saved_x_ = -4
+saved_y_ = -4
 
 jump_scale = 0
 poison_alpha = 0
@@ -97,6 +106,7 @@ keep_attack = 0
 keep_attacking = 0
 attack_sfx_on = 0
 spin = 0
+owner_surface = surface_create(1920,1080)
 dash_attack = 0
 double_pressed_run_key = 0
 double_pressed_run_key = 0

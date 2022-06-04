@@ -1,6 +1,9 @@
 image_index = 0
-depth = 999
 
+image_xscale = 4
+image_yscale = 0
+
+owner_surface = surface_create(1920,1080)
 check__ = -4
 
 var ele__ = instance_create_depth(1000,640,0,obj_elevator)
@@ -34,3 +37,6 @@ slow_motioned = 0
 global.room_brightness = 0.6
 
 phase = 0
+broken_platform = sign(global.replayed)
+global.guisanga_doo_event = sign(global.replayed)
+plusment = 0

@@ -21,7 +21,7 @@ real_text_time ++
 	real_text_a ++
 	real_text_time = 0
 
-		if voice_delay%2 = 0 && target = player.id
+		if global.none_wakgood_mode = false && voice_delay%2 = 0 && target = player.id
 		{
 		sfx_for_multiplayer(chat_reading_voice,0,0.5)
 		}

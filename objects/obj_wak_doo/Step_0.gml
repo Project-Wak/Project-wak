@@ -1,6 +1,13 @@
 /// @description Insert description here
 // You can write your code in this editor
 image_blend = c_white
+
+if global.none_wakgood_mode = true
+{
+sprite_index = wak_doo264
+}
+
+
 if hp <= 0
 {
 global.boss_target = -4
@@ -179,6 +186,11 @@ else
 			{
 			obj_camera.tv_x = 1280
 			obj_camera.tv_y = 720
+			}
+			
+			if global.none_wakgood_mode = true
+			{
+			global.boss_name = "프로토타입 거대 경비봇 mk.2"
 			}
 		obj_camera.t_x = x
 		obj_camera.t_y = player.y

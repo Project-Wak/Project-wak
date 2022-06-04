@@ -1,5 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
+
+
 code.sepa_power = 25
 code.sepa_alpha = 1.3
 //command_buffer = buffer_create(3, buffer_grow, 1);
@@ -19,7 +21,7 @@ xscale_shaker = 1
 shaker_time = 0
 saved_xscale = 0
 saved_yscale = 0
-stop_go = 0
+//stop_go = 0
 
 view_shake(3,3,1)
 alpha1 = 0.4

@@ -1,6 +1,15 @@
 /// @description Insert description here
 // You can write your code in this editor
 //draw_sprite_ext(spr_shadow,0,x,check_floor+100,(1-abs(y+100-check_floor)/48)*2,2*(1-abs(y+100-check_floor)/64),0,c_white,(1-abs(y-check_floor)/256)*0.3)
+if surface_exists(owner_surface)
+{
+var surf__ = owner_surface
+draw_outline(surf__,1.5)
+}
+else
+{
+owner_surface = surface_create(1920,1080)
+}
 
 
 //for(var i = -4; i < 4; i += 0.5)

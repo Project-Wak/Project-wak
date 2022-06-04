@@ -20,14 +20,17 @@ if global.key_setting_message = 0
 	instance_create_depth(x,y,-9999,change_running_key_to_other)
 	instance_create_depth(x,y,-9999,change_e_key_to_other)
 	instance_create_depth(x,y,-9999,blood_effect_option)
+	if global.none_wakgood_mode = false
+	{
 	instance_create_depth(x,y,-9999,voice_off_option)
+	}
 	instance_create_depth(x,y,-9999,shine_effect_option)
 	if !instance_exists(obj_start_menu)
 	{
 	instance_create_depth(x,y,-9999,quit_option)
 	instance_create_depth(x,y,-9999,main_menu_option)
 	}
-	if instance_exists(player)
+	//if instance_exists(player)
 	{
 	instance_create_depth(x,y,-9999,fps_draw_option)
 	}

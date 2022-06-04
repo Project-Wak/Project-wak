@@ -223,7 +223,7 @@ global.slow_motion += global.slow_motion*0.03
 		global.total_died ++
 		save_and_load_data(1,0)
 		
-		if instance_exists(obj_wakdroid_ending)
+		if instance_exists(obj_wakdroid_ending) && !instance_exists(obj_last_boss)
 		{
 		global.platform_speed = 0
 		room_goto(room_main)
@@ -515,7 +515,7 @@ global.slow_motion += global.slow_motion*0.03
 			obj_map_tile9222223.alarm[1] = 1
 			}
 			
-			if room = room_sector_B03_3_remaked && global.save_point_y != player.y
+			if room = room_sector_B03_3_remaked && global.save_point_y != player.y && global.back_to_origin_stage != 1
 			{
 			room_goto(room_sector_B03_2_remaked)
 			}

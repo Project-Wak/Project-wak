@@ -264,12 +264,12 @@ instance_destroy(setting_parents)
 	message_can_des_delay ++
 	draw_set_color(c_black)
 	draw_set_alpha(0.7)
-	draw_rectangle(g_xx-v_x_*200,g_yy-v_x_*27,g_xx+v_x_*200,g_yy+v_x_*40,false)
+	draw_rectangle(g_xx-v_x_*200,g_yy-v_x_*12,g_xx+v_x_*200,g_yy+v_x_*23,false)
 	draw_text_kl_scale(g_xx,g_yy,string(global.show_guide_mes),v_x_*73,-1,0.67,c_white,0,0,font0,v_x_/3.5,v_x_/3.5,0);
 	
 		if !audio_is_playing(boss_bgm) && !audio_is_playing(quake_sfx) && global.show_ui = 1
 		{
-		draw_text_kl_scale(g_xx+v_x_*190,g_yy,"\n\n\n\n("+string(global.skip_key)+"키를 눌러 넘기기)",v_x_*64,-1,0.5,c_white,0,1,font0,v_x_*0.3,v_x_*0.3,0);
+		draw_text_kl_scale(g_xx+v_x_*190,g_yy,"\n\n("+string(global.skip_key)+"키를 눌러 넘기기)",v_x_*64,-1,0.5,c_white,0,1,font0,v_x_*0.3,v_x_*0.3,0);
 		}
 	}
 	
@@ -299,6 +299,8 @@ instance_destroy(setting_parents)
 	draw_rectangle(0,0,room_width,room_height,0)
 	draw_set_alpha(1)
 
+	if global.fps_draw = 0
+	{
 	draw_set_color(c_black)
 	draw_set_alpha(global.b_alpha)
 	draw_rectangle(0,0,room_width,room_height,0)
@@ -309,6 +311,7 @@ instance_destroy(setting_parents)
 	draw_set_alpha(global.b_alpha_prt)
 	draw_rectangle(0,0,room_width,room_height,0)
 	draw_set_alpha(1)
+	}
 
 
 var xx = camera_get_view_x(view_camera[0])

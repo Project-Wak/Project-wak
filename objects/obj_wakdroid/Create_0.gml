@@ -1,7 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
 //command_buffer = buffer_create(3, buffer_grow, 1);
-
 audio_stop_sound(follower_bgm)
 phase = 0
 wall_1 = -4
@@ -53,6 +52,19 @@ spin = 0
 move_sprite = spr_move_wakdroid
 hurt_sprite = pl_hurt_wakdroid
 attack_sprite = pl_move_hyumpanchi_attack_based1
+attack_spr = pl_move_skeleton_attack_beat_saber_black
+move_spin = pl_move_wakdroid_spin
+jump_spr = spr_jump_wakdroid
+crouch_spr = spr_crouch_wakdroid
+if global.none_wakgood_mode = true
+{
+move_sprite = spr_move_wakdroid277
+hurt_sprite = pl_hurt_wakdroid276
+attack_spr = pl_move_skeleton_attack_beat_saber_black280
+move_spin = pl_move_wakdroid_spin266
+jump_spr = spr_jump_wakdroid272
+crouch_spr = spr_crouch_wakdroid275
+}
 attack_ = 0
 attack_dilay = 0
 random_attack_chance = 0

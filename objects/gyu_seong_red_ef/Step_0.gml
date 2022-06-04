@@ -28,3 +28,5 @@ image_alpha += (alpha*1.5 - image_alpha)*0.1
 }
 
 hspeed += (0 - hspeed)*0.1;
+
+

@@ -1,3 +1,20 @@
+
+if global.b_alpha > 1
+{
+	if optimizing_surf = 0
+	{
+	surface_free(global.bubble_surf)
+	surface_free(global.light_surf)
+	surface_free(global.rage_surf)
+	optimizing_surf = 1
+	}
+}
+else
+{
+optimizing_surf = 0
+}
+
+
 global.dev_message_alpha -= 0.08
 
 if global.player_blur != 0
@@ -17,8 +34,22 @@ global.player_blur_time++
 
 if global.nickname = -4
 {
-global.nickname = "왁굳"
+	if global.none_wakgood_mode = true
+	{
+	global.nickname = "주인공"
+	}
+	else
+	{
+	global.nickname = "왁굳"
+	}
 }
+
+
+if global.none_wakgood_mode = true
+{
+global.voice_option = 1
+}
+
 
 if global.item_owned[2] > 0
 {
