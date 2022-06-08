@@ -488,7 +488,7 @@ already_droped_saber = 0
 
 if n_sword_ != 0
 {
-	if image_alpha > 0 && hp <= 0 && attacked_before = 1 && already_droped_saber = 0 && suicided = 0 && !instance_exists(obj_wakdroid_ending)
+	if image_alpha > 0 && hp <= 0 && attacked_before = 1 && already_droped_saber = 0 && suicided = 0 && !instance_exists(obj_wakdroid_ending) && global.back_to_origin_stage = 0
 	{
 	already_droped_saber = 1
 		if n_sword_ = 1

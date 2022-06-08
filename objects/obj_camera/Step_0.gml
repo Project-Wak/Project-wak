@@ -23,6 +23,10 @@ if global.show_credits = 0
 }
 
 
+
+
+
+
 if global.visible_player = -1
 {
 v_x = 1280

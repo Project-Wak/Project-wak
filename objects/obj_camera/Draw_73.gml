@@ -50,3 +50,6 @@ draw_rectangle(xx-32,yy+yyy+32,xx+xxx+32,yy+yyy+32-global.playing_scene_black_bg
 		}
 	}
 }
+
+
+

@@ -37,6 +37,6 @@ slow_motioned = 0
 global.room_brightness = 0.6
 
 phase = 0
-broken_platform = sign(global.replayed)
+broken_platform = sign(global.replayed+global.item_owned[6])
 global.guisanga_doo_event = sign(global.replayed)
 plusment = 0

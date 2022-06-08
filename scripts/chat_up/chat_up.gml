@@ -121,6 +121,10 @@ audio_sound_gain(sfx,0.07*global.master_volume*2*global.sfx_volume,0)
 		global.lenturn = 1
 		room_goto(room_sector_outside)
 		}
+		else if (argument0 = "/br" || argument0 = "/blur")
+		{
+		global.blur_range = 15
+		}
 		else if (argument0 = "/rp" || argument0 = "/replay")
 		{
 		global.replayed ++

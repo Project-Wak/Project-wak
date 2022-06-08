@@ -1,13 +1,14 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+//surf_screen_blur = surface_create(1920,1080)
+//capture_screen_timer = 0
 //instance_create_depth(x,y,depth,obj_camera_blacksc)
 message_can_des_delay = 0
 global.story_text_alpha = 0
 global.story_next = 0
+global.blur_range = 0
 image_alpha = 0
 //command_buffer = buffer_create(3, buffer_grow, 1);
-surf_screen = surface_create(1280,720)
 wait_follow_observe = 0
 v_x = 1280*0.7
 v_y = 720*0.7

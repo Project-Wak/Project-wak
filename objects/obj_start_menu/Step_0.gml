@@ -42,6 +42,21 @@ wheel_cooltime --
 	_light_.hspeed = irandom_range(-10,10)/10
 	create_buble_effect(0.4,270+irandom_range(-10,10),0,choose(-1)*irandom_range(100,150)/4,0.1,0.1,$FF3E2D24,$FF473021,2,$FF513524,irandom_range(0,room_width),room_height+irandom_range(100,200),depth+21,0,false,false)
 	create_buble_effect(0.55,270+irandom_range(-10,10),0,choose(-1)*irandom_range(100,150)/4,0.1,0.1,$FF62D1F7,$FF6C60CD,2,$FF191919,irandom_range(0,room_width),room_height+irandom_range(100,200),depth+20,1,false,false)
+	
+		if instance_number(start_menu_effect_triangle) <= 15
+		{
+		var random_cre_val = percentage_k(40)
+			if random_cre_val = 1
+			{
+			var set_xx = choose(-64,room_width+64)
+			var set_yy = irandom_range(0,room_height)
+			var tri_ef = instance_create_depth(set_xx,set_yy,depth-10,start_menu_effect_triangle)
+			tri_ef.set_time = irandom_range(120,240)
+			tri_ef.col = choose($FF3E2D24,$FF62D1F7)
+			tri_ef.outline = choose(true,false)
+			tri_ef.image_xscale = irandom_range(30,100)/300
+			}
+		}
 	}
 
 	set_menu_choose += (t_set_menu_choose - set_menu_choose)*0.1

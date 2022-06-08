@@ -2,6 +2,14 @@
 // You can write your code in this editor
 if global.slow_motion > 0
 {
+	if global.b_alpha < 1
+	{
+	global.blur_range += (15 - global.blur_range)*0.01
+	}
+	else
+	{
+	global.blur_range = 0
+	}
 global.slow_motion += 0.1
 global.slow_motion += global.slow_motion*0.03
 	if global.broken_clock = 3
@@ -232,6 +240,8 @@ global.slow_motion += global.slow_motion*0.03
 		global.back_to_origin_stage = 2
 		global.b_alpha = 0
 		alarm[5] = 300
+		var a___ = audio_play_sound(rewind_sound_effect,0,0)
+		audio_sound_gain(a___,0.1*global.master_volume*2*global.sfx_volume,0)
 		}
 	
 		var _revive_xx = -4
@@ -244,6 +254,8 @@ global.slow_motion += global.slow_motion*0.03
 		
 		if global.back_to_origin_stage = 1
 		{
+		var a___ = audio_play_sound(rewind_sound_effect,0,0)
+		audio_sound_gain(a___,0.1*global.master_volume*2*global.sfx_volume,0)
 		global.platform_speed = 0
 		room_goto(room_main)
 		player.x = 1213
@@ -520,7 +532,7 @@ global.slow_motion += global.slow_motion*0.03
 			room_goto(room_sector_B03_2_remaked)
 			}
 			
-			
+		global.blur_range = 0
 		obj_camera.t_x = _revive_xx
 		obj_camera.t_y = _revive_yy
 		obj_camera.x = _revive_xx
@@ -530,6 +542,7 @@ global.slow_motion += global.slow_motion*0.03
 		{
 			if global.broken_clock = 3
 			{
+			global.blur_range = 0
 			global.t_b_alpha = -0.01
 				if global.slow_motion > 30000
 				{
@@ -544,6 +557,7 @@ global.slow_motion += global.slow_motion*0.03
 			}
 			else
 			{
+			global.blur_range = 0
 				if global.gameover_reason = -4
 				{
 				global.gameover_reason_title = "[게임오버 엔딩]"

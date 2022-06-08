@@ -361,25 +361,6 @@ draw_text_kl_scale(xx+xxx-32*v_x_,yy+yyy-(70)*v_x_,"("+string(global.skip_key)+"
 
 
 
-
-
-
-
-if surface_exists(surf_screen)
-{
-draw_screen_rgb_split(surf_screen,0.1)
-}
-else
-{
-surf_screen = surface_create(1280,720)
-}
-
-
-
-
-
-
-
 if global.clock_alpha > 0
 {
 
@@ -450,6 +431,7 @@ draw_sprite_ext(spr_rewind_clock,7+global.broken_clock,xx__+global.clock_far_fro
 
 
 
+
 if global.story_text_alpha > 0
 {
 	if global.story_next = 0
@@ -475,3 +457,8 @@ draw_set_alpha(global.w_alpha)
 draw_rectangle(0,0,room_width,room_height,0)
 draw_set_alpha(1)
 }
+
+
+
+
+

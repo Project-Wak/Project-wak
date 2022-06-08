@@ -14,7 +14,7 @@ if global.chunyang = 1 && image_index = 6
 {
 	if y > 800
 	{
-	y = 700
+	y = 744
 		if instance_exists(obj_wakdroid_ending)
 		{
 		x = xstart+600
