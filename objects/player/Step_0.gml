@@ -2629,17 +2629,6 @@ w_alpha += (-0.01 - w_alpha)*0.1
 						d_ef.target = -4
 						w_alpha = 1
 						}
-					
-						repeat(choose(6,7,7,8,8,9,9,9,10,10,11,12))
-						{
-						randomize()
-						var dust = instance_create_depth(x+irandom_range(-2,2),y+28+irandom_range(-2,2),depth+1,pepsi_effect)
-						dust.image_xscale = 0.13
-						dust.image_yscale = 0.13
-						dust.vspeed = -irandom_range(100,200)/200
-						dust.hspeed = (-global.movement_speed*irandom_range(10,50)/50)+irandom_range(-20,20)/5
-						dust.image_alpha = 0.4
-						}
 					}
 				}
 				else
@@ -2695,21 +2684,6 @@ w_alpha += (-0.01 - w_alpha)*0.1
 	if gravity = 0
 	{
 	movement_speed += (0 - movement_speed)*0.032
-	can_cre_effect ++
-		if can_cre_effect > 1
-		{
-			repeat(abs(floor(movement_speed)))
-			{ 
-			randomize()
-			var dust = instance_create_depth(x+irandom_range(-8,8)-movement_speed*0.5,y+28+irandom_range(-2,2),depth+1,pepsi_effect)
-			dust.image_xscale = 0.13
-			dust.image_yscale = 0.13
-			dust.vspeed = -irandom_range(100,200)/200
-			dust.hspeed = (-global.movement_speed*irandom_range(10,50)/50)+irandom_range(-20,20)/5
-			dust.image_alpha = 0.4
-			}
-		can_cre_effect = 0
-		}
 		
 		if abs(movement_speed) > 2
 		{
@@ -2911,19 +2885,6 @@ if ((attack_ > 3.9 && attack_ <= 4.1) || (attack_ > 6.8 && attack_ <= 7) || (att
 		cannot_move = 1
 		cooltime = 1
 		global.stamina_cooltime = 0
-			repeat(choose(6,7,7,8,8,9,9,9,10,10,11,12))
-			{
-			randomize()
-			var dust = instance_create_depth(x+irandom_range(-2,2),y+28+irandom_range(-2,2),depth+1,pepsi_effect)
-			dust.image_xscale = 0.13
-			dust.image_yscale = 0.13
-			dust.vspeed = -irandom_range(100,200)/200
-			dust.hspeed = (-global.movement_speed*irandom_range(10,50)/50)+irandom_range(-20,20)/5
-			dust.image_alpha = 0.4
-			}
-
-			
-
 		red_glow_effect(sprite_index,image_index,0.6)
 		}
 	}
@@ -2969,18 +2930,6 @@ if down_attack > 13 && global.n_sword != 0 && global.n_sword != 5
 		cannot_move = 1
 		cooltime = 1
 		global.stamina_cooltime = 0
-			repeat(choose(6,7,7,8,8,9,9,9,10,10,11,12))
-			{
-			randomize()
-			var dust = instance_create_depth(x+irandom_range(-2,2),y+28+irandom_range(-2,2),depth+1,pepsi_effect)
-			dust.image_xscale = 0.13
-			dust.image_yscale = 0.13
-			dust.vspeed = -irandom_range(100,200)/200
-			dust.hspeed = (-global.movement_speed*irandom_range(10,50)/50)+irandom_range(-20,20)/5
-			dust.image_alpha = 0.4
-			}
-			
-
 		red_glow_effect(sprite_index,image_index,0.6)
 		}
 	}
@@ -3016,17 +2965,6 @@ if dash_attack >= 4.6 && global.n_sword != 0 && global.n_sword != 5
 		cannot_move = 1
 		cooltime = 1
 		global.stamina_cooltime = 0
-			repeat(choose(6,7,7,8,8,9,9,9,10,10,11,12))
-			{
-			randomize()
-			var dust = instance_create_depth(x+irandom_range(-2,2),y+28+irandom_range(-2,2),depth+1,pepsi_effect)
-			dust.image_xscale = 0.13
-			dust.image_yscale = 0.13
-			dust.vspeed = -irandom_range(100,200)/200
-			dust.hspeed = (-global.movement_speed*irandom_range(10,50)/50)+irandom_range(-20,20)/5
-			dust.image_alpha = 0.4
-			}
-
 		red_glow_effect(sprite_index,image_index,0.6)
 		}
 	}
@@ -3073,16 +3011,11 @@ if dash_attack >= 4.6 && global.n_sword != 0 && global.n_sword != 5
 					}
 
 	
-					repeat(choose(6,7,7,8,8,9,9,9,10,10,11,12))
-					{
-					randomize()
-					var dust = instance_create_depth(x+irandom_range(-2,2),y+28+irandom_range(-2,2),depth+1,pepsi_effect)
-					dust.image_xscale = 0.13
-					dust.image_yscale = 0.13
-					dust.vspeed = -irandom_range(100,200)/200
-					dust.hspeed = (-global.movement_speed*irandom_range(10,50)/50)+irandom_range(-20,20)/5
-					dust.image_alpha = 0.4
-					}
+					var dust = instance_create_depth(x-16,y+28,depth-1,obj_dust_ef)
+					dust.image_xscale = 1
+					
+					var dust = instance_create_depth(x+16,y+28,depth-1,obj_dust_ef)
+					dust.image_xscale = -1
 	
 					if image_xscale < 0 && global.movement_speed > 0
 					{
@@ -4206,6 +4139,13 @@ global.movement_speed = 0
 			}
 		}
 	}
+	
+	if dust_ef = 0 && spin > 7
+	{
+	var dust = instance_create_depth(x,y+28,depth-1,obj_dust_ef)
+	dust.image_xscale = -image_xscale
+	dust_ef = 1
+	}
 
 	if on_floor = false && spin > 3 && spin < 4.5
 	{
@@ -4231,6 +4171,7 @@ global.movement_speed = 0
 	
 	if spin >= 11
 	{
+	dust_ef = 0
 	keep_spinning += 40
 	sprite_index = move_sprite
 	spin = 0
@@ -5089,17 +5030,6 @@ global.movement_speed = 0
 
 	if attack_charge_sfx = 0
 	{
-		repeat(choose(6,7,7,8,8,9,9,9,10,10,11,12))
-		{
-		randomize()
-		var dust = instance_create_depth(x+irandom_range(-2,2),y+28+irandom_range(-2,2),depth+1,pepsi_effect)
-		dust.image_xscale = 0.13
-		dust.image_yscale = 0.13
-		dust.vspeed = -irandom_range(100,200)/200
-		dust.hspeed = (-movement_speed*irandom_range(10,50)/50)+irandom_range(-20,20)/5
-		dust.image_alpha = 0.4
-		}
-				
 	sfx_for_multiplayer(charging_sfx,false,0.3)
 	attack_charge_sfx = 1
 	
@@ -5788,15 +5718,8 @@ image_index = dash_attack
 				
 					if run_time <= 0
 					{
-						repeat(choose(7,8,8,8,9))
-						{
-						var dust = instance_create_depth(x+irandom_range(-2,2),y+28+irandom_range(-2,2),depth+1,pepsi_effect)
-						dust.image_xscale = 0.13
-						dust.image_yscale = 0.13
-						dust.vspeed = -irandom_range(100,200)/200
-						dust.hspeed = (-global.movement_speed*irandom_range(10,50)/50)+irandom_range(-20,20)/2.4
-						dust.image_alpha = 0.4
-						}
+					var dust = instance_create_depth(x,y+28,depth-1,obj_dust_ef)
+					dust.image_xscale = -image_xscale
 					run_time = 1
 					}
 				}
@@ -5819,15 +5742,8 @@ image_index = dash_attack
 				{
 					if run_time < 2
 					{
-						repeat(choose(7,8,8,8,9))
-						{
-						var dust = instance_create_depth(x+irandom_range(-2,2),y+28+irandom_range(-2,2),depth+1,pepsi_effect)
-						dust.image_xscale = 0.13
-						dust.image_yscale = 0.13
-						dust.vspeed = -irandom_range(100,200)/200
-						dust.hspeed = (-global.movement_speed*irandom_range(10,50)/50)+irandom_range(-20,20)/2.4
-						dust.image_alpha = 0.4
-						}
+					var dust = instance_create_depth(x,y+28,depth-1,obj_dust_ef)
+					dust.image_xscale = -image_xscale
 					}
 				
 					var cal___ = (40-run_time)/3

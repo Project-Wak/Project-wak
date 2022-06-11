@@ -4,6 +4,7 @@
 //handler_1 = shader_get_uniform(shader_outline,"thickness_power")
 //handler_2 = shader_get_uniform(shader_outline,"RGBA")
 
+dust_ef = 0
 if instance_number(player) > 1
 {
 instance_destroy()

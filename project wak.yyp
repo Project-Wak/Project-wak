@@ -2,6 +2,7 @@
   "resources": [
     {"id":{"name":"pl_move_skeleton_guard_red","path":"sprites/pl_move_skeleton_guard_red/pl_move_skeleton_guard_red.yy",},"order":89,},
     {"id":{"name":"blinder_wall_from_water1","path":"objects/blinder_wall_from_water1/blinder_wall_from_water1.yy",},"order":62,},
+    {"id":{"name":"obj_dust_ef","path":"objects/obj_dust_ef/obj_dust_ef.yy",},"order":34,},
     {"id":{"name":"bamguy_bgm","path":"sounds/bamguy_bgm/bamguy_bgm.yy",},"order":67,},
     {"id":{"name":"master_volume_setting","path":"objects/master_volume_setting/master_volume_setting.yy",},"order":21,},
     {"id":{"name":"Sprite140142","path":"sprites/Sprite140142/Sprite140142.yy",},"order":47,},
@@ -187,6 +188,7 @@
     {"id":{"name":"pl_move_skeleton_spin_attack_beat_saber","path":"sprites/pl_move_skeleton_spin_attack_beat_saber/pl_move_skeleton_spin_attack_beat_saber.yy",},"order":24,},
     {"id":{"name":"effect_sting_attacked","path":"objects/effect_sting_attacked/effect_sting_attacked.yy",},"order":14,},
     {"id":{"name":"obj_guisangadoo","path":"objects/obj_guisangadoo/obj_guisangadoo.yy",},"order":37,},
+    {"id":{"name":"spr_dust_ef","path":"sprites/spr_dust_ef/spr_dust_ef.yy",},"order":246,},
     {"id":{"name":"obj_map_tile2","path":"objects/obj_map_tile2/obj_map_tile2.yy",},"order":3,},
     {"id":{"name":"rain_effect","path":"objects/rain_effect/rain_effect.yy",},"order":20,},
     {"id":{"name":"Sprite18088","path":"sprites/Sprite18088/Sprite18088.yy",},"order":71,},
