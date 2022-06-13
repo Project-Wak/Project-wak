@@ -35,6 +35,7 @@ function cre_buble_ef(argument0,argument1,argument2,argument3,argument4,argument
 	ef__.tyscale = argument9
 	ef__.image_alpha = argument10
 	ef__.shake_ef = argument11
+	ef__.light_able = choose(0,1)
 
 
 	//if argument12 = 1

@@ -168,7 +168,8 @@ b_alpha_ += (t_b_alpha_ - b_alpha_)*0.08
 				obj_camera.tv_y = 720
 				}
 			obj_camera.t_x = xstart
-			obj_camera.t_y = ystart+100
+			obj_camera.y += (y-96 - obj_camera.y)*0.1
+			obj_camera.t_y += (y-96 - obj_camera.t_y)*0.1
 			}
 	
 			if saved_real_x = -4

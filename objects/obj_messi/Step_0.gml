@@ -423,13 +423,23 @@ if scene__ > 0 && activated != 2
 {
 	if global.show_credits = 0
 	{
+	obj_camera.t_x = x
 		if player.attack_laser_sec = 0 && player.attack_laser = 0 && player.suicide = 0 && player.sting_attack = 0
 		{
 		obj_camera.tv_x = 1280*0.9
 		obj_camera.tv_y = 720*0.9
 		}
-	obj_camera.t_x = x
-	obj_camera.t_y = player.y
+		
+		
+		if !instance_exists(blinder)
+		{
+		blinder = instance_create_depth(x-120,y+420,depth,obj_blinded_wall)
+		blinder.image_xscale = 16.5
+		blinder.image_yscale = 10.5
+		}
+		
+	obj_camera.y += (y+195 - obj_camera.y)*0.1
+	obj_camera.t_y += (y+195 - obj_camera.t_y)*0.1
 	}
 }
 else
@@ -438,6 +448,7 @@ else
 	{
 		if global.show_credits = 0
 		{
+		instance_destroy(blinder)
 		global.boss_target = id
 		global.boss_name = "거대 왁두의 권속 - 화염의 거대 안드로이드 메시"
 		
@@ -507,7 +518,7 @@ scene__ += 0.0032
 image_blend = merge_color(c_black,c_white,scene__)
 global.playing_scene = 1
 global.never_move = 1
-global.room_brightness += 0.0005
+global.room_brightness += 0.0003
 	if bgm = -4 && global.show_credits = 0
 	{
 	var sfx = audio_play_sound(laser_skill_ready,0,0)

@@ -289,10 +289,13 @@ else
 	player.guarding = 2
 	y -= scene__*4
 	x -= scene__*0.6
-		if obj_camera.tv_x < 1280*1.1
+		if scene__ > 0.3
 		{
-		obj_camera.tv_x += 1280*0.003
-		obj_camera.tv_y += 720*0.003
+			if obj_camera.tv_x < 1280*1.1
+			{
+			obj_camera.tv_x += 1280*0.002
+			obj_camera.tv_y += 720*0.002
+			}
 		}
 	image_angle = point_direction(x,y,player.x,player.y)
 	view_shake(0.1,0.1,1)

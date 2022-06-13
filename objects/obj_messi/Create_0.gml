@@ -10,7 +10,7 @@ scene__ = 0
 spin = 0
 owner_surface = surface_create(1920,1080)
 
-
+blinder = -4
 dead_scene = 0
 shake_boss = 1
 bgm = -4

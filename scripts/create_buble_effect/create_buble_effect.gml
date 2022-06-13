@@ -30,6 +30,7 @@ ef_ins__.image_blend = argument7
 ef_ins__.sec_alpha = argument8
 ef_ins__.thi_col = argument9
 ef_ins__.cannot_through_floor = argument15
+ef_ins__.light_able = choose(0,1)
 	if argument12 > depth
 	{
 	ef_ins__.sepa_surf = true

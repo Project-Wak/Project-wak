@@ -214,6 +214,8 @@ if activated = 1
 	var sfx = audio_play_sound(quake_sfx,0,0)
 	audio_sound_gain(sfx,0.1*global.master_volume*2*global.sfx_volume,0)
 	}
+	
+	
 player.guarding = 2
 y -= scene__*3.1
 view_shake(0.1,0.1,1)
