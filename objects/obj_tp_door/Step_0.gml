@@ -44,7 +44,8 @@ if t_y = -64
 		}
 		else
 		{
-		room_goto(room_main)
+		global.story_next = -4
+		room_goto(tuto_room)
 		}
 	t_y = 0
 	global.t_b_alpha = -0.01

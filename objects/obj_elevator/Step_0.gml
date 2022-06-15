@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-if global.left_time > 0
+if global.left_time > 0 && global.story_next < 100
 {
 	
 if activated = 1

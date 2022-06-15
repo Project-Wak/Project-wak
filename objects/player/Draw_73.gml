@@ -34,7 +34,7 @@ var yy = yy____+v_x*16
 
 if image_alpha > 0 && global.hp > 0 && global.playing_scene <= 0 && global.t_b_alpha < 1 && global.b_alpha < 0.2 && global.never_move_in_setting = 0
 {
-	if global.slow_motion = 0 && global.select_dev_setting = 0
+	if global.slow_motion = 0 && global.select_dev_setting = 0 && global.story_next < 100
 	{
 		//if show_my_sword > 0
 		//{

@@ -180,7 +180,7 @@ wheel_cooltime --
 					global.story_text_alpha -= 0.01
 					}
 				
-					if global.story_text_alpha <= 0
+					if global.story_text_alpha <= 0 && global.story_next < 100
 					{
 					timer_st = 0
 					global.story_next ++
@@ -188,7 +188,9 @@ wheel_cooltime --
 						if global.story_next >= 3
 						{
 						room_goto(tuto_room)
+						code_stotyline.alarm[3] = 1
 						global.cursor = 0
+						global.story_next = 100
 						}
 					}
 				}

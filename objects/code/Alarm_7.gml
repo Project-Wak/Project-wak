@@ -221,3 +221,5 @@ global.guard_power = 1
 //아래 효과는 아이돌신발에 의해 바뀜
 global.jump_plus = global.idol_shoes //점프력 증가
 global.low_gravity_plus = 1+global.idol_shoes*0.3 //중력 감소
+
+

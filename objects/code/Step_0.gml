@@ -157,7 +157,8 @@ global.first_rewind = 1
 if global.left_time <= 0
 {
 global.platform_speed = 0
-	if room != room_main
+
+	if room != room_main && global.story_next < 100
 	{
 	room_goto(room_main)
 	}
@@ -199,7 +200,7 @@ global.platform_speed = 0
 		{
 		global.playing_scene = 1
 		global.never_move = 1
-			if instance_exists(player)
+			if instance_exists(player) && global.story_next < 100
 			{
 			player.x = -100
 			player.y = -100
@@ -212,15 +213,16 @@ global.platform_speed = 0
 				obj_camera.x = obj_isedol.x
 				obj_camera.t_x = obj_isedol.x
 				obj_camera.t_y = obj_isedol.y
-				}
+				
 		
-				if playing_gameover_scene = 40
-				{
-				obj_isedol.image_xscale = 1
-				var check__ = instance_create_depth(obj_isedol.x,obj_isedol.y,obj_isedol.depth-1,player_message)
-				check__.text = "!"
-				check__.target = obj_isedol.id
-				check__.parents = obj_isedol.id
+					if playing_gameover_scene = 40
+					{
+					obj_isedol.image_xscale = 1
+					var check__ = instance_create_depth(obj_isedol.x,obj_isedol.y,obj_isedol.depth-1,player_message)
+					check__.text = "!"
+					check__.target = obj_isedol.id
+					check__.parents = obj_isedol.id
+					}
 				}
 			}
 		
@@ -241,8 +243,11 @@ global.platform_speed = 0
 		
 			if playing_gameover_scene >= 130
 			{
-			obj_camera.t_x = obj_isedol.x-1500
-			obj_camera.t_y = obj_isedol.y
+				if instance_exists(obj_isedol)
+				{
+				obj_camera.t_x = obj_isedol.x-1500
+				obj_camera.t_y = obj_isedol.y
+				}
 			}
 		}
 	}

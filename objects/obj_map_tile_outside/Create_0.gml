@@ -24,7 +24,7 @@ sfx = 0
 player.x = 800
 player.y = 1100
 global.n_time = 12
-if global.show_credits = 0
+if global.show_credits = 0 && global.story_next < 100
 {
 explo_anime = 0.1
 }

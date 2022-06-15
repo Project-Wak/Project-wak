@@ -32,7 +32,7 @@ repeat(100)
 
 
 
-if interecting_now = 1
+if interecting_now = 1 && global.story_next < 100
 {
 global.never_move = 1
 global.playing_scene = 1

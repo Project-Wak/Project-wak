@@ -29,17 +29,6 @@ if global.show_credits = 0
 	{
 	message_phase = 3
 	global.never_move = 0
-	var key_guide = instance_create_depth(-100,-100,-999994,draw_key_)
-	key_guide.location = -2
-	key_guide.img_index = 0
-
-	var key_guide = instance_create_depth(-100,-100,-999994,draw_key_)
-	key_guide.location = -0.5
-	key_guide.img_index = 1
-
-	var key_guide = instance_create_depth(-100,-100,-999994,draw_key_)
-	key_guide.location = 1.5
-	key_guide.img_index = 7
 	}
 
 	if message_phase = 3 && instance_number(draw_key_) <= 0 && !instance_exists(p_mes) && global.n_sword > 2

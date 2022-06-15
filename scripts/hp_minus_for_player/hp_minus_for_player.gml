@@ -111,6 +111,11 @@ var calcul_damage = ((((argu_0+random_plus_damage)/(global.max_armor_plus))*glob
 		{
 		obj_last_boss.hp += calcul_damage/10
 		}
+		
+		if instance_exists(obj_wakdroid)
+		{
+		obj_wakdroid.hp += calcul_damage/5
+		}
 	}
 	
 	if room = room_sector_B06_2

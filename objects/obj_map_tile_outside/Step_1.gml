@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-if player.attack_laser_sec = 0 && player.attack_laser = 0 && player.suicide = 0 && player.sting_attack = 0
+if global.story_next < 100 && player.attack_laser_sec = 0 && player.attack_laser = 0 && player.suicide = 0 && player.sting_attack = 0
 {
 	if !instance_exists(obj_wakdroid_ending)
 	{

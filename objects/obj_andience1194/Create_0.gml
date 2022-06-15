@@ -30,3 +30,10 @@ message_phase = 31
 sprite_index = pl_hurt_hyumpanchi_hakase
 image_index = 1
 }
+
+
+if global.story_next > 100
+{
+instance_destroy(obj_angel)
+instance_destroy(angel_spear)
+}

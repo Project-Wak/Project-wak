@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": {
     "name": "spr_move_wakdroid",
     "path": "sprites/spr_move_wakdroid/spr_move_wakdroid.yy",

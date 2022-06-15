@@ -17,6 +17,11 @@ if global.got_sec_phase = 1
 	}
 }
 
+if hp > max_hp
+{
+hp = max_hp
+}
+
 global.room_brightness += (0.6 - global.room_brightness)*0.04
 
 if y > 2404

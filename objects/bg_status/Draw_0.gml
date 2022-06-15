@@ -129,7 +129,7 @@ var xx = camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])
 draw_set_alpha(0.7)
 draw_set_color(c_white)
 draw_line_width(xx,yy,xx,yy_,2*_c_x)
-if global.n_to_setting__ = 0
+if global.n_to_setting__ = 0 && global.story_next < 100
 {
 var dmg = global.damage_plus*(16+global.weapon_upgraded[global.n_sword]*3)
 var stamina_ = floor(global.stamina*100)/10

@@ -1,5 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
+
+
 if global.slow_motion > 0
 {
 	if global.b_alpha < 1
@@ -140,7 +142,7 @@ global.slow_motion += global.slow_motion*0.03
 				}
 			}
 			
-			if (playing_gameover_scene > 0 || instance_exists(obj_wakdroid_ending)) && sfx_broken = 0 && global.slow_motion > 1200
+			if (playing_gameover_scene > 0 || instance_exists(obj_wakdroid_ending)) && sfx_broken = 0 && global.slow_motion > 1200 && global.story_next < 100
 			{
 			sfx_broken = 1
 				if instance_exists(obj_wakdroid_ending)
@@ -238,7 +240,20 @@ global.slow_motion += global.slow_motion*0.03
 		player.x = 1213
 		player.y = 734
 		global.back_to_origin_stage = 2
-		global.b_alpha = 0
+		alarm[5] = 300
+		var a___ = audio_play_sound(rewind_sound_effect,0,0)
+		audio_sound_gain(a___,0.1*global.master_volume*2*global.sfx_volume,0)
+		}
+		
+		if global.story_next > 100
+		{
+		global.clock = 0
+		global.broken_clock = 0
+		global.platform_speed = 0
+		room_goto(room_sector_outside)
+		player.x = 160
+		player.y = 1154
+		global.back_to_origin_stage = 2
 		alarm[5] = 300
 		var a___ = audio_play_sound(rewind_sound_effect,0,0)
 		audio_sound_gain(a___,0.1*global.master_volume*2*global.sfx_volume,0)

@@ -8,11 +8,23 @@ var yy = camera_get_view_y(view_camera[0])+v_x*16
 
 if playing_gameover_scene >= 120
 {
-	for(var i = 0; i < 10; i += 0.5)
+	if room != room_sector_B07
 	{
-	draw_set_color(c_white)
-	draw_set_alpha(i*0.03)
-	draw_circle(-3,713,(playing_gameover_scene-120)*i/3,false)
+		for(var i = 0; i < 10; i += 0.5)
+		{
+		draw_set_color(c_white)
+		draw_set_alpha(i*0.03)
+		draw_circle(-3,713,(playing_gameover_scene-120)*i/3,false)
+		}
+	}
+	else
+	{
+		for(var i = 0; i < 10; i += 0.5)
+		{
+		draw_set_color(c_white)
+		draw_set_alpha(i*0.03)
+		draw_circle(4700,player.y,(playing_gameover_scene-120)*i/3,false)
+		}
 	}
 }
 

@@ -9,7 +9,7 @@ _light_2.alpha += (-0.01 - _light_2.alpha)*0.1
 _light_3.alpha += (-0.01 - _light_3.alpha)*0.1
 }
 
-if attack > 0
+if attack > 0 && point_distance(x,y,obj_camera.x,obj_camera.y) < 735
 {
 	if !instance_exists(_light_)
 	{
