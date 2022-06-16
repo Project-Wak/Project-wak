@@ -51,7 +51,7 @@ global.voice_option = 1
 }
 
 
-if global.item_owned[2] > 0
+if global.accessories_owned[2] > 0
 {
 global.tutorial = 1
 }

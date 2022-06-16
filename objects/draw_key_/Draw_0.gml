@@ -98,6 +98,7 @@ if img_index = 27
 string_ = "Space"
 }
 
+
 if img_index = 6
 {
 draw_text_kl_scale(xx+13*cm_vx,yy,string(string_),16,9999,image_alpha,image_blend,-1,0,font0,cm_vx*1/2.5,cm_vx*1/2.5,-90)

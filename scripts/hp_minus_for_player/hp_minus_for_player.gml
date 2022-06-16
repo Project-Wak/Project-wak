@@ -7,7 +7,7 @@ var random_plus_damage = global.n_night*15
 var using_special_skill = sign(player.attack_laser+player.attack_laser_sec)
 
 var dmg_min = 1
-	if using_special_skill = 1
+	if using_special_skill = 1 || global.tutorial = 0
 	{
 	dmg_min = 0
 	}

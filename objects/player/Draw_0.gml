@@ -158,7 +158,7 @@ draw_sprite_ext(spr_gun,0,x-image_xscale*12,y+13-sign(jump)*8,abs(xscale)*0.5,y_
 //draw_text_kl_scale(x,y-v_x*64,global.show_challenger,v_x*64,-1,1,c_white,0,0,font0,v_x*0.35,v_x*0.35,0);
 
 
-if w_alpha > 0
+if w_alpha > 0 && global.playing_scene = 0 && global.story_next < 100
 {
 shader_set(shFlash)
 draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,c_white,w_alpha)

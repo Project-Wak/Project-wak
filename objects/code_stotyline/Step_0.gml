@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if global.story_next >= 101
+if global.story_next >= 101 && global.story_next < 300
 {
 	if message_phase < 100
 	{
@@ -134,10 +134,10 @@ if global.story_next >= 101
 	global.playing_scene = 1
 		if message_phase <= 152
 		{
-		obj_camera.tv_x = 1280*0.65
-		obj_camera.tv_y = 720*0.65
-		obj_camera.v_x = 1280*0.65
-		obj_camera.v_y = 720*0.65
+		obj_camera.tv_x = 1280*0.6
+		obj_camera.tv_y = 720*0.6
+		obj_camera.v_x = 1280*0.6
+		obj_camera.v_y = 720*0.6
 		}
 		
 
@@ -146,6 +146,16 @@ if global.story_next >= 101
 		global.clock = 0
 		check__ = instance_create_depth(x,y,depth-1,player_message)
 		check__.text = "..."
+		check__.target = player
+		check__.parents = player
+		message_phase = 151
+		}
+		
+		if !instance_exists(check__) && message_phase = 151
+		{
+		global.clock = 0
+		check__ = instance_create_depth(x,y,depth-1,player_message)
+		check__.text = "(아무래도 왁드로이드 완성 전의 과거로 와버린 것 같다)"
 		check__.target = player
 		check__.parents = player
 		message_phase = 154
@@ -198,4 +208,9 @@ if global.story_next >= 101
 if message_phase < 140
 {
 global.clock = 1
+}
+
+if global.story_next > 650
+{
+global.t_b_alpha = 2.1
 }

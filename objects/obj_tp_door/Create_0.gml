@@ -9,3 +9,10 @@ image_speed = 0
 can_interect = 0
 
 
+
+can_room_change = 0
+
+if global.story_next < 100
+{
+can_room_change = 1
+}

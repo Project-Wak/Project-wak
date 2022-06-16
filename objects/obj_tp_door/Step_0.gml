@@ -19,14 +19,22 @@ var sfx = audio_play_sound(activate_sfx,0,0)
 audio_sound_gain(sfx,global.master_volume*2*global.sfx_volume,0)
 t_y = -64
 global.never_move = 1
-global.t_b_alpha = 2.1
+	if global.story_next < 100
+	{
+	global.t_b_alpha = 2.1
+	}
+	else
+	{
+	global.t_b_alpha = 1.01
+	alarm[1] = 60
+	}
 var	sfx__ = audio_play_sound(walk_sfx,0,false)
 audio_sound_gain(sfx__,0.3,0)
 }
 
 if t_y = -64
 {
-	if global.b_alpha > 2
+	if global.b_alpha > 2 && can_room_change = 1
 	{
 		if room != room_sector_outside
 		{
