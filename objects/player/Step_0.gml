@@ -608,21 +608,7 @@ skill_combo_cancle_n_motion(0)
 		}
 	}
 	
-	
-	if ping > 50
-	{
-	dev_mes("연결 상태가 매우 불안정합니다")
-	ping_kick_timer ++
-		if ping_kick_timer > 80
-		{
-		
-		ping_kick_timer = 0
-		}
-	}
-	else
-	{
-	ping_kick_timer = 0
-	}
+
 	
 	
 	if global.hp <= 150
@@ -877,6 +863,8 @@ w_alpha += (-0.01 - w_alpha)*0.1
 			}
 		}
 	
+	
+		var random_dir = image_xscale
 		if w_alpha <= 1 && hurt <= 25 && (dash_attack = 0 || dash_attack > 8) && global.hp > 0
 		{
 		var guarding_now = 0
@@ -943,7 +931,7 @@ w_alpha += (-0.01 - w_alpha)*0.1
 					guard_cool_time = 1
 					sfx_for_multiplayer(guard,0,0.1)
 	
-					var random_dir = -image_xscale
+					
 					global.rage_gauge += 2
 						repeat(8)
 						{
@@ -1010,7 +998,7 @@ w_alpha += (-0.01 - w_alpha)*0.1
 					guard_cool_time = 40
 					sfx_for_multiplayer(guard,0,0.1)
 	
-					var random_dir = -image_xscale
+					
 						if global.rage_gauge >= 1
 						{
 						global.rage_gauge -= 1
@@ -1085,7 +1073,7 @@ w_alpha += (-0.01 - w_alpha)*0.1
 					guard_cool_time = 5
 					sfx_for_multiplayer(guard,0,0.1)
 	
-					var random_dir = -image_xscale
+					
 						if global.rage_gauge >= 1
 						{
 						global.rage_gauge -= 1
@@ -1181,7 +1169,7 @@ w_alpha += (-0.01 - w_alpha)*0.1
 					sfx_for_multiplayer(guard,0,0.1)
 					sfx_for_multiplayer(sparking_sound,0,0.1)
 	
-					var random_dir = -image_xscale
+					
 
 						repeat(8)
 						{
@@ -1247,7 +1235,7 @@ w_alpha += (-0.01 - w_alpha)*0.1
 					sfx_for_multiplayer(guard,0,0.1)
 					sfx_for_multiplayer(sparking_sound,0,0.1)
 	
-					var random_dir = -image_xscale
+					
 
 						repeat(8)
 						{
@@ -1313,7 +1301,7 @@ w_alpha += (-0.01 - w_alpha)*0.1
 					guard_cool_time = 5
 					sfx_for_multiplayer(guard,0,0.1)
 	
-					var random_dir = -image_xscale
+					
 						if global.rage_gauge >= 1
 						{
 						global.rage_gauge -= 1
@@ -1381,7 +1369,7 @@ w_alpha += (-0.01 - w_alpha)*0.1
 					guard_cool_time = 1
 					sfx_for_multiplayer(guard,0,0.1)
 	
-					var random_dir = -image_xscale
+					
 						if global.rage_gauge >= 1
 						{
 						global.rage_gauge -= 1
@@ -1451,7 +1439,7 @@ w_alpha += (-0.01 - w_alpha)*0.1
 					guard_cool_time = 6
 					sfx_for_multiplayer(guard,0,0.1)
 	
-					var random_dir = -image_xscale
+					
 					global.rage_gauge += 2
 
 						repeat(8)
@@ -1520,7 +1508,7 @@ w_alpha += (-0.01 - w_alpha)*0.1
 					guard_cool_time = 6
 					sfx_for_multiplayer(guard,0,0.1)
 	
-					var random_dir = -image_xscale
+					
 					global.rage_gauge += 2
 
 						repeat(8)
@@ -1608,7 +1596,7 @@ w_alpha += (-0.01 - w_alpha)*0.1
 					guard_cool_time = 6
 					sfx_for_multiplayer(guard,0,0.1)
 	
-					var random_dir = -image_xscale
+					
 					global.rage_gauge += 2
 
 						repeat(8)
@@ -1676,7 +1664,7 @@ w_alpha += (-0.01 - w_alpha)*0.1
 					guard_cool_time = 6
 					sfx_for_multiplayer(guard,0,0.1)
 	
-					var random_dir = -image_xscale
+					
 					global.rage_gauge += 2
 
 						repeat(8)
@@ -1823,7 +1811,7 @@ w_alpha += (-0.01 - w_alpha)*0.1
 					guard_cool_time = 6
 					sfx_for_multiplayer(guard,0,0.1)
 	
-					var random_dir = -image_xscale
+					
 					global.rage_gauge += 2
 
 						repeat(8)
@@ -1896,7 +1884,7 @@ w_alpha += (-0.01 - w_alpha)*0.1
 					guard_cool_time = 6
 					sfx_for_multiplayer(guard,0,0.1)
 	
-					var random_dir = -image_xscale
+					
 					global.rage_gauge += 2
 
 						repeat(8)
@@ -1969,7 +1957,7 @@ w_alpha += (-0.01 - w_alpha)*0.1
 					guard_cool_time = 7
 					sfx_for_multiplayer(guard,0,0.1)
 	
-					var random_dir = -image_xscale
+					
 					global.rage_gauge += 2
 
 						repeat(8)
@@ -2034,7 +2022,7 @@ w_alpha += (-0.01 - w_alpha)*0.1
 					guard_cool_time = 5
 					sfx_for_multiplayer(guard,0,0.1)
 	
-					var random_dir = -image_xscale
+					
 					global.rage_gauge += 2
 
 						repeat(8)
@@ -2098,7 +2086,7 @@ w_alpha += (-0.01 - w_alpha)*0.1
 					guard_cool_time = 3
 					sfx_for_multiplayer(guard,0,0.1)
 	
-					var random_dir = -image_xscale
+					
 					global.rage_gauge += 2
 
 						repeat(8)
@@ -2160,7 +2148,7 @@ w_alpha += (-0.01 - w_alpha)*0.1
 					guard_cool_time = 13
 					sfx_for_multiplayer(guard,0,0.1)
 	
-					var random_dir = -image_xscale
+					
 					global.rage_gauge += 2
 
 						repeat(8)
@@ -2224,7 +2212,7 @@ w_alpha += (-0.01 - w_alpha)*0.1
 					guard_cool_time = 10
 					sfx_for_multiplayer(guard,0,0.1)
 	
-					var random_dir = -image_xscale
+					
 					global.rage_gauge += 2
 
 						repeat(8)
@@ -2286,7 +2274,7 @@ w_alpha += (-0.01 - w_alpha)*0.1
 					guard_cool_time = 10
 					sfx_for_multiplayer(guard,0,0.1)
 	
-					var random_dir = -image_xscale
+					
 					global.rage_gauge += 2
 
 						repeat(8)
@@ -2346,7 +2334,7 @@ w_alpha += (-0.01 - w_alpha)*0.1
 					guard_cool_time = 10
 					sfx_for_multiplayer(guard,0,0.1)
 	
-					var random_dir = -image_xscale
+					
 					global.rage_gauge += 2
 
 						repeat(8)
@@ -2408,7 +2396,7 @@ w_alpha += (-0.01 - w_alpha)*0.1
 				guard_cool_time = 1
 				sfx_for_multiplayer(guard,0,0.1)
 	
-				var random_dir = -image_xscale
+				
 				global.rage_gauge += 1
 
 					repeat(8)
@@ -2474,7 +2462,7 @@ w_alpha += (-0.01 - w_alpha)*0.1
 				guard_cool_time = 5
 				sfx_for_multiplayer(guard,0,0.1)
 	
-				var random_dir = -image_xscale
+				
 				global.rage_gauge += 1
 
 					repeat(8)
