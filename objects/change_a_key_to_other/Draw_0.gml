@@ -16,7 +16,14 @@ draw_text_kl_scale(xx,yy-10*_c_x,string(console_key),16,999,0.8,image_blend,0,0,
 
 
 draw_sprite_ext(sprite_index,image_index,xx,yy,image_xscale,image_xscale,0,c_white,1)
-draw_text_kl_scale(xx+32*_c_x,yy-10*_c_x,"일반 공격 / 차지 (달리기 도중)",16,999,0.8,image_blend,0,-1,font0,1/3*_c_x,1/3*_c_x,image_angle)
+if global.none_wakgood_mode = false
+{
+draw_text_kl_scale(xx+32*_c_x,yy-10*_c_x,"일반 공격 / 대쉬 (달리기 도중)",16,999,0.8,image_blend,0,-1,font0,1/3*_c_x,1/3*_c_x,image_angle)
+}
+else
+{
+draw_text_kl_scale(xx+32*_c_x,yy-10*_c_x,"일반 공격",16,999,0.8,image_blend,0,-1,font0,1/3*_c_x,1/3*_c_x,image_angle)
+}
 
 draw_text_kl_scale(xx-10*_c_x,yy-60*_c_x,"공격)",16,999,0.8,image_blend,0,-1,font0,1/3*_c_x,1/3*_c_x,image_angle)
 }

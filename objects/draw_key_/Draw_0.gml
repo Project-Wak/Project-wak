@@ -166,7 +166,7 @@ draw_text_kl_scale(xx,yy+85*cm_vx,"일반 공격 (최대 4연타)",16,9999,1,ima
 
 if img_index = 24
 {
-draw_text_kl_scale(xx,yy+85*cm_vx,"차지\n\n\n\n[스테미나 대량 소비]\n\n\n\n(달리기 도중 "+string(global.a_key)+")",16,9999,1,image_blend,0,0,font0,cm_vx*1/3,cm_vx*1/3,image_angle)
+draw_text_kl_scale(xx,yy+85*cm_vx,"대쉬\n\n\n\n[스테미나 대량 소비]\n\n\n\n(달리기 도중 "+string(global.a_key)+")",16,9999,1,image_blend,0,0,font0,cm_vx*1/3,cm_vx*1/3,image_angle)
 }
 
 if img_index = 3

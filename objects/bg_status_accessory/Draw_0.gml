@@ -47,8 +47,8 @@ if (pressed > 0 && global.key_setting_message > 0) || global.key_setting_message
 	}
 	if cal__img = 4
 	{
-	item_name__ = "강철 나시"
-	item_desc__ = "옷이 단단해서 어깨빵을 해도 아프지 않다\n\n특수효과 : 차지 스킬 사용시 받는 가시 데미지를 100% 경감"
+	item_name__ = "런닝 나시"
+	item_desc__ = "런닝용 나시티\n\n특수효과 : 대쉬 스킬 사용시 소모하는 스테미나량 50% 경감"
 	}
 	if cal__img = 5
 	{

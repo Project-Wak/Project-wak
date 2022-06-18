@@ -47,9 +47,12 @@ global.slow_motion += global.slow_motion*0.03
 				global.clock_scale = 3
 				global.t_clock_scale = 1.1
 				show_debug_message("play rewind scene")
-		
-				var sfx = audio_play_sound(rewinding_sfx,0,0)
-				audio_sound_gain(sfx,0.2*global.master_volume*2*global.sfx_volume,0)
+				
+					if global.none_wakgood_mode = false
+					{
+					var sfx = audio_play_sound(rewinding_sfx,0,0)
+					audio_sound_gain(sfx,0.2*global.master_volume*2*global.sfx_volume,0)
+					}
 				}
 			}
 		

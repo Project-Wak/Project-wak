@@ -49,7 +49,7 @@ if (pressed > 0 && global.key_setting_message > 0) || global.key_setting_message
 	
 	var item_name_upgrade = ""
 	var item_name__ = "장착 안함"
-	var item_desc__ = "무기를 장착하지 않음\n가드력 0%\n\n특수 효과 : 무기를 사용하는 공격은 사용 불가 (단, 달리기를 하지 않아도 "+string(global.a_key)+"키를 누를시 차지 스킬 발동)"
+	var item_desc__ = "무기를 장착하지 않음\n가드력 0%\n\n특수 효과 : 무기를 사용하는 공격은 사용 불가 (단, 달리기를 하지 않아도 "+string(global.a_key)+"키를 누를시 대쉬 스킬 발동)"
 	
 	
 	if cal__img = 1

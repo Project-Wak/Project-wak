@@ -3197,12 +3197,12 @@ if global.never_move = 0 && global.never_move_in_setting = 0 && (keyboard_check_
 	}
 	else
 	{
-		if global.stamina >= 7.7
+		if global.stamina >= 7.7/(global.metal_shirts+1)
 		{
-			if gravity = 0 && charge_attack = 0 && cannot_move = 0 && cooltime = 0 && spin = 0 && down_attack_plusing = 0 && hurt = 0 && hurt_little = 0
+			if charge_attack = 0 && spin = 0 && down_attack_plusing = 0 && hurt = 0 && hurt_little = 0
 			{
-			movement_speed = -image_xscale*13
-			global.stamina -= 6.7
+			movement_speed = -image_xscale*21
+			global.stamina -= 6.7/(global.metal_shirts+1)
 			global.stamina_cooltime = 0
 			charge_attack = 1
 			cannot_move = 1
@@ -3652,21 +3652,24 @@ if global.never_move = 0 && global.n_sword != 0 && global.n_sword != 5 && global
 	}
 	else
 	{
-		if global.n_sword != 0 && global.n_sword != 5 && abs(global.movement_speed) > 0 && global.stamina >= 10
+		if global.none_wakgood_mode = false
 		{
-			if gravity = 0 && dash_attack = 0 && cannot_move = 0 && cooltime = 0 && spin = 0 && down_attack_plusing = 0 && hurt = 0 && hurt_little = 0
+			if global.n_sword != 0 && global.n_sword != 5 && abs(global.movement_speed) > 0 && global.stamina >= 10
 			{
-			global.stamina = 0
-			dash_attack = 1
-			cannot_move = 1
+				if gravity = 0 && dash_attack = 0 && cannot_move = 0 && cooltime = 0 && spin = 0 && down_attack_plusing = 0 && hurt = 0 && hurt_little = 0
+				{
+				global.stamina = 0
+				dash_attack = 1
+				cannot_move = 1
+				}
 			}
-		}
-		else
-		{
-			if global.rage_gauge < 27
+			else
 			{
-			var sfx = audio_play_sound(cannot_buy,0,0)
-			audio_sound_gain(sfx,0.2*global.master_volume*2*global.sfx_volume,0)
+				if global.rage_gauge < 27
+				{
+				var sfx = audio_play_sound(cannot_buy,0,0)
+				audio_sound_gain(sfx,0.2*global.master_volume*2*global.sfx_volume,0)
+				}
 			}
 		}
 	}
@@ -4990,36 +4993,17 @@ if attack_laser > 0 && spin_attack = 0
 if charge_attack > 0
 {
 sprite_index = pl_move_skeleton_charging
-image_index = charge_attack
 cannot_move = 1
 charge_attack += 0.025
-double_pressed_run_key = 0
 global.movement_speed = 0
-
-	if charge_attack < 7
-	{
-	movement_speed += (0 - movement_speed)*0.015
-	}
-
-	if global.awakening > 1
-	{
-	charge_attack += 0.003
-	}
-	
-	if charge_attack < 3 && abs(movement_speed) > 3
-	{
-	var _ef = instance_create_depth(x,y,depth+1,charging_attack)
-	_ef.image_index = 3
-	_ef.image_xscale = image_xscale
-	_ef.image_alpha = 0.3
-	gravity = 0
-	vspeed = 0
-	}
+red_glow_effect(sprite_index,0,image_alpha*0.2)
 
 	if attack_charge_sfx = 0
 	{
-	sfx_for_multiplayer(charging_sfx,false,0.3)
+	sfx_for_multiplayer(charging_sfx,false,0.1)
 	attack_charge_sfx = 1
+	var dust = instance_create_depth(x,y+28,depth-1,obj_dust_ef)
+	dust.image_xscale = -image_xscale
 	
 	var effect_ = instance_create_depth(x,y-12,player.depth+1,down_effect)
 	effect_.t_image_yscale = 0.4*3
@@ -5032,65 +5016,23 @@ global.movement_speed = 0
 	effect_.received = 0
 	}
 
-	if charge_attack > 2.05 && charge_attack < 3
-	{
-	global.movement_speed = 0
-	movement_speed = 0
-	attack_charge_sfx = 0
-	sprite_index = move_sprite
-	image_index = 0
-	cannot_move = 0
-	cooltime = 0
-	charge_attack = 0
-	charge_attack_effect = 0
-	}
-	
-	if charge_attack >= 4 && charge_attack < 7
-	{
-	global.movement_speed = 0
-	movement_speed = 0
-	attack_charge_sfx = 0
-	sprite_index = move_sprite
-	image_index = 0
-	cannot_move = 0
-	cooltime = 0
-	charge_attack = 0
-	charge_attack_effect = 0
-	}
-	
 
-	if charge_attack < 7
+	if charge_attack < 2
 	{
-	var __check__ = instance_place(x-sign(movement_speed)*7,y,mob_parents)
-		if (place_meeting(x+sign(movement_speed)*18+15,y,floor_parents) && !place_meeting(x+sign(movement_speed)*18,y,stair_parents)) || (instance_exists(__check__) && __check__ > 0) 
-		{
-		var ins_pl___ = instance_place(x+sign(movement_speed)*18+15,y,fire_turret)
-			if instance_exists(ins_pl___)
-			{
-			ins_pl___.image_index = 1
-			}
-			
-		global.hp -= 28*(1-global.metal_shirts)
-		var _ef = instance_create_depth(x,y,depth+1,charging_attack)
-		_ef.image_index = 3
-		_ef.image_xscale = image_xscale
-		_ef.image_alpha = 0.3
-		gravity = 0
-		vspeed = 0
-	
-		var effect_ = instance_create_depth(x+sign(movement_speed)*18+15,y-12,player.depth+1,down_effect)
-		effect_.t_image_yscale = 0.6*3
-		effect_.t_image_xscale = 0.1*3
-		effect_.received = 0
-		movement_speed = -movement_speed*0.35
-		vspeed = -4
-		y -= 3
-		sfx_for_multiplayer(sword_ready,false,0.1)
-		charge_attack = 7.1
-		}
+	movement_speed += (0 - movement_speed)*0.05
 	}
 	
-	if charge_attack >= 8
+	if charge_attack < 1.34
+	{
+	image_index = 5
+	}
+	else
+	{
+	image_index = 0
+	}
+	
+	
+	if charge_attack >= 1.5
 	{
 	global.movement_speed = 0
 	attack_charge_sfx = 0

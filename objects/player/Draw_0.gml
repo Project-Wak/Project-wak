@@ -79,7 +79,10 @@ if x > cm_x && x < cm_x+cm_width && y > yy && y < yy+cm_height
 	
 var p_floor = global.p_floor
 
+if charge_attack >= 1.4 || charge_attack = 0
+{
 draw_sprite_ext(spr_shadow,0,x,p_floor+27,1-abs(y-p_floor)/48,1-abs(y-p_floor)/64,0,c_white,(1-abs(y-p_floor)/48)*0.3*image_alpha)
+}
 var spr = sprite_index
 	if spr = move_sprite && abs(global.movement_speed) > 6
 	{

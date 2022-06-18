@@ -14,5 +14,13 @@ console_key = "A"
 draw_text_kl_scale(xx,yy-10*_c_x,string(console_key),16,999,0.8,image_blend,1,0,font0,1/3*_c_x,1/3*_c_x,image_angle)
 
 draw_sprite_ext(sprite_index,image_index,xx,yy,image_xscale,image_xscale,0,c_white,1)
+if global.none_wakgood_mode = false
+{
 draw_text_kl_scale(xx+32*_c_x,yy-10*_c_x,"내려 찍기 / 돌진 베기 (달리기 도중)",16,999,0.8,image_blend,0,-1,font0,1/3*_c_x,1/3*_c_x,image_angle)
+}
+else
+{
+draw_text_kl_scale(xx+32*_c_x,yy-10*_c_x,"내려 찍기",16,999,0.8,image_blend,0,-1,font0,1/3*_c_x,1/3*_c_x,image_angle)
+}
+
 }

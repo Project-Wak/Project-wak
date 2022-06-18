@@ -32,22 +32,17 @@ global.player_blur_time++
 	}
 }
 
-if global.nickname = -4
-{
-	if global.none_wakgood_mode = true
-	{
-	global.nickname = "주인공"
-	}
-	else
-	{
-	global.nickname = "왁굳"
-	}
-}
 
 
 if global.none_wakgood_mode = true
 {
+global.nickname = "플레이어"
 global.voice_option = 1
+global.clock = 1
+}
+else
+{
+global.nickname = "왁굳"
 }
 
 

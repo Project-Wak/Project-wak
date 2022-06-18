@@ -530,7 +530,7 @@ global.playing_scene = 1
 							if !instance_exists(check__) && message_phase = 1
 							{
 							check__ = instance_create_depth(x,y,depth-1,player_message)
-							check__.text = "차지 공격 도중 공격을 받게되면"
+							check__.text = "대쉬 도중 공격을 받게되면 스테미나가 없어도 가드 판정이 나요!"
 							check__.target = id
 							check__.parents = id
 							can_interect = 0
@@ -539,7 +539,7 @@ global.playing_scene = 1
 							if !instance_exists(check__) && message_phase = 2
 							{
 							check__ = instance_create_depth(x,y,depth-1,player_message)
-							check__.text = "'슈퍼 아머'상태가 되서 스테미나가 없어도 가드 판정이 나요!"
+							check__.text = "대쉬는 달리기 도중 일반 공격키"+string(global.a_key)+"를 눌러 사용 가능해요!"
 							check__.target = id
 							check__.parents = id
 							can_interect = 0
@@ -571,7 +571,7 @@ global.playing_scene = 1
 							if !instance_exists(check__) && message_phase = 1
 							{
 							check__ = instance_create_depth(x,y,depth-1,player_message)
-							check__.text = "돌진 베기 사용 도중엔 어떠한 공격도 맞지 않아요!"
+							check__.text = "돌진 베기 사용 도중엔 '어떠한 공격도' 맞지 않아요!"
 							check__.target = id
 							check__.parents = id
 							}
