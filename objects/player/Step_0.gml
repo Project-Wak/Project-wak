@@ -3199,7 +3199,7 @@ if global.never_move = 0 && global.never_move_in_setting = 0 && (keyboard_check_
 	{
 		if global.stamina >= 7.7/(global.metal_shirts+1)
 		{
-			if charge_attack = 0 && spin = 0 && down_attack_plusing = 0 && hurt = 0 && hurt_little = 0
+			if charge_attack = 0 && spin = 0 && down_attack_plusing = 0 && hurt = 0 && hurt_little = 0 && jump_attack = 0 && spin_attack = 0 && attack_ = 0
 			{
 			movement_speed = -image_xscale*21
 			global.stamina -= 6.7/(global.metal_shirts+1)
@@ -4258,11 +4258,7 @@ spin_attack += 0.3
 		
 			if _pressing_d != 0 && _pressing_a != 0
 			{
-			global.movement_speed = (_pressing_d-_pressing_a)
-			}
-			else
-			{
-			global.movement_speed = -image_xscale*0.4
+			movement_speed += (_pressing_d-_pressing_a)*2
 			}
 		}
 	

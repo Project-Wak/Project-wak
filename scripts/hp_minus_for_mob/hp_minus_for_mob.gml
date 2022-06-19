@@ -9,7 +9,15 @@ function hp_minus_for_mob(argument0,argument1)
 	damage_calcul__ += argument1;
 	}
 	
-	var random_val = percentage_k(25+global.critical_plus*10)
+	if place_meeting(x,y,effect_attack4) || place_meeting(x,y,effect_attack1)
+	{
+	var _ins = instance_create_depth(player.x-player.image_xscale*32,player.y,player.depth-1,effect_saber)
+	_ins.image_xscale = player.image_xscale
+	}
+	
+	
+	
+	var random_val = percentage_k(global.critical_plus*10)
 	if random_val = 0
 	{
 	random_val = 1
@@ -17,6 +25,8 @@ function hp_minus_for_mob(argument0,argument1)
 	else
 	{
 	random_val = 1.5
+	var _ins = instance_create_depth(player.x-player.image_xscale*32,player.y,player.depth-1,effect_saber)
+	_ins.image_xscale = player.image_xscale
 	}
 	
 	var armor__ = armored_level
