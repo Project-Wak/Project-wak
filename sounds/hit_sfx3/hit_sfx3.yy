@@ -11,8 +11,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "hit_sfx3",
-  "duration": 0.341,
+  "soundFile": "hit_sfx3.mp3",
+  "duration": 0.336,
   "parent": {
     "name": "소리",
     "path": "folders/소리.yy",

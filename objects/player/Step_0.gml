@@ -568,6 +568,13 @@ skill_combo_cancle_n_motion(0)
 				if global.medical_slincer1 > 0
 				{
 				global.hp += max_hp/2
+				var d_ef = instance_create_depth(player.x,player.y-64,depth-1,draw_hp_m)
+				var text__ = "+"+string(max_hp/2)
+				d_ef.d_text = text__
+				d_ef.image_blend = $FF82FF90
+				d_ef.image_xscale = 1.2
+				d_ef.image_yscale = 1.2
+				d_ef.target = -4
 				}
 				
 				if global.medical_slincer2 > 0
@@ -4182,6 +4189,12 @@ jump_end_motion = 0
 sprite_index = spin_attack_sprite
 spin_attack += 0.3
 
+	//if spin_attack = 1.3
+	//{
+	//sfx_for_multiplayer(swing_sfx2,0,0.4)
+	//sfx_for_multiplayer(swing_lightsaber_sfx2,0,0.1)
+	//}
+
 	if spin_attack < 3
 	{
 	spin_attack += 0.3
@@ -4265,7 +4278,7 @@ spin_attack += 0.3
 	spin_attack_angle_p++
 	
 	
-		if spin_attack >= 7 && image_angle != 0
+		if spin_attack >= 3 && image_angle != 0
 		{
 		global.movement_speed += (0 - global.movement_speed)*0.08
 			if hurt = 0 && hurt_little = 0
@@ -4274,19 +4287,15 @@ spin_attack += 0.3
 			_ef.image_index = global.n_sword
 			_ef.image_xscale = image_xscale
 			_ef.image_alpha = 0.6
-			_ef.image_angle = image_angle+spin_attack_angle_p*60*(abs(image_xscale)/image_xscale)+10*(abs(image_xscale)/image_xscale)
+			_ef.image_angle = image_angle//+spin_attack_angle_p*60*(abs(image_xscale)/image_xscale)+10*(abs(image_xscale)/image_xscale)
 			_ef.pertential_vspeed = vspeed
 			}
 		
-			image_alpha = 0.6
+			image_alpha = 1
 	
 			if spin_attack_sfx_on = 0
 			{
-			sfx_for_multiplayer(spin_attack_sfx,0,0.4)
-		
-
-			sfx_for_multiplayer(swing_lightsaber_sfx2,0,0.1)
-		
+			sfx_for_multiplayer(swing_sfx2,0,0.4)
 			alarm[10] = 10
 			alarm[11] = 18
 
@@ -4296,6 +4305,12 @@ spin_attack += 0.3
 			sfx_for_multiplayer(ang___,0,0.23)
 			}
 			spin_attack_sfx_on = 1
+			}
+			
+			if spin_attack_sfx_on = 1 && spin_attack > 9
+			{
+			sfx_for_multiplayer(swing_sfx2,0,0.4)
+			spin_attack_sfx_on = 2
 			}
 		
 		
@@ -4412,14 +4427,14 @@ spin_attack += 0.3
 			}
 		}
 	
-		if spin_attack_angle_p > 1
+		if spin_attack_angle_p > 0
 		{
-		image_angle += 120*(abs(image_xscale)/image_xscale)
+		image_angle += 50*(abs(image_xscale)/image_xscale)
 		spin_attack_angle_p = 0
 		}
 	}
 	
-	if (spin_attack >= 15 && pressing_key__s = 0) || spin_attack = -999 || spin_attack = 999
+	if (spin_attack >= 11 && pressing_key__s = 0) || spin_attack = -999 || spin_attack = 999
 	{
 		if spin_attack != -999
 		{

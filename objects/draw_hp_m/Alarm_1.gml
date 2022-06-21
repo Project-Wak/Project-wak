@@ -28,3 +28,8 @@ var s_id = id
 }
 
 can_draw = 1
+
+if image_blend = $FF82FF90
+{
+sfx_for_multiplayer(hp_up,0,0.07)
+}
