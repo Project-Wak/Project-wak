@@ -454,7 +454,7 @@ else
 		
 			if global.none_wakgood_mode = true
 			{
-			global.boss_name = "거대 경비병의 권속 - 화염의 기사"
+			global.boss_name = "연구소 수호자의 권속 - 불타는 화염의 짐승"
 			}
 		
 			if player.attack_laser_sec = 0 && player.attack_laser = 0 && player.suicide = 0 && player.sting_attack = 0

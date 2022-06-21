@@ -211,6 +211,9 @@ global.slow_motion += global.slow_motion*0.03
 			{
 			global.left_time --
 			}
+			
+		var a___ = audio_play_sound(rewind_sound_effect,0,0)
+		audio_sound_gain(a___,0.1*global.master_volume*2*global.sfx_volume,0)
 		global.w_alpha = 0
 		global.used_suicide_skill = 0
 		global.already_aed_used = 0
@@ -244,8 +247,6 @@ global.slow_motion += global.slow_motion*0.03
 		player.y = 734
 		global.back_to_origin_stage = 2
 		alarm[5] = 300
-		var a___ = audio_play_sound(rewind_sound_effect,0,0)
-		audio_sound_gain(a___,0.1*global.master_volume*2*global.sfx_volume,0)
 		}
 		
 		if global.story_next > 100
@@ -258,8 +259,6 @@ global.slow_motion += global.slow_motion*0.03
 		player.y = 1154
 		global.back_to_origin_stage = 2
 		alarm[5] = 300
-		var a___ = audio_play_sound(rewind_sound_effect,0,0)
-		audio_sound_gain(a___,0.1*global.master_volume*2*global.sfx_volume,0)
 		}
 	
 		var _revive_xx = -4
@@ -272,8 +271,6 @@ global.slow_motion += global.slow_motion*0.03
 		
 		if global.back_to_origin_stage = 1
 		{
-		var a___ = audio_play_sound(rewind_sound_effect,0,0)
-		audio_sound_gain(a___,0.1*global.master_volume*2*global.sfx_volume,0)
 		global.platform_speed = 0
 		room_goto(room_main)
 		player.x = 1213

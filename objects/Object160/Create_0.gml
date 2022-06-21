@@ -8,7 +8,7 @@
 /// @DnDAction : YoYo Games.Drawing.Set_Color
 /// @DnDVersion : 1
 /// @DnDHash : 7574B35C
-/// @DnDArgument : "color" "$FF75F2FF"
-draw_set_colour($FF75F2FF & $ffffff);
-var l7574B35C_0=($FF75F2FF >> 24);
+/// @DnDArgument : "color" "$FF462210"
+draw_set_colour($FF462210 & $ffffff);
+var l7574B35C_0=($FF462210 >> 24);
 draw_set_alpha(l7574B35C_0 / $ff);
