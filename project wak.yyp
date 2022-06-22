@@ -570,7 +570,6 @@
     {"id":{"name":"broken_sfx","path":"sounds/broken_sfx/broken_sfx.yy",},"order":109,},
     {"id":{"name":"change_skip_key_to_other","path":"objects/change_skip_key_to_other/change_skip_key_to_other.yy",},"order":34,},
     {"id":{"name":"pl_move_skeleton_attack_beat_saber_green","path":"sprites/pl_move_skeleton_attack_beat_saber_green/pl_move_skeleton_attack_beat_saber_green.yy",},"order":77,},
-    {"id":{"name":"hp_up","path":"sounds/hp_up/hp_up.yy",},"order":117,},
     {"id":{"name":"player_message_for_audience","path":"objects/player_message_for_audience/player_message_for_audience.yy",},"order":1,},
     {"id":{"name":"ef_blood_2_received","path":"objects/ef_blood_2_received/ef_blood_2_received.yy",},"order":4,},
     {"id":{"name":"night_","path":"sounds/night_/night_.yy",},"order":11,},

@@ -11,7 +11,7 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "hit_sfx2.mp3",
+  "soundFile": "hit_sfx2",
   "duration": 0.528,
   "parent": {
     "name": "소리",

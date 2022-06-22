@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "swing_sfx2",
-  "duration": 0.2349,
+  "duration": 0.2399,
   "parent": {
     "name": "소리",
     "path": "folders/소리.yy",
