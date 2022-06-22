@@ -8,47 +8,6 @@ sprite_index = wak_doo264
 }
 
 
-
-
-if global.none_wakgood_mode = true && scene__ > 0
-{
-var xx_ = x
-	var yy_ = y
-	repeat(2)
-	{
-		var random_val___ = percentage_k(55+global.graphics_for_code*7)
-		if random_val___ = 1
-		{
-
-		var random_val___2 = percentage_k(95-cannot_step*70)
-		create_buble_effect(1,270+irandom_range(-30,30),0,choose(-1)*irandom_range(1,150)/6,0.1,0.06,$FF8C7B5A,$FF52361F,2,$FF462210,xx_-25-image_xscale*5,yy_+190+image_yscale*12,depth+5-random_val___2*5,0,false,false)
-		}
-	}
-	
-	var random_val___ = percentage_k(35+global.graphics_for_code*3)
-	if random_val___ = 1
-	{
-	create_buble_effect(1.1,270+irandom_range(-30,30),0,choose(-1)*irandom_range(1,150)/6,0.07,0.06,$FF62D1F7,$FF6C60CD,2,$FF191919,xx_-25-image_xscale*5,yy_+190+image_yscale*12,depth+10,1,false,false)
-	}
-	
-	repeat(2)
-	{
-		var random_val___ = percentage_k(55+global.graphics_for_code*7)
-		if random_val___ = 1
-		{
-		var random_val___2 = percentage_k(95-cannot_step*70)
-		create_buble_effect(1,270+irandom_range(-30,30),0,choose(-1)*irandom_range(1,150)/6,0.1,0.06,$FF8C7B5A,$FF52361F,2,$FF462210,xx_+25+image_xscale*5,yy_+190+image_yscale*12,depth+5-random_val___2*5,0,false,false)
-		}
-	}
-	
-	var random_val___ = percentage_k(35+global.graphics_for_code*3)
-	if random_val___ = 1
-	{
-	create_buble_effect(1.1,270+irandom_range(-30,30),0,choose(-1)*irandom_range(1,150)/6,0.07,0.06,$FF62D1F7,$FF6C60CD,2,$FF191919,xx_+25+image_xscale*5,yy_+190+image_yscale*12,depth+10,1,false,false)
-	}
-}
-
-
 if hp <= 0
 {
 global.boss_target = -4
@@ -231,7 +190,7 @@ else
 			
 			if global.none_wakgood_mode = true
 			{
-			global.boss_name = "연구소의 수호자 - 머리없는 기사"
+			global.boss_name = "프로토타입 거대 경비봇 mk.2"
 			}
 		obj_camera.t_x = x
 		obj_camera.t_y = player.y
@@ -271,10 +230,6 @@ if activated = 1
 	}
 player.guarding = 2
 y -= scene__*3.1
-if global.none_wakgood_mode = true
-{
-y -= scene__*0.2
-}
 left_hand.y -= scene__*3.1
 right_hand.y -= scene__*3.1
 view_shake(0.1,0.1,1)
