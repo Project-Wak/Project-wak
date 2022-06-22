@@ -143,7 +143,7 @@ if place_meeting(x,y,effect) && spin = 0
 	t_hp_bar_alpha = 1
 	alarm[5] = 200
 	
-	hp_minus_for_mob(0,22+global.skill_turning_attack*2)
+	hp_minus_for_mob(0,6+global.skill_turning_attack*2)
 	bloody(_attacker_ef.x,_attacker_ef.y,1)
 	hit_cooltime = 1
 	last_hit = 1
@@ -157,7 +157,7 @@ if place_meeting(x,y,effect) && spin = 0
 		hit_motion = 1
 		}
 	}
-	alarm[1] = 10
+	alarm[1] = 3
 	alarm[2] = 24
 	}
 }

@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "gyu_seong_bu_whal",
-  "duration": 158.359283,
+  "duration": 158.35928,
   "parent": {
     "name": "소리",
     "path": "folders/소리.yy",

@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": {
     "name": "spr_lilla_move",
     "path": "sprites/spr_lilla_move/spr_lilla_move.yy",

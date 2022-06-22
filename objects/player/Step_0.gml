@@ -4576,38 +4576,110 @@ global.movement_speed = 0
 
 
 
-if down_attack_with_rage > 0
+if down_attack_with_rage > 0 && spin_attack = 0 && sting_attack = 0
 {
-down_attack_with_rage++
-	if down_attack_with_rage > 5
+down_dis += 0.5
+sprite_index = down_attack_sprite
+	if down_attack_with_rage < 5
 	{
-	var xx1 = attack_target_x+down_attack_with_rage_dis
-	var yy = global.p_floor+27
-		if place_meeting(xx1,yy+2,floor_parents)
-		{
-		var _effect = instance_create_depth(xx1,yy,player.depth-1,effect_quake)
-		_effect.image_xscale = 1.5;
-		_effect.image_yscale = 2;
-		}
-		
-	var xx2 = attack_target_x-down_attack_with_rage_dis
-		if place_meeting(xx2,yy+2,floor_parents)
-		{
-		var _effect = instance_create_depth(xx2,yy,player.depth-1,effect_quake)
-		_effect.image_xscale = 1.5;
-		_effect.image_yscale = 2;
-		}
-		
-	down_attack_with_rage_dis += 64
-	down_attack_with_rage = 1
+	down_attack_with_rage += 0.3
 	}
 	
-	
-	if (global.awakening <= 0 && down_attack_with_rage_dis/64 > floor(down_dis*0.2)) || (global.awakening > 1 && down_attack_with_rage_dis/64 > floor(down_dis*0.5))
+
+
+	if down_attack_with_rage < 4
 	{
-	down_attack_with_rage_dis = 0
-	down_attack_with_rage = 0
+		if !place_meeting(x-image_xscale*2.2,y,floor_parents)
+		{
+		x += (-image_xscale)*2.2
+		}
+	
+	gravity = 0.05/global.low_gravity_plus
+	down_attack_motion_dilay = 1
+	}
+	else
+	{
+	gravity = 0.36/global.low_gravity_plus
+		
+		if (!place_meeting(x-image_xscale*0.67,y,floor_parents)) && down_attack_with_rage < 4
+		{
+		x += (-image_xscale)*0.67
+		}
+	}
+	
+	if place_meeting(x,y+vspeed,floor_parents) || on_floor = true
+	{
+		if down_attack_sfx_on != 1
+		{
+		down_attack_sfx_on = 1
+		sfx_for_multiplayer(down_attack_sfx,0,0.5)
+		sfx_for_multiplayer(bomb_sfx,false,0.1)
+		
+		view_shake(4,15+down_dis,4)
+		
+		attack_target_x = x
+		}
+		
+	global.movement_speed = 0
+	movement_speed = 0
 	down_dis = 0
+		
+	vspeed += (0 - vspeed)*0.54
+	down_attack_plusing ++
+	cooltime = 1
+	image_index = 4
+	}
+	else
+	{
+	image_index = 3
+	}
+
+	
+	
+	if down_attack_plusing > 0
+	{
+	down_attack_motion_dilay++
+		if down_attack_motion_dilay > 4
+		{
+		var xx1 = attack_target_x+down_attack_with_rage_dis
+		var yy = global.p_floor+27
+			if place_meeting(xx1,yy+2,floor_parents)
+			{
+			var _effect = instance_create_depth(xx1,yy,player.depth-1,effect_quake)
+			_effect.image_xscale = 1.5;
+			_effect.image_yscale = 2;
+			}
+		
+		var xx2 = attack_target_x-down_attack_with_rage_dis
+			if place_meeting(xx2,yy+2,floor_parents)
+			{
+			var _effect = instance_create_depth(xx2,yy,player.depth-1,effect_quake)
+			_effect.image_xscale = 1.5;
+			_effect.image_yscale = 2;
+			}
+		
+		down_attack_with_rage_dis += 64
+		down_attack_motion_dilay = 0
+		}
+	}
+	
+	if (global.awakening <= 0 && down_attack_plusing > 10) || (global.awakening > 1 && down_attack_plusing > 16)
+	{
+	down_attack_with_rage ++
+		if down_attack_with_rage > 32
+		{
+		alarm[1] = 8
+		down_attack_motion_dilay = 0
+		down_attack_gravity = 0
+		down_attack_sfx_on = 0
+		down_attack_plusing = 0
+		down_attack_with_rage = 0
+		cannot_move = 0
+		down_attack_with_rage_dis = 0
+		sprite_index = move_sprite
+		image_index = 0
+		y -= 1
+		}
 	}
 }
 
@@ -5097,18 +5169,6 @@ global.movement_speed = 0
 		down_attack_sfx_on = 1
 		sfx_for_multiplayer(down_attack_sfx,0,0.5)
 		
-			if down_dis > 10
-			{
-			down_attack_with_rage = 1
-			sfx_for_multiplayer(bomb_sfx,false,0.05)
-		
-			attack_target_x = x
-			}
-			else
-			{
-			down_dis = 0
-			}
-		
 		if place_meeting(x,y,obj_water_inside)
 		{
 			repeat(abs(vspeed)*0.1)
@@ -5127,6 +5187,8 @@ global.movement_speed = 0
 		effect_.t_image_yscale = 0.05*down_dis
 		effect_.received = 0
 		}
+		
+	down_dis = 0
 		
 	vspeed += (0 - vspeed)*0.54
 	down_attack_plusing = 1

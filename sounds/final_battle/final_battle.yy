@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "final_battle.mp3",
-  "duration": 172.199188,
+  "duration": 172.19919,
   "parent": {
     "name": "소리",
     "path": "folders/소리.yy",

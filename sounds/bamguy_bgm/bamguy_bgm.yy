@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "bamguy_bgm.mp3",
-  "duration": 201.038361,
+  "duration": 201.03836,
   "parent": {
     "name": "소리",
     "path": "folders/소리.yy",

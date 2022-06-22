@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "lightning_sec_sfx.mp3",
-  "duration": 39.4926872,
+  "duration": 39.492687,
   "parent": {
     "name": "소리",
     "path": "folders/소리.yy",

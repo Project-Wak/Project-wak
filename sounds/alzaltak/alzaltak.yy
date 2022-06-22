@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "alzaltak.mp3",
-  "duration": 211.983673,
+  "duration": 211.98367,
   "parent": {
     "name": "소리",
     "path": "folders/소리.yy",

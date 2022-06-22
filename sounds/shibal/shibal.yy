@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "shibal.mp3",
-  "duration": 1.44499993,
+  "duration": 1.4449999,
   "parent": {
     "name": "소리",
     "path": "folders/소리.yy",

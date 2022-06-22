@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "master_bgm.mp3",
-  "duration": 115.644081,
+  "duration": 115.64408,
   "parent": {
     "name": "소리",
     "path": "folders/소리.yy",

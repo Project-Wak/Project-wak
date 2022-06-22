@@ -1,7 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-if global.none_wakgood_mode = false
-{
+
 if place_meeting(x,y,player) && player.charge_attack = 0 && player.spin = 0 && player.dash_attack = 0
 {
 var p_m_ins = instance_place(x,y,player)
@@ -41,5 +40,4 @@ var p_m_ins = instance_place(x,y,player)
 			}
 		}
 	}
-}
 }

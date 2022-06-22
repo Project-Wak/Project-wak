@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "rain_sound_effect",
-  "duration": 14.2551193,
+  "duration": 14.255119,
   "parent": {
     "name": "소리",
     "path": "folders/소리.yy",

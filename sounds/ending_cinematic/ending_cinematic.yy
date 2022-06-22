@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "ending_cinematic.mp3",
-  "duration": 237.818771,
+  "duration": 237.81877,
   "parent": {
     "name": "소리",
     "path": "folders/소리.yy",

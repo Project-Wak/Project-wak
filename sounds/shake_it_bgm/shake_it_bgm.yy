@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "shake_it_bgm.mp3",
-  "duration": 195.087448,
+  "duration": 195.08745,
   "parent": {
     "name": "소리",
     "path": "folders/소리.yy",
