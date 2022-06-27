@@ -4578,6 +4578,8 @@ global.movement_speed = 0
 
 if down_attack_with_rage > 0
 {
+down_dis_set = down_dis
+down_dis = 0
 down_attack_with_rage++
 	if down_attack_with_rage > 5
 	{
@@ -4603,11 +4605,12 @@ down_attack_with_rage++
 	}
 	
 	
-	if (global.awakening <= 0 && down_attack_with_rage_dis/64 > floor(down_dis*0.2)) || (global.awakening > 1 && down_attack_with_rage_dis/64 > floor(down_dis*0.5))
+	if (global.awakening <= 0 && down_attack_with_rage_dis/64 > floor(down_dis_set*0.2)) || (global.awakening > 1 && down_attack_with_rage_dis/64 > floor(down_dis_set*0.5))
 	{
+	down_dis = 0
 	down_attack_with_rage_dis = 0
 	down_attack_with_rage = 0
-	down_dis = 0
+	down_dis_set = 0
 	}
 }
 
@@ -5138,6 +5141,7 @@ global.movement_speed = 0
 	down_attack ++
 		if down_attack > 32
 		{
+		down_dis = 0
 		alarm[1] = 8
 		down_attack_motion_dilay = 0
 		down_attack_gravity = 0

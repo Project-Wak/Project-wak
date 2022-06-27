@@ -9,7 +9,13 @@ image_blend = merge_color($FF474BE7,$FFFF9B35,merge_val)
 }
 
 
-if image_index > 5
+if image_index > 6
 {
 instance_destroy()
+}
+
+if image_index >= 2
+{
+merge_val_sec += (1 - merge_val_sec)*0.3
+color = merge_color(c_white,image_blend,merge_val_sec)
 }

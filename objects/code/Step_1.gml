@@ -4,14 +4,6 @@
 
 if global.slow_motion > 0
 {
-	if global.b_alpha < 1
-	{
-	global.blur_range += (15 - global.blur_range)*0.01
-	}
-	else
-	{
-	global.blur_range = 0
-	}
 global.slow_motion += 0.1
 global.slow_motion += global.slow_motion*0.03
 	if global.broken_clock = 3
@@ -194,7 +186,7 @@ global.slow_motion += global.slow_motion*0.03
 	}
 	
 
-	if global.t_b_alpha > 0 && global.b_alpha > 2 && global.slow_motion > 9000
+	if (global.t_b_alpha > 0 && global.b_alpha > 2) && global.slow_motion > 9000
 	{
 		if global.clock = 1
 		{

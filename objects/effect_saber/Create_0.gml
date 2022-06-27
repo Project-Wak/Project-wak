@@ -1,6 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
 merge_val = 0
+color = c_white
+merge_val_sec = 0
+image_speed = 0.9
 			
 if global.n_sword = 1
 {

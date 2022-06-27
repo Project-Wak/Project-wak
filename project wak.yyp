@@ -650,6 +650,7 @@
     {"id":{"name":"gameover_explode","path":"sounds/gameover_explode/gameover_explode.yy",},"order":94,},
     {"id":{"name":"sprite15","path":"sprites/sprite15/sprite15.yy",},"order":12,},
     {"id":{"name":"player_message","path":"objects/player_message/player_message.yy",},"order":0,},
+    {"id":{"name":"boss_bgm_forfun","path":"sounds/boss_bgm_forfun/boss_bgm_forfun.yy",},"order":118,},
     {"id":{"name":"start_menu_effect_triangle","path":"objects/start_menu_effect_triangle/start_menu_effect_triangle.yy",},"order":3,},
     {"id":{"name":"gae_sae_ggya","path":"sounds/gae_sae_ggya/gae_sae_ggya.yy",},"order":2,},
     {"id":{"name":"pl_move_skeleton_laser_skill_sec_blue","path":"sprites/pl_move_skeleton_laser_skill_sec_blue/pl_move_skeleton_laser_skill_sec_blue.yy",},"order":164,},

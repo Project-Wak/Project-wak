@@ -16,6 +16,7 @@ movement_speed = 0
 name = global.nickname;
 playerID = 0;
 
+down_dis_set = 0
 down_attack_in_air = 0
 alarm[1] = 1
 message_phase = 0

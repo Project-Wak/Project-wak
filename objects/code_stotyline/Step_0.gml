@@ -205,7 +205,7 @@ if global.story_next >= 101 && global.story_next < 300
 }
 
 
-if message_phase < 140
+if message_phase < 140 && global.first_sleep = 0
 {
 global.clock = 1
 }
