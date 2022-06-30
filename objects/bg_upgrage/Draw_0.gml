@@ -101,8 +101,8 @@ if (pressed > 0 && global.key_setting_message > 0) || global.key_setting_message
 		draw_text_kl_scale(xx-24*_c_x,yy+180*_c_x,"강화 후)",16,999,0.8,image_blend,0,-1,font0,1/3*_c_x,1/3*_c_x,image_angle)
 		draw_text_kl_scale(xx+50*_c_x,yy+200*_c_x-16*_c_x,item_name_upgrade,16,999,0.74,image_blend,0,-1,font0,1/3.5*_c_x,1/3.5*_c_x,image_angle)
 		
-		
-			if global.weapon_upgraded[cal__img] = 0 && cal__img != 5
+			
+			if global.weapon_upgraded[cal__img] = 0 && cal__img != 5 && global.none_wakgood_mode = false
 			{
 			draw_text_kl_scale(xx+50*_c_x,yy+200*_c_x,"\n+ 기본 데미지 +3증가 및 '에네르기파' 사용 가능",54*_c_x,2300*_c_x,0.63,image_blend,0,-1,font0,1/4*_c_x,1/4*_c_x,image_angle)
 			}

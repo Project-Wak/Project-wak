@@ -243,7 +243,7 @@ tiredness = 2
 
 hspeed += (0 - hspeed)*0.1
 
-if global.never_move_in_setting = 0 && global.playing_scene = 0
+if global.never_move_in_setting = 0 && global.playing_scene = 0 && global.none_wakgood_mode = false
 {
 	if global.n_sword = 1 && global.explosion_tuto = 0 && !instance_exists(draw_key_)
 	{
@@ -772,7 +772,7 @@ w_alpha += (-0.01 - w_alpha)*0.1
 	{
 		if global.hp <= 0 && ((global.in_practice = 0 && global.slow_motion = 0 && global.never_move = 0 && global.never_move_in_setting = 0) || (instance_exists(obj_wakdroid_ending) && global.slow_motion = 0))
 		{
-		var message_1 = ("Tip : 올려치기("+string(global.w_key)+") 혹은 회전베기("+string(global.q_key)+")를 사용해보세요")
+		var message_1 = ("Tip : 올려 베기("+string(global.w_key)+") 혹은 회전베기("+string(global.q_key)+")를 사용해보세요")
 		var message_2 = ("Tip : 기절상태에서 점프(Space) 혹은 구르기(아래 방향키)시 빠르게 기절을 풀수 있습니다")
 		var message_3 = ("Tip : "+string(global.e_key)+"키를 꾹 눌러 레이지 모드를 사용하면 일시적으로 스테미나가 무한이 됩니다")
 		var random_message = choose(message_1,message_2,message_3)
@@ -3672,7 +3672,7 @@ if global.never_move = 0 && global.n_sword != 0 && global.n_sword != 5 && global
 			}
 			else
 			{
-				if global.rage_gauge < 27
+				if global.stamina < 10
 				{
 				var sfx = audio_play_sound(cannot_buy,0,0)
 				audio_sound_gain(sfx,0.2*global.master_volume*2*global.sfx_volume,0)

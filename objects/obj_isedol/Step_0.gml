@@ -22,7 +22,7 @@ if global.chunyang = 1 && image_index = 6
 	}
 }
 
-if global.accessories_owned[2] = 1 && first_tuto = 1 && global.accessories_equip[0] < 2 && global.accessories_equip[1] < 2
+if (global.accessories_owned[2] = 1 && global.none_wakgood_mode = false) || (global.accessories_owned[13] = 1 && global.none_wakgood_mode = true) && first_tuto = 1 && global.accessories_equip[0] < 2 && global.accessories_equip[1] < 2
 {
 	if player.x < 1140
 	{
@@ -46,9 +46,9 @@ if global.real_ending != 0
 
 if image_index != 6 && !instance_number(obj_wakdroid_ending)
 {
-	if (global.accessories_owned[2] = 0 || (global.total_died >= 10 && global.accessories_owned[14] <= 0))
+	if ((global.accessories_owned[2] = 0 && global.none_wakgood_mode = false) || (global.accessories_owned[13] = 0 && global.none_wakgood_mode = true) || (global.total_died >= 10 && global.accessories_owned[14] <= 0))
 	{
-		if abs(player.x - x) <= 64 && (global.tutorial = 1 && global.accessories_owned[2] = 0)
+		if abs(player.x - x) <= 64 && (global.tutorial = 1 && (global.accessories_owned[2] = 0 && global.none_wakgood_mode = false) || (global.accessories_owned[13] = 0 && global.none_wakgood_mode = true))
 		{
 		image_index = 0
 		interecting_now = 1
@@ -253,7 +253,7 @@ global.playing_scene = 1
 				{
 					if image_index = 0
 					{
-						if global.tutorial = 1 && global.accessories_owned[2] = 0
+						if global.tutorial = 1 && ((global.accessories_owned[2] = 0 && global.none_wakgood_mode = false) || (global.accessories_owned[13] = 0 && global.none_wakgood_mode = true))
 						{
 							if !instance_exists(check__) && message_phase = 0
 							{
@@ -299,7 +299,14 @@ global.playing_scene = 1
 							if !instance_exists(check__) && message_phase = 5
 							{
 							global.tutorial = 1
-							give_item(1,2)
+								if global.none_wakgood_mode = false
+								{
+								give_item(1,2)
+								}
+								else
+								{
+								give_item(1,13)
+								}
 							can_give_item = 0
 							message_phase = 0
 							first_tuto = 1
@@ -681,7 +688,7 @@ global.playing_scene = 1
 							if !instance_exists(check__) && message_phase = 1
 							{
 							check__ = instance_create_depth(x,y,depth-1,player_message)
-							check__.text = "내려찍기 사용 후 땅 위에서 딜레이가 있을 때,"
+							check__.text = "아래 베기 사용 후 땅 위에서 딜레이가 있을 때,"
 							check__.target = id
 							check__.parents = id
 							can_interect = 0
@@ -690,7 +697,7 @@ global.playing_scene = 1
 							if !instance_exists(check__) && message_phase = 2
 							{
 							check__ = instance_create_depth(x,y,depth-1,player_message)
-							check__.text = "구르기나 가드, 올려치기를 사용하면 딜레이가 캔슬 되요!"
+							check__.text = "구르기나 가드, 올려 베기를 사용하면 딜레이가 캔슬 되요!"
 							check__.target = id
 							check__.parents = id
 							can_interect = 0

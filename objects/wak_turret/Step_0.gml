@@ -50,10 +50,12 @@ if timer_%2 = 0
 		if targeted = -4
 		{
 		targeted = player
-		
-		var sfx = audio_play_sound(aaang_,0,0)
-		audio_sound_gain(sfx,0.05*global.master_volume*2*global.sfx_volume,0)
-		audio_sound_pitch(sfx,0.8)
+			if global.none_wakgood_mode = false
+			{
+			var sfx = audio_play_sound(aaang_,0,0)
+			audio_sound_gain(sfx,0.05*global.master_volume*2*global.sfx_volume,0)
+			audio_sound_pitch(sfx,0.8)
+			}
 		timer_ = 30
 		}
 	}

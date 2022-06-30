@@ -56,6 +56,11 @@ function give_item(argument0,argument1)
 		if _cal__ = 13
 		{
 		chat_up("탈리스만 'AED'를 획득하였다!")
+			if global.none_wakgood_mode = true
+			{
+			global.show_guide_mes = "탈리스만\n\n탈리스만는 Tab키를 통해 장착 가능 하며,\n최대 2개까지 장착 가능하다."
+			global.show_guide_mes_spr = 0
+			}
 		}
 		
 		if _cal__ = 14
@@ -87,13 +92,13 @@ function give_item(argument0,argument1)
 	{
 	var _cal__ = argument1
 	global.weapon_owned[_cal__] ++
-		if _cal__ = 1
+		if _cal__ = 1 && global.none_wakgood_mode = false
 		{
 		chat_up("'양손 광선검'을 획득하였다!")
 		global.n_sword = 1
 		}
 	
-		if _cal__ = 2
+		if _cal__ = 2 && global.none_wakgood_mode = false
 		{
 		chat_up("'초록 광선검'을 획득하였다!")
 		}
@@ -105,7 +110,7 @@ function give_item(argument0,argument1)
 		code.alarm[7] = 1
 		}
 		
-		if _cal__ = 4
+		if _cal__ = 4 && global.none_wakgood_mode = false
 		{
 		chat_up("'푸른 광선검'을 획득하였다!")
 		}
@@ -115,7 +120,7 @@ function give_item(argument0,argument1)
 		chat_up("'돌격 소총'을 획득하였다!")
 		}
 		
-		if _cal__ = 6
+		if _cal__ = 6 && global.none_wakgood_mode = false
 		{
 		chat_up("'지옥 참마도'를 획득하였다!")
 		}

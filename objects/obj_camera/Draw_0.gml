@@ -204,7 +204,7 @@ if room != menu && global.playing_scene = 0 && global.story_next < 100 && global
 
 
 	
-	if global.guide = 1 && global.chat_activity = false && global.slow_motion = 0 && global.show_challenger = 0
+	if global.guide = 1 && global.chat_activity = false && global.slow_motion = 0 && global.show_challenger = 0 && global.none_wakgood_mode = false
 	{
 	draw_set_color(c_black)
 	draw_set_alpha(0.7)
@@ -220,8 +220,8 @@ if room != menu && global.playing_scene = 0 && global.story_next < 100 && global
 
 	draw_text_kl_scale(xx-v_x_*436,yy2-v_x_*170,"기본 스킬(스테미나 소모) : ",v_x_*64,-1,__alpha_set,$FFF7D06D,0,-1,font0,v_x_*0.35,v_x_*0.35,0);
 	draw_text_kl_scale(xx-v_x_*436,yy2-v_x_*170+v_x_*50,"회전베기 (Q)",v_x_*64,-1,__alpha_set,c_white,0,-1,font0,v_x_*0.35,v_x_*0.35,0);
-	draw_text_kl_scale(xx-v_x_*436,yy2-v_x_*170+v_x_*82,"올려치기 (W)",v_x_*64,-1,__alpha_set,c_white,0,-1,font0,v_x_*0.35,v_x_*0.35,0);
-	draw_text_kl_scale(xx-v_x_*436,yy2-v_x_*170+v_x_*114,"내려찍기 (S)",v_x_*64,-1,__alpha_set,c_white,0,-1,font0,v_x_*0.35,v_x_*0.35,0);
+	draw_text_kl_scale(xx-v_x_*436,yy2-v_x_*170+v_x_*82,"올려 베기 (W)",v_x_*64,-1,__alpha_set,c_white,0,-1,font0,v_x_*0.35,v_x_*0.35,0);
+	draw_text_kl_scale(xx-v_x_*436,yy2-v_x_*170+v_x_*114,"아래 베기 (S)",v_x_*64,-1,__alpha_set,c_white,0,-1,font0,v_x_*0.35,v_x_*0.35,0);
 	draw_text_kl_scale(xx-v_x_*436,yy2-v_x_*170+v_x_*146,"대쉬 (달리기 도중 A)",v_x_*64,-1,__alpha_set,c_white,0,-1,font0,v_x_*0.35,v_x_*0.35,0);
 	draw_text_kl_scale(xx-v_x_*436,yy2-v_x_*170+v_x_*178,"가드 (위 방향키)",v_x_*64,-1,__alpha_set,c_white,0,-1,font0,v_x_*0.35,v_x_*0.35,0);
 

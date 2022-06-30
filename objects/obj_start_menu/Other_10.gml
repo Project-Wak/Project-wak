@@ -40,9 +40,12 @@ if go_start != 3
 	
 	if t_set_menu_choose = 3
 	{
-	var sfx_ = audio_play_sound(critical_sfx,0,0)
-	audio_sound_gain(sfx_,0.02*global.master_volume*2*global.sfx_volume,0)
-	url_open("https://project-wak.netlify.app/")
+		if global.none_wakgood_mode = false
+		{
+		var sfx_ = audio_play_sound(critical_sfx,0,0)
+		audio_sound_gain(sfx_,0.02*global.master_volume*2*global.sfx_volume,0)
+		url_open("https://project-wak.netlify.app/")
+		}
 	}
 
 	if t_set_menu_choose = 4
