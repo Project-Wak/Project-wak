@@ -121,31 +121,57 @@ if interecting_now = 1 && (global.real_ending = 0 || (message_phase >= 61 && mes
 	if !instance_exists(check__) && message_phase = 4
 	{
 	global.choice += (1 - global.choice)*0.1
-	global.choice_name[0] = "시계를 던져 왁드로이드를 과거로 보낸다 (시계 아이템 소모)"
-	global.choice_name[1] = "시계를 이용해 과거로 되돌아간다"
-	global.choice_name[2] = "연구소 밖으로 도망 간다"
-	
-		if global.choosed > 0
+		if global.none_wakgood_mode = false
 		{
-			if global.choice_now = 0
+		global.choice_name[0] = "시계를 던져 왁드로이드를 과거로 보낸다 (시계 아이템 소모)"
+		global.choice_name[1] = "시계를 이용해 과거로 되돌아간다"
+		global.choice_name[2] = "연구소 밖으로 도망 간다"
+			if global.choosed > 0
 			{
-			message_phase = 5
-			}
+				if global.choice_now = 0
+				{
+				message_phase = 5
+				}
 			
-			if global.choice_now = 1
-			{
-			message_phase = 30
-			}
+				if global.choice_now = 1
+				{
+				message_phase = 30
+				}
 			
-			if global.choice_now = 2
-			{
-			var	sfx__ = audio_play_sound(walk_sfx,0,false)
-			audio_sound_gain(sfx__,0.3,0)
-			message_phase = 49
-			global.t_b_alpha = 3.1
+				if global.choice_now = 2
+				{
+				var	sfx__ = audio_play_sound(walk_sfx,0,false)
+				audio_sound_gain(sfx__,0.3,0)
+				message_phase = 49
+				global.t_b_alpha = 3.1
+				}
+			global.choice = 0
+			global.choosed = 0
 			}
-		global.choice = 0
-		global.choosed = 0
+		}
+		else
+		{
+		global.choice_name[0] = "사망 회귀를 이용해 과거로 되돌아간다"
+		global.choice_name[1] = "연구소 밖으로 도망 간다"
+		global.choice_name[2] = -4
+		
+			if global.choosed > 0
+			{
+				if global.choice_now = 0
+				{
+				message_phase = 30
+				}
+			
+				if global.choice_now = 1
+				{
+				var	sfx__ = audio_play_sound(walk_sfx,0,false)
+				audio_sound_gain(sfx__,0.3,0)
+				message_phase = 49
+				global.t_b_alpha = 3.1
+				}
+			global.choice = 0
+			global.choosed = 0
+			}
 		}
 	}
 	
@@ -353,7 +379,14 @@ if interecting_now = 1 && (global.real_ending = 0 || (message_phase >= 61 && mes
 	if !instance_exists(check__) && global.show_guide_mes = -4 && message_phase = 32
 	{
 	global.show_guide_mes_spr = 6
-	global.show_guide_mes = "이를 모르는 이세돌 멤버들과 팬치들, 천양이는 폭발에 휘말릴 것이다"
+		if global.none_wakgood_mode = true
+		{
+		global.show_guide_mes = "이를 모르는 연구소 내의 동료들이 폭발에 휘말릴 것이다"
+		}
+		else
+		{
+		global.show_guide_mes = "이를 모르는 이세돌 멤버들과 팬치들, 천양이는 폭발에 휘말릴 것이다"
+		}
 	message_phase++
 	}
 	
@@ -422,7 +455,14 @@ if interecting_now = 1 && (global.real_ending = 0 || (message_phase >= 61 && mes
 	if !instance_exists(check__) && global.show_guide_mes = -4 && message_phase = 53
 	{
 	global.show_guide_mes_spr = 6
-	global.show_guide_mes = "이세돌 맴버들과 팬치들, 그리고 천양이는 폭발에 휘말려 버렸다"
+		if global.none_wakgood_mode = true
+		{
+		global.show_guide_mes = "연구소 내의 동료들이 폭발에 휘말려 버렸다"
+		}
+		else
+		{
+		global.show_guide_mes = "이세돌 맴버들과 팬치들, 그리고 천양이는 폭발에 휘말려 버렸다"
+		}
 	message_phase = 55
 	}
 
@@ -621,7 +661,14 @@ if interecting_now = 1 && (global.real_ending = 0 || (message_phase >= 61 && mes
 			audio_sound_gain(bgm,0.23*global.master_volume*2*global.bgm_volume,0)
 			}
 		global.gameover_reason_title = "[도망자 엔딩]"
+		if global.none_wakgood_mode = true
+		{
+		global.gameover_reason = "연구소 내의 동료들을 구하지 않고 혼자 탈출 했다"
+		}
+		else
+		{
 		global.gameover_reason = "이세돌 멤버들과, 팬치들 그리고 천양이를 구하지 않고 혼자 탈출 했다"
+		}
 		show_ending += (1 - show_ending)*0.01
 		obj_camera.t_y = player.y-120-ending_mes_timer
 		ending_mes_timer += 0.5

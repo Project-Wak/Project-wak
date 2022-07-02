@@ -817,7 +817,14 @@ global.playing_scene = 1
 					if !instance_exists(check__) && message_phase = 3
 					{
 					check__ = instance_create_depth(x,y,depth-1,player_message)
-					check__.text = "천양님이랑 팬치들한테도 미리 대피 하라고 전해둘게요!"
+						if global.none_wakgood_mode = false
+						{
+						check__.text = "천양님이랑 팬치들한테도 미리 대피 하라고 전해둘게요!"
+						}
+						else
+						{
+						check__.text = "연구소 내에 동료들에게도 미리 대피 하라고 전해둘게요!"
+						}
 					check__.target = id
 					check__.parents = id
 					can_interect = 0

@@ -3,7 +3,7 @@
 global.got_sec_phase = 1
 if global.none_wakgood_mode = true
 {
-sprite_index = pl_hurt_hyumpanchi271
+sprite_index = pl_hurt_wakdroid276
 }
 
 image_index = 1

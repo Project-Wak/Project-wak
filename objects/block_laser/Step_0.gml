@@ -46,6 +46,14 @@ if damage_able > 0
 			_ef.hspeed = irandom_range(-20,20)
 			_ef.vspeed = irandom_range(-4,2)
 			}
+			
+			if global.graphics_for_code >= 3
+			{
+				if collision_point(x2,y2,obj_floor_tile1,true,0)
+				{
+				instance_create_depth(x2,y2,player.depth+15,melt_effect)
+				}
+			}
 		break;
 		}
 

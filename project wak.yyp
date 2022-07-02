@@ -453,6 +453,7 @@
     {"id":{"name":"devil_doo","path":"sprites/devil_doo/devil_doo.yy",},"order":217,},
     {"id":{"name":"code","path":"objects/code/code.yy",},"order":4,},
     {"id":{"name":"draw_text_kl_scale","path":"scripts/draw_text_kl_scale/draw_text_kl_scale.yy",},"order":6,},
+    {"id":{"name":"melt_effect","path":"objects/melt_effect/melt_effect.yy",},"order":62,},
     {"id":{"name":"Sprite170","path":"sprites/Sprite170/Sprite170.yy",},"order":169,},
     {"id":{"name":"obj_hint_arrow","path":"objects/obj_hint_arrow/obj_hint_arrow.yy",},"order":45,},
     {"id":{"name":"go_out_die","path":"sounds/go_out_die/go_out_die.yy",},"order":51,},
@@ -777,7 +778,7 @@
     {"CopyToMask":-1,"filePath":"datafiles","resourceVersion":"1.0","name":"1573455682_com.SamuelVenable.ExecuteSystem.yymp","resourceType":"GMIncludedFile",},
   ],
   "MetaData": {
-    "IDEVersion": "2022.5.1.16",
+    "IDEVersion": "2022.6.0.23",
   },
   "resourceVersion": "1.5",
   "name": "project wak",
