@@ -3,7 +3,7 @@
 //instance_create_depth(x,y,depth,code_bubble_surf)
 global.bubble_surf = surface_create(1920, 1080);
 global.rage_surf = surface_create(1920, 1080);
-global.none_wakgood_mode = true
+global.none_wakgood_mode = false
 global.guisanga_doo_event = 0
 global.already_played_platform_scene = 0
 ////////////////////////////////////////////////////////////////////////

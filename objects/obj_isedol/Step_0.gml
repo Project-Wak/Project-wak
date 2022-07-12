@@ -22,7 +22,7 @@ if global.chunyang = 1 && image_index = 6
 	}
 }
 
-if (global.accessories_owned[2] = 1 && global.none_wakgood_mode = false) || (global.accessories_owned[13] = 1 && global.none_wakgood_mode = true) && first_tuto = 1 && global.accessories_equip[0] < 2 && global.accessories_equip[1] < 2
+if ((global.accessories_owned[2] = 1 && global.none_wakgood_mode = false) || (global.accessories_owned[13] = 1 && global.none_wakgood_mode = true)) && first_tuto = 1 && global.accessories_equip[0] < 2 && global.accessories_equip[1] < 2
 {
 	if player.x < 1140
 	{

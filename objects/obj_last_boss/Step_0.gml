@@ -867,19 +867,42 @@ else
 					audio_sound_gain(sfx,0.4*global.master_volume*2*global.sfx_volume,0)
 					}
 				view_shake(11,38,1)
-				patturn = 5.15
+				patturn = 5.13
 				}
 			}
 			
-			if patturn >= 5.15 && patturn < 5.2
+			if patturn >= 5.13 && patturn < 5.2
 			{
 				if !audio_is_playing(quake_sfx) && global.show_credits = 0
 				{
 				var sfx = audio_play_sound(quake_sfx,0,0)
 				audio_sound_gain(sfx,0.33*global.master_volume*2*global.sfx_volume,0)
 				}
-			patturn += 0.001
-			view_shake(0,1.1,1)
+
+
+				if patturn = 5.13
+				{
+				angel_spear.w_alpha = 1.2
+			
+				var effect_ = instance_create_depth(angel_spear.x,angel_spear.y,player.depth+1,down_effect)
+				effect_.t_image_xscale = 0.7*6
+				effect_.t_image_yscale = 0.05*6
+				effect_.received = 0
+				}
+				
+				patturn += 0.001
+				view_shake(0,1.1,1)
+				
+				spear_timer ++
+				if patturn > 5.15 && spear_timer%3 = 0 && spear_falling < 5*32
+				{
+				spear_falling += 32
+				var __spear__ = instance_create_depth(angel_spear.x+spear_falling,y-1000,player.depth-11,falling_spear)
+				__spear__.vspeed = 46
+				
+				var __spear__ = instance_create_depth(angel_spear.x-spear_falling,y-1000,player.depth-11,falling_spear)
+				__spear__.vspeed = 46
+				}
 			}
 			
 			
@@ -897,6 +920,8 @@ else
 				instance_destroy(angel_spear)
 				instance_destroy(_light_3)
 				patturn = 0
+				spear_timer = 0
+				spear_falling = 0
 				var xx___ = x
 				var yy___ = y
 					repeat(choose(6,7,7,8,8,9,9,9,10,10,11,12))
