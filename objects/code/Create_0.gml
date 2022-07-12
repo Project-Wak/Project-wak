@@ -30,7 +30,7 @@ global.player_blur = 0
 global.player_blur_time = 0
 global.show_ui = 1
 global.visible_player = 1
-for(var i = 0; i <= 6; i++)
+for(var i = 0; i <= 12; i++)
 {
 global.achievement[i] = -4
 }
