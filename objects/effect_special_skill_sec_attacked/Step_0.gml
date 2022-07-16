@@ -9,6 +9,23 @@ image_xscale += 0.026
 image_xscale += image_xscale*0.1
 }
 
+if global.graphics_for_code >= 3
+{
+var max_length = 720
+	for(var i = 0; i < max_length; i ++)
+	{
+	var x2 = x + lengthdir_x(i,direction-270)
+	var y2 = y + lengthdir_y(i,direction-270)
+
+
+		if collision_point(x2,y2,obj_floor_tile1,true,0)
+		{
+		instance_create_depth(x2,y2,player.depth+15,melt_effect)
+		break;
+		}
+	}
+}
+
 
 
 

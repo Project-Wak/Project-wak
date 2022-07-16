@@ -7,7 +7,7 @@ timer = 0
 
 image_index = 1
 image_speed = 0
-
+_light_ = -4
 alpha = 1
 check_floor = -4
 check_on_floor = 0
@@ -21,7 +21,7 @@ t_hp_bar_alpha = 0
 hit_cooltime = 0
 last_hit = 1
 cannot_step = 0
-armored_level = 3
+armored_level = 20
 test_mob_type = 1
 movement_speed = 0
 hit_motion = 0

@@ -15,16 +15,59 @@ n_hp = hp
 }
 
 
+if my_number = 31
+{
+armored_level = 0.15
+image_index = 2
+
+	if !instance_exists(_light_)
+	{
+	_light_ = instance_create_depth(x,y-90,depth,obj_light)
+	_light_.p_id = id
+	_light_.alpha = 0.7
+	_light_.sprite_index = sprite64
+	_light_.image_blend = $FF75F2FF
+	_light_.light_type = 0
+	_light_.image_xscale = 6
+	_light_.image_yscale = 6
+	}
+	else
+	{
+	_light_.x = x
+	_light_.y = y
+		if instance_exists(obj_worm) && obj_worm.patturn = 0
+		{
+		_light_.alpha = image_alpha*0.55
+		}
+	}
+}
+
+
 if instance_exists(target)
 {
-	if point_distance(x,y,target.x,target.y) > 90*image_xscale
+	if my_number != 31
 	{
-	t_x = target.x
-	t_y = target.y
+		if point_distance(x,y,target.x,target.y) > 90*image_xscale
+		{
+		t_x = target.x
+		t_y = target.y
 
-	x += (t_x - x)*0.25
-	y += (t_y - y)*0.25
-	image_angle = point_direction(x,y,t_x,t_y)
+		x += (t_x - x)*0.25
+		y += (t_y - y)*0.25
+		image_angle = point_direction(x,y,t_x,t_y)
+		}
+	}
+	else
+	{
+		if point_distance(x,y,target.x,target.y) > 128*image_xscale
+		{
+		t_x = target.x
+		t_y = target.y
+
+		x += (t_x - x)*0.25
+		y += (t_y - y)*0.25
+		image_angle = point_direction(x,y,t_x,t_y)
+		}
 	}
 
 	

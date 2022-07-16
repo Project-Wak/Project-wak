@@ -4,7 +4,6 @@ code.sepa_power = 25
 code.sepa_alpha = 1.3
 //command_buffer = buffer_create(3, buffer_grow, 1);
 alarm[1] = 1
-
 keep_cre_effect = 0
 a = 0
 laser_dis = 0

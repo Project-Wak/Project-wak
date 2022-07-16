@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if alpha < 0.1
+if alpha < 0.1 || my_number = 31
 {
 	if place_meeting(x,y,obj_lightning_player) && obj_lightning_player.image_index < 8
 	{
