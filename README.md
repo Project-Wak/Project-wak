@@ -29,6 +29,8 @@
 
 [관련 코드내용은 Object파일 -> (보스 이름 ex. obj_wak_doo)파일 참고해주세요]
 
+https://github.com/ABER1047/Project-wak/tree/main/objects/obj_worm
+
 ================================================================
 
 - 레이지 모드 준비 상태때 나오는 아우라, 혹은 불 이펙트의 외각선 효과도 마찬가지로 일일히 코드로 짜줬습니다.
@@ -39,7 +41,11 @@
 
 2. 그 원위에 살짝 x픽셀 만큼 작은 원을 하나 덮어씌워서 더그림 (이때 x값은 미지수)
 
-[관련 코드 내용은 Object파일 -> "bubble_effect" 및 "obj_camera", "code" 참고]
+[관련 코드 내용은 Object및 script파일 -> "set_surf_outline" 및 "obj_camera", "code", "code_bubble_surf" 참고]
+
+https://github.com/ABER1047/Project-wak/blob/main/scripts/set_surf_outline/set_surf_outline.gml
+
+https://github.com/ABER1047/Project-wak/blob/main/objects/code_bubble_surf/Draw_0.gml
 
 ================================================================
 
@@ -57,6 +63,8 @@
 
 [관련 코드 내용은 "effect_spark" 참고]
 
+https://github.com/ABER1047/Project-wak/tree/main/objects/effect_spark
+
 ================================================================
 
 - 화면 흔들림 효과
@@ -64,6 +72,8 @@
 전체적인 알고리즘은 obj_camera에서의 "shake"라는 단어가 포함되어있는 변수들을 확인해주세요
 
 [관련 코드 내용은 "obj_camera" 참고]
+
+https://github.com/ABER1047/Project-wak/blob/main/objects/obj_camera/Step_0.gml
 
 
 ================================================================
