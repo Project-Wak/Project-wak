@@ -17,7 +17,7 @@ n_hp = hp
 
 if my_number = 31
 {
-armored_level = 0.15
+armored_level = 0.1
 image_index = 2
 
 	if !instance_exists(_light_)

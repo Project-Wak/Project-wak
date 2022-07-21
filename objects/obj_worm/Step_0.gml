@@ -178,7 +178,7 @@ y += 1.5
 	audio_sound_gain(a___,0.12*global.master_volume*2*global.sfx_volume,0)
 
 	dead_scene = 0
-	var test_mob = instance_create_depth(xstart-1300,ystart+600,player.depth+3,mob_spawn_here)
+	var test_mob = instance_create_depth(xstart-1300,ystart+200,player.depth+3,mob_spawn_here)
 	test_mob.t_y = -900
 	test_mob.mob_type = obj_worm
 	test_mob.xscale = 1.1
@@ -318,7 +318,7 @@ else
 		{
 		var sfx = audio_play_sound(laser_skill_ready,0,0)
 		audio_sound_gain(sfx,0.1*global.master_volume*2*global.sfx_volume,0)
-		bgm = audio_play_sound(boss_bgm,0,1)
+		bgm = audio_play_sound(boss_bgm,1,1)
 		}
 	
 		if !instance_exists(check__) && player.image_alpha > 0
@@ -343,6 +343,12 @@ else
 		instance_destroy(check__)
 		message_phase ++
 		}
+		
+		if instance_exists(first_meet_blocking)
+		{
+		instance_destroy(first_meet_blocking)
+		}
+		
 
 		if patturn = 0
 		{

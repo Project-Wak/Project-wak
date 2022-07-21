@@ -298,7 +298,7 @@ global.slow_motion += global.slow_motion*0.03
 		
 			if instance_exists(obj_wak_doo)
 			{
-			audio_stop_sound(boss_bgm)
+			
 			global.room_brightness = 0.2
 			obj_wak_doo.hp = obj_wak_doo.max_hp
 			obj_wak_doo.x = 2816
@@ -322,7 +322,7 @@ global.slow_motion += global.slow_motion*0.03
 			
 			if instance_exists(obj_messi)
 			{
-			audio_stop_sound(boss_bgm)
+			
 			global.room_brightness = 0.2
 			obj_messi.hp = obj_messi.max_hp
 			obj_messi.x = obj_messi.xstart
@@ -353,7 +353,7 @@ global.slow_motion += global.slow_motion*0.03
 		
 			if instance_exists(obj_angel)
 			{
-			audio_stop_sound(boss_bgm)
+			
 			global.room_brightness = 0.15
 			obj_angel.hp = obj_angel.max_hp
 			obj_angel.x = obj_angel.xstart
@@ -383,7 +383,7 @@ global.slow_motion += global.slow_motion*0.03
 			if instance_exists(obj_wakdroid)
 			{
 			audio_stop_sound(follower_bgm)
-			audio_stop_sound(boss_bgm)
+			
 			instance_destroy(obj_wakdroid)
 			obj_andience1194.cre_boss = 1
 			}
@@ -391,7 +391,7 @@ global.slow_motion += global.slow_motion*0.03
 			if instance_exists(obj_last_boss)
 			{
 			audio_stop_sound(final_battle)
-			audio_stop_sound(boss_bgm)
+			
 			instance_destroy(mob_spawn_here)
 			instance_destroy(obj_last_boss.wall1)
 			instance_destroy(obj_last_boss.wall2)
@@ -406,7 +406,7 @@ global.slow_motion += global.slow_motion*0.03
 		
 			if instance_exists(obj_simhae_doo)
 			{
-			audio_stop_sound(boss_bgm)
+			
 			global.room_brightness = 0.2
 			obj_simhae_doo.image_xscale = -abs(obj_simhae_doo.image_xscale)
 			obj_simhae_doo.hp = obj_simhae_doo.max_hp
@@ -430,7 +430,7 @@ global.slow_motion += global.slow_motion*0.03
 			
 			if instance_exists(obj_guisangadoo)
 			{
-			audio_stop_sound(boss_bgm)
+			
 			global.room_brightness = 0.2
 			obj_guisangadoo.image_xscale = -abs(obj_guisangadoo.image_xscale)
 			obj_guisangadoo.hp = obj_guisangadoo.max_hp
@@ -458,7 +458,7 @@ global.slow_motion += global.slow_motion*0.03
 		
 			if instance_exists(obj_twin_eye)
 			{
-			audio_stop_sound(boss_bgm)
+			
 			global.room_brightness = 0.2
 			obj_twin_eye.hp = obj_twin_eye.max_hp
 			obj_twin_eye.timer = 0
@@ -482,7 +482,7 @@ global.slow_motion += global.slow_motion*0.03
 			
 			if instance_exists(obj_worm)
 			{
-			audio_stop_sound(boss_bgm)
+			
 			global.room_brightness = 0.1
 			obj_worm.hp = obj_worm.max_hp
 			obj_worm.timer = 0
@@ -538,7 +538,7 @@ global.slow_motion += global.slow_motion*0.03
 			{
 			room_goto(room_sector_B03_2_remaked)
 			}
-			
+		audio_stop_sound(boss_bgm)
 		global.blur_range = 0
 		obj_camera.t_x = _revive_xx
 		obj_camera.t_y = _revive_yy

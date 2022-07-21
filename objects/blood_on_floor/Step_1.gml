@@ -46,3 +46,16 @@ if place_meeting(x+32,y,obj_floor_tile3)
 {
 image_angle = -90
 }
+
+if place_meeting(x,y,player) && global.hp <= 0
+{
+	if timer = 0
+	{
+	t_scale = random_scale+1.5
+	}
+timer ++
+	if timer > 300 && t_scale > random_scale
+	{
+	random_scale += 0.005
+	}
+}

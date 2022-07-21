@@ -855,6 +855,26 @@ else
 				a___.image_xscale = 5
 				a___.image_yscale = 2
 				
+				repeat(8)
+				{
+				var _ef = instance_create_depth(angel_spear.x,angel_spear.y,depth-1,effect_spark)
+				_ef.hspeed = irandom_range(-20,20)
+				_ef.vspeed = irandom_range(-4,2)
+			
+					repeat(choose(6,7,7,8,8,9,9,9,10,10,11,12))
+					{
+					randomize()
+					var random_target = angel_spear
+					var dust = instance_create_depth(random_target.x+irandom_range(-5,5),random_target.y+irandom_range(-5,5),random_target.depth-1,pepsi_effect_received)
+					var scale = irandom_range(20,40)/50
+					dust.image_xscale = scale
+					dust.image_yscale = scale
+					dust.vspeed = irandom_range(-50,50)/25
+					dust.hspeed = irandom_range(-50,50)/25
+					dust.image_alpha = 1
+					}
+				}
+				
 					if global.show_credits = 0
 					{
 					var sfx = audio_play_sound(down_attack_sfx,0,0)

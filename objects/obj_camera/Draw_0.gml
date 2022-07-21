@@ -302,7 +302,8 @@ instance_destroy(setting_parents)
 	if global.fps_draw = 0
 	{
 	draw_set_color(c_black)
-	draw_set_alpha(global.b_alpha)
+	draw_set_alpha(global.b_alpha*global.ending_b_alpha)
+	//draw_text(32,32,global.ending_b_alpha)
 	draw_rectangle(0,0,room_width,room_height,0)
 	draw_set_alpha(1)
 
@@ -344,10 +345,9 @@ draw_text_kl_scale(xx+xxx-32*v_x_,yy+yyy-(70)*v_x_,"("+string(global.skip_key)+"
 
 	if global.gameover >= 0.98 && keyboard_check_released(ord(string(global.skip_key)))
 	{
-	global.w_alpha = 0.6
+	//global.w_alpha = 0.6
 	show_ending_var ++
-	var sfx = audio_play_sound(critical_sfx,0,0)
-	audio_sound_gain(sfx,0.03*global.master_volume*2*global.sfx_volume,0)
+
 		if show_ending_var > 1
 		{
 		game_restart()

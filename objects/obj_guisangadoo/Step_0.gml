@@ -224,7 +224,7 @@ b_alpha_ += (t_b_alpha_ - b_alpha_)*0.08
 		{
 		var sfx = audio_play_sound(laser_skill_ready,0,0)
 		audio_sound_gain(sfx,0.1*global.master_volume*2*global.sfx_volume,0)
-		bgm = audio_play_sound(boss_bgm,0,1)
+		bgm = audio_play_sound(boss_bgm,1,1)
 		}
 	
 		if !instance_exists(check__) && player.image_alpha > 0

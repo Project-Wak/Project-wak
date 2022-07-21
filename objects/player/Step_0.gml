@@ -761,6 +761,18 @@ returned_id = global.return_player_id;
 		hp_minus_for_player(1047,self)
 		global.hp = 0
 		suicide = 0
+		
+			repeat(10)
+			{
+			var __i = choose(-1,1)
+			var bl_ef = instance_create_depth(x+irandom_range(-16,16),y+irandom_range(16,32),depth-1,blood_on_floor)
+			bl_ef.scale_dir = choose(-1,1)
+			bl_ef.sprite_index = sprite991
+				if global.blood_effect > 0
+				{
+				bl_ef.sprite_index = sprite99
+				}
+			}
 		}
 	}
 	

@@ -23,6 +23,31 @@ if global.show_credits = 0
 }
 
 
+if instance_exists(obj_wakdroid_ending) && (global.broken_clock > 2 || timer_ending_scene > 0)
+{
+	if timer_ending_scene > 20
+	{
+		if show_ending_var != 0
+		{
+		global.ending_b_alpha += (1 - global.ending_b_alpha)*0.03
+		}
+		else
+		{
+		global.ending_b_alpha += (-0.01 - global.ending_b_alpha)*0.03
+			if timer_ending_scene <= 30
+			{
+			t_y = player.y
+			timer_ending_scene = 30
+			}
+		t_y -= 1
+		}
+	}
+	else
+	{
+	timer_ending_scene ++
+	}
+}
+
 
 
 
@@ -138,7 +163,7 @@ if global.show_challenger = 0
 	}
 	
 
-	if instance_exists(player)
+	if instance_exists(player) && global.ending_b_alpha = 1
 	{
 		if global.slow_motion = 0 && global.show_credits = 0
 		{
