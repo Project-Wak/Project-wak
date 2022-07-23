@@ -35,7 +35,7 @@ https://github.com/ABER1047/Project-wak/tree/main/objects/obj_worm
 
 
 
-</br>
+
 ### ▼ 쌉벌래두 움직임 (테라리아식 지렁이 알고리즘)
 -------------
 
@@ -44,15 +44,16 @@ https://github.com/ABER1047/Project-wak/tree/main/objects/obj_worm
 https://github.com/ABER1047/Worm
 
 
-</br>
+
 ### ▼ 레이지 모드 준비 상태때 나오는 아우라, 혹은 불 이펙트의 외선 효과
 -------------
 
 전체적인 알고리즘은 다음과 같습니다.
-
+```
 1. 테두리 부분의 색을 딴 원을 하나 그림
 
 2. 그 원위에 살짝 x픽셀 만큼 작은 원을 하나 덮어씌워서 더그림 (이때 x값은 미지수)
+```
 
 [관련 코드 내용은 Object및 script파일 -> "set_surf_outline" 및 "obj_camera", "code", "code_bubble_surf" 참고]
 
@@ -61,7 +62,7 @@ https://github.com/ABER1047/Project-wak/blob/main/scripts/set_surf_outline/set_s
 https://github.com/ABER1047/Project-wak/blob/main/objects/code_bubble_surf/Draw_0.gml
 
 
-</br>
+
 ### ▼ 빗물 튀기는 효과 및 스파크 튀기는 효과
 -------------
 
@@ -80,7 +81,7 @@ https://github.com/ABER1047/Project-wak/blob/main/objects/code_bubble_surf/Draw_
 https://github.com/ABER1047/Project-wak/tree/main/objects/effect_spark
 
 
-</br>
+
 ### ▼ 화면 흔들림 효과
 -------------
 
@@ -91,12 +92,12 @@ https://github.com/ABER1047/Project-wak/tree/main/objects/effect_spark
 https://github.com/ABER1047/Project-wak/blob/main/objects/obj_camera/Step_0.gml
 
 
-</br>
+
 ### ▼ 레이저 (보스가 눈에서 발사하던 레이저 혹은 맵 중간중간 마다 놓여있던 장애물)
 -------------
 
 전체적인 알고리즘은 다음과 같습니다.
-
+```
 1. 최적화를 위해 레이저가 최대로 뻗어나갈 수 있는 거리에 제한을 둠 (아마 인게임에선 2500정도로 제한을 뒀음)
 
 2. 레이저가 발사되는 지점 (x1,y1)을 기준으로 특정 발사 각도로 쭉 플레이어나 바닥에 닿거나 최대 거리로 뻗어나갈 때까지 반복문으로 체크
@@ -104,11 +105,12 @@ https://github.com/ABER1047/Project-wak/blob/main/objects/obj_camera/Step_0.gml
 3. 플레이어나 바닥에 닿았거나, 최대 거리까지 뻗어나간 경우 반복문 빠져나오기
 
 4. 반복문을 빠져나온 순간에서의 좌푯값 (x2,y2)까지 선을 이어줌 (해당 선이 레이저)
+```
 
 [관련 코드 내용은 "block_laser" 참고]
 
 https://github.com/ABER1047/Project-wak/blob/main/objects/block_laser/Step_0.gml
 
 
-</br>
+
 #### 이외에 궁금한거 있으시면 디코로 연락해주심 자세히 설명드리겠읍니당 (디코 아이디는 제 깃헙 프로필에 적혀있어요!)
