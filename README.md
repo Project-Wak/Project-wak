@@ -67,7 +67,7 @@ https://github.com/ABER1047/Project-wak/blob/main/objects/code_bubble_surf/Draw_
 -------------
 
 전체적인 알고리즘은 다음과 같습니다.
-
+```
 1. 현재 좌표값 (x1,y1)와 1프레임 이후의 현재 좌표값 (x2,y2)의 값을 통해 해당 사이를 잇는 선을 x 픽셀 두깨로 하나 그리기 (이때 x값은 미지수)
 
 2. (x2,y2)좌표값을 기준으로 (x1,y1)좌표값에서 x좌표 y좌표 각각 z만큼 x2,y2값에 가까워지도록 좌표값을 빼거나 더해줌 (이때 z값은 for문을 통해 제어함)
@@ -75,6 +75,7 @@ https://github.com/ABER1047/Project-wak/blob/main/objects/code_bubble_surf/Draw_
 3. 이제 2번 단계에서 구해진 수많은 새로운 좌표값을 (x2,y2)좌표값과 연결하여 선을 그려줌
 
 4. 각 선들의 투명도를 대략 0.05정도로 설정하면 (x2,y2)에 선들이 가까워질수록 색이 더 진해짐으로써 선이 자연스러워보임
+```
 
 [관련 코드 내용은 "effect_spark" 참고]
 
