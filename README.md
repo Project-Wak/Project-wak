@@ -35,7 +35,7 @@ https://github.com/ABER1047/Project-wak/tree/main/objects/obj_worm
 
 
 
----------------------------------------
+<br/>
 ### ▼ 쌉벌래두 움직임 (테라리아식 지렁이 알고리즘)
 -------------
 
@@ -44,7 +44,7 @@ https://github.com/ABER1047/Project-wak/tree/main/objects/obj_worm
 https://github.com/ABER1047/Worm
 
 
----------------------------------------
+<br/>
 ### ▼ 레이지 모드 준비 상태때 나오는 아우라, 혹은 불 이펙트의 외선 효과
 -------------
 
@@ -61,7 +61,7 @@ https://github.com/ABER1047/Project-wak/blob/main/scripts/set_surf_outline/set_s
 https://github.com/ABER1047/Project-wak/blob/main/objects/code_bubble_surf/Draw_0.gml
 
 
----------------------------------------
+<br/>
 ### ▼ 빗물 튀기는 효과 및 스파크 튀기는 효과
 -------------
 
@@ -80,7 +80,7 @@ https://github.com/ABER1047/Project-wak/blob/main/objects/code_bubble_surf/Draw_
 https://github.com/ABER1047/Project-wak/tree/main/objects/effect_spark
 
 
----------------------------------------
+<br/>
 ### ▼ 화면 흔들림 효과
 -------------
 
@@ -91,7 +91,7 @@ https://github.com/ABER1047/Project-wak/tree/main/objects/effect_spark
 https://github.com/ABER1047/Project-wak/blob/main/objects/obj_camera/Step_0.gml
 
 
----------------------------------------
+<br/>
 ### ▼ 레이저 (보스가 눈에서 발사하던 레이저 혹은 맵 중간중간 마다 놓여있던 장애물)
 -------------
 
@@ -110,5 +110,5 @@ https://github.com/ABER1047/Project-wak/blob/main/objects/obj_camera/Step_0.gml
 https://github.com/ABER1047/Project-wak/blob/main/objects/block_laser/Step_0.gml
 
 
-
+<br/>
 #### 이외에 궁금한거 있으시면 디코로 연락해주심 자세히 설명드리겠읍니당 (디코 아이디는 제 깃헙 프로필에 적혀있어요!)
