@@ -92,7 +92,6 @@ https://github.com/ABER1047/Project-wak/tree/main/objects/effect_spark
 https://github.com/ABER1047/Project-wak/blob/main/objects/obj_camera/Step_0.gml
 
 
-================================================================
 
 ### 레이저 (보스가 눈에서 발사하던 레이저 혹은 맵 중간중간 마다 놓여있던 장애물)
 -------------
