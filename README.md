@@ -32,7 +32,7 @@
 [관련 코드내용은 Object파일 -> (보스 이름 ex. obj_wak_doo)파일 참고해주세요]
 
 https://github.com/ABER1047/Project-wak/tree/main/objects/obj_worm
-
+#
 
 
 
@@ -42,7 +42,7 @@ https://github.com/ABER1047/Project-wak/tree/main/objects/obj_worm
 [관련 코드 내용은 해당 소스 파일 참고해주세영 (물론 보닌이 만든거)]
 
 https://github.com/ABER1047/Worm
-
+#
 
 
 ### ▼ 레이지 모드 준비 상태때 나오는 아우라, 혹은 불 이펙트의 외선 효과
@@ -60,7 +60,7 @@ https://github.com/ABER1047/Worm
 https://github.com/ABER1047/Project-wak/blob/main/scripts/set_surf_outline/set_surf_outline.gml
 
 https://github.com/ABER1047/Project-wak/blob/main/objects/code_bubble_surf/Draw_0.gml
-
+#
 
 
 ### ▼ 빗물 튀기는 효과 및 스파크 튀기는 효과
@@ -79,7 +79,7 @@ https://github.com/ABER1047/Project-wak/blob/main/objects/code_bubble_surf/Draw_
 [관련 코드 내용은 "effect_spark" 참고]
 
 https://github.com/ABER1047/Project-wak/tree/main/objects/effect_spark
-
+#
 
 
 ### ▼ 화면 흔들림 효과
@@ -90,7 +90,7 @@ https://github.com/ABER1047/Project-wak/tree/main/objects/effect_spark
 [관련 코드 내용은 "obj_camera" 참고]
 
 https://github.com/ABER1047/Project-wak/blob/main/objects/obj_camera/Step_0.gml
-
+#
 
 
 ### ▼ 레이저 (보스가 눈에서 발사하던 레이저 혹은 맵 중간중간 마다 놓여있던 장애물)
@@ -110,7 +110,7 @@ https://github.com/ABER1047/Project-wak/blob/main/objects/obj_camera/Step_0.gml
 [관련 코드 내용은 "block_laser" 참고]
 
 https://github.com/ABER1047/Project-wak/blob/main/objects/block_laser/Step_0.gml
-
+#
 
 
 #### 이외에 궁금한거 있으시면 디코로 연락해주심 자세히 설명드리겠읍니당 (디코 아이디는 제 깃헙 프로필에 적혀있어요!)
