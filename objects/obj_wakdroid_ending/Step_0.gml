@@ -889,7 +889,7 @@ global.never_move = 1
 		player.image_alpha = 0
 		show_cinematic_sec = 1
 		room_goto(tuto_room)
-		bgm__ = audio_play_sound(ending_cinematic,0,false)
+		bgm__ = audio_play_sound(ending_cinematic,0,true)
 		}
 	}
 	

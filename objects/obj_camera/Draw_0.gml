@@ -357,6 +357,50 @@ draw_text_kl_scale(xx+xxx-32*v_x_,yy+yyy-(70)*v_x_,"("+string(global.skip_key)+"
 
 
 
+if global.playing_scene > 0
+{
+var std_value = 110
+
+	if global.show_credits > 0
+	{
+	std_value = 80
+	}
+	
+
+	if global.playing_scene_black_bg < std_value
+	{
+	global.playing_scene_black_bg ++
+	}
+global.playing_scene_black_bg += (std_value - global.playing_scene_black_bg)*0.1
+}
+else
+{
+	if global.playing_scene_black_bg > 0
+	{
+	global.playing_scene_black_bg --
+	}
+global.playing_scene_black_bg += (-1 - global.playing_scene_black_bg)*0.1
+}
+
+if global.playing_scene_black_bg > 0
+{
+draw_set_alpha(1)
+draw_set_color(c_black)
+draw_rectangle(xx-32,yy-32,xx+xxx+32,yy-32+global.playing_scene_black_bg*v_x_,0)
+draw_rectangle(xx-32,yy+yyy+32,xx+xxx+32,yy+yyy+32-global.playing_scene_black_bg*v_x_,0)
+
+	if global.hp > 0 && instance_exists(player_message) && global.show_ui = 1
+	{
+		if audio_is_playing(boss_bgm) || audio_is_playing(final_battle)
+		{
+		draw_text_kl_scale(xx+xxx-32*v_x_,yy+yyy-(-64+global.playing_scene_black_bg)*v_x_,"("+string(global.skip_key)+"키 꾹 눌러 눌러 빨리 감기)",v_x_*64,-1,0.5,c_white,0,1,font0,v_x_*0.3,v_x_*0.3,0);
+		}
+		else
+		{
+		draw_text_kl_scale(xx+xxx-32*v_x_,yy+yyy-(-64+global.playing_scene_black_bg)*v_x_,"("+string(global.skip_key)+"키를 눌러 넘기기)",v_x_*64,-1,0.5,c_white,0,1,font0,v_x_*0.3,v_x_*0.3,0);
+		}
+	}
+}
 
 
 

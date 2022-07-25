@@ -21,9 +21,50 @@ real_text_time ++
 	real_text_a ++
 	real_text_time = 0
 
-		if global.none_wakgood_mode = false && voice_delay%2 = 0 && target = player.id
+		if global.none_wakgood_mode = false
 		{
-		sfx_for_multiplayer(chat_reading_voice,0,0.5)
+			if target = player.id && voice_delay%2 = 0
+			{
+			sfx_for_multiplayer(chat_reading_voice,0,0.5)
+			}
+
+			if target.object_index = obj_isedol && voice_delay%4
+			{
+				if target.image_index = 0
+				{
+				sfx_for_multiplayer(chat_reading_voice_ine,0,0.5)
+				}
+				
+				if target.image_index = 1
+				{
+				sfx_for_multiplayer(chat_reading_voice_jururu,0,0.7)
+				}
+				
+				if target.image_index = 2
+				{
+				sfx_for_multiplayer(chat_reading_voice_segu,0,0.7)
+				}
+				
+				if target.image_index = 3
+				{
+				sfx_for_multiplayer(chat_reading_voice_vichan,0,0.1)
+				}
+				
+				if target.image_index = 4
+				{
+				sfx_for_multiplayer(chat_reading_voice_jing,0,0.7)
+				}
+				
+				if target.image_index = 5
+				{
+				sfx_for_multiplayer(chat_reading_voice_lil,0,0.4)
+				}
+				
+				if target.image_index = 6
+				{
+				sfx_for_multiplayer(chat_reading_voice_chun,0,0.5)
+				}
+			}
 		}
 	voice_delay++
 
