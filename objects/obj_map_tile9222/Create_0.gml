@@ -72,3 +72,6 @@ if global.guisanga_doo_event = 1 && !instance_exists(obj_wakdroid_ending)
 instance_create_depth(0,0,0,broken_platfrom)
 }
 
+
+var droped_item__ = instance_create_depth(497,774,0,obj_droped_item)
+droped_item__.item_var = 110

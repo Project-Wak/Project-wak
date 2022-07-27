@@ -171,6 +171,14 @@ global.playing_scene = 1
 	global.weapon_owned[3] = 0
 	global.weapon_owned[4] = 0
 	
+	if global.achievement[7] != 1
+	{
+	var _achievement = instance_create_depth(x,y,depth,bg_achievement)
+	_achievement.text = string(global.achievement_name[7])
+	_achievement.icon_num = 0
+	global.achievement[7] = 1
+	}
+	
 	global.never_move = 0
 	global.playing_scene = 0
 	interecting_now = 0

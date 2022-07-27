@@ -37,4 +37,5 @@ instance_create_depth(4608,1440,depth,obj_guisangadoo)
 
 
 
-
+var droped_item__ = instance_create_depth(160,1856,0,obj_droped_item)
+droped_item__.item_var = 104

@@ -52,6 +52,14 @@ audio_sound_gain(code.last_bgm,0.13*global.master_volume*global.bgm_volume*scene
 
 if hp <= 0
 {
+	if global.achievement[18] != 1
+	{
+	var _achievement = instance_create_depth(x,y,depth,bg_achievement)
+	_achievement.text = string(global.achievement_name[18])
+	_achievement.icon_num = 4
+	global.achievement[18] = 1
+	}
+	
 global.boss_target = -4
 global.playing_scene = 1
 global.never_move = 1

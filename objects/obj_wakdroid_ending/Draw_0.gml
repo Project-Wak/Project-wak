@@ -41,6 +41,14 @@ draw_text_kl_scale(x,y-v_x*64,"상호작용 ("+string(global.skip_key)+")",v_x*6
 
 if room = room_sector_outside && global.real_ending > 0 && obj_map_tile_outside.explo_anime = 0
 {
+	if global.achievement[20] != 1
+	{
+	var _achievement = instance_create_depth(x,y,depth,bg_achievement)
+	_achievement.text = string(global.achievement_name[20])
+	_achievement.icon_num = 4
+	global.achievement[20] = 1
+	}
+	
 var start_i_var = 0
 var total_people = 6
 

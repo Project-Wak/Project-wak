@@ -2,6 +2,124 @@
 // You can write your code in this editor
 depth = obj_camera.depth+30
 
+global.achievement_yy += (global.achievement_tyy - global.achievement_yy)*0.07
+
+if global.achievement_tyy < 0
+{
+global.achievement_tyy = 0
+}
+
+if global.achievement_tyy > 1000
+{
+global.achievement_tyy = 1000
+}
+
+
+
+for(var i = 0; i <= 20; i++)
+{
+	if global.achievement[i] > 0
+	{
+	global.achievement_percentage[i] = 100
+	}
+}
+
+
+//탈리스만 도전과제
+var all_accessory = 0
+for(var i = 2; i <= 19; i++)
+{
+	if (global.accessories_owned[i] > 0 && i != 9 && i != 18)
+	{
+	all_accessory ++
+	}
+}
+
+if all_accessory >= 17
+{
+all_accessory = 17
+
+	if global.achievement[6] != 1
+	{
+	var _achievement = instance_create_depth(x,y,depth,bg_achievement)
+	_achievement.text = string(global.achievement_name[6])
+	_achievement.icon_num = 0
+	global.achievement[6] = 1
+	}
+}
+
+global.achievement_percentage[6] = 100*(all_accessory/17)
+
+
+
+
+//무기 도전과제
+var all_weapon = 0
+for(var i = 1; i <= 6; i++)
+{
+	if global.weapon_owned[i] > 0
+	{
+	all_weapon ++
+	}
+}
+
+if all_weapon >= 6
+{
+all_weapon = 6
+
+	if global.achievement[8] != 1
+	{
+	var _achievement = instance_create_depth(x,y,depth,bg_achievement)
+	_achievement.text = string(global.achievement_name[8])
+	_achievement.icon_num = 0
+	global.achievement[8] = 1
+	}
+}
+
+global.achievement_percentage[8] = 100*(all_weapon/6)
+
+
+
+
+if global.replayed > 0
+{
+	if global.achievement[10] != 1
+	{
+	var _achievement = instance_create_depth(x,y,depth,bg_achievement)
+	_achievement.text = string(global.achievement_name[10])
+	_achievement.icon_num = 0
+	global.achievement[10] = 1
+	}
+}
+
+
+var total_boss = 0
+for(var i = 11; i <= 19; i++)
+{
+	if global.achievement[i] > 0
+	{
+	total_boss ++
+	}
+}
+
+if total_boss >= 9
+{
+total_boss = 9
+
+	if global.achievement[9] != 1
+	{
+	var _achievement = instance_create_depth(x,y,depth,bg_achievement)
+	_achievement.text = string(global.achievement_name[9])
+	_achievement.icon_num = 0
+	global.achievement[9] = 1
+	}
+}
+
+global.achievement_percentage[9] = 100*(total_boss/9)
+
+
+
+
 if set_brightness = 1
 {
 wheel_cooltime --
@@ -208,29 +326,15 @@ wheel_cooltime --
 		}
 	}
 
-	if go_start != 3
-	{
-		if t_set_menu_choose < 0
-		{
-		t_set_menu_choose = 4
-		}
 
-		if t_set_menu_choose > 4
-		{
-		t_set_menu_choose = 0
-		}
+	if t_set_menu_choose < 0
+	{
+	t_set_menu_choose = 5
 	}
-	else
-	{
-		if t_set_menu_choose < 0
-		{
-		t_set_menu_choose = 5
-		}
 
-		if t_set_menu_choose > 5
-		{
-		t_set_menu_choose = 0
-		}
+	if t_set_menu_choose > 5
+	{
+	t_set_menu_choose = 0
 	}
 }
 else

@@ -9,6 +9,14 @@ hp = max_hp
 
 if hp <= 0
 {
+	if global.achievement[16] != 1
+	{
+	var _achievement = instance_create_depth(x,y,depth,bg_achievement)
+	_achievement.text = string(global.achievement_name[16])
+	_achievement.icon_num = 4
+	global.achievement[16] = 1
+	}
+	
 global.boss_target = -4
 global.playing_scene = 1
 global.never_move = 1

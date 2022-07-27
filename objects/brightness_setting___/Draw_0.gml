@@ -21,11 +21,11 @@ draw_sprite_ext(sprite_index,image_index,xx+global.brightness_setting*200*_c_x,y
 
 if global.brightness_setting > 0.5
 {
-draw_text_kl_scale(xx+220*_c_x,yy-10*_c_x,string(global.brightness_setting)+" (과한 밝음은 게임의 분위기와 몰입감을 해칠수 있습니다)",64*_c_x,9999,0.8,image_blend,0,-1,font0,1/3*_c_x,1/3*_c_x,image_angle)
+draw_text_kl_scale(xx+220*_c_x,yy-10*_c_x,string(global.brightness_setting*100)+"% (과한 밝기는 게임 분위기를 해칠수 있습니다)",64*_c_x,9999,0.8,image_blend,0,-1,font0,1/3*_c_x,1/3*_c_x,image_angle)
 }
 else
 {
-draw_text_kl_scale(xx+220*_c_x,yy-10*_c_x,global.brightness_setting,64*_c_x,9999,0.8,image_blend,0,-1,font0,1/3*_c_x,1/3*_c_x,image_angle)
+draw_text_kl_scale(xx+220*_c_x,yy-10*_c_x,string(global.brightness_setting*100)+"%",64*_c_x,9999,0.8,image_blend,0,-1,font0,1/3*_c_x,1/3*_c_x,image_angle)
 }
 
 draw_text_kl_scale(xx-128*_c_x,yy-10*_c_x,"화면 밝기",16,9999,0.8,image_blend,0,-1,font0,1/3*_c_x,1/3*_c_x,image_angle)

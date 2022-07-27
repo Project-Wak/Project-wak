@@ -31,6 +31,14 @@ _light_.alpha = image_alpha*0.55
 
 if hp <= 0
 {
+	if global.achievement[19] != 1
+	{
+	var _achievement = instance_create_depth(x,y,depth,bg_achievement)
+	_achievement.text = string(global.achievement_name[19])
+	_achievement.icon_num = 4
+	global.achievement[19] = 1
+	}
+	
 t_b_alpha_ = -0.1
 global.boss_target = -4
 global.playing_scene = 1

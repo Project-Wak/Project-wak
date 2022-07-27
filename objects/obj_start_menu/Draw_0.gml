@@ -22,11 +22,11 @@ if set_brightness = 0
 var alpha_____ = 1 - global.b_alpha
 draw_text_k_scale(xx+wid*0.5,yy+v_x*120,"게임을 플레이 하기 전, 게임 내 밝기 정도를 설정해주세요",99,-1,alpha_____,c_white,0,0,font_title,v_x/5,v_x/5,0)
 draw_text_k_scale(xx+wid*0.5,yy+v_x*160,"(화살표의 형태만은 뚜렷하게 보임과 동시에 색은 조금 알아 볼수 없을 정도가 적당합니다)",99,-1,alpha_____*0.7,c_white,0,0,font_title,v_x/6,v_x/6,0)
-draw_text_k_scale(xx+wid*0.5,yy+v_x*190,"(잘 모르겠으면 보통(0.5)으로 설정해주세요. 나중에 설정에서 변경가능합니다)",99,-1,alpha_____*0.7,c_white,0,0,font_title,v_x/6.5,v_x/6.5,0)
+draw_text_k_scale(xx+wid*0.5,yy+v_x*190,"(잘 모르겠으면 보통(50%)으로 설정해주세요. 나중에 설정에서 변경가능합니다)",99,-1,alpha_____*0.7,c_white,0,0,font_title,v_x/6.5,v_x/6.5,0)
 draw_text_k_scale(xx+wid*0.5,yy+v_x*600,"(설정이 완료되었으면 'D'키를 눌러 넘어갑니다)",99,-1,alpha_____*brightness_set_alpha,c_white,0,0,font_title,v_x/6.5,v_x/6.5,0)
 }
 
-if global.never_move_in_setting = 0 && global.show_credits = 0 && set_brightness = 1
+if global.never_move_in_setting = 0 && global.show_credits = 0 && global.show_achievement = 0 && set_brightness = 1
 {
 //draw_text(300,300,dis)
 dis = point_distance(xx+wid*0.5,400,mouse_x,mouse_y)
@@ -39,18 +39,19 @@ var scale__ = 1
 var scale__sec = 1
 var message_1 = "Start Game"
 var message_2 = "Setting"
-var message_3 = "Credits"
-var message_4 = "Contact"
-var message_5 = "Quit"
-var message_6 = ""
+var message_3 = "Achievement"
+var message_4 = "Credits"
+var message_5 = "Contact"
+var message_6 = "Quit"
 var text_scale = 1
 if global.korean_text = 1
 {
 message_1 = "게임 시작"
 message_2 = "환경 설정"
-message_3 = "크레딧"
-message_4 = "문의"
-message_5 = "종료"
+message_5 = "도전 과제"
+message_4 = "크레딧"
+message_5 = "문의"
+message_6 = "종료"
 }
 
 if go_start >= 3
@@ -71,38 +72,38 @@ text_scale = 0.75
 var set_yy = 400+set_menu_choose*50*scale__
 var my_yy = 400
 var my_yy_for_draw = my_yy-set_menu_choose*50*scale__
-draw_text_k_scale(xx+wid*0.5,yy+v_x*(my_yy_for_draw),message_1,99,-1,menu_alpha*(1-abs(my_yy - set_yy)/(75*scale__sec)),c_white,0,0,font_title,v_x/5*text_scale,v_x/5*text_scale,0)
+draw_text_k_scale(xx+wid*0.5,yy+v_x*(my_yy_for_draw),message_1,99,-1,menu_alpha*(1-abs(my_yy - set_yy)/(128*scale__sec)),c_white,0,0,font_title,v_x/5*text_scale,v_x/5*text_scale,0)
 draw_sprite_ext(Sprite162,2,xx+wid*0.5-v_x*80,yy+v_x*(my_yy_for_draw+10),v_x*0.5,v_x*0.5,-45,c_white,menu_alpha*0.8*(1-abs(my_yy - set_yy)/(32*scale__sec)))
 
 var set_yy = 400+set_menu_choose*50*scale__
 var my_yy = 400+50*1*scale__
 var my_yy_for_draw = my_yy-set_menu_choose*50*scale__
-draw_text_k_scale(xx+wid*0.5,yy+v_x*(my_yy_for_draw),message_2,99,-1,menu_alpha*(1-abs(my_yy - set_yy)/(75*scale__sec)),c_white,0,0,font_title,v_x/5*text_scale,v_x/5*text_scale,0)
+draw_text_k_scale(xx+wid*0.5,yy+v_x*(my_yy_for_draw),message_2,99,-1,menu_alpha*(1-abs(my_yy - set_yy)/(128*scale__sec)),c_white,0,0,font_title,v_x/5*text_scale,v_x/5*text_scale,0)
 draw_sprite_ext(Sprite162,2,xx+wid*0.5-v_x*60,yy+v_x*(my_yy_for_draw+10),v_x*0.5,v_x*0.5,-45,c_white,menu_alpha*0.8*(1-abs(my_yy - set_yy)/(32*scale__sec)))
 
 var set_yy = 400+set_menu_choose*50*scale__
 var my_yy = 400+50*2*scale__
 var my_yy_for_draw = my_yy-set_menu_choose*50*scale__
-draw_text_k_scale(xx+wid*0.5,yy+v_x*(my_yy_for_draw),message_3,99,-1,menu_alpha*(1-abs(my_yy - set_yy)/(75*scale__sec)),c_white,0,0,font_title,v_x/5*text_scale,v_x/5*text_scale,0)
-draw_sprite_ext(Sprite162,2,xx+wid*0.5-v_x*60,yy+v_x*(my_yy_for_draw+10),v_x*0.5,v_x*0.5,-45,c_white,menu_alpha*0.8*(1-abs(my_yy - set_yy)/(32*scale__sec)))
+draw_text_k_scale(xx+wid*0.5,yy+v_x*(my_yy_for_draw),message_3,99,-1,menu_alpha*(1-abs(my_yy - set_yy)/(128*scale__sec)),c_white,0,0,font_title,v_x/5*text_scale,v_x/5*text_scale,0)
+draw_sprite_ext(Sprite162,2,xx+wid*0.5-v_x*80,yy+v_x*(my_yy_for_draw+10),v_x*0.5,v_x*0.5,-45,c_white,menu_alpha*0.8*(1-abs(my_yy - set_yy)/(32*scale__sec)))
 
 var set_yy = 400+set_menu_choose*50*scale__
 var my_yy = 400+50*3*scale__
 var my_yy_for_draw = my_yy-set_menu_choose*50*scale__
-draw_text_k_scale(xx+wid*0.5,yy+v_x*(my_yy_for_draw),message_4,99,-1,menu_alpha*(1-abs(my_yy - set_yy)/(75*scale__sec)),c_white,0,0,font_title,v_x/5*text_scale,v_x/5*text_scale,0)
+draw_text_k_scale(xx+wid*0.5,yy+v_x*(my_yy_for_draw),message_4,99,-1,menu_alpha*(1-abs(my_yy - set_yy)/(128*scale__sec)),c_white,0,0,font_title,v_x/5*text_scale,v_x/5*text_scale,0)
 draw_sprite_ext(Sprite162,2,xx+wid*0.5-v_x*60,yy+v_x*(my_yy_for_draw+10),v_x*0.5,v_x*0.5,-45,c_white,menu_alpha*0.8*(1-abs(my_yy - set_yy)/(32*scale__sec)))
 
 var set_yy = 400+set_menu_choose*50*scale__
 var my_yy = 400+50*4*scale__
 var my_yy_for_draw = my_yy-set_menu_choose*50*scale__
-draw_text_k_scale(xx+wid*0.5,yy+v_x*(my_yy_for_draw),message_5,99,-1,menu_alpha*(1-abs(my_yy - set_yy)/(75*scale__sec)),c_white,0,0,font_title,v_x/5*text_scale,v_x/5*text_scale,0)
-draw_sprite_ext(Sprite162,2,xx+wid*0.5-v_x*45,yy+v_x*(my_yy_for_draw+10),v_x*0.5,v_x*0.5,-45,c_white,menu_alpha*0.8*(1-abs(my_yy - set_yy)/(32*scale__sec)))
+draw_text_k_scale(xx+wid*0.5,yy+v_x*(my_yy_for_draw),message_5,99,-1,menu_alpha*(1-abs(my_yy - set_yy)/(128*scale__sec)),c_white,0,0,font_title,v_x/5*text_scale,v_x/5*text_scale,0)
+draw_sprite_ext(Sprite162,2,xx+wid*0.5-v_x*60,yy+v_x*(my_yy_for_draw+10),v_x*0.5,v_x*0.5,-45,c_white,menu_alpha*0.8*(1-abs(my_yy - set_yy)/(32*scale__sec)))
 
 var set_yy = 400+set_menu_choose*50*scale__
 var my_yy = 400+50*5*scale__
 var my_yy_for_draw = my_yy-set_menu_choose*50*scale__
-draw_text_k_scale(xx+wid*0.5,yy+v_x*(my_yy_for_draw),message_6,99,-1,menu_alpha*(1-abs(my_yy - set_yy)/(75*scale__sec)),c_white,0,0,font_title,v_x/5*text_scale,v_x/5*text_scale,0)
-draw_sprite_ext(Sprite162,2,xx+wid*0.5-v_x*60,yy+v_x*(my_yy_for_draw+10),v_x*0.5,v_x*0.5,-45,c_white,menu_alpha*0.8*(1-abs(my_yy - set_yy)/(32*scale__sec)))
+draw_text_k_scale(xx+wid*0.5,yy+v_x*(my_yy_for_draw),message_6,99,-1,menu_alpha*(1-abs(my_yy - set_yy)/(128*scale__sec)),c_white,0,0,font_title,v_x/5*text_scale,v_x/5*text_scale,0)
+draw_sprite_ext(Sprite162,2,xx+wid*0.5-v_x*50,yy+v_x*(my_yy_for_draw+10),v_x*0.5,v_x*0.5,-45,c_white,menu_alpha*0.8*(1-abs(my_yy - set_yy)/(32*scale__sec)))
 }
 
 
@@ -123,3 +124,46 @@ draw_text_k_scale(xx+wid*0.5,yy-v_x*(global.show_credits-940),"Credits"+string(g
 	}
 }
 
+
+if global.show_achievement > 0
+{
+achievement_delay ++
+
+var main_text_alpha = 1-abs(global.achievement_yy)/96
+draw_text_k_scale(xx+wid*0.5,yy+v_x*64,"달성한 도전과제",200,-1,main_text_alpha,c_white,0,0,font_title,v_x/5,v_x/5,0)
+
+
+var cleared_achievement = 0
+	for(var i = 0; i <= 20; i++)
+	{
+	draw_text_k_scale(xx+wid*0.3,yy+v_x*(180+i*60-global.achievement_yy),string(global.achievement_name[i])+"  ("+string(floor(global.achievement_percentage[i]))+"%)",200,-1,0.5+global.achievement_percentage[i]/500,c_white,0,-1,font_title,v_x/6,v_x/6,0)
+	draw_rectangle(xx+wid*0.3,yy+v_x*(215+i*60-global.achievement_yy),xx+wid*0.3+global.achievement_percentage[i]*4.5*v_x,yy+v_x*(220+i*60-global.achievement_yy),false)
+	draw_text_k_scale(xx+wid*0.3,yy+v_x*(200+i*60-global.achievement_yy),global.achievement_desc[i],200,-1,0.45+global.achievement_percentage[i]/650,c_white,0,-1,font_title,v_x/8,v_x/8,0)
+		if global.achievement[i] > 0
+		{
+		cleared_achievement ++
+		}
+	}
+	
+var yy_for_total_achievement = global.achievement_yy
+
+if yy_for_total_achievement > 96
+{
+yy_for_total_achievement = 96
+}
+
+if yy_for_total_achievement < 0
+{
+yy_for_total_achievement = 0
+}
+
+draw_text_k_scale(xx+wid*0.7,yy+v_x*(100-yy_for_total_achievement*0.65),"총 달성한 도전과제",200,-1,0.8,c_white,0,0,font_title,v_x/7,v_x/7,0)
+draw_text_k_scale(xx+wid*0.7,yy+v_x*(128-yy_for_total_achievement*0.65),string(cleared_achievement)+"/20",200,-1,0.8,c_white,0,0,font_title,v_x/8,v_x/8,0)
+
+draw_text_k_scale(xx+wid-v_x*24,yy+hei-v_x*32,"(마우스 휠을 통해 둘러보기 / 아무키나 눌러 나가기)",200,-1,0.8,c_white,0,1,font_title,v_x/7,v_x/7,0)
+
+	if (keyboard_check_pressed(vk_anykey) || mouse_check_button_pressed(mb_any)) && achievement_delay > 30
+	{
+	global.show_achievement = 0
+	}
+}

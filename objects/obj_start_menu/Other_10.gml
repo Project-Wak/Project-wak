@@ -30,15 +30,25 @@ if go_start != 3
 	
 	code.alarm[10] = 1
 	}
-
+	
 	if t_set_menu_choose = 2
+	{
+	var sfx_ = audio_play_sound(critical_sfx,0,0)
+	audio_sound_gain(sfx_,0.02*global.master_volume*2*global.sfx_volume,0)
+	achievement_delay = 0
+	global.achievement_yy = 0
+	global.achievement_tyy = 0
+	global.show_achievement = 1
+	}
+
+	if t_set_menu_choose = 3
 	{
 	var sfx_ = audio_play_sound(critical_sfx,0,0)
 	audio_sound_gain(sfx_,0.02*global.master_volume*2*global.sfx_volume,0)
 	global.show_credits = 1
 	}
 	
-	if t_set_menu_choose = 3
+	if t_set_menu_choose = 4
 	{
 		if global.none_wakgood_mode = false
 		{
@@ -48,7 +58,7 @@ if go_start != 3
 		}
 	}
 
-	if t_set_menu_choose = 4
+	if t_set_menu_choose = 5
 	{
 	var sfx_ = audio_play_sound(critical_sfx,0,0)
 	audio_sound_gain(sfx_,0.02*global.master_volume*2*global.sfx_volume,0)

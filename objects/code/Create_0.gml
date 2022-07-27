@@ -25,15 +25,83 @@ global.choosed = 0
 global.poisoning = 0
 global.clock_far_from = 0
 global.cursor = 1
+global.show_achievement = 0
 global.replayed = 0
 global.player_blur = 0
 global.player_blur_time = 0
 global.show_ui = 1
 global.visible_player = 1
-for(var i = 0; i <= 12; i++)
+for(var i = 0; i <= 20; i++)
 {
 global.achievement[i] = -4
+global.achievement_name[i] = -4
+global.achievement_desc[i] = -4
+global.achievement_percentage[i] = 0
 }
+
+global.achievement_name[0] = "Re:wind"
+global.achievement_desc[0] = "사망 회귀를 사용하였다"
+
+global.achievement_name[1] = "소멸 엔딩"
+global.achievement_desc[1] = "소멸 엔딩을 봤다"
+
+global.achievement_name[2] = "회귀 불능"
+global.achievement_desc[2] = "회귀 불능 엔딩을 봤다"
+
+global.achievement_name[3] = "세계의 종말"
+global.achievement_desc[3] = "종말 엔딩을 봤다"
+
+global.achievement_name[4] = "게임 오버"
+global.achievement_desc[4] = "게임오버 엔딩을 봤다"
+
+global.achievement_name[5] = "도망자"
+global.achievement_desc[5] = "도망자 엔딩을 봤다"
+
+global.achievement_name[6] = "탈리스만 수집가"
+global.achievement_desc[6] = "얻을 수 있는 모든 탈리스만을 수집했다"
+
+global.achievement_name[7] = "의문의 제단"
+global.achievement_desc[7] = "제단을 사용했다"
+
+global.achievement_name[8] = "무기 수집가"
+global.achievement_desc[8] = "얻을 수 있는 모든 무기를 수집했다"
+
+global.achievement_name[9] = "무-신"
+global.achievement_desc[9] = "모든 보스를 클리어했다"
+
+global.achievement_name[10] = "다회차 플레이"
+global.achievement_desc[10] = "다회차 플레이를 했다"
+
+global.achievement_name[11] = "거대 왁두"
+global.achievement_desc[11] = "프로토타입 거대왁두 mk.2를 쓰러뜨렸다"
+
+global.achievement_name[12] = "암흑의 심해"
+global.achievement_desc[12] = "심해두를 쓰러뜨렸다"
+
+global.achievement_name[13] = "거대 왁두의 권속"
+global.achievement_desc[13] = "화염의 거대 안드로이드 메시를 쓰러뜨렸다"
+
+global.achievement_name[14] = "연구소의 감시자"
+global.achievement_desc[14] = "객관안과 스킵안을 쓰러뜨렸다"
+
+global.achievement_name[15] = "하수도 속의 벌래"
+global.achievement_desc[15] = "쌉벌래두를 쓰러뜨렸다"
+
+global.achievement_name[16] = "연구소의 수호자"
+global.achievement_desc[16] = "창의 기사 엔젤로이드를 쓰러뜨렸다"
+
+global.achievement_name[17] = "왁드로이드"
+global.achievement_desc[17] = "왁드로이드를 저지했다"
+
+global.achievement_name[18] = "폭주한 왁드로이드"
+global.achievement_desc[18] = "폭주한 왁드로이드를 쓰러뜨렸다"
+
+global.achievement_name[19] = "왁귀상어"
+global.achievement_desc[19] = "귀상어두를 쓰러뜨렸다"
+
+global.achievement_name[20] = "'프로젝트 왁' 저지"
+global.achievement_desc[20] = "성공적으로 박사의 계획 '프로젝트 왁'을 저지하였다"
+
 
 for(var i = 0; i < 3; i++)
 {

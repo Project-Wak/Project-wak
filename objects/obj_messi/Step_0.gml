@@ -4,6 +4,14 @@ image_blend = c_white
 
 if hp <= 0
 {
+	if global.achievement[13] != 1
+	{
+	var _achievement = instance_create_depth(x,y,depth,bg_achievement)
+	_achievement.text = string(global.achievement_name[13])
+	_achievement.icon_num = 4
+	global.achievement[13] = 1
+	}
+	
 	if instance_exists(_light_)
 	{
 	_light_.x = x

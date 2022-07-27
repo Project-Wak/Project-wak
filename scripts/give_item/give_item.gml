@@ -6,16 +6,17 @@ function give_item(argument0,argument1)
 	{
 	var _cal__ = argument1
 	global.accessories_owned[_cal__] ++
-		if _cal__ = 3
-		{
-		chat_up("탈리스만 '객관안'을 획득하였다!")
-		}
 		
 		if _cal__ = 2
 		{
 		chat_up("'Re:wind 시계'를 획득하였다!")
 		global.show_guide_mes = "탈리스만\n\n탈리스만는 Tab키를 통해 장착 가능 하며,\n최대 2개까지 장착 가능하다.\n\n(참고로, Re:wind 시계를 장착하지 않고 플레이어 사망시\n'완전한 게임오버'가 되니 꼭 장착하도록 하자.)"
 		global.show_guide_mes_spr = 0
+		}
+		
+		if _cal__ = 3
+		{
+		chat_up("탈리스만 '객관안'을 획득하였다!")
 		}
 		
 		if _cal__ = 4
@@ -43,6 +44,11 @@ function give_item(argument0,argument1)
 		chat_up("탈리스만 '응원 깃발'을 획득하였다!")
 		}
 		
+		if _cal__ = 10
+		{
+		chat_up("탈리스만 '아이돌 신발'을 획득하였다!")
+		}
+		
 		if _cal__ = 11
 		{
 		chat_up("탈리스만 '푸른색의 깃발'을 획득하였다!")
@@ -66,6 +72,11 @@ function give_item(argument0,argument1)
 		if _cal__ = 14
 		{
 		chat_up("탈리스만 '긴급 치료제'를 획득하였다!")
+		}
+		
+		if _cal__ = 15
+		{
+		chat_up("탈리스만 '각성제'를 획득하였다!")
 		}
 		
 		if _cal__ = 16

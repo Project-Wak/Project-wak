@@ -78,7 +78,7 @@ var yy_ = y+lengthdir_y(42,image_angle)
 	var max_length = 400
 	for(var i = 0; i < max_length; i ++)
 	{
-		for(var ii = -7; ii < 7; ii++)
+		for(var ii = 0; ii < 14; ii++)
 		{
 		var x2 = x + lengthdir_x(i,image_angle+ii)
 		var y2 = y + lengthdir_y(i,image_angle+ii)
@@ -115,6 +115,14 @@ var yy_ = y+lengthdir_y(42,image_angle)
 
 if hp <= 0
 {
+	if global.achievement[15] != 1
+	{
+	var _achievement = instance_create_depth(x,y,depth,bg_achievement)
+	_achievement.text = string(global.achievement_name[15])
+	_achievement.icon_num = 4
+	global.achievement[15] = 1
+	}
+	
 player.x += (3545 - player.x)*0.3
 global.boss_target = -4
 global.playing_scene = 1

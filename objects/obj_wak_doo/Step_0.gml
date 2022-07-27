@@ -58,6 +58,14 @@ hp = 0
 dead_scene ++
 patturn = 0
 
+	if global.achievement[11] != 1
+	{
+	var _achievement = instance_create_depth(x,y,depth,bg_achievement)
+	_achievement.text = string(global.achievement_name[11])
+	_achievement.icon_num = 4
+	global.achievement[11] = 1
+	}
+
 
 cannot_step = 1
 left_hand.cannot_step = 1

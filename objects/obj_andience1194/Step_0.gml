@@ -209,6 +209,14 @@ global.playing_scene = 1
 	check__.text = "!"
 	check__.target = id
 	check__.parents = id
+	
+		if global.achievement[17] != 1
+		{
+		var _achievement = instance_create_depth(x,y,depth,bg_achievement)
+		_achievement.text = string(global.achievement_name[17])
+		_achievement.icon_num = 4
+		global.achievement[17] = 1
+		}
 	}
 	
 	if message_phase >= 18

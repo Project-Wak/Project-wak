@@ -11,9 +11,10 @@ function save_and_load_data(argument0,argument1)
 	ini_write_real("poison_tuto","a",global.poison_tuto);
 	ini_write_real("chunyang","a",global.chunyang);
 	ini_write_real("replayed","a",global.replayed);
-	for(var i = 0; i <= 12; i++)
+	for(var i = 0; i <= 20; i++)
 	{
 	ini_write_real("achievement",string(i),global.achievement[i]);
+	ini_write_real("achievement_percentage",string(i),global.achievement_percentage[i]);
 	}
 	
 	//골드
@@ -300,9 +301,10 @@ function save_and_load_data(argument0,argument1)
 	global.item_owned[i] = ini_read_real("item_owned",string(i),0)
 	}
 	
-	for(var i = 0; i <= 12; i++)
+	for(var i = 0; i <= 20; i++)
 	{
 	global.achievement[i] = ini_read_real("achievement",string(i),-4);
+	global.achievement_percentage[i] = ini_read_real("achievement_percentage",string(i),0);
 	}
 	
 	

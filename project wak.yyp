@@ -483,6 +483,7 @@
     {"id":{"name":"map8_2199204221230232","path":"sprites/map8_2199204221230232/map8_2199204221230232.yy",},"order":231,},
     {"id":{"name":"background_stone_wall","path":"sprites/background_stone_wall/background_stone_wall.yy",},"order":205,},
     {"id":{"name":"Sprite219","path":"sprites/Sprite219/Sprite219.yy",},"order":218,},
+    {"id":{"name":"teleport_block","path":"objects/teleport_block/teleport_block.yy",},"order":64,},
     {"id":{"name":"pl_hurt_hyumpanchi_hakase","path":"sprites/pl_hurt_hyumpanchi_hakase/pl_hurt_hyumpanchi_hakase.yy",},"order":216,},
     {"id":{"name":"Object166","path":"objects/Object166/Object166.yy",},"order":22,},
     {"id":{"name":"pepsi_effect","path":"objects/pepsi_effect/pepsi_effect.yy",},"order":0,},

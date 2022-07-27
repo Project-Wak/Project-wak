@@ -63,7 +63,7 @@ if (pressed > 0 && global.key_setting_message > 0) || global.key_setting_message
 	if cal__img = 5
 	{
 	item_name__ = "가이드 북 5번 - 잡몹"
-	item_desc__ = "보스가 아닌 잡몹들은 굳이 처치하지 않아도 스테이지를 넘어갈수 있다. (단, 이러한 경우 잡몹이 드랍하는 재료 아이템을 얻을수 없다)"
+	item_desc__ = "보스가 아닌 잡몹들은 굳이 처치하지 않아도 스테이지를 넘어갈수 있다. (단, 이러한 경우 잡몹이 드랍하는 재료 아이템을 얻을 수 없다)"
 	}
 	if cal__img = 6
 	{

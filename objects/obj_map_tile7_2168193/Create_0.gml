@@ -22,3 +22,5 @@ global.platform_speed = 0
 
 
 
+var droped_item__ = instance_create_depth(1884,2484,0,obj_droped_item)
+droped_item__.item_var = 115
