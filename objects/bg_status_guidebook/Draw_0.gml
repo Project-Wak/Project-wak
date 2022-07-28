@@ -9,7 +9,7 @@ var yy = camera_get_view_y(view_camera[0])+(400-30)*_c_x
 
 if (pressed > 0 && global.key_setting_message > 0) || global.key_setting_message = 0
 {
-	if global.n_to_setting__ != 0
+	if global.n_to_setting__ = 1
 	{
 		if global.key_setting_message = 1
 		{

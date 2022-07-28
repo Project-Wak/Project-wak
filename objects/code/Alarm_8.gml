@@ -26,6 +26,9 @@ if global.key_setting_message = 0
 
 	var __aaa = instance_create_depth(x,y,-9999,obj_n_to_setting)
 	__aaa.n_to_set = 4
+	
+	var __aaa = instance_create_depth(x,y,-9999,obj_n_to_setting)
+	__aaa.n_to_set = 5
 	}
 
 

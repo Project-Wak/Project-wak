@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-if global.key_setting_message = 0
+if global.key_setting_message = 0 && global.n_to_setting__ != 2
 {
 var _c_x = obj_camera.v_x/1280
 var xx = camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])-100*_c_x

@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-if global.key_setting_message = 0
+if global.key_setting_message = 0 && global.n_to_setting__ != 2
 {
 	if global.hp > 0 && player.suicide = 0
 	{

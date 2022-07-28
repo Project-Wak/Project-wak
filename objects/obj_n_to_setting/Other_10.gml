@@ -3,9 +3,9 @@
 if global.key_setting_message = 0
 {
 var cal__nset = n_to_set
-	if cal__nset >= 5
+	if cal__nset >= 6
 	{
-	cal__nset = cal__nset-5
+	cal__nset = cal__nset-6
 	}
 
 	if cal__nset >= 3

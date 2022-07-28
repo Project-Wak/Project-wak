@@ -2,11 +2,16 @@
 // You can write your code in this editor
 
 var _c_x = obj_camera.v_x/1280
-var xx = camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5-250*_c_x
+var wid = camera_get_view_width(view_camera[0])
+var hei = camera_get_view_height(view_camera[0])
+var xx = camera_get_view_x(view_camera[0])+wid*0.5-250*_c_x
 var yy = camera_get_view_y(view_camera[0])+(200-10)*0.8
-draw_set_alpha(0.9)
+
+draw_set_alpha(1)
 draw_set_color($FF191414)
 draw_rectangle(camera_get_view_x(view_camera[0])-128,camera_get_view_y(view_camera[0])-128,camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])+128,camera_get_view_y(view_camera[0])+camera_get_view_height(view_camera[0])+128,0)
+
+
 
 if global.key_setting_message = 0
 {
@@ -15,6 +20,8 @@ draw_set_alpha(0.9)
 draw_set_color($FF0C0A0A)
 draw_rectangle(camera_get_view_x(view_camera[0])-128,camera_get_view_y(view_camera[0])-128,xx2,camera_get_view_y(view_camera[0])+camera_get_view_height(view_camera[0])+128,0)
 }
+
+
 
 if (pressed > 0 && global.key_setting_message > 0) || global.key_setting_message = 0
 {
@@ -91,7 +98,8 @@ if (pressed > 0 && global.key_setting_message > 0) || global.key_setting_message
 	{
 	draw_text_kl_scale(camera_get_view_x(view_camera[0])+32*_c_x,camera_get_view_y(view_camera[0])+32*_c_x,"- 스테이터스",16,999,0.8,image_blend,0,-1,font0,1/2.5*_c_x,1/2.5*_c_x,image_angle)
 	}
-	else
+	
+	if global.n_to_setting__ = 1
 	{
 		if global.key_setting_message = 0
 		{
@@ -105,6 +113,8 @@ if (pressed > 0 && global.key_setting_message > 0) || global.key_setting_message
 		draw_text_kl_scale(camera_get_view_x(view_camera[0])+300*_c_x,camera_get_view_y(view_camera[0])+230*_c_x,"총 사망 횟수 : "+string(global.total_died)+"회",16,999,0.8,image_blend,0,-1,font0,1/3.5*_c_x,1/3.5*_c_x,image_angle)
 		}
 	}
+	
+	
 
 
 draw_text_kl_scale(camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])-42*_c_x,camera_get_view_y(view_camera[0])+camera_get_view_height(view_camera[0])-32*_c_x,"(ESC키 혹은 Tab키로 창 닫기)",16,999,0.7,$FFCC8E61,0,1,font0,1/3.5*_c_x,1/3.5*_c_x,image_angle)
@@ -124,6 +134,8 @@ draw_line_width(xx,yy,xx,yy_,2*_c_x)
 }
 
 
+if global.n_to_setting__ != 2
+{
 var xx = camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])-280*_c_x
 
 draw_set_alpha(0.7)
@@ -161,4 +173,55 @@ var draw_i = 0
 		draw_i ++
 		}
 	}
+}
+}
+
+
+
+
+
+
+if global.n_to_setting__ = 2
+{
+global.show_achievement = 1
+}
+else
+{
+global.show_achievement = 0
+}
+
+if global.show_achievement > 0
+{
+var main_text_alpha = 1-abs(global.achievement_yy)/96
+draw_text_k_scale(xx+wid*0.4,yy-_c_x*96,"달성한 도전과제",200,-1,main_text_alpha,c_white,0,0,font_title,_c_x/5,_c_x/5,0)
+
+
+var cleared_achievement = 0
+	for(var i = 0; i <= 20; i++)
+	{
+	draw_text_k_scale(xx+wid*0.1,yy+_c_x*(40+i*60-global.achievement_yy),string(global.achievement_name[i])+"  ("+string(floor(global.achievement_percentage[i]))+"%)",200,-1,0.5+global.achievement_percentage[i]/500,c_white,0,-1,font_title,_c_x/6,_c_x/6,0)
+	draw_rectangle(xx+wid*0.1,yy+_c_x*(75+i*60-global.achievement_yy),xx+wid*0.1+global.achievement_percentage[i]*4.5*_c_x,yy+_c_x*(80+i*60-global.achievement_yy),false)
+	draw_text_k_scale(xx+wid*0.1,yy+_c_x*(60+i*60-global.achievement_yy),global.achievement_desc[i],200,-1,0.45+global.achievement_percentage[i]/650,c_white,0,-1,font_title,_c_x/8,_c_x/8,0)
+		if global.achievement[i] > 0
+		{
+		cleared_achievement ++
+		}
+	}
+	
+var yy_for_total_achievement = global.achievement_yy
+
+if yy_for_total_achievement > 96
+{
+yy_for_total_achievement = 96
+}
+
+if yy_for_total_achievement < 0
+{
+yy_for_total_achievement = 0
+}
+
+draw_text_k_scale(xx+wid*0.6,yy+_c_x*(-64-yy_for_total_achievement*0.65),"총 달성한 도전과제",200,-1,0.8,c_white,0,0,font_title,_c_x/7,_c_x/7,0)
+draw_text_k_scale(xx+wid*0.6,yy+_c_x*(-32-yy_for_total_achievement*0.65),string(cleared_achievement)+"/20",200,-1,0.8,c_white,0,0,font_title,_c_x/8,_c_x/8,0)
+
+draw_text_k_scale(xx+wid-_c_x*64,yy+hei-_c_x*64,"(마우스 휠을 통해 둘러보기 / 아무키나 눌러 나가기)",200,-1,0.8,c_white,0,1,font_title,_c_x/7,_c_x/7,0)
 }

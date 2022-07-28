@@ -5,7 +5,7 @@ if pressed <= 0
 {
 	if instance_exists(player) && player.assult_mode <= 0
 	{
-		if (global.key_setting_message = 0 || pressed > 0) && global.n_to_setting__ != 0
+		if (global.key_setting_message = 0 || pressed > 0) && global.n_to_setting__ = 1
 		{
 		pressed = -1
 

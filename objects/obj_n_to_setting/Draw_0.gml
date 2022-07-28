@@ -1,9 +1,9 @@
 if global.key_setting_message = 0
 {
 var cal__nset = n_to_set
-if cal__nset >= 5
+if cal__nset >= 6
 {
-cal__nset = cal__nset-5
+cal__nset = cal__nset-6
 }
 
 if cal__nset >= 3
@@ -43,6 +43,10 @@ if n_to_set = 4
 text__ = "기타"
 }
 if n_to_set = 5
+{
+text__ = "도전 과제"
+}
+if n_to_set = 6
 {
 text__ = "강화"
 }

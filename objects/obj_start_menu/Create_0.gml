@@ -3,8 +3,7 @@
 global.b_alpha = 10
 global.t_b_alpha = -0.01
 global.room_brightness = 0
-global.achievement_yy = 0
-global.achievement_tyy = 0
+
 start_alpha = 0
 menu_alpha = 0
 wheel_cooltime = 0
