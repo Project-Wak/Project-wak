@@ -3153,12 +3153,12 @@ cannot_move = 1
 	image_index = guarding
 	}
 	
-	if (keyboard_check_pressed(global.left_key) || gamepad_button_check_pressed(0,gp_padl)) && global.never_move = 0 && global.playing_scene = 0
+	if (keyboard_check(global.left_key) || gamepad_button_check(0,gp_padl)) && global.never_move = 0 && global.playing_scene = 0
 	{
 	image_xscale = 1
 	}
 		
-	if (keyboard_check_pressed(global.right_key) || gamepad_button_check_pressed(0,gp_padr)) && global.never_move = 0 && global.playing_scene = 0
+	if (keyboard_check(global.right_key) || gamepad_button_check(0,gp_padr)) && global.never_move = 0 && global.playing_scene = 0
 	{
 	image_xscale = -1
 	}
