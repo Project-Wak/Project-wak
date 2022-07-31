@@ -49,4 +49,8 @@ _sfx__ = 0
 _light_ = -4
 _light_1 = -4
 
+shotgun_ = 0
+random_shoot = percentage_k(50)
+laser_alpha = 0
+
 alarm[0] = 120

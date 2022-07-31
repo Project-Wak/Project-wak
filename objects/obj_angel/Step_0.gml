@@ -462,6 +462,12 @@ activated = 2
 		
 			if spear__.on_floor = 1 && sfx_ = 0
 			{
+			var dust = instance_create_depth(spear__.x+16,spear__.y-32,spear__.depth-1,obj_dust_ef)
+			dust.image_xscale = -2
+			
+			var dust = instance_create_depth(spear__.x-16,spear__.y-32,spear__.depth-1,obj_dust_ef)
+			dust.image_xscale = 2
+				
 				repeat(choose(6,7,7,8,8,9,9,9,10,10,11,12))
 				{
 				randomize()
@@ -544,6 +550,12 @@ activated = 2
 		spear__.y += (player.y - spear__.y)*0.05
 		}
 		
+		if patturn = 2.18
+		{
+		var dust = instance_create_depth(spear__.x,spear__.y+32,spear__.depth-1,obj_dust_ef)
+		dust.image_xscale = -f_dir*2
+		}
+		
 		if patturn >= 2.2 && patturn < 2.25
 		{
 		var a___ = instance_create_depth(spear__.x,spear__.y,depth,rage_mode_knockback_attacked)
@@ -605,6 +617,12 @@ activated = 2
 		patturn += 0.001
 		}
 		
+		if patturn = 2.38
+		{
+		var dust = instance_create_depth(spear__.x,spear__.y+32,spear__.depth-1,obj_dust_ef)
+		dust.image_xscale = -f_dir*2
+		}
+		
 		
 		if patturn = 2.4
 		{
@@ -664,6 +682,12 @@ activated = 2
 		spear__.y += (player.y - spear__.y)*0.05
 		spear__.hspeed = 0
 		patturn += 0.001
+		}
+		
+		if patturn = 2.58
+		{
+		var dust = instance_create_depth(spear__.x,spear__.y+32,spear__.depth-1,obj_dust_ef)
+		dust.image_xscale = -f_dir*2
 		}
 		
 		

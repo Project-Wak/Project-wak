@@ -324,6 +324,9 @@ else
 				
 			left_eye.x += (player.x+350+irandom_range(-30,30) - left_eye.x)*0.03
 			left_eye.y += (player.y-400+irandom_range(-30,30) - left_eye.y)*0.03
+			
+			laser_alpha += (-1 - laser_alpha)*0.1
+			obj_twin_eye_another.laser_alpha += (-1 - obj_twin_eye_another.laser_alpha)*0.1
 			}
 	
 		left_eye.cannot_step = 0
@@ -348,7 +351,7 @@ else
 	
 			if timer > 200*cal_
 			{
-			patturn = choose(1,1,1,2,2,2,3,3,4,4)
+			patturn = choose(1,1,1,2,2,2,3,3,4,4,5,5)
 			timer = 0
 			}
 		}
@@ -728,7 +731,8 @@ else
 		{
 		image_angle += (point_direction(x,y,player.x,player.y) - image_angle)*0.1
 		left_eye.image_angle += (point_direction(x,y,player.x,player.y) - left_eye.image_angle)*0.1
-		
+		laser_alpha += (0.3 - laser_alpha)*0.1
+		obj_twin_eye_another.laser_alpha += (0.3 - obj_twin_eye_another.laser_alpha)*0.1
 		cannot_step = 0
 		left_eye.cannot_step = 0
 		left_eye.x += (xstart-200 - left_eye.x)*0.1
@@ -768,11 +772,11 @@ else
 						}
 			
 					var _bullet__ = instance_create_depth(left_eye.x,left_eye.y,depth+1,obj_bullet)
-					_bullet__.bullet_speed = 13;
+					_bullet__.bullet_speed = 14;
 					_bullet__.direction = point_direction(left_eye.x,left_eye.y,player.x+sign(floor(global.movement_speed))*scale_,player.y)
 			
 					var _bullet__ = instance_create_depth(x,y,depth+1,obj_bullet)
-					_bullet__.bullet_speed = 13;
+					_bullet__.bullet_speed = 14;
 					_bullet__.direction = point_direction(x,y,player.x+sign(floor(global.movement_speed))*scale_,player.y)
 					}
 				}
@@ -784,6 +788,8 @@ else
 				}
 			}
 		}
+		
+		
 		
 		if patturn >= 4 && patturn < 5
 		{
@@ -996,6 +1002,117 @@ else
 					patturn = 0
 					_sfx__ = 0
 					}
+				}
+			}
+		}
+		
+		
+		
+		if patturn >= 5 && patturn < 6
+		{
+		patturn += 0.001
+		left_eye.x += (xstart-400 - left_eye.x)*0.1
+		left_eye.y += (ystart - left_eye.y)*0.1
+		x += (xstart+400 - x)*0.1
+		y += (ystart - y)*0.1
+		image_angle += (0 - image_angle)*0.1
+		left_eye.image_angle += (0 - left_eye.image_angle)*0.1
+		
+		if random_shoot = 0
+		{
+		laser_alpha += (0.3 - laser_alpha)*0.1
+		obj_twin_eye_another.laser_alpha += (-1 - obj_twin_eye_another.laser_alpha)*0.1
+		}
+		else
+		{
+		obj_twin_eye_another.laser_alpha += (0.3 - obj_twin_eye_another.laser_alpha)*0.1
+		laser_alpha += (-1 - laser_alpha)*0.1
+		}
+		
+			if patturn = 5.1
+			{
+				if shotgun_ < 7
+				{
+				var sfx = audio_play_sound(mob_faint,0,0)
+				audio_sound_gain(sfx,0.4*global.master_volume*2*global.sfx_volume,0)
+				
+				var sfx = audio_play_sound(down_attack_sfx,0,0)
+				audio_sound_gain(sfx,0.22*global.master_volume*2*global.sfx_volume,0)
+				
+				var a___ = audio_play_sound(bomb_sfx,0,0)
+				audio_sound_gain(a___,0.05*global.master_volume*2*global.sfx_volume,0)
+				
+				var sfx = audio_play_sound(gun_sfx_single,0,0)
+				audio_sound_gain(sfx,0.22*global.master_volume*2*global.sfx_volume,0)
+				view_shake(11,10,5)
+			
+					if random_shoot = 1
+					{
+						for(var i = -4; i <= 4; i++)
+						{
+						var _bullet__ = instance_create_depth(left_eye.x,left_eye.y,depth+1,obj_bullet)
+						_bullet__.bullet_speed = 14;
+						_bullet__.direction = i*6+point_direction(left_eye.x,left_eye.y,player.x+sign(floor(global.movement_speed)),player.y)
+						}
+					}
+					else
+					{
+						for(var i = -4; i <= 4; i++)
+						{
+						var _bullet__ = instance_create_depth(x,y,depth+1,obj_bullet)
+						_bullet__.bullet_speed = 14;
+						_bullet__.direction = i*6+point_direction(x,y,player.x+sign(floor(global.movement_speed)),player.y)
+						}
+					}
+				}
+			}
+			
+			if patturn >= 5.11
+			{
+				if shotgun_ < 7
+				{
+				patturn = 5.03
+				shotgun_ ++
+				var sfx = audio_play_sound(mob_faint,0,0)
+				audio_sound_gain(sfx,0.4*global.master_volume*2*global.sfx_volume,0)
+				
+				var sfx = audio_play_sound(down_attack_sfx,0,0)
+				audio_sound_gain(sfx,0.22*global.master_volume*2*global.sfx_volume,0)
+				
+				var a___ = audio_play_sound(bomb_sfx,0,0)
+				audio_sound_gain(a___,0.05*global.master_volume*2*global.sfx_volume,0)
+				
+				var sfx = audio_play_sound(gun_sfx_single,0,0)
+				audio_sound_gain(sfx,0.22*global.master_volume*2*global.sfx_volume,0)
+				view_shake(11,15,5)
+			
+					if random_shoot = 1
+					{
+					left_eye.image_angle += 200
+						for(var i = -4; i <= 4; i++)
+						{
+						var _bullet__ = instance_create_depth(left_eye.x,left_eye.y,depth+1,obj_bullet)
+						_bullet__.bullet_speed = 14;
+						_bullet__.direction = i*6+point_direction(left_eye.x,left_eye.y,player.x+sign(floor(global.movement_speed)),player.y)
+						}
+					}
+					else
+					{
+					image_angle -= 200
+						for(var i = -4; i <= 4; i++)
+						{
+						var _bullet__ = instance_create_depth(x,y,depth+1,obj_bullet)
+						_bullet__.bullet_speed = 14;
+						_bullet__.direction = i*6+point_direction(x,y,player.x+sign(floor(global.movement_speed)),player.y)
+						}
+					}
+					
+				random_shoot = percentage_k(50)
+				}
+				else
+				{
+				patturn = 0
+				shotgun_ = 0
 				}
 			}
 		}

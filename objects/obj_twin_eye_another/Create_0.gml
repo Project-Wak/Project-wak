@@ -19,3 +19,6 @@ armored_level = 3
 test_mob_type = 1
 movement_speed = 0
 hit_motion = 0
+
+
+laser_alpha = 0

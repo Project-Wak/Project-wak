@@ -672,6 +672,7 @@ else
 				_aaa.color_2 = $FF5A8539
 				_aaa.color_3 = $FF4CE083
 				_aaa.maximum_size = 0.7
+
 			
 				view_shake(11,11,1)
 				
@@ -759,6 +760,12 @@ else
 			if patturn = 5.4
 			{
 			instance_create_depth(saved_x,2329,depth-1,effect_special_skill_attacked)
+				repeat(irandom_range(2,5))
+				{
+				var bullet__ = instance_create_depth(saved_x,2329-150+irandom_range(-120,120),player.depth-1,simhae_doo_bullet)
+				bullet__.bullet_speed = 0.7
+				bullet__.attack_type = 0
+				}
 			}
 			
 			if patturn = 5.45
@@ -770,6 +777,13 @@ else
 			if patturn = 5.55
 			{
 			instance_create_depth(saved_x,2329,depth-1,effect_special_skill_attacked)
+			
+				repeat(irandom_range(2,5))
+				{
+				var bullet__ = instance_create_depth(saved_x,2329-150+irandom_range(-120,120),player.depth-1,simhae_doo_bullet)
+				bullet__.bullet_speed = 0.7
+				bullet__.attack_type = 0
+				}
 			}
 			
 			if patturn >= 5.75

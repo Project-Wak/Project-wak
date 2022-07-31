@@ -27,7 +27,7 @@ can_attack = 0
 bgm = -4
 if global.real_ending = 0
 {
-hp = 1200
+hp = 1050
 }
 else
 {

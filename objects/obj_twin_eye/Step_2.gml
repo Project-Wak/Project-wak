@@ -2,6 +2,42 @@
 // You can write your code in this editor
 if alpha < 0.1
 {
+	if hit_cooltime = 0
+	{
+	var _attacker_ef = instance_place(x,y,obj_bullet)
+		if (_attacker_ef >= 0 && _attacker_ef.turn_dir != 0)
+		{
+		var sfx = audio_play_sound(choose(global.hit_sfx_1,global.hit_sfx_2,global.hit_sfx_3),0,0)
+		audio_sound_gain(sfx,0.2*global.master_volume*2*global.sfx_volume,0)
+	
+
+		var sfx = audio_play_sound(sparking_sound,0,0)
+		audio_sound_gain(sfx,0.2*global.master_volume*2*global.sfx_volume,0)
+	
+		t_hp_bar_alpha = 1
+		alarm[5] = 200
+	
+	
+		bloody(_attacker_ef.x,_attacker_ef.y,0)
+		view_shake(1,4,2)
+		hp_minus_for_mob(0,24)
+		last_hit = 1
+		hit_cooltime = 1
+		alarm[1] = 3
+		alarm[2] = 3
+	
+		repeat(8)
+		{
+		var _ef = instance_create_depth(x,y,depth-1,effect_spark)
+		_ef.hspeed = irandom_range(5,20)*sign(_attacker_ef.bullet_speed)
+		_ef.vspeed = irandom_range(-4,2)
+		}
+		instance_destroy(_attacker_ef)
+		}
+	}
+
+	
+	
 	if place_meeting(x,y,obj_lightning_player) && obj_lightning_player.image_index < 8
 	{
 		if hit_cooltime = 0

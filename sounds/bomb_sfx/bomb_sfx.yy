@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "bomb_sfx.mp3",
-  "duration": 1.1534,
+  "duration": 1.1484,
   "parent": {
     "name": "소리",
     "path": "folders/소리.yy",

@@ -885,6 +885,12 @@ else
 				
 					if global.show_credits = 0
 					{
+					var dust = instance_create_depth(angel_spear.x,angel_spear.y-32,angel_spear.depth-1,obj_dust_ef)
+					dust.image_xscale = -2
+		
+					var dust = instance_create_depth(angel_spear.x,angel_spear.y-32,angel_spear.depth-1,obj_dust_ef)
+					dust.image_xscale = 2
+		
 					var sfx = audio_play_sound(down_attack_sfx,0,0)
 					audio_sound_gain(sfx,0.32*global.master_volume*2*global.sfx_volume,0)
 		

@@ -162,14 +162,14 @@ if global.room_brightness/(global.n_night+1) <= 0.35 && room != room_sector_outs
 			{
 			_light_.image_xscale += (5.6 - _light_.image_xscale)*0.08
 			_light_.image_yscale += (5.6 - _light_.image_yscale)*0.08
-			_light_.alpha += ((0.5-global.room_brightness)*image_alpha - _light_.alpha)*0.08
+			_light_.alpha += (0.5*image_alpha - _light_.alpha)*0.08
 			}
 			
 			if light_timer >= 140 && light_timer < 200
 			{
 			_light_.image_xscale += (5.2 - _light_.image_xscale)*0.08
 			_light_.image_yscale += (5.2 - _light_.image_yscale)*0.08
-			_light_.alpha += ((0.4-global.room_brightness)*image_alpha - _light_.alpha)*0.08
+			_light_.alpha += (0.4*image_alpha - _light_.alpha)*0.08
 			}
 			
 			if light_timer >= 200

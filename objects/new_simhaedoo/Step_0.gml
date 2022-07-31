@@ -91,14 +91,14 @@ _light_.y = y
 		{
 		_light_.image_xscale += (5.6 - _light_.image_xscale)*0.08
 		_light_.image_yscale += (5.6 - _light_.image_yscale)*0.08
-		_light_.alpha += (image_alpha*(0.5-global.room_brightness) - _light_.alpha)*0.08
+		_light_.alpha += (image_alpha*0.5 - _light_.alpha)*0.08
 		}
 			
 		if (light_timer >= 140 && light_timer < 200)
 		{
 		_light_.image_xscale += (5.2 - _light_.image_xscale)*0.08
 		_light_.image_yscale += (5.2 - _light_.image_yscale)*0.08
-		_light_.alpha += (image_alpha*(0.4-global.room_brightness) - _light_.alpha)*0.08
+		_light_.alpha += (image_alpha*0.4 - _light_.alpha)*0.08
 		}
 	}
 	else

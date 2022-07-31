@@ -6,3 +6,15 @@ draw_sprite_ext(sprite_index,image_index+2,x,y,-image_xscale,image_yscale,image_
 draw_self()
 draw_sprite_ext(sprite_index,image_index,x,y,-image_xscale,image_yscale,image_angle,c_black,alpha*0.7)
 
+
+if instance_exists(player) && laser_alpha > 0
+{
+draw_set_alpha(laser_alpha)
+draw_set_color(c_red)
+var xx = player.x
+var yy = player.y
+	for(var i = 1; i > 0.5; i -= 0.1)
+	{
+	draw_triangle(x,y,x,y-3,xx,yy,false)
+	}
+}

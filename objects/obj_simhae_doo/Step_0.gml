@@ -522,6 +522,13 @@ b_alpha_ += (t_b_alpha_ - b_alpha_)*0.08
 			
 			if patturn > (3.13+cal/10) && !instance_exists(obj_simhaedoo_ring)
 			{
+				repeat(irandom_range(2,5))
+				{
+				var bullet__ = instance_create_depth(xstart,1625-150+irandom_range(-120,120),player.depth-1,simhae_doo_bullet)
+				bullet__.bullet_speed = 0.7
+				bullet__.attack_type = 0
+				}
+				
 			var __ins__ = instance_create_depth(xstart,1625,player.depth-1,effect_special_skill_attacked)
 			__ins__.color_1 = c_white
 			__ins__.color_2 = $FF2C75FF

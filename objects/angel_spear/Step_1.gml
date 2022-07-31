@@ -48,3 +48,5 @@ else
 
 
 w_alpha += (-0.01 - w_alpha)*0.04
+
+
