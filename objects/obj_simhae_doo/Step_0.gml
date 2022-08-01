@@ -161,11 +161,8 @@ b_alpha_ += (t_b_alpha_ - b_alpha_)*0.08
 			image_xscale = -abs(image_xscale)
 			obj_camera.tv_x = 1280*0.9
 			obj_camera.tv_y = 720*0.9
-			obj_camera.t_x = xstart-320
-			//obj_camera.t_y = ystart
-			
-			obj_camera.y += (y-96 - obj_camera.y)*0.1
-			obj_camera.t_y += (y-96 - obj_camera.t_y)*0.1
+			obj_camera.t_x = xstart
+			obj_camera.t_y = player.y
 			}
 		}
 	}

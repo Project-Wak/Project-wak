@@ -445,9 +445,6 @@ if scene__ > 0 && activated != 2
 		blinder.image_xscale = 16.5
 		blinder.image_yscale = 10.5
 		}
-		
-	obj_camera.y += (y+195 - obj_camera.y)*0.1
-	obj_camera.t_y += (y+195 - obj_camera.t_y)*0.1
 	}
 }
 else
@@ -492,6 +489,7 @@ audio_sound_gain(bgm,0.1*global.master_volume*global.bgm_volume*scene__,0)
 
 if activated = 1
 {
+player.guarding = 2
 	if !instance_exists(wall1)
 	{
 	wall1 = instance_create_depth(xstart-700,ystart-400,player.depth+3,obj_floor_tile3)
@@ -508,21 +506,129 @@ if activated = 1
 	var sfx = audio_play_sound(quake_sfx,0,0)
 	audio_sound_gain(sfx,0.1*global.master_volume*2*global.sfx_volume,0)
 	}
-player.guarding = 2
-y -= scene__*3.1
-left_hand.y -= scene__*3.1
-right_hand.y -= scene__*3.1
+
+
+	if scene__ < 0.7 && scene__ > 0.5
+	{
+	obj_camera.t_y = player.y
+	opening_scene = 0
+	left_hand.cannot_step = 1
+	right_hand.cannot_step = 1
+	left_hand.y += (ystart - left_hand.y)*0.07
+	right_hand.y += (ystart - right_hand.y)*0.07
+	
+		if global.show_credits = 0 && opening_sfx = 0
+		{
+		var sfx = audio_play_sound(jump_attack_sfx,0,0)
+		audio_sound_gain(sfx,0.5*global.master_volume*2*global.sfx_volume,0)
+		opening_sfx = 1
+		}
+	}
+	
+	if scene__ > 0.7
+	{
+	left_hand.cannot_step = 0
+	right_hand.cannot_step = 0
+		if left_hand.check_on_floor > 0 && opening_scene = 0
+		{
+		opening_scene = 1
+		}
+		
+		if opening_scene > 0
+		{
+			if y+100 < player.y
+			{
+			obj_camera.t_y = y+100
+			}
+		left_hand.gravity = 0
+		left_hand.vspeed = 0
+		right_hand.gravity = 0
+		right_hand.vspeed = 0
+		y += (ystart+8 - y)*0.08
+			
+			if opening_scene = 1
+			{
+			opening_scene = 2
+			
+			var a___ = instance_create_depth(left_hand.x,left_hand.y+60,depth,rage_mode_knockback_attacked)
+			a___.image_xscale = 10
+			a___.image_yscale = 3
+		
+			var a___ = instance_create_depth(right_hand.x,right_hand.y+60,depth,rage_mode_knockback_attacked)
+			a___.image_xscale = 10
+			a___.image_yscale = 3
+		
+				repeat(8)
+				{
+				var _ef = instance_create_depth(left_hand.x,left_hand.y+60,depth-1,effect_spark)
+				_ef.hspeed = irandom_range(-20,20)
+				_ef.vspeed = irandom_range(-4,2)
+					repeat(choose(6,7,7,8,8,9,9,9,10,10,11,12))
+					{
+					randomize()
+					var random_target = left_hand
+					var dust = instance_create_depth(random_target.x+irandom_range(-5,5),random_target.y+irandom_range(-5,5),random_target.depth-1,pepsi_effect_received)
+					var scale = irandom_range(20,40)/50
+					dust.image_xscale = scale
+					dust.image_yscale = scale
+					dust.vspeed = irandom_range(-50,50)/25
+					dust.hspeed = irandom_range(-50,50)/25
+					dust.image_alpha = 1
+					}
+				
+			
+				var _ef = instance_create_depth(right_hand.x,right_hand.y+60,depth-1,effect_spark)
+				_ef.hspeed = irandom_range(-20,20)
+				_ef.vspeed = irandom_range(-4,2)
+			
+					repeat(choose(6,7,7,8,8,9,9,9,10,10,11,12))
+					{
+					randomize()
+					var random_target = right_hand
+					var dust = instance_create_depth(random_target.x+irandom_range(-5,5),random_target.y+irandom_range(-5,5),random_target.depth-1,pepsi_effect_received)
+					var scale = irandom_range(20,40)/50
+					dust.image_xscale = scale
+					dust.image_yscale = scale
+					dust.vspeed = irandom_range(-50,50)/25
+					dust.hspeed = irandom_range(-50,50)/25
+					dust.image_alpha = 1
+					}
+				}
+		
+				if global.show_credits = 0
+				{
+				var a___ = audio_play_sound(bomb_sfx,0,0)
+				audio_sound_gain(a___,0.12*global.master_volume*2*global.sfx_volume,0)
+				
+				var sfx = audio_play_sound(down_attack_sfx,0,0)
+				audio_sound_gain(sfx,0.32*global.master_volume*2*global.sfx_volume,0)
+		
+				var a___ = audio_play_sound(guard,0,0)
+				audio_sound_gain(a___,0.07*global.master_volume*2*global.sfx_volume,0)
+		
+				var sfx = audio_play_sound(mob_faint,0,0)
+				audio_sound_gain(sfx,0.4*global.master_volume*2*global.sfx_volume,0)
+				view_shake(11,40,5)
+				}
+			}
+		}
+		else
+		{
+		left_hand.gravity = 0.4
+		right_hand.gravity = 0.4
+			if left_hand.vspeed < 8
+			{
+			left_hand.vspeed = 8
+			right_hand.vspeed = 8
+			}
+		}
+	}
+
+
+
 view_shake(0.1,0.1,1)
 scene__ += 0.0032
 
-	if keyboard_check(ord(string(global.skip_key)))
-	{
-	alpha -= 0.01
-	scene__ += 0.0032
-	y -= scene__*3.1
-	left_hand.y -= scene__*3.1
-	right_hand.y -= scene__*3.1
-	}
 image_blend = merge_color(c_black,c_white,scene__)
 global.playing_scene = 1
 global.never_move = 1

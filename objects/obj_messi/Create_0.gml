@@ -10,6 +10,9 @@ scene__ = 0
 spin = 0
 owner_surface = surface_create(1920,1080)
 
+broken_anime = 0
+opening_scene = 0
+opening_sfx = 0
 blinder = -4
 dead_scene = 0
 shake_boss = 1

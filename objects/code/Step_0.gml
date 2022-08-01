@@ -4,6 +4,57 @@ global.credit_message = "\n\n\n\nDirector\n아버 (1인 개발)\n\n\nProgramer\n
 }
 
 
+
+if !audio_is_playing(quake_sfx)
+{
+	if timer_boss_light_sec < 0
+	{
+	timer_boss_light_sec = 0
+	}
+	else
+	{
+	timer_boss_light_sec -= 0.01
+	}
+}
+
+
+if audio_is_playing(quake_sfx) && timer_boss_light_sec = 0
+{
+timer_boss_light_thi ++
+timer_boss_light ++
+	if timer_boss_light > 15
+	{
+	activated_brightness_control = 1
+	global.brightness_setting = 0.3
+	global.boss_opening_light_alpha *= -1
+	timer_boss_light = irandom_range(-5,13)
+	}
+	
+	if timer_boss_light_thi > 120
+	{
+	timer_boss_light_sec = 1
+	timer_boss_light_thi = 0
+	}
+}
+else
+{
+	if activated_brightness_control = 0
+	{
+	saved_brightness = global.brightness_setting
+	}
+	else
+	{
+	global.brightness_setting += (saved_brightness - global.brightness_setting)*0.3
+		if abs(saved_brightness - global.brightness_setting) < 0.06
+		{
+		global.brightness_setting = saved_brightness
+		activated_brightness_control = 0
+		}
+	}
+global.boss_opening_light_alpha = 1
+}
+
+
 if global.b_alpha > 1
 {
 	if optimizing_surf = 0
