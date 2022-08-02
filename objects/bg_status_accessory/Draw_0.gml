@@ -57,8 +57,8 @@ if (pressed > 0 && global.key_setting_message > 0) || global.key_setting_message
 	}
 	if cal__img = 6
 	{
-	item_name__ = "징거 버거"
-	item_desc__ = "징버거의 징거 버거\n\n특수효과 : 전투 모드가 아닌경우 체력을 조금씩 회복"
+	item_name__ = "징버거"
+	item_desc__ = "징버거의 징버거\n\n특수효과 : 전투 모드가 아닌경우 체력을 조금씩 회복"
 	}
 	if cal__img = 7
 	{

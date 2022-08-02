@@ -55,6 +55,10 @@ if rage_active > 0
 red_glow_effect(sprite_index,image_index,0.2)
 rage_active -= 0.003
 }
+else
+{
+rage_active = 0
+}
 
 
 

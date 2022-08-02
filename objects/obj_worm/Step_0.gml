@@ -134,7 +134,10 @@ patturn = 0
 
 cannot_step = 1
 
-y += 1.5
+	if dead_scene > 120
+	{
+	y += dead_scene-120
+	}
 
 	if dead_scene%15
 	{

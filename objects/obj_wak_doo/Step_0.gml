@@ -65,15 +65,18 @@ patturn = 0
 	_achievement.icon_num = 4
 	global.achievement[11] = 1
 	}
+	
+	
+	if y+100 < player.y
+	{
+	obj_camera.t_x = x
+	obj_camera.t_y = y+100
+	}
 
 
 cannot_step = 1
-left_hand.cannot_step = 1
-right_hand.cannot_step = 1
 
-y += 1.5
-left_hand.y += 1.5
-right_hand.y += 1.5
+
 
 	if dead_scene%15
 	{
@@ -81,8 +84,9 @@ right_hand.y += 1.5
 	x += shake_boss*14
 	}
 	
-	if dead_scene > 60
+	if dead_scene > 120
 	{
+	left_hand.cannot_step = 1
 	left_hand.image_angle += (90 - left_hand.image_angle)*0.05
 		if broken_anime = 0
 		{
@@ -104,12 +108,14 @@ right_hand.y += 1.5
 	}
 	else
 	{
+	left_hand.cannot_step = 0
 	left_hand.gravity = 0
 	left_hand.vspeed = 0
 	}
 	
-	if dead_scene > 120
+	if dead_scene > 200
 	{
+	right_hand.cannot_step = 1
 	right_hand.image_angle += (-90 - right_hand.image_angle)*0.05
 		if broken_anime = 1
 		{
@@ -131,8 +137,14 @@ right_hand.y += 1.5
 	}
 	else
 	{
+	right_hand.cannot_step = 0
 	right_hand.gravity = 0
 	right_hand.vspeed = 0
+	}
+	
+	if dead_scene > 330
+	{
+	gravity = 0.2
 	}
 	
 	if dead_scene%40 = 0

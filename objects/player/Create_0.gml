@@ -15,7 +15,8 @@ image_speed = 0
 movement_speed = 0
 name = global.nickname;
 playerID = 0;
-
+can_jump = 1
+jump_timer = 0
 down_dis_set = 0
 down_attack_in_air = 0
 alarm[1] = 1

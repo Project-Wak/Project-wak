@@ -7,7 +7,7 @@ global.credit_message = "\n\n\n\nDirector\n아버 (1인 개발)\n\n\nProgramer\n
 
 if !audio_is_playing(quake_sfx)
 {
-	if timer_boss_light_sec < 0
+	if timer_boss_light_sec <= 0
 	{
 	timer_boss_light_sec = 0
 	}

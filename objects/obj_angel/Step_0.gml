@@ -26,20 +26,49 @@ patturn = 0
 
 
 cannot_step = 1
-y += 1.5
-	if instance_exists(angel_spear)
+
+
+_light_.x = x
+_light_.y = y-100-40*image_yscale
+_light_.alpha = image_alpha*0.5+w_alpha
+	
+	if instance_exists(spear__)
 	{
-	angel_spear.image_angle += (90 - angel_spear.image_angle)*0.02
+	_light_1.x = spear__.x
+	_light_1.y = spear__.y
+	_light_1.image_angle = spear__.image_angle
+	_light_1.alpha = image_alpha*0.8
 	}
+
+	if y+100 < player.y
+	{
+	obj_camera.t_x = x
+	obj_camera.t_y = y+50
+	}
+	
 
 	if dead_scene%15
 	{
 	shake_boss *= -1
 	x += shake_boss*14
+	}
+	
+	if dead_scene > 120
+	{
 		if instance_exists(angel_spear)
 		{
-		angel_spear.gravity = 0.04
+		angel_spear.image_angle += (100 - angel_spear.image_angle)*0.02
 		}
+	
+		if instance_exists(angel_spear)
+		{
+		angel_spear.gravity = 0.1
+		}
+	}
+	
+	if dead_scene > 300
+	{
+	gravity = 0.2
 	}
 	
 	if dead_scene%40 = 0
@@ -110,6 +139,27 @@ y += 1.5
 }
 else
 {
+if cannot_step = 1
+{
+image_xscale += (1.3 - image_xscale)*0.1
+image_yscale += (1.3 - image_yscale)*0.1
+
+
+
+alpha += (1 - alpha)*0.1
+}
+else
+{
+image_xscale += (1.5 - image_xscale)*0.1
+image_yscale += (1.5 - image_yscale)*0.1
+
+
+alpha += (0 - alpha)*0.1
+}
+
+
+if scene__ > 0
+{
 	if !instance_exists(_light_)
 	{
 	_light_ = instance_create_depth(x,y-30,depth,obj_light)
@@ -144,24 +194,9 @@ else
 		_light_1.alpha = image_alpha*0.8
 		}
 	}
-
-if cannot_step = 1
-{
-image_xscale += (1.3 - image_xscale)*0.1
-image_yscale += (1.3 - image_yscale)*0.1
-
-
-
-alpha += (1 - alpha)*0.1
 }
-else
-{
-image_xscale += (1.5 - image_xscale)*0.1
-image_yscale += (1.5 - image_yscale)*0.1
 
 
-alpha += (0 - alpha)*0.1
-}
 
 if scene__ > 0 && activated != 2
 {
@@ -224,8 +259,112 @@ if activated = 1
 	}
 	
 	
+	
+	if scene__ < 0.65 && scene__ > 0.55
+	{
+	obj_camera.t_y = player.y
+	opening_scene = 0
+	spear__.cannot_step = 1
+
+		if global.show_credits = 0 && opening_sfx = 0
+		{
+		var sfx = audio_play_sound(jump_attack_sfx,0,0)
+		audio_sound_gain(sfx,0.5*global.master_volume*2*global.sfx_volume,0)
+		
+		spear__.image_xscale = image_xscale*1.2
+		spear__.image_yscale = image_yscale*1.4
+		spear__.gravity = 0.4
+			if spear__.vspeed < 8
+			{
+			spear__.vspeed = 25
+			}
+		
+		spear__.x = player.x
+		spear__.y = player.y - 1500
+		opening_sfx = 1
+		}
+	}
+	
+	if scene__ > 0.7
+	{
+	spear__.cannot_step = 0
+
+		if spear__.y > 2360 && opening_scene = 0
+		{
+		spear__.y = 2360
+		opening_scene = 1
+		}
+		
+		if opening_scene > 0
+		{
+			if y+100 < player.y
+			{
+			obj_camera.t_y = y+100
+			}
+		spear__.gravity = 0
+		spear__.vspeed = 0
+		
+		if scene__ > 0.74
+		{
+		y += (ystart+8 - y)*0.08
+		spear__.x += (x+150 - spear__.x)*0.08
+		spear__.y += (y-50+angelring_y - spear__.y)*0.08
+		spear__.image_angle = point_direction(x,y,spear__.x,spear__.y)+90
+		spear__.image_xscale += (image_xscale - spear__.image_xscale)*0.08
+		spear__.image_yscale += (image_yscale*1.2 - spear__.image_yscale)*0.08
+		spear__.depth = depth+10
+		spear__.cannot_step = 1
+		}
+			
+			if opening_scene = 1
+			{
+			opening_scene = 2
+			
+			var a___ = instance_create_depth(spear__.x,spear__.y,depth,rage_mode_knockback_attacked)
+			a___.image_xscale = 10
+			a___.image_yscale = 3
+
+		
+				repeat(8)
+				{
+				var _ef = instance_create_depth(spear__.x,spear__.y,depth-1,effect_spark)
+				_ef.hspeed = irandom_range(-20,20)
+				_ef.vspeed = irandom_range(-4,2)
+					repeat(choose(6,7,7,8,8,9,9,9,10,10,11,12))
+					{
+					randomize()
+					var random_target = spear__
+					var dust = instance_create_depth(random_target.x+irandom_range(-5,5),random_target.y+irandom_range(-5,5),random_target.depth-1,pepsi_effect_received)
+					var scale = irandom_range(20,40)/50
+					dust.image_xscale = scale
+					dust.image_yscale = scale
+					dust.vspeed = irandom_range(-50,50)/25
+					dust.hspeed = irandom_range(-50,50)/25
+					dust.image_alpha = 1
+					}
+				}
+		
+				if global.show_credits = 0
+				{
+				var a___ = audio_play_sound(bomb_sfx,0,0)
+				audio_sound_gain(a___,0.12*global.master_volume*2*global.sfx_volume,0)
+				
+				var sfx = audio_play_sound(down_attack_sfx,0,0)
+				audio_sound_gain(sfx,0.32*global.master_volume*2*global.sfx_volume,0)
+		
+				var a___ = audio_play_sound(guard,0,0)
+				audio_sound_gain(a___,0.07*global.master_volume*2*global.sfx_volume,0)
+		
+				var sfx = audio_play_sound(mob_faint,0,0)
+				audio_sound_gain(sfx,0.4*global.master_volume*2*global.sfx_volume,0)
+				view_shake(11,40,5)
+				}
+			}
+		}
+	}
+	
+	
 player.guarding = 2
-y -= scene__*3.1
 view_shake(0.1,0.1,1)
 scene__ += 0.0032
 image_blend = merge_color(c_black,c_white,scene__)
@@ -238,13 +377,7 @@ global.room_brightness += 0.0002
 	audio_sound_gain(sfx,0.1*global.master_volume*2*global.sfx_volume,0)
 	bgm = audio_play_sound(boss_bgm,1,1)
 	}
-	
-	if keyboard_check(ord(string(global.skip_key)))
-	{
-	alpha -= 0.01
-	scene__ += 0.0032
-	y -= scene__*3.1
-	}
+
 	
 	if !instance_exists(check__) && player.image_alpha > 0
 	{
@@ -550,7 +683,7 @@ activated = 2
 		spear__.y += (player.y - spear__.y)*0.05
 		}
 		
-		if patturn = 2.18
+		if patturn = 2.16
 		{
 		var dust = instance_create_depth(spear__.x,spear__.y+32,spear__.depth-1,obj_dust_ef)
 		dust.image_xscale = -f_dir*2
@@ -617,7 +750,7 @@ activated = 2
 		patturn += 0.001
 		}
 		
-		if patturn = 2.38
+		if patturn = 2.36
 		{
 		var dust = instance_create_depth(spear__.x,spear__.y+32,spear__.depth-1,obj_dust_ef)
 		dust.image_xscale = -f_dir*2
@@ -684,7 +817,7 @@ activated = 2
 		patturn += 0.001
 		}
 		
-		if patturn = 2.58
+		if patturn = 2.56
 		{
 		var dust = instance_create_depth(spear__.x,spear__.y+32,spear__.depth-1,obj_dust_ef)
 		dust.image_xscale = -f_dir*2

@@ -4,7 +4,7 @@ bloody(x,y,1)
 var img_bnd = c_white
 var argu_0 = argument0
 var random_plus_damage = global.n_night*15
-var using_special_skill = sign(player.attack_laser+player.attack_laser_sec)
+var using_special_skill = sign(player.attack_laser+player.attack_laser_sec+player.sting_attack_timer)
 
 var dmg_min = 1
 	if using_special_skill = 1 || global.tutorial = 0

@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-if patturn >= 1 && patturn < 2
+if (patturn >= 1 && patturn < 2) || (patturn >= 3 && patturn < 4)
 {
 	for(var i = 0; i <= 4; i++)
 	{

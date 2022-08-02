@@ -87,16 +87,14 @@ patturn = 0
 
 
 cannot_step = 1
-left_hand.cannot_step = 1
-left_hand.gravity = 0
-left_hand.vspeed = 0
-right_hand.cannot_step = 1
-right_hand.gravity = 0
-right_hand.vspeed = 0
 
-y += 1.5
-left_hand.y += 1.5
-right_hand.y += 1.5
+	if y+100 < player.y
+	{
+	obj_camera.t_x = x
+	obj_camera.t_y = y+100
+	}
+
+
 
 	if dead_scene%15
 	{
@@ -135,6 +133,71 @@ right_hand.y += 1.5
 		dust.hspeed = irandom_range(-50,50)/25
 		dust.image_alpha = 1
 		}
+	}
+	
+	if dead_scene > 330
+	{
+	gravity = 0.2
+	}
+	
+	
+	
+	if dead_scene > 120
+	{
+	left_hand.cannot_step = 1
+	left_hand.image_angle += (90 - left_hand.image_angle)*0.05
+		if broken_anime = 0
+		{
+		broken_anime = 1
+		left_hand.gravity = 0.2
+			repeat(choose(6,7,7,8,8,9,9,9,10,10,11,12))
+			{
+			randomize()
+			var random_target = left_hand
+			var dust = instance_create_depth(random_target.x+irandom_range(-60,60),random_target.y+irandom_range(-60,60),random_target.depth-1,pepsi_effect_received)
+			var scale = irandom_range(20,40)/50
+			dust.image_xscale = scale
+			dust.image_yscale = scale
+			dust.vspeed = irandom_range(-50,50)/25
+			dust.hspeed = irandom_range(-50,50)/25
+			dust.image_alpha = 1
+			}
+		}
+	}
+	else
+	{
+	left_hand.cannot_step = 0
+	left_hand.gravity = 0
+	left_hand.vspeed = 0
+	}
+	
+	if dead_scene > 200
+	{
+	right_hand.cannot_step = 1
+	right_hand.image_angle += (-90 - right_hand.image_angle)*0.05
+		if broken_anime = 1
+		{
+		broken_anime = 2
+		right_hand.gravity = 0.2
+			repeat(choose(6,7,7,8,8,9,9,9,10,10,11,12))
+			{
+			randomize()
+			var random_target = right_hand
+			var dust = instance_create_depth(random_target.x+irandom_range(-60,60),random_target.y+irandom_range(-60,60),random_target.depth-1,pepsi_effect_received)
+			var scale = irandom_range(20,40)/50
+			dust.image_xscale = scale
+			dust.image_yscale = scale
+			dust.vspeed = irandom_range(-50,50)/25
+			dust.hspeed = irandom_range(-50,50)/25
+			dust.image_alpha = 1
+			}
+		}
+	}
+	else
+	{
+	right_hand.cannot_step = 0
+	right_hand.gravity = 0
+	right_hand.vspeed = 0
 	}
 	
 	
@@ -208,202 +271,202 @@ else
 	if scene__ > 0
 	{
 	player.assult_mode = 300
-			if !instance_exists(_light_)
+		if !instance_exists(_light_)
+		{
+		_light_ = instance_create_depth(x,y,depth,obj_light)
+		_light_.p_id = id
+		_light_.alpha = 0.4
+		_light_.sprite_index = sprite64
+		_light_.image_blend = $FF4EB0F7
+		_light_.light_type = 0
+		_light_.image_xscale = 10
+		_light_.image_yscale = 10
+	
+		_light_1 = instance_create_depth(x,y,depth,obj_light)
+		_light_1.p_id = id
+		_light_1.alpha = 0.2
+		_light_1.sprite_index = sprite64
+		_light_1.image_blend = $FF4EB0F7
+		_light_1.light_type = 0
+		_light_1.image_xscale = 10
+		_light_1.image_yscale = 10
+	
+		_light_2 = instance_create_depth(x,y,depth,obj_light)
+		_light_2.p_id = id
+		_light_2.alpha = 0.2
+		_light_2.sprite_index = sprite64
+		_light_2.image_blend = $FF4EB0F7
+		_light_2.light_type = 0
+		_light_2.image_xscale = 10
+		_light_2.image_yscale = 10
+		}
+		else
+		{
+		_light_.x = x
+		_light_.y = y+64
+		_light_.image_xscale = 10*abs(image_xscale)
+		_light_.image_yscale = 10*abs(image_yscale)
+		_light_.alpha = (1.5-alpha)*0.4
+	
+			if instance_exists(_light_1)
 			{
-			_light_ = instance_create_depth(x,y,depth,obj_light)
-			_light_.p_id = id
-			_light_.alpha = 0.4
-			_light_.sprite_index = sprite64
-			_light_.image_blend = $FF4EB0F7
-			_light_.light_type = 0
-			_light_.image_xscale = 10
-			_light_.image_yscale = 10
+			_light_1.x = left_hand.x
+			_light_1.y = left_hand.y
+			_light_1.image_xscale = 5*abs(left_hand.image_xscale)
+			_light_1.image_yscale = 5*abs(left_hand.image_yscale)
+			_light_1.alpha = (1.5-left_hand.alpha)*0.2
 	
-			_light_1 = instance_create_depth(x,y,depth,obj_light)
-			_light_1.p_id = id
-			_light_1.alpha = 0.2
-			_light_1.sprite_index = sprite64
-			_light_1.image_blend = $FF4EB0F7
-			_light_1.light_type = 0
-			_light_1.image_xscale = 10
-			_light_1.image_yscale = 10
-	
-			_light_2 = instance_create_depth(x,y,depth,obj_light)
-			_light_2.p_id = id
-			_light_2.alpha = 0.2
-			_light_2.sprite_index = sprite64
-			_light_2.image_blend = $FF4EB0F7
-			_light_2.light_type = 0
-			_light_2.image_xscale = 10
-			_light_2.image_yscale = 10
+			_light_2.x = right_hand.x
+			_light_2.y = right_hand.y
+			_light_2.image_xscale = 5*abs(right_hand.image_xscale)
+			_light_2.image_yscale = 5*abs(right_hand.image_yscale)
+			_light_2.alpha = (1.5-right_hand.alpha)*0.2
 			}
-			else
-			{
-			_light_.x = x
-			_light_.y = y+64
-			_light_.image_xscale = 10*abs(image_xscale)
-			_light_.image_yscale = 10*abs(image_yscale)
-			_light_.alpha = (1.5-alpha)*0.4
-	
-				if instance_exists(_light_1)
-				{
-				_light_1.x = left_hand.x
-				_light_1.y = left_hand.y
-				_light_1.image_xscale = 5*abs(left_hand.image_xscale)
-				_light_1.image_yscale = 5*abs(left_hand.image_yscale)
-				_light_1.alpha = (1.5-left_hand.alpha)*0.2
-	
-				_light_2.x = right_hand.x
-				_light_2.y = right_hand.y
-				_light_2.image_xscale = 5*abs(right_hand.image_xscale)
-				_light_2.image_yscale = 5*abs(right_hand.image_yscale)
-				_light_2.alpha = (1.5-right_hand.alpha)*0.2
-				}
-			}
+		}
 
 	
-			var xx_ = x
-			var yy_ = y
+		var xx_ = x
+		var yy_ = y
+		repeat(2)
+		{
+			var random_val___ = percentage_k(5+global.graphics_for_code*7)
+			if random_val___ = 1
+			{
+
+			var random_val___2 = percentage_k(5)
+			create_buble_effect(1,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.1,0.1,$FF47BBFF,$FF4C81FF,2,$FF534CFF,xx_-18-image_xscale*5,yy_+170+image_yscale*12,depth+5-random_val___2*5,0,false,false)
+			}
+		}
+	
+		var random_val___ = percentage_k(global.graphics_for_code*3)
+		if random_val___ = 1
+		{
+		create_buble_effect(1.1,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.07,0.07,$FF62D1F7,$FF6C60CD,2,$FF191919,xx_-18-image_xscale*5,yy_+170+image_yscale*12,depth+10,1,false,false)
+		}
+	
+		repeat(2)
+		{
+			var random_val___ = percentage_k(5+global.graphics_for_code*7)
+			if random_val___ = 1
+			{
+			var random_val___2 = percentage_k(5)
+			create_buble_effect(1,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.1,0.1,$FF47BBFF,$FF4C81FF,2,$FF534CFF,xx_+18+image_xscale*5,yy_+170+image_yscale*12,depth+5-random_val___2*5,0,false,false)
+			}
+		}
+	
+		var random_val___ = percentage_k(global.graphics_for_code*3)
+		if random_val___ = 1
+		{
+		create_buble_effect(1.1,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.07,0.07,$FF62D1F7,$FF6C60CD,2,$FF191919,xx_+18+image_xscale*5,yy_+170+image_yscale*12,depth+10,1,false,false)
+		}
+	
+	
+	
+		repeat(2)
+		{
+			var random_val___ = percentage_k(5+global.graphics_for_code*7)
+			if random_val___ = 1
+			{
+			var random_val___2 = percentage_k(1)
+			create_buble_effect(1,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.1,0.1,$FF47BBFF,$FF4C81FF,2,$FF534CFF,xx_+170,yy_+260,depth+5-random_val___2*5,0,false,false)
+			}
+		}
+	
+		var random_val___ = percentage_k(global.graphics_for_code*3)
+		if random_val___ = 1
+		{
+		create_buble_effect(1.1,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.07,0.07,$FF62D1F7,$FF6C60CD,2,$FF191919,xx_+170,yy_+260,depth+10,1,false,false)
+		}
+	
+		repeat(2)
+		{
+			var random_val___ = percentage_k(5+global.graphics_for_code*7)
+			if random_val___ = 1
+			{
+			var random_val___2 = percentage_k(1)
+			create_buble_effect(1,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.1,0.1,$FF47BBFF,$FF4C81FF,2,$FF534CFF,xx_-150,yy_+260,depth+5-random_val___2*5,0,false,false)
+			}
+		}
+	
+		var random_val___ = percentage_k(global.graphics_for_code*3)
+		if random_val___ = 1
+		{
+		create_buble_effect(1.1,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.07,0.07,$FF62D1F7,$FF6C60CD,2,$FF191919,xx_-150,yy_+260,depth+10,1,false,false)
+		}
+	
+	/////////////////////////////////////////////////////////////////////////////////
+		if instance_exists(left_hand)
+		{
+		var xx_ = left_hand.x
+		var yy_ = left_hand.y
 			repeat(2)
 			{
-				var random_val___ = percentage_k(5+global.graphics_for_code*7)
+				var random_val___ = percentage_k(45)
 				if random_val___ = 1
 				{
 
 				var random_val___2 = percentage_k(5)
-				create_buble_effect(1,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.1,0.1,$FF47BBFF,$FF4C81FF,2,$FF534CFF,xx_-18-image_xscale*5,yy_+170+image_yscale*12,depth+5-random_val___2*5,0,false,false)
+				create_buble_effect(1,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.1,0.1,$FF47BBFF,$FF4C81FF,2,$FF534CFF,xx_-18-image_xscale*5,yy_+32+image_yscale*12,left_hand.depth+5-random_val___2*5,0,false,false)
 				}
 			}
 	
-			var random_val___ = percentage_k(global.graphics_for_code*3)
+			var random_val___ = percentage_k(10)
 			if random_val___ = 1
 			{
-			create_buble_effect(1.1,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.07,0.07,$FF62D1F7,$FF6C60CD,2,$FF191919,xx_-18-image_xscale*5,yy_+170+image_yscale*12,depth+10,1,false,false)
+			create_buble_effect(1.1,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.07,0.07,$FF62D1F7,$FF6C60CD,2,$FF191919,xx_-18-image_xscale*5,yy_+32+image_yscale*12,left_hand.depth+10,1,false,false)
 			}
 	
 			repeat(2)
 			{
-				var random_val___ = percentage_k(5+global.graphics_for_code*7)
+				var random_val___ = percentage_k(45)
 				if random_val___ = 1
 				{
 				var random_val___2 = percentage_k(5)
-				create_buble_effect(1,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.1,0.1,$FF47BBFF,$FF4C81FF,2,$FF534CFF,xx_+18+image_xscale*5,yy_+170+image_yscale*12,depth+5-random_val___2*5,0,false,false)
+				create_buble_effect(1,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.1,0.1,$FF47BBFF,$FF4C81FF,2,$FF534CFF,xx_+18+image_xscale*5,yy_+32+image_yscale*12,left_hand.depth+5-random_val___2*5,0,false,false)
 				}
 			}
 	
-			var random_val___ = percentage_k(global.graphics_for_code*3)
+			var random_val___ = percentage_k(10)
 			if random_val___ = 1
 			{
-			create_buble_effect(1.1,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.07,0.07,$FF62D1F7,$FF6C60CD,2,$FF191919,xx_+18+image_xscale*5,yy_+170+image_yscale*12,depth+10,1,false,false)
+			create_buble_effect(1.1,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.07,0.07,$FF62D1F7,$FF6C60CD,2,$FF191919,xx_+18+image_xscale*5,yy_+32+image_yscale*12,left_hand.depth+10,1,false,false)
 			}
 	
+		var xx_ = right_hand.x
+		var yy_ = right_hand.y
+			repeat(2)
+			{
+				var random_val___ = percentage_k(45)
+				if random_val___ = 1
+				{
+
+				var random_val___2 = percentage_k(5)
+				create_buble_effect(1,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.1,0.1,$FF47BBFF,$FF4C81FF,2,$FF534CFF,xx_-18-image_xscale*5,yy_+32+image_yscale*12,right_hand.depth+5-random_val___2*5,0,false,false)
+				}
+			}
 	
+			var random_val___ = percentage_k(10)
+			if random_val___ = 1
+			{
+			create_buble_effect(1.1,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.07,0.07,$FF62D1F7,$FF6C60CD,2,$FF191919,xx_-18-image_xscale*5,yy_+32+image_yscale*12,right_hand.depth+10,1,false,false)
+			}
 	
 			repeat(2)
 			{
-				var random_val___ = percentage_k(5+global.graphics_for_code*7)
+				var random_val___ = percentage_k(45)
 				if random_val___ = 1
 				{
-				var random_val___2 = percentage_k(1)
-				create_buble_effect(1,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.1,0.1,$FF47BBFF,$FF4C81FF,2,$FF534CFF,xx_+170,yy_+260,depth+5-random_val___2*5,0,false,false)
+				var random_val___2 = percentage_k(5)
+				create_buble_effect(1,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.1,0.1,$FF47BBFF,$FF4C81FF,2,$FF534CFF,xx_+18+image_xscale*5,yy_+32+image_yscale*12,right_hand.depth+5-random_val___2*5,0,false,false)
 				}
 			}
 	
-			var random_val___ = percentage_k(global.graphics_for_code*3)
+			var random_val___ = percentage_k(10)
 			if random_val___ = 1
 			{
-			create_buble_effect(1.1,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.07,0.07,$FF62D1F7,$FF6C60CD,2,$FF191919,xx_+170,yy_+260,depth+10,1,false,false)
-			}
-	
-			repeat(2)
-			{
-				var random_val___ = percentage_k(5+global.graphics_for_code*7)
-				if random_val___ = 1
-				{
-				var random_val___2 = percentage_k(1)
-				create_buble_effect(1,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.1,0.1,$FF47BBFF,$FF4C81FF,2,$FF534CFF,xx_-150,yy_+260,depth+5-random_val___2*5,0,false,false)
-				}
-			}
-	
-			var random_val___ = percentage_k(global.graphics_for_code*3)
-			if random_val___ = 1
-			{
-			create_buble_effect(1.1,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.07,0.07,$FF62D1F7,$FF6C60CD,2,$FF191919,xx_-150,yy_+260,depth+10,1,false,false)
-			}
-	
-		/////////////////////////////////////////////////////////////////////////////////
-			if instance_exists(left_hand)
-			{
-			var xx_ = left_hand.x
-			var yy_ = left_hand.y
-				repeat(2)
-				{
-					var random_val___ = percentage_k(45)
-					if random_val___ = 1
-					{
-
-					var random_val___2 = percentage_k(5)
-					create_buble_effect(1,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.1,0.1,$FF47BBFF,$FF4C81FF,2,$FF534CFF,xx_-18-image_xscale*5,yy_+32+image_yscale*12,left_hand.depth+5-random_val___2*5,0,false,false)
-					}
-				}
-	
-				var random_val___ = percentage_k(10)
-				if random_val___ = 1
-				{
-				create_buble_effect(1.1,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.07,0.07,$FF62D1F7,$FF6C60CD,2,$FF191919,xx_-18-image_xscale*5,yy_+32+image_yscale*12,left_hand.depth+10,1,false,false)
-				}
-	
-				repeat(2)
-				{
-					var random_val___ = percentage_k(45)
-					if random_val___ = 1
-					{
-					var random_val___2 = percentage_k(5)
-					create_buble_effect(1,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.1,0.1,$FF47BBFF,$FF4C81FF,2,$FF534CFF,xx_+18+image_xscale*5,yy_+32+image_yscale*12,left_hand.depth+5-random_val___2*5,0,false,false)
-					}
-				}
-	
-				var random_val___ = percentage_k(10)
-				if random_val___ = 1
-				{
-				create_buble_effect(1.1,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.07,0.07,$FF62D1F7,$FF6C60CD,2,$FF191919,xx_+18+image_xscale*5,yy_+32+image_yscale*12,left_hand.depth+10,1,false,false)
-				}
-	
-			var xx_ = right_hand.x
-			var yy_ = right_hand.y
-				repeat(2)
-				{
-					var random_val___ = percentage_k(45)
-					if random_val___ = 1
-					{
-
-					var random_val___2 = percentage_k(5)
-					create_buble_effect(1,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.1,0.1,$FF47BBFF,$FF4C81FF,2,$FF534CFF,xx_-18-image_xscale*5,yy_+32+image_yscale*12,right_hand.depth+5-random_val___2*5,0,false,false)
-					}
-				}
-	
-				var random_val___ = percentage_k(10)
-				if random_val___ = 1
-				{
-				create_buble_effect(1.1,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.07,0.07,$FF62D1F7,$FF6C60CD,2,$FF191919,xx_-18-image_xscale*5,yy_+32+image_yscale*12,right_hand.depth+10,1,false,false)
-				}
-	
-				repeat(2)
-				{
-					var random_val___ = percentage_k(45)
-					if random_val___ = 1
-					{
-					var random_val___2 = percentage_k(5)
-					create_buble_effect(1,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.1,0.1,$FF47BBFF,$FF4C81FF,2,$FF534CFF,xx_+18+image_xscale*5,yy_+32+image_yscale*12,right_hand.depth+5-random_val___2*5,0,false,false)
-					}
-				}
-	
-				var random_val___ = percentage_k(10)
-				if random_val___ = 1
-				{
-				create_buble_effect(1.1,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.07,0.07,$FF62D1F7,$FF6C60CD,2,$FF191919,xx_+18+image_xscale*5,yy_+32+image_yscale*12,right_hand.depth+10,1,false,false)
-				}	
-			}
+			create_buble_effect(1.1,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.07,0.07,$FF62D1F7,$FF6C60CD,2,$FF191919,xx_+18+image_xscale*5,yy_+32+image_yscale*12,right_hand.depth+10,1,false,false)
+			}	
+		}
 	}
 
 

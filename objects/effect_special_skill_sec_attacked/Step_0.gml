@@ -11,7 +11,7 @@ image_xscale += image_xscale*0.1
 
 if global.graphics_for_code >= 3
 {
-var max_length = 720
+var max_length = 1000
 	for(var i = 0; i < max_length; i ++)
 	{
 	var x2 = x + lengthdir_x(i,direction-270)

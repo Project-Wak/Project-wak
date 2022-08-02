@@ -186,16 +186,55 @@ else
 		audio_sound_gain(sfx,0.1*global.master_volume*2*global.sfx_volume,0)
 		}
 	player.guarding = 2
-	y -= scene__*3.1
+	global.dreamy_alpha += (1 - global.dreamy_alpha)*0.04
+	
+	if y > 2025
+	{
+	y -= scene__*2
+	}
 	view_shake(0.1,0.1,1)
 	scene__ += 0.0032
 	
 		if keyboard_check(ord(string(global.skip_key)))
 		{
 		scene__ += 0.0032
-		y -= scene__*3.1
+		if y > 2025
+		{
+		y -= scene__*2
+		}
 		global.room_brightness -= 0.001
 		}
+		
+		if scene__ > 0.63
+		{
+		image_xscale = -abs(image_xscale)
+		cannot_step = 0
+		}
+		
+		if scene__ > 0.7 && scene__ < 0.71 && !instance_exists(_aaa)
+		{
+		_aaa = instance_create_depth(x+24,y-16,depth-1,effect_special_skill_sec_attacked)
+		_aaa.image_angle = 270
+		_aaa.direction = 270
+		_aaa.maximum_size = 0.5
+		_aaa.color_1 = c_white
+		_aaa.color_2 = $FF1C1CB2
+		_aaa.color_3 = $FF6D52F2
+		view_shake(11,11,1)
+			
+		var sfx = audio_play_sound(laser_sfx_sec,0,0)
+		audio_sound_gain(sfx,0.09*global.master_volume*2*global.sfx_volume,0)
+		sfx_for_multiplayer(choose(swing_lightsaber_sfx2,swing_lightsaber_sfx3),0,0.1)
+		}
+		
+		if instance_exists(_aaa)
+		{
+		_aaa.x = x+24
+		_aaa.y = y-16
+		_aaa.image_angle = 220+(scene__-0.7)*200
+		_aaa.direction = 220+(scene__-0.7)*200
+		}
+			
 	image_blend = merge_color(c_black,c_white,scene__)
 	global.playing_scene = 1
 	global.never_move = 1

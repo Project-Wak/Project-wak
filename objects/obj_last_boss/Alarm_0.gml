@@ -8,9 +8,9 @@ test_mob.yscale = 1.1
 test_mob.mob_var = -5
 test_mob.image_yscale = 10
 
-x = xstart+500
-y = ystart+500
 
+y = ystart+200
+x = xstart-60
 
 
 

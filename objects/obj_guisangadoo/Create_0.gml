@@ -50,6 +50,7 @@ wall2 = -4
 down_attack_motion_dilay = 0
 down_attack_with_rage_dis = 0
 saved_player_x = 0
+w_alpha_elec = 0
 random_movement = -1
 set_dir = 0
 repeat_samepatturn = 0

@@ -5,19 +5,7 @@ function skill_combo_cancle_n_motion(argument0)
 	if (argument0 = 1) || (hurt > 0 || cancled_attack > 0)
 	{
 	pressed_space = 0
-	
-		if sting_attack > 0
-		{
-		global.movement_speed *= 0.5
-		movement_speed *= 0.5
-		sting_attack = 0
-		attack_sting_sfx = 0
-		sting_attack_effect = 0
-		gravity = 0
-		vspeed = 0
-		cannot_move = 0
-		cooltime = 0
-		}
+
 		
 		if spin > 0
 		{

@@ -48,6 +48,7 @@ down_attack_with_rage_dis = 0
 _sfx__ = 0
 _light_ = -4
 _light_1 = -4
+cutscene = 0
 
 shotgun_ = 0
 random_shoot = percentage_k(50)

@@ -17,7 +17,12 @@ if global.b_alpha < 0.1
 {
 	if instance_exists(obj_angel)
 	{
-	global.dreamy_alpha += (1.5 - global.dreamy_alpha)*0.01
+	var dis_ = abs(player.x-3036)
+		if player.x > 3036
+		{
+		dis_ = 0
+		}
+	global.dreamy_alpha += ((1 - dis_/320)*1.5 - global.dreamy_alpha)*0.01
 	}
 	else
 	{

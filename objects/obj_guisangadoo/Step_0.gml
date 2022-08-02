@@ -27,6 +27,12 @@ _light_.y = y-30
 _light_.alpha = image_alpha*0.55
 }
 
+if scene__ < 1
+{
+w_alpha_elec = 0
+b_alpha_ = 0
+}
+
 
 
 if hp <= 0
@@ -176,8 +182,6 @@ b_alpha_ += (t_b_alpha_ - b_alpha_)*0.08
 				obj_camera.tv_y = 720
 				}
 			obj_camera.t_x = xstart
-			obj_camera.y += (y-96 - obj_camera.y)*0.1
-			obj_camera.t_y += (y-96 - obj_camera.t_y)*0.1
 			}
 	
 			if saved_real_x = -4
@@ -284,7 +288,7 @@ b_alpha_ += (t_b_alpha_ - b_alpha_)*0.08
 	
 			if timer > 300*cal_
 			{
-			var random_patturn = choose(1,1,2,2)
+			var random_patturn = choose(1,2,3)
 				if random_patturn != b_patturn
 				{
 				patturn = random_patturn
@@ -294,7 +298,7 @@ b_alpha_ += (t_b_alpha_ - b_alpha_)*0.08
 				{
 					repeat(99)
 					{
-					random_patturn = choose(1,1,2,2)
+					random_patturn = choose(1,2,3)
 					
 						if random_patturn != b_patturn
 						{
@@ -407,12 +411,12 @@ b_alpha_ += (t_b_alpha_ - b_alpha_)*0.08
 		instance_create_depth(player.x+global.movement_speed+sign(global.movement_speed)*32,1626,player.depth-10,obj_lightning)
 		}
 		
-		if patturn = 1.13
+		if patturn = 1.129
 		{
 		instance_create_depth(player.x+global.movement_speed+sign(global.movement_speed)*32,1626,player.depth-10,obj_lightning)
 		}
 		
-		if patturn = 1.14
+		if patturn = 1.137
 		{
 		instance_create_depth(player.x+global.movement_speed+sign(global.movement_speed)*32,1626,player.depth-10,obj_lightning)
 		}
@@ -517,6 +521,70 @@ b_alpha_ += (t_b_alpha_ - b_alpha_)*0.08
 		{
 		bullet__ = 0
 		patturn = 0
+		}
+	}
+	
+	if patturn >= 3 && patturn < 4
+	{
+	patturn += 0.001
+	w_alpha_lightning[1] += (-0.1 - w_alpha_lightning[1])*0.1
+	w_alpha += (-0.01 - w_alpha)*0.1
+		if patturn < 3.01 && w_alpha_lightning[1] <= 0
+		{
+		w_alpha_lightning[1] = 16
+		w_alpha = 1
+		xx_lightning[1] = player.x
+		var a___ = audio_play_sound(sparking_sound,0,0)
+		audio_sound_gain(a___,0.1*global.master_volume*2*global.sfx_volume,0)
+		}
+	
+		if patturn < 3.1
+		{
+		xx_lightning[1] += (player.x - xx_lightning[1])*0.3
+		saved_player_x = player.x
+		}
+		
+		if patturn = 3.15
+		{
+		w_alpha = 1
+		var a___ = audio_play_sound(sparking_sound,0,0)
+		audio_sound_gain(a___,0.1*global.master_volume*2*global.sfx_volume,0)
+		}
+		
+		if patturn = 3.2
+		{
+		instance_create_depth(saved_player_x+global.movement_speed+sign(global.movement_speed)*32,1626,player.depth-10,obj_lightning)
+		}
+		
+		if patturn = 3.21
+		{
+		w_alpha_elec = 1
+		}
+		
+		if patturn = 3.3
+		{
+		w_alpha_elec = 1
+		}
+		
+		if patturn = 3.4
+		{
+		w_alpha_elec = 1
+		}
+		
+		if patturn >= 3.21 && patturn < 3.45
+		{
+		w_alpha_elec += (0.1 - w_alpha_elec)*0.1
+		}
+		
+		if patturn > 3.45
+		{
+		w_alpha_elec += (-0.1 - w_alpha_elec)*0.1
+		}
+		
+		if patturn > 3.6
+		{
+		patturn = 0
+		w_alpha_elec = 0
 		}
 	}
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

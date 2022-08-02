@@ -221,6 +221,7 @@ global.slow_motion += global.slow_motion*0.03
 		global.hp = player.max_hp
 		global.o2 = 100
 		}
+		global.dreamy_alpha = 0
 		room_speed = 60
 		global.never_move = 0
 		global.slow_motion = 0

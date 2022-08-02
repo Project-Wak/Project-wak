@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
@@ -36,7 +37,7 @@
     "path": "folders/객체/map_edit.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_pipeline_2_1",
+  "name": "obj_pipeline_6",
   "tags": [],
   "resourceType": "GMObject",
 }

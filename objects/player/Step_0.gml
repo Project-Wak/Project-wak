@@ -4,6 +4,17 @@ keep_spinning --
 global.stamina_cooltime = -keep_spinning
 }
 
+
+if can_jump != 1
+{
+jump_timer ++
+	if jump_timer > 10
+	{
+	jump_timer = 0
+	can_jump = 1
+	}
+}
+
 if place_meeting(x,y,obj_water_inside) || place_meeting(x,y-18,obj_water_front)
 {
 o2_timer ++
@@ -132,7 +143,7 @@ poison_alpha += (-0.01 - poison_alpha)*0.1
 if global.poison_tuto = 0 && room = room_sector_B06_2
 {
 global.show_guide_mes_spr = 5
-global.show_guide_mes = "상태 이상 (디버프)\n\n디버프 상태에 걸리게 될경우,\n체력이 1이 남을때 까지 지속적으로 체력이 닳는다.\n(상태 이상은 특정 아이템을 사용하거나 사망 혹은 수면 시에만 해제된다)"
+global.show_guide_mes = "상태 이상(디버프) - 독\n\n디버프 상태에 걸리게 될경우,\n체력이 1이 남을때 까지 지속적으로 체력이 닳는다.\n(상태 이상은 특정 아이템을 사용하거나 사망 혹은 수면 시에만 해제된다)"
 global.poison_tuto = 1
 }
 
@@ -1581,6 +1592,26 @@ w_alpha += (-0.01 - w_alpha)*0.1
 				sfx_for_multiplayer(choose(global.hit_sfx_1,global.hit_sfx_2,global.hit_sfx_3),0,0.2)
 				}
 			}
+			
+			if instance_exists(obj_guisangadoo) && obj_guisangadoo.w_alpha_elec > 0.1
+			{
+				if player.y >= 1590
+				{
+					if hurt_cooltime = 0
+					{
+					hurt = 1
+					hurt_cooltime = 8
+					movement_speed = image_xscale*6
+					hp_minus_for_player(88,_placed_obj)
+					global.stamina = 0
+			
+				
+					y -= 2.5
+					vspeed = -4
+					sfx_for_multiplayer(choose(global.hit_sfx_1,global.hit_sfx_2,global.hit_sfx_3),0,0.2)
+					}
+				}
+			}
 		
 		
 			var _placed_obj = instance_place(x,y,angel_ring_attack)
@@ -2524,14 +2555,14 @@ w_alpha += (-0.01 - w_alpha)*0.1
 	{
 		if global.never_move = 0 && global.never_move_in_setting = 0 && (gravity = 0 || hurt > 5 || place_meeting(x,y,obj_water_inside) || place_meeting(x,y,obj_water_front))
 		{
-			if (jump = 0 && cannot_move = 0 && cooltime = 0) || hurt > 5 || ((place_meeting(x,y,obj_water_inside) || place_meeting(x,y,obj_water_front)) && down_attack = 0 && spin_attack = 0 && jump_attack = 0 && spin = 0)
+			if (jump = 0 && cannot_move = 0 && cooltime = 0) || hurt > 5 || ((place_meeting(x,y,obj_water_inside) || place_meeting(x,y,obj_water_front)) && can_jump = 1 && down_attack = 0 && spin_attack = 0 && jump_attack = 0 && spin = 0)
 			{
 				if !place_meeting(x,y,obj_water_inside) && !place_meeting(x,y,obj_water_front)
 				{
 				sfx_for_multiplayer(jump_sfx,0,0.6)
 				}
 
-	
+			can_jump = 0
 			var effect_ = instance_create_depth(x,y+27,player.depth+1,down_effect_for_laser)
 			effect_.image_blend = c_white
 			effect_.t_image_xscale = 2.5*0.4

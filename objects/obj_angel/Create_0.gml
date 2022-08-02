@@ -56,6 +56,11 @@ spear__ = -4
 b_alpha = 0
 sfx_ = 0
 sfx_2 = 0
+broken_anime = 0
+opening_scene = 0
+opening_sfx = 0
+cannot_move = 0
+cannot_step = 1
 
 _light_ = -4
 

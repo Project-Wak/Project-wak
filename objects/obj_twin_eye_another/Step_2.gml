@@ -49,9 +49,31 @@ if alpha < 0.1
 		t_hp_bar_alpha = 1
 		alarm[5] = 200
 	
-		hp_minus_for_mob(1,250)
+		hp_minus_for_mob(1,150)
 		bloody(_attacker_ef.x,_attacker_ef.y,1)
 		hit_cooltime = 30
+		last_hit = 30
+		alarm[1] = 10
+		alarm[2] = 24
+		}
+	}
+	
+	if place_meeting(x,y,lightning_spear)
+	{
+		if hit_cooltime = 0
+		{
+		var _attacker_ef = instance_place(x,y,lightning_spear)
+		var sfx = audio_play_sound(choose(global.hit_sfx_1,global.hit_sfx_2,global.hit_sfx_3),0,0)
+		audio_sound_gain(sfx,0.2*global.master_volume*2*global.sfx_volume,0)
+	
+	
+	
+		t_hp_bar_alpha = 1
+		alarm[5] = 200
+	
+		hp_minus_for_mob(1,8)
+		bloody(_attacker_ef.x,_attacker_ef.y,1)
+		hit_cooltime = 2
 		last_hit = 30
 		alarm[1] = 10
 		alarm[2] = 24

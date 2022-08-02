@@ -4,6 +4,10 @@ if place_meeting(x,y+1,floor_parents)
 {
 gravity = 0
 vspeed = 0
+	if sprite_index = pl_hurt_hyumpanchi_hakase
+	{
+	image_index = 1
+	}
 }
 else
 {

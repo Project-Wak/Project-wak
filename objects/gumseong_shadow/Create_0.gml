@@ -44,7 +44,7 @@ run_delay = 0
 if global.gumseong_tuto = 0
 {
 global.show_guide_mes_spr = 4
-global.show_guide_mes = "검성의 그림자\n\n검성의 그림자는 일종의 히든몹 같은 개념으로,\n처치시 특수한 무기를 드랍한다.\n\n(다만, 해당 몹은 매우 강력하므로 무시하고 지나쳐도 상관없다)"
+global.show_guide_mes = "검성의 그림자\n\n검성의 그림자는 플레이어를 흉내 내는 일종의 히든몹으로,\n처치시 특수한 무기를 드랍한다.\n\n(tip : 해당 몹은 매우 강력하므로 무시하고 지나쳐도 상관없으며\n 검성의 그림자가 레이지 모드 상태가 되었을때는\n레이지 모드가 끝날때 까지 최대한 도망다니는것이 좋다)"
 global.gumseong_tuto = 1
 }
 

@@ -19,10 +19,41 @@ dead_scene ++
 patturn = 0
 
 
-cannot_step = 1
 
-y += 1.5
-left_eye.y += 1.5
+
+	if dead_scene < 130
+	{
+	left_eye.cannot_step = 0
+	left_eye.vspeed = 0
+	left_eye.hspeed = 0
+	}
+	
+	if dead_scene < 270
+	{
+	cannot_step = 0
+	vspeed = 0
+	hspeed = 0
+	}
+	
+	if dead_scene > 150
+	{
+	left_eye.gravity = 0.3
+	}
+	
+	if dead_scene > 200
+	{
+	left_eye.cannot_step = 1
+	}
+	
+	if dead_scene > 300
+	{
+	gravity = 0.3
+	}
+	
+	if dead_scene > 350
+	{
+	cannot_step = 1
+	}
 
 	if dead_scene%15
 	{
@@ -260,11 +291,13 @@ else
 		audio_sound_gain(sfx,0.1*global.master_volume*2*global.sfx_volume,0)
 		}
 	player.guarding = 2
-	y -= scene__*3.1
+
+	y -= scene__*(9-4*(scene__/0.6))
 	if instance_exists(left_eye)
 	{
-	left_eye.y -= scene__*3.1
+	left_eye.y -= scene__*(8-2.5*(scene__/0.6))
 	}
+	
 	view_shake(0.1,0.1,1)
 	scene__ += 0.0032
 	
@@ -272,12 +305,75 @@ else
 		{
 		alpha -= 0.01
 		scene__ += 0.0032
-		y -= scene__*3.1
+		y -= scene__*(9-4*(scene__/0.6))
 			if instance_exists(left_eye)
 			{
-			left_eye.y -= scene__*3.1
+			left_eye.y -= scene__*(8-2.5*(scene__/0.6))
 			}
 		}
+		
+		if scene__ > 0.7
+		{
+		image_angle += (0 - image_angle)*0.1
+		left_eye.image_angle += (0 - left_eye.image_angle)*0.1
+		
+			if cutscene = 0
+			{
+			cutscene ++
+			var sfx = audio_play_sound(mob_faint,0,0)
+			audio_sound_gain(sfx,0.4*global.master_volume*2*global.sfx_volume,0)
+				
+			var sfx = audio_play_sound(down_attack_sfx,0,0)
+			audio_sound_gain(sfx,0.22*global.master_volume*2*global.sfx_volume,0)
+				
+			var a___ = audio_play_sound(bomb_sfx,0,0)
+			audio_sound_gain(a___,0.05*global.master_volume*2*global.sfx_volume,0)
+				
+			var sfx = audio_play_sound(gun_sfx_single,0,0)
+			audio_sound_gain(sfx,0.22*global.master_volume*2*global.sfx_volume,0)
+			view_shake(11,15,5)
+			image_angle -= 200
+				for(var i = -4; i <= 4; i++)
+				{
+				var _bullet__ = instance_create_depth(x,y,depth+1,obj_bullet)
+				_bullet__.bullet_speed = 14;
+				_bullet__.direction = i*6+point_direction(x,y,player.x+sign(floor(global.movement_speed)),player.y)
+				}
+			}
+		
+			if scene__ > 0.73
+			{
+				if cutscene = 1
+				{
+				cutscene ++
+				var sfx = audio_play_sound(mob_faint,0,0)
+				audio_sound_gain(sfx,0.4*global.master_volume*2*global.sfx_volume,0)
+				
+				var sfx = audio_play_sound(down_attack_sfx,0,0)
+				audio_sound_gain(sfx,0.22*global.master_volume*2*global.sfx_volume,0)
+				
+				var a___ = audio_play_sound(bomb_sfx,0,0)
+				audio_sound_gain(a___,0.05*global.master_volume*2*global.sfx_volume,0)
+				
+				var sfx = audio_play_sound(gun_sfx_single,0,0)
+				audio_sound_gain(sfx,0.22*global.master_volume*2*global.sfx_volume,0)
+				view_shake(11,15,5)
+			
+				left_eye.image_angle += 200
+					for(var i = -4; i <= 4; i++)
+					{
+					var _bullet__ = instance_create_depth(left_eye.x,left_eye.y,depth+1,obj_bullet)
+					_bullet__.bullet_speed = 14;
+					_bullet__.direction = i*6+point_direction(left_eye.x,left_eye.y,player.x+sign(floor(global.movement_speed)),player.y)
+					}
+				}
+			}
+		}
+		else
+		{
+		cutscene = 0
+		}
+		
 	image_blend = merge_color(c_black,c_white,scene__)
 	global.playing_scene = 1
 	global.never_move = 1

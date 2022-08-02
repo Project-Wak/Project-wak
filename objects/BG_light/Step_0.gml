@@ -13,12 +13,28 @@ _light_.alpha = 0.4*global.boss_opening_light_alpha
 _light_.sprite_index = sprite64
 _light_.image_blend = $FFFFEDB2
 _light_.light_type = 0
-_light_.image_xscale = 10
-_light_.image_yscale = 10
+_light_.image_xscale = 11.2
+_light_.image_yscale = 11.2
 }
 else
 {
-_light_.x = x+318/2
-_light_.y = y+13
-_light_.alpha = 0.4*global.boss_opening_light_alpha
+_light_.x = x+lengthdir_x(159,image_angle)
+_light_.y = y+lengthdir_y(13,image_angle)
+_light_.alpha = 0.4*global.boss_opening_light_alpha*timer_sec
+}
+
+
+if instance_exists(obj_simhae_doo) && global.boss_opening_light_alpha < 0 && timer_sec = 1
+{
+timer --
+	if timer < 0
+	{
+	timer_sec = 0
+	}
+}
+
+if global.b_alpha >= 1
+{
+timer = irandom_range(100,200)
+timer_sec = 1
 }

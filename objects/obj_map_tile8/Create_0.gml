@@ -25,3 +25,6 @@ global.platform_speed = 0
 alarm[1] = 100
 
 
+
+
+alpha = 0

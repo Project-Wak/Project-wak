@@ -9,23 +9,7 @@ if image_alpha <= 0
 	}
 }
 
-if !instance_exists(_light_)
-{
-_light_ = instance_create_depth(x+p_xscale*129,y-30,depth,obj_light)
-_light_.p_id = id
-_light_.alpha = 0.7
-_light_.sprite_index = sprite64
-_light_.image_blend = $FF75F2FF
-_light_.light_type = 0
-_light_.image_xscale = 21
-_light_.image_yscale = 21
-}
-else
-{
-_light_.x = x+p_xscale*150+image_xscale*60
-_light_.y = y-200-40*image_yscale
-_light_.alpha = image_alpha*0.55
-}
+
 
 
 
@@ -150,6 +134,28 @@ b_alpha_ += (t_b_alpha_ - b_alpha_)*0.08
 	alpha += (0 - alpha)*0.1
 	}
 	
+	
+	
+	if scene__ > 0 
+	{
+		if !instance_exists(_light_)
+		{
+		_light_ = instance_create_depth(x+p_xscale*129,y-30,depth,obj_light)
+		_light_.p_id = id
+		_light_.alpha = 0.7
+		_light_.sprite_index = sprite64
+		_light_.image_blend = $FF75F2FF
+		_light_.light_type = 0
+		_light_.image_xscale = 11
+		_light_.image_yscale = 11
+		}
+		else
+		{
+		_light_.x = x+p_xscale*150+image_xscale*60
+		_light_.y = y-200-40*image_yscale
+		_light_.alpha = image_alpha*0.55*global.boss_opening_light_alpha
+		}
+	}
 	
 
 	if scene__ > 0 && activated != 2
