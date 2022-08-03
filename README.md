@@ -14,7 +14,7 @@
 
 
 ![preview_1](imgs/preview_1.gif)
-![preview_2](imgs/preview_4.gif)
+![preview_2](preview_4.gif)
 ![preview_3](imgs/preview_3.gif)
 
 
