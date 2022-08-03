@@ -1,7 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 global.b_alpha = 10
-global.t_b_alpha = -0.01
+global.t_b_alpha = 10
+first_guide_timer = 0
 global.room_brightness = 0
 
 start_alpha = 0
@@ -27,3 +28,4 @@ audio_stop_sound(it_s_over)
 owner_surface = surface_create(1920,1080)
 really = 0
 timer_des = 0
+alarm[0] = 1

@@ -48,10 +48,6 @@ interecting_now = 1
 
 if interecting_now = 1
 {
-	if message_phase = 0
-	{
-	player.x += (x + player.image_xscale*96 - player.x)*0.1
-	}
 global.never_move = 1
 global.playing_scene = 1
 	if can_give_item = 1
@@ -70,12 +66,13 @@ global.playing_scene = 1
 				if global.choice_now = 0
 				{
 				message_phase = 1
+				image_index = 1
 				}
 				else
 				{
 				interecting_now = 0
 				message_phase = 0
-				alarm[1] = 1
+				alarm[1] = 5
 				}
 			global.choice_now = 0
 			global.choosed = 0

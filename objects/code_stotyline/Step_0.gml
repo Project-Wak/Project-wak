@@ -56,7 +56,7 @@ if global.story_next >= 101 && global.story_next < 300
 		if !instance_exists(check__) && message_phase = 2
 		{
 		check__ = instance_create_depth(x,y,depth-1,player_message)
-		check__.text = "이런...?"
+		check__.text = "이런..."
 		check__.target = obj_andience1194
 		check__.parents = obj_andience1194
 		message_phase ++

@@ -10,6 +10,15 @@ for(var i = 0; i < 64; i++)
 	}
 }
 
+var place_obj = instance_place(x,y+3,fire_turret)
+if place_obj > 0
+{
+	if y > place_obj
+	{
+	depth = 906
+	}
+}
+
 
 if place_meeting(x,y+1,floor_parents) || place_meeting(x,y+vspeed,floor_parents)
 {
@@ -88,14 +97,14 @@ var yy_ = y
 	var random_val___ = percentage_k(50)
 		if random_val___ = 1
 		{
-		create_buble_effect(0.8,irandom_range(-9,9),0,-image_xscale*irandom_range(1,150)/5,0.05,0.05,$FF47BBFF,$FF4C81FF,2,$FF534CFF,xx_,yy_,depth-1,0,false,false)
+		create_buble_effect(0.8,irandom_range(-9,9),0,-image_xscale*irandom_range(1,150)/5,0.05,0.05,$FF47BBFF,$FF4C81FF,2,$FF534CFF,xx_,yy_,depth-15,0,false,false)
 		}
 	}
 	
 	var random_val___ = percentage_k(10)
 	if random_val___ = 1
 	{
-	create_buble_effect(0.8,irandom_range(-9,9),0,-image_xscale*irandom_range(1,150)/5,0.05,0.05,$FF62D1F7,$FF6C60CD,2,$FF191919,xx_,yy_,depth-1,1,false,false)
+	create_buble_effect(0.8,irandom_range(-9,9),0,-image_xscale*irandom_range(1,150)/5,0.05,0.05,$FF62D1F7,$FF6C60CD,2,$FF191919,xx_,yy_,depth-15,1,false,false)
 	}
 	
 	

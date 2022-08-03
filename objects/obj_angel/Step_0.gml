@@ -259,18 +259,44 @@ if activated = 1
 	}
 	
 	
-	
-	if scene__ < 0.65 && scene__ > 0.55
+	if scene__ >= 0.2 && scene__ < 0.55
 	{
-	obj_camera.t_y = player.y
-	opening_scene = 0
-	spear__.cannot_step = 1
-
-		if global.show_credits = 0 && opening_sfx = 0
+	spear__.image_xscale += (image_xscale - spear__.image_xscale)*0.08
+	spear__.image_yscale += (image_yscale*1.2 - spear__.image_yscale)*0.08
+	spear__.depth = depth+10
+	
+		if opening_sfx = 0	
 		{
+		opening_sfx = 1
 		var sfx = audio_play_sound(jump_attack_sfx,0,0)
 		audio_sound_gain(sfx,0.5*global.master_volume*2*global.sfx_volume,0)
 		
+		spear__.x = x
+		spear__.y = player.y + 1000
+		spear__.cannot_step = 1
+		}
+		
+		if scene__ >= 0.3
+		{
+			if spear__.y > player.y-800
+			{
+			spear__.image_angle = 180
+			spear__.y += (player.y-810 - spear__.y)*0.08
+			}
+		}
+	}
+	
+	
+	if scene__ < 0.65 && scene__ > 0.55
+	{
+	spear__.depth = depth-10
+	spear__.image_angle = 0
+	obj_camera.t_y = player.y
+	opening_scene = 0
+	spear__.cannot_step = 0
+
+		if global.show_credits = 0 && opening_sfx = 1
+		{
 		spear__.image_xscale = image_xscale*1.2
 		spear__.image_yscale = image_yscale*1.4
 		spear__.gravity = 0.4
@@ -281,7 +307,7 @@ if activated = 1
 		
 		spear__.x = player.x
 		spear__.y = player.y - 1500
-		opening_sfx = 1
+		opening_sfx = 2
 		}
 	}
 	
@@ -304,7 +330,7 @@ if activated = 1
 		spear__.gravity = 0
 		spear__.vspeed = 0
 		
-		if scene__ > 0.74
+		if scene__ > 0.8
 		{
 		y += (ystart+8 - y)*0.08
 		spear__.x += (x+150 - spear__.x)*0.08
@@ -404,6 +430,7 @@ if scene__ >= 1
 {
 player.assult_mode = 300
 activated = 2
+opening_sfx = 0
 	if instance_exists(check__)
 	{
 	global.playing_scene = 0

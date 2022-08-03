@@ -1,8 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
-if instance_exists(obj_angel) && obj_angel.activated = 0
+if instance_exists(obj_angel) && obj_angel.activated = 0 && global.dreamy_alpha > 0.5
 {
-global.room_brightness = 0.15
 var random_val_fl = percentage_k(global.graphics_for_code*8)
 	if random_val_fl = 1
 	{
@@ -17,12 +16,20 @@ if global.b_alpha < 0.1
 {
 	if instance_exists(obj_angel)
 	{
-	var dis_ = abs(player.x-3036)
-		if player.x > 3036
+	var dis_ = abs(player.x-2836)
+		if player.x > 2836
 		{
 		dis_ = 0
 		}
-	global.dreamy_alpha += ((1 - dis_/320)*1.5 - global.dreamy_alpha)*0.01
+	global.dreamy_alpha = (1 - dis_/500)*1.5
+	var __cal__ = (dis_/500 - 1)*0.15
+	
+	if __cal__ < 0.15
+	{
+	__cal__ = 0.15
+	}
+	
+	global.room_brightness = __cal__
 	}
 	else
 	{

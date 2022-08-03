@@ -1,26 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
 var v_x = obj_camera.v_x/1280
-var p_floor = y
-for(var ii = 0; ii <= 64; ii++)
-{
-var __check = instance_place(x,y+ii,floor_parents)
-	if __check > 0
-	{
-	p_floor = y+ii
-	break;
-	}
-	else
-	{
-		if ii = 64
-		{
-		p_floor = y
-		}
-	}
-}
-draw_sprite_ext(spr_shadow,0,x,p_floor+20,1-abs(y-p_floor)/48,1-abs(y-p_floor)/64,0,c_white,(1-abs(y-p_floor)/48)*0.3*image_alpha)
 
-draw_sprite_ext(sprite_index,0,x,y-26,image_xscale,image_yscale,image_angle,c_white,image_alpha)
+
+draw_sprite_ext(sprite_index,image_index,x,y+32*image_yscale,image_xscale,-image_yscale*0.5,0,c_black,0.3*image_alpha)
+draw_sprite_ext(sprite_index,image_index,x,y-26,image_xscale,image_yscale,image_angle,c_white,image_alpha)
 //draw_set_alpha(1)
 //draw_text(x,y,message_phase)
 

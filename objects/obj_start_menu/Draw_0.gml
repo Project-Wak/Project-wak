@@ -31,8 +31,16 @@ if global.never_move_in_setting = 0 && global.show_credits = 0 && global.show_ac
 //draw_text(300,300,dis)
 dis = point_distance(xx+wid*0.5,400,mouse_x,mouse_y)
 
+if go_start >= 3
+{
+draw_text_k_scale(xx+wid*0.5,yy+v_x*100,"Difficulty",99,-1,start_alpha,c_white,0,0,font_title,v_x/3.5,v_x/3.5,0)
+draw_text_k_scale(xx+wid*0.5,yy+v_x*145,"(전체적인 난이도가 높은 편이니, 쉬움 혹은 보통 난이도를 권장합니다)",99,-1,start_alpha,c_white,0,0,font_title,v_x/6.5,v_x/6.5,0)
+}
+else
+{
 draw_text_k_scale(xx+wid*0.5,yy+v_x*120,"Project Wak",99,-1,start_alpha,c_white,0,0,font_title,v_x*0.7,v_x*0.7,0)
 draw_text_k_scale(xx+wid*0.6,yy+v_x*185,"프로젝트 왁",99,-1,start_alpha,c_white,1,0,font_title,v_x/5,v_x/5,0)
+}
 
 draw_text_k_scale(xx+v_x*16,yy+hei-v_x*32,"-"+string(global.game_ver)+" ver",99,-1,menu_alpha*0.5,c_white,-1,-1,font_title,v_x/7,v_x/7,0)
 var scale__ = 1

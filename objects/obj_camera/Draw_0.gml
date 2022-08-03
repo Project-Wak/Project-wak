@@ -207,30 +207,37 @@ if room != menu && global.playing_scene = 0 && global.story_next < 100 && global
 	if global.guide = 1 && global.chat_activity = false && global.slow_motion = 0 && global.show_challenger = 0 && global.none_wakgood_mode = false
 	{
 	draw_set_color(c_black)
-	draw_set_alpha(0.7)
-	draw_rectangle(xx,yy2,xx-v_x_*642,yy2-v_x_*176,0)
+	draw_set_alpha(0.5)
+	draw_rectangle(xx,yy2,xx-v_x_*842,yy2-v_x_*136,0)
 	draw_set_alpha(__alpha_set)
 
+	draw_text_kl_scale(xx-v_x_*836,yy2-v_x_*130,"기능키 : ",v_x_*64,-1,__alpha_set,c_white,0,-1,font0,v_x_*0.3,v_x_*0.3,0);
+	draw_text_kl_scale(xx-v_x_*836,yy2-v_x_*130+v_x_*32,"환경 설정[ESC]",v_x_*64,-1,__alpha_set*0.7,c_white,0,-1,font0,v_x_*0.3,v_x_*0.3,0);
+	draw_text_kl_scale(xx-v_x_*836,yy2-v_x_*130+v_x_*56,"장비창[Tab]",v_x_*64,-1,__alpha_set*0.7,c_white,0,-1,font0,v_x_*0.3,v_x_*0.3,0);
+	draw_text_kl_scale(xx-v_x_*836,yy2-v_x_*130+v_x_*80,"상호작용/선택[D] (지상)",v_x_*64,-1,__alpha_set*0.7,c_white,0,-1,font0,v_x_*0.3,v_x_*0.3,0);
+	draw_text_kl_scale(xx-v_x_*836,yy2-v_x_*130+v_x_*104,"사망 회귀[P] (지상)",v_x_*64,-1,__alpha_set*0.7,c_white,0,-1,font0,v_x_*0.3,v_x_*0.3,0);
 
-	draw_text_kl_scale(xx-v_x_*636,yy2-v_x_*170,"기본공격 (A)",v_x_*64,-1,__alpha_set,c_white,0,-1,font0,v_x_*0.35,v_x_*0.35,0);
-	draw_text_kl_scale(xx-v_x_*636,yy2-v_x_*170+v_x_*32,"달리기 (Shift)",v_x_*64,-1,__alpha_set,c_white,0,-1,font0,v_x_*0.35,v_x_*0.35,0);
-	//draw_text_kl_scale(xx-v_x_*636,yy2-v_x_*170+v_x_*82,"접속자 목록 (Tab)",v_x_*64,-1,__alpha_set,c_white,0,-1,font0,v_x_*0.35,v_x_*0.35,0);
-	draw_text_kl_scale(xx-v_x_*636,yy2-v_x_*170+v_x_*114,"환경 설정 (ESC)",v_x_*64,-1,__alpha_set,c_white,0,-1,font0,v_x_*0.35,v_x_*0.35,0);
-	//draw_text_kl_scale(xx-v_x_*636,yy2-v_x_*170+v_x_*146,"무기 변경 (R)",v_x_*64,-1,__alpha_set,c_white,0,-1,font0,v_x_*0.35,v_x_*0.35,0);
 
-	draw_text_kl_scale(xx-v_x_*436,yy2-v_x_*170,"기본 스킬(스테미나 소모) : ",v_x_*64,-1,__alpha_set,$FFF7D06D,0,-1,font0,v_x_*0.35,v_x_*0.35,0);
-	draw_text_kl_scale(xx-v_x_*436,yy2-v_x_*170+v_x_*50,"회전베기 (Q)",v_x_*64,-1,__alpha_set,c_white,0,-1,font0,v_x_*0.35,v_x_*0.35,0);
-	draw_text_kl_scale(xx-v_x_*436,yy2-v_x_*170+v_x_*82,"올려 베기 (W)",v_x_*64,-1,__alpha_set,c_white,0,-1,font0,v_x_*0.35,v_x_*0.35,0);
-	draw_text_kl_scale(xx-v_x_*436,yy2-v_x_*170+v_x_*114,"아래 베기 (S)",v_x_*64,-1,__alpha_set,c_white,0,-1,font0,v_x_*0.35,v_x_*0.35,0);
-	draw_text_kl_scale(xx-v_x_*436,yy2-v_x_*170+v_x_*146,"대쉬 (달리기 도중 A)",v_x_*64,-1,__alpha_set,c_white,0,-1,font0,v_x_*0.35,v_x_*0.35,0);
-	draw_text_kl_scale(xx-v_x_*436,yy2-v_x_*170+v_x_*178,"가드 (위 방향키)",v_x_*64,-1,__alpha_set,c_white,0,-1,font0,v_x_*0.35,v_x_*0.35,0);
+	draw_text_kl_scale(xx-v_x_*636,yy2-v_x_*130,"전투 기술(스테미나 소모) : ",v_x_*64,-1,__alpha_set,c_white,0,-1,font0,v_x_*0.3,v_x_*0.3,0);
+	draw_text_kl_scale(xx-v_x_*636,yy2-v_x_*130+v_x_*32,"가드[상] (지상)",v_x_*64,-1,__alpha_set*0.7,c_white,0,-1,font0,v_x_*0.3,v_x_*0.3,0);
+	draw_text_kl_scale(xx-v_x_*636,yy2-v_x_*130+v_x_*56,"구르기[하] (지상)",v_x_*64,-1,__alpha_set*0.7,c_white,0,-1,font0,v_x_*0.3,v_x_*0.3,0);
+	draw_text_kl_scale(xx-v_x_*636,yy2-v_x_*130+v_x_*80,"대쉬[A] (지상/공중)",v_x_*64,-1,__alpha_set*0.7,c_white,0,-1,font0,v_x_*0.3,v_x_*0.3,0);
+	draw_text_kl_scale(xx-v_x_*636,yy2-v_x_*130+v_x_*104,"달리기[Shift]",v_x_*64,-1,__alpha_set*0.7,c_white,0,-1,font0,v_x_*0.3,v_x_*0.3,0);
+	
 
-	draw_text_kl_scale(xx-v_x_*8,yy2-v_x_*210,"(G키로 가이드 열고 닫기)",v_x_*64,-1,__alpha_set,c_white,0,1,font0,v_x_*0.3,v_x_*0.3,0);
-	draw_text_kl_scale(xx-v_x_*236,yy2-v_x_*170,"특수 스킬(레이지(Rage) 소모) : ",v_x_*64,-1,__alpha_set,$FF7D47EE,0,-1,font0,v_x_*0.35,v_x_*0.35,0);
-	draw_text_kl_scale(xx-v_x_*236,yy2-v_x_*170+v_x_*50,"돌진 베기 (달리기 or 걷는 도중 S)",v_x_*64,-1,__alpha_set,c_white,0,-1,font0,v_x_*0.35,v_x_*0.35,0);
-	//draw_text_kl_scale(xx-v_x_*236,yy2-v_x_*170+v_x_*82,"지진파 (E)",v_x_*64,-1,__alpha_set,c_white,0,-1,font0,v_x_*0.35,v_x_*0.35,0);
-	draw_text_kl_scale(xx-v_x_*236,yy2-v_x_*170+v_x_*114,"특수 능력 (좌/우/하 방향키 + E)",v_x_*64,-1,__alpha_set,c_white,0,-1,font0,v_x_*0.35,v_x_*0.35,0);
-	draw_text_kl_scale(xx-v_x_*236,yy2-v_x_*170+v_x_*146,"레이지 모드 (E키 꾹 누르기)",v_x_*64,-1,__alpha_set,c_white,0,-1,font0,v_x_*0.35,v_x_*0.35,0);
+
+	draw_text_kl_scale(xx-v_x_*436,yy2-v_x_*130,"기본 스킬(스테미나 소모) : ",v_x_*64,-1,__alpha_set,$FFF7D06D,0,-1,font0,v_x_*0.3,v_x_*0.3,0);
+	draw_text_kl_scale(xx-v_x_*436,yy2-v_x_*130+v_x_*32,"돌진 베기[S] (지상)",v_x_*64,-1,__alpha_set*0.7,c_white,0,-1,font0,v_x_*0.3,v_x_*0.3,0);
+	draw_text_kl_scale(xx-v_x_*436,yy2-v_x_*130+v_x_*56,"회전베기[Q] (지상/공중)",v_x_*64,-1,__alpha_set*0.7,c_white,0,-1,font0,v_x_*0.3,v_x_*0.3,0);
+	draw_text_kl_scale(xx-v_x_*436,yy2-v_x_*130+v_x_*80,"올려 베기[W] (지상/공중)",v_x_*64,-1,__alpha_set*0.7,c_white,0,-1,font0,v_x_*0.3,v_x_*0.3,0);
+	draw_text_kl_scale(xx-v_x_*436,yy2-v_x_*130+v_x_*104,"아래 베기[S] (공중)",v_x_*64,-1,__alpha_set*0.7,c_white,0,-1,font0,v_x_*0.3,v_x_*0.3,0);
+	
+
+	draw_text_kl_scale(xx-v_x_*8,yy2-v_x_*200,"(G키로 가이드 열고 닫기)",v_x_*64,-1,__alpha_set,c_white,0,1,font0,v_x_*0.3,v_x_*0.3,0);
+	draw_text_kl_scale(xx-v_x_*236,yy2-v_x_*130,"특수 스킬(레이지(Rage) 소모) : ",v_x_*64,-1,__alpha_set,$FF7D47EE,0,-1,font0,v_x_*0.3,v_x_*0.3,0);
+	draw_text_kl_scale(xx-v_x_*236,yy2-v_x_*130+v_x_*32,"레이지 모드 [E 지속 누르기]",v_x_*64,-1,__alpha_set*0.7,c_white,0,-1,font0,v_x_*0.3,v_x_*0.3,0);
+	draw_text_kl_scale(xx-v_x_*236,yy2-v_x_*130+v_x_*80,"특수 능력 (좌/우/하 지속 누르기 + E)",v_x_*64,-1,__alpha_set*0.7,c_white,0,-1,font0,v_x_*0.3,v_x_*0.3,0);
+	//draw_text_kl_scale(xx-v_x_*236,yy2-v_x_*170+v_x_*114,"특수 능력 (좌/우/하 방향키 + E)",v_x_*64,-1,__alpha_set,c_white,0,-1,font0,v_x_*0.35,v_x_*0.35,0);
 	}
 }
 
@@ -331,7 +338,7 @@ var xx_g = camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0
 var yy_g = camera_get_view_y(view_camera[0])+v_x_*250
 if show_ending_var = 0
 {
-draw_text_kl_scale(xx_g,yy_g-v_x_*global.gameover*32,"Project Wak",v_x_*64,-1,global.gameover,c_white,0,0,font_title,v_x_*0.4,v_x_*0.4,0);
+draw_text_kl_scale(xx_g,yy_g-v_x_*global.gameover*32,"Project Wak",v_x_*64,-1,global.gameover,c_white,0,0,font_title,v_x_*0.8,v_x_*0.8,0);
 draw_text_kl_scale(xx_g,yy_g+v_x_*100-v_x_*(global.gameover-0.5)*64,"-The end-",v_x_*190,-1,(global.gameover-0.5)*2,c_white,0,0,font_title,v_x_*0.25,v_x_*0.25,0)
 }
 else

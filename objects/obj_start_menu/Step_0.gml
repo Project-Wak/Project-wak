@@ -2,12 +2,31 @@
 // You can write your code in this editor
 depth = obj_camera.depth+30
 
+if set_brightness = 1 && first_guide_timer < 405
+{
+first_guide_timer ++
+
+	if first_guide_timer > 400
+	{
+	global.t_b_alpha = -0.01
+	}
+	else
+	{
+	global.t_b_alpha = 10
+	obj_camera.v_x = 1280
+	obj_camera.v_y = 720
+	}
+	
+	if keyboard_check_pressed(vk_anykey) && first_guide_timer < 240
+	{
+	first_guide_timer = 240
+	}
+}
 
 
 
 
-
-if set_brightness = 1
+if set_brightness = 1 && first_guide_timer > 200
 {
 wheel_cooltime --
 	if start_alpha < 1
@@ -24,13 +43,6 @@ wheel_cooltime --
 
 	if start_alpha > 0.85
 	{
-		if sfx = 0
-		{
-		var sfx_ = audio_play_sound(critical_sfx,0,0)
-		audio_sound_gain(sfx_,0.02*global.master_volume*2*global.sfx_volume,0)
-		sfx = 1
-		}
-
 	var scale = irandom_range(50,100)/500
 	var _light_ = instance_create_depth(irandom_range(0,room_width),room_height+irandom_range(100,200),depth-1,obj_light)
 	_light_.p_id = id
