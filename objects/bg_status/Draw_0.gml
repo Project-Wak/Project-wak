@@ -107,9 +107,34 @@ if (pressed > 0 && global.key_setting_message > 0) || global.key_setting_message
 		var cal_play_time__ = floor(global.playtime/60)
 	
 		draw_text_kl_scale(camera_get_view_x(view_camera[0])+32*_c_x,camera_get_view_y(view_camera[0])+32*_c_x,"- 기타",16,999,0.8,image_blend,0,-1,font0,1/2.5*_c_x,1/2.5*_c_x,image_angle)
-		draw_sprite_ext(spr_icon,0,camera_get_view_x(view_camera[0])+260*_c_x,camera_get_view_y(view_camera[0])+195*_c_x,_c_x*0.5,_c_x*0.5,0,c_white,0.8)
-		draw_text_kl_scale(camera_get_view_x(view_camera[0])+300*_c_x,camera_get_view_y(view_camera[0])+190*_c_x,"플레이 타임 : "+string(cal_play_time__)+"시간 "+string(play_time__-cal_play_time__*60)+"분",16,999,0.8,image_blend,0,-1,font0,1/3.5*_c_x,1/3.5*_c_x,image_angle)
+		draw_sprite_ext(spr_icon,0,camera_get_view_x(view_camera[0])+260*_c_x,camera_get_view_y(view_camera[0])+165*_c_x,_c_x*0.5,_c_x*0.5,0,c_white,0.8)
+		draw_text_kl_scale(camera_get_view_x(view_camera[0])+300*_c_x,camera_get_view_y(view_camera[0])+160*_c_x,"플레이 타임 : "+string(cal_play_time__)+"시간 "+string(play_time__-cal_play_time__*60)+"분",16,999,0.8,image_blend,0,-1,font0,1/3.5*_c_x,1/3.5*_c_x,image_angle)
 	
+		var difficulty__ = "하드 코어"
+		if global.difficulty = 2
+		{
+		difficulty__ = "매우 어려움"
+		}
+		if global.difficulty = 1.5
+		{
+		difficulty__ = "어려움"
+		}
+		if global.difficulty = 1
+		{
+		difficulty__ = "보통"
+			if global.time_plusment = 2
+			{
+			difficulty__ = "쉬움"
+				if global.super_easy = 2
+				{
+				difficulty__ = "매우 쉬움"
+				}
+			}
+		}
+		
+		draw_sprite_ext(spr_icon,4,camera_get_view_x(view_camera[0])+260*_c_x,camera_get_view_y(view_camera[0])+225*_c_x,_c_x*0.7,_c_x*0.7,0,c_white,0.8)
+
+		draw_text_kl_scale(camera_get_view_x(view_camera[0])+300*_c_x,camera_get_view_y(view_camera[0])+200*_c_x,"선택한 난이도 : "+string(difficulty__),16,999,0.8,image_blend,0,-1,font0,1/3.5*_c_x,1/3.5*_c_x,image_angle)
 		draw_text_kl_scale(camera_get_view_x(view_camera[0])+300*_c_x,camera_get_view_y(view_camera[0])+230*_c_x,"총 사망 횟수 : "+string(global.total_died)+"회",16,999,0.8,image_blend,0,-1,font0,1/3.5*_c_x,1/3.5*_c_x,image_angle)
 		}
 	}

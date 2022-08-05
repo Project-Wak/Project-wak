@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "footstep_sfx",
-  "duration": 0.125,
+  "duration": 0.12,
   "parent": {
     "name": "소리",
     "path": "folders/소리.yy",

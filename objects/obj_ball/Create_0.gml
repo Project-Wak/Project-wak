@@ -25,5 +25,7 @@ test_mob_type = 1
 movement_speed = 0
 hit_motion = 0
 sfx__ = 0
+faraway = 9999
+faraway_timer = 0
 image_xscale = 1.5
 image_yscale = 1.5

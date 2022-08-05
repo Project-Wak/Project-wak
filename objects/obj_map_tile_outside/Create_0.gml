@@ -21,7 +21,10 @@ b_alpha = 0
 timer = 0
 sfx = 0
 
+if global.story_next < 100
+{
 player.x = 800
+}
 player.y = 1100
 global.n_time = 12
 if global.show_credits = 0 && global.story_next < 100

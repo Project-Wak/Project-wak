@@ -21,7 +21,7 @@ if set_brightness = 0
 {
 var alpha_____ = 1 - global.b_alpha
 draw_text_k_scale(xx+wid*0.5,yy+v_x*120,"게임을 플레이 하기 전, 게임 내 밝기 정도를 설정해주세요",99,-1,alpha_____,c_white,0,0,font_title,v_x/5,v_x/5,0)
-draw_text_k_scale(xx+wid*0.5,yy+v_x*160,"(화살표의 형태만은 뚜렷하게 보임과 동시에 색은 조금 알아 볼수 없을 정도가 적당합니다)",99,-1,alpha_____*0.7,c_white,0,0,font_title,v_x/6,v_x/6,0)
+draw_text_k_scale(xx+wid*0.5,yy+v_x*160,"화살표와 배경이 구별 가능한 정도로 보임과 동시에 배경은 조금 어두운 정도가 적당합니다",99,-1,alpha_____*0.7,c_white,0,0,font_title,v_x/6,v_x/6,0)
 draw_text_k_scale(xx+wid*0.5,yy+v_x*190,"(잘 모르겠으면 보통(50%)으로 설정해주세요. 나중에 설정에서 변경가능합니다)",99,-1,alpha_____*0.7,c_white,0,0,font_title,v_x/6.5,v_x/6.5,0)
 draw_text_k_scale(xx+wid*0.5,yy+v_x*600,"(설정이 완료되었으면 'D'키를 눌러 넘어갑니다)",99,-1,alpha_____*brightness_set_alpha,c_white,0,0,font_title,v_x/6.5,v_x/6.5,0)
 }

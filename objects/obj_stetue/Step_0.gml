@@ -108,7 +108,7 @@ global.playing_scene = 1
 		{
 		player.image_xscale = sign_k(x - player.x)
 		check__ = instance_create_depth(x,y,depth-1,player_message)
-		check__.text = "(녹슨 제단이다)"
+		check__.text = "(왁두 제단이다)"
 		check__.target = player.id
 		check__.parents = id
 		}

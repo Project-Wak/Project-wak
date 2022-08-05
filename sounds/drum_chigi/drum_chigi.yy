@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "drum_chigi.mp3",
-  "duration": 7.1303,
+  "duration": 7.1253,
   "parent": {
     "name": "소리",
     "path": "folders/소리.yy",

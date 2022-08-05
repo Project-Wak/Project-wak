@@ -13,7 +13,7 @@ ele__.destination = 0
 ele__.line_length = 2500
 
 global.platform_speed = 0
-global.room_brightness = 0.2
+global.room_brightness = 0.35
 
 global.save_point_x = 480
 global.save_point_y = 1122

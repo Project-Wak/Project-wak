@@ -1,12 +1,12 @@
 /// @description Insert description here
 // You can write your code in this editor
-var test_mob = instance_create_depth(xstart-150,ystart+400,player.depth+3,mob_spawn_here)
+var test_mob = instance_create_depth(xstart-150,ystart+200,player.depth+3,mob_spawn_here)
 test_mob.t_y = -900
 test_mob.mob_type = obj_twin_eye
 test_mob.xscale = 1.1
 test_mob.yscale = 1.1
 test_mob.mob_var = -5
-test_mob.image_yscale = 10
+test_mob.image_yscale = 1
 
 x = xstart+500
 y = ystart+500

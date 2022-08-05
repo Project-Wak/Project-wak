@@ -8,7 +8,7 @@ laser.x2 = 1626
 laser.y2 = 800
 laser.direction = 180
 laser.damage_able = 320
-laser.color_ = $FF9F2FED
+laser.color_ = $FF474BE7
 
 
 var laser = instance_create_depth(2085,800,player.depth-2,block_laser)
@@ -17,7 +17,7 @@ laser.x2 = 2085
 laser.y2 = 800
 laser.direction = 0
 laser.damage_able = 320
-laser.color_ = $FF9F2FED
+laser.color_ = $FF474BE7
 
 
 var test_mob = instance_create_depth(2899,1000,player.depth+3,mob_spawn_here)

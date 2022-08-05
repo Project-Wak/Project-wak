@@ -114,7 +114,7 @@ for(var i = 0; i < 3; i++)
 global.choice_name[i] = -4
 }
 global.gumseong_met_time = 0
-global.free_hp = 0
+global.free_hp = -1
 global.n_to_setting__ = 0
 global.brightness_setting = 1
 global.r_alpha = 0

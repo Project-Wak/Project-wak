@@ -694,7 +694,7 @@ obj_camera.t_x = 5650
 			spin_attack_delay++
 			var _angle = (spin_attack_delay*60+10)*sign(image_xscale)
 			var _ef = instance_create_depth(x,y,depth+1,effect_attacked)
-			_ef.image_index = 7
+			_ef.image_index = 8
 			_ef.image_xscale = image_xscale
 			_ef.image_alpha = 0.6
 			_ef.image_angle = image_angle+_angle

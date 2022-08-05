@@ -830,7 +830,7 @@ activated = 2
 			laser1.direction = 180-_dir*30
 			}
 			laser1.damage_able = 220
-			laser1.color_ = $FF9F2FED
+			laser1.color_ = $FF474BE7
 			laser1.image_alpha = 0
 			}
 			else
@@ -862,7 +862,7 @@ activated = 2
 			laser2.direction = 180-_dir*31
 			}
 			laser2.damage_able = 220
-			laser2.color_ = $FF9F2FED
+			laser2.color_ = $FF474BE7
 			laser2.image_alpha = 0
 			}
 			else

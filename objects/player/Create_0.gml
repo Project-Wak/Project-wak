@@ -14,6 +14,8 @@ image_index = 0
 image_speed = 0
 movement_speed = 0
 name = global.nickname;
+lenturn_turnon = -1
+lenturn_brightness = 0
 playerID = 0;
 can_jump = 1
 jump_timer = 0
@@ -26,7 +28,7 @@ check__ = -4
 pressed_space = 0
 o2_timer = 0
 _light_ = -4
-light_timer = 0
+light_timer = 80
 tiredness = 0
 keep_spinning = 0
 

@@ -22,10 +22,10 @@ ele__.destination = 0
 ele__.line_length = 2500
 
 
-var inside_ = instance_create_depth(1888,640,0,pl_practice)
+var inside_ = instance_create_depth(1948,645,0,pl_practice)
 inside_.image_index = 0
 
-var inside_ = instance_create_depth(3151,640,0,pl_practice)
+var inside_ = instance_create_depth(3151,643,0,pl_practice)
 inside_.image_index = 2
 
 

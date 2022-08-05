@@ -3,14 +3,14 @@ depth = 999
 activated = 0
 
 global.platform_speed = 0
-global.room_brightness = 0.2
+global.room_brightness = 0.35
 var laser = instance_create_depth(1097,1112,player.depth-2,block_laser)
 laser.width_ = 16
 laser.x2 = 1097
 laser.y2 = 1112
 laser.direction = 0
 laser.damage_able = 320
-laser.color_ = $FF9F2FED
+laser.color_ = $FF474BE7
 
 
 

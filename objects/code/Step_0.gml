@@ -5,6 +5,7 @@ global.credit_message = "\n\n\n\nDirector\n아버 (1인 개발)\n\n\nProgramer\n
 
 
 
+
 if !audio_is_playing(quake_sfx)
 {
 	if timer_boss_light_sec <= 0
@@ -113,7 +114,7 @@ if global.tiredness > 24
 global.tiredness = 24
 }
 
-if global.n_time >= 21 || global.n_time < 6
+if (global.n_time >= 21 || global.n_time < 6)
 {
 global.n_night = 1
 }

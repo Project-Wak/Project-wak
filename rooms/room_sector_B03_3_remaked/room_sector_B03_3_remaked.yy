@@ -132,7 +132,6 @@
   "creationCodeFile": "",
   "inheritCode": false,
   "instanceCreationOrder": [
-    {"name":"inst_78E5E4D1","path":"rooms/room_sector_B03_3_remaked/room_sector_B03_3_remaked.yy",},
     {"name":"inst_271368E1","path":"rooms/room_sector_B03_3_remaked/room_sector_B03_3_remaked.yy",},
     {"name":"inst_7FE78F4F","path":"rooms/room_sector_B03_3_remaked/room_sector_B03_3_remaked.yy",},
     {"name":"inst_36A240A5","path":"rooms/room_sector_B03_3_remaked/room_sector_B03_3_remaked.yy",},
@@ -241,6 +240,7 @@
     {"name":"inst_5DF85733","path":"rooms/room_sector_B03_3_remaked/room_sector_B03_3_remaked.yy",},
     {"name":"inst_76D950B7","path":"rooms/room_sector_B03_3_remaked/room_sector_B03_3_remaked.yy",},
     {"name":"inst_27425EC","path":"rooms/room_sector_B03_3_remaked/room_sector_B03_3_remaked.yy",},
+    {"name":"inst_78E5E4D1","path":"rooms/room_sector_B03_3_remaked/room_sector_B03_3_remaked.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,

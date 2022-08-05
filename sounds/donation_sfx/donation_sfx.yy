@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "donation_sfx",
-  "duration": 0.5531,
+  "duration": 0.5481,
   "parent": {
     "name": "소리",
     "path": "folders/소리.yy",

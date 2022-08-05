@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "tae_heng.mp3",
-  "duration": 0.5792,
+  "duration": 0.5742,
   "parent": {
     "name": "소리",
     "path": "folders/소리.yy",

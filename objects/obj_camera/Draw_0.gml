@@ -233,7 +233,7 @@ if room != menu && global.playing_scene = 0 && global.story_next < 100 && global
 	draw_text_kl_scale(xx-v_x_*436,yy2-v_x_*130+v_x_*104,"아래 베기[S] (공중)",v_x_*64,-1,__alpha_set*0.7,c_white,0,-1,font0,v_x_*0.3,v_x_*0.3,0);
 	
 
-	draw_text_kl_scale(xx-v_x_*8,yy2-v_x_*200,"(G키로 가이드 열고 닫기)",v_x_*64,-1,__alpha_set,c_white,0,1,font0,v_x_*0.3,v_x_*0.3,0);
+	draw_text_kl_scale(xx-v_x_*8,yy2-v_x_*180,"(G키로 가이드 열고 닫기)",v_x_*64,-1,__alpha_set,c_white,0,1,font0,v_x_*0.3,v_x_*0.3,0);
 	draw_text_kl_scale(xx-v_x_*236,yy2-v_x_*130,"특수 스킬(레이지(Rage) 소모) : ",v_x_*64,-1,__alpha_set,$FF7D47EE,0,-1,font0,v_x_*0.3,v_x_*0.3,0);
 	draw_text_kl_scale(xx-v_x_*236,yy2-v_x_*130+v_x_*32,"레이지 모드 [E 지속 누르기]",v_x_*64,-1,__alpha_set*0.7,c_white,0,-1,font0,v_x_*0.3,v_x_*0.3,0);
 	draw_text_kl_scale(xx-v_x_*236,yy2-v_x_*130+v_x_*80,"특수 능력 (좌/우/하 지속 누르기 + E)",v_x_*64,-1,__alpha_set*0.7,c_white,0,-1,font0,v_x_*0.3,v_x_*0.3,0);
@@ -487,17 +487,17 @@ if global.story_text_alpha > 0
 {
 	if global.story_next = 0
 	{
-	draw_text_kl_scale(camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5,yy+300*v_x_,"어느날, 어느 한 광기의 팬치 박사가 음모를 꿈꾸고",188*v_x_,-1,global.story_text_alpha,c_white,0,0,font0,v_x_/2,v_x_/2,0)
+	draw_text_kl_scale(camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5,yy+300*v_x_,"어느날, 어느 한 광기의 팬치 박사가 음모를 꿈꾸고",188*v_x_,-1,global.story_text_alpha,c_white,0,0,font0,v_x_/2.5,v_x_/2.5,0)
 	}
 	
 	if global.story_next = 1
 	{
-	draw_text_kl_scale(camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5,yy+300*v_x_,string(global.nickname)+"의 모습을 본딴 '왁드로이드'와 함께 로봇 병기를 제작하여\n세계를 위협하려 하고...",188*v_x_,-1,global.story_text_alpha,c_white,0,0,font0,v_x_/2,v_x_/2,0)
+	draw_text_kl_scale(camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5,yy+300*v_x_,string(global.nickname)+"의 모습을 본딴 '왁드로이드'와 함께 로봇 병기를 제작하여\n세계를 위협하려 하고...",188*v_x_,-1,global.story_text_alpha,c_white,0,0,font0,v_x_/2.5,v_x_/2.5,0)
 	}
 	
 	if global.story_next = 2
 	{
-	draw_text_kl_scale(camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5,yy+300*v_x_,string(global.nickname)+"은/는 그 계획을 저지하기 위해\n왁드로이드의 완성 직전, 박사의 연구소로 향했습니다",188*v_x_,-1,global.story_text_alpha,c_white,0,0,font0,v_x_/2,v_x_/2,0)
+	draw_text_kl_scale(camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5,yy+300*v_x_,string(global.nickname)+"은/는 그 계획을 저지하기 위해\n왁드로이드의 완성 직전, 박사의 연구소로 향했습니다",188*v_x_,-1,global.story_text_alpha,c_white,0,0,font0,v_x_/2.5,v_x_/2.5,0)
 	}
 }
 

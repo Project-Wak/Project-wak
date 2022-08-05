@@ -143,60 +143,74 @@ poison_alpha += (-0.01 - poison_alpha)*0.1
 if global.poison_tuto = 0 && room = room_sector_B06_2
 {
 global.show_guide_mes_spr = 5
-global.show_guide_mes = "상태 이상(디버프) - 독\n\n디버프 상태에 걸리게 될경우,\n체력이 1이 남을때 까지 지속적으로 체력이 닳는다.\n(상태 이상은 특정 아이템을 사용하거나 사망 혹은 수면 시에만 해제된다)"
+global.show_guide_mes = "상태 이상(디버프) - 독\n\n체력이 1이 남을때 까지 지속적으로 체력이 닳는다.\n(상태 이상은 특정 아이템을 사용하거나 사망 혹은 수면 시에만 해제된다)"
 global.poison_tuto = 1
 }
 
 
 
-if global.room_brightness/(global.n_night+1) <= 0.35 && room != room_sector_outside && image_alpha > 0 && global.visible_player = 1
+if image_alpha > 0 && global.visible_player = 1
 {
+	if keyboard_check_pressed(ord("F")) && global.playing_scene = 0 && global.never_move = 0
+	{
+	var sfx = audio_play_sound(change_etc,0,0)
+	audio_sound_gain(sfx,0.02*global.master_volume*2*global.sfx_volume,0)
+	lenturn_turnon *= -1
+	}
+	
 	if global.lenturn = 1
 	{
-		if !instance_exists(_light_)
+		if lenturn_turnon = 1
 		{
-		_light_ = instance_create_depth(x,y,depth,obj_light)
-		_light_.p_id = id
-		_light_.alpha = 0
-		_light_.sprite_index = sprite64
-		_light_.image_blend = $FF4EB0F7
-		_light_.light_type = 0
-		_light_.image_xscale = 0
-		_light_.image_yscale = 0
+			if !instance_exists(_light_)
+			{
+			_light_ = instance_create_depth(x,y,depth,obj_light)
+			_light_.p_id = id
+			_light_.alpha = 0
+			_light_.sprite_index = sprite64
+			_light_.image_blend = $FF4EB0F7
+			_light_.light_type = 0
+			_light_.image_xscale = 5.2
+			_light_.image_yscale = 5.2
+			}
+			else
+			{
+			light_timer ++
+			_light_.x = player.x
+			_light_.y = player.y
+				if light_timer > 80 && light_timer < 140
+				{
+				_light_.image_xscale += (5.6 - _light_.image_xscale)*0.08
+				_light_.image_yscale += (5.6 - _light_.image_yscale)*0.08
+				lenturn_brightness += (0.5*image_alpha - lenturn_brightness)*0.08
+				_light_.alpha = lenturn_brightness
+				}
+			
+				if light_timer >= 140 && light_timer < 200
+				{
+				_light_.image_xscale += (5.2 - _light_.image_xscale)*0.08
+				_light_.image_yscale += (5.2 - _light_.image_yscale)*0.08
+				lenturn_brightness += (0.4*image_alpha - lenturn_brightness)*0.08
+				_light_.alpha = lenturn_brightness
+				}
+			
+				if light_timer >= 200
+				{
+				light_timer = 80
+				}
+			}
 		}
 		else
 		{
-		light_timer ++
-		_light_.x = player.x
-		_light_.y = player.y
-			if light_timer > 80 && light_timer < 140
+			if instance_exists(_light_)
 			{
-			_light_.image_xscale += (5.6 - _light_.image_xscale)*0.08
-			_light_.image_yscale += (5.6 - _light_.image_yscale)*0.08
-			_light_.alpha += (0.5*image_alpha - _light_.alpha)*0.08
-			}
-			
-			if light_timer >= 140 && light_timer < 200
-			{
-			_light_.image_xscale += (5.2 - _light_.image_xscale)*0.08
-			_light_.image_yscale += (5.2 - _light_.image_yscale)*0.08
-			_light_.alpha += (0.4*image_alpha - _light_.alpha)*0.08
-			}
-			
-			if light_timer >= 200
-			{
-			light_timer = 80
+			lenturn_brightness = 0
+			instance_destroy(_light_)
 			}
 		}
 	}
 }
-else
-{
-	if instance_exists(_light_)
-	{
-	instance_destroy(_light_)
-	}
-}
+
 
 
 
@@ -268,7 +282,7 @@ if global.never_move_in_setting = 0 && global.playing_scene = 0 && global.none_w
 	key_guide.location = -0.75
 	key_guide.img_index = 14
 	
-	global.show_guide_mes = "익스플로전\n\n레이지(Rage)게이지를 대량으로 소비를 하는 매우 강력한 스킬\n시전시, 매우 넓은 범위의 특수 공격을 사용한다."
+	global.show_guide_mes = "익스플로전\n\n레이지를 대량으로 소비 하고 특수 공격을 사용한다."
 	global.show_guide_mes_spr = 4
 
 	global.rage_gauge = 100
@@ -278,7 +292,7 @@ if global.never_move_in_setting = 0 && global.playing_scene = 0 && global.none_w
 	{
 	global.suicide_skill_tuto = 1
 
-	global.show_guide_mes = "할복\n\n체력을 1만큼 남기고 전부 소비하는 스킬\n시전시, 플레이어 사망 전까지 레이지 모드 상태가 지속된다."
+	global.show_guide_mes = "할복\n\n체력을 1로 고정하고, 사망 or 섹터 클리어 전까지 레이지 모드 지속"
 	global.show_guide_mes_spr = 5
 	var key_guide = instance_create_depth(-100,-100,-999994,draw_key_)
 	key_guide.location = 0.75
@@ -294,7 +308,7 @@ if global.never_move_in_setting = 0 && global.playing_scene = 0 && global.none_w
 	global.rage_gauge = 100
 	global.energy_laser = 1
 	
-	global.show_guide_mes = "에네르기파\n\n레이지(Rage)게이지를 대량으로 소비를 하는 매우 강력한 스킬\n1레벨 이상 강화된 모든 둔기류 무기를 들고있을때 사용 가능하며,\n시전시, 넓은 범위의 특수 공격을 사용한다"
+	global.show_guide_mes = "에네르기파\n\n레이지를 대량으로 소비하고, 특수 공격을 사용한다 \n(1레벨 이상 강화된 광선검 무기를 들고있을때 사용 가능)"
 	global.show_guide_mes_spr = 4
 	var key_guide = instance_create_depth(-100,-100,-999994,draw_key_)
 	key_guide.location = 0.75

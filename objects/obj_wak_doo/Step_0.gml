@@ -162,11 +162,7 @@ cannot_step = 1
 	_ef.hspeed = irandom_range(-20,20)
 	_ef.vspeed = irandom_range(-4,2)
 	}
-			
-		
-	var a___ = instance_create_depth(x,left_hand.y,depth,rage_mode_knockback_attacked)
-	a___.image_xscale = 3
-	a___.image_yscale = 2.3
+
 		
 	view_shake(11,11,1)
 		repeat(choose(6,7,7,8,8,9,9,9,10,10,11,12))
@@ -227,21 +223,13 @@ cannot_step = 1
 	test_mob.mob_var = -6
 	
 	give_item(0,6)
-	var random_drop_ = percentage_k(50)
-	if random_drop_ = 1
-	{
-	give_item(0,0)
-	}
-	else
-	{
-	give_item(0,1)
-	}
+	give_item(0,2)
 	
 	global.gold += 8000
 	global.left_time += 6*global.time_plusment
 		if global.killed_first_boss = 0
 		{
-		global.show_guide_mes = "보스 레이드\n\n보스 몹을 잡게 되면, 왁드로이드의 완성을 늦출수 있다.\n보스를 잡을때 마다 D-day가 6시간씩 연장되며\n(쉬움 난이도의 경우 12시간씩 연장된다)\n\n보스 클리어시 다음 구역으로 이동할수 있게 해주는 '키카드'를 드랍한다.\n\n(참고로, 보스는 여러번 반복해서 잡을수 있다)"
+		global.show_guide_mes = "보스 레이드\n\n보스를 처치하면 왁드로이드의 완성이 늦춰진다 (D-day "+string(6*global.time_plusment)+"시간 연장)\n\n또한 다음 섹터의 '키카드'를 드랍한다.\n\n(참고로, 보스는 여러번 반복해서 잡을수 있는데, 플레이 타임 길어짐 유의)"
 		global.show_guide_mes_spr = 4
 		global.killed_first_boss = 1
 		}
@@ -611,7 +599,7 @@ activated = 2
 			laser1.direction = 180-_dir*30
 			}
 			laser1.damage_able = 220
-			laser1.color_ = $FF9F2FED
+			laser1.color_ = $FF474BE7
 			laser1.image_alpha = 0
 			}
 			else
@@ -643,7 +631,7 @@ activated = 2
 			laser2.direction = 180-_dir*30
 			}
 			laser2.damage_able = 220
-			laser2.color_ = $FF9F2FED
+			laser2.color_ = $FF474BE7
 			laser2.image_alpha = 0
 			}
 			else

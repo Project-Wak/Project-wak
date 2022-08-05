@@ -53,7 +53,7 @@ draw_text_kl_scale(x,y-50*image_yscale,real_text,16,9999,image_alpha,image_blend
 	time_cal += 24
 	}
 
-	if time_cal >= 21 || time_cal <= 7
+	if time_cal >= 21 || time_cal < 6
 	{
 	n_night__ = 1
 	}

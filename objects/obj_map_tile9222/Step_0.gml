@@ -4,13 +4,13 @@
 if player.y > 580
 {
 var cal_ = (0.4-(player.y-580)*0.0004)
-	if cal_ > 0.05
+	if cal_ > 0.15
 	{
 	global.room_brightness = cal_
 	}
 	else
 	{
-	global.room_brightness = 0.05
+	global.room_brightness = 0.15
 	}
 }
 else

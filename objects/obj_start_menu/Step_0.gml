@@ -238,11 +238,14 @@ wheel_cooltime --
 }
 else
 {
-global.room_brightness = 0.2
+global.room_brightness = 0.35
 timer ++
 	if global.b_alpha < 1 && !instance_exists(brightness_setting___)
 	{
+	first_guide_timer = 0
 	instance_create_depth(x,y,-9998,brightness_setting___)
+	var arrow__ = instance_create_depth(510,270,light_code.depth+15,brightness_setting_wall)
+	
 	var arrow__ = instance_create_depth(510,270,light_code.depth+5,obj_hint_arrow)
 	arrow__.image_angle = 45
 	arrow__.image_xscale = 2
@@ -261,6 +264,7 @@ timer ++
 	set_brightness = 1
 	instance_destroy(brightness_setting___)
 	instance_destroy(obj_hint_arrow)
+	instance_destroy(brightness_setting_wall)
 	}
 	
 	if keyboard_check_pressed(ord(string(global.skip_key)))
@@ -270,6 +274,7 @@ timer ++
 	set_brightness = 1
 	instance_destroy(brightness_setting___)
 	instance_destroy(obj_hint_arrow)
+	instance_destroy(brightness_setting_wall)
 	}
 	
 }

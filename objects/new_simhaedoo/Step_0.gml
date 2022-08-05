@@ -77,8 +77,8 @@ _light_.alpha = 0
 _light_.sprite_index = sprite64
 _light_.image_blend = $FF4EB0F7
 _light_.light_type = 0
-_light_.image_xscale = 0
-_light_.image_yscale = 0
+_light_.image_xscale = 5.2
+_light_.image_yscale = 5.2
 }
 else
 {

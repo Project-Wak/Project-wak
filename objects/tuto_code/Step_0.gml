@@ -76,7 +76,7 @@ if global.show_credits = 0
 	key_guide.location = 0
 	key_guide.img_index = 15
 
-	global.show_guide_mes = "회전베기("+string(global.q_key)+")\n\n적의 총알을 향해 회전 베기를 사용하면 총알을 도탄 시킬 수 있다.\n이때, 터렛의 경우, 도탄된 총알을 맞게 되면 막대한 데미지를 입게된다."
+	global.show_guide_mes = "회전베기("+string(global.q_key)+")\n\n적의 총알을 향해 회전 베기를 사용하면 총알을 도탄 시킬 수 있다.\n이때, 총알을 쏜 적이 도탄된 총알을 맞게 되면 막대한 데미지를 입게 된다."
 	global.show_guide_mes_spr = 4
 	}
 
@@ -133,7 +133,7 @@ if global.show_credits = 0
 	var key_guide = instance_create_depth(-100,-100,-999994,draw_key_)
 	key_guide.location = 2.8
 	key_guide.img_index = 27
-	global.show_guide_mes = "회피 및 가드\n\n가드시 상대 공격의 공격력에 비례하여 체력 대신 스테미나가 소모되며,\n스테미나가 부족한 경우, 가드가 되지 않는다.\n\n또한 적의 공격을 가드후, 즉시 "+string(global.a_key)+"키(일반공격)를 누르면, 패링이 된다.\n\n구르기시, 대부분의 공격을 피할수 있지만,\n너무 연속적으로 사용하게 되면 스테미나가 소모된다.\n\n또한, 기절 상태가 되었을때, 땅 위에서 '구르기' 혹은 'Space키'를 눌러주면\n빠르게 기절 상태를 캔슬할 수 있다."
+	global.show_guide_mes = "회피 및 가드\n\n가드 - 데미지에 비례하여 스테미나를 소모한다 (스테미나 부족시 가드 불가)\n\n패링 - 적의 공격을 가드후, 즉시 "+string(global.a_key)+"키(일반공격)\n\n구르기 - 대부분의 공격을 회피 가능 (연속적으로 사용시 스테미나 대량 소모)\n\n일어나기 - 공격을 받아 쓰러졌을 경우, 땅 위에서 구르기 or 가드 or 점프로\n빠르게 일어날 수 있다."
 	global.show_guide_mes_spr = 3
 	}
 
@@ -174,7 +174,7 @@ if global.show_credits = 0
 
 	message_phase = 23
 
-	global.show_guide_mes = "레이지 모드("+string(global.e_key)+")\n\n레이지 모드는 왼쪽 상단의 Rage가 풀인 경우 사용 가능하며,\n레이지 모드 시전시, 일시적으로 스테미나 회복 속도가 대폭 증가한다.\n또한, 이동속도 증가 및 공격 속도가 증가한다."
+	global.show_guide_mes = "레이지 모드("+string(global.e_key)+")\n\n왼쪽 상단의 Rage가 풀인 경우 사용 가능,\n시전시, 일시적 스테미나 회복 속도가 대폭 증가 / 공중에서의 스킬 사용 가능 횟수 +1.\n또한, 이동속도 증가 및 공격 속도가 증가한다."
 	global.show_guide_mes_spr = 4
 	}
 

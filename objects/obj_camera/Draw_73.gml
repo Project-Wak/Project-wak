@@ -10,7 +10,7 @@ var v_x_ = obj_camera.v_x/1280
 
 	if global.playing_scene > 0
 	{
-	var std_value = 80
+	var std_value = 44
 
 	
 
@@ -18,7 +18,7 @@ var v_x_ = obj_camera.v_x/1280
 		{
 		global.playing_scene_black_bg ++
 		}
-	global.playing_scene_black_bg += (std_value - global.playing_scene_black_bg)*0.1
+	global.playing_scene_black_bg += (std_value - global.playing_scene_black_bg)*0.05
 	}
 	else
 	{
@@ -26,12 +26,12 @@ var v_x_ = obj_camera.v_x/1280
 		{
 		global.playing_scene_black_bg --
 		}
-	global.playing_scene_black_bg += (-1 - global.playing_scene_black_bg)*0.1
+	global.playing_scene_black_bg += (-1 - global.playing_scene_black_bg)*0.05
 	}
 
 	if global.playing_scene_black_bg > 0
 	{
-	draw_set_alpha(1)
+	draw_set_alpha(global.playing_scene_black_bg/(std_value))
 	draw_set_color(c_black)
 	draw_rectangle(xx-32,yy-32,xx+xxx+32,yy-32+global.playing_scene_black_bg*v_x_,0)
 	draw_rectangle(xx-32,yy+yyy+32,xx+xxx+32,yy+yyy+32-global.playing_scene_black_bg*v_x_,0)

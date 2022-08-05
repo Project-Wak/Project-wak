@@ -241,18 +241,7 @@ global.slow_motion += global.slow_motion*0.03
 		global.back_to_origin_stage = 2
 		alarm[5] = 300
 		}
-		
-		if global.story_next > 100
-		{
-		global.clock = 0
-		global.broken_clock = 0
-		global.platform_speed = 0
-		room_goto(room_sector_outside)
-		player.x = 160
-		player.y = 1154
-		global.back_to_origin_stage = 2
-		alarm[5] = 300
-		}
+
 	
 		var _revive_xx = -4
 		var _revive_yy = -4
@@ -300,7 +289,7 @@ global.slow_motion += global.slow_motion*0.03
 			if instance_exists(obj_wak_doo)
 			{
 			
-			global.room_brightness = 0.2
+			global.room_brightness = 0.35
 			obj_wak_doo.hp = obj_wak_doo.max_hp
 			obj_wak_doo.x = 2816
 			obj_wak_doo.y = 800+500
@@ -324,7 +313,7 @@ global.slow_motion += global.slow_motion*0.03
 			if instance_exists(obj_messi)
 			{
 			
-			global.room_brightness = 0.2
+			global.room_brightness = 0.35
 			obj_messi.hp = obj_messi.max_hp
 			obj_messi.x = obj_messi.xstart
 			obj_messi.y = obj_messi.ystart+500
@@ -408,7 +397,7 @@ global.slow_motion += global.slow_motion*0.03
 			if instance_exists(obj_simhae_doo)
 			{
 			
-			global.room_brightness = 0.2
+			global.room_brightness = 0.35
 			obj_simhae_doo.image_xscale = -abs(obj_simhae_doo.image_xscale)
 			obj_simhae_doo.hp = obj_simhae_doo.max_hp
 			obj_simhae_doo.x = obj_simhae_doo.xstart
@@ -432,7 +421,7 @@ global.slow_motion += global.slow_motion*0.03
 			if instance_exists(obj_guisangadoo)
 			{
 			
-			global.room_brightness = 0.2
+			global.room_brightness = 0.35
 			obj_guisangadoo.image_xscale = -abs(obj_guisangadoo.image_xscale)
 			obj_guisangadoo.hp = obj_guisangadoo.max_hp
 			obj_guisangadoo.x = obj_guisangadoo.xstart
@@ -460,7 +449,7 @@ global.slow_motion += global.slow_motion*0.03
 			if instance_exists(obj_twin_eye)
 			{
 			
-			global.room_brightness = 0.2
+			global.room_brightness = 0.35
 			obj_twin_eye.hp = obj_twin_eye.max_hp
 			obj_twin_eye.timer = 0
 			instance_destroy(obj_twin_eye_another)

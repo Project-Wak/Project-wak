@@ -8,7 +8,13 @@ if global.fps_draw > 1
 global.fps_draw = 0
 }
 
-show_debug_overlay(global.fps_draw)
+var _aaa__ = 0
+if global.noclip > 0
+{
+_aaa__ = 1
+}
+
+show_debug_overlay(sign(global.fps_draw+_aaa__))
 
 var sfx = audio_play_sound(message_sfx,0,0)
 audio_sound_gain(sfx,0.1*global.master_volume*2*global.sfx_volume,0)

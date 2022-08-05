@@ -21,11 +21,16 @@ draw_sprite_ext(sprite_index,image_index,xx+global.brightness_setting*200*_c_x,y
 
 if global.brightness_setting > 0.5
 {
-draw_text_kl_scale(xx+220*_c_x,yy-10*_c_x,string(global.brightness_setting*100)+"% (과한 밝기는 게임 분위기를 해칠수 있습니다)",64*_c_x,9999,0.8,image_blend,0,-1,font0,1/3*_c_x,1/3*_c_x,image_angle)
+var __caution = ""
+	if global.brightness_setting > 0.85
+	{
+	__caution = "(과한 밝기는 게임 분위기를 해칠수 있습니다)"
+	}
+draw_text_kl_scale(xx+220*_c_x,yy-10*_c_x,string(round(global.brightness_setting*100))+"%"+string(__caution),64*_c_x,9999,0.8,image_blend,0,-1,font0,1/3*_c_x,1/3*_c_x,image_angle)
 }
 else
 {
-draw_text_kl_scale(xx+220*_c_x,yy-10*_c_x,string(global.brightness_setting*100)+"%",64*_c_x,9999,0.8,image_blend,0,-1,font0,1/3*_c_x,1/3*_c_x,image_angle)
+draw_text_kl_scale(xx+220*_c_x,yy-10*_c_x,string(round(global.brightness_setting*100))+"%",64*_c_x,9999,0.8,image_blend,0,-1,font0,1/3*_c_x,1/3*_c_x,image_angle)
 }
 
 draw_text_kl_scale(xx-128*_c_x,yy-10*_c_x,"화면 밝기",16,9999,0.8,image_blend,0,-1,font0,1/3*_c_x,1/3*_c_x,image_angle)

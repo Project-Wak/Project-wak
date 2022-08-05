@@ -130,7 +130,7 @@ global.playing_scene = 1
 			
 				if global.first_sleep = 0
 				{
-				global.show_guide_mes = "시간 시스템\n\n시간의 경우, 시간대 마다 npc나 맵의 요소가 바뀔수 있다.\n\n특히 밤의 경우, 몬스터들이 더욱 강력해지고,\n연구소 전체가 절전 상태가 되어 어두워지니 조심하자\n또한 D-day가 모두 지나게 되어 왁드로이드가 완성되게 되면,\n'완전한 게임오버'가 된다."
+				global.show_guide_mes = "시간\n\n시간대 마다 npc나 맵의 요소가 바뀐다.\n밤에는 몬스터들이 더욱 강력해지고, 연구소 전체가 어두워지니 조심하자\n또한, D-day가 모두 지나 왁드로이드가 완성되면, 게임오버가 된다."
 				global.show_guide_mes_spr = 0
 				global.first_sleep = 1
 				}

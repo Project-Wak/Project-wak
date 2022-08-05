@@ -352,7 +352,7 @@ player.x += (x-90 - player.x)*0.1
 			
 		if !instance_exists(check__) && message_phase = 33
 		{
-		global.show_guide_mes = "피로도와 수면 시스템\n\n피로도의 경우, 시간이 지날 때마다 증가하게 되며\n피로도가 18이상이 된 경우, 플레이어의 최대 체력이 줄어들게 된다.\n이때 피로도는, 플레이어가 수면을 취함으로써 회복할수 있다.\n\n(참고로 침대와 상호작용하면 게임이 저장되니 저장이 필요하면 이용하자)"
+		global.show_guide_mes = "피로도와 수면 시스템\n\n피로도의 경우, 시간이 지날 때마다 증가하게 되며\n피로도가 18이상이 된 경우, 플레이어의 최대 체력이 줄어들게 된다.\n이때 피로도는, 플레이어가 수면을 취함으로써 회복할수 있다.\n\n(참고로 침대와 상호작용해야 게임이 저장되니 수시로 이용하자)"
 		global.show_guide_mes_spr = 0
 		global.tutorial = 1
 		message_phase = 0
@@ -499,7 +499,7 @@ player.x += (x-90 - player.x)*0.1
 				{
 				image_index = 0
 				check__ = instance_create_depth(x,y,depth-1,player_message)
-				check__.text = "어두운 곳에 접근하게 되면, 장비로서 착용하지 않아도 자동으로 불이 켜질 거야"
+				check__.text = "장비로서 착용하지 않아도 F키를 눌러 사용할 수 있어"
 				check__.target = id
 				check__.parents = id
 				}

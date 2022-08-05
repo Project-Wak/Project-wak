@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "guitar_chigi.mp3",
-  "duration": 6.5561,
+  "duration": 6.5511,
   "parent": {
     "name": "소리",
     "path": "folders/소리.yy",

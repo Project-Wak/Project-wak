@@ -6,7 +6,7 @@ if player.attack_laser_sec = 0 && player.attack_laser = 0 && player.suicide = 0 
 {
 	if !instance_exists(obj_simhae_doo) && !instance_exists(obj_guisangadoo)
 	{
-	global.room_brightness = 0.05
+	global.room_brightness = 0.15
 	obj_camera.tv_x = 1280*0.76
 	obj_camera.tv_y = 720*0.76
 	}
@@ -14,14 +14,14 @@ if player.attack_laser_sec = 0 && player.attack_laser = 0 && player.suicide = 0 
 	{
 		if instance_exists(obj_simhae_doo) && obj_simhae_doo.activated = 0
 		{
-		global.room_brightness = 0.05
+		global.room_brightness = 0.15
 		obj_camera.tv_x = 1280*0.76
 		obj_camera.tv_y = 720*0.76
 		}
 	
 		if instance_exists(obj_guisangadoo) && obj_guisangadoo.activated = 0
 		{
-		global.room_brightness = 0.05
+		global.room_brightness = 0.15
 		obj_camera.tv_x = 1280*0.76
 		obj_camera.tv_y = 720*0.76
 		}
@@ -48,7 +48,7 @@ global.show_guide_mes_spr = 3
 	}
 	else
 	{
-	global.show_guide_mes = "투사체 회피\n\n플레이어를 타깃팅하여 날라오는 투사체들의 경우,\n달리기와 구르기를 섞어 도망다니면 쉽게 피할 수 있다."
+	global.show_guide_mes = "투사체 회피\n\n플레이어를 타깃팅하여 날라오는 투사체들은\n달리기와 구르기를 섞어 도망다니면 쉽게 피할 수 있다."
 	}
 mes ++
 }

@@ -1,6 +1,12 @@
 /// @description Insert description here
 // You can write your code in this editor
+if place_meeting(x,y,obj_blinded_wall)
+{
+depth = player.depth+15
+}
+
 yy += (t_y - yy)*0.1
+
 
 
 if place_meeting(x,y,player) && player.cannot_move = 0 && global.never_move = 0 && global.playing_scene = 0 && global.b_alpha < 0.1 && global.never_move_in_setting = 0
@@ -24,7 +30,7 @@ if can_interect = 1 && keyboard_check_pressed(ord(string(global.skip_key))) && t
 //var sfx = audio_play_sound(activate_sfx,0,0)
 //audio_sound_gain(sfx,global.master_volume*2*global.sfx_volume,0)
 t_y = -64
-	if room = room_sector_B06_2
+	if room != room_sector_B03_2_remaked && room != room_sector_B03_3_remaked
 	{
 	var	sfx__ = audio_play_sound(walk_sfx,0,false)
 	audio_sound_gain(sfx__,0.3,0)
@@ -81,7 +87,7 @@ if t_y = -64
 }
 
 
-if cre_shadow = 1 && global.b_alpha < 0.7 && global.t_b_alpha <= 0
+if cre_shadow = 1 && global.b_alpha < 0.7 && global.t_b_alpha <= 0 && room = room_sector_B06_2
 {
 var test_mob = instance_create_depth(58,571,player.depth+3,gumseong_shadow)
 test_mob.test_mob_type = 0

@@ -55,5 +55,5 @@ if abs(player.x-2805) <= 32 && show_mes = 1 && global.show_credits = 0
 {
 show_mes++
 global.show_guide_mes_spr = 6
-global.show_guide_mes = "왠지 미리 장비 세팅 및 게임 저장을 하는게 좋을 것 같다"
+global.show_guide_mes = "왠지 미리 장비 세팅 및 게임 저장을 하는게 좋을 것 같다 (스테이지 나가기[P])"
 }
