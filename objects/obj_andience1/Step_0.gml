@@ -561,7 +561,7 @@ interecting_now = 1
 story = 0
 }
 
-if global.tutorial = 1 && abs(x - player.x) <= 600 && global.item_owned[6] > 0 && global.lenturn = 0
+if global.tutorial = 1 && abs(x - player.x) <= 600 && global.item_owned[6] > 0 && global.lantern = 0
 {
 global.playing_scene = 1
 global.never_move = 1

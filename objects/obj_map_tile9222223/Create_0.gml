@@ -22,8 +22,7 @@ mes = 0
 
 //var door__ = instance_create_depth(920,166,0,obj_tp_door_basement)
 //door__.connected_with = 5
-
-
+alarm[0] = 60
 
 global.platform_speed = 0
 

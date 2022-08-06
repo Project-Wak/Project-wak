@@ -20,7 +20,11 @@ if global.b_alpha >= 1
 ball_timer = 440
 }
 
+if global.never_move = 0
+{
 ball_timer++
+}
+
 if ball_timer > 500 && instance_exists(obj_twin_eye)
 {
 	if (player.x > 3650 && player.y > 686 && player.x < 5609)
@@ -28,13 +32,13 @@ if ball_timer > 500 && instance_exists(obj_twin_eye)
 	var test_mob = instance_create_depth(4889-64,356,player.depth+3,obj_ball)
 	test_mob.test_mob_type = 1
 	show_debug_message("ball created2")
+	ball_timer = 320
 	}
 	else
 	{
 	var test_mob = instance_create_depth(3919,-100,player.depth+3,obj_ball)
 	test_mob.test_mob_type = 1
 	show_debug_message("ball created1")
+	ball_timer = 0
 	}
-
-ball_timer = 0
 }

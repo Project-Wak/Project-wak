@@ -4,3 +4,6 @@ depth = 1001
 image_alpha = 0.3
 image_speed = 0
 image_index = 0
+
+image_xscale = 1.3
+image_yscale = 1.3

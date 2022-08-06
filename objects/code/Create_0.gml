@@ -423,7 +423,7 @@ global.difficulty = -4
 global.time_plusment = 1
 	
 //연승
-global.lenturn = 0
+global.lantern = 0
 	
 	
 var total_weapon = 8

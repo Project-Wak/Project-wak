@@ -16,6 +16,12 @@ ele__.line_length = 2500
 var droped_item__ = instance_create_depth(3295,0,0,obj_droped_item)
 droped_item__.item_var = 108
 
+var warning_guide = instance_create_depth(2713,2261,0,obj_warning)
+warning_guide.warning_message = "이 앞, 점프 유효하다"
+
+var warning_guide = instance_create_depth(2624,1344,0,obj_warning)
+warning_guide.warning_message = "'움직이는 그림자' 주의"
+
 
 
 var door__ = instance_create_depth(2331,1398,0,obj_tp_door_basement)

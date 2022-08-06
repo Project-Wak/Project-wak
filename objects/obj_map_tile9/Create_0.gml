@@ -16,6 +16,7 @@ player.y = 2300
 obj_camera.x = 160
 obj_camera.y = 2300
 
+alarm[0] = 5
 
 
 var door__ = instance_create_depth(1573,2200,0,obj_tp_door_basement)

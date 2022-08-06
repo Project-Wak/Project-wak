@@ -124,7 +124,7 @@ patturn = 0
 	audio_sound_gain(a___,0.12*global.master_volume*2*global.sfx_volume,0)
 
 	dead_scene = 0
-	var test_mob = instance_create_depth(xstart-500,ystart+200,player.depth+3,mob_spawn_here)
+	var test_mob = instance_create_depth(6000,ystart+280,player.depth+3,mob_spawn_here)
 	test_mob.t_y = -900
 	test_mob.mob_type = obj_twin_eye
 	test_mob.xscale = 1.1
@@ -256,7 +256,7 @@ else
 	
 			if saved_real_x = -4
 			{
-			global.save_point_x = xstart-500
+			global.save_point_x = xstart-250
 			global.save_point_y = player.y
 			saved_real_x = xstart
 			saved_real_y = y

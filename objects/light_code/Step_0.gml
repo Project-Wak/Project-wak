@@ -27,21 +27,21 @@ if global.night_vision != 0
 //화면 밝기
 if surface_exists(global.light_surf) && global.night_vision = 0
 {
-var _pl_lenturn = 0
+var _pl_lantern = 0
 if instance_exists(player)
 {
-	if player.lenturn_turnon < 0
+	if player.lantern_turnon < 0
 	{
-	_pl_lenturn = -1
+	_pl_lantern = -0.5
 	}
 	else
 	{
-	_pl_lenturn = player.lenturn_brightness
+	_pl_lantern = player.lantern_brightness
 	}
 }
 surface_set_target(global.light_surf);
 gpu_set_blendmode(bm_add);
-draw_sprite_ext(sprite173,2,0,0,60,60,0,$ffffff,_pl_lenturn*0.05+global.room_brightness*global.brightness_setting*2.5/(global.n_night+1))
+draw_sprite_ext(sprite173,2,0,0,60,60,0,$ffffff,_pl_lantern*0.15+global.room_brightness*global.brightness_setting*2.5/(global.n_night+1))
 gpu_set_blendmode(bm_normal);
 surface_reset_target()
 }

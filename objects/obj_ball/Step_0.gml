@@ -100,14 +100,14 @@ for(var i = 0; i <= 32; i++)
 
 repeat(100)
 {
-	if place_meeting(x,y+1,floor_parents)
+	if place_meeting(x,y+0.5,floor_parents)
 	{
 	check_on_floor = 1
 	gravity = 0
 	vspeed = 0
 		if obj_twin_eye.patturn != 0
 		{
-		y -= 1
+		y -= 0.5
 		}
 		else
 		{
@@ -138,9 +138,16 @@ else
 		sfx_for_multiplayer(down_attack_sfx,1,0.3)
 		sfx_for_multiplayer(guard,1,0.07)
 		sfx_for_multiplayer(mob_faint,1,0.2)
+		
+			repeat(8)
+			{
+			var _ef = instance_create_depth(x,y+30,depth-1,effect_spark)
+			_ef.hspeed = irandom_range(-20,20)
+			_ef.vspeed = irandom_range(-4,2)
+			}
 		}
 		
-		if vspeed > 2 && abs(hspeed) > 7
+		if vspeed > 0.5
 		{
 		view_shake(11,10,1)
 	
@@ -149,25 +156,20 @@ else
 		effect_.t_image_xscale = 0.05*3
 		effect_.received = 0
 		
-			repeat(8)
-			{
-			var _ef = instance_create_depth(x,y+60,depth-1,effect_spark)
-			_ef.hspeed = irandom_range(-20,20)
-			_ef.vspeed = irandom_range(-4,2)
 			
-				repeat(choose(6,7,7,8,8,9,9,9,10,10,11,12))
-				{
-				randomize()
-				var random_target = id
-				var dust = instance_create_depth(random_target.x+irandom_range(-5,5),random_target.y+irandom_range(-5,5),random_target.depth-1,pepsi_effect_received)
-				var scale = irandom_range(20,40)/50
-				dust.image_xscale = scale
-				dust.image_yscale = scale
-				dust.vspeed = irandom_range(-50,50)/25
-				dust.hspeed = irandom_range(-50,50)/25
-				dust.image_alpha = 1
-				}
+			repeat(choose(6,7,7,8,8,9,9,9,10,10,11,12))
+			{
+			randomize()
+			var random_target = id
+			var dust = instance_create_depth(random_target.x+irandom_range(-5,5),random_target.y+irandom_range(-5,5),random_target.depth-1,pepsi_effect_received)
+			var scale = irandom_range(20,40)/50
+			dust.image_xscale = scale
+			dust.image_yscale = scale
+			dust.vspeed = irandom_range(-50,50)/25
+			dust.hspeed = irandom_range(-50,50)/25
+			dust.image_alpha = 1
 			}
+			
 		}
 		
 	
@@ -178,13 +180,13 @@ else
 var ins_pl = instance_place(x,y+5,stair_parents)
 if instance_exists(ins_pl)
 {
-	if abs(hspeed) <= 33
+	if abs(hspeed) <= 12
 	{
-	hspeed -= sign(ins_pl.image_xscale)*0.2
+	hspeed -= sign(ins_pl.image_xscale)*0.5
 	}
 	else
 	{
-	hspeed = 33*sign(hspeed)
+	hspeed = 12*sign(hspeed)
 	}
 }
 image_angle -= hspeed

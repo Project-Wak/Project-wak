@@ -34,6 +34,10 @@ droped_item__.item_var = 3
 
 
 
+var warning_guide = instance_create_depth(770,172,0,obj_warning)
+warning_guide.warning_message = "이 앞, 점프 유효하다"
+
+
 
 var test_mob = instance_create_depth(950,384,player.depth+3,mob_spawn_here)
 test_mob.t_y = -900

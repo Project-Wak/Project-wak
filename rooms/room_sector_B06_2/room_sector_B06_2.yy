@@ -123,7 +123,6 @@
   "creationCodeFile": "",
   "inheritCode": false,
   "instanceCreationOrder": [
-    {"name":"inst_1BFB7D1D","path":"rooms/room_sector_B06_2/room_sector_B06_2.yy",},
     {"name":"inst_3D40D9B4","path":"rooms/room_sector_B06_2/room_sector_B06_2.yy",},
     {"name":"inst_961F5EA","path":"rooms/room_sector_B06_2/room_sector_B06_2.yy",},
     {"name":"inst_77E78685","path":"rooms/room_sector_B06_2/room_sector_B06_2.yy",},
@@ -222,6 +221,7 @@
     {"name":"inst_63BE57DC","path":"rooms/room_sector_B06_2/room_sector_B06_2.yy",},
     {"name":"inst_9B95D7B","path":"rooms/room_sector_B06_2/room_sector_B06_2.yy",},
     {"name":"inst_7E549BBD","path":"rooms/room_sector_B06_2/room_sector_B06_2.yy",},
+    {"name":"inst_1BFB7D1D","path":"rooms/room_sector_B06_2/room_sector_B06_2.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,

@@ -140,27 +140,22 @@ if global.poisoning = 0
 poison_alpha += (-0.01 - poison_alpha)*0.1
 }
 
-if global.poison_tuto = 0 && room = room_sector_B06_2
-{
-global.show_guide_mes_spr = 5
-global.show_guide_mes = "상태 이상(디버프) - 독\n\n체력이 1이 남을때 까지 지속적으로 체력이 닳는다.\n(상태 이상은 특정 아이템을 사용하거나 사망 혹은 수면 시에만 해제된다)"
-global.poison_tuto = 1
-}
 
 
 
 if image_alpha > 0 && global.visible_player = 1
 {
-	if keyboard_check_pressed(ord("F")) && global.playing_scene = 0 && global.never_move = 0
+	if global.lantern = 1
 	{
-	var sfx = audio_play_sound(change_etc,0,0)
-	audio_sound_gain(sfx,0.02*global.master_volume*2*global.sfx_volume,0)
-	lenturn_turnon *= -1
-	}
+		if keyboard_check_pressed(ord("F")) && global.playing_scene = 0 && global.never_move = 0
+		{
+		var sfx = audio_play_sound(change_etc,0,0)
+		audio_sound_gain(sfx,0.02*global.master_volume*2*global.sfx_volume,0)
+		lantern_turnon *= -1
+		}
 	
-	if global.lenturn = 1
-	{
-		if lenturn_turnon = 1
+
+		if lantern_turnon = 1
 		{
 			if !instance_exists(_light_)
 			{
@@ -182,16 +177,16 @@ if image_alpha > 0 && global.visible_player = 1
 				{
 				_light_.image_xscale += (5.6 - _light_.image_xscale)*0.08
 				_light_.image_yscale += (5.6 - _light_.image_yscale)*0.08
-				lenturn_brightness += (0.5*image_alpha - lenturn_brightness)*0.08
-				_light_.alpha = lenturn_brightness
+				lantern_brightness += (0.5*image_alpha - lantern_brightness)*0.08
+				_light_.alpha = lantern_brightness
 				}
 			
 				if light_timer >= 140 && light_timer < 200
 				{
 				_light_.image_xscale += (5.2 - _light_.image_xscale)*0.08
 				_light_.image_yscale += (5.2 - _light_.image_yscale)*0.08
-				lenturn_brightness += (0.4*image_alpha - lenturn_brightness)*0.08
-				_light_.alpha = lenturn_brightness
+				lantern_brightness += (0.4*image_alpha - lantern_brightness)*0.08
+				_light_.alpha = lantern_brightness
 				}
 			
 				if light_timer >= 200
@@ -204,7 +199,7 @@ if image_alpha > 0 && global.visible_player = 1
 		{
 			if instance_exists(_light_)
 			{
-			lenturn_brightness = 0
+			lantern_brightness = 0
 			instance_destroy(_light_)
 			}
 		}
@@ -1815,7 +1810,7 @@ w_alpha += (-0.01 - w_alpha)*0.1
 				var ins_near = instance_nearest(x,y,obj_ball)
 					if instance_exists(ins_near) && point_distance(x,y,ins_near.x,ins_near.y) <= 200
 					{
-					movement_speed = ins_near.hspeed*0.5
+					movement_speed = ins_near.hspeed
 					hp_minus_for_player(225,_placed_obj)
 					}
 					

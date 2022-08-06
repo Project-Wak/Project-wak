@@ -118,7 +118,7 @@ audio_sound_gain(sfx,0.07*global.master_volume*2*global.sfx_volume,0)
 		}
 		else if (argument0 = "/test" || argument0 = "/tb")
 		{
-		global.lenturn = 1
+		global.lantern = 1
 		room_goto(room_sector_outside)
 		}
 		else if (argument0 = "/br" || argument0 = "/blur")
@@ -131,22 +131,22 @@ audio_sound_gain(sfx,0.07*global.master_volume*2*global.sfx_volume,0)
 		}
 		else if (argument0 = "/test2" || argument0 = "/ts2")
 		{
-		global.lenturn = 1
+		global.lantern = 1
 		room_goto(room_sector_B03_2_remaked)
 		}
 		else if (argument0 = "/test3" || argument0 = "/ts3")
 		{
-		global.lenturn = 1
+		global.lantern = 1
 		room_goto(room_sector_B03_3_remaked)
 		}
 		else if (argument0 = "/b07" || argument0 = "/B07")
 		{
-		global.lenturn = 1
+		global.lantern = 1
 		room_goto(room_sector_B07)
 		}
 		else if (argument0 = "/ending" || argument0 = "/end")
 		{
-		global.lenturn = 1
+		global.lantern = 1
 		instance_create_depth(2994,2331,depth,obj_wakdroid_ending)
 		player.x = 2800
 		player.image_xscale = 1

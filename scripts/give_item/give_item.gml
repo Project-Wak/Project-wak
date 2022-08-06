@@ -139,7 +139,7 @@ function give_item(argument0,argument1)
 	else if argument0 = 3
 	{
 	chat_up("'랜턴'을 획득하였다!")
-	global.lenturn = 1
+	global.lantern = 1
 	}
 	else
 	{

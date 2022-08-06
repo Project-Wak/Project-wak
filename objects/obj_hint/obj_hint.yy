@@ -1,10 +1,11 @@
 {
   "spriteId": {
-    "name": "Sprite210",
-    "path": "sprites/Sprite210/Sprite210.yy",
+    "name": "Sprite294",
+    "path": "sprites/Sprite294/Sprite294.yy",
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {

@@ -115,7 +115,7 @@ function save_and_load_data(argument0,argument1)
 	ini_write_real("n_time","a",global.n_time);
 	
 	//현재 시각
-	ini_write_real("lenturn","a",global.lenturn);
+	ini_write_real("lantern","a",global.lantern);
 	
 	
 	//현재 시각
@@ -266,7 +266,7 @@ function save_and_load_data(argument0,argument1)
 	global.real_ending = ini_read_real("real_ending","a",0);
 	
 	//연승
-	global.lenturn = ini_read_real("lenturn","a",0);
+	global.lantern = ini_read_real("lantern","a",0);
 	
 	//현재 시각
 	global.super_easy = ini_read_real("super_easy","a",1);

@@ -69,47 +69,58 @@ direction += (point_direction(x,y,player.x,player.y) - direction)*0.03
 }
 
 
-if !instance_exists(_light_)
+
+var s_x = camera_get_view_x(view_camera[0])
+var s_y = camera_get_view_y(view_camera[0])
+//var s_w = camera_get_view_width(view_camera[0])
+//var s_h = camera_get_view_height(view_camera[0])
+
+
+
+if surface_exists(global.light_surf)
 {
-_light_ = instance_create_depth(x,y,depth,obj_light)
-_light_.p_id = id
-_light_.alpha = 0
-_light_.sprite_index = sprite64
-_light_.image_blend = $FF4EB0F7
-_light_.light_type = 0
-_light_.image_xscale = 5.2
-_light_.image_yscale = 5.2
+surface_set_target(global.light_surf)
+gpu_set_blendmode(bm_add);
+var xx = x - s_x
+var yy = y - s_y
+
+	for(var i = 3; i <= 20; i += 0.5)
+	{
+	//var alpha_ = image_alpha/i
+	var alpha_ = (__light_alpha/i)*image_alpha
+	var color = $FF4EB0F7
+	draw_sprite_ext(sprite64,0,xx,yy,__light_image_xscale/i,__light_image_yscale/i,floor(image_angle),color,alpha_)
+	}
+gpu_set_blendmode(bm_normal)
+surface_reset_target()
+}
+	
+light_timer ++
+
+if timer < 60
+{
+	if (light_timer > 80 && light_timer < 140)
+	{
+	__light_image_xscale += (5.6 - __light_image_xscale)*0.08
+	__light_image_yscale += (5.6 - __light_image_yscale)*0.08
+	__light_alpha += (image_alpha*0.5 - __light_alpha)*0.08
+	}
+			
+	if (light_timer >= 140 && light_timer < 200)
+	{
+	__light_image_xscale += (5.2 - __light_image_xscale)*0.08
+	__light_image_yscale += (5.2 - __light_image_yscale)*0.08
+	__light_alpha += (image_alpha*0.4 - __light_alpha)*0.08
+	}
 }
 else
 {
-light_timer ++
-_light_.x = x
-_light_.y = y
-	if timer < 60
-	{
-		if (light_timer > 80 && light_timer < 140)
-		{
-		_light_.image_xscale += (5.6 - _light_.image_xscale)*0.08
-		_light_.image_yscale += (5.6 - _light_.image_yscale)*0.08
-		_light_.alpha += (image_alpha*0.5 - _light_.alpha)*0.08
-		}
+__light_image_xscale += (5.2 - __light_image_xscale)*0.08
+__light_image_yscale += (5.2 - __light_image_yscale)*0.08
+__light_alpha += (0 - __light_alpha)*0.08
+}
 			
-		if (light_timer >= 140 && light_timer < 200)
-		{
-		_light_.image_xscale += (5.2 - _light_.image_xscale)*0.08
-		_light_.image_yscale += (5.2 - _light_.image_yscale)*0.08
-		_light_.alpha += (image_alpha*0.4 - _light_.alpha)*0.08
-		}
-	}
-	else
-	{
-	_light_.image_xscale += (5.2 - _light_.image_xscale)*0.08
-	_light_.image_yscale += (5.2 - _light_.image_yscale)*0.08
-	_light_.alpha += (0 - _light_.alpha)*0.08
-	}
-			
-	if light_timer >= 200
-	{
-	light_timer = 80
-	}
+if light_timer >= 200
+{
+light_timer = 80
 }

@@ -16,6 +16,9 @@ ele__.line_length = 2500
 cre_gumseong = 0
 
 
+var warning_guide = instance_create_depth(484,1803,0,obj_warning)
+warning_guide.warning_message = "거대한 공 주의"
+
 
 //var test_mob = instance_create_depth(2016,1344,player.depth+3,mob_spawn_here)
 //test_mob.image_yscale = 0.1
@@ -26,7 +29,7 @@ cre_gumseong = 0
 //test_mob.mob_var = obj_lilla
 //test_mob.image_yscale = 0.4
 
-var droped_item__ = instance_create_depth(3967,478,0,obj_droped_item)
+var droped_item__ = instance_create_depth(3578,1361,0,obj_droped_item)
 droped_item__.item_var = 117
 
 
@@ -66,4 +69,4 @@ global.platform_speed = 0
 
 
 
-ball_timer = 0
+ball_timer = 440
