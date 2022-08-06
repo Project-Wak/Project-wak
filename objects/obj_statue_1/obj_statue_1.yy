@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_stetue290291292293",
-    "path": "sprites/spr_stetue290291292293/spr_stetue290291292293.yy",
+    "name": "spr_stetue290",
+    "path": "sprites/spr_stetue290/spr_stetue290.yy",
   },
   "solid": false,
   "visible": true,
@@ -37,7 +37,7 @@
     "path": "folders/객체/map_edit.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_stetue_4",
+  "name": "obj_statue_1",
   "tags": [],
   "resourceType": "GMObject",
 }

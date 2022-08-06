@@ -4,6 +4,4 @@
 //	global.show_guide_mes_spr = 4
 //instance_create_depth(player.x,player.y-300,player.depth,fire_turret)
 
-var _achievement = instance_create_depth(x,y,depth,bg_achievement)
-_achievement.text = "test message!"
-_achievement.icon_num = 0
+instance_create_depth(player.x,player.y,depth,bangal_tree)

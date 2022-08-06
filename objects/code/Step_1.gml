@@ -209,7 +209,8 @@ global.slow_motion += global.slow_motion*0.03
 		global.w_alpha = 0
 		global.used_suicide_skill = 0
 		global.already_aed_used = 0
-		global.can_use_sylinge = 1
+		global.can_use_sylinge1 = global.max_sylinge1_use
+		global.can_use_sylinge2 = global.max_sylinge2_use
 		global.rage_gauge = 0
 		global.clock_alpha = -1
 		global.t_clock_alpha = -1
@@ -230,6 +231,10 @@ global.slow_motion += global.slow_motion*0.03
 		global.boss_target = -4
 		global.gameover_reason = -4
 		global.total_died ++
+		
+		obj_camera.alarm[2] = 30
+
+		
 		save_and_load_data(1,0)
 		
 		if instance_exists(obj_wakdroid_ending) && !instance_exists(obj_last_boss)

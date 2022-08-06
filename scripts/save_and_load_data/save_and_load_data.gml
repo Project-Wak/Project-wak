@@ -122,7 +122,12 @@ function save_and_load_data(argument0,argument1)
 	ini_write_real("super_easy","a",global.super_easy);
 	
 	
-		for(var i = 0; i < 2; i++)
+	//현재 시각
+	ini_write_real("max_sylinge1_use","a",global.max_sylinge1_use);
+	ini_write_real("max_sylinge2_use","a",global.max_sylinge2_use);
+	
+	
+		for(var i = 0; i <= 2; i++)
 		{
 		//탈리스만 장착 유무
 		ini_write_real("accessories_equip",string(i),global.accessories_equip[i])
@@ -271,6 +276,10 @@ function save_and_load_data(argument0,argument1)
 	//현재 시각
 	global.super_easy = ini_read_real("super_easy","a",1);
 	
+	//현재 시각
+	global.max_sylinge1_use = ini_read_real("max_sylinge1_use","a",1);
+	global.max_sylinge2_use = ini_read_real("max_sylinge2_use","a",1);
+	
 	for(var i = 0; i <= global.total_weapon_num; i++)
 	{
 	//웨폰 보유 유무
@@ -287,7 +296,7 @@ function save_and_load_data(argument0,argument1)
 	global.accessories_owned[0] = 1
 	global.accessories_owned[1] = 1
 	
-	for(var i = 0; i < 2; i++)
+	for(var i = 0; i <= 2; i++)
 	{
 	//탈리스만 장착 유무
 	global.accessories_equip[i] = ini_read_real("accessories_equip",string(i),1)

@@ -3,7 +3,7 @@
 
 var _c_x = obj_camera.v_x/1280
 var xx = camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5-250*_c_x
-var yy = camera_get_view_y(view_camera[0])+(400-10+accesssory_num*128)*_c_x
+var yy = camera_get_view_y(view_camera[0])+(360-10+accesssory_num*100)*_c_x
 
 if (pressed > 0 && global.key_setting_message > 0) || global.key_setting_message = 0
 {
@@ -53,7 +53,7 @@ if (pressed > 0 && global.key_setting_message > 0) || global.key_setting_message
 	if cal__img = 5
 	{
 	item_name__ = "보라색 리본"
-	item_desc__ = "주르르의 리본\n\n특수효과 : 방어력 10% 증가 및 최대 체력 100만큼 증가"
+	item_desc__ = "주르르의 리본\n\n특수효과 : 방어력 10% 증가 및 최대 체력 50만큼 증가"
 	}
 	if cal__img = 6
 	{
@@ -63,7 +63,7 @@ if (pressed > 0 && global.key_setting_message > 0) || global.key_setting_message
 	if cal__img = 7
 	{
 	item_name__ = "파란 머리핀"
-	item_desc__ = "고세구의 머리핀\n\n특수효과 : 방어력 10% 증가 및 최대 체력 100만큼 증가"
+	item_desc__ = "고세구의 머리핀\n\n특수효과 : 방어력 10% 증가 및 최대 체력 50만큼 증가"
 	}
 	if cal__img = 8
 	{
@@ -97,8 +97,13 @@ if (pressed > 0 && global.key_setting_message > 0) || global.key_setting_message
 	}
 	if cal__img = 14
 	{
-	item_name__ = "긴급 치료제"
-	item_desc__ = "전투 도중 'R키'를 눌러 사용가능한 치료제\n\n특수효과 : 최대 체력의 50%만큼 회복 및 상태 이상 해제 (각 전투당 1회 사용가능)"
+	var etc_mes = ""
+		if global.max_sylinge1_use > 1
+		{
+		etc_mes = "(+"+string(global.max_sylinge1_use-1)+")"
+		}
+	item_name__ = "뱅갈나무 에스트 병"+string(etc_mes)
+	item_desc__ = "뱅갈나무 잎을 우려낸 물, 실제로 우려내서 먹진 말자\n전투 도중 'R키'를 눌러 사용가능하다.\n\n특수효과 : 최대 체력의 50%만큼 회복 및 상태 이상 해제 (각 전투당 1회 사용가능)"
 	}
 	if cal__img = 15
 	{
@@ -108,17 +113,17 @@ if (pressed > 0 && global.key_setting_message > 0) || global.key_setting_message
 	if cal__img = 16
 	{
 	item_name__ = "깨진 하트 크리스탈 (좌)"
-	item_desc__ = "깨진 하트 크리스탈의 왼쪽 부분\n\n특수효과 : 최대 체력 200만큼 증가"
+	item_desc__ = "깨진 하트 크리스탈의 왼쪽 부분\n\n특수효과 : 최대 체력 100만큼 증가"
 	}
 	if cal__img = 17
 	{
 	item_name__ = "깨진 하트 크리스탈 (우)"
-	item_desc__ = "깨진 하트 크리스탈의 오른쪽 부분\n\n특수효과 : 최대 체력 200만큼 증가"
+	item_desc__ = "깨진 하트 크리스탈의 오른쪽 부분\n\n특수효과 : 최대 체력 100만큼 증가"
 	}
 	if cal__img = 18
 	{
 	item_name__ = "하트 크리스탈"
-	item_desc__ = "특수효과 : 최대 체력 450만큼 증가"
+	item_desc__ = "특수효과 : 최대 체력 150만큼 증가"
 	}
 	if cal__img = 19
 	{
@@ -127,7 +132,7 @@ if (pressed > 0 && global.key_setting_message > 0) || global.key_setting_message
 	}
 	
 	draw_text_kl_scale(xx+50*_c_x-global.key_setting_message*_c_x*70,yy-16*_c_x+global.key_setting_message*_c_x*80,item_name__,16,999,0.74,image_blend,0,-1,font0,1/3.5*_c_x,1/3.5*_c_x,image_angle)
-	draw_text_kl_scale(xx+50*_c_x-global.key_setting_message*_c_x*70,yy+global.key_setting_message*_c_x*80,item_desc__,54*_c_x,2300*_c_x,0.4,image_blend,0,-1,font0,1/4*_c_x,1/4*_c_x,image_angle)
+	draw_text_kl_scale(xx+50*_c_x-global.key_setting_message*_c_x*70,yy+global.key_setting_message*_c_x*80,item_desc__,60*_c_x,2300*_c_x,0.4,image_blend,0,-1,font0,1/4*_c_x,1/4*_c_x,image_angle)
 	if accesssory_num = 0
 	{
 	draw_text_kl_scale(xx-24*_c_x,yy-70*_c_x,"장비 중인 탈리스만",16,999,0.8,image_blend,0,-1,font0,1/3*_c_x,1/3*_c_x,image_angle)

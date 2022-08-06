@@ -124,39 +124,39 @@ player.guard_sprite = pl_move_skeleton_guard
 		
 		
 //탈리스만
-global.clock = sign(check_equipment(global.accessories_equip[0]/2)+check_equipment(global.accessories_equip[1]/2))
+global.clock = sign(check_equipment(global.accessories_equip[0]/2)+check_equipment(global.accessories_equip[1]/2)+check_equipment(global.accessories_equip[2]/2))
 
-global.lockon = sign(check_equipment(global.accessories_equip[0]/3)+check_equipment(global.accessories_equip[1]/3))
+global.lockon = sign(check_equipment(global.accessories_equip[0]/3)+check_equipment(global.accessories_equip[1]/3)+check_equipment(global.accessories_equip[2]/3))
 		
-global.metal_shirts = sign(check_equipment(global.accessories_equip[0]/4)+check_equipment(global.accessories_equip[1]/4))
+global.metal_shirts = sign(check_equipment(global.accessories_equip[0]/4)+check_equipment(global.accessories_equip[1]/4)+check_equipment(global.accessories_equip[2]/4))
 		
-global.ribon = sign(check_equipment(global.accessories_equip[0]/5)+check_equipment(global.accessories_equip[1]/5))
+global.ribon = sign(check_equipment(global.accessories_equip[0]/5)+check_equipment(global.accessories_equip[1]/5)+check_equipment(global.accessories_equip[2]/5))
 
-global.burger = sign(check_equipment(global.accessories_equip[0]/6)+check_equipment(global.accessories_equip[1]/6))
+global.burger = sign(check_equipment(global.accessories_equip[0]/6)+check_equipment(global.accessories_equip[1]/6)+check_equipment(global.accessories_equip[2]/6))
 		
-global.hairpin = sign(check_equipment(global.accessories_equip[0]/7)+check_equipment(global.accessories_equip[1]/7))
+global.hairpin = sign(check_equipment(global.accessories_equip[0]/7)+check_equipment(global.accessories_equip[1]/7)+check_equipment(global.accessories_equip[2]/7))
 		
-global.flag_enc = sign(check_equipment(global.accessories_equip[0]/8)+check_equipment(global.accessories_equip[1]/8))
+global.flag_enc = sign(check_equipment(global.accessories_equip[0]/8)+check_equipment(global.accessories_equip[1]/8)+check_equipment(global.accessories_equip[2]/8))
 		
-global.automatic_guard_plus = sign((check_equipment(global.accessories_equip[0]/9)+check_equipment(global.accessories_equip[1]/9)))*7
+global.automatic_guard_plus = sign((check_equipment(global.accessories_equip[0]/9)+check_equipment(global.accessories_equip[1]/9)+check_equipment(global.accessories_equip[2]/9)))*7
 		
-global.idol_shoes = sign(check_equipment(global.accessories_equip[0]/10)+check_equipment(global.accessories_equip[1]/10))
+global.idol_shoes = sign(check_equipment(global.accessories_equip[0]/10)+check_equipment(global.accessories_equip[1]/10)+check_equipment(global.accessories_equip[2]/10))
 	
-global.blue_flag = sign(check_equipment(global.accessories_equip[0]/11)+check_equipment(global.accessories_equip[1]/11))
+global.blue_flag = sign(check_equipment(global.accessories_equip[0]/11)+check_equipment(global.accessories_equip[1]/11)+check_equipment(global.accessories_equip[2]/11))
 	
-global.diamond_sword = sign(check_equipment(global.accessories_equip[0]/12)+check_equipment(global.accessories_equip[1]/12))
+global.diamond_sword = sign(check_equipment(global.accessories_equip[0]/12)+check_equipment(global.accessories_equip[1]/12)+check_equipment(global.accessories_equip[2]/12))
 
-global.aed = sign(check_equipment(global.accessories_equip[0]/13)+check_equipment(global.accessories_equip[1]/13))
+global.aed = sign(check_equipment(global.accessories_equip[0]/13)+check_equipment(global.accessories_equip[1]/13)+check_equipment(global.accessories_equip[2]/13))
 
-global.medical_slincer1 = sign(check_equipment(global.accessories_equip[0]/14)+check_equipment(global.accessories_equip[1]/14))
+global.medical_slincer1 = sign(check_equipment(global.accessories_equip[0]/14)+check_equipment(global.accessories_equip[1]/14)+check_equipment(global.accessories_equip[2]/14))
 
-global.medical_slincer2 = sign(check_equipment(global.accessories_equip[0]/15)+check_equipment(global.accessories_equip[1]/15))
+global.medical_slincer2 = sign(check_equipment(global.accessories_equip[0]/15)+check_equipment(global.accessories_equip[1]/15)+check_equipment(global.accessories_equip[2]/15))
 
-global.heart_crystal1 = sign(check_equipment(global.accessories_equip[0]/16)+check_equipment(global.accessories_equip[1]/16))
+global.heart_crystal1 = sign(check_equipment(global.accessories_equip[0]/16)+check_equipment(global.accessories_equip[1]/16)+check_equipment(global.accessories_equip[2]/16))
 
-global.heart_crystal2 = sign(check_equipment(global.accessories_equip[0]/17)+check_equipment(global.accessories_equip[1]/17))
+global.heart_crystal2 = sign(check_equipment(global.accessories_equip[0]/17)+check_equipment(global.accessories_equip[1]/17)+check_equipment(global.accessories_equip[2]/17))
 
-global.heart_crystal3 = sign(check_equipment(global.accessories_equip[0]/18)+check_equipment(global.accessories_equip[1]/18))
+global.heart_crystal3 = sign(check_equipment(global.accessories_equip[0]/18)+check_equipment(global.accessories_equip[1]/18)+check_equipment(global.accessories_equip[2]/18))
 
 
 if global.n_sword != 6
@@ -179,7 +179,7 @@ global.critical_plus += global.blue_flag*0.15+global.diamond_sword*0.1
 
 if instance_exists(player)
 {
-player.max_hp = 1000+(global.heart_crystal1*200+global.heart_crystal2*200+global.heart_crystal3*450+global.ribon*100+global.hairpin*100+global.add_max_hp*50)
+player.max_hp = 1000+(global.heart_crystal1*100+global.heart_crystal2*100+global.heart_crystal3*150+global.ribon*50+global.hairpin*50+global.add_max_hp*50)
 }
 
 

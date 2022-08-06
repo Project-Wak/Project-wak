@@ -104,7 +104,8 @@ global.playing_scene = 1
 			
 			global.used_suicide_skill = 0
 			global.already_aed_used = 0
-			global.can_use_sylinge = 1
+			global.can_use_sylinge1 = global.max_sylinge1_use
+			global.can_use_sylinge2 = global.max_sylinge2_use
 			global.rage_gauge = 0
 			global.poisoning = 0
 			global.hp = player.max_hp

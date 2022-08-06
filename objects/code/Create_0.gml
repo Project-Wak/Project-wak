@@ -128,7 +128,10 @@ global.free_stamina = 0
 global.night_vision = 0
 global.gold_draw_alpha = 0
 global.super_easy = 1
-global.can_use_sylinge = 0
+global.can_use_sylinge1 = 0
+global.can_use_sylinge2 = 0
+global.max_sylinge1_use = 1
+global.max_sylinge2_use = 1
 global.got_sec_phase = 0
 global.gumseong_tuto = 0
 global.real_ending = 0
@@ -444,7 +447,7 @@ global.accessories_owned[i] = 0
 }
 
 	
-for(var i = 0; i < 2; i++)
+for(var i = 0; i <= 2; i++)
 {
 //탈리스만 장착 유무
 global.accessories_equip[i] = 0

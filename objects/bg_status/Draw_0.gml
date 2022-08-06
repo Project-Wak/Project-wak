@@ -248,5 +248,5 @@ yy_for_total_achievement = 0
 draw_text_k_scale(xx+wid*0.6,yy+_c_x*(-64-yy_for_total_achievement*0.65),"총 달성한 도전과제",200,-1,0.8,c_white,0,0,font_title,_c_x/7,_c_x/7,0)
 draw_text_k_scale(xx+wid*0.6,yy+_c_x*(-32-yy_for_total_achievement*0.65),string(cleared_achievement)+"/20",200,-1,0.8,c_white,0,0,font_title,_c_x/8,_c_x/8,0)
 
-draw_text_k_scale(xx+wid-_c_x*64,yy+hei-_c_x*64,"(마우스 휠을 통해 둘러보기 / 아무키나 눌러 나가기)",200,-1,0.8,c_white,0,1,font_title,_c_x/7,_c_x/7,0)
+draw_text_k_scale(xx+wid-_c_x*256,yy,"(마우스 휠을 통해 둘러보기)",200,-1,0.8,c_white,0,1,font_title,_c_x/7,_c_x/7,0)
 }

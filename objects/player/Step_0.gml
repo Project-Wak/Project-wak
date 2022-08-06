@@ -4,6 +4,15 @@ keep_spinning --
 global.stamina_cooltime = -keep_spinning
 }
 
+if global.used_suicide_skill >= 1
+{
+global.rage_gauge = 100
+	if global.hp > 1
+	{
+	global.hp = 1
+	}
+}
+
 
 if can_jump != 1
 {
@@ -577,29 +586,40 @@ skill_combo_cancle_n_motion(0)
 
 	if global.never_move = 0 && global.playing_scene = 0 && cannot_move = 0 && global.never_move_in_setting = 0
 	{
-		if (global.medical_slincer1 > 0 || global.medical_slincer2 > 0) && global.can_use_sylinge > 0
+		if (global.medical_slincer2 > 0) && global.can_use_sylinge2 > 0
 		{
 			if keyboard_check_pressed(ord("R")) || gamepad_button_check_pressed(0,gp_shoulderlb)
 			{
 			global.poisoning = 0
 			sfx_for_multiplayer(medical_sylinge_sfx,0,0.1)
-			global.can_use_sylinge = 0
+			global.can_use_sylinge2 = 0
+			w_alpha = 2
+
+				if global.medical_slincer2 > 0
+				{
+				global.awakening = 2
+				}
+			}
+		}
+		
+		if (global.medical_slincer1 > 0) && global.can_use_sylinge1 > 0
+		{
+			if keyboard_check_pressed(ord("R")) || gamepad_button_check_pressed(0,gp_shoulderlb)
+			{
+			global.poisoning = 0
+			sfx_for_multiplayer(medical_sylinge_sfx,0,0.1)
+			global.can_use_sylinge1 --
 			w_alpha = 2
 				if global.medical_slincer1 > 0
 				{
 				global.hp += max_hp/2
 				var d_ef = instance_create_depth(player.x,player.y-64,depth-1,draw_hp_m)
-				var text__ = "+"+string(max_hp/2)
+				var text__ = "+"+string(max_hp/2)+" (남은 횟수 : "+string(global.can_use_sylinge1)+")"
 				d_ef.d_text = text__
 				d_ef.image_blend = $FF82FF90
 				d_ef.image_xscale = 1.2
 				d_ef.image_yscale = 1.2
 				d_ef.target = -4
-				}
-				
-				if global.medical_slincer2 > 0
-				{
-				global.awakening = 2
 				}
 			}
 		}
@@ -4964,7 +4984,6 @@ if attack_laser > 0 && spin_attack = 0
 		if attack_laser > 12.4
 		{
 		hp_minus_for_player(0,self)
-		global.hp = 1
 		global.used_suicide_skill = 1
 		global.awakening = 2
 		attack_laser_sfx = 0

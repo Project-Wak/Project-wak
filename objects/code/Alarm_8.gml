@@ -16,6 +16,9 @@ if global.key_setting_message = 0
 	var __aaa = instance_create_depth(x,y,-9999,bg_status_accessory)
 	__aaa.accesssory_num = 1
 	
+	var __aaa = instance_create_depth(x,y,-9999,bg_status_accessory)
+	__aaa.accesssory_num = 2
+	
 	var __aaa = instance_create_depth(x,y,-9999,bg_status_guidebook)
 	__aaa.accesssory_num = 0
 	instance_create_depth(x,y,-9999,suicide_option)

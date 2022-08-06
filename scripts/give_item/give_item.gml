@@ -71,7 +71,7 @@ function give_item(argument0,argument1)
 		
 		if _cal__ = 14
 		{
-		chat_up("탈리스만 '긴급 치료제'를 획득하였다!")
+		chat_up("탈리스만 '뱅갈나무 에스트 병'를 획득하였다!")
 		}
 		
 		if _cal__ = 15
