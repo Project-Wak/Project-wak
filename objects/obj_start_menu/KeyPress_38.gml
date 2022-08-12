@@ -8,9 +8,4 @@ if set_brightness = 1
 	var sfx_ = audio_play_sound(message_sfx,0,0)
 	audio_sound_gain(sfx_,0.05*global.master_volume*2*global.sfx_volume,0)
 	}
-	
-	if global.show_achievement > 0
-	{
-	global.achievement_tyy -= 128
-	}
 }

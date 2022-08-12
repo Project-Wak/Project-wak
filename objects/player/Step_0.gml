@@ -3372,7 +3372,7 @@ global.awakening = 0
 
 if global.never_move = 0 && global.never_move_in_setting = 0 && keyboard_check_released(ord(string(global.e_key))) && w_alpha < 0.17 && global.chat_activity = false
 {
-	if on_floor != true && (global.accessories_equip[0] = 19 || global.accessories_equip[1] = 19)
+	if on_floor != true && (global.accessories_equip[0] = 19 || global.accessories_equip[1] = 19 || global.accessories_equip[2] = 19)
 	{
 	//지진파 
 	//show_debug_message(string(cannot_move)+" / "+string(spin)+" / "+string(down_attack_plusing)+" / "+string(hurt)+" / "+string(global.rage_gauge)+" / "+string(hurt_little)+" / ")

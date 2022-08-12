@@ -4,6 +4,16 @@ global.credit_message = "\n\n\n\nDirector\n아버 (1인 개발)\n\n\nProgramer\n
 }
 
 
+if global.back_to_origin_stage = 2 && global.b_alpha < 0.1
+{
+global.back_to_origin_stage = 0
+}
+
+if global.b_alpha >= 1 && global.n_night = 0 && instance_exists(player)
+{
+player.lantern_turnon = -1
+}
+
 
 
 if !audio_is_playing(quake_sfx)
@@ -197,7 +207,7 @@ var saved_c = 0
 }
 
 
-if (global.accessories_equip[0] > 1 || global.accessories_equip[1] > 1) && global.first_rewind = 0 && instance_exists(player) && global.b_alpha < 0.1
+if (global.accessories_equip[0] = 2 || global.accessories_equip[1] = 2) && global.first_rewind = 0 && instance_exists(player) && global.b_alpha < 0.1
 {
 global.show_guide_mes = "Re:wind (사망 회귀) 시스템\n\n플레이어가 사망하게 된 경우, 1시간씩 시간을 소모하여\n사망 전의 과거(일종의 세이브 포인트)로 되돌린다.\n\n(이때의 시간 소모는, 게임 내의 '목숨'과 같은 시스템이라고 볼수 있다)"
 global.show_guide_mes_spr = 0

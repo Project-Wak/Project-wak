@@ -244,7 +244,6 @@ global.slow_motion += global.slow_motion*0.03
 		player.x = 1213
 		player.y = 734
 		global.back_to_origin_stage = 2
-		alarm[5] = 300
 		}
 
 	
@@ -263,7 +262,6 @@ global.slow_motion += global.slow_motion*0.03
 		player.x = 1213
 		player.y = 662
 		global.back_to_origin_stage = 2
-		alarm[5] = 300
 		}
 		else
 		{

@@ -42,8 +42,8 @@ if (pressed > 0 && global.key_setting_message > 0) || global.key_setting_message
 	var item_desc__ = "'"+string(global.g_key)+"키'를 눌러 스킬 조작키 가이드를 상시 띄워둘수 있다."
 	if cal__img = 1
 	{
-	item_name__ = "가이드 북 1번 - 레이지 모드"
-	item_desc__ = string(global.e_key)+"키를 지속적으로 누르고 있으면 '레이지 모드'가 발동된다.\n레이지 모드 시전시, 몇십초간 스테미나가 매우 빠르게 회복된다."
+	item_name__ = "가이드 북 1번 - 레이레 모드"
+	item_desc__ = string(global.e_key)+"키를 지속적으로 누르고 있으면 '레이지 모드'가 발동된다.\n 레이지 모드 시전시, 몇십초간 스테미나가 매우 빠르게 회복된다."
 	}
 	if cal__img = 2
 	{
@@ -68,7 +68,7 @@ if (pressed > 0 && global.key_setting_message > 0) || global.key_setting_message
 	if cal__img = 6
 	{
 	item_name__ = "가이드 북 6번 - 히든몹(검성의 그림자)"
-	item_desc__ = "검성의 그림자는 플레이어를 흉내내는 매우 강력한 몹이지만, 굳이 처치 하지 않고도 게임 진행이 가능하다.\n다만, 검성의 그림자를 처치 할 경우 '특수한 무기'를 드랍한다.\n\n(tip : 검성의 그림자가 레이지 모드[분노 모드]를 사용하는 경우\n 가능한 레이지모드가 끝날 때까지 도망다니자)"
+	item_desc__ = "검성의 그림자는 플레이어를 흉내내는 매우 강력한 몹이지만, 굳이 처치 하지 않고도 게임 진행이 가능하다.\n다만, 검성의 그림자를 처치 할 경우 '특수한 무기'를 드랍한다.\n\n(tip : 검성의 그림자가 레이지 모드를 사용하는 경우\n 가능한 레이지 모드가 끝날 때까지 도망다니자)"
 	}
 	if cal__img = 7
 	{
@@ -98,7 +98,7 @@ if (pressed > 0 && global.key_setting_message > 0) || global.key_setting_message
 	if cal__img = 12
 	{
 	item_name__ = "가이드 북 12번 - 익스플로전"
-	item_desc__ = "'양손 광선검'무기에 붙어 있는 특수 스킬로, 키보드 방향키 '상'을 누르고 있는 동시에 "+string(global.e_key)+"키를 눌러 사용할 수 있다.\n(단, 왼쪽 상단의 Rage(분노)게이지가 80%~90%정도 충전 되어 있어야 한다)"
+	item_desc__ = "'양손 광선검'무기에 붙어 있는 특수 스킬로, 키보드 방향키 '상'을 누르고 있는 동시에 "+string(global.e_key)+"키를 눌러 사용할 수 있다.\n(단, 왼쪽 상단의 Rage(레이지)게이지가 80%~90%정도 충전 되어 있어야 한다)"
 	}
 	if cal__img = 13
 	{
@@ -108,7 +108,7 @@ if (pressed > 0 && global.key_setting_message > 0) || global.key_setting_message
 	if cal__img = 14
 	{
 	item_name__ = "가이드 북 14번 - 에네르기파"
-	item_desc__ = "'광선검 유형'의 무기를 1레벨 이상 강화 한경우 사용 할수 있는 스킬로, 키보드 방향키 '좌' 혹은 '우'를 누르고 있는 동시에 "+string(global.e_key)+"키를 눌러 사용할 수 있다.\n(단, 왼쪽 상단의 Rage(분노)게이지가 80%~90%정도 충전 되어 있어야 한다)"
+	item_desc__ = "'광선검 유형'의 무기를 1레벨 이상 강화 한경우 사용 할수 있는 스킬로, 키보드 방향키 '좌' 혹은 '우'를 누르고 있는 동시에 "+string(global.e_key)+"키를 눌러 사용할 수 있다.\n(단, 왼쪽 상단의 Rage(레이지)게이지가 80%~90%정도 충전 되어 있어야 한다)"
 	}
 	if cal__img = 15
 	{

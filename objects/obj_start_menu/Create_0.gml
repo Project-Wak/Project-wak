@@ -12,6 +12,8 @@ sfx = 0
 set_menu_choose = 0
 t_set_menu_choose = 0
 timer_st = 0
+use_keyboard_guide_alpha = 0
+use_keyboard_guide_timer = 0
 
 set_brightness = 0
 brightness_set_alpha = 0

@@ -26,3 +26,8 @@ if set_brightness = 1
 		}
 	}
 }
+
+if go_start < 3
+{
+use_keyboard_guide_timer = 300
+}

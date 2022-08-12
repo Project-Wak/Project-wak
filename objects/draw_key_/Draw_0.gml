@@ -181,7 +181,7 @@ draw_text_kl_scale(xx,yy+85*cm_vx,"올려 베기\n\n\n\n[스테미나 소비]",1
 
 if img_index = 5
 {
-draw_text_kl_scale(xx,yy+85*cm_vx,"레이지 모드\n\n\n\n(레이지(Rage) 풀인 상태로 "+string(global.e_key)+"키 꾹)",16,9999,1,image_blend,0,0,font0,cm_vx*1/3,cm_vx*1/3,image_angle)
+draw_text_kl_scale(xx,yy+85*cm_vx,"레이지 모드\n\n\n\n(왼쪽 상단의 레이지(Rage) 풀인 상태로 "+string(global.e_key)+"키 꾹)",16,9999,1,image_blend,0,0,font0,cm_vx*1/3,cm_vx*1/3,image_angle)
 }
 
 if img_index = 6
@@ -206,7 +206,7 @@ draw_text_kl_scale(xx,yy+85*cm_vx,"돌진베기\n\n\n\n(걷기 or 달리기 도�
 
 if img_index = 12
 {
-draw_text_kl_scale(xx,yy+85*cm_vx,"지진파\n\n\n\n(공중에서 "+string(global.e_key)+")\n\n\n\n[레이지(Rage) 일부 소비]",16,9999,1,image_blend,0,0,font0,cm_vx*1/3,cm_vx*1/3,image_angle)
+draw_text_kl_scale(xx,yy+85*cm_vx,"지진파\n\n\n\n(공중에서 "+string(global.e_key)+")\n\n\n\n[(Rage) 일부 소비]",16,9999,1,image_blend,0,0,font0,cm_vx*1/3,cm_vx*1/3,image_angle)
 }
 
 if img_index = 13

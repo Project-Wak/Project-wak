@@ -24,6 +24,25 @@ first_guide_timer ++
 }
 
 
+if go_start < 3 && start_alpha > 0.5
+{
+	if use_keyboard_guide_timer > 0
+	{
+	use_keyboard_guide_timer ++
+	}
+
+	if keyboard_check_pressed(vk_anykey)
+	{
+	use_keyboard_guide_timer = 0
+	use_keyboard_guide_alpha = 0
+	}
+	
+	if use_keyboard_guide_timer > 300
+	{
+	use_keyboard_guide_alpha += (1 - use_keyboard_guide_alpha)*0.02
+	}
+}
+
 
 
 if set_brightness = 1 && first_guide_timer > 200
@@ -240,16 +259,28 @@ else
 {
 global.room_brightness = 0.35
 timer ++
-	if global.b_alpha < 1 && !instance_exists(brightness_setting___)
+	if global.b_alpha < 1
 	{
 	first_guide_timer = 0
-	instance_create_depth(x,y,-9998,brightness_setting___)
-	var arrow__ = instance_create_depth(510,270,light_code.depth+15,brightness_setting_wall)
+		if set_brightness < 0.5
+		{
+			if !instance_exists(brightness_setting___)
+			{
+			instance_create_depth(x,y,-9998,brightness_setting___)
+			var arrow__ = instance_create_depth(510,270,light_code.depth+15,brightness_setting_wall)
 	
-	var arrow__ = instance_create_depth(510,270,light_code.depth+5,obj_hint_arrow)
-	arrow__.image_angle = 45
-	arrow__.image_xscale = 2
-	arrow__.image_yscale = 2
+			var arrow__ = instance_create_depth(510,270,light_code.depth+5,obj_hint_arrow)
+			arrow__.image_xscale = 2
+			arrow__.image_yscale = 2
+			}
+		}
+		else
+		{
+			if !instance_exists(text_effect_option)
+			{
+			instance_create_depth(x,y,-9999,text_effect_option)
+			}
+		}
 	}
 	
 	if timer > 250 && brightness_set_alpha < 1
@@ -262,19 +293,27 @@ timer ++
 	global.b_alpha = 10
 	global.room_brightness = 0.6
 	set_brightness = 1
+	use_keyboard_guide_timer = 1
 	instance_destroy(brightness_setting___)
 	instance_destroy(obj_hint_arrow)
 	instance_destroy(brightness_setting_wall)
+	instance_destroy(text_effect_option)
 	}
 	
 	if keyboard_check_pressed(ord(string(global.skip_key)))
 	{
-	global.b_alpha = 10
-	global.room_brightness = 0.6
-	set_brightness = 1
 	instance_destroy(brightness_setting___)
 	instance_destroy(obj_hint_arrow)
 	instance_destroy(brightness_setting_wall)
+	instance_destroy(text_effect_option)
+	global.b_alpha = 10
+	global.room_brightness = 0.6
+	brightness_set_alpha = 0
+	use_keyboard_guide_timer = 1
+		if set_brightness < 1
+		{
+		set_brightness += 0.5
+		}
 	}
 	
 }

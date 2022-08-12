@@ -142,7 +142,7 @@ if room != menu && global.playing_scene = 0 && global.story_next < 100 && global
 		{
 		hp__ = "체력"
 		ste__ = "스테미나"
-		rage__ = "분노"
+		rage__ = "레이지"
 		o2 = "산소"
 		}
 	var xx3 = camera_get_view_x(view_camera[0])+v_x_*16

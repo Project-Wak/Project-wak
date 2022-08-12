@@ -22,7 +22,16 @@ if set_brightness = 0
 var alpha_____ = 1 - global.b_alpha
 draw_text_k_scale(xx+wid*0.5,yy+v_x*120,"게임을 플레이 하기 전, 게임 내 밝기 정도를 설정해주세요",99,-1,alpha_____,c_white,0,0,font_title,v_x/5,v_x/5,0)
 draw_text_k_scale(xx+wid*0.5,yy+v_x*160,"화살표와 배경이 구별 가능한 정도로 보임과 동시에 배경은 조금 어두운 정도가 적당합니다",99,-1,alpha_____*0.7,c_white,0,0,font_title,v_x/6,v_x/6,0)
-draw_text_k_scale(xx+wid*0.5,yy+v_x*190,"(잘 모르겠으면 보통(50%)으로 설정해주세요. 나중에 설정에서 변경가능합니다)",99,-1,alpha_____*0.7,c_white,0,0,font_title,v_x/6.5,v_x/6.5,0)
+draw_text_k_scale(xx+wid*0.5,yy+v_x*190,"(잘 모르겠으면 보통(50%)으로 설정해주세요. 나중에 환경 설정에서 변경가능합니다)",99,-1,alpha_____*0.7,c_white,0,0,font_title,v_x/6.5,v_x/6.5,0)
+draw_text_k_scale(xx+wid*0.5,yy+v_x*600,"(설정이 완료되었으면 'D'키를 눌러 넘어갑니다)",99,-1,alpha_____*brightness_set_alpha,c_white,0,0,font_title,v_x/6.5,v_x/6.5,0)
+}
+
+if set_brightness = 0.5
+{
+var alpha_____ = 1 - global.b_alpha
+draw_text_k_scale(xx+wid*0.5,yy+v_x*120,"일부 영어로 표기되는 텍스트들을 전부 한국어로 바꿀까요?",99,-1,alpha_____,c_white,0,0,font_title,v_x/5,v_x/5,0)
+draw_text_k_scale(xx+wid*0.5,yy+v_x*160,"설정 체크시, HP, Stamina, Gold -> 체력, 스테미나, 골드로 표기하며,",99,-1,alpha_____*0.7,c_white,0,0,font_title,v_x/6,v_x/6,0)
+draw_text_k_scale(xx+wid*0.5,yy+v_x*190,"지금 설정하지 않아도 나중에 환경 설정에서 변경가능합니다",99,-1,alpha_____*0.7,c_white,0,0,font_title,v_x/6.5,v_x/6.5,0)
 draw_text_k_scale(xx+wid*0.5,yy+v_x*600,"(설정이 완료되었으면 'D'키를 눌러 넘어갑니다)",99,-1,alpha_____*brightness_set_alpha,c_white,0,0,font_title,v_x/6.5,v_x/6.5,0)
 }
 
@@ -40,6 +49,10 @@ else
 {
 draw_text_k_scale(xx+wid*0.5,yy+v_x*120,"Project Wak",99,-1,start_alpha,c_white,0,0,font_title,v_x*0.7,v_x*0.7,0)
 draw_text_k_scale(xx+wid*0.6,yy+v_x*185,"프로젝트 왁",99,-1,start_alpha,c_white,1,0,font_title,v_x/5,v_x/5,0)
+	if use_keyboard_guide_alpha > 0
+	{
+	draw_text_k_scale(mouse_x+v_x*24,mouse_y+v_x*32,"(키보드 방향키 / D키로 선택)",200,-1,0.8,c_white,0,-1,font_title,v_x/7,v_x/7,0)
+	}
 }
 
 draw_text_k_scale(xx+v_x*16,yy+hei-v_x*32,"-"+string(global.game_ver)+" ver",99,-1,menu_alpha*0.5,c_white,-1,-1,font_title,v_x/7,v_x/7,0)
@@ -56,7 +69,7 @@ if global.korean_text = 1
 {
 message_1 = "게임 시작"
 message_2 = "환경 설정"
-message_5 = "도전 과제"
+message_3 = "도전 과제"
 message_4 = "크레딧"
 message_5 = "문의"
 message_6 = "종료"
@@ -170,7 +183,7 @@ draw_text_k_scale(xx+wid*0.7,yy+v_x*(128-yy_for_total_achievement*0.65),string(c
 
 draw_text_k_scale(xx+wid-v_x*24,yy+hei-v_x*32,"(마우스 휠을 통해 둘러보기 / 아무키나 눌러 나가기)",200,-1,0.8,c_white,0,1,font_title,v_x/7,v_x/7,0)
 
-	if (keyboard_check_pressed(vk_anykey) || mouse_check_button_pressed(mb_any)) && achievement_delay > 30
+	if (keyboard_check_pressed(vk_anykey) || mouse_check_button_pressed(mb_any)) && achievement_delay > 30 && !keyboard_check_pressed(vk_up) && !keyboard_check_pressed(vk_down)
 	{
 	global.show_achievement = 0
 	}

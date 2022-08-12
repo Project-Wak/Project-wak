@@ -1463,7 +1463,7 @@ ef.image_angle = image_angle;
 		if global.achievement_finish[24] = 0
 		{
 		var _message = instance_create_depth(-100,-100,-9999999999,achievement)
-		_message.title = "레이지 모드"
+		_message.title = " 모드"
 		_message.text = "스테미나 회복 속도, 공속, 이속 증가"
 		global.achievement_finish[24] = 1
 		}

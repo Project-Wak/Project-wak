@@ -201,7 +201,7 @@ audio_sound_gain(sfx,0.07*global.master_volume*2*global.sfx_volume,0)
 		else
 		{
 		chat_up("help)")
-		chat_up(") /noclip (중력 및 벽 무시), /rage (분노 100%), /item_all (아이템 99개씩 전부 지급)")
+		chat_up(") /noclip (중력 및 벽 무시), /rage (레이지 충전 100%), /item_all (아이템 99개씩 전부 지급)")
 		chat_up(") /free_hp (무적), /free_ste (무한 스테미나), /item (아이템)")
 		chat_up(") /boss_clear (보스 바로 컷), /gold (골드 +99999), /reset_item (아이템 전부 삭제)")
 		}
