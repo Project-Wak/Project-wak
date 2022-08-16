@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 image_index = 0
-depth = 999
+depth = 1002
 if global.show_credits = 0
 {
 global.t_b_alpha = -0.01
@@ -41,7 +41,7 @@ var door__ = instance_create_depth(1426,801,0,obj_tp_door_basement)
 door__.connected_with = 4
 
 var door__ = instance_create_depth(1895,159,0,obj_tp_door_basement)
-door__.connected_with = 5
+door__.connected_with = 13
 
 
 
@@ -56,7 +56,7 @@ door__.connected_with = 7
 
 
 var door__ = instance_create_depth(1763,801,0,obj_tp_door_basement)
-door__.connected_with = 6
+door__.connected_with = 11
 
 var door__ = instance_create_depth(369,1378,0,obj_tp_door_basement)
 door__.connected_with = 9
@@ -68,7 +68,7 @@ var door__ = instance_create_depth(2397,1058,0,obj_tp_door_basement)
 door__.connected_with = 10
 
 var door__ = instance_create_depth(3232,416,0,obj_tp_door_basement)
-door__.connected_with = 11
+door__.connected_with = 5
 
 
 
@@ -77,7 +77,7 @@ var door__ = instance_create_depth(3285,1058,0,obj_tp_door_basement)
 door__.connected_with = 12
 
 var door__ = instance_create_depth(2400,2216,0,obj_tp_door_basement)
-door__.connected_with = 13
+door__.connected_with = 6
 
 
 

@@ -338,7 +338,7 @@ var xx_g = camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0
 var yy_g = camera_get_view_y(view_camera[0])+v_x_*250
 if show_ending_var = 0
 {
-draw_text_kl_scale(xx_g,yy_g-v_x_*global.gameover*32,"Project Wak",v_x_*64,-1,global.gameover,c_white,0,0,font_title,v_x_*0.8,v_x_*0.8,0);
+draw_text_kl_scale(xx_g,yy_g-v_x_*global.gameover*32,"Project Wak",v_x_*64,-1,global.gameover,c_white,0,0,font_title,v_x_*0.5,v_x_*0.5,0);
 draw_text_kl_scale(xx_g,yy_g+v_x_*100-v_x_*(global.gameover-0.5)*64,"-The end-",v_x_*190,-1,(global.gameover-0.5)*2,c_white,0,0,font_title,v_x_*0.25,v_x_*0.25,0)
 }
 else

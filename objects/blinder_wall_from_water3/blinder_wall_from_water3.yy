@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "map8_2199204221230231",
-    "path": "sprites/map8_2199204221230231/map8_2199204221230231.yy",
+    "name": "Sprite281",
+    "path": "sprites/Sprite281/Sprite281.yy",
   },
   "solid": false,
   "visible": true,
@@ -25,9 +25,9 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":1,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
@@ -36,7 +36,7 @@
     "path": "folders/객체/map_edit.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_water_front",
+  "name": "blinder_wall_from_water3",
   "tags": [],
   "resourceType": "GMObject",
 }

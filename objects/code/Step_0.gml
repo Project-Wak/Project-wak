@@ -9,7 +9,7 @@ if global.back_to_origin_stage = 2 && global.b_alpha < 0.1
 global.back_to_origin_stage = 0
 }
 
-if global.b_alpha >= 1 && global.n_night = 0 && instance_exists(player)
+if global.b_alpha >= 1 && global.n_night = 0 && instance_exists(player) && room = room_main
 {
 player.lantern_turnon = -1
 }
