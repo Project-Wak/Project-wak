@@ -7,7 +7,7 @@ var _byte
 
 	global._ini_name = argument0;
 
-	if file_exists(global._ini_name) // If the file exists, decrypt
+	if file_exists(global._ini_name) //if the file exists, decrypt
 	{
 	file = file_bin_open(global._ini_name, 2);
 	file_size = file_bin_size(file);
