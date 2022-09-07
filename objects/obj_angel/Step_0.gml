@@ -27,12 +27,14 @@ patturn = 0
 
 cannot_step = 1
 
-
+if instance_exists(_light_)
+{
 _light_.x = x
 _light_.y = y-100-40*image_yscale
 _light_.alpha = image_alpha*0.5+w_alpha
+}
 	
-	if instance_exists(spear__)
+	if instance_exists(spear__) && instance_exists(_light_1)
 	{
 	_light_1.x = spear__.x
 	_light_1.y = spear__.y

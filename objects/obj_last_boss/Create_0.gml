@@ -59,5 +59,10 @@ down_attack_with_rage_dis = 0
 _sfx__ = 0
 _light_ = -4
 _light_1 = -4
+grabing_alpha = 0
+grabing_walpha = 0
+n_dir_grabing = 1
+n_grabing_total_pressed = 0
+grab_skill = 0
 
 alarm[0] = 120

@@ -11,6 +11,28 @@ else
 owner_surface = surface_create(1920,1080)
 }
 
+if grabing_alpha > 0
+{
+	for(var i = 1; i > 0.5; i -= 0.08)
+	{
+		for(var ii = -3; ii <= 3; ii++)
+		{
+		var _color_ = $FF75F2FF
+			if i < 0.7
+			{
+			_color_ = $FF36BFFF
+			}
+		draw_sprite_ext(sprite15_1,2,player.x,player.y,image_xscale*(4 - abs(0 - ii)*0.5),image_yscale*i,ii*5,_color_,grabing_alpha/(2.5 - abs(0 - ii)*0.7))
+		
+			if grabing_walpha > 0
+			{
+			draw_sprite_ext(sprite15_1,2,player.x,player.y,image_xscale*(4 - abs(0 - ii)*0.5),image_yscale*i,ii*5,c_white,grabing_walpha)
+			}
+		}
+	}
+}
+
+
 
 //for(var i = -4; i < 4; i += 0.5)
 //{
@@ -21,11 +43,6 @@ draw_self()
 draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,c_black,alpha*0.7)
 
 
-
-
-
-
-
 if global.fps_draw > 0
 {
 draw_text(x+32,y,scene__)
@@ -33,4 +50,3 @@ draw_text(x-32,y,patturn)
 draw_text(x+100,y,timer)
 draw_text(x-100,y,instance_number(obj_wak_doo))
 }
-

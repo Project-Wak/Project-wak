@@ -116,7 +116,7 @@ else
 	}
 	else
 	{
-	depth = player.depth-1
+	depth = player.depth+5
 	alpha += (0 - alpha)*0.1
 	}
 	
@@ -266,6 +266,8 @@ else
 
 		if patturn = 0
 		{
+		grabing_alpha += (-0.01 - grabing_alpha)*0.1
+		grabing_walpha += (-0.01 - grabing_walpha)*0.1
 		image_xscale = sign_k(x - player.x)*0.9
 		change_dir ++
 		
@@ -330,7 +332,7 @@ else
 			
 				if instance_exists(obj_wakdroid_ending)
 				{
-				random_patturn = choose(1,2,2,3,4,4,5,5,5)
+				random_patturn = choose(1,2,2,3,4,4,5,5,5,6,6)
 				}
 			
 				if count_three > 3
@@ -356,7 +358,7 @@ else
 					
 						if instance_exists(obj_wakdroid_ending)
 						{
-						random_patturn = choose(1,2,2,3,4,4,5,5,5)
+						random_patturn = choose(1,2,2,3,4,4,5,5,5,6,6)
 						}
 						else
 						{
@@ -1011,6 +1013,156 @@ else
 				var sfx = audio_play_sound(mob_faint,0,0)
 				audio_sound_gain(sfx,0.4*global.master_volume*2*global.sfx_volume,0)
 				y = 0
+				}
+			}
+		}
+		
+		
+		
+		if patturn >= 6 && patturn < 7
+		{
+		x = xstart
+		cannot_step = 0
+
+			if abs(1860-player.y) > 5
+			{
+				if grab_skill < 300
+				{
+				player.y += sign(1860-player.y)*2
+				global.never_move = 1
+				player.gravity = 0
+				player.vspeed = 0
+			
+					if grabing_alpha < 0.7
+					{
+					grabing_alpha += 0.001
+					}
+				}
+				
+				if !instance_exists(draw_key_) && grab_skill = 0
+				{
+				var key_guide = instance_create_depth(-100,-100,-999994,draw_key_)
+				key_guide.location = -0.75
+				key_guide.img_index = 50
+			
+				var key_guide = instance_create_depth(-100,-100,-999994,draw_key_)
+				key_guide.location = 0.75
+				key_guide.img_index = 51
+				}
+			}
+			
+			if abs(1860-player.y) <= 5 || grab_skill > 0
+			{
+				if grab_skill <= 2
+				{
+				grabing_walpha = 1
+				}
+			grab_skill ++
+			grabing_alpha += (-0.01 - grabing_alpha)*0.03
+			grabing_walpha += (-0.01 - grabing_walpha)*0.03
+			
+				if grab_skill%10 = 0 && grab_skill <= 80
+				{
+				randomize()
+				var random_val_xx = irandom_range(-420,420)
+				var random_val_yy = irandom_range(-420,420)
+				instance_create_depth(player.x+random_val_xx,player.y+random_val_yy,player.depth-10,spear_lastboss_grab)
+				}
+				
+				if grab_skill > 300
+				{
+					if instance_exists(spear_lastboss_grab)
+					{
+						repeat(irandom_range(8,12))
+						{
+						var _fl_blood = instance_create_depth(player.x,player.y,player.depth,blood_gravity)
+						_fl_blood.hspeed = -(player.image_xscale*irandom_range(10,65)/10)
+						_fl_blood.vspeed = -irandom_range(10,65)/10
+						_fl_blood.sprite_index = sprite64
+							if global.blood_effect > 0
+							{
+							_fl_blood.sprite_index = sprite64
+							}
+						}
+					player.gravity = 0.3
+					global.hp = -1
+					global.never_move = 0
+						repeat(choose(2,4))
+						{
+						var _ef = instance_create_depth(player.x+irandom_range(-16,16),player.y,depth-1,effect_spark)
+						_ef.hspeed = irandom_range(-20,20)
+						_ef.vspeed = irandom_range(-4,2)
+						}
+					instance_destroy(spear_lastboss_grab)
+					}
+				}
+				else
+				{
+				player.y = 1860
+				}
+			}
+			
+			
+			
+			if grab_skill < 300
+			{
+			grabing_walpha += (-0.01 - grabing_walpha)*0.1
+				if abs(xstart+20-player.x) > 3
+				{
+				player.x += sign(xstart+20-player.x)*2
+				global.never_move = 1
+				}
+			player.hurt = 1
+			
+				if grab_skill = 0
+				{
+					if keyboard_check_pressed(vk_left) && n_dir_grabing = -1
+					{
+					player.x -= 1
+					n_dir_grabing *= -1
+					n_grabing_total_pressed ++
+					grabing_walpha = 1
+					}
+				
+					if keyboard_check_pressed(vk_right) && n_dir_grabing = 1
+					{
+					player.x += 1
+					n_dir_grabing *= -1
+					n_grabing_total_pressed ++
+					grabing_walpha = 1
+					}
+				
+					if n_grabing_total_pressed > 20
+					{
+					y = 0
+					patturn = 0
+					grab_skill = 0
+					player.gravity = 0.3
+					global.never_move = 0
+					n_grabing_total_pressed = 0
+					if instance_exists(draw_key_)
+					{
+					draw_key_.a = 1
+					}
+				
+						repeat(choose(2,4))
+						{
+						var _ef = instance_create_depth(player.x+irandom_range(-16,16),player.y,depth-1,effect_spark)
+						_ef.hspeed = irandom_range(-20,20)
+						_ef.vspeed = irandom_range(-4,2)
+						}
+					}
+					else
+					{
+					y = -100
+					}
+				}
+				else
+				{
+					if instance_exists(draw_key_)
+					{
+					draw_key_.a = 1
+					}
 				}
 			}
 		}

@@ -14,11 +14,11 @@ draw_sprite_ext(sprite95,0,xx,yy,cm_vx,cm_vx,0,c_white,image_alpha*0.8)
 }
 
 var string_ = ""
-if img_index = 0 || img_index = 8
+if img_index = 0 || img_index = 8 || img_index = 50
 {
 string_ = "<-"
 }
-if img_index = 1 || img_index = 9
+if img_index = 1 || img_index = 9 || img_index = 51
 {
 string_ = "->"
 }
@@ -252,6 +252,10 @@ if img_index = 27
 draw_text_kl_scale(xx,yy+85*cm_vx,"일어 나기\n\n\n\n[기절 상태를 빠르게 풉니다]\n\n\n\n(기절 도중 점프 or 구르기 or 가드)",16,9999,1,image_blend,0,0,font0,cm_vx*1/3,cm_vx*1/3,image_angle)
 }
 
+if img_index = 51
+{
+draw_text_kl_scale(camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5,yy+85*cm_vx,"연타하여 풀기",16,9999,1,image_blend,0,0,font0,cm_vx*1/3,cm_vx*1/3,image_angle)
+}
 
 
 

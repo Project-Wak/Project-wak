@@ -332,8 +332,14 @@ player.guarding = 2
 	}
 
 
+	if global.show_credits = 0 && opening_sfx = 0 && scene__ > 0.2
+	{
+	var sfx = audio_play_sound(golem_sfx,0,0)
+	audio_sound_gain(sfx,0.32*global.master_volume*2*global.sfx_volume,0)
+	opening_sfx = 0.5
+	}
 
-	if scene__ < 0.7 && scene__ > 0.5
+	if scene__ < 0.8 && scene__ > 0.6
 	{
 	obj_camera.t_y = player.y
 	opening_scene = 0
@@ -342,7 +348,7 @@ player.guarding = 2
 	left_hand.y += (ystart - left_hand.y)*0.07
 	right_hand.y += (ystart - right_hand.y)*0.07
 	
-		if global.show_credits = 0 && opening_sfx = 0
+		if global.show_credits = 0 && opening_sfx = 0.5
 		{
 		var sfx = audio_play_sound(jump_attack_sfx,0,0)
 		audio_sound_gain(sfx,0.5*global.master_volume*2*global.sfx_volume,0)
@@ -350,7 +356,7 @@ player.guarding = 2
 		}
 	}
 	
-	if scene__ > 0.7
+	if scene__ > 0.8
 	{
 	left_hand.cannot_step = 0
 	right_hand.cannot_step = 0
