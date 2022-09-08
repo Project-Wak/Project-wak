@@ -1061,7 +1061,7 @@ else
 			grabing_alpha += (-0.01 - grabing_alpha)*0.03
 			grabing_walpha += (-0.01 - grabing_walpha)*0.03
 			
-				if grab_skill%10 = 0 && grab_skill <= 80
+				if grab_skill%6 = 0 && grab_skill <= 80
 				{
 				randomize()
 				var random_val_xx = irandom_range(-420,420)
@@ -1107,9 +1107,9 @@ else
 			if grab_skill < 300
 			{
 			grabing_walpha += (-0.01 - grabing_walpha)*0.1
-				if abs(xstart+20-player.x) > 3
+				if abs(obj_camera.x-player.x) > 3
 				{
-				player.x += sign(xstart+20-player.x)*2
+				player.x += sign(obj_camera.x-player.x)*2
 				global.never_move = 1
 				}
 			player.hurt = 1

@@ -30,6 +30,13 @@ if grabing_alpha > 0
 			}
 		}
 	}
+	
+draw_sprite_ext(sprite15_1,2,player.x,player.y,image_xscale*3,image_yscale*0.8,90,_color_,grabing_alpha)
+
+	if grabing_walpha > 0
+	{
+	draw_sprite_ext(sprite15_1,2,player.x,player.y,image_xscale*3,image_yscale*0.8,90,c_white,grabing_walpha)
+	}
 }
 
 

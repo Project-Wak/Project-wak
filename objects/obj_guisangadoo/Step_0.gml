@@ -566,7 +566,7 @@ b_alpha_ += (t_b_alpha_ - b_alpha_)*0.08
 		w_alpha_elec = 1
 		}
 		
-		if patturn = 3.4
+		if patturn = 3.32
 		{
 		w_alpha_elec = 1
 		}
@@ -576,7 +576,7 @@ b_alpha_ += (t_b_alpha_ - b_alpha_)*0.08
 		w_alpha_elec += (0.1 - w_alpha_elec)*0.1
 		}
 		
-		if patturn > 3.45
+		if patturn > 3.32
 		{
 		w_alpha_elec += (-0.1 - w_alpha_elec)*0.1
 		}
