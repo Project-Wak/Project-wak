@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "pl_move_skeleton_pering_katana",
   "bboxMode": 2,
   "collisionKind": 5,
   "type": 0,
@@ -24,41 +27,19 @@
   "gridX": 3,
   "gridY": 3,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"6f607cc8-6d96-473f-9a08-1c865a62d91b","path":"sprites/pl_move_skeleton_pering_katana/pl_move_skeleton_pering_katana.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"6f607cc8-6d96-473f-9a08-1c865a62d91b","path":"sprites/pl_move_skeleton_pering_katana/pl_move_skeleton_pering_katana.yy",},"LayerId":{"name":"c2aa7c5c-e1bc-4a39-add6-0a89799c08ae","path":"sprites/pl_move_skeleton_pering_katana/pl_move_skeleton_pering_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"6f607cc8-6d96-473f-9a08-1c865a62d91b","path":"sprites/pl_move_skeleton_pering_katana/pl_move_skeleton_pering_katana.yy",},"LayerId":{"name":"972a2551-8609-4a02-9d30-01c5743da07d","path":"sprites/pl_move_skeleton_pering_katana/pl_move_skeleton_pering_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"pl_move_skeleton_pering_katana","path":"sprites/pl_move_skeleton_pering_katana/pl_move_skeleton_pering_katana.yy",},"resourceVersion":"1.0","name":"6f607cc8-6d96-473f-9a08-1c865a62d91b","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"9c4c9f29-a1ad-4f96-a269-64e29a1f5493","path":"sprites/pl_move_skeleton_pering_katana/pl_move_skeleton_pering_katana.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"9c4c9f29-a1ad-4f96-a269-64e29a1f5493","path":"sprites/pl_move_skeleton_pering_katana/pl_move_skeleton_pering_katana.yy",},"LayerId":{"name":"c2aa7c5c-e1bc-4a39-add6-0a89799c08ae","path":"sprites/pl_move_skeleton_pering_katana/pl_move_skeleton_pering_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"9c4c9f29-a1ad-4f96-a269-64e29a1f5493","path":"sprites/pl_move_skeleton_pering_katana/pl_move_skeleton_pering_katana.yy",},"LayerId":{"name":"972a2551-8609-4a02-9d30-01c5743da07d","path":"sprites/pl_move_skeleton_pering_katana/pl_move_skeleton_pering_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"pl_move_skeleton_pering_katana","path":"sprites/pl_move_skeleton_pering_katana/pl_move_skeleton_pering_katana.yy",},"resourceVersion":"1.0","name":"9c4c9f29-a1ad-4f96-a269-64e29a1f5493","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"39dfa468-db87-4e9d-8639-a9c8cc015b99","path":"sprites/pl_move_skeleton_pering_katana/pl_move_skeleton_pering_katana.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"39dfa468-db87-4e9d-8639-a9c8cc015b99","path":"sprites/pl_move_skeleton_pering_katana/pl_move_skeleton_pering_katana.yy",},"LayerId":{"name":"c2aa7c5c-e1bc-4a39-add6-0a89799c08ae","path":"sprites/pl_move_skeleton_pering_katana/pl_move_skeleton_pering_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"39dfa468-db87-4e9d-8639-a9c8cc015b99","path":"sprites/pl_move_skeleton_pering_katana/pl_move_skeleton_pering_katana.yy",},"LayerId":{"name":"972a2551-8609-4a02-9d30-01c5743da07d","path":"sprites/pl_move_skeleton_pering_katana/pl_move_skeleton_pering_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"pl_move_skeleton_pering_katana","path":"sprites/pl_move_skeleton_pering_katana/pl_move_skeleton_pering_katana.yy",},"resourceVersion":"1.0","name":"39dfa468-db87-4e9d-8639-a9c8cc015b99","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"57901340-36b3-4bdc-a4cb-d5ba074f52cf","path":"sprites/pl_move_skeleton_pering_katana/pl_move_skeleton_pering_katana.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"57901340-36b3-4bdc-a4cb-d5ba074f52cf","path":"sprites/pl_move_skeleton_pering_katana/pl_move_skeleton_pering_katana.yy",},"LayerId":{"name":"c2aa7c5c-e1bc-4a39-add6-0a89799c08ae","path":"sprites/pl_move_skeleton_pering_katana/pl_move_skeleton_pering_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"57901340-36b3-4bdc-a4cb-d5ba074f52cf","path":"sprites/pl_move_skeleton_pering_katana/pl_move_skeleton_pering_katana.yy",},"LayerId":{"name":"972a2551-8609-4a02-9d30-01c5743da07d","path":"sprites/pl_move_skeleton_pering_katana/pl_move_skeleton_pering_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"pl_move_skeleton_pering_katana","path":"sprites/pl_move_skeleton_pering_katana/pl_move_skeleton_pering_katana.yy",},"resourceVersion":"1.0","name":"57901340-36b3-4bdc-a4cb-d5ba074f52cf","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"ef9f8fea-438d-4b3a-a100-24859d912fb0","path":"sprites/pl_move_skeleton_pering_katana/pl_move_skeleton_pering_katana.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"ef9f8fea-438d-4b3a-a100-24859d912fb0","path":"sprites/pl_move_skeleton_pering_katana/pl_move_skeleton_pering_katana.yy",},"LayerId":{"name":"c2aa7c5c-e1bc-4a39-add6-0a89799c08ae","path":"sprites/pl_move_skeleton_pering_katana/pl_move_skeleton_pering_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"ef9f8fea-438d-4b3a-a100-24859d912fb0","path":"sprites/pl_move_skeleton_pering_katana/pl_move_skeleton_pering_katana.yy",},"LayerId":{"name":"972a2551-8609-4a02-9d30-01c5743da07d","path":"sprites/pl_move_skeleton_pering_katana/pl_move_skeleton_pering_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"pl_move_skeleton_pering_katana","path":"sprites/pl_move_skeleton_pering_katana/pl_move_skeleton_pering_katana.yy",},"resourceVersion":"1.0","name":"ef9f8fea-438d-4b3a-a100-24859d912fb0","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"7f4561fd-6034-4f52-a223-b023a8d61f6e","path":"sprites/pl_move_skeleton_pering_katana/pl_move_skeleton_pering_katana.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"7f4561fd-6034-4f52-a223-b023a8d61f6e","path":"sprites/pl_move_skeleton_pering_katana/pl_move_skeleton_pering_katana.yy",},"LayerId":{"name":"c2aa7c5c-e1bc-4a39-add6-0a89799c08ae","path":"sprites/pl_move_skeleton_pering_katana/pl_move_skeleton_pering_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"7f4561fd-6034-4f52-a223-b023a8d61f6e","path":"sprites/pl_move_skeleton_pering_katana/pl_move_skeleton_pering_katana.yy",},"LayerId":{"name":"972a2551-8609-4a02-9d30-01c5743da07d","path":"sprites/pl_move_skeleton_pering_katana/pl_move_skeleton_pering_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"pl_move_skeleton_pering_katana","path":"sprites/pl_move_skeleton_pering_katana/pl_move_skeleton_pering_katana.yy",},"resourceVersion":"1.0","name":"7f4561fd-6034-4f52-a223-b023a8d61f6e","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"7f930f9c-6890-4ee4-adfe-32357278766d","path":"sprites/pl_move_skeleton_pering_katana/pl_move_skeleton_pering_katana.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"7f930f9c-6890-4ee4-adfe-32357278766d","path":"sprites/pl_move_skeleton_pering_katana/pl_move_skeleton_pering_katana.yy",},"LayerId":{"name":"c2aa7c5c-e1bc-4a39-add6-0a89799c08ae","path":"sprites/pl_move_skeleton_pering_katana/pl_move_skeleton_pering_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"7f930f9c-6890-4ee4-adfe-32357278766d","path":"sprites/pl_move_skeleton_pering_katana/pl_move_skeleton_pering_katana.yy",},"LayerId":{"name":"972a2551-8609-4a02-9d30-01c5743da07d","path":"sprites/pl_move_skeleton_pering_katana/pl_move_skeleton_pering_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"pl_move_skeleton_pering_katana","path":"sprites/pl_move_skeleton_pering_katana/pl_move_skeleton_pering_katana.yy",},"resourceVersion":"1.0","name":"7f930f9c-6890-4ee4-adfe-32357278766d","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"dd6ea76a-b35f-4c52-b46a-bc1a16cd56f6","path":"sprites/pl_move_skeleton_pering_katana/pl_move_skeleton_pering_katana.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"dd6ea76a-b35f-4c52-b46a-bc1a16cd56f6","path":"sprites/pl_move_skeleton_pering_katana/pl_move_skeleton_pering_katana.yy",},"LayerId":{"name":"c2aa7c5c-e1bc-4a39-add6-0a89799c08ae","path":"sprites/pl_move_skeleton_pering_katana/pl_move_skeleton_pering_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"dd6ea76a-b35f-4c52-b46a-bc1a16cd56f6","path":"sprites/pl_move_skeleton_pering_katana/pl_move_skeleton_pering_katana.yy",},"LayerId":{"name":"972a2551-8609-4a02-9d30-01c5743da07d","path":"sprites/pl_move_skeleton_pering_katana/pl_move_skeleton_pering_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"pl_move_skeleton_pering_katana","path":"sprites/pl_move_skeleton_pering_katana/pl_move_skeleton_pering_katana.yy",},"resourceVersion":"1.0","name":"dd6ea76a-b35f-4c52-b46a-bc1a16cd56f6","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6f607cc8-6d96-473f-9a08-1c865a62d91b",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9c4c9f29-a1ad-4f96-a269-64e29a1f5493",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"39dfa468-db87-4e9d-8639-a9c8cc015b99",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"57901340-36b3-4bdc-a4cb-d5ba074f52cf",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ef9f8fea-438d-4b3a-a100-24859d912fb0",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7f4561fd-6034-4f52-a223-b023a8d61f6e",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7f930f9c-6890-4ee4-adfe-32357278766d",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"dd6ea76a-b35f-4c52-b46a-bc1a16cd56f6",},
   ],
   "sequence": {
-    "spriteId": {"name":"pl_move_skeleton_pering_katana","path":"sprites/pl_move_skeleton_pering_katana/pl_move_skeleton_pering_katana.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "pl_move_skeleton_pering_katana",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 10.0,
@@ -69,7 +50,7 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"02febc52-f3ed-4ba3-95af-900c3f7e8298","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6f607cc8-6d96-473f-9a08-1c865a62d91b","path":"sprites/pl_move_skeleton_pering_katana/pl_move_skeleton_pering_katana.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"bde85c88-ed29-4124-a188-153d51c92ad6","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9c4c9f29-a1ad-4f96-a269-64e29a1f5493","path":"sprites/pl_move_skeleton_pering_katana/pl_move_skeleton_pering_katana.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"11a4e09d-b6c5-4c86-8a81-b4f519abd38f","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"39dfa468-db87-4e9d-8639-a9c8cc015b99","path":"sprites/pl_move_skeleton_pering_katana/pl_move_skeleton_pering_katana.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
@@ -78,7 +59,7 @@
             {"id":"a6fd73f3-1c7f-47a1-91d8-62ae2be8f990","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7f4561fd-6034-4f52-a223-b023a8d61f6e","path":"sprites/pl_move_skeleton_pering_katana/pl_move_skeleton_pering_katana.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"a680f939-335a-437d-a093-775811654e50","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7f930f9c-6890-4ee4-adfe-32357278766d","path":"sprites/pl_move_skeleton_pering_katana/pl_move_skeleton_pering_katana.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"7f62e34b-055d-4dfc-ba6b-e4bd355f9200","Key":7.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"dd6ea76a-b35f-4c52-b46a-bc1a16cd56f6","path":"sprites/pl_move_skeleton_pering_katana/pl_move_skeleton_pering_katana.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -94,23 +75,14 @@
     "yorigin": 72,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"pl_move_skeleton_pering_katana","path":"sprites/pl_move_skeleton_pering_katana/pl_move_skeleton_pering_katana.yy",},
-    "resourceVersion": "1.4",
-    "name": "pl_move_skeleton_pering_katana",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"c2aa7c5c-e1bc-4a39-add6-0a89799c08ae","tags":[],"resourceType":"GMImageLayer",},
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"972a2551-8609-4a02-9d30-01c5743da07d","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"c2aa7c5c-e1bc-4a39-add6-0a89799c08ae","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"972a2551-8609-4a02-9d30-01c5743da07d","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "스프라이트",
     "path": "folders/스프라이트.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "pl_move_skeleton_pering_katana",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

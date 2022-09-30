@@ -1,7 +1,11 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "mob_for_resume",
   "spriteId": null,
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": null,
@@ -24,8 +28,4 @@
     "name": "attck__effect",
     "path": "folders/객체/mob/attck__effect.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "mob_for_resume",
-  "tags": [],
-  "resourceType": "GMObject",
 }

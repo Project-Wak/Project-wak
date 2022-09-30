@@ -1,7 +1,11 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "normal_mob",
   "spriteId": null,
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
@@ -27,8 +31,4 @@
     "name": "mob",
     "path": "folders/객체/mob.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "normal_mob",
-  "tags": [],
-  "resourceType": "GMObject",
 }

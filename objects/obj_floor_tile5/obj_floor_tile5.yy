@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "obj_floor_tile5",
   "spriteId": {
     "name": "Sprite142143150151",
     "path": "sprites/Sprite142143150151/Sprite142143150151.yy",
@@ -25,7 +28,7 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [],
@@ -33,8 +36,4 @@
     "name": "map_edit",
     "path": "folders/객체/map_edit.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "obj_floor_tile5",
-  "tags": [],
-  "resourceType": "GMObject",
 }

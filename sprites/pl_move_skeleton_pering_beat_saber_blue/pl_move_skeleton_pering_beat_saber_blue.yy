@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "pl_move_skeleton_pering_beat_saber_blue",
   "bboxMode": 2,
   "collisionKind": 5,
   "type": 0,
@@ -24,41 +27,19 @@
   "gridX": 3,
   "gridY": 3,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"6f607cc8-6d96-473f-9a08-1c865a62d91b","path":"sprites/pl_move_skeleton_pering_beat_saber_blue/pl_move_skeleton_pering_beat_saber_blue.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"6f607cc8-6d96-473f-9a08-1c865a62d91b","path":"sprites/pl_move_skeleton_pering_beat_saber_blue/pl_move_skeleton_pering_beat_saber_blue.yy",},"LayerId":{"name":"c2aa7c5c-e1bc-4a39-add6-0a89799c08ae","path":"sprites/pl_move_skeleton_pering_beat_saber_blue/pl_move_skeleton_pering_beat_saber_blue.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"6f607cc8-6d96-473f-9a08-1c865a62d91b","path":"sprites/pl_move_skeleton_pering_beat_saber_blue/pl_move_skeleton_pering_beat_saber_blue.yy",},"LayerId":{"name":"972a2551-8609-4a02-9d30-01c5743da07d","path":"sprites/pl_move_skeleton_pering_beat_saber_blue/pl_move_skeleton_pering_beat_saber_blue.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"pl_move_skeleton_pering_beat_saber_blue","path":"sprites/pl_move_skeleton_pering_beat_saber_blue/pl_move_skeleton_pering_beat_saber_blue.yy",},"resourceVersion":"1.0","name":"6f607cc8-6d96-473f-9a08-1c865a62d91b","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"9c4c9f29-a1ad-4f96-a269-64e29a1f5493","path":"sprites/pl_move_skeleton_pering_beat_saber_blue/pl_move_skeleton_pering_beat_saber_blue.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"9c4c9f29-a1ad-4f96-a269-64e29a1f5493","path":"sprites/pl_move_skeleton_pering_beat_saber_blue/pl_move_skeleton_pering_beat_saber_blue.yy",},"LayerId":{"name":"c2aa7c5c-e1bc-4a39-add6-0a89799c08ae","path":"sprites/pl_move_skeleton_pering_beat_saber_blue/pl_move_skeleton_pering_beat_saber_blue.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"9c4c9f29-a1ad-4f96-a269-64e29a1f5493","path":"sprites/pl_move_skeleton_pering_beat_saber_blue/pl_move_skeleton_pering_beat_saber_blue.yy",},"LayerId":{"name":"972a2551-8609-4a02-9d30-01c5743da07d","path":"sprites/pl_move_skeleton_pering_beat_saber_blue/pl_move_skeleton_pering_beat_saber_blue.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"pl_move_skeleton_pering_beat_saber_blue","path":"sprites/pl_move_skeleton_pering_beat_saber_blue/pl_move_skeleton_pering_beat_saber_blue.yy",},"resourceVersion":"1.0","name":"9c4c9f29-a1ad-4f96-a269-64e29a1f5493","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"39dfa468-db87-4e9d-8639-a9c8cc015b99","path":"sprites/pl_move_skeleton_pering_beat_saber_blue/pl_move_skeleton_pering_beat_saber_blue.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"39dfa468-db87-4e9d-8639-a9c8cc015b99","path":"sprites/pl_move_skeleton_pering_beat_saber_blue/pl_move_skeleton_pering_beat_saber_blue.yy",},"LayerId":{"name":"c2aa7c5c-e1bc-4a39-add6-0a89799c08ae","path":"sprites/pl_move_skeleton_pering_beat_saber_blue/pl_move_skeleton_pering_beat_saber_blue.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"39dfa468-db87-4e9d-8639-a9c8cc015b99","path":"sprites/pl_move_skeleton_pering_beat_saber_blue/pl_move_skeleton_pering_beat_saber_blue.yy",},"LayerId":{"name":"972a2551-8609-4a02-9d30-01c5743da07d","path":"sprites/pl_move_skeleton_pering_beat_saber_blue/pl_move_skeleton_pering_beat_saber_blue.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"pl_move_skeleton_pering_beat_saber_blue","path":"sprites/pl_move_skeleton_pering_beat_saber_blue/pl_move_skeleton_pering_beat_saber_blue.yy",},"resourceVersion":"1.0","name":"39dfa468-db87-4e9d-8639-a9c8cc015b99","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"57901340-36b3-4bdc-a4cb-d5ba074f52cf","path":"sprites/pl_move_skeleton_pering_beat_saber_blue/pl_move_skeleton_pering_beat_saber_blue.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"57901340-36b3-4bdc-a4cb-d5ba074f52cf","path":"sprites/pl_move_skeleton_pering_beat_saber_blue/pl_move_skeleton_pering_beat_saber_blue.yy",},"LayerId":{"name":"c2aa7c5c-e1bc-4a39-add6-0a89799c08ae","path":"sprites/pl_move_skeleton_pering_beat_saber_blue/pl_move_skeleton_pering_beat_saber_blue.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"57901340-36b3-4bdc-a4cb-d5ba074f52cf","path":"sprites/pl_move_skeleton_pering_beat_saber_blue/pl_move_skeleton_pering_beat_saber_blue.yy",},"LayerId":{"name":"972a2551-8609-4a02-9d30-01c5743da07d","path":"sprites/pl_move_skeleton_pering_beat_saber_blue/pl_move_skeleton_pering_beat_saber_blue.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"pl_move_skeleton_pering_beat_saber_blue","path":"sprites/pl_move_skeleton_pering_beat_saber_blue/pl_move_skeleton_pering_beat_saber_blue.yy",},"resourceVersion":"1.0","name":"57901340-36b3-4bdc-a4cb-d5ba074f52cf","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"ef9f8fea-438d-4b3a-a100-24859d912fb0","path":"sprites/pl_move_skeleton_pering_beat_saber_blue/pl_move_skeleton_pering_beat_saber_blue.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"ef9f8fea-438d-4b3a-a100-24859d912fb0","path":"sprites/pl_move_skeleton_pering_beat_saber_blue/pl_move_skeleton_pering_beat_saber_blue.yy",},"LayerId":{"name":"c2aa7c5c-e1bc-4a39-add6-0a89799c08ae","path":"sprites/pl_move_skeleton_pering_beat_saber_blue/pl_move_skeleton_pering_beat_saber_blue.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"ef9f8fea-438d-4b3a-a100-24859d912fb0","path":"sprites/pl_move_skeleton_pering_beat_saber_blue/pl_move_skeleton_pering_beat_saber_blue.yy",},"LayerId":{"name":"972a2551-8609-4a02-9d30-01c5743da07d","path":"sprites/pl_move_skeleton_pering_beat_saber_blue/pl_move_skeleton_pering_beat_saber_blue.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"pl_move_skeleton_pering_beat_saber_blue","path":"sprites/pl_move_skeleton_pering_beat_saber_blue/pl_move_skeleton_pering_beat_saber_blue.yy",},"resourceVersion":"1.0","name":"ef9f8fea-438d-4b3a-a100-24859d912fb0","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"7bc24842-5585-4312-b1b9-252c8a19bc61","path":"sprites/pl_move_skeleton_pering_beat_saber_blue/pl_move_skeleton_pering_beat_saber_blue.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"7bc24842-5585-4312-b1b9-252c8a19bc61","path":"sprites/pl_move_skeleton_pering_beat_saber_blue/pl_move_skeleton_pering_beat_saber_blue.yy",},"LayerId":{"name":"c2aa7c5c-e1bc-4a39-add6-0a89799c08ae","path":"sprites/pl_move_skeleton_pering_beat_saber_blue/pl_move_skeleton_pering_beat_saber_blue.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"7bc24842-5585-4312-b1b9-252c8a19bc61","path":"sprites/pl_move_skeleton_pering_beat_saber_blue/pl_move_skeleton_pering_beat_saber_blue.yy",},"LayerId":{"name":"972a2551-8609-4a02-9d30-01c5743da07d","path":"sprites/pl_move_skeleton_pering_beat_saber_blue/pl_move_skeleton_pering_beat_saber_blue.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"pl_move_skeleton_pering_beat_saber_blue","path":"sprites/pl_move_skeleton_pering_beat_saber_blue/pl_move_skeleton_pering_beat_saber_blue.yy",},"resourceVersion":"1.0","name":"7bc24842-5585-4312-b1b9-252c8a19bc61","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"95966a5e-7e5b-4e56-be23-a7f50c30a2d8","path":"sprites/pl_move_skeleton_pering_beat_saber_blue/pl_move_skeleton_pering_beat_saber_blue.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"95966a5e-7e5b-4e56-be23-a7f50c30a2d8","path":"sprites/pl_move_skeleton_pering_beat_saber_blue/pl_move_skeleton_pering_beat_saber_blue.yy",},"LayerId":{"name":"c2aa7c5c-e1bc-4a39-add6-0a89799c08ae","path":"sprites/pl_move_skeleton_pering_beat_saber_blue/pl_move_skeleton_pering_beat_saber_blue.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"95966a5e-7e5b-4e56-be23-a7f50c30a2d8","path":"sprites/pl_move_skeleton_pering_beat_saber_blue/pl_move_skeleton_pering_beat_saber_blue.yy",},"LayerId":{"name":"972a2551-8609-4a02-9d30-01c5743da07d","path":"sprites/pl_move_skeleton_pering_beat_saber_blue/pl_move_skeleton_pering_beat_saber_blue.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"pl_move_skeleton_pering_beat_saber_blue","path":"sprites/pl_move_skeleton_pering_beat_saber_blue/pl_move_skeleton_pering_beat_saber_blue.yy",},"resourceVersion":"1.0","name":"95966a5e-7e5b-4e56-be23-a7f50c30a2d8","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"ca98cd65-0d39-4029-9f3a-cd29239d68e0","path":"sprites/pl_move_skeleton_pering_beat_saber_blue/pl_move_skeleton_pering_beat_saber_blue.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"ca98cd65-0d39-4029-9f3a-cd29239d68e0","path":"sprites/pl_move_skeleton_pering_beat_saber_blue/pl_move_skeleton_pering_beat_saber_blue.yy",},"LayerId":{"name":"c2aa7c5c-e1bc-4a39-add6-0a89799c08ae","path":"sprites/pl_move_skeleton_pering_beat_saber_blue/pl_move_skeleton_pering_beat_saber_blue.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"ca98cd65-0d39-4029-9f3a-cd29239d68e0","path":"sprites/pl_move_skeleton_pering_beat_saber_blue/pl_move_skeleton_pering_beat_saber_blue.yy",},"LayerId":{"name":"972a2551-8609-4a02-9d30-01c5743da07d","path":"sprites/pl_move_skeleton_pering_beat_saber_blue/pl_move_skeleton_pering_beat_saber_blue.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"pl_move_skeleton_pering_beat_saber_blue","path":"sprites/pl_move_skeleton_pering_beat_saber_blue/pl_move_skeleton_pering_beat_saber_blue.yy",},"resourceVersion":"1.0","name":"ca98cd65-0d39-4029-9f3a-cd29239d68e0","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6f607cc8-6d96-473f-9a08-1c865a62d91b",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9c4c9f29-a1ad-4f96-a269-64e29a1f5493",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"39dfa468-db87-4e9d-8639-a9c8cc015b99",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"57901340-36b3-4bdc-a4cb-d5ba074f52cf",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ef9f8fea-438d-4b3a-a100-24859d912fb0",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7bc24842-5585-4312-b1b9-252c8a19bc61",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"95966a5e-7e5b-4e56-be23-a7f50c30a2d8",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ca98cd65-0d39-4029-9f3a-cd29239d68e0",},
   ],
   "sequence": {
-    "spriteId": {"name":"pl_move_skeleton_pering_beat_saber_blue","path":"sprites/pl_move_skeleton_pering_beat_saber_blue/pl_move_skeleton_pering_beat_saber_blue.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "pl_move_skeleton_pering_beat_saber_blue",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 10.0,
@@ -69,7 +50,7 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"cee6014d-bd49-44f1-98bd-ca6db08e8bba","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6f607cc8-6d96-473f-9a08-1c865a62d91b","path":"sprites/pl_move_skeleton_pering_beat_saber_blue/pl_move_skeleton_pering_beat_saber_blue.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"f99a9a8c-870e-4955-8760-28ddbc5d35c4","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9c4c9f29-a1ad-4f96-a269-64e29a1f5493","path":"sprites/pl_move_skeleton_pering_beat_saber_blue/pl_move_skeleton_pering_beat_saber_blue.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"6eb0f6ce-19ad-419a-9dd0-0bd11980dffc","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"39dfa468-db87-4e9d-8639-a9c8cc015b99","path":"sprites/pl_move_skeleton_pering_beat_saber_blue/pl_move_skeleton_pering_beat_saber_blue.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
@@ -78,7 +59,7 @@
             {"id":"6afeb53e-5bf6-47f4-8a7d-6c0c67b8d82f","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"7bc24842-5585-4312-b1b9-252c8a19bc61","path":"sprites/pl_move_skeleton_pering_beat_saber_blue/pl_move_skeleton_pering_beat_saber_blue.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"610139f1-a466-4019-bef3-9a4a9ddcc005","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"95966a5e-7e5b-4e56-be23-a7f50c30a2d8","path":"sprites/pl_move_skeleton_pering_beat_saber_blue/pl_move_skeleton_pering_beat_saber_blue.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"4cfa5ff9-11a5-4391-b312-f642c20eef17","Key":7.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ca98cd65-0d39-4029-9f3a-cd29239d68e0","path":"sprites/pl_move_skeleton_pering_beat_saber_blue/pl_move_skeleton_pering_beat_saber_blue.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -94,23 +75,14 @@
     "yorigin": 72,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"pl_move_skeleton_pering_beat_saber_blue","path":"sprites/pl_move_skeleton_pering_beat_saber_blue/pl_move_skeleton_pering_beat_saber_blue.yy",},
-    "resourceVersion": "1.4",
-    "name": "pl_move_skeleton_pering_beat_saber_blue",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"c2aa7c5c-e1bc-4a39-add6-0a89799c08ae","tags":[],"resourceType":"GMImageLayer",},
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"972a2551-8609-4a02-9d30-01c5743da07d","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"c2aa7c5c-e1bc-4a39-add6-0a89799c08ae","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"972a2551-8609-4a02-9d30-01c5743da07d","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "스프라이트",
     "path": "folders/스프라이트.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "pl_move_skeleton_pering_beat_saber_blue",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

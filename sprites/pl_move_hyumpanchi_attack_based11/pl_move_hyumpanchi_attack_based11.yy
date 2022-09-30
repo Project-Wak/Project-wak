@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "pl_move_hyumpanchi_attack_based11",
   "bboxMode": 2,
   "collisionKind": 5,
   "type": 0,
@@ -24,13 +27,12 @@
   "gridX": 3,
   "gridY": 3,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"0384e944-3227-464d-a0d2-575dbbcf0b86","path":"sprites/pl_move_hyumpanchi_attack_based11/pl_move_hyumpanchi_attack_based11.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"0384e944-3227-464d-a0d2-575dbbcf0b86","path":"sprites/pl_move_hyumpanchi_attack_based11/pl_move_hyumpanchi_attack_based11.yy",},"LayerId":{"name":"ad661c36-2a9c-47de-a6df-67762240ee14","path":"sprites/pl_move_hyumpanchi_attack_based11/pl_move_hyumpanchi_attack_based11.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"0384e944-3227-464d-a0d2-575dbbcf0b86","path":"sprites/pl_move_hyumpanchi_attack_based11/pl_move_hyumpanchi_attack_based11.yy",},"LayerId":{"name":"48eb7b00-4c2b-4a60-b0f5-2c3e2cc4e5e5","path":"sprites/pl_move_hyumpanchi_attack_based11/pl_move_hyumpanchi_attack_based11.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"pl_move_hyumpanchi_attack_based11","path":"sprites/pl_move_hyumpanchi_attack_based11/pl_move_hyumpanchi_attack_based11.yy",},"resourceVersion":"1.0","name":"0384e944-3227-464d-a0d2-575dbbcf0b86","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0384e944-3227-464d-a0d2-575dbbcf0b86",},
   ],
   "sequence": {
-    "spriteId": {"name":"pl_move_hyumpanchi_attack_based11","path":"sprites/pl_move_hyumpanchi_attack_based11/pl_move_hyumpanchi_attack_based11.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 10.0,
@@ -41,9 +43,9 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"370e55a4-5d89-4eed-b419-4ffa78c13d83","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0384e944-3227-464d-a0d2-575dbbcf0b86","path":"sprites/pl_move_hyumpanchi_attack_based11/pl_move_hyumpanchi_attack_based11.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -59,23 +61,14 @@
     "yorigin": 25,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"pl_move_hyumpanchi_attack_based11","path":"sprites/pl_move_hyumpanchi_attack_based11/pl_move_hyumpanchi_attack_based11.yy",},
-    "resourceVersion": "1.4",
-    "name": "",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"ad661c36-2a9c-47de-a6df-67762240ee14","tags":[],"resourceType":"GMImageLayer",},
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"48eb7b00-4c2b-4a60-b0f5-2c3e2cc4e5e5","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"ad661c36-2a9c-47de-a6df-67762240ee14","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"48eb7b00-4c2b-4a60-b0f5-2c3e2cc4e5e5","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "스프라이트",
     "path": "folders/스프라이트.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "pl_move_hyumpanchi_attack_based11",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

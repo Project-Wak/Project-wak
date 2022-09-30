@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_jump_wakdroid",
   "bboxMode": 2,
   "collisionKind": 5,
   "type": 0,
@@ -24,13 +27,12 @@
   "gridX": 3,
   "gridY": 3,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"4b8cd871-41eb-4034-9231-709642ac1f9a","path":"sprites/spr_jump_wakdroid/spr_jump_wakdroid.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"4b8cd871-41eb-4034-9231-709642ac1f9a","path":"sprites/spr_jump_wakdroid/spr_jump_wakdroid.yy",},"LayerId":{"name":"ed7de6da-db0a-44db-a9f1-96332ec6d31d","path":"sprites/spr_jump_wakdroid/spr_jump_wakdroid.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"4b8cd871-41eb-4034-9231-709642ac1f9a","path":"sprites/spr_jump_wakdroid/spr_jump_wakdroid.yy",},"LayerId":{"name":"0904dfd7-8972-401b-bcb0-05c11932d354","path":"sprites/spr_jump_wakdroid/spr_jump_wakdroid.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_jump_wakdroid","path":"sprites/spr_jump_wakdroid/spr_jump_wakdroid.yy",},"resourceVersion":"1.0","name":"4b8cd871-41eb-4034-9231-709642ac1f9a","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4b8cd871-41eb-4034-9231-709642ac1f9a",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_jump_wakdroid","path":"sprites/spr_jump_wakdroid/spr_jump_wakdroid.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_jump_wakdroid",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 10.0,
@@ -41,9 +43,9 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"586dcaf5-ac20-44d3-89bd-b7ec13cf5cfd","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4b8cd871-41eb-4034-9231-709642ac1f9a","path":"sprites/spr_jump_wakdroid/spr_jump_wakdroid.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -59,23 +61,14 @@
     "yorigin": 57,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_jump_wakdroid","path":"sprites/spr_jump_wakdroid/spr_jump_wakdroid.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_jump_wakdroid",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"ed7de6da-db0a-44db-a9f1-96332ec6d31d","tags":[],"resourceType":"GMImageLayer",},
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"0904dfd7-8972-401b-bcb0-05c11932d354","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"ed7de6da-db0a-44db-a9f1-96332ec6d31d","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"0904dfd7-8972-401b-bcb0-05c11932d354","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "스프라이트",
     "path": "folders/스프라이트.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_jump_wakdroid",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

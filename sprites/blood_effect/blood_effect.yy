@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "blood_effect",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,30 +27,18 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"1de018c2-7c03-4875-8502-89fa894e3233","path":"sprites/blood_effect/blood_effect.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"1de018c2-7c03-4875-8502-89fa894e3233","path":"sprites/blood_effect/blood_effect.yy",},"LayerId":{"name":"9d5b1bce-5f98-4eb6-8101-7ccc4a5d2cd1","path":"sprites/blood_effect/blood_effect.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"blood_effect","path":"sprites/blood_effect/blood_effect.yy",},"resourceVersion":"1.0","name":"1de018c2-7c03-4875-8502-89fa894e3233","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"4dd99adb-2b83-468d-afd9-1406ab1db74b","path":"sprites/blood_effect/blood_effect.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"4dd99adb-2b83-468d-afd9-1406ab1db74b","path":"sprites/blood_effect/blood_effect.yy",},"LayerId":{"name":"9d5b1bce-5f98-4eb6-8101-7ccc4a5d2cd1","path":"sprites/blood_effect/blood_effect.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"blood_effect","path":"sprites/blood_effect/blood_effect.yy",},"resourceVersion":"1.0","name":"4dd99adb-2b83-468d-afd9-1406ab1db74b","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"54985bc5-2fbb-4a83-a144-86cf4985b45b","path":"sprites/blood_effect/blood_effect.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"54985bc5-2fbb-4a83-a144-86cf4985b45b","path":"sprites/blood_effect/blood_effect.yy",},"LayerId":{"name":"9d5b1bce-5f98-4eb6-8101-7ccc4a5d2cd1","path":"sprites/blood_effect/blood_effect.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"blood_effect","path":"sprites/blood_effect/blood_effect.yy",},"resourceVersion":"1.0","name":"54985bc5-2fbb-4a83-a144-86cf4985b45b","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"bf891d71-5dbe-40da-91c4-1e9a33a3ad88","path":"sprites/blood_effect/blood_effect.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"bf891d71-5dbe-40da-91c4-1e9a33a3ad88","path":"sprites/blood_effect/blood_effect.yy",},"LayerId":{"name":"9d5b1bce-5f98-4eb6-8101-7ccc4a5d2cd1","path":"sprites/blood_effect/blood_effect.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"blood_effect","path":"sprites/blood_effect/blood_effect.yy",},"resourceVersion":"1.0","name":"bf891d71-5dbe-40da-91c4-1e9a33a3ad88","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"c75578c8-d081-45ab-b4f9-6caf3a78e5cb","path":"sprites/blood_effect/blood_effect.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"c75578c8-d081-45ab-b4f9-6caf3a78e5cb","path":"sprites/blood_effect/blood_effect.yy",},"LayerId":{"name":"9d5b1bce-5f98-4eb6-8101-7ccc4a5d2cd1","path":"sprites/blood_effect/blood_effect.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"blood_effect","path":"sprites/blood_effect/blood_effect.yy",},"resourceVersion":"1.0","name":"c75578c8-d081-45ab-b4f9-6caf3a78e5cb","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"5efde20f-e841-4284-81bc-4916559ed4e6","path":"sprites/blood_effect/blood_effect.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"5efde20f-e841-4284-81bc-4916559ed4e6","path":"sprites/blood_effect/blood_effect.yy",},"LayerId":{"name":"9d5b1bce-5f98-4eb6-8101-7ccc4a5d2cd1","path":"sprites/blood_effect/blood_effect.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"blood_effect","path":"sprites/blood_effect/blood_effect.yy",},"resourceVersion":"1.0","name":"5efde20f-e841-4284-81bc-4916559ed4e6","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"ac1e2927-2e2e-4850-803a-a6a05079a01b","path":"sprites/blood_effect/blood_effect.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"ac1e2927-2e2e-4850-803a-a6a05079a01b","path":"sprites/blood_effect/blood_effect.yy",},"LayerId":{"name":"9d5b1bce-5f98-4eb6-8101-7ccc4a5d2cd1","path":"sprites/blood_effect/blood_effect.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"blood_effect","path":"sprites/blood_effect/blood_effect.yy",},"resourceVersion":"1.0","name":"ac1e2927-2e2e-4850-803a-a6a05079a01b","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1de018c2-7c03-4875-8502-89fa894e3233",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4dd99adb-2b83-468d-afd9-1406ab1db74b",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"54985bc5-2fbb-4a83-a144-86cf4985b45b",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"bf891d71-5dbe-40da-91c4-1e9a33a3ad88",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c75578c8-d081-45ab-b4f9-6caf3a78e5cb",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5efde20f-e841-4284-81bc-4916559ed4e6",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ac1e2927-2e2e-4850-803a-a6a05079a01b",},
   ],
   "sequence": {
-    "spriteId": {"name":"blood_effect","path":"sprites/blood_effect/blood_effect.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "blood_effect",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 25.0,
@@ -58,7 +49,7 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"e0a72d8e-b74a-41ba-a673-6b55c271e9dc","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1de018c2-7c03-4875-8502-89fa894e3233","path":"sprites/blood_effect/blood_effect.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"be43b1f8-ab0d-418d-8053-ef45ffd18b2f","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4dd99adb-2b83-468d-afd9-1406ab1db74b","path":"sprites/blood_effect/blood_effect.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"3cd6be66-417d-4ec6-a82e-daf1238529b6","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"54985bc5-2fbb-4a83-a144-86cf4985b45b","path":"sprites/blood_effect/blood_effect.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
@@ -66,7 +57,7 @@
             {"id":"fd271484-76cf-43c1-a45d-fa292b62faa3","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c75578c8-d081-45ab-b4f9-6caf3a78e5cb","path":"sprites/blood_effect/blood_effect.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"41c2e019-ce7c-4416-8915-9e39f8913db1","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5efde20f-e841-4284-81bc-4916559ed4e6","path":"sprites/blood_effect/blood_effect.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"8a715c54-eb19-4d6e-bc0a-8ece37846430","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ac1e2927-2e2e-4850-803a-a6a05079a01b","path":"sprites/blood_effect/blood_effect.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -82,22 +73,13 @@
     "yorigin": 32,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"blood_effect","path":"sprites/blood_effect/blood_effect.yy",},
-    "resourceVersion": "1.4",
-    "name": "blood_effect",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"9d5b1bce-5f98-4eb6-8101-7ccc4a5d2cd1","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"9d5b1bce-5f98-4eb6-8101-7ccc4a5d2cd1","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "스프라이트",
     "path": "folders/스프라이트.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "blood_effect",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

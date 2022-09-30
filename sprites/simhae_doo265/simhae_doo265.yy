@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "simhae_doo265",
   "bboxMode": 0,
   "collisionKind": 4,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 3,
   "gridY": 3,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"472897b4-1389-45a1-873a-e92ed7085a5f","path":"sprites/simhae_doo265/simhae_doo265.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"472897b4-1389-45a1-873a-e92ed7085a5f","path":"sprites/simhae_doo265/simhae_doo265.yy",},"LayerId":{"name":"2228e2ef-0d26-4b14-a5d2-9bb4cf137809","path":"sprites/simhae_doo265/simhae_doo265.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"simhae_doo265","path":"sprites/simhae_doo265/simhae_doo265.yy",},"resourceVersion":"1.0","name":"472897b4-1389-45a1-873a-e92ed7085a5f","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"84fd52b0-4f25-455b-97da-6d0450a105ba","path":"sprites/simhae_doo265/simhae_doo265.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"84fd52b0-4f25-455b-97da-6d0450a105ba","path":"sprites/simhae_doo265/simhae_doo265.yy",},"LayerId":{"name":"2228e2ef-0d26-4b14-a5d2-9bb4cf137809","path":"sprites/simhae_doo265/simhae_doo265.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"simhae_doo265","path":"sprites/simhae_doo265/simhae_doo265.yy",},"resourceVersion":"1.0","name":"84fd52b0-4f25-455b-97da-6d0450a105ba","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"0f719a57-122c-4dfc-a62a-c56adcc95de8","path":"sprites/simhae_doo265/simhae_doo265.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"0f719a57-122c-4dfc-a62a-c56adcc95de8","path":"sprites/simhae_doo265/simhae_doo265.yy",},"LayerId":{"name":"2228e2ef-0d26-4b14-a5d2-9bb4cf137809","path":"sprites/simhae_doo265/simhae_doo265.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"simhae_doo265","path":"sprites/simhae_doo265/simhae_doo265.yy",},"resourceVersion":"1.0","name":"0f719a57-122c-4dfc-a62a-c56adcc95de8","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"472897b4-1389-45a1-873a-e92ed7085a5f",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"84fd52b0-4f25-455b-97da-6d0450a105ba",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0f719a57-122c-4dfc-a62a-c56adcc95de8",},
   ],
   "sequence": {
-    "spriteId": {"name":"simhae_doo265","path":"sprites/simhae_doo265/simhae_doo265.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "simhae_doo",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -46,11 +45,11 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"13ed17f2-81bf-462e-b97d-eab42a462d75","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"472897b4-1389-45a1-873a-e92ed7085a5f","path":"sprites/simhae_doo265/simhae_doo265.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"f596bb22-af62-4af1-87a2-189ec3e1c3e0","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"84fd52b0-4f25-455b-97da-6d0450a105ba","path":"sprites/simhae_doo265/simhae_doo265.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"5005aae4-681d-40a1-9747-efff701e55eb","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0f719a57-122c-4dfc-a62a-c56adcc95de8","path":"sprites/simhae_doo265/simhae_doo265.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -66,22 +65,13 @@
     "yorigin": 172,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"simhae_doo265","path":"sprites/simhae_doo265/simhae_doo265.yy",},
-    "resourceVersion": "1.4",
-    "name": "simhae_doo",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"2228e2ef-0d26-4b14-a5d2-9bb4cf137809","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"2228e2ef-0d26-4b14-a5d2-9bb4cf137809","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "for_new",
     "path": "folders/스프라이트/for_new.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "simhae_doo265",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

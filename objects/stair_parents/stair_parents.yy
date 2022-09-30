@@ -1,7 +1,11 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "stair_parents",
   "spriteId": null,
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
@@ -27,8 +31,4 @@
     "name": "map_edit",
     "path": "folders/객체/map_edit.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "stair_parents",
-  "tags": [],
-  "resourceType": "GMObject",
 }

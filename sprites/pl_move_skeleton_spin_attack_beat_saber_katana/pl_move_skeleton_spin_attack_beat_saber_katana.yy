@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "pl_move_skeleton_spin_attack_beat_saber_katana",
   "bboxMode": 2,
   "collisionKind": 5,
   "type": 0,
@@ -24,41 +27,19 @@
   "gridX": 3,
   "gridY": 3,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"aac5d59b-cbb7-4872-b887-208e18c55c8a","path":"sprites/pl_move_skeleton_spin_attack_beat_saber_katana/pl_move_skeleton_spin_attack_beat_saber_katana.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"aac5d59b-cbb7-4872-b887-208e18c55c8a","path":"sprites/pl_move_skeleton_spin_attack_beat_saber_katana/pl_move_skeleton_spin_attack_beat_saber_katana.yy",},"LayerId":{"name":"18243adb-c6b0-4769-8ff9-b66b2ef00104","path":"sprites/pl_move_skeleton_spin_attack_beat_saber_katana/pl_move_skeleton_spin_attack_beat_saber_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"aac5d59b-cbb7-4872-b887-208e18c55c8a","path":"sprites/pl_move_skeleton_spin_attack_beat_saber_katana/pl_move_skeleton_spin_attack_beat_saber_katana.yy",},"LayerId":{"name":"3aa4bc1c-cb8b-4692-b9a5-8b9413d31cb4","path":"sprites/pl_move_skeleton_spin_attack_beat_saber_katana/pl_move_skeleton_spin_attack_beat_saber_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"pl_move_skeleton_spin_attack_beat_saber_katana","path":"sprites/pl_move_skeleton_spin_attack_beat_saber_katana/pl_move_skeleton_spin_attack_beat_saber_katana.yy",},"resourceVersion":"1.0","name":"aac5d59b-cbb7-4872-b887-208e18c55c8a","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"1f8ea3a2-e455-4997-8782-daeaa61312a5","path":"sprites/pl_move_skeleton_spin_attack_beat_saber_katana/pl_move_skeleton_spin_attack_beat_saber_katana.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"1f8ea3a2-e455-4997-8782-daeaa61312a5","path":"sprites/pl_move_skeleton_spin_attack_beat_saber_katana/pl_move_skeleton_spin_attack_beat_saber_katana.yy",},"LayerId":{"name":"18243adb-c6b0-4769-8ff9-b66b2ef00104","path":"sprites/pl_move_skeleton_spin_attack_beat_saber_katana/pl_move_skeleton_spin_attack_beat_saber_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"1f8ea3a2-e455-4997-8782-daeaa61312a5","path":"sprites/pl_move_skeleton_spin_attack_beat_saber_katana/pl_move_skeleton_spin_attack_beat_saber_katana.yy",},"LayerId":{"name":"3aa4bc1c-cb8b-4692-b9a5-8b9413d31cb4","path":"sprites/pl_move_skeleton_spin_attack_beat_saber_katana/pl_move_skeleton_spin_attack_beat_saber_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"pl_move_skeleton_spin_attack_beat_saber_katana","path":"sprites/pl_move_skeleton_spin_attack_beat_saber_katana/pl_move_skeleton_spin_attack_beat_saber_katana.yy",},"resourceVersion":"1.0","name":"1f8ea3a2-e455-4997-8782-daeaa61312a5","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"c71fff64-3423-44bd-a8b8-daa256225822","path":"sprites/pl_move_skeleton_spin_attack_beat_saber_katana/pl_move_skeleton_spin_attack_beat_saber_katana.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"c71fff64-3423-44bd-a8b8-daa256225822","path":"sprites/pl_move_skeleton_spin_attack_beat_saber_katana/pl_move_skeleton_spin_attack_beat_saber_katana.yy",},"LayerId":{"name":"18243adb-c6b0-4769-8ff9-b66b2ef00104","path":"sprites/pl_move_skeleton_spin_attack_beat_saber_katana/pl_move_skeleton_spin_attack_beat_saber_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"c71fff64-3423-44bd-a8b8-daa256225822","path":"sprites/pl_move_skeleton_spin_attack_beat_saber_katana/pl_move_skeleton_spin_attack_beat_saber_katana.yy",},"LayerId":{"name":"3aa4bc1c-cb8b-4692-b9a5-8b9413d31cb4","path":"sprites/pl_move_skeleton_spin_attack_beat_saber_katana/pl_move_skeleton_spin_attack_beat_saber_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"pl_move_skeleton_spin_attack_beat_saber_katana","path":"sprites/pl_move_skeleton_spin_attack_beat_saber_katana/pl_move_skeleton_spin_attack_beat_saber_katana.yy",},"resourceVersion":"1.0","name":"c71fff64-3423-44bd-a8b8-daa256225822","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"e7a3377a-d7f7-4be8-9ce1-3167a5721c30","path":"sprites/pl_move_skeleton_spin_attack_beat_saber_katana/pl_move_skeleton_spin_attack_beat_saber_katana.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"e7a3377a-d7f7-4be8-9ce1-3167a5721c30","path":"sprites/pl_move_skeleton_spin_attack_beat_saber_katana/pl_move_skeleton_spin_attack_beat_saber_katana.yy",},"LayerId":{"name":"18243adb-c6b0-4769-8ff9-b66b2ef00104","path":"sprites/pl_move_skeleton_spin_attack_beat_saber_katana/pl_move_skeleton_spin_attack_beat_saber_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"e7a3377a-d7f7-4be8-9ce1-3167a5721c30","path":"sprites/pl_move_skeleton_spin_attack_beat_saber_katana/pl_move_skeleton_spin_attack_beat_saber_katana.yy",},"LayerId":{"name":"3aa4bc1c-cb8b-4692-b9a5-8b9413d31cb4","path":"sprites/pl_move_skeleton_spin_attack_beat_saber_katana/pl_move_skeleton_spin_attack_beat_saber_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"pl_move_skeleton_spin_attack_beat_saber_katana","path":"sprites/pl_move_skeleton_spin_attack_beat_saber_katana/pl_move_skeleton_spin_attack_beat_saber_katana.yy",},"resourceVersion":"1.0","name":"e7a3377a-d7f7-4be8-9ce1-3167a5721c30","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"d6acb70b-84f3-4c63-84bb-221e86618011","path":"sprites/pl_move_skeleton_spin_attack_beat_saber_katana/pl_move_skeleton_spin_attack_beat_saber_katana.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"d6acb70b-84f3-4c63-84bb-221e86618011","path":"sprites/pl_move_skeleton_spin_attack_beat_saber_katana/pl_move_skeleton_spin_attack_beat_saber_katana.yy",},"LayerId":{"name":"18243adb-c6b0-4769-8ff9-b66b2ef00104","path":"sprites/pl_move_skeleton_spin_attack_beat_saber_katana/pl_move_skeleton_spin_attack_beat_saber_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"d6acb70b-84f3-4c63-84bb-221e86618011","path":"sprites/pl_move_skeleton_spin_attack_beat_saber_katana/pl_move_skeleton_spin_attack_beat_saber_katana.yy",},"LayerId":{"name":"3aa4bc1c-cb8b-4692-b9a5-8b9413d31cb4","path":"sprites/pl_move_skeleton_spin_attack_beat_saber_katana/pl_move_skeleton_spin_attack_beat_saber_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"pl_move_skeleton_spin_attack_beat_saber_katana","path":"sprites/pl_move_skeleton_spin_attack_beat_saber_katana/pl_move_skeleton_spin_attack_beat_saber_katana.yy",},"resourceVersion":"1.0","name":"d6acb70b-84f3-4c63-84bb-221e86618011","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"3d25278c-aaf7-4e1b-b915-33f329516e8d","path":"sprites/pl_move_skeleton_spin_attack_beat_saber_katana/pl_move_skeleton_spin_attack_beat_saber_katana.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"3d25278c-aaf7-4e1b-b915-33f329516e8d","path":"sprites/pl_move_skeleton_spin_attack_beat_saber_katana/pl_move_skeleton_spin_attack_beat_saber_katana.yy",},"LayerId":{"name":"18243adb-c6b0-4769-8ff9-b66b2ef00104","path":"sprites/pl_move_skeleton_spin_attack_beat_saber_katana/pl_move_skeleton_spin_attack_beat_saber_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"3d25278c-aaf7-4e1b-b915-33f329516e8d","path":"sprites/pl_move_skeleton_spin_attack_beat_saber_katana/pl_move_skeleton_spin_attack_beat_saber_katana.yy",},"LayerId":{"name":"3aa4bc1c-cb8b-4692-b9a5-8b9413d31cb4","path":"sprites/pl_move_skeleton_spin_attack_beat_saber_katana/pl_move_skeleton_spin_attack_beat_saber_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"pl_move_skeleton_spin_attack_beat_saber_katana","path":"sprites/pl_move_skeleton_spin_attack_beat_saber_katana/pl_move_skeleton_spin_attack_beat_saber_katana.yy",},"resourceVersion":"1.0","name":"3d25278c-aaf7-4e1b-b915-33f329516e8d","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"53eccc92-5cf0-40d9-a8d9-1f9d62e622ac","path":"sprites/pl_move_skeleton_spin_attack_beat_saber_katana/pl_move_skeleton_spin_attack_beat_saber_katana.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"53eccc92-5cf0-40d9-a8d9-1f9d62e622ac","path":"sprites/pl_move_skeleton_spin_attack_beat_saber_katana/pl_move_skeleton_spin_attack_beat_saber_katana.yy",},"LayerId":{"name":"18243adb-c6b0-4769-8ff9-b66b2ef00104","path":"sprites/pl_move_skeleton_spin_attack_beat_saber_katana/pl_move_skeleton_spin_attack_beat_saber_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"53eccc92-5cf0-40d9-a8d9-1f9d62e622ac","path":"sprites/pl_move_skeleton_spin_attack_beat_saber_katana/pl_move_skeleton_spin_attack_beat_saber_katana.yy",},"LayerId":{"name":"3aa4bc1c-cb8b-4692-b9a5-8b9413d31cb4","path":"sprites/pl_move_skeleton_spin_attack_beat_saber_katana/pl_move_skeleton_spin_attack_beat_saber_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"pl_move_skeleton_spin_attack_beat_saber_katana","path":"sprites/pl_move_skeleton_spin_attack_beat_saber_katana/pl_move_skeleton_spin_attack_beat_saber_katana.yy",},"resourceVersion":"1.0","name":"53eccc92-5cf0-40d9-a8d9-1f9d62e622ac","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"70b1c129-0946-4ca0-bacd-84e2c453bebe","path":"sprites/pl_move_skeleton_spin_attack_beat_saber_katana/pl_move_skeleton_spin_attack_beat_saber_katana.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"70b1c129-0946-4ca0-bacd-84e2c453bebe","path":"sprites/pl_move_skeleton_spin_attack_beat_saber_katana/pl_move_skeleton_spin_attack_beat_saber_katana.yy",},"LayerId":{"name":"18243adb-c6b0-4769-8ff9-b66b2ef00104","path":"sprites/pl_move_skeleton_spin_attack_beat_saber_katana/pl_move_skeleton_spin_attack_beat_saber_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"70b1c129-0946-4ca0-bacd-84e2c453bebe","path":"sprites/pl_move_skeleton_spin_attack_beat_saber_katana/pl_move_skeleton_spin_attack_beat_saber_katana.yy",},"LayerId":{"name":"3aa4bc1c-cb8b-4692-b9a5-8b9413d31cb4","path":"sprites/pl_move_skeleton_spin_attack_beat_saber_katana/pl_move_skeleton_spin_attack_beat_saber_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"pl_move_skeleton_spin_attack_beat_saber_katana","path":"sprites/pl_move_skeleton_spin_attack_beat_saber_katana/pl_move_skeleton_spin_attack_beat_saber_katana.yy",},"resourceVersion":"1.0","name":"70b1c129-0946-4ca0-bacd-84e2c453bebe","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"aac5d59b-cbb7-4872-b887-208e18c55c8a",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1f8ea3a2-e455-4997-8782-daeaa61312a5",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c71fff64-3423-44bd-a8b8-daa256225822",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e7a3377a-d7f7-4be8-9ce1-3167a5721c30",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d6acb70b-84f3-4c63-84bb-221e86618011",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3d25278c-aaf7-4e1b-b915-33f329516e8d",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"53eccc92-5cf0-40d9-a8d9-1f9d62e622ac",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"70b1c129-0946-4ca0-bacd-84e2c453bebe",},
   ],
   "sequence": {
-    "spriteId": {"name":"pl_move_skeleton_spin_attack_beat_saber_katana","path":"sprites/pl_move_skeleton_spin_attack_beat_saber_katana/pl_move_skeleton_spin_attack_beat_saber_katana.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "pl_move_skeleton_spin_attack_beat_saber_katana",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 10.0,
@@ -69,7 +50,7 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"0f29d09a-ab45-49c9-97fd-530b10e1fd24","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"aac5d59b-cbb7-4872-b887-208e18c55c8a","path":"sprites/pl_move_skeleton_spin_attack_beat_saber_katana/pl_move_skeleton_spin_attack_beat_saber_katana.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"a91e7291-c2d5-4442-9941-c947e4e96efd","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1f8ea3a2-e455-4997-8782-daeaa61312a5","path":"sprites/pl_move_skeleton_spin_attack_beat_saber_katana/pl_move_skeleton_spin_attack_beat_saber_katana.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"018b125e-c07a-4fed-9217-248b9a395957","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c71fff64-3423-44bd-a8b8-daa256225822","path":"sprites/pl_move_skeleton_spin_attack_beat_saber_katana/pl_move_skeleton_spin_attack_beat_saber_katana.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
@@ -78,7 +59,7 @@
             {"id":"798cccb9-5b27-4567-ac74-b497fa7342ad","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3d25278c-aaf7-4e1b-b915-33f329516e8d","path":"sprites/pl_move_skeleton_spin_attack_beat_saber_katana/pl_move_skeleton_spin_attack_beat_saber_katana.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"d718fda7-e7d8-445a-9c5d-7737a79cfeb9","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"53eccc92-5cf0-40d9-a8d9-1f9d62e622ac","path":"sprites/pl_move_skeleton_spin_attack_beat_saber_katana/pl_move_skeleton_spin_attack_beat_saber_katana.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"fd279c41-0ca4-42d6-9b0e-e425b7afe9a7","Key":7.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"70b1c129-0946-4ca0-bacd-84e2c453bebe","path":"sprites/pl_move_skeleton_spin_attack_beat_saber_katana/pl_move_skeleton_spin_attack_beat_saber_katana.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -94,23 +75,14 @@
     "yorigin": 83,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"pl_move_skeleton_spin_attack_beat_saber_katana","path":"sprites/pl_move_skeleton_spin_attack_beat_saber_katana/pl_move_skeleton_spin_attack_beat_saber_katana.yy",},
-    "resourceVersion": "1.4",
-    "name": "pl_move_skeleton_spin_attack_beat_saber_katana",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"18243adb-c6b0-4769-8ff9-b66b2ef00104","tags":[],"resourceType":"GMImageLayer",},
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"3aa4bc1c-cb8b-4692-b9a5-8b9413d31cb4","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"18243adb-c6b0-4769-8ff9-b66b2ef00104","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"3aa4bc1c-cb8b-4692-b9a5-8b9413d31cb4","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "스프라이트",
     "path": "folders/스프라이트.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "pl_move_skeleton_spin_attack_beat_saber_katana",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

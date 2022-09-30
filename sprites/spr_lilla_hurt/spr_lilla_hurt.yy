@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_lilla_hurt",
   "bboxMode": 2,
   "collisionKind": 5,
   "type": 0,
@@ -24,13 +27,12 @@
   "gridX": 3,
   "gridY": 3,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"201ad3ad-2c92-4817-8c80-d51fbb0c3268","path":"sprites/spr_lilla_hurt/spr_lilla_hurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"201ad3ad-2c92-4817-8c80-d51fbb0c3268","path":"sprites/spr_lilla_hurt/spr_lilla_hurt.yy",},"LayerId":{"name":"b6203c38-4243-40ef-a961-32e0231cacce","path":"sprites/spr_lilla_hurt/spr_lilla_hurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"201ad3ad-2c92-4817-8c80-d51fbb0c3268","path":"sprites/spr_lilla_hurt/spr_lilla_hurt.yy",},"LayerId":{"name":"12c7d847-4144-4f43-9ccf-8b18c5c5a315","path":"sprites/spr_lilla_hurt/spr_lilla_hurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_lilla_hurt","path":"sprites/spr_lilla_hurt/spr_lilla_hurt.yy",},"resourceVersion":"1.0","name":"201ad3ad-2c92-4817-8c80-d51fbb0c3268","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"201ad3ad-2c92-4817-8c80-d51fbb0c3268",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_lilla_hurt","path":"sprites/spr_lilla_hurt/spr_lilla_hurt.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_lilla_hurt",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 10.0,
@@ -41,9 +43,9 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"98daf5aa-285c-441b-a332-7d0e234dda76","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"201ad3ad-2c92-4817-8c80-d51fbb0c3268","path":"sprites/spr_lilla_hurt/spr_lilla_hurt.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -59,23 +61,14 @@
     "yorigin": 64,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_lilla_hurt","path":"sprites/spr_lilla_hurt/spr_lilla_hurt.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_lilla_hurt",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"b6203c38-4243-40ef-a961-32e0231cacce","tags":[],"resourceType":"GMImageLayer",},
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"12c7d847-4144-4f43-9ccf-8b18c5c5a315","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"b6203c38-4243-40ef-a961-32e0231cacce","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"12c7d847-4144-4f43-9ccf-8b18c5c5a315","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "스프라이트",
     "path": "folders/스프라이트.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_lilla_hurt",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

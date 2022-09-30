@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_crouch_wakdroid275",
   "bboxMode": 2,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"6be9bef5-3c18-4403-9af1-f3a53eef6129","path":"sprites/spr_crouch_wakdroid275/spr_crouch_wakdroid275.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"6be9bef5-3c18-4403-9af1-f3a53eef6129","path":"sprites/spr_crouch_wakdroid275/spr_crouch_wakdroid275.yy",},"LayerId":{"name":"c0da1356-86bc-4571-bfef-cb37f3888183","path":"sprites/spr_crouch_wakdroid275/spr_crouch_wakdroid275.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_crouch_wakdroid275","path":"sprites/spr_crouch_wakdroid275/spr_crouch_wakdroid275.yy",},"resourceVersion":"1.0","name":"6be9bef5-3c18-4403-9af1-f3a53eef6129","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6be9bef5-3c18-4403-9af1-f3a53eef6129",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_crouch_wakdroid275","path":"sprites/spr_crouch_wakdroid275/spr_crouch_wakdroid275.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_crouch_wakdroid",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 15.0,
@@ -40,9 +43,9 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"e287803f-cf70-415b-b26b-1b75f77181b2","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6be9bef5-3c18-4403-9af1-f3a53eef6129","path":"sprites/spr_crouch_wakdroid275/spr_crouch_wakdroid275.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -58,22 +61,13 @@
     "yorigin": 25,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_crouch_wakdroid275","path":"sprites/spr_crouch_wakdroid275/spr_crouch_wakdroid275.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_crouch_wakdroid",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"c0da1356-86bc-4571-bfef-cb37f3888183","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"c0da1356-86bc-4571-bfef-cb37f3888183","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "for_new",
     "path": "folders/스프라이트/for_new.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_crouch_wakdroid275",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

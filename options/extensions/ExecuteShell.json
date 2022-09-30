@@ -1,0 +1,9 @@
+{
+  "extensionId": {
+    "name": "ExecuteShell",
+    "path": "extensions/ExecuteShell/ExecuteShell.yy"
+  },
+  "resourceVersion": "1.0",
+  "resourceType": "GMExtensionConfigSet",
+  "configurables": null
+}

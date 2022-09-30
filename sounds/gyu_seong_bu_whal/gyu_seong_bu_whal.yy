@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "gyu_seong_bu_whal",
   "conversionMode": 0,
   "compression": 0,
   "volume": 1.0,
@@ -12,13 +15,9 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "gyu_seong_bu_whal",
-  "duration": 158.359283,
+  "duration": 158.35928,
   "parent": {
     "name": "소리",
     "path": "folders/소리.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "gyu_seong_bu_whal",
-  "tags": [],
-  "resourceType": "GMSound",
 }

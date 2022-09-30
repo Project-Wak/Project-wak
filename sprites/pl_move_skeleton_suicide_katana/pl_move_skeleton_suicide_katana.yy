@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "pl_move_skeleton_suicide_katana",
   "bboxMode": 2,
   "collisionKind": 5,
   "type": 0,
@@ -24,65 +27,25 @@
   "gridX": 3,
   "gridY": 3,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"c90968c5-ca46-4822-971e-82edf52ac851","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"c90968c5-ca46-4822-971e-82edf52ac851","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"LayerId":{"name":"c2aa7c5c-e1bc-4a39-add6-0a89799c08ae","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"c90968c5-ca46-4822-971e-82edf52ac851","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"LayerId":{"name":"972a2551-8609-4a02-9d30-01c5743da07d","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"pl_move_skeleton_suicide_katana","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"resourceVersion":"1.0","name":"c90968c5-ca46-4822-971e-82edf52ac851","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"b99c5631-3c76-48ca-a611-3df04b7258f4","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b99c5631-3c76-48ca-a611-3df04b7258f4","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"LayerId":{"name":"c2aa7c5c-e1bc-4a39-add6-0a89799c08ae","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"b99c5631-3c76-48ca-a611-3df04b7258f4","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"LayerId":{"name":"972a2551-8609-4a02-9d30-01c5743da07d","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"pl_move_skeleton_suicide_katana","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"resourceVersion":"1.0","name":"b99c5631-3c76-48ca-a611-3df04b7258f4","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"4642ff41-ad76-4ba1-afa8-e3e8a927c486","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"4642ff41-ad76-4ba1-afa8-e3e8a927c486","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"LayerId":{"name":"c2aa7c5c-e1bc-4a39-add6-0a89799c08ae","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"4642ff41-ad76-4ba1-afa8-e3e8a927c486","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"LayerId":{"name":"972a2551-8609-4a02-9d30-01c5743da07d","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"pl_move_skeleton_suicide_katana","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"resourceVersion":"1.0","name":"4642ff41-ad76-4ba1-afa8-e3e8a927c486","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"3a049527-16d9-4d2a-8c3c-6df10731c5cd","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"3a049527-16d9-4d2a-8c3c-6df10731c5cd","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"LayerId":{"name":"c2aa7c5c-e1bc-4a39-add6-0a89799c08ae","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"3a049527-16d9-4d2a-8c3c-6df10731c5cd","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"LayerId":{"name":"972a2551-8609-4a02-9d30-01c5743da07d","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"pl_move_skeleton_suicide_katana","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"resourceVersion":"1.0","name":"3a049527-16d9-4d2a-8c3c-6df10731c5cd","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"2929c18e-c419-4586-af98-febbbf077943","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"2929c18e-c419-4586-af98-febbbf077943","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"LayerId":{"name":"c2aa7c5c-e1bc-4a39-add6-0a89799c08ae","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"2929c18e-c419-4586-af98-febbbf077943","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"LayerId":{"name":"972a2551-8609-4a02-9d30-01c5743da07d","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"pl_move_skeleton_suicide_katana","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"resourceVersion":"1.0","name":"2929c18e-c419-4586-af98-febbbf077943","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"750f80c1-b021-4edd-941b-70e53f352d78","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"750f80c1-b021-4edd-941b-70e53f352d78","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"LayerId":{"name":"c2aa7c5c-e1bc-4a39-add6-0a89799c08ae","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"750f80c1-b021-4edd-941b-70e53f352d78","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"LayerId":{"name":"972a2551-8609-4a02-9d30-01c5743da07d","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"pl_move_skeleton_suicide_katana","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"resourceVersion":"1.0","name":"750f80c1-b021-4edd-941b-70e53f352d78","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"1c86f916-208c-4152-9530-bc3aed144351","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"1c86f916-208c-4152-9530-bc3aed144351","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"LayerId":{"name":"c2aa7c5c-e1bc-4a39-add6-0a89799c08ae","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"1c86f916-208c-4152-9530-bc3aed144351","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"LayerId":{"name":"972a2551-8609-4a02-9d30-01c5743da07d","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"pl_move_skeleton_suicide_katana","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"resourceVersion":"1.0","name":"1c86f916-208c-4152-9530-bc3aed144351","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"fb38cbd4-10c7-4bcb-9273-b93d29f9bb86","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"fb38cbd4-10c7-4bcb-9273-b93d29f9bb86","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"LayerId":{"name":"c2aa7c5c-e1bc-4a39-add6-0a89799c08ae","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"fb38cbd4-10c7-4bcb-9273-b93d29f9bb86","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"LayerId":{"name":"972a2551-8609-4a02-9d30-01c5743da07d","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"pl_move_skeleton_suicide_katana","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"resourceVersion":"1.0","name":"fb38cbd4-10c7-4bcb-9273-b93d29f9bb86","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"0d58ba42-18ed-48c6-bd27-883c5892b3ba","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"0d58ba42-18ed-48c6-bd27-883c5892b3ba","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"LayerId":{"name":"c2aa7c5c-e1bc-4a39-add6-0a89799c08ae","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"0d58ba42-18ed-48c6-bd27-883c5892b3ba","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"LayerId":{"name":"972a2551-8609-4a02-9d30-01c5743da07d","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"pl_move_skeleton_suicide_katana","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"resourceVersion":"1.0","name":"0d58ba42-18ed-48c6-bd27-883c5892b3ba","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"e90ed0a0-98af-4a4f-b220-66d2756e3620","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"e90ed0a0-98af-4a4f-b220-66d2756e3620","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"LayerId":{"name":"c2aa7c5c-e1bc-4a39-add6-0a89799c08ae","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"e90ed0a0-98af-4a4f-b220-66d2756e3620","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"LayerId":{"name":"972a2551-8609-4a02-9d30-01c5743da07d","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"pl_move_skeleton_suicide_katana","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"resourceVersion":"1.0","name":"e90ed0a0-98af-4a4f-b220-66d2756e3620","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"ef636990-e534-4eb7-9e4c-2aaa6d8db548","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"ef636990-e534-4eb7-9e4c-2aaa6d8db548","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"LayerId":{"name":"c2aa7c5c-e1bc-4a39-add6-0a89799c08ae","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"ef636990-e534-4eb7-9e4c-2aaa6d8db548","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"LayerId":{"name":"972a2551-8609-4a02-9d30-01c5743da07d","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"pl_move_skeleton_suicide_katana","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"resourceVersion":"1.0","name":"ef636990-e534-4eb7-9e4c-2aaa6d8db548","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"f4908b88-42e1-4ed5-b38a-f606034c6031","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f4908b88-42e1-4ed5-b38a-f606034c6031","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"LayerId":{"name":"c2aa7c5c-e1bc-4a39-add6-0a89799c08ae","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"f4908b88-42e1-4ed5-b38a-f606034c6031","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"LayerId":{"name":"972a2551-8609-4a02-9d30-01c5743da07d","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"pl_move_skeleton_suicide_katana","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"resourceVersion":"1.0","name":"f4908b88-42e1-4ed5-b38a-f606034c6031","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"24598c1e-510b-484a-b7d0-f79150e85a68","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"24598c1e-510b-484a-b7d0-f79150e85a68","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"LayerId":{"name":"c2aa7c5c-e1bc-4a39-add6-0a89799c08ae","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"24598c1e-510b-484a-b7d0-f79150e85a68","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"LayerId":{"name":"972a2551-8609-4a02-9d30-01c5743da07d","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"pl_move_skeleton_suicide_katana","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"resourceVersion":"1.0","name":"24598c1e-510b-484a-b7d0-f79150e85a68","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"1cc1f179-87bf-48bb-8f36-b77b01bb2ff2","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"1cc1f179-87bf-48bb-8f36-b77b01bb2ff2","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"LayerId":{"name":"c2aa7c5c-e1bc-4a39-add6-0a89799c08ae","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"1cc1f179-87bf-48bb-8f36-b77b01bb2ff2","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"LayerId":{"name":"972a2551-8609-4a02-9d30-01c5743da07d","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"pl_move_skeleton_suicide_katana","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"resourceVersion":"1.0","name":"1cc1f179-87bf-48bb-8f36-b77b01bb2ff2","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c90968c5-ca46-4822-971e-82edf52ac851",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b99c5631-3c76-48ca-a611-3df04b7258f4",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4642ff41-ad76-4ba1-afa8-e3e8a927c486",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3a049527-16d9-4d2a-8c3c-6df10731c5cd",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2929c18e-c419-4586-af98-febbbf077943",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"750f80c1-b021-4edd-941b-70e53f352d78",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1c86f916-208c-4152-9530-bc3aed144351",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"fb38cbd4-10c7-4bcb-9273-b93d29f9bb86",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0d58ba42-18ed-48c6-bd27-883c5892b3ba",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e90ed0a0-98af-4a4f-b220-66d2756e3620",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ef636990-e534-4eb7-9e4c-2aaa6d8db548",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f4908b88-42e1-4ed5-b38a-f606034c6031",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"24598c1e-510b-484a-b7d0-f79150e85a68",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1cc1f179-87bf-48bb-8f36-b77b01bb2ff2",},
   ],
   "sequence": {
-    "spriteId": {"name":"pl_move_skeleton_suicide_katana","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "pl_move_skeleton_suicide_katana",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 10.0,
@@ -93,7 +56,7 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"7104dfb6-07cf-4afc-9bd4-b2e4400a3e8a","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c90968c5-ca46-4822-971e-82edf52ac851","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"53c49b86-ddfa-4436-aa99-9d1bebd75d37","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b99c5631-3c76-48ca-a611-3df04b7258f4","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"8fe49688-d7a4-482e-a9c8-bc158edcbc76","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4642ff41-ad76-4ba1-afa8-e3e8a927c486","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
@@ -108,7 +71,7 @@
             {"id":"f34a171e-f5e4-4018-b523-67d7860b530c","Key":11.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f4908b88-42e1-4ed5-b38a-f606034c6031","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"25878f74-0d12-48bf-b4de-bf73d4143c27","Key":12.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"24598c1e-510b-484a-b7d0-f79150e85a68","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"a784de09-cc64-4488-83cb-914e4cd6b7e0","Key":13.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1cc1f179-87bf-48bb-8f36-b77b01bb2ff2","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -124,23 +87,14 @@
     "yorigin": 72,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"pl_move_skeleton_suicide_katana","path":"sprites/pl_move_skeleton_suicide_katana/pl_move_skeleton_suicide_katana.yy",},
-    "resourceVersion": "1.4",
-    "name": "pl_move_skeleton_suicide_katana",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"c2aa7c5c-e1bc-4a39-add6-0a89799c08ae","tags":[],"resourceType":"GMImageLayer",},
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"972a2551-8609-4a02-9d30-01c5743da07d","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"c2aa7c5c-e1bc-4a39-add6-0a89799c08ae","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"972a2551-8609-4a02-9d30-01c5743da07d","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "스프라이트",
     "path": "folders/스프라이트.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "pl_move_skeleton_suicide_katana",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

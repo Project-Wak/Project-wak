@@ -1,7 +1,11 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "effect_parents",
   "spriteId": null,
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": null,
@@ -24,8 +28,4 @@
     "name": "BG_UI",
     "path": "folders/객체/BG_UI.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "effect_parents",
-  "tags": [],
-  "resourceType": "GMObject",
 }

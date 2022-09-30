@@ -1058,6 +1058,7 @@ else
 				grabing_walpha = 1
 				}
 			grab_skill ++
+			player.x = center_xx
 			grabing_alpha += (-0.01 - grabing_alpha)*0.03
 			grabing_walpha += (-0.01 - grabing_walpha)*0.03
 			
@@ -1067,6 +1068,15 @@ else
 				var random_val_xx = irandom_range(-420,420)
 				var random_val_yy = irandom_range(-420,420)
 				instance_create_depth(player.x+random_val_xx,player.y+random_val_yy,player.depth-10,spear_lastboss_grab)
+				}
+				
+				if (grab_skill-3)%6 = 0 && grab_skill <= 80
+				{
+				var random_val_xx = irandom_range(-420,420)
+				var random_val_yy = irandom_range(-420,420)
+				var bullet_ = instance_create_depth(player.x+random_val_xx,player.y+random_val_yy,player.depth-1,simhae_doo_bullet)
+				bullet_.bullet_speed = 0.7
+				bullet_.attack_type = 0
 				}
 				
 				if grab_skill > 300
@@ -1106,10 +1116,15 @@ else
 			
 			if grab_skill < 300
 			{
-			grabing_walpha += (-0.01 - grabing_walpha)*0.1
-				if abs(obj_camera.x-player.x) > 3
+				if global.hp <= 0
 				{
-				player.x += sign(obj_camera.x-player.x)*2
+				global.hp = 1
+				}
+			grabing_walpha += (-0.01 - grabing_walpha)*0.1
+			center_xx = camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5
+				if abs(center_xx-player.x) > 3
+				{
+				player.x += sign(center_xx-player.x)*2
 				global.never_move = 1
 				}
 			player.hurt = 1

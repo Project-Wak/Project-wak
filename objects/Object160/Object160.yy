@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "Object160",
   "spriteId": null,
   "solid": false,
   "visible": true,
@@ -19,7 +22,7 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":true,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":true,"eventNum":0,"eventType":0,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [],
@@ -27,8 +30,4 @@
     "name": "객체",
     "path": "folders/객체.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "Object160",
-  "tags": [],
-  "resourceType": "GMObject",
 }

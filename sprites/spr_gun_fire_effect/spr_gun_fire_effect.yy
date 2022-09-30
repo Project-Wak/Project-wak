@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "spr_gun_fire_effect",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"d9c8bccb-3634-4fb9-83f2-61f82314d0ee","path":"sprites/spr_gun_fire_effect/spr_gun_fire_effect.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"d9c8bccb-3634-4fb9-83f2-61f82314d0ee","path":"sprites/spr_gun_fire_effect/spr_gun_fire_effect.yy",},"LayerId":{"name":"5d2b9576-36e8-4ce8-8ead-f78e62ecc39d","path":"sprites/spr_gun_fire_effect/spr_gun_fire_effect.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_gun_fire_effect","path":"sprites/spr_gun_fire_effect/spr_gun_fire_effect.yy",},"resourceVersion":"1.0","name":"d9c8bccb-3634-4fb9-83f2-61f82314d0ee","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"50ce1d5c-c5ab-4523-9614-8b77e5aa37ea","path":"sprites/spr_gun_fire_effect/spr_gun_fire_effect.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"50ce1d5c-c5ab-4523-9614-8b77e5aa37ea","path":"sprites/spr_gun_fire_effect/spr_gun_fire_effect.yy",},"LayerId":{"name":"5d2b9576-36e8-4ce8-8ead-f78e62ecc39d","path":"sprites/spr_gun_fire_effect/spr_gun_fire_effect.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_gun_fire_effect","path":"sprites/spr_gun_fire_effect/spr_gun_fire_effect.yy",},"resourceVersion":"1.0","name":"50ce1d5c-c5ab-4523-9614-8b77e5aa37ea","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"2b246fa4-b6ae-4e88-9e12-fb8fe85012e6","path":"sprites/spr_gun_fire_effect/spr_gun_fire_effect.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"2b246fa4-b6ae-4e88-9e12-fb8fe85012e6","path":"sprites/spr_gun_fire_effect/spr_gun_fire_effect.yy",},"LayerId":{"name":"5d2b9576-36e8-4ce8-8ead-f78e62ecc39d","path":"sprites/spr_gun_fire_effect/spr_gun_fire_effect.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_gun_fire_effect","path":"sprites/spr_gun_fire_effect/spr_gun_fire_effect.yy",},"resourceVersion":"1.0","name":"2b246fa4-b6ae-4e88-9e12-fb8fe85012e6","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d9c8bccb-3634-4fb9-83f2-61f82314d0ee",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"50ce1d5c-c5ab-4523-9614-8b77e5aa37ea",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2b246fa4-b6ae-4e88-9e12-fb8fe85012e6",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_gun_fire_effect","path":"sprites/spr_gun_fire_effect/spr_gun_fire_effect.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "spr_gun_fire_effect",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -46,11 +45,11 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"9c7b8a0c-241e-4c4b-b2fc-6e84afbc33fb","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d9c8bccb-3634-4fb9-83f2-61f82314d0ee","path":"sprites/spr_gun_fire_effect/spr_gun_fire_effect.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"c078da47-2239-41dd-9350-70773f258924","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"50ce1d5c-c5ab-4523-9614-8b77e5aa37ea","path":"sprites/spr_gun_fire_effect/spr_gun_fire_effect.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"6f63d082-c073-47c5-bf72-e348080f5093","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2b246fa4-b6ae-4e88-9e12-fb8fe85012e6","path":"sprites/spr_gun_fire_effect/spr_gun_fire_effect.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -66,22 +65,13 @@
     "yorigin": 32,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_gun_fire_effect","path":"sprites/spr_gun_fire_effect/spr_gun_fire_effect.yy",},
-    "resourceVersion": "1.4",
-    "name": "spr_gun_fire_effect",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"5d2b9576-36e8-4ce8-8ead-f78e62ecc39d","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"5d2b9576-36e8-4ce8-8ead-f78e62ecc39d","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "스프라이트",
     "path": "folders/스프라이트.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "spr_gun_fire_effect",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

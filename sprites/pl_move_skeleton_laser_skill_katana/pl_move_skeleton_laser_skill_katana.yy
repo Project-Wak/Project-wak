@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "pl_move_skeleton_laser_skill_katana",
   "bboxMode": 2,
   "collisionKind": 5,
   "type": 0,
@@ -24,65 +27,25 @@
   "gridX": 3,
   "gridY": 3,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"f934c5dd-79ef-4a58-9f10-764d1ada4096","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f934c5dd-79ef-4a58-9f10-764d1ada4096","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"LayerId":{"name":"781808f4-ff89-44dd-83b7-e27af3a5474e","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"f934c5dd-79ef-4a58-9f10-764d1ada4096","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"LayerId":{"name":"62456ec3-4abf-4558-a727-463648ee848d","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"pl_move_skeleton_laser_skill_katana","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"resourceVersion":"1.0","name":"f934c5dd-79ef-4a58-9f10-764d1ada4096","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"46d76aa9-b430-4908-8f87-f81b21c2aedd","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"46d76aa9-b430-4908-8f87-f81b21c2aedd","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"LayerId":{"name":"781808f4-ff89-44dd-83b7-e27af3a5474e","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"46d76aa9-b430-4908-8f87-f81b21c2aedd","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"LayerId":{"name":"62456ec3-4abf-4558-a727-463648ee848d","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"pl_move_skeleton_laser_skill_katana","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"resourceVersion":"1.0","name":"46d76aa9-b430-4908-8f87-f81b21c2aedd","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"60781720-6dc9-429a-896c-35f735f81861","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"60781720-6dc9-429a-896c-35f735f81861","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"LayerId":{"name":"781808f4-ff89-44dd-83b7-e27af3a5474e","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"60781720-6dc9-429a-896c-35f735f81861","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"LayerId":{"name":"62456ec3-4abf-4558-a727-463648ee848d","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"pl_move_skeleton_laser_skill_katana","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"resourceVersion":"1.0","name":"60781720-6dc9-429a-896c-35f735f81861","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"0e80c99d-c272-4dcb-9ec6-b1d5e246eb8f","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"0e80c99d-c272-4dcb-9ec6-b1d5e246eb8f","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"LayerId":{"name":"781808f4-ff89-44dd-83b7-e27af3a5474e","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"0e80c99d-c272-4dcb-9ec6-b1d5e246eb8f","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"LayerId":{"name":"62456ec3-4abf-4558-a727-463648ee848d","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"pl_move_skeleton_laser_skill_katana","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"resourceVersion":"1.0","name":"0e80c99d-c272-4dcb-9ec6-b1d5e246eb8f","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"a20f5132-ada9-47ec-829b-dee3b9df7c64","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"a20f5132-ada9-47ec-829b-dee3b9df7c64","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"LayerId":{"name":"781808f4-ff89-44dd-83b7-e27af3a5474e","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"a20f5132-ada9-47ec-829b-dee3b9df7c64","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"LayerId":{"name":"62456ec3-4abf-4558-a727-463648ee848d","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"pl_move_skeleton_laser_skill_katana","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"resourceVersion":"1.0","name":"a20f5132-ada9-47ec-829b-dee3b9df7c64","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"862ab931-bd69-4382-95eb-5d40d2bdd8c6","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"862ab931-bd69-4382-95eb-5d40d2bdd8c6","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"LayerId":{"name":"781808f4-ff89-44dd-83b7-e27af3a5474e","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"862ab931-bd69-4382-95eb-5d40d2bdd8c6","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"LayerId":{"name":"62456ec3-4abf-4558-a727-463648ee848d","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"pl_move_skeleton_laser_skill_katana","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"resourceVersion":"1.0","name":"862ab931-bd69-4382-95eb-5d40d2bdd8c6","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"b336e276-aa1f-4983-af77-04f3546b6ec9","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b336e276-aa1f-4983-af77-04f3546b6ec9","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"LayerId":{"name":"781808f4-ff89-44dd-83b7-e27af3a5474e","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"b336e276-aa1f-4983-af77-04f3546b6ec9","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"LayerId":{"name":"62456ec3-4abf-4558-a727-463648ee848d","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"pl_move_skeleton_laser_skill_katana","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"resourceVersion":"1.0","name":"b336e276-aa1f-4983-af77-04f3546b6ec9","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"94f468fe-5726-45bf-b144-7da880c4be98","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"94f468fe-5726-45bf-b144-7da880c4be98","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"LayerId":{"name":"781808f4-ff89-44dd-83b7-e27af3a5474e","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"94f468fe-5726-45bf-b144-7da880c4be98","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"LayerId":{"name":"62456ec3-4abf-4558-a727-463648ee848d","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"pl_move_skeleton_laser_skill_katana","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"resourceVersion":"1.0","name":"94f468fe-5726-45bf-b144-7da880c4be98","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"6825ba6e-8eb7-4dcd-b094-568ba7e517ae","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"6825ba6e-8eb7-4dcd-b094-568ba7e517ae","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"LayerId":{"name":"781808f4-ff89-44dd-83b7-e27af3a5474e","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"6825ba6e-8eb7-4dcd-b094-568ba7e517ae","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"LayerId":{"name":"62456ec3-4abf-4558-a727-463648ee848d","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"pl_move_skeleton_laser_skill_katana","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"resourceVersion":"1.0","name":"6825ba6e-8eb7-4dcd-b094-568ba7e517ae","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"1677317a-8e69-435d-a783-9136e478e751","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"1677317a-8e69-435d-a783-9136e478e751","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"LayerId":{"name":"781808f4-ff89-44dd-83b7-e27af3a5474e","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"1677317a-8e69-435d-a783-9136e478e751","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"LayerId":{"name":"62456ec3-4abf-4558-a727-463648ee848d","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"pl_move_skeleton_laser_skill_katana","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"resourceVersion":"1.0","name":"1677317a-8e69-435d-a783-9136e478e751","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"abeeda2e-6f4e-48a6-b0f1-c74b5b2e9940","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"abeeda2e-6f4e-48a6-b0f1-c74b5b2e9940","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"LayerId":{"name":"781808f4-ff89-44dd-83b7-e27af3a5474e","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"abeeda2e-6f4e-48a6-b0f1-c74b5b2e9940","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"LayerId":{"name":"62456ec3-4abf-4558-a727-463648ee848d","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"pl_move_skeleton_laser_skill_katana","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"resourceVersion":"1.0","name":"abeeda2e-6f4e-48a6-b0f1-c74b5b2e9940","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"be490a5d-b69e-4291-b6f4-5e94c8bbfb55","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"be490a5d-b69e-4291-b6f4-5e94c8bbfb55","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"LayerId":{"name":"781808f4-ff89-44dd-83b7-e27af3a5474e","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"be490a5d-b69e-4291-b6f4-5e94c8bbfb55","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"LayerId":{"name":"62456ec3-4abf-4558-a727-463648ee848d","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"pl_move_skeleton_laser_skill_katana","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"resourceVersion":"1.0","name":"be490a5d-b69e-4291-b6f4-5e94c8bbfb55","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"580f068e-827c-4f38-b9b1-0b4aad702548","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"580f068e-827c-4f38-b9b1-0b4aad702548","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"LayerId":{"name":"781808f4-ff89-44dd-83b7-e27af3a5474e","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"580f068e-827c-4f38-b9b1-0b4aad702548","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"LayerId":{"name":"62456ec3-4abf-4558-a727-463648ee848d","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"pl_move_skeleton_laser_skill_katana","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"resourceVersion":"1.0","name":"580f068e-827c-4f38-b9b1-0b4aad702548","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"9a85a591-6846-47f9-8fee-236e9be81644","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"9a85a591-6846-47f9-8fee-236e9be81644","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"LayerId":{"name":"781808f4-ff89-44dd-83b7-e27af3a5474e","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"9a85a591-6846-47f9-8fee-236e9be81644","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"LayerId":{"name":"62456ec3-4abf-4558-a727-463648ee848d","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"pl_move_skeleton_laser_skill_katana","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"resourceVersion":"1.0","name":"9a85a591-6846-47f9-8fee-236e9be81644","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f934c5dd-79ef-4a58-9f10-764d1ada4096",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"46d76aa9-b430-4908-8f87-f81b21c2aedd",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"60781720-6dc9-429a-896c-35f735f81861",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0e80c99d-c272-4dcb-9ec6-b1d5e246eb8f",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a20f5132-ada9-47ec-829b-dee3b9df7c64",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"862ab931-bd69-4382-95eb-5d40d2bdd8c6",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b336e276-aa1f-4983-af77-04f3546b6ec9",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"94f468fe-5726-45bf-b144-7da880c4be98",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6825ba6e-8eb7-4dcd-b094-568ba7e517ae",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1677317a-8e69-435d-a783-9136e478e751",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"abeeda2e-6f4e-48a6-b0f1-c74b5b2e9940",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"be490a5d-b69e-4291-b6f4-5e94c8bbfb55",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"580f068e-827c-4f38-b9b1-0b4aad702548",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9a85a591-6846-47f9-8fee-236e9be81644",},
   ],
   "sequence": {
-    "spriteId": {"name":"pl_move_skeleton_laser_skill_katana","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "pl_move_skeleton_laser_skill_katana",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 10.0,
@@ -93,7 +56,7 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"b7af07b0-05d4-412a-ab13-f55499506b79","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f934c5dd-79ef-4a58-9f10-764d1ada4096","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"e8c1732a-4792-4bee-a010-0351967e4ff3","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"46d76aa9-b430-4908-8f87-f81b21c2aedd","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"ab6a845c-f359-4adb-bb20-f637be9d1fc7","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"60781720-6dc9-429a-896c-35f735f81861","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
@@ -108,7 +71,7 @@
             {"id":"05989d95-b6ba-4700-b1fd-97fd80fc2cc7","Key":11.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"be490a5d-b69e-4291-b6f4-5e94c8bbfb55","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"bf8994ea-fb9d-4e56-964f-c7a447392be5","Key":12.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"580f068e-827c-4f38-b9b1-0b4aad702548","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"0b583010-1e00-4a25-8c83-2762189e7adb","Key":13.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9a85a591-6846-47f9-8fee-236e9be81644","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -124,23 +87,14 @@
     "yorigin": 57,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"pl_move_skeleton_laser_skill_katana","path":"sprites/pl_move_skeleton_laser_skill_katana/pl_move_skeleton_laser_skill_katana.yy",},
-    "resourceVersion": "1.4",
-    "name": "pl_move_skeleton_laser_skill_katana",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"781808f4-ff89-44dd-83b7-e27af3a5474e","tags":[],"resourceType":"GMImageLayer",},
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"62456ec3-4abf-4558-a727-463648ee848d","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"781808f4-ff89-44dd-83b7-e27af3a5474e","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"62456ec3-4abf-4558-a727-463648ee848d","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "스프라이트",
     "path": "folders/스프라이트.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "pl_move_skeleton_laser_skill_katana",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

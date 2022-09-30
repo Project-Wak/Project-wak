@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "pl_hurt_hyumpanchi271",
   "bboxMode": 2,
   "collisionKind": 1,
   "type": 0,
@@ -24,17 +27,13 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"0c83236d-22cd-4375-bcb7-6f5a9a6f2888","path":"sprites/pl_hurt_hyumpanchi271/pl_hurt_hyumpanchi271.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"0c83236d-22cd-4375-bcb7-6f5a9a6f2888","path":"sprites/pl_hurt_hyumpanchi271/pl_hurt_hyumpanchi271.yy",},"LayerId":{"name":"d87fb7e6-cad7-428f-9ccc-d59c0319964e","path":"sprites/pl_hurt_hyumpanchi271/pl_hurt_hyumpanchi271.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"0c83236d-22cd-4375-bcb7-6f5a9a6f2888","path":"sprites/pl_hurt_hyumpanchi271/pl_hurt_hyumpanchi271.yy",},"LayerId":{"name":"264a0668-75d4-4a2d-aefb-ce2fa0c8c24d","path":"sprites/pl_hurt_hyumpanchi271/pl_hurt_hyumpanchi271.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"pl_hurt_hyumpanchi271","path":"sprites/pl_hurt_hyumpanchi271/pl_hurt_hyumpanchi271.yy",},"resourceVersion":"1.0","name":"0c83236d-22cd-4375-bcb7-6f5a9a6f2888","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"de61b7aa-0077-4045-858e-a169078feb85","path":"sprites/pl_hurt_hyumpanchi271/pl_hurt_hyumpanchi271.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"de61b7aa-0077-4045-858e-a169078feb85","path":"sprites/pl_hurt_hyumpanchi271/pl_hurt_hyumpanchi271.yy",},"LayerId":{"name":"d87fb7e6-cad7-428f-9ccc-d59c0319964e","path":"sprites/pl_hurt_hyumpanchi271/pl_hurt_hyumpanchi271.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"de61b7aa-0077-4045-858e-a169078feb85","path":"sprites/pl_hurt_hyumpanchi271/pl_hurt_hyumpanchi271.yy",},"LayerId":{"name":"264a0668-75d4-4a2d-aefb-ce2fa0c8c24d","path":"sprites/pl_hurt_hyumpanchi271/pl_hurt_hyumpanchi271.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"pl_hurt_hyumpanchi271","path":"sprites/pl_hurt_hyumpanchi271/pl_hurt_hyumpanchi271.yy",},"resourceVersion":"1.0","name":"de61b7aa-0077-4045-858e-a169078feb85","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0c83236d-22cd-4375-bcb7-6f5a9a6f2888",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"de61b7aa-0077-4045-858e-a169078feb85",},
   ],
   "sequence": {
-    "spriteId": {"name":"pl_hurt_hyumpanchi271","path":"sprites/pl_hurt_hyumpanchi271/pl_hurt_hyumpanchi271.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "pl_hurt_hyumpanchi",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 15.0,
@@ -45,10 +44,10 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"746621e9-53cd-4a68-9f3a-3aa632c32e03","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0c83236d-22cd-4375-bcb7-6f5a9a6f2888","path":"sprites/pl_hurt_hyumpanchi271/pl_hurt_hyumpanchi271.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"0ce9170f-c714-4e16-b519-3e1e4513bb93","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"de61b7aa-0077-4045-858e-a169078feb85","path":"sprites/pl_hurt_hyumpanchi271/pl_hurt_hyumpanchi271.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -64,23 +63,14 @@
     "yorigin": 32,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"pl_hurt_hyumpanchi271","path":"sprites/pl_hurt_hyumpanchi271/pl_hurt_hyumpanchi271.yy",},
-    "resourceVersion": "1.4",
-    "name": "pl_hurt_hyumpanchi",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"d87fb7e6-cad7-428f-9ccc-d59c0319964e","tags":[],"resourceType":"GMImageLayer",},
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"264a0668-75d4-4a2d-aefb-ce2fa0c8c24d","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"d87fb7e6-cad7-428f-9ccc-d59c0319964e","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"264a0668-75d4-4a2d-aefb-ce2fa0c8c24d","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "for_new",
     "path": "folders/스프라이트/for_new.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "pl_hurt_hyumpanchi271",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

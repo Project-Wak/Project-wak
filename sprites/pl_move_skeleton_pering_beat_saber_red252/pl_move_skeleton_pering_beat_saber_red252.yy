@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "pl_move_skeleton_pering_beat_saber_red252",
   "bboxMode": 2,
   "collisionKind": 5,
   "type": 0,
@@ -24,45 +27,20 @@
   "gridX": 3,
   "gridY": 3,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"6f607cc8-6d96-473f-9a08-1c865a62d91b","path":"sprites/pl_move_skeleton_pering_beat_saber_red252/pl_move_skeleton_pering_beat_saber_red252.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"6f607cc8-6d96-473f-9a08-1c865a62d91b","path":"sprites/pl_move_skeleton_pering_beat_saber_red252/pl_move_skeleton_pering_beat_saber_red252.yy",},"LayerId":{"name":"c2aa7c5c-e1bc-4a39-add6-0a89799c08ae","path":"sprites/pl_move_skeleton_pering_beat_saber_red252/pl_move_skeleton_pering_beat_saber_red252.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"6f607cc8-6d96-473f-9a08-1c865a62d91b","path":"sprites/pl_move_skeleton_pering_beat_saber_red252/pl_move_skeleton_pering_beat_saber_red252.yy",},"LayerId":{"name":"972a2551-8609-4a02-9d30-01c5743da07d","path":"sprites/pl_move_skeleton_pering_beat_saber_red252/pl_move_skeleton_pering_beat_saber_red252.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"pl_move_skeleton_pering_beat_saber_red252","path":"sprites/pl_move_skeleton_pering_beat_saber_red252/pl_move_skeleton_pering_beat_saber_red252.yy",},"resourceVersion":"1.0","name":"6f607cc8-6d96-473f-9a08-1c865a62d91b","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"e3179143-646d-42e9-9fad-6fe1ea45ad21","path":"sprites/pl_move_skeleton_pering_beat_saber_red252/pl_move_skeleton_pering_beat_saber_red252.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"e3179143-646d-42e9-9fad-6fe1ea45ad21","path":"sprites/pl_move_skeleton_pering_beat_saber_red252/pl_move_skeleton_pering_beat_saber_red252.yy",},"LayerId":{"name":"c2aa7c5c-e1bc-4a39-add6-0a89799c08ae","path":"sprites/pl_move_skeleton_pering_beat_saber_red252/pl_move_skeleton_pering_beat_saber_red252.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"e3179143-646d-42e9-9fad-6fe1ea45ad21","path":"sprites/pl_move_skeleton_pering_beat_saber_red252/pl_move_skeleton_pering_beat_saber_red252.yy",},"LayerId":{"name":"972a2551-8609-4a02-9d30-01c5743da07d","path":"sprites/pl_move_skeleton_pering_beat_saber_red252/pl_move_skeleton_pering_beat_saber_red252.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"pl_move_skeleton_pering_beat_saber_red252","path":"sprites/pl_move_skeleton_pering_beat_saber_red252/pl_move_skeleton_pering_beat_saber_red252.yy",},"resourceVersion":"1.0","name":"e3179143-646d-42e9-9fad-6fe1ea45ad21","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"6a348e7d-c4dd-4f53-bbbe-a8127546e7cc","path":"sprites/pl_move_skeleton_pering_beat_saber_red252/pl_move_skeleton_pering_beat_saber_red252.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"6a348e7d-c4dd-4f53-bbbe-a8127546e7cc","path":"sprites/pl_move_skeleton_pering_beat_saber_red252/pl_move_skeleton_pering_beat_saber_red252.yy",},"LayerId":{"name":"c2aa7c5c-e1bc-4a39-add6-0a89799c08ae","path":"sprites/pl_move_skeleton_pering_beat_saber_red252/pl_move_skeleton_pering_beat_saber_red252.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"6a348e7d-c4dd-4f53-bbbe-a8127546e7cc","path":"sprites/pl_move_skeleton_pering_beat_saber_red252/pl_move_skeleton_pering_beat_saber_red252.yy",},"LayerId":{"name":"972a2551-8609-4a02-9d30-01c5743da07d","path":"sprites/pl_move_skeleton_pering_beat_saber_red252/pl_move_skeleton_pering_beat_saber_red252.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"pl_move_skeleton_pering_beat_saber_red252","path":"sprites/pl_move_skeleton_pering_beat_saber_red252/pl_move_skeleton_pering_beat_saber_red252.yy",},"resourceVersion":"1.0","name":"6a348e7d-c4dd-4f53-bbbe-a8127546e7cc","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"57901340-36b3-4bdc-a4cb-d5ba074f52cf","path":"sprites/pl_move_skeleton_pering_beat_saber_red252/pl_move_skeleton_pering_beat_saber_red252.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"57901340-36b3-4bdc-a4cb-d5ba074f52cf","path":"sprites/pl_move_skeleton_pering_beat_saber_red252/pl_move_skeleton_pering_beat_saber_red252.yy",},"LayerId":{"name":"c2aa7c5c-e1bc-4a39-add6-0a89799c08ae","path":"sprites/pl_move_skeleton_pering_beat_saber_red252/pl_move_skeleton_pering_beat_saber_red252.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"57901340-36b3-4bdc-a4cb-d5ba074f52cf","path":"sprites/pl_move_skeleton_pering_beat_saber_red252/pl_move_skeleton_pering_beat_saber_red252.yy",},"LayerId":{"name":"972a2551-8609-4a02-9d30-01c5743da07d","path":"sprites/pl_move_skeleton_pering_beat_saber_red252/pl_move_skeleton_pering_beat_saber_red252.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"pl_move_skeleton_pering_beat_saber_red252","path":"sprites/pl_move_skeleton_pering_beat_saber_red252/pl_move_skeleton_pering_beat_saber_red252.yy",},"resourceVersion":"1.0","name":"57901340-36b3-4bdc-a4cb-d5ba074f52cf","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"ef9f8fea-438d-4b3a-a100-24859d912fb0","path":"sprites/pl_move_skeleton_pering_beat_saber_red252/pl_move_skeleton_pering_beat_saber_red252.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"ef9f8fea-438d-4b3a-a100-24859d912fb0","path":"sprites/pl_move_skeleton_pering_beat_saber_red252/pl_move_skeleton_pering_beat_saber_red252.yy",},"LayerId":{"name":"c2aa7c5c-e1bc-4a39-add6-0a89799c08ae","path":"sprites/pl_move_skeleton_pering_beat_saber_red252/pl_move_skeleton_pering_beat_saber_red252.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"ef9f8fea-438d-4b3a-a100-24859d912fb0","path":"sprites/pl_move_skeleton_pering_beat_saber_red252/pl_move_skeleton_pering_beat_saber_red252.yy",},"LayerId":{"name":"972a2551-8609-4a02-9d30-01c5743da07d","path":"sprites/pl_move_skeleton_pering_beat_saber_red252/pl_move_skeleton_pering_beat_saber_red252.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"pl_move_skeleton_pering_beat_saber_red252","path":"sprites/pl_move_skeleton_pering_beat_saber_red252/pl_move_skeleton_pering_beat_saber_red252.yy",},"resourceVersion":"1.0","name":"ef9f8fea-438d-4b3a-a100-24859d912fb0","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"37bebcc3-5450-4cdf-973d-069147bac629","path":"sprites/pl_move_skeleton_pering_beat_saber_red252/pl_move_skeleton_pering_beat_saber_red252.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"37bebcc3-5450-4cdf-973d-069147bac629","path":"sprites/pl_move_skeleton_pering_beat_saber_red252/pl_move_skeleton_pering_beat_saber_red252.yy",},"LayerId":{"name":"c2aa7c5c-e1bc-4a39-add6-0a89799c08ae","path":"sprites/pl_move_skeleton_pering_beat_saber_red252/pl_move_skeleton_pering_beat_saber_red252.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"37bebcc3-5450-4cdf-973d-069147bac629","path":"sprites/pl_move_skeleton_pering_beat_saber_red252/pl_move_skeleton_pering_beat_saber_red252.yy",},"LayerId":{"name":"972a2551-8609-4a02-9d30-01c5743da07d","path":"sprites/pl_move_skeleton_pering_beat_saber_red252/pl_move_skeleton_pering_beat_saber_red252.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"pl_move_skeleton_pering_beat_saber_red252","path":"sprites/pl_move_skeleton_pering_beat_saber_red252/pl_move_skeleton_pering_beat_saber_red252.yy",},"resourceVersion":"1.0","name":"37bebcc3-5450-4cdf-973d-069147bac629","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"74b29f29-11f4-4968-9f16-57d27072cb91","path":"sprites/pl_move_skeleton_pering_beat_saber_red252/pl_move_skeleton_pering_beat_saber_red252.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"74b29f29-11f4-4968-9f16-57d27072cb91","path":"sprites/pl_move_skeleton_pering_beat_saber_red252/pl_move_skeleton_pering_beat_saber_red252.yy",},"LayerId":{"name":"c2aa7c5c-e1bc-4a39-add6-0a89799c08ae","path":"sprites/pl_move_skeleton_pering_beat_saber_red252/pl_move_skeleton_pering_beat_saber_red252.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"74b29f29-11f4-4968-9f16-57d27072cb91","path":"sprites/pl_move_skeleton_pering_beat_saber_red252/pl_move_skeleton_pering_beat_saber_red252.yy",},"LayerId":{"name":"972a2551-8609-4a02-9d30-01c5743da07d","path":"sprites/pl_move_skeleton_pering_beat_saber_red252/pl_move_skeleton_pering_beat_saber_red252.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"pl_move_skeleton_pering_beat_saber_red252","path":"sprites/pl_move_skeleton_pering_beat_saber_red252/pl_move_skeleton_pering_beat_saber_red252.yy",},"resourceVersion":"1.0","name":"74b29f29-11f4-4968-9f16-57d27072cb91","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"40c91e62-9627-4fc5-ae58-188d0c47964e","path":"sprites/pl_move_skeleton_pering_beat_saber_red252/pl_move_skeleton_pering_beat_saber_red252.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"40c91e62-9627-4fc5-ae58-188d0c47964e","path":"sprites/pl_move_skeleton_pering_beat_saber_red252/pl_move_skeleton_pering_beat_saber_red252.yy",},"LayerId":{"name":"c2aa7c5c-e1bc-4a39-add6-0a89799c08ae","path":"sprites/pl_move_skeleton_pering_beat_saber_red252/pl_move_skeleton_pering_beat_saber_red252.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"40c91e62-9627-4fc5-ae58-188d0c47964e","path":"sprites/pl_move_skeleton_pering_beat_saber_red252/pl_move_skeleton_pering_beat_saber_red252.yy",},"LayerId":{"name":"972a2551-8609-4a02-9d30-01c5743da07d","path":"sprites/pl_move_skeleton_pering_beat_saber_red252/pl_move_skeleton_pering_beat_saber_red252.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"pl_move_skeleton_pering_beat_saber_red252","path":"sprites/pl_move_skeleton_pering_beat_saber_red252/pl_move_skeleton_pering_beat_saber_red252.yy",},"resourceVersion":"1.0","name":"40c91e62-9627-4fc5-ae58-188d0c47964e","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"227c7763-4ab2-494b-a5d9-e9ee651db32d","path":"sprites/pl_move_skeleton_pering_beat_saber_red252/pl_move_skeleton_pering_beat_saber_red252.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"227c7763-4ab2-494b-a5d9-e9ee651db32d","path":"sprites/pl_move_skeleton_pering_beat_saber_red252/pl_move_skeleton_pering_beat_saber_red252.yy",},"LayerId":{"name":"c2aa7c5c-e1bc-4a39-add6-0a89799c08ae","path":"sprites/pl_move_skeleton_pering_beat_saber_red252/pl_move_skeleton_pering_beat_saber_red252.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"227c7763-4ab2-494b-a5d9-e9ee651db32d","path":"sprites/pl_move_skeleton_pering_beat_saber_red252/pl_move_skeleton_pering_beat_saber_red252.yy",},"LayerId":{"name":"972a2551-8609-4a02-9d30-01c5743da07d","path":"sprites/pl_move_skeleton_pering_beat_saber_red252/pl_move_skeleton_pering_beat_saber_red252.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"pl_move_skeleton_pering_beat_saber_red252","path":"sprites/pl_move_skeleton_pering_beat_saber_red252/pl_move_skeleton_pering_beat_saber_red252.yy",},"resourceVersion":"1.0","name":"227c7763-4ab2-494b-a5d9-e9ee651db32d","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6f607cc8-6d96-473f-9a08-1c865a62d91b",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e3179143-646d-42e9-9fad-6fe1ea45ad21",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6a348e7d-c4dd-4f53-bbbe-a8127546e7cc",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"57901340-36b3-4bdc-a4cb-d5ba074f52cf",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ef9f8fea-438d-4b3a-a100-24859d912fb0",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"37bebcc3-5450-4cdf-973d-069147bac629",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"74b29f29-11f4-4968-9f16-57d27072cb91",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"40c91e62-9627-4fc5-ae58-188d0c47964e",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"227c7763-4ab2-494b-a5d9-e9ee651db32d",},
   ],
   "sequence": {
-    "spriteId": {"name":"pl_move_skeleton_pering_beat_saber_red252","path":"sprites/pl_move_skeleton_pering_beat_saber_red252/pl_move_skeleton_pering_beat_saber_red252.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "pl_move_skeleton_pering_beat_saber_red",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 10.0,
@@ -73,7 +51,7 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"08e68634-b31f-49fd-90a6-5b06ff75a303","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6f607cc8-6d96-473f-9a08-1c865a62d91b","path":"sprites/pl_move_skeleton_pering_beat_saber_red252/pl_move_skeleton_pering_beat_saber_red252.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"442b9114-1066-4073-9016-c053a739ca3b","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e3179143-646d-42e9-9fad-6fe1ea45ad21","path":"sprites/pl_move_skeleton_pering_beat_saber_red252/pl_move_skeleton_pering_beat_saber_red252.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"c4fae9e8-b91d-4d59-8ece-2c0ed2fc3f16","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6a348e7d-c4dd-4f53-bbbe-a8127546e7cc","path":"sprites/pl_move_skeleton_pering_beat_saber_red252/pl_move_skeleton_pering_beat_saber_red252.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
@@ -83,7 +61,7 @@
             {"id":"fc0ba6ad-ea66-4871-a6b6-85e67edba162","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"74b29f29-11f4-4968-9f16-57d27072cb91","path":"sprites/pl_move_skeleton_pering_beat_saber_red252/pl_move_skeleton_pering_beat_saber_red252.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"ddb1cbc1-8ea8-4eab-af21-c61d60c16bac","Key":7.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"40c91e62-9627-4fc5-ae58-188d0c47964e","path":"sprites/pl_move_skeleton_pering_beat_saber_red252/pl_move_skeleton_pering_beat_saber_red252.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"d3cfcb8e-0ed1-4719-8dd2-02d29609f80c","Key":8.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"227c7763-4ab2-494b-a5d9-e9ee651db32d","path":"sprites/pl_move_skeleton_pering_beat_saber_red252/pl_move_skeleton_pering_beat_saber_red252.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -99,23 +77,14 @@
     "yorigin": 72,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"pl_move_skeleton_pering_beat_saber_red252","path":"sprites/pl_move_skeleton_pering_beat_saber_red252/pl_move_skeleton_pering_beat_saber_red252.yy",},
-    "resourceVersion": "1.4",
-    "name": "pl_move_skeleton_pering_beat_saber_red",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"c2aa7c5c-e1bc-4a39-add6-0a89799c08ae","tags":[],"resourceType":"GMImageLayer",},
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"972a2551-8609-4a02-9d30-01c5743da07d","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"c2aa7c5c-e1bc-4a39-add6-0a89799c08ae","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"972a2551-8609-4a02-9d30-01c5743da07d","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "for_new",
     "path": "folders/스프라이트/for_new.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "pl_move_skeleton_pering_beat_saber_red252",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

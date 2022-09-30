@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSound",
+  "resourceVersion": "1.0",
+  "name": "wakgood_hurt",
   "conversionMode": 0,
   "compression": 0,
   "volume": 0.07,
@@ -17,8 +20,4 @@
     "name": "소리",
     "path": "folders/소리.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "wakgood_hurt",
-  "tags": [],
-  "resourceType": "GMSound",
 }

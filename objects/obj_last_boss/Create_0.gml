@@ -19,6 +19,7 @@ back_my_point = 0
 bgm = -4
 dead_scene = 0
 shake_boss = 1
+center_xx = -4
 activated = 0
 patturn = 0
 timer = 0

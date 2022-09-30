@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMFont",
+  "resourceVersion": "1.0",
+  "name": "font0",
   "hinting": 0,
   "glyphOperations": 0,
   "interpreter": 0,
@@ -3112,8 +3115,4 @@
     "name": "글꼴",
     "path": "folders/글꼴.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "font0",
-  "tags": [],
-  "resourceType": "GMFont",
 }

@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "guisanga_doo_noneclip",
   "bboxMode": 2,
   "collisionKind": 4,
   "type": 0,
@@ -24,18 +27,14 @@
   "gridX": 3,
   "gridY": 3,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"2a677690-9d48-47ad-af3d-e178d27150df","path":"sprites/guisanga_doo_noneclip/guisanga_doo_noneclip.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"2a677690-9d48-47ad-af3d-e178d27150df","path":"sprites/guisanga_doo_noneclip/guisanga_doo_noneclip.yy",},"LayerId":{"name":"2228e2ef-0d26-4b14-a5d2-9bb4cf137809","path":"sprites/guisanga_doo_noneclip/guisanga_doo_noneclip.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"guisanga_doo_noneclip","path":"sprites/guisanga_doo_noneclip/guisanga_doo_noneclip.yy",},"resourceVersion":"1.0","name":"2a677690-9d48-47ad-af3d-e178d27150df","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"84fd52b0-4f25-455b-97da-6d0450a105ba","path":"sprites/guisanga_doo_noneclip/guisanga_doo_noneclip.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"84fd52b0-4f25-455b-97da-6d0450a105ba","path":"sprites/guisanga_doo_noneclip/guisanga_doo_noneclip.yy",},"LayerId":{"name":"2228e2ef-0d26-4b14-a5d2-9bb4cf137809","path":"sprites/guisanga_doo_noneclip/guisanga_doo_noneclip.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"guisanga_doo_noneclip","path":"sprites/guisanga_doo_noneclip/guisanga_doo_noneclip.yy",},"resourceVersion":"1.0","name":"84fd52b0-4f25-455b-97da-6d0450a105ba","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"0f719a57-122c-4dfc-a62a-c56adcc95de8","path":"sprites/guisanga_doo_noneclip/guisanga_doo_noneclip.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"0f719a57-122c-4dfc-a62a-c56adcc95de8","path":"sprites/guisanga_doo_noneclip/guisanga_doo_noneclip.yy",},"LayerId":{"name":"2228e2ef-0d26-4b14-a5d2-9bb4cf137809","path":"sprites/guisanga_doo_noneclip/guisanga_doo_noneclip.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"guisanga_doo_noneclip","path":"sprites/guisanga_doo_noneclip/guisanga_doo_noneclip.yy",},"resourceVersion":"1.0","name":"0f719a57-122c-4dfc-a62a-c56adcc95de8","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2a677690-9d48-47ad-af3d-e178d27150df",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"84fd52b0-4f25-455b-97da-6d0450a105ba",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0f719a57-122c-4dfc-a62a-c56adcc95de8",},
   ],
   "sequence": {
-    "spriteId": {"name":"guisanga_doo_noneclip","path":"sprites/guisanga_doo_noneclip/guisanga_doo_noneclip.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "guisanga_doo_noneclip",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -46,11 +45,11 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"6968d8a8-2ce7-4402-b392-0f26c15e63e4","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2a677690-9d48-47ad-af3d-e178d27150df","path":"sprites/guisanga_doo_noneclip/guisanga_doo_noneclip.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"b3c0f93f-40c4-4676-9c25-9b3e39f88539","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"84fd52b0-4f25-455b-97da-6d0450a105ba","path":"sprites/guisanga_doo_noneclip/guisanga_doo_noneclip.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"59e959b4-63cc-49c0-85ea-0375dcdb01d8","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0f719a57-122c-4dfc-a62a-c56adcc95de8","path":"sprites/guisanga_doo_noneclip/guisanga_doo_noneclip.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -66,22 +65,13 @@
     "yorigin": 48,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"guisanga_doo_noneclip","path":"sprites/guisanga_doo_noneclip/guisanga_doo_noneclip.yy",},
-    "resourceVersion": "1.4",
-    "name": "guisanga_doo_noneclip",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"2228e2ef-0d26-4b14-a5d2-9bb4cf137809","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"2228e2ef-0d26-4b14-a5d2-9bb4cf137809","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "스프라이트",
     "path": "folders/스프라이트.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "guisanga_doo_noneclip",
-  "tags": [],
-  "resourceType": "GMSprite",
 }
