@@ -14,7 +14,7 @@ global.guisanga_doo_event = 0
 global.already_played_platform_scene = 0
 ////////////////////////////////////////////////////////////////////////
 global.simhaedoo_stage = 0
-global.credit_message = "\n\n\n\nDirector\n아버 (1인 개발)\n\n\nProgramer\n아버\n\n\nStory\n아버\n\n\nEnemy design\n아버\n\n\nUI design\n아버\n\n\nStage design\n아버\n\n\nEffect design\n아버\n\n\n\n\n\nBackground Music\nSymphony of Specters - Intense Cinematic Trailer\n\nSharo - Atorie to denno sekai\n\nBrightwaltz - Touch a flower softly\n\nBrightwaltz - Trifolium repens f. roseum\n\nSharou - Jinro no tame no komori uta\n\nBrightwaltz - Piano Improvisation 2020 Spring No2\n\nBrightwaltz - Dance in the Air\n\n\nilodolly - Raison d'etre\n\nMakai Symphony - Dragon Castle\n\n\nTrailer Music\nak+q - Ignotus\nZekk - Libertas\n\n\n\n\n\n\n\n참고한 게임\n\n\nThe Legend of Gockgang-E - 공격 모션이나 스킬 디자인, 스토리 및 이펙트 디자인\n\nElden Ring - 보스 패턴 및 맵 디자인\n\n록멘 제로 시리즈 - 공격 모션 및 스킬 디자인 및 스토리\n\nTerraria - 객관안 및 쌉벌래두\n\n\n\n\n참고한 디자인\n\n\n심해두 팬아트 - 보스 및 잡몹\n\n메시 팬아트 - 보스\n\n왁두 팬아트 - 주인공 디자인 및 보스\n\n말레니아(Elden Ring) / 캬루(프리코네) - 엔젤로이드 보스\n\nNier:Automata - 드론형 터렛\n\n이세돌 팬아트 - 이세돌 NPC 및 탈리스만 디자인\n\nRe:wind 뮤비 - Re:wind 시계 탈리스만 디자인\n\nTakt op destiny - 스킬 이펙트 디자인\n\n\n\n\n\n1차 QA\n(피드백/버그 제보)\n\n\nStellarSea\n\n서장님\n\n오코츠유타\n\n옥수수칲\n\n탄창\n\n황금뿌리\n\n러머\n\nSsab\n\n공벌\n\n화염뽱어\n\n젓가락아저씨\n\n진성e\n\n벼슬\n\n페르마벤\n\n댐쿵이\n\n쓰레기맛캔디\n\n1잡탕1\n\nzun\n\nDillionaire\n\nalpamin\n\nBackSang\n\nNANFREE\n\n쥬기\n\n참이프\n\n광부\n\nContra\n\nQuiettBee\n\n사미니\n\n(이외의 많은 여러 사람들)\n\n\n\n\n2차 QA\n(벨런스 테스터)\n\n\n댐쿵이\n\nBackSang\n\n모니타리\n\n스즈메의 문단속\n\n벤찌\n\n별명1577\n\nKastle\n\n고 라니임니다\n\n재영이요\n\n윤석\n\n러머\n\n최민우\n\nㅁㅈ\n\n허미온\n\n아리에스\n\nNAㅅ\n\nMang0_k\n\nLadon\n\nTJD\n\najdkg296\n\n쥬기\n\n잠복근무\n\n도트박스\n\n재영\n\n윤석\n\n허미온\n\ncccc\n\n원시인\n\n징버거의 돗대\n\n면주바이\n\n\n\n\n\n\n\nSpecial Thanks\n(개발에 큰 도움 주신분들과 추가 아이디어 제공자)\n\n\n\nBackSang\n\n쓰레기맛캔디\n\nzun\n\nDillionaire\n\nNANFREE\n\nalpamin\n\n1잡탕1\n\n쥬기\n\n댐쿵이\n\n\n\n\n\n\n\nThanks for playing\n\n\n\n\n\n\n\nMade with Gamemaker studio 2"
+global.credit_message = "\n\n\n\nDirector\n아버 (1인 개발)\n\n\nProgramer\n아버\n\n\nStory\n아버\n\n\nEnemy design\n아버\n\n\nUI design\n아버\n\n\nStage design\n아버\n\n\nEffect design\n아버\n\n\n\n\n\nBackground Music\nSymphony of Specters - Intense Cinematic Trailer\n\nSharo - Atorie to denno sekai\n\nBrightwaltz - Touch a flower softly\n\nBrightwaltz - Trifolium repens f. roseum\n\nSharou - Jinro no tame no komori uta\n\nBrightwaltz - Piano Improvisation 2020 Spring No2\n\nBrightwaltz - Dance in the Air\n\n\nilodolly - Raison d'etre\n\nMakai Symphony - Dragon Castle\n\n\nTrailer Music\nak+q - Ignotus\nZekk - Libertas\n\n\n\n\n\n\n\nReference\n\n\nThe Legend of Gockgang-E\n\nElden Ring\n\nMegaman Z\n\nTerraria\n\n심해두 팬아트\n\n메시 팬아트\n\n왁두 팬아트\n\nNier:Automata\n\n이세돌 팬아트\n\n\n\n\n\n1차 QA\n(피드백/버그 제보)\n\n\nStellarSea\n\n서장님\n\n오코츠유타\n\n옥수수칲\n\n탄창\n\n황금뿌리\n\n러머\n\nSsab\n\n공벌\n\n화염뽱어\n\n젓가락아저씨\n\n진성e\n\n벼슬\n\n페르마벤\n\n댐쿵이\n\n쓰레기맛캔디\n\n1잡탕1\n\nzun\n\nDillionaire\n\nalpamin\n\nBackSang\n\nNANFREE\n\n쥬기\n\n참이프\n\n광부\n\nContra\n\nQuiettBee\n\n사미니\n\n(이외의 많은 여러 사람들)\n\n\n\n\n2차 QA\n(벨런스 테스터)\n\n\n댐쿵이\n\nBackSang\n\n모니타리\n\n스즈메의 문단속\n\n벤찌\n\n별명1577\n\nKastle\n\n고 라니임니다\n\n재영이요\n\n윤석\n\n러머\n\n최민우\n\nㅁㅈ\n\n허미온\n\n아리에스\n\nNAㅅ\n\nMang0_k\n\nLadon\n\nTJD\n\najdkg296\n\n쥬기\n\n잠복근무\n\n도트박스\n\n재영\n\n윤석\n\n허미온\n\ncccc\n\n원시인\n\n징버거의 돗대\n\n면주바이\n\n\n\n\n\n\n\nSpecial Thanks\n(개발에 큰 도움 주신분들과 추가 아이디어 제공자)\n\n\n\nBackSang\n\n쓰레기맛캔디\n\nzun\n\nDillionaire\n\nNANFREE\n\nalpamin\n\n1잡탕1\n\n쥬기\n\n댐쿵이\n\n\n\n\n\n\n\nThanks for playing\n\n\n\n\n\n\n\nMade with Gamemaker studio 2"
 //text_color = 0 //Initialize text color variable
 ip_for_calcul = ""
 //created_platfrom = 0
@@ -52,7 +52,7 @@ global.achievement_percentage[i] = 0
 }
 
 global.achievement_name[0] = "Re:wind"
-global.achievement_desc[0] = "사망 회귀를 사용하였다"
+global.achievement_desc[0] = "사망 회귀를 이용해 과거로 돌아왔다"
 
 global.achievement_name[1] = "소멸 엔딩"
 global.achievement_desc[1] = "소멸 엔딩을 봤다"
@@ -73,7 +73,7 @@ global.achievement_name[6] = "탈리스만 수집가"
 global.achievement_desc[6] = "얻을 수 있는 모든 탈리스만을 수집했다"
 
 global.achievement_name[7] = "의문의 제단"
-global.achievement_desc[7] = "제단을 사용했다"
+global.achievement_desc[7] = "제단에 붉은 광선검과 푸른 광선검을 바쳤다"
 
 global.achievement_name[8] = "무기 수집가"
 global.achievement_desc[8] = "얻을 수 있는 모든 무기를 수집했다"

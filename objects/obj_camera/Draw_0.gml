@@ -172,7 +172,7 @@ if room != menu && global.playing_scene = 0 && global.story_next < 100 && global
 	if (instance_exists(player) && player.assult_mode > 0) && global.show_credits = 0
 	{
 	draw_sprite_ext(Sprite162,2,xx3+12*v_x_,yy+198*v_x_,v_x_*0.65,v_x_*0.65,0,c_white,__alpha_set*0.5)
-	draw_text_kl_scale(xx3+32*v_x_,yy+191*v_x_,"전투모드",v_x_*64,-1,__alpha_set*0.5,c_white,0,-1,font0,v_x_*0.3,v_x_*0.3,0);
+	draw_text_kl_scale(xx3+32*v_x_,yy+191*v_x_,"전투모드("+string(floor(player.assult_mode/200))+")",v_x_*64,-1,__alpha_set*0.5,c_white,0,-1,font0,v_x_*0.3,v_x_*0.3,0);
 	}
 
 	
@@ -244,11 +244,15 @@ if room != menu && global.playing_scene = 0 && global.story_next < 100 && global
 
 if global.show_guide_mes != -4
 {
+show_guide_mes_alpha += (1 - show_guide_mes_alpha)*0.1
 message_can_des_delay ++
 global.key_setting_message = 1
 global.never_move = 1
 var g_xx = camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5
-var g_yy = yy+v_x_*170
+var g_yy_before = yy+v_x_*170
+var g_yy = g_yy_before+v_x_*guide_gif_y
+
+
 
 code.option = 0
 instance_destroy(setting_parents)
@@ -256,29 +260,49 @@ instance_destroy(setting_parents)
 	if global.show_guide_mes_spr != 6
 	{
 	draw_set_color(c_black)
-	draw_set_alpha(0.7)
-	draw_rectangle(g_xx-v_x_*200,g_yy-v_x_*32,g_xx+v_x_*200,g_yy+v_x_*220,false)
-	draw_sprite_ext(spr_icon,global.show_guide_mes_spr,g_xx-v_x_*170,g_yy-v_x_*11,v_x_*0.6,v_x_*0.6,0,c_white,0.8)
-	draw_text_kl_scale(g_xx,g_yy,string(global.show_guide_mes),v_x_*73,-1,0.67,c_white,0,0,font0,v_x_/3.5,v_x_/3.5,0);
+	draw_set_alpha(0.7*show_guide_mes_alpha)
+	draw_rectangle(g_xx-v_x_*200,g_yy-v_x_*32,g_xx+v_x_*200,g_yy+v_x_*(220-guide_gif_y*0.5),false)
+	draw_sprite_ext(spr_icon,global.show_guide_mes_spr,g_xx-v_x_*170,g_yy-v_x_*11,v_x_*0.6,v_x_*0.6,0,c_white,0.8*show_guide_mes_alpha)
+	draw_text_kl_scale(g_xx,g_yy,string(global.show_guide_mes),v_x_*73,-1,0.67*show_guide_mes_alpha,c_white,0,0,font0,v_x_/3.5,v_x_/3.5,0);
 	
 		if !audio_is_playing(boss_bgm) && !audio_is_playing(quake_sfx) && global.show_ui = 1
 		{
-		draw_text_kl_scale(g_xx+v_x_*190,g_yy,"\n\n\n\n\n\n\n\n\n\n\n\n\n("+string(global.skip_key)+"키를 눌러 기기)",v_x_*64,-1,0.5,c_white,0,1,font0,v_x_*0.3,v_x_*0.3,0);
+		draw_text_kl_scale(g_xx+v_x_*190,g_yy-guide_gif_y*0.5*v_x_,"\n\n\n\n\n\n\n\n\n\n\n\n\n("+string(global.skip_key)+"키를 눌러 기기)",v_x_*64,-1,0.5*show_guide_mes_alpha,c_white,0,1,font0,v_x_*0.3,v_x_*0.3,0);
 		}
 	}
 	else
 	{
 	message_can_des_delay ++
 	draw_set_color(c_black)
-	draw_set_alpha(0.7)
+	draw_set_alpha(0.7*show_guide_mes_alpha)
 	draw_rectangle(g_xx-v_x_*200,g_yy-v_x_*12,g_xx+v_x_*200,g_yy+v_x_*23,false)
 	draw_text_kl_scale(g_xx,g_yy,string(global.show_guide_mes),v_x_*73,-1,0.67,c_white,0,0,font0,v_x_/3.5,v_x_/3.5,0);
 	
 		if !audio_is_playing(boss_bgm) && !audio_is_playing(quake_sfx) && global.show_ui = 1
 		{
-		draw_text_kl_scale(g_xx+v_x_*190,g_yy,"\n\n("+string(global.skip_key)+"키를 눌러 넘기기)",v_x_*64,-1,0.5,c_white,0,1,font0,v_x_*0.3,v_x_*0.3,0);
+		draw_text_kl_scale(g_xx+v_x_*190,g_yy,"\n\n("+string(global.skip_key)+"키를 눌러 넘기기)",v_x_*64,-1,0.5*show_guide_mes_alpha,c_white,0,1,font0,v_x_*0.3,v_x_*0.3,0);
 		}
 	}
+	
+	
+	
+	if sprite_exists(global.guide_gif)
+	{
+	message_can_des_delay -= 0.5
+	guide_gif_y_timer += 0.2
+
+		if guide_gif_y_timer > 5
+		{
+		guide_gif_y += (180 - guide_gif_y)*0.1
+		}
+	
+		if guide_gif_y_timer > 10
+		{
+		guide_gif_alpha += (1.01 - guide_gif_alpha)*0.1
+		}
+	draw_sprite_ext(global.guide_gif,guide_gif_y_timer,g_xx,g_yy_before+v_x_*25,v_x_*0.7,v_x_*0.7,0,c_white,guide_gif_alpha)
+	}
+	
 	
 	
 	if keyboard_check_released(ord(string(global.skip_key))) && message_can_des_delay > 60
@@ -286,8 +310,10 @@ instance_destroy(setting_parents)
 	global.never_move = 0
 	global.key_setting_message = 0
 	global.show_guide_mes = -4
+	global.guide_gif = -4
 	guide_sfx = 0
 	message_can_des_delay = 0
+	show_guide_mes_alpha = 0
 	}
 	
 	if guide_sfx = 0 && global.show_guide_mes_spr != 6
@@ -487,7 +513,7 @@ if global.story_text_alpha > 0
 {
 	if global.story_next = 0
 	{
-	draw_text_kl_scale(camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5,yy+300*v_x_,"어느날, 어느 한 광기의 팬치 박사가 음모를 꿈꾸고",188*v_x_,-1,global.story_text_alpha,c_white,0,0,font0,v_x_/2.5,v_x_/2.5,0)
+	draw_text_kl_scale(camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5,yy+300*v_x_,"어느날, 도파민 박사가 음모를 꿈꾸고",188*v_x_,-1,global.story_text_alpha,c_white,0,0,font0,v_x_/2.5,v_x_/2.5,0)
 	}
 	
 	if global.story_next = 1
@@ -497,7 +523,7 @@ if global.story_text_alpha > 0
 	
 	if global.story_next = 2
 	{
-	draw_text_kl_scale(camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5,yy+300*v_x_,string(global.nickname)+"은/는 그 계획을 저지하기 위해\n왁드로이드의 완성 직전, 박사의 연구소로 향했습니다",188*v_x_,-1,global.story_text_alpha,c_white,0,0,font0,v_x_/2.5,v_x_/2.5,0)
+	draw_text_kl_scale(camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5,yy+300*v_x_,string(global.nickname)+"은/는 그 계획을 저지하기 위해\n왁드로이드의 완성 전, 박사의 연구소로 향했습니다",188*v_x_,-1,global.story_text_alpha,c_white,0,0,font0,v_x_/2.5,v_x_/2.5,0)
 	}
 }
 

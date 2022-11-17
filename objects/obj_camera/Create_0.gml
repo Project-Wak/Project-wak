@@ -8,6 +8,7 @@ global.story_text_alpha = 0
 global.story_next = 0
 global.blur_range = 0
 global.ending_b_alpha = 1
+
 timer_ending_scene = 0
 image_alpha = 0
 //command_buffer = buffer_create(3, buffer_grow, 1);
@@ -57,6 +58,11 @@ global.observe_target = 0
 global.guide = 0
 global.guide_sec = 0
 global.show_guide_mes_spr = 0
+global.guide_gif = -4
+guide_gif_alpha = 0
+guide_gif_y = 0
+guide_gif_y_timer = 0
+show_guide_mes_alpha = 0
 
 global.boss_target = -4
 global.boss_hp_alpha = 0

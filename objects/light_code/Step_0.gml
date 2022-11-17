@@ -41,7 +41,7 @@ if instance_exists(player)
 }
 surface_set_target(global.light_surf);
 gpu_set_blendmode(bm_add);
-draw_sprite_ext(sprite173,2,0,0,60,60,0,$ffffff,_pl_lantern*0.15+global.room_brightness*global.brightness_setting*2.5/(global.n_night+1))
+draw_sprite_ext(sprite173,2,0,0,60,60,0,$ffffff,_pl_lantern*0.23+global.room_brightness*global.brightness_setting*2.5/(global.n_night+1))
 gpu_set_blendmode(bm_normal);
 surface_reset_target()
 }

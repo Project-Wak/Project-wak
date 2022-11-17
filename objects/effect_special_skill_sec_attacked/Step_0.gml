@@ -20,6 +20,14 @@ var max_length = 1000
 
 		if collision_point(x2,y2,obj_floor_tile1,true,0)
 		{
+			if b_x != -4 && abs(b_x - x2) >= 2
+			{
+				for(var k = 1; k <= floor(abs(b_x - x2)); k++)
+				{
+				instance_create_depth(x2+k,y2,player.depth+15,melt_effect)
+				}
+			}
+		b_x = x2
 		instance_create_depth(x2,y2,player.depth+15,melt_effect)
 		break;
 		}

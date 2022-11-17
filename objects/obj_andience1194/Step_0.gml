@@ -72,7 +72,7 @@ global.playing_scene = 1
 	if !instance_exists(check__) && message_phase = 2
 	{
 	check__ = instance_create_depth(x,y,depth-1,player_message)
-	check__.text = string(global.nickname)+"! 네가 여길 어떻게...."
+	check__.text = string(global.nickname)+"! 네놈이 여길 어떻게...."
 	check__.target = id
 	check__.parents = id
 	}
@@ -96,7 +96,7 @@ global.playing_scene = 1
 	if !instance_exists(check__) && message_phase = 5
 	{
 	check__ = instance_create_depth(x,y,depth-1,player_message)
-	check__.text = "뭐? 그걸 다 부셨다고?"
+	check__.text = "하지만 괜찮습니다....."
 	check__.target = id
 	check__.parents = id
 	}
@@ -104,7 +104,7 @@ global.playing_scene = 1
 	if !instance_exists(check__) && message_phase = 6
 	{
 	check__ = instance_create_depth(x,y,depth-1,player_message)
-	check__.text = "여기까지 용케도 왔는데 아쉽게 됐네ㅋㅋㅋ"
+	check__.text = "서둘러 왁드로이드 작업하길 잘했네요...."
 	check__.target = id
 	check__.parents = id
 	}
@@ -120,7 +120,7 @@ global.playing_scene = 1
 	if !instance_exists(check__) && message_phase = 8
 	{
 	check__ = instance_create_depth(x,y,depth-1,player_message)
-	check__.text = "왁드로이드는 이미 완성됐다"
+	check__.text = "왁드로이드는 이미 완성됐습니다"
 	check__.target = id
 	check__.parents = id
 	}
@@ -149,7 +149,7 @@ global.playing_scene = 1
 	if !instance_exists(check__) && message_phase = 10
 	{
 	check__ = instance_create_depth(x,y,depth-1,player_message)
-	check__.text = "방금 완성 돼서 아직 테스트는 못해봤지만, 상황이 이러니 어쩔 수 없지"
+	check__.text = "방금 완성 돼서 아직 테스트는 못해봤지만, 상황이 이러니 어쩔 수 없지요..."
 	check__.target = id
 	check__.parents = id
 	}
@@ -165,7 +165,7 @@ global.playing_scene = 1
 	if !instance_exists(check__) && message_phase = 12
 	{
 	check__ = instance_create_depth(x,y,depth-1,player_message)
-	check__.text = "공격부터 회피까지 네놈의 모든 걸 카피했으니 누구도 막을 수 없다!"
+	check__.text = "공격 부터 방어까지 모든걸 본떠 이보다 완벽할 수 없습니다"
 	check__.target = id
 	check__.parents = id
 	}
@@ -183,7 +183,7 @@ global.playing_scene = 1
 	if !instance_exists(check__) && message_phase = 13
 	{
 	check__ = instance_create_depth(x,y,depth-1,player_message)
-	check__.text = "어디 한번 막아볼 테면 막아봐라!"
+	check__.text = "어디 한번 막아볼 테면 막아보시죠"
 	check__.target = id
 	check__.parents = id
 	}
@@ -232,7 +232,7 @@ global.playing_scene = 1
 	{
 	image_xscale = -1
 	check__ = instance_create_depth(x,y,depth-1,player_message)
-	check__.text = "그... 그만둬!"
+	check__.text = "아닛..... 잠깐...!"
 	check__.target = id
 	check__.parents = id
 	}
@@ -262,7 +262,7 @@ global.playing_scene = 1
 	if !instance_exists(check__) && message_phase = 21
 	{
 	check__ = instance_create_depth(x,y,depth-1,player_message)
-	check__.text = "왁드로이드는 완성한지 얼마 되지 않아 안정성이 떨어진단 말이야!"
+	check__.text = "왁드로이드는 완성한지 얼마 되지 않아 안정성이 떨어진단말입니다!"
 	check__.target = id
 	check__.parents = id
 	}
@@ -270,7 +270,7 @@ global.playing_scene = 1
 	if !instance_exists(check__) && message_phase = 22
 	{
 	check__ = instance_create_depth(x,y,depth-1,player_message)
-	check__.text = "자칫하면 폭주하여 이 연구소랑 함께 통째로 사라질수도 있다고!"
+	check__.text = "자칫하면 폭주하여 이 연구소랑 함께 통째로 사라질수도 있다구요!"
 	check__.target = id
 	check__.parents = id
 	}
@@ -348,7 +348,7 @@ global.playing_scene = 1
 		sprite_index = pl_hurt_hyumpanchi_hakase
 		vspeed = -4
 		check__ = instance_create_depth(x,y,depth-1,player_message)
-		check__.text = "으악!"
+		check__.text = "아이고!"
 		check__.target = id
 		check__.parents = id
 		play_scene__ = 2

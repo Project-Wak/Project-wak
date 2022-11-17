@@ -19,7 +19,11 @@ dead_scene ++
 patturn = 0
 
 
-
+	if dead_scene < 200
+	{
+	obj_camera.t_x = left_eye.x
+	obj_camera.t_y = left_eye.y
+	}
 
 	if dead_scene < 130
 	{
@@ -34,6 +38,136 @@ patturn = 0
 	vspeed = 0
 	hspeed = 0
 	}
+	
+	
+	
+	if dead_scene = 60
+	{
+	var sfx = audio_play_sound(mob_faint,0,0)
+	audio_sound_gain(sfx,0.4*global.master_volume*2*global.sfx_volume,0)
+	///////////////////////////////////////////
+	repeat(irandom_range(14,17))
+	{
+	create_buble_effect(1.2,irandom_range(0,359),0,choose(-1)*irandom_range(1,100)/7,0.08,0.08,$FF00D2FE,$FF076BFE,1.5,$FF737272,left_eye.x,left_eye.y,-depth-32,0,true,false)
+	}
+	
+	repeat(irandom_range(7,10))
+	{
+	create_buble_effect(1.45,irandom_range(0,359),0,choose(-1)*irandom_range(1,100)/7,0.07,0.07,c_white,$FF00D2FE,1.5,$FF342F32,left_eye.x,left_eye.y,-depth-32,1,true,false)
+	}
+	
+	view_shake(choose(0,0,0,0,1),irandom_range(10,15),choose(0,1))
+	var y_set = y+irandom_range(-16,16)
+	repeat(8)
+	{
+	var _ef = instance_create_depth(x,y_set,depth-1,effect_spark)
+	_ef.hspeed = irandom_range(5,20)*choose(-1,1)
+	_ef.vspeed = irandom_range(-8,-3)
+	}
+	
+	var a___ = audio_play_sound(bomb_sfx,0,0)
+	audio_sound_gain(a___,0.04*global.master_volume*2*global.sfx_volume,0)
+	}
+	
+	if dead_scene > 80
+	{
+	var xx_ = left_eye.x
+	var yy_ = left_eye.y
+
+		var random_val___ = percentage_k(5)
+		if random_val___ = 1
+		{
+		create_buble_effect(1,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.1,0.1,$FF47BBFF,$FF4C81FF,2,$FF534CFF,xx_,yy_,depth-32,0,false,false)
+		}
+	
+		var random_val___ = percentage_k(10)
+		if random_val___ = 1
+		{
+		create_buble_effect(1.1,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.07,0.07,$FF62D1F7,$FF6C60CD,2,$FF191919,xx_,yy_,depth-32,1,false,false)
+		}
+	
+
+		var random_val___ = percentage_k(5)
+		if random_val___ = 1
+		{
+		var random_val___2 = percentage_k(5)
+		create_buble_effect(1,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.1,0.1,$FF47BBFF,$FF4C81FF,2,$FF534CFF,xx_,yy_,depth-32,0,false,false)
+		}
+
+	
+		var random_val___ = percentage_k(10)
+		if random_val___ = 1
+		{
+		create_buble_effect(1.1,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.07,0.07,$FF62D1F7,$FF6C60CD,2,$FF191919,xx_,yy_,depth-32,1,false,false)
+		}
+	}
+	
+	
+	
+	
+	if dead_scene = 220
+	{
+	var sfx = audio_play_sound(mob_faint,0,0)
+	audio_sound_gain(sfx,0.4*global.master_volume*2*global.sfx_volume,0)
+	///////////////////////////////////////////
+	repeat(irandom_range(14,17))
+	{
+	create_buble_effect(1.2,irandom_range(0,359),0,choose(-1)*irandom_range(1,100)/7,0.08,0.08,$FF00D2FE,$FF076BFE,1.5,$FF737272,x,y,-depth-32,0,true,false)
+	}
+	
+	repeat(irandom_range(7,10))
+	{
+	create_buble_effect(1.45,irandom_range(0,359),0,choose(-1)*irandom_range(1,100)/7,0.07,0.07,c_white,$FF00D2FE,1.5,$FF342F32,x,y,-depth-32,1,true,false)
+	}
+	
+	view_shake(choose(0,0,0,0,1),irandom_range(10,15),choose(0,1))
+	var y_set = y+irandom_range(-16,16)
+	repeat(8)
+	{
+	var _ef = instance_create_depth(x,y_set,depth-1,effect_spark)
+	_ef.hspeed = irandom_range(5,20)*choose(-1,1)
+	_ef.vspeed = irandom_range(-8,-3)
+	}
+	
+	var a___ = audio_play_sound(bomb_sfx,0,0)
+	audio_sound_gain(a___,0.04*global.master_volume*2*global.sfx_volume,0)
+	}
+	
+	if dead_scene > 200
+	{
+	obj_camera.t_x = x
+	obj_camera.t_y = y
+	var xx_ = x
+	var yy_ = y
+
+		var random_val___ = percentage_k(5)
+		if random_val___ = 1
+		{
+		create_buble_effect(1,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.1,0.1,$FF47BBFF,$FF4C81FF,2,$FF534CFF,xx_,yy_,depth-32,0,false,false)
+		}
+	
+		var random_val___ = percentage_k(10)
+		if random_val___ = 1
+		{
+		create_buble_effect(1.1,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.07,0.07,$FF62D1F7,$FF6C60CD,2,$FF191919,xx_,yy_,depth-32,1,false,false)
+		}
+	
+
+		var random_val___ = percentage_k(5)
+		if random_val___ = 1
+		{
+		var random_val___2 = percentage_k(5)
+		create_buble_effect(1,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.1,0.1,$FF47BBFF,$FF4C81FF,2,$FF534CFF,xx_,yy_,depth-32,0,false,false)
+		}
+
+	
+		var random_val___ = percentage_k(10)
+		if random_val___ = 1
+		{
+		create_buble_effect(1.1,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.07,0.07,$FF62D1F7,$FF6C60CD,2,$FF191919,xx_,yy_,depth-32,1,false,false)
+		}
+	}
+	
 	
 	if dead_scene > 150
 	{
@@ -143,6 +277,8 @@ patturn = 0
 	give_item(0,4)
 	}
 
+	obj_camera.t_x = -4
+	obj_camera.t_y = -4
 	global.gold += 12000
 	global.left_time += 6*global.time_plusment
 	instance_destroy(_light_)
@@ -827,8 +963,8 @@ else
 		{
 		image_angle += (point_direction(x,y,player.x,player.y) - image_angle)*0.1
 		left_eye.image_angle += (point_direction(x,y,player.x,player.y) - left_eye.image_angle)*0.1
-		laser_alpha += (0.3 - laser_alpha)*0.1
-		obj_twin_eye_another.laser_alpha += (0.3 - obj_twin_eye_another.laser_alpha)*0.1
+		laser_alpha += (0.8 - laser_alpha)*0.1
+		obj_twin_eye_another.laser_alpha += (0.8 - obj_twin_eye_another.laser_alpha)*0.1
 		cannot_step = 0
 		left_eye.cannot_step = 0
 		left_eye.x += (xstart-200 - left_eye.x)*0.1
@@ -1116,18 +1252,18 @@ else
 		
 		if random_shoot = 0
 		{
-		laser_alpha += (0.3 - laser_alpha)*0.1
+		laser_alpha += (0.8 - laser_alpha)*0.1
 		obj_twin_eye_another.laser_alpha += (-1 - obj_twin_eye_another.laser_alpha)*0.1
 		}
 		else
 		{
-		obj_twin_eye_another.laser_alpha += (0.3 - obj_twin_eye_another.laser_alpha)*0.1
+		obj_twin_eye_another.laser_alpha += (0.8 - obj_twin_eye_another.laser_alpha)*0.1
 		laser_alpha += (-1 - laser_alpha)*0.1
 		}
 		
 			if patturn = 5.1
 			{
-				if shotgun_ < 7
+				if shotgun_ < 4
 				{
 				var sfx = audio_play_sound(mob_faint,0,0)
 				audio_sound_gain(sfx,0.4*global.master_volume*2*global.sfx_volume,0)
@@ -1165,7 +1301,7 @@ else
 			
 			if patturn >= 5.11
 			{
-				if shotgun_ < 7
+				if shotgun_ < 4
 				{
 				patturn = 5.03
 				shotgun_ ++

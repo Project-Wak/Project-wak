@@ -42,7 +42,7 @@ if (pressed > 0 && global.key_setting_message > 0) || global.key_setting_message
 	var item_desc__ = "'"+string(global.g_key)+"키'를 눌러 스킬 조작키 가이드를 상시 띄워둘수 있다."
 	if cal__img = 1
 	{
-	item_name__ = "가이드 북 1번 - 레이레 모드"
+	item_name__ = "가이드 북 1번 - 레이지 모드"
 	item_desc__ = string(global.e_key)+"키를 지속적으로 누르고 있으면 '레이지 모드'가 발동된다.\n 레이지 모드 시전시, 몇십초간 스테미나가 매우 빠르게 회복된다."
 	}
 	if cal__img = 2

@@ -232,6 +232,7 @@ cannot_step = 1
 		global.show_guide_mes = "보스 레이드\n\n보스를 처치하면 왁드로이드의 완성이 늦춰진다 (D-day "+string(6*global.time_plusment)+"시간 연장)\n\n또한 다음 섹터의 '키카드'를 드랍한다.\n\n(참고로, 보스는 여러번 반복해서 잡을수 있는데, 플레이 타임 길어짐 유의)"
 		global.show_guide_mes_spr = 4
 		global.killed_first_boss = 1
+		global.guide_gif = Sprite298
 		}
 	
 	instance_destroy(left_hand)

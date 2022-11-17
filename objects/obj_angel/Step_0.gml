@@ -39,7 +39,7 @@ _light_.alpha = image_alpha*0.5+w_alpha
 	_light_1.x = spear__.x
 	_light_1.y = spear__.y
 	_light_1.image_angle = spear__.image_angle
-	_light_1.alpha = image_alpha*0.8
+	_light_1.alpha = image_alpha*0.8*lightdown
 	}
 
 	if y+100 < player.y
@@ -57,6 +57,7 @@ _light_.alpha = image_alpha*0.5+w_alpha
 	
 	if dead_scene > 120
 	{
+	lightdown -= 0.05
 		if instance_exists(angel_spear)
 		{
 		angel_spear.image_angle += (100 - angel_spear.image_angle)*0.02
@@ -71,6 +72,8 @@ _light_.alpha = image_alpha*0.5+w_alpha
 	if dead_scene > 300
 	{
 	gravity = 0.2
+	lightdown2 -= 0.05
+	_light_.alpha = image_alpha*0.8*lightdown2
 	}
 	
 	if dead_scene%40 = 0
@@ -160,7 +163,7 @@ alpha += (0 - alpha)*0.1
 }
 
 
-if scene__ > 0
+if scene__ > 0 && hp > 0
 {
 	if !instance_exists(_light_)
 	{
@@ -687,6 +690,7 @@ opening_sfx = 0
 	
 	if patturn >= 2 && patturn < 3
 	{
+	w_alpha += (0 - w_alpha)*0.1
 		if patturn = 2
 		{
 		sfx_2 = 0
@@ -712,10 +716,11 @@ opening_sfx = 0
 		spear__.y += (player.y - spear__.y)*0.05
 		}
 		
-		if patturn = 2.16
+		if patturn = 2.14
 		{
 		var dust = instance_create_depth(spear__.x,spear__.y+32,spear__.depth-1,obj_dust_ef)
 		dust.image_xscale = -f_dir*2
+		w_alpha = 2;
 		}
 		
 		if patturn >= 2.2 && patturn < 2.25
@@ -779,10 +784,11 @@ opening_sfx = 0
 		patturn += 0.001
 		}
 		
-		if patturn = 2.36
+		if patturn = 2.34
 		{
 		var dust = instance_create_depth(spear__.x,spear__.y+32,spear__.depth-1,obj_dust_ef)
 		dust.image_xscale = -f_dir*2
+		w_alpha = 2;
 		}
 		
 		
@@ -846,10 +852,11 @@ opening_sfx = 0
 		patturn += 0.001
 		}
 		
-		if patturn = 2.56
+		if patturn = 2.54
 		{
 		var dust = instance_create_depth(spear__.x,spear__.y+32,spear__.depth-1,obj_dust_ef)
 		dust.image_xscale = -f_dir*2
+		w_alpha = 2;
 		}
 		
 		

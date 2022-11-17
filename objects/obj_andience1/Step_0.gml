@@ -109,7 +109,7 @@ player.x += (x-90 - player.x)*0.1
 		if !instance_exists(check__) && message_phase = 4
 		{
 		check__ = instance_create_depth(x,y,depth-1,player_message)
-		check__.text = "어떤 한 광기의 박사 팬치가 주인공의 모습을 본딴"
+		check__.text = "도파민 박사는 왁굳의 모습을 본딴"
 		check__.target = id
 		check__.parents = id
 		}

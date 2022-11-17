@@ -12,6 +12,7 @@ function give_item(argument0,argument1)
 		chat_up("'Re:wind 시계'를 획득하였다!")
 		global.show_guide_mes = "탈리스만\n\n탈리스만는 Tab키를 통해 장착 가능 하며,\n최대 2개까지 장착 가능하다.\n\n(참고로, Re:wind 시계를 장착하지 않고 플레이어 사망시\n'완전한 게임오버'가 되니 꼭 장착하도록 하자.)"
 		global.show_guide_mes_spr = 0
+		global.guide_gif = Sprite304
 		}
 		
 		if _cal__ = 3

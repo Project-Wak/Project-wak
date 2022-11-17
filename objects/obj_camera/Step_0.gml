@@ -1,5 +1,13 @@
 /// @description Insert description here
 // You can write your code in this editor
+if !sprite_exists(global.guide_gif)
+{
+guide_gif_y = 0
+guide_gif_alpha = 0
+guide_gif_y_timer = 0
+}
+
+
 if global.r_alpha > 0
 {
 global.r_alpha -= 0.01

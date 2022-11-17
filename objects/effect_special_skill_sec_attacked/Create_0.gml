@@ -18,6 +18,7 @@ xscale_shaker = 1
 shaker_time = 0
 saved_xscale = 0
 saved_yscale = 0
+b_x = -4
 
 //color_1 = c_white
 //color_2 = $FF1C1CB2

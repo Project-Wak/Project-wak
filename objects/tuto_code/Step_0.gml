@@ -78,6 +78,7 @@ if global.show_credits = 0
 
 	global.show_guide_mes = "회전베기("+string(global.q_key)+")\n\n적의 총알을 향해 회전 베기를 사용하면 총알을 도탄 시킬 수 있다.\n이때, 총알을 쏜 적이 도탄된 총알을 맞게 되면 막대한 데미지를 입게 된다."
 	global.show_guide_mes_spr = 4
+	global.guide_gif = Sprite305
 	}
 
 
@@ -135,6 +136,7 @@ if global.show_credits = 0
 	key_guide.img_index = 27
 	global.show_guide_mes = "회피 및 가드\n\n가드 - 데미지에 비례하여 스테미나를 소모한다 (스테미나 부족시 가드 불가)\n\n패링 - 적의 공격을 가드후, 즉시 "+string(global.a_key)+"키(일반공격)\n\n구르기 - 대부분의 공격을 회피 가능 (연속적으로 사용시 스테미나 대량 소모)\n\n일어나기 - 공격을 받아 쓰러졌을 경우, 땅 위에서 구르기 or 가드 or 점프로\n빠르게 일어날 수 있다."
 	global.show_guide_mes_spr = 3
+	global.guide_gif = Sprite306
 	}
 
 	////////////////////////
