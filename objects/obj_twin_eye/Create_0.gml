@@ -9,7 +9,7 @@ image_blend = c_white
 scene__ = 0
 spin = 0
 
-
+total_died_from_here = 0
 dead_scene = 0
 shake_boss = 1
 bgm = -4

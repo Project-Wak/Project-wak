@@ -288,6 +288,7 @@ if global.never_move_in_setting = 0 && global.playing_scene = 0 && global.none_w
 	
 	global.show_guide_mes = "익스플로전\n\n레이지를 대량으로 소비 하고 특수 공격을 사용한다."
 	global.show_guide_mes_spr = 4
+	global.guide_gif = Sprite308
 
 	global.rage_gauge = 100
 	}
@@ -298,6 +299,7 @@ if global.never_move_in_setting = 0 && global.playing_scene = 0 && global.none_w
 
 	global.show_guide_mes = "할복\n\n체력을 1로 고정하고, 사망 or 섹터 클리어 전까지 레이지 모드 지속"
 	global.show_guide_mes_spr = 5
+	global.guide_gif = Sprite309
 	var key_guide = instance_create_depth(-100,-100,-999994,draw_key_)
 	key_guide.location = 0.75
 	key_guide.img_index = 16
@@ -314,6 +316,7 @@ if global.never_move_in_setting = 0 && global.playing_scene = 0 && global.none_w
 	
 	global.show_guide_mes = "에네르기파\n\n레이지를 대량으로 소비하고, 특수 공격을 사용한다 \n(1레벨 이상 강화된 광선검 무기를 들고있을때 사용 가능)"
 	global.show_guide_mes_spr = 4
+	global.guide_gif = Sprite307
 	var key_guide = instance_create_depth(-100,-100,-999994,draw_key_)
 	key_guide.location = 0.75
 	key_guide.img_index = 26
@@ -4967,8 +4970,8 @@ if attack_laser > 0 && spin_attack = 0
 	{
 	global.movement_speed = 0
 	movement_speed = 0
-	obj_camera.v_x = 1280*0.9
-	obj_camera.v_y = 720*0.9
+	obj_camera.tv_x = 1280*0.6
+	obj_camera.tv_y = 720*0.6
 	cannot_move = 1
 	sprite_index = suicide_sprite
 	image_index = attack_laser

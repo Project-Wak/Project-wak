@@ -613,7 +613,7 @@ global.playing_scene = 1
 							{
 							image_xscale = sign_k(x - player.x)
 							check__ = instance_create_depth(x,y,depth-1,player_message)
-							check__.text = string(global.nickname)+"! 한가지 알려 드릴게 있어요!"
+							check__.text = string(global.nickname)+"님! 한가지 알려 드릴게 있어요!"
 							check__.target = id
 							check__.parents = id
 							}
@@ -998,7 +998,7 @@ global.playing_scene = 1
 				if !instance_exists(check__) && message_phase = 4
 				{
 				check__ = instance_create_depth(x,y,depth-1,player_message)
-				check__.text = "형 몰래 뒤따라 여기 연구소까지 오게 됐는데"
+				check__.text = string(global.nickname)+"님 몰래 뒤따라 여기 연구소까지 오게 됐는데"
 				check__.target = id
 				check__.parents = id
 				can_interect = 0

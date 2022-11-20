@@ -3,7 +3,7 @@
 yy += (t_y - yy)*0.1
 
 
-if place_meeting(x,y,player) && player.cannot_move = 0 && global.never_move = 0 && global.playing_scene = 0 && global.b_alpha < 0.1 && global.never_move_in_setting = 0
+if place_meeting(x,y,player) && player.cannot_move = 0 && global.never_move = 0 && global.playing_scene = 0 && global.b_alpha < 0.1 && global.never_move_in_setting = 0 && !instance_exists(draw_key_)
 {
 can_interect = 1
 }

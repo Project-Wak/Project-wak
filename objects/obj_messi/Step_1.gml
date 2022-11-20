@@ -1,5 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
+if total_died_from_here > 2
+{
+global.guide_boss = 1
+}
+
 
 if place_meeting(x,y,player) && player.charge_attack = 0 && player.spin = 0 && player.dash_attack = 0
 {

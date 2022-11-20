@@ -17,6 +17,7 @@ cre_boss = 0
 b_alpha_ = 0
 
 play_scene__ = 0
+total_died_from_here = 0
 bgm = -4
 
 if instance_exists(obj_wakdroid_ending)

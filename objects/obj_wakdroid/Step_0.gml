@@ -1,5 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
+if global.guide_gif = -4
+{
 	if player.attack_laser_sec = 0 && player.attack_laser = 0 && player.suicide = 0 && player.sting_attack = 0
 	{
 	obj_camera.tv_x = 1280*0.9
@@ -1161,4 +1163,5 @@ if sprite_index = move_sprite
 if image_index > image_number
 {
 image_index = 0
+}
 }

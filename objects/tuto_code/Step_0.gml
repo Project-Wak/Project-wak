@@ -134,7 +134,7 @@ if global.show_credits = 0
 	var key_guide = instance_create_depth(-100,-100,-999994,draw_key_)
 	key_guide.location = 2.8
 	key_guide.img_index = 27
-	global.show_guide_mes = "회피 및 가드\n\n가드 - 데미지에 비례하여 스테미나를 소모한다 (스테미나 부족시 가드 불가)\n\n패링 - 적의 공격을 가드후, 즉시 "+string(global.a_key)+"키(일반공격)\n\n구르기 - 대부분의 공격을 회피 가능 (연속적으로 사용시 스테미나 대량 소모)\n\n일어나기 - 공격을 받아 쓰러졌을 경우, 땅 위에서 구르기 or 가드 or 점프로\n빠르게 일어날 수 있다."
+	global.show_guide_mes = "회피 및 가드\n\n가드 - 데미지에 비례해 스테미나를 소모한다 (스테미나 부족시 가드 불가)\n\n구르기 - 대부분의 공격을 회피 가능 (연속적으로 사용시 스테미나 소모)\n\n일어나기 - 공격을 받아 쓰러졌을 경우, 땅 위에서 구르기 or 가드 or 점프로\n빠르게 일어날 수 있다."
 	global.show_guide_mes_spr = 3
 	global.guide_gif = Sprite306
 	}
@@ -176,8 +176,9 @@ if global.show_credits = 0
 
 	message_phase = 23
 
-	global.show_guide_mes = "레이지 모드("+string(global.e_key)+")\n\n왼쪽 상단의 Rage가 풀인 경우 사용 가능,\n시전시, 일시적 스테미나 회복 속도가 대폭 증가 / 공중에서의 스킬 사용 가능 횟수 +1.\n또한, 이동속도 증가 및 공격 속도가 증가한다."
+	global.show_guide_mes = "레이지 모드("+string(global.e_key)+")\n\n왼쪽 상단의 Rage가 풀인 경우 사용 가능,\n시전시, 스테미나 회복 속도가 대폭 증가 및, 이속 및 공속 증가"
 	global.show_guide_mes_spr = 4
+	global.guide_gif = Sprite312
 	}
 
 

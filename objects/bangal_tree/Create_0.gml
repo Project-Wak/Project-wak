@@ -13,3 +13,5 @@ message_phase = 0
 check__ = -4
 tutorial_message = 0
 can_interect = 0
+
+des = 0

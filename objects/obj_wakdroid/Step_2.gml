@@ -1,5 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
+if global.guide_gif = -4
+{
 var __i = sign(x - player.x)
 	if __i = 0
 	{
@@ -661,4 +663,5 @@ if spin = 0 && dash_attack = 0
 		alarm[2] = 3
 		}
 	}
+}
 }

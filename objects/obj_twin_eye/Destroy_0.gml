@@ -3,3 +3,4 @@
 instance_destroy(wall1)
 instance_destroy(wall2)
 instance_destroy(wall3)
+global.guide_boss = 0

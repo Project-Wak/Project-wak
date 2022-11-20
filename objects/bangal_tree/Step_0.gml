@@ -3,7 +3,7 @@
 
 timer++
 
-if image_index != 1
+if image_index != 1 && des != 1
 {
 	if timer > 50
 	{
@@ -68,7 +68,7 @@ gravity = 0.3
 
 
 
-if player.cannot_move = 0 && abs(player.x - x) < 32 && abs(player.y - y) <= 160
+if player.cannot_move = 0 && abs(player.x - x) < 32 && abs(player.y - y) <= 160 && global.playing_scene = 0
 {
 can_interect = 1
 }
@@ -87,8 +87,18 @@ if image_alpha < 0 && interectinig_now = 0
 instance_destroy()
 }
 
+if global.b_alpha < 0.5 && global.playing_scene > 0 && interectinig_now = 0
+{
+des = 1
+}
 
-if keyboard_check_released(string(ord(global.skip_key))) && can_interect = 1
+if des = 1
+{
+image_alpha -= 0.01
+}
+
+
+if keyboard_check_released(string(ord(global.skip_key))) && can_interect = 1 && global.playing_scene = 0 && global.b_alpha < 0.1 && global.show_guide_mes = -4
 {
 interectinig_now = 1
 }

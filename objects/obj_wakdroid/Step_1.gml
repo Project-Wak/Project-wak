@@ -1,5 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
+if global.guide_gif = -4
+{
 if floor(damaged_hp) != floor(hp)
 {
 	if hp_bar_alpha > 0
@@ -19,4 +21,6 @@ if floor(damaged_hp) != floor(hp)
 	{
 	damaged_hp = hp
 	}
+}
+
 }

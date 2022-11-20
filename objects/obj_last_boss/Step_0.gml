@@ -253,7 +253,7 @@ else
 
 	if scene__ >= 1
 	{
-	depth = player.depth-32
+	depth = 1000
 	global.dreamy_alpha += (1 - global.dreamy_alpha)*0.04
 	activated = 2
 	player.assult_mode = 300

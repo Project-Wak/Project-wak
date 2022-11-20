@@ -84,6 +84,72 @@ cannot_step = 1
 	x += shake_boss*14
 	}
 	
+	if dead_scene = 60
+	{
+	var sfx = audio_play_sound(mob_faint,0,0)
+	audio_sound_gain(sfx,0.4*global.master_volume*2*global.sfx_volume,0)
+	///////////////////////////////////////////
+	repeat(irandom_range(14,17))
+	{
+	create_buble_effect(1.2,irandom_range(0,359),0,choose(-1)*irandom_range(1,100)/7,0.08,0.08,$FF00D2FE,$FF076BFE,1.5,$FF737272,left_hand.x,left_hand.y,-depth-32,0,true,false)
+	}
+	
+	repeat(irandom_range(7,10))
+	{
+	create_buble_effect(1.45,irandom_range(0,359),0,choose(-1)*irandom_range(1,100)/7,0.07,0.07,c_white,$FF00D2FE,1.5,$FF342F32,left_hand.x,left_hand.y,-depth-32,1,true,false)
+	}
+	
+	view_shake(choose(0,0,0,0,1),irandom_range(10,15),choose(0,1))
+	var y_set = left_hand.y+irandom_range(-16,16)
+	repeat(8)
+	{
+	var _ef = instance_create_depth(x,y_set,depth-1,effect_spark)
+	_ef.hspeed = irandom_range(5,20)*choose(-1,1)
+	_ef.vspeed = irandom_range(-8,-3)
+	}
+	
+	var a___ = audio_play_sound(bomb_sfx,0,0)
+	audio_sound_gain(a___,0.04*global.master_volume*2*global.sfx_volume,0)
+	}
+	
+	
+	if dead_scene >= 60
+	{
+	var xx_ = left_hand.x
+	var yy_ = left_hand.y
+
+		var random_val___ = percentage_k(5)
+		if random_val___ = 1
+		{
+		create_buble_effect(1,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.1,0.1,$FF47BBFF,$FF4C81FF,2,$FF534CFF,xx_,yy_,depth-32,0,false,false)
+		}
+	
+		var random_val___ = percentage_k(10)
+		if random_val___ = 1
+		{
+		create_buble_effect(1.1,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.07,0.07,$FF62D1F7,$FF6C60CD,2,$FF191919,xx_,yy_,depth-32,1,false,false)
+		}
+	
+
+		var random_val___ = percentage_k(5)
+		if random_val___ = 1
+		{
+		var random_val___2 = percentage_k(5)
+		create_buble_effect(1,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.1,0.1,$FF47BBFF,$FF4C81FF,2,$FF534CFF,xx_,yy_,depth-32,0,false,false)
+		}
+
+	
+		var random_val___ = percentage_k(10)
+		if random_val___ = 1
+		{
+		create_buble_effect(1.1,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.07,0.07,$FF62D1F7,$FF6C60CD,2,$FF191919,xx_,yy_,depth-32,1,false,false)
+		}
+	}
+	
+	
+	
+	
+	
 	if dead_scene > 120
 	{
 	left_hand.cannot_step = 1
@@ -111,6 +177,75 @@ cannot_step = 1
 	left_hand.cannot_step = 0
 	left_hand.gravity = 0
 	left_hand.vspeed = 0
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	if dead_scene = 140
+	{
+	var sfx = audio_play_sound(mob_faint,0,0)
+	audio_sound_gain(sfx,0.4*global.master_volume*2*global.sfx_volume,0)
+	///////////////////////////////////////////
+	repeat(irandom_range(14,17))
+	{
+	create_buble_effect(1.2,irandom_range(0,359),0,choose(-1)*irandom_range(1,100)/7,0.08,0.08,$FF00D2FE,$FF076BFE,1.5,$FF737272,left_hand.x,left_hand.y,-depth-32,0,true,false)
+	}
+	
+	repeat(irandom_range(7,10))
+	{
+	create_buble_effect(1.45,irandom_range(0,359),0,choose(-1)*irandom_range(1,100)/7,0.07,0.07,c_white,$FF00D2FE,1.5,$FF342F32,left_hand.x,left_hand.y,-depth-32,1,true,false)
+	}
+	
+	view_shake(choose(0,0,0,0,1),irandom_range(10,15),choose(0,1))
+	var y_set = right_hand.y+irandom_range(-16,16)
+	repeat(8)
+	{
+	var _ef = instance_create_depth(x,y_set,depth-1,effect_spark)
+	_ef.hspeed = irandom_range(5,20)*choose(-1,1)
+	_ef.vspeed = irandom_range(-8,-3)
+	}
+	
+	var a___ = audio_play_sound(bomb_sfx,0,0)
+	audio_sound_gain(a___,0.04*global.master_volume*2*global.sfx_volume,0)
+	}
+	
+	
+	if dead_scene >= 140
+	{
+	var xx_ = right_hand.x
+	var yy_ = right_hand.y
+
+		var random_val___ = percentage_k(5)
+		if random_val___ = 1
+		{
+		create_buble_effect(1,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.1,0.1,$FF47BBFF,$FF4C81FF,2,$FF534CFF,xx_,yy_,depth-32,0,false,false)
+		}
+	
+		var random_val___ = percentage_k(10)
+		if random_val___ = 1
+		{
+		create_buble_effect(1.1,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.07,0.07,$FF62D1F7,$FF6C60CD,2,$FF191919,xx_,yy_,depth-32,1,false,false)
+		}
+	
+
+		var random_val___ = percentage_k(5)
+		if random_val___ = 1
+		{
+		var random_val___2 = percentage_k(5)
+		create_buble_effect(1,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.1,0.1,$FF47BBFF,$FF4C81FF,2,$FF534CFF,xx_,yy_,depth-32,0,false,false)
+		}
+
+	
+		var random_val___ = percentage_k(10)
+		if random_val___ = 1
+		{
+		create_buble_effect(1.1,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,150)/7,0.07,0.07,$FF62D1F7,$FF6C60CD,2,$FF191919,xx_,yy_,depth-32,1,false,false)
+		}
 	}
 	
 	if dead_scene > 200
@@ -232,7 +367,7 @@ cannot_step = 1
 		global.show_guide_mes = "보스 레이드\n\n보스를 처치하면 왁드로이드의 완성이 늦춰진다 (D-day "+string(6*global.time_plusment)+"시간 연장)\n\n또한 다음 섹터의 '키카드'를 드랍한다.\n\n(참고로, 보스는 여러번 반복해서 잡을수 있는데, 플레이 타임 길어짐 유의)"
 		global.show_guide_mes_spr = 4
 		global.killed_first_boss = 1
-		global.guide_gif = Sprite298
+		global.guide_gif = Sprite313
 		}
 	
 	instance_destroy(left_hand)

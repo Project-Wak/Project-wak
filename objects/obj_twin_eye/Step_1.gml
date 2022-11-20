@@ -1,5 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
+if total_died_from_here > 2
+{
+global.guide_boss = 1
+}
+
 check_floor = -4
 for(var i = 0; i <= 160; i++)
 {

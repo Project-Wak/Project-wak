@@ -291,7 +291,6 @@ global.slow_motion += global.slow_motion*0.03
 		
 			if instance_exists(obj_wak_doo)
 			{
-			
 			global.room_brightness = 0.35
 			obj_wak_doo.hp = obj_wak_doo.max_hp
 			obj_wak_doo.x = 2816
@@ -315,7 +314,6 @@ global.slow_motion += global.slow_motion*0.03
 			
 			if instance_exists(obj_messi)
 			{
-			
 			global.room_brightness = 0.35
 			obj_messi.hp = obj_messi.max_hp
 			obj_messi.x = obj_messi.xstart
@@ -346,7 +344,6 @@ global.slow_motion += global.slow_motion*0.03
 		
 			if instance_exists(obj_angel)
 			{
-			
 			global.room_brightness = 0.15
 			obj_angel.hp = obj_angel.max_hp
 			obj_angel.x = obj_angel.xstart
@@ -369,8 +366,11 @@ global.slow_motion += global.slow_motion*0.03
 			instance_destroy(obj_angel.spear__)
 			instance_destroy(obj_angel.wall1)
 			instance_destroy(obj_angel.wall2)
-			instance_destroy(obj_angel._light_)
-			instance_destroy(obj_angel._light_1)
+				if instance_exists(obj_angel._light_1)
+				{
+				instance_destroy(obj_angel._light_)
+				instance_destroy(obj_angel._light_1)
+				}
 			}
 			
 			if instance_exists(obj_wakdroid)
@@ -399,7 +399,6 @@ global.slow_motion += global.slow_motion*0.03
 		
 			if instance_exists(obj_simhae_doo)
 			{
-			
 			global.room_brightness = 0.35
 			obj_simhae_doo.image_xscale = -abs(obj_simhae_doo.image_xscale)
 			obj_simhae_doo.hp = obj_simhae_doo.max_hp
@@ -423,7 +422,6 @@ global.slow_motion += global.slow_motion*0.03
 			
 			if instance_exists(obj_guisangadoo)
 			{
-			
 			global.room_brightness = 0.35
 			obj_guisangadoo.image_xscale = -abs(obj_guisangadoo.image_xscale)
 			obj_guisangadoo.hp = obj_guisangadoo.max_hp
@@ -451,7 +449,6 @@ global.slow_motion += global.slow_motion*0.03
 		
 			if instance_exists(obj_twin_eye)
 			{
-			
 			global.room_brightness = 0.35
 			obj_twin_eye.hp = obj_twin_eye.max_hp
 			obj_twin_eye.timer = 0
@@ -475,7 +472,6 @@ global.slow_motion += global.slow_motion*0.03
 			
 			if instance_exists(obj_worm)
 			{
-			
 			global.room_brightness = 0.1
 			obj_worm.hp = obj_worm.max_hp
 			obj_worm.timer = 0

@@ -140,6 +140,7 @@ b_alpha_ += (t_b_alpha_ - b_alpha_)*0.08
 	{
 		if !instance_exists(_light_)
 		{
+		total_died_from_here ++
 		_light_ = instance_create_depth(x+p_xscale*129,y-30,depth,obj_light)
 		_light_.p_id = id
 		_light_.alpha = 0.7

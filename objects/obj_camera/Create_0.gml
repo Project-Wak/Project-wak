@@ -28,6 +28,10 @@ draw_rage_gagement = 0
 spining_speed = 3
 o2_alpha = 0
 
+global.guide_boss = 0
+guide_m_alpha = 1
+guide_g_alpha = 1
+
 instance_create_depth(x,y,depth,obj_potential_camera)
 
 //복구 뷰

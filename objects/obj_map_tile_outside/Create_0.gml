@@ -36,3 +36,7 @@ else
 explo_anime = 0
 }
 instance_create_depth(x,y,depth,outside_water)
+
+
+var warning_guide = instance_create_depth(654,1033,0,obj_warning)
+warning_guide.warning_message = "-관계자 외 출입 금지-"

@@ -9,7 +9,7 @@ image_blend = c_white
 scene__ = 0
 spin = 0
 owner_surface = surface_create(1920,1080)
-
+total_died_from_here = 0
 broken_anime = 0
 opening_scene = 0
 opening_sfx = 0

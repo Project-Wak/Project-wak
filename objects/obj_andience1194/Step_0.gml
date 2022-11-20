@@ -165,7 +165,7 @@ global.playing_scene = 1
 	if !instance_exists(check__) && message_phase = 12
 	{
 	check__ = instance_create_depth(x,y,depth-1,player_message)
-	check__.text = "공격 부터 방어까지 모든걸 본떠 이보다 완벽할 수 없습니다"
+	check__.text = "공격 부터 방어까지 모든걸 본떠 이보다 완벽할 수 없습니다!"
 	check__.target = id
 	check__.parents = id
 	}
@@ -183,7 +183,7 @@ global.playing_scene = 1
 	if !instance_exists(check__) && message_phase = 13
 	{
 	check__ = instance_create_depth(x,y,depth-1,player_message)
-	check__.text = "어디 한번 막아볼 테면 막아보시죠"
+	check__.text = "어디 한번 막아볼 테면 막아보십쇼!!!"
 	check__.target = id
 	check__.parents = id
 	}
@@ -441,6 +441,7 @@ if cre_boss = 1
 {
 	if !instance_exists(obj_wakdroid)
 	{
+	total_died_from_here ++
 	player.x = 5130
 	global.save_point_x = 5130
 	var test_mob = instance_create_depth(5703,2327,player.depth+3,obj_wakdroid)
@@ -449,6 +450,11 @@ if cre_boss = 1
 	test_mob.test_mob_type = 1
 	cre_boss = 0
 	}
+}
+
+if total_died_from_here > 2
+{
+global.guide_boss = 1
 }
 
 

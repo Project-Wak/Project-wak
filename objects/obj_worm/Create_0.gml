@@ -7,7 +7,7 @@ image_speed = 0
 
 first_meet_blocking = instance_create_depth(3552,1696,depth,obj_floor_tile3)
 first_meet_blocking.image_yscale = 5
-
+total_died_from_here = 0
 patturn = 0
 alpha = 1
 check_floor = -4

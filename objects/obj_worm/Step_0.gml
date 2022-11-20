@@ -231,6 +231,7 @@ else
 	
 		if !instance_exists(_light_)
 		{
+		total_died_from_here ++
 		_light_ = instance_create_depth(x,y,depth,obj_light)
 		_light_.p_id = id
 		_light_.alpha = 0.4

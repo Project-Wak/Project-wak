@@ -11,7 +11,7 @@ d_ef.target = -4
 var sfx = audio_play_sound(glow_sfx,0,0)
 audio_sound_gain(sfx,0.3*global.master_volume*2*global.sfx_volume,0)
 
-if instance_exists(obj_last_boss)
+if instance_exists(obj_last_boss) && obj_last_boss.hp > 1
 {
 obj_last_boss.hp += 150
 }
