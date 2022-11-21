@@ -2,13 +2,33 @@
 // You can write your code in this editor
 
 
-if instance_exists(obj_wakdroid) && (obj_wakdroid.vspeed != 0 || obj_wakdroid.gravity != 0 || obj_wakdroid.hspeed != 0)
+
+
+var show_guide = 0
+
+if instance_exists(player)
+{
+	if player.assult_mode <= -299
+	{
+	show_guide = 1
+	}
+	
+	if instance_exists(obj_wakdroid) && obj_wakdroid.vspeed = 0 && obj_wakdroid.gravity = 0 && obj_wakdroid.hspeed = 0
+	{
+	show_guide = 1
+	}
+}
+
+
+
+if instance_exists(obj_wakdroid)
 {
 alarm[3] = 1
 }
 
 
-if global.guide_boss = 1 && instance_exists(player) && (player.assult_mode <= -300 || (instance_exists(obj_wakdroid) && obj_wakdroid.vspeed = 0 && obj_wakdroid.gravity = 0 && obj_wakdroid.hspeed = 0))
+
+if global.guide_boss = 1 && show_guide = 1
 {
 	if instance_exists(obj_twin_eye)
 	{

@@ -76,6 +76,16 @@ global.playing_scene = 1
 		global.poison_tuto = 1
 		tutorial_message = 1
 		}
+		
+		
+		if warning_message = "물이 깊으니 익사 주의"
+		{
+		global.show_guide_mes_spr = 3
+		global.show_guide_mes = "수중 탐험\n\n물속에서 기절 상태에 빠졌을경우,\n스페이스바를 눌러 빠르게 회복할 수 있다\n또한, 수중에서 적을 처치하면 산소를 드랍한다"
+		global.guide_gif = Sprite314
+		global.poison_tuto = 1
+		tutorial_message = 1
+		}
 	}
 	
 	

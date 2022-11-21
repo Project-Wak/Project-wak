@@ -213,15 +213,30 @@ if (can_interect = 1 && interecting_now = 0 && keyboard_check_released(ord(strin
 	}
 }
 
+if warning_night = 0 && global.b_alpha >= 1
+{
+	if player.x < 1000
+	{
+	do_not_warn = 1
+	}
+	else
+	{
+	do_not_warn = 0
+	}
+}
+
 
 if image_index != 6 && !instance_exists(obj_wakdroid_ending)
 {
-	if global.n_night = 1 && abs(x - player.x) <= 80 && player.x > x && warning_night = 0
+	if global.n_night = 1 && abs(x - player.x) <= 80 && player.x > x && warning_night = 0 && do_not_warn = 0
 	{
 	warning_night = 1
 	interecting_now = 1
 	}
 }
+
+
+
 
 
 if interecting_now = 1

@@ -33,14 +33,18 @@ targeted = 1
 
 if targeted = 1 && hp > 0
 {
-timer ++
 speed += (0 - speed)*0.07
 direction += (point_direction(x,y,player.x,player.y) - direction)*0.03
-	if timer > 100
+
+	if instance_exists(player) && (place_meeting(player.x,player.y,obj_water_inside) || place_meeting(player.x,player.y-18,obj_water_front))
 	{
-	image_xscale = sign_k(x - player.x)
-	speed = 6
-	timer = 0
+	timer ++
+		if timer > 100
+		{
+		image_xscale = sign_k(x - player.x)
+		speed = 6
+		timer = 0
+		}
 	}
 }
 

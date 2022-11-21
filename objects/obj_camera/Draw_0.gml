@@ -216,7 +216,24 @@ if room != menu && global.playing_scene = 0 && global.story_next < 100 && global
 	}
 	
 	
-	if global.guide_boss != 1 || global.playing_scene > 0 || global.b_alpha > 0.1 || (instance_exists(player) && (player.attack_laser+player.attack_laser_sec > 0) || (player.assult_mode > -299 && instance_exists(obj_wakdroid))) || global.show_guide_mes != -4
+	var cannot_show = 0
+	
+	if instance_exists(player)
+	{
+		if (player.attack_laser+player.attack_laser_sec) > 0
+		{
+		cannot_show = 1
+		}
+		
+		
+		if player.assult_mode > -299
+		{
+		cannot_show = 1
+		}
+	}
+	
+	
+	if room = room_main || global.guide_boss != 1 || global.playing_scene > 0 || global.b_alpha > 0.1 || cannot_show = 1 || global.show_guide_mes != -4
 	{
 	guide_m_alpha = 1
 	}

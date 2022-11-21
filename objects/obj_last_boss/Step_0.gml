@@ -101,7 +101,7 @@ cannot_step = 1
 else
 {
 
-	
+depth = player.depth-32
 	if instance_exists(_light_1)
 	{
 	_light_1.x = x
@@ -111,12 +111,10 @@ else
 
 	if cannot_step = 1
 	{
-	depth = 1000
 	alpha += (1 - alpha)*0.1
 	}
 	else
 	{
-	depth = player.depth+5
 	alpha += (0 - alpha)*0.1
 	}
 	

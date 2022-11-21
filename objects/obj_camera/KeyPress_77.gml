@@ -1,13 +1,33 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if instance_exists(obj_wakdroid) && (obj_wakdroid.vspeed != 0 || obj_wakdroid.gravity != 0 || obj_wakdroid.hspeed != 0)
+
+var show_guide = 0
+
+if instance_exists(player)
+{
+	if player.assult_mode <= -299
+	{
+	show_guide = 1
+	}
+	
+	if instance_exists(obj_wakdroid) && obj_wakdroid.vspeed = 0 && obj_wakdroid.gravity = 0 && obj_wakdroid.hspeed = 0
+	{
+	show_guide = 1
+	}
+}
+
+
+
+if instance_exists(obj_wakdroid)
 {
 alarm[3] = 1
 }
 
 
-if global.guide_boss = 1 && instance_exists(player) && (player.assult_mode <= -300 || (instance_exists(obj_wakdroid) && obj_wakdroid.vspeed = 0 && obj_wakdroid.gravity = 0 && obj_wakdroid.hspeed = 0))
+
+
+if global.guide_boss = 1 && show_guide = 1
 {
 	if instance_exists(obj_twin_eye)
 	{
@@ -54,5 +74,13 @@ if global.guide_boss = 1 && instance_exists(player) && (player.assult_mode <= -3
 	global.show_guide_mes = "쌉벌래두\n\n해당 보스는 단단한 장갑을 두르고 있어, 쉽게 데미지를 입힐 수 없다.\n다만, 꼬리 부분의 '코어'를 노리면 막대한 대미지를 입힐 수 있다."
 	global.show_guide_mes_spr = 8
 	global.guide_gif = Sprite310
+	}
+	
+	
+	if instance_exists(obj_messi)
+	{
+	global.show_guide_mes = "왁두의 권속 - 메시\n\n보스를 상대할때 꽤나 까다로운 스태미나 조절을 요구하는데,\n이는 '내려찍기' 사용을 최대한 자제하면 스테미나 관리가 훨씬 쉬워진다."
+	global.show_guide_mes_spr = 8
+	global.guide_gif = Sprite315
 	}
 }

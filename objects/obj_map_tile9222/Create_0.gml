@@ -66,6 +66,9 @@ global.platform_speed = 0
 alarm[3] = 5
 
 
+var warning_guide = instance_create_depth(540,340,0,obj_warning)
+warning_guide.warning_message = "물이 깊으니 익사 주의"
+
 
 if global.guisanga_doo_event = 1 && !instance_exists(obj_wakdroid_ending)
 {

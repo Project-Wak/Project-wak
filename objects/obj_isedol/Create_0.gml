@@ -23,6 +23,8 @@ random_coin = 0
 timer = 0
 global.your_page = 0
 wall2 = -4
+
+do_not_warn = 0
 if global.tutorial = 0
 {
 wall2 = instance_create_depth(736,160,depth,obj_floor_tile3)
