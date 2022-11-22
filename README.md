@@ -1,4 +1,31 @@
-# Project-wak
+<div align="center">
+
+
+
+
+<img src = "imgs/thumnail2.png" width = "640px">
+
+![](https://img.shields.io/github/downloads/ABER1047/Project-wak/total)
+
+[![](https://img.shields.io/github/downloads/ABER1047/Project-wak/Beta-3.02/project.wak_2022_11_21.zip?color=AD8264&label=DOWNLOAD&style=for-the-badge)](https://github.com/ABER1047/Project-wak/releases/download/Beta-3.02/project.wak_2022_11_21.zip)
+
+</br>
+
+[![](https://discordapp.com/api/guilds/958378000414568558/embed.png?style=banner2)](https://discord.gg/hzbCTRemqq)
+
+
+</br></br></br></br></br></br>
+
+# - Preview
+
+![preview_1](imgs/preview_1.gif)
+![preview_2](preview_4.gif)
+![preview_3](imgs/preview_3.gif)
+
+#
+
+
+
 
 스케일도 크게 제작했고 퀄리티도 좋고 비주얼도 굉장히 좋은거 같아서 개인적으로 젤 맘에 드는 프로젝트
 
@@ -13,12 +40,12 @@
 ##### (코드 관련 설명글은 아래 참고)
 
 
-![preview_1](imgs/preview_1.gif)
-![preview_2](preview_4.gif)
-![preview_3](imgs/preview_3.gif)
 
 
 
+</div>
+
+</br></br></br></br>
 
 ## - 코드 관련 설명글
 
