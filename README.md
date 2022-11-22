@@ -1,7 +1,7 @@
 <div align="center">
 
 
-
+</br></br>
 
 <img src = "imgs/thumnail2.png" width = "640px">
 
