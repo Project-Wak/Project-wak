@@ -5,11 +5,22 @@
 
 <img src = "imgs/thumnail2.png" width = "640px">
 
-![](https://img.shields.io/github/downloads/ABER1047/Project-wak/total)
+
+
+
+#### - 총 다운로드 수
+
+![](https://img.shields.io/github/downloads/ABER1047/Project-wak/total?color=E0C9A8)
+
+</br>
+
+#### - 게임 다운로드 
 
 [![](https://img.shields.io/github/downloads/ABER1047/Project-wak/Beta-3.02/project.wak_2022_11_21.zip?color=AD8264&label=DOWNLOAD&style=for-the-badge)](https://github.com/ABER1047/Project-wak/releases/download/Beta-3.02/project.wak_2022_11_21.zip)
 
-</br>
+</br></br>
+
+#### - 디스코드
 
 [![](https://discordapp.com/api/guilds/958378000414568558/embed.png?style=banner2)](https://discord.gg/hzbCTRemqq)
 
