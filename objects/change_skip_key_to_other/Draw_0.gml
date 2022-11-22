@@ -25,5 +25,5 @@ draw_text_kl_scale(xx,yy-10*_c_x,string(console_key),16,999,0.8,image_blend,1,0,
 }
 
 draw_sprite_ext(sprite_index,image_index+img_ind__,xx,yy,image_xscale,image_xscale,0,c_white,1)
-draw_text_kl_scale(xx+32*_c_x,yy-10*_c_x,"상호 작용 및 대화 넘기기",16,999,0.8,image_blend,0,-1,font0,1/3*_c_x,1/3*_c_x,image_angle)
+draw_text_kl_scale(xx+32*_c_x,yy-10*_c_x,"상호작용 및 대화 넘기기",16,999,0.8,image_blend,0,-1,font0,1/3*_c_x,1/3*_c_x,image_angle)
 }

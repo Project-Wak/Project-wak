@@ -111,6 +111,11 @@ if image_alpha > 0 && global.hp > 0 && global.playing_scene <= 0 && global.t_b_a
 			if global.stamina/(10+global.max_stamina_plus) > 0
 			{
 			draw_sprite_ext(sprite20,4,xx+69*v_x,yy+64*v_x,(draw_stamina/10)*5.5*v_x,v_x*1.5,0,c_white,hp_bar_alpha)
+			
+				if stamina_highlight > 0
+				{
+				draw_sprite_ext(sprite20,3,xx+69*v_x,yy+64*v_x,(draw_stamina/10)*5*v_x,v_x*1.5,0,c_white,hp_bar_alpha*stamina_highlight)
+				}
 			}
 		}
 	
@@ -137,4 +142,33 @@ if image_alpha > 0 && global.hp > 0 && global.playing_scene <= 0 && global.t_b_a
 		}
 	}
 }
+
+
+	if global.playing_scene <= 0 && global.b_alpha < 0.3 && !instance_number(setting_parents)
+	{
+		if global.hp <= max_hp*0.35 && global.can_use_sylinge1 > 0 && gravity = 0 && vspeed = 0 && hurt = 0
+		{
+		draw_text_kl_scale(x,y-v_x*64,"에스트병 사용 (R)",v_x*64,-1,image_alpha*guide__alpha,c_white,0,0,font0,v_x*0.3,v_x*0.3,0);
+		guide__alpha += (1 - guide__alpha)*0.04
+		}
+		else
+		{
+			if global.room_brightness <= 0.35 && global.lantern > 0 && lantern_turnon <= 0
+			{
+			draw_text_kl_scale(x,y-v_x*64,"랜턴 켜기 (F)",v_x*64,-1,image_alpha*guide__alpha,c_white,0,0,font0,v_x*0.3,v_x*0.3,0);
+			guide__alpha += (1 - guide__alpha)*0.04
+			}
+			else
+			{
+			guide__alpha = 0;
+			}
+		}
+	}
 }
+
+
+
+
+
+
+

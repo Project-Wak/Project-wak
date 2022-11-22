@@ -22,6 +22,18 @@ if global.chunyang = 1 && image_index = 6
 	}
 }
 
+if keep_pressing > 0
+{
+	if !keyboard_check(global.left_key) && !keyboard_check(global.right_key)
+	{
+	keep_pressing -= 5
+	}
+}
+else
+{
+keep_pressing = 0
+}
+
 if ((global.accessories_owned[1] = 1 && global.none_wakgood_mode = false) || (global.accessories_owned[13] = 1 && global.none_wakgood_mode = true)) && first_tuto = 1 && global.accessories_equip[0] < 2 && global.accessories_equip[1] < 2 && global.accessories_equip[2] < 2
 {
 	if player.x < 1140
@@ -1228,18 +1240,28 @@ global.playing_scene = 1
 					}
 
 				
-					if keyboard_check_pressed(global.left_key)
+					if keyboard_check(global.left_key)
 					{
-					set_time --
-					var sfx = audio_play_sound(message_sfx,0,0)
-					audio_sound_gain(sfx,0.12*global.master_volume*2*global.sfx_volume,0)
+					keep_pressing ++
+					
+						if keep_pressing = 1 || keep_pressing = 40 || keep_pressing = 58 || keep_pressing = 67 || keep_pressing = 76 || keep_pressing = 82 || (keep_pressing >= 80 && keep_pressing%5 = 1)
+						{
+						set_time --
+						var sfx = audio_play_sound(message_sfx,0,0)
+						audio_sound_gain(sfx,0.12*global.master_volume*2*global.sfx_volume,0)
+						}
 					}
 		
-					if keyboard_check_pressed(global.right_key)
+					if keyboard_check(global.right_key)
 					{
-					set_time ++
-					var sfx = audio_play_sound(message_sfx,0,0)
-					audio_sound_gain(sfx,0.12*global.master_volume*2*global.sfx_volume,0)
+					keep_pressing ++
+					
+						if keep_pressing = 1 || keep_pressing = 40 || keep_pressing = 58 || keep_pressing = 67 || keep_pressing = 76 || keep_pressing = 82 || (keep_pressing >= 80 && keep_pressing%5 = 1)
+						{
+						set_time ++
+						var sfx = audio_play_sound(message_sfx,0,0)
+						audio_sound_gain(sfx,0.12*global.master_volume*2*global.sfx_volume,0)
+						}
 					}
 		
 					if set_time < 0

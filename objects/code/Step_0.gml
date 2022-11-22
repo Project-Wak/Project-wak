@@ -409,7 +409,7 @@ global.gold_draw_alpha += (-0.01 - global.gold_draw_alpha)*0.1
 }
 
 
-if global.playing_scene = 0 && global.show_guide_mes = -4 && global.hp > 0
+if global.playing_scene = 0 && global.show_guide_mes = -4 && global.hp > 0 && global.b_alpha < 0.3
 {
 	if keyboard_check_pressed(vk_escape)
 	{

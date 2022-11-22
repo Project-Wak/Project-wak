@@ -19,6 +19,7 @@ betted_gold = 0
 global.coin_flip = 0
 coin_flip_speed = 0
 global.coin_flip_n = 0
+keep_pressing = 0
 random_coin = 0
 timer = 0
 global.your_page = 0

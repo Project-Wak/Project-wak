@@ -21,7 +21,7 @@ if instance_exists(player)
 
 
 
-if instance_exists(obj_wakdroid)
+if instance_exists(obj_wakdroid) && global.show_guide_mes = -4
 {
 alarm[3] = 1
 }

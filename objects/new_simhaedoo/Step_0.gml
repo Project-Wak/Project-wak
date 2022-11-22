@@ -47,7 +47,7 @@ attack ++
 }
 
 
-if targeted = 1 && hp > 0
+if targeted = 1 && hp > 0 && global.b_alpha <= 0.2
 {
 timer ++
 speed += (0 - speed)*0.07
@@ -66,6 +66,12 @@ direction += (point_direction(x,y,player.x,player.y) - direction)*0.03
 		}
 	timer = 0
 	}
+}
+
+
+if global.b_alpha >= 1
+{
+targeted = 0
 }
 
 

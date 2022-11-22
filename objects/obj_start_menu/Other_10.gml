@@ -83,7 +83,7 @@ else
 		if t_set_menu_choose = 4
 		{
 		global.time_plusment = 2
-		global.accessories_owned[0] = 14
+		global.accessories_owned[14] = 1
 		global.accessories_equip[0] = 14
 		}
 		
@@ -91,7 +91,7 @@ else
 		{
 		global.time_plusment = 2
 		global.super_easy = 2
-		global.accessories_owned[0] = 9
+		global.accessories_owned[9] = 1
 		global.accessories_equip[0] = 9
 		}
 	}

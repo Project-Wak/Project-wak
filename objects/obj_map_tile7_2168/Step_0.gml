@@ -6,7 +6,7 @@ global.room_brightness = 0.35
 }
 
 
-if player.y < 6217 && player.x < 6590 && player.x > 5952 && !instance_exists(gumseong_shadow) && cre_gumseong = 0
+if player.y < 6217 && player.x < 6590 && player.x > 5952 && !instance_exists(gumseong_shadow) && cre_gumseong = 0 && global.b_alpha < 1
 {
 var test_mob = instance_create_depth(6018,992,player.depth+3,gumseong_shadow)
 test_mob.test_mob_type = 0
@@ -17,7 +17,9 @@ cre_gumseong = 1
 
 if global.b_alpha >= 1
 {
+instance_destroy(gumseong_shadow)
 ball_timer = 440
+cre_gumseong = 0
 }
 
 if global.never_move = 0

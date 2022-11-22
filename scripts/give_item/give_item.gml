@@ -145,6 +145,14 @@ function give_item(argument0,argument1)
 	else
 	{
 	global.item_owned[argument1] ++
-	chat_up("'"+string(global.item_name_owned[argument1])+"'을/를 획득하였다!    (보유갯수 : "+string(global.item_owned[argument1])+")")
+	
+		if argument1 <= 4
+		{
+		chat_up("'"+string(global.item_name_owned[argument1])+"'을/를 획득하였다!    (보유갯수 : "+string(global.item_owned[argument1])+")")
+		}
+		else
+		{
+		chat_up("'"+string(global.item_name_owned[argument1])+"'을/를 획득하였다!")
+		}
 	}
 }

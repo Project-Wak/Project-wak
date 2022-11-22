@@ -22,14 +22,18 @@ else
 }
 
 
-if global.b_alpha >= 1
+if global.b_alpha >= 0.9
 {
-	if player.x < 1447 && player.y > 952 && player.y < 1440
+	if place_meeting(x,y,player)
 	{
-	var test_mob = instance_create_depth(916,1440,player.depth+3,gumseong_shadow)
-	test_mob.test_mob_type = 0
-	test_mob.image_xscale = -1
-	test_mob.image_yscale = 1
+		if !instance_exists(gumseong_shadow)
+		{
+		show_debug_message("gumseong____")
+		var test_mob = instance_create_depth(940,1400,player.depth+3,gumseong_shadow)
+		test_mob.test_mob_type = 0
+		test_mob.image_xscale = -1
+		test_mob.image_yscale = 1
+		}
 	}
 	else
 	{

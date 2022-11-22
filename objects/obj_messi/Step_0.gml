@@ -2,6 +2,25 @@
 // You can write your code in this editor
 image_blend = c_white
 
+
+
+if patturn != 0
+{
+automatic_bug_fix ++
+
+	if automatic_bug_fix > 9999
+	{
+	patturn = 0
+	cannot_step = 1
+	random_quake = -1
+	hit_motion = 0
+	hit_cooltime = 0
+	automatic_bug_fix = 0
+	}
+}
+
+
+
 if hp <= 0
 {
 	if global.achievement[13] != 1

@@ -95,7 +95,7 @@ function draw_text_kl_scale(argument0, argument1, argument2, argument3, argument
 		{
 		draw_set_color($FF191919&$ffffff);
 		
-			if argument10 > 0.3
+			if argument10 > 0.5
 			{
 				for(var i = 1; i < argument10*3; i+= argument10*1.5)
 				{
@@ -108,7 +108,7 @@ function draw_text_kl_scale(argument0, argument1, argument2, argument3, argument
 			}
 			else
 			{
-				for(var i = 1; i < 0.9; i+= argument10*1.5)
+				for(var i = 1; i < 1.5; i+= argument10*1.5)
 				{
 				//i = argument10
 				draw_text_ext_transformed(argument0+i,argument1,argument2,argument3,argument4,argument10,argument11,argument12);

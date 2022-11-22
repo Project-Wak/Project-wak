@@ -27,5 +27,6 @@ hit_motion = 0
 sfx__ = 0
 faraway = 9999
 faraway_timer = 0
+stop_move = -4
 image_xscale = 1.5
 image_yscale = 1.5

@@ -43,6 +43,7 @@ movement_speed = 0
 hit_motion = 0
 hit_cooltime = 0
 last_hit = 1
+_light_1 = -4
 skill_red_ball_effect_rage = -4
 y += 500
 left_hand = -4

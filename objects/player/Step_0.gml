@@ -13,6 +13,22 @@ global.rage_gauge = 100
 	}
 }
 
+if global.stamina >= 10+global.max_stamina_plus
+{
+stamina_highlight_timer ++
+	if stamina_highlight_timer > 60
+	{
+	stamina_highlight = 1
+	stamina_highlight_timer = 0
+	}
+}
+else
+{
+stamina_highlight_timer = 0
+}
+stamina_highlight += (-0.01 - stamina_highlight)*0.1
+
+
 
 if can_jump != 1
 {

@@ -453,6 +453,7 @@ global.slow_motion += global.slow_motion*0.03
 			obj_twin_eye.hp = obj_twin_eye.max_hp
 			obj_twin_eye.timer = 0
 			instance_destroy(obj_twin_eye_another)
+			instance_destroy(obj_bullet)
 			obj_twin_eye.patturn = 0
 			obj_twin_eye.timer = 0
 			obj_twin_eye.patturn = 0

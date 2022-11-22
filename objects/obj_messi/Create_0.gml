@@ -26,6 +26,7 @@ saved_player_dir = 0
 message_phase = 0
 check__ = -4
 b_patturn = 0
+automatic_bug_fix = 0
 patturn_repeat = 0
 hp = 1700
 max_hp = 1700
