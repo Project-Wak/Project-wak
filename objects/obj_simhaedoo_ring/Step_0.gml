@@ -58,8 +58,8 @@ image_alpha += (1.01 - image_alpha)*0.07
 
 
 
-image_xscale -= 0.01
-image_yscale -= 0.005
+image_xscale -= 0.02
+image_yscale -= 0.01
 
 if (image_yscale <= 0 || image_xscale <= 0 || image_alpha <= 0) && des = 1
 {

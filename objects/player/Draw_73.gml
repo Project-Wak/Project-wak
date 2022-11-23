@@ -134,33 +134,41 @@ if image_alpha > 0 && global.hp > 0 && global.playing_scene <= 0 && global.t_b_a
 		if obj_camera.o2_alpha > 0 && global.slow_motion = 0 && global.show_challenger = 0
 		{
 		draw_o2 += (global.o2 - draw_o2)*0.1
-		draw_sprite_ext(sprite20,0,x-24*v_x,y-56*v_x,1.82*v_x,1.71*v_x,0,c_white,obj_camera.o2_alpha)
+		draw_sprite_ext(sprite20,0,x-24*v_x,y+56*v_x,1.82*v_x,1.71*v_x,0,c_white,obj_camera.o2_alpha)
 			if global.o2/100 > 0
 			{
-			draw_sprite_ext(sprite20,7,x-22*v_x,y-56*v_x,(draw_o2/100)*1.9*v_x,2*v_x,0,c_white,obj_camera.o2_alpha)
+			draw_sprite_ext(sprite20,7,x-22*v_x,y+56*v_x,(draw_o2/100)*1.9*v_x,2*v_x,0,c_white,obj_camera.o2_alpha)
 			}
 		}
 	}
 }
 
 
-	if global.playing_scene <= 0 && global.b_alpha < 0.3 && !instance_number(setting_parents)
+	if global.playing_scene <= 0 && global.b_alpha < 0.3 && !instance_number(setting_parents) && global.hp > 0
 	{
-		if global.hp <= max_hp*0.35 && global.can_use_sylinge1 > 0 && gravity = 0 && vspeed = 0 && hurt = 0
+		if hurt > 0 && ((gravity = 0 && vspeed = 0) || (global.o2 < 100))
 		{
-		draw_text_kl_scale(x,y-v_x*64,"에스트병 사용 (R)",v_x*64,-1,image_alpha*guide__alpha,c_white,0,0,font0,v_x*0.3,v_x*0.3,0);
+		draw_text_kl_scale(x,y-v_x*64,"빠른 일어나기 (Space)",v_x*64,-1,image_alpha*guide__alpha,c_white,0,0,font0,v_x*0.3,v_x*0.3,0);
 		guide__alpha += (1 - guide__alpha)*0.04
 		}
 		else
 		{
-			if global.room_brightness <= 0.35 && global.lantern > 0 && lantern_turnon <= 0
+			if global.hp <= max_hp*0.35 && global.medical_slincer1 > 0 && global.can_use_sylinge1 > 0 && gravity = 0 && vspeed = 0 && hurt = 0
 			{
-			draw_text_kl_scale(x,y-v_x*64,"랜턴 켜기 (F)",v_x*64,-1,image_alpha*guide__alpha,c_white,0,0,font0,v_x*0.3,v_x*0.3,0);
+			draw_text_kl_scale(x,y-v_x*64,"에스트병 사용 (R)",v_x*64,-1,image_alpha*guide__alpha,c_white,0,0,font0,v_x*0.3,v_x*0.3,0);
 			guide__alpha += (1 - guide__alpha)*0.04
 			}
 			else
 			{
-			guide__alpha = 0;
+				if global.room_brightness <= 0.35 && global.lantern > 0 && lantern_turnon <= 0
+				{
+				draw_text_kl_scale(x,y-v_x*64,"랜턴 켜기 (F)",v_x*64,-1,image_alpha*guide__alpha,c_white,0,0,font0,v_x*0.3,v_x*0.3,0);
+				guide__alpha += (1 - guide__alpha)*0.04
+				}
+				else
+				{
+				guide__alpha = 0;
+				}
 			}
 		}
 	}

@@ -73,7 +73,10 @@ _light_.alpha = image_alpha*0.5+w_alpha
 	{
 	gravity = 0.2
 	lightdown2 -= 0.05
-	_light_.alpha = image_alpha*0.8*lightdown2
+		if instance_exists(_light_)
+		{
+		_light_.alpha = image_alpha*0.8*lightdown2
+		}
 	}
 	
 	if dead_scene%40 = 0

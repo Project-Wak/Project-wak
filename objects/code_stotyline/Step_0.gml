@@ -120,11 +120,6 @@ if global.story_next >= 101 && global.story_next < 300
 }
 
 
-if message_phase < 140 && global.first_sleep = 0
-{
-global.clock = 1
-}
-
 if global.story_next > 650
 {
 global.t_b_alpha = 2.1

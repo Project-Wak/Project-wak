@@ -152,7 +152,7 @@ if room != menu && global.playing_scene = 0 && global.story_next < 100 && global
 	if global.o2 != 100
 	{
 	o2_alpha += (1 - o2_alpha)*0.1
-	draw_text_kl_scale(player.x-48*v_x_,player.y-64*v_x_,"O2",v_x_*64,-1,__alpha_set*o2_alpha,c_white,0,-1,font0,v_x_*0.3,v_x_*0.3,0);
+	draw_text_kl_scale(player.x-48*v_x_,player.y+48*v_x_,"O2",v_x_*64,-1,__alpha_set*o2_alpha,c_white,0,-1,font0,v_x_*0.3,v_x_*0.3,0);
 	}
 	else
 	{
@@ -225,10 +225,14 @@ if room != menu && global.playing_scene = 0 && global.story_next < 100 && global
 		cannot_show = 1
 		}
 		
-		
 		if player.assult_mode > -299
 		{
 		cannot_show = 1
+		}
+		
+		if instance_number(obj_wakdroid)
+		{
+		cannot_show = 0
 		}
 	}
 	
@@ -356,6 +360,16 @@ instance_destroy(setting_parents)
 	
 	if keyboard_check_released(ord(string(global.skip_key))) && message_can_des_delay > 60
 	{
+		if global.guide_gif = Sprite313
+		{
+			if message_phase = 0
+			{
+			check__ = instance_create_depth(x,y,depth-1,player_message)
+			check__.text = "..."
+			check__.target = player.id
+			check__.parents = id
+			}
+		}
 	global.never_move = 0
 	global.key_setting_message = 0
 	global.show_guide_mes = -4

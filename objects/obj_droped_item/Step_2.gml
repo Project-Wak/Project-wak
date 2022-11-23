@@ -91,6 +91,7 @@ audio_sound_gain(sfx,0.07*global.master_volume*2*global.sfx_volume,0)
 	{
 	global.show_guide_mes = "아이템\n\n아이템은 맵 곳곳에 숨겨져 존재한다.\n벽에 수상한 문양이 있으면 가까히 가서 조사해보자.\n\n(참고로 한 스테이지당 최소 1개 이상의 아이템이 숨겨져 있다)"
 	global.show_guide_mes_spr = 0
+	global.guide_gif = Sprite316
 	}
 instance_destroy()
 }

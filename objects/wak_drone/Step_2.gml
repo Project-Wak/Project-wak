@@ -133,7 +133,7 @@ if place_meeting(x,y,obj_bullet_for_player)
 	t_hp_bar_alpha = 1
 	alarm[5] = 200
 	
-	hp_minus_for_mob(1,16)
+	hp_minus_for_mob(1,222)
 	bloody(_attacker_ef.x,_attacker_ef.y,1)
 	hit_cooltime = 1
 	last_hit = 1
@@ -694,7 +694,7 @@ var _attacker_ef = instance_place(x,y,obj_bullet)
 	
 	bloody(_attacker_ef.x,_attacker_ef.y,0)
 	view_shake(1,4,2)
-	hp_minus_for_mob(0,84)
+	hp_minus_for_mob(0,222)
 	last_hit = 1
 	hit_cooltime = 1
 	gravity = 0.2

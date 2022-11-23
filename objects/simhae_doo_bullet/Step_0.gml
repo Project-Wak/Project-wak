@@ -69,7 +69,7 @@ if attack_type != 2
 				scale_ = 80
 				}
 			speed = 0
-			direction = point_direction(x,y,player.x+sign(floor(global.movement_speed))*scale_,player.y)
+			direction = point_direction(x,y,player.x,player.y)
 			timer = 183
 			}
 		}

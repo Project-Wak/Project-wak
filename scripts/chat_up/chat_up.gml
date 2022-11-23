@@ -119,7 +119,7 @@ audio_sound_gain(sfx,0.07*global.master_volume*2*global.sfx_volume,0)
 		else if (argument0 = "/test" || argument0 = "/tb")
 		{
 		global.lantern = 1
-		room_goto(room_sector_outside)
+		room_goto(room_sector_runaway)
 		}
 		else if (argument0 = "/br" || argument0 = "/blur")
 		{

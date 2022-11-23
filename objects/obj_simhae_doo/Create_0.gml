@@ -22,6 +22,7 @@ patturn = 0
 timer = 0
 laser1 = -4
 laser2 = -4
+created_ring_once = 0
 saved_player_dir = 0
 message_phase = 0
 check__ = -4

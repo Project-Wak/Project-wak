@@ -105,6 +105,9 @@ function save_and_load_data(argument0,argument1)
 	//골드
 	ini_write_real("gold","a",global.gold);
 	
+	//골드
+	ini_write_real("killed_angel","a",global.killed_angel);
+	
 	//피곤함
 	ini_write_real("tiredness","a",global.tiredness);
 	
@@ -242,6 +245,9 @@ function save_and_load_data(argument0,argument1)
 
 	//밴당함
 	global.ban_from_server = ini_read_real("ban_from_server","a",0)
+	
+	//밴당함
+	global.killed_angel = ini_read_real("killed_angel","a",0)
 
 	//이름
 	global.nickname = ini_read_string("nickname","a",-4)

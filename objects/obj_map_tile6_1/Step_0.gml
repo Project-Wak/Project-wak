@@ -1,5 +1,12 @@
 /// @description Insert description here
 // You can write your code in this editor
+
+if room = room_sector_runaway
+{
+global.platform_speed = -15
+}
+
+
 if global.b_alpha >= 1
 {
 player.x = 1000
@@ -327,6 +334,79 @@ var yy = irandom_range(120,0)
 				message_phase ++
 				}
 			}
+		}
+	}
+	
+	
+	if room = room_sector_runaway
+	{
+	view_shake(0.1,0.1,1)
+		if !audio_is_playing(quake_sfx)
+		{
+		var sfx = audio_play_sound(quake_sfx,0,0)
+		audio_sound_gain(sfx,0.1*global.master_volume*2*global.sfx_volume,0)
+		}
+		
+		
+		if phase = 0 && !instance_exists(mob_parents)
+		{
+		var test_mob = instance_create_depth(xx+500,1280,player.depth+3,hyumpanchi_gunner)
+		test_mob.image_xscale = -1
+		test_mob.image_yscale = 1
+		test_mob.test_mob_type = 0
+		test_mob.vspeed = -19
+		test_mob.alarm[11] = 1
+		phase++
+		}
+		
+		if phase = 1 && !instance_exists(mob_parents)
+		{
+		var test_mob = instance_create_depth(xx+150,0+yy,player.depth+3,wak_turret)
+		test_mob.image_xscale = 1.1
+		test_mob.image_yscale = 1.1
+		test_mob.test_mob_type = 1
+
+		phase++
+		}
+		
+		if phase = 2 && !instance_exists(mob_parents)
+		{
+		var test_mob = instance_create_depth(xx+150,0+yy,player.depth+3,obj_lilla)
+		test_mob.image_xscale = 1.1
+		test_mob.image_yscale = 1.1
+		test_mob.test_mob_type = 1
+
+		var test_mob = instance_create_depth(xx-150,0+yy,player.depth+3,obj_lilla)
+		test_mob.image_xscale = -1.1
+		test_mob.image_yscale = 1.1
+		test_mob.test_mob_type = 1
+
+		phase++
+		}
+		
+		if phase = 3 && !instance_exists(mob_parents)
+		{
+		var test_mob = instance_create_depth(xx+500,1280,player.depth+3,hyumpanchi_gunner)
+		test_mob.image_xscale = -1
+		test_mob.image_yscale = 1
+		test_mob.test_mob_type = 0
+		test_mob.vspeed = -19
+		test_mob.alarm[11] = 1
+		
+		var test_mob = instance_create_depth(xx-500,1280,player.depth+3,hyumpanchi_gunner)
+		test_mob.image_xscale = 1
+		test_mob.image_yscale = 1
+		test_mob.test_mob_type = 0
+		test_mob.vspeed = -19
+		test_mob.alarm[10] = 1
+
+		phase++
+		}
+		
+		if phase = 4 && !instance_exists(mob_parents)
+		{
+		obj_elevator.activated = 1
+		phase ++
 		}
 	}
 }

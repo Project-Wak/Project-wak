@@ -19,7 +19,8 @@ can_follow_p_2 = 0
 t_x = -4
 t_y = -4
 ab_alpha = 0
-
+check__ = -4
+message_phase = 0
 global.show_time = 0
 timer__playing_scene_ = 0
 portensial_y = 0

@@ -69,7 +69,7 @@ _light_ = -4
 
 alarm[0] = 120
 
-if global.real_ending > 0 && global.show_credits = 0
+if global.real_ending > 0 && global.show_credits = 0 && global.killed_angel > 0
 {
 instance_destroy()
 }

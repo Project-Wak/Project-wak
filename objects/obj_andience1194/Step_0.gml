@@ -273,6 +273,7 @@ global.playing_scene = 1
 	check__.text = "자칫하면 폭주하여 이 연구소랑 함께 통째로 사라질수도 있다구요!"
 	check__.target = id
 	check__.parents = id
+	global.guide_boss = 0
 	}
 	
 	if !instance_exists(check__) && message_phase = 23

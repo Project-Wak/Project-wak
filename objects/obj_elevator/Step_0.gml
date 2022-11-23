@@ -182,6 +182,11 @@ t_y += (real_t_y - t_y)*0.1
 				room_goto(room_sector_B02_2);
 				}
 				
+				if destination = 40
+				{
+				room_goto(room_sector_outside);
+				}
+				
 				if destination = 6
 				{
 				room_goto(room_sector_B06_2);

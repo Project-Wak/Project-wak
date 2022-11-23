@@ -34,6 +34,16 @@ if !audio_is_playing(quake_sfx)
 }
 
 
+if timer_boss_light_sec > 0 && room = room_sector_runaway
+{
+timer_boss_light_sec ++
+	if timer_boss_light_sec > 120
+	{
+	timer_boss_light_sec = 0
+	}
+}
+
+
 if audio_is_playing(quake_sfx) && timer_boss_light_sec = 0
 {
 timer_boss_light_thi ++
@@ -487,9 +497,9 @@ if instance_exists(player)
 }
 
 //자살키 (suicide)
-if keyboard_check_pressed(ord(string(global.suicide_key))) && global.chat_activity = false && global.never_move_in_setting = 0
+if keyboard_check_pressed(ord(string(global.suicide_key))) && global.chat_activity = false && global.never_move_in_setting = 0 
 {
-	if global.hp > 0 && instance_exists(player) && player.suicide = 0
+	if global.hp > 0 && instance_exists(player) && player.suicide = 0 && global.b_alpha < 0.1 && !instance_exists(obj_wakdroid_ending)
 	{
 	//player.y -= 4
 	//player.vspeed = -4

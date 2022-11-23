@@ -21,6 +21,10 @@ if room = room_sector_B03_1
 {
 ele__.destination = 30
 }
+if room = room_sector_runaway
+{
+ele__.destination = 40
+}
 ele__.line_length = 3000
 message_phase = 0
 

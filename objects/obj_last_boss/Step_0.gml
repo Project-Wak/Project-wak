@@ -83,7 +83,7 @@ cannot_step = 1
 		{
 		audio_stop_sound(final_battle)
 		audio_stop_sound(follower_bgm)
-		room_goto(room_sector_outside)
+		room_goto(room_sector_runaway)
 		}
 		else
 		{
@@ -251,7 +251,7 @@ depth = player.depth-32
 
 	if scene__ >= 1
 	{
-	depth = 1000
+	depth = player.depth-32
 	global.dreamy_alpha += (1 - global.dreamy_alpha)*0.04
 	activated = 2
 	player.assult_mode = 300

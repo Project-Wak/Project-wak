@@ -444,8 +444,6 @@ else
 if bgm != -4
 {
 audio_sound_gain(bgm,0.1*global.master_volume*global.bgm_volume*scene__,0)
-
-//show_debug_message(0.1*global.master_volume*global.bgm_volume*scene__)
 }
 
 if activated = 1

@@ -2,6 +2,11 @@
 // You can write your code in this editor
 image_blend = c_white
 
+if bgm != -4
+{
+audio_sound_gain(bgm,0.1*global.master_volume*global.bgm_volume*scene__,0)
+}
+
 if global.none_wakgood_mode = true
 {
 sprite_index = spr_ssab_bulrae263
@@ -277,10 +282,6 @@ else
 		}
 	}
 
-	if bgm != -4
-	{
-	audio_sound_gain(bgm,0.1*global.master_volume*global.bgm_volume*scene__,0)
-	}
 
 	if activated = 1
 	{

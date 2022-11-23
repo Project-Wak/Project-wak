@@ -408,15 +408,32 @@ global.playing_scene = 1
 								if !instance_exists(check__) && message_phase = 1
 								{
 								check__ = instance_create_depth(x,y,depth-1,player_message)
-									if global.none_wakgood_mode = false
+									if global.tutorial != 0
 									{
-									check__.text = "(아이네다)"
+										if global.clock <= 0
+										{
+										check__.text = string(global.nickname)+"님! 빨리 탈리스만 장착해보세요!"
+										check__.target = id
+										}
+										else
+										{
+											if global.none_wakgood_mode = false
+											{
+											check__.text = "(아이네다)"
+											check__.target = player.id
+											}
+											else
+											{
+											check__.text = "(...)"
+											check__.target = player.id
+											}
+										}
 									}
 									else
 									{
-									check__.text = "(...)"
+									check__.text = string(global.nickname)+"님! 안에서 누군가 기다리고 있으니 빨리 가보세요!"
+									check__.target = id
 									}
-								check__.target = player.id
 								check__.parents = id
 								can_interect = 0
 								}

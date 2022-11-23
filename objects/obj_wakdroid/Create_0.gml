@@ -70,6 +70,7 @@ attack_dilay = 0
 random_attack_chance = 0
 attack_sound_effect = 0
 w_alpha = 0
+global.killed_angel = 1
 spin_attack_delay = 0
 attack_delay = 0
 

@@ -40,59 +40,62 @@ jump_timer ++
 	}
 }
 
-if place_meeting(x,y,obj_water_inside) || place_meeting(x,y-18,obj_water_front)
+if !instance_exists(master_volume_setting)
 {
-o2_timer ++
-jump_attack_used = 0
-turning_attack_used = 0
-	if attack_ > 0
+	if place_meeting(x,y,obj_water_inside) || place_meeting(x,y-18,obj_water_front)
 	{
-	attack_in_air_cool = 0
-	}
-global.o2 -= 0.03
-global.movement_speed += (0 - global.movement_speed)*0.05
-	
-	if abs(global.movement_speed) >= 6
-	{
-	global.movement_speed += (0 - global.movement_speed)*0.05
-	}
-	
-	if global.o2 < 0
-	{
-	global.hp -= 1
-	global.o2 = 0
-	}
-	
-	if global.o2 > 100
-	{
-	global.o2 = 100
-	}
-	
-	if vspeed > 2.6 && down_attack = 0
-	{
-	vspeed = 2.6
-	}
-
-	if o2_timer > 130
-	{
-		repeat(choose(1,2))
+	o2_timer ++
+	jump_attack_used = 0
+	turning_attack_used = 0
+		if attack_ > 0
 		{
-		var ins_bb = instance_create_depth(x-image_xscale*25+irandom_range(-16,16),y,depth,bubble_effect)
-		ins_bb.t_scale = irandom_range(3,10)*0.5
-		ins_bb.can_interect = false
+		attack_in_air_cool = 0
 		}
-	o2_timer = 0
-	}
-}
-else
-{
-	if global.o2 < 100
-	{
-	global.o2++
+	global.o2 -= 0.03
+	global.movement_speed += (0 - global.movement_speed)*0.05
+	
+		if abs(global.movement_speed) >= 6
+		{
+		global.movement_speed += (0 - global.movement_speed)*0.05
+		}
+	
+		if global.o2 < 0
+		{
+		global.hp -= 1
+		global.o2 = 0
+		}
+	
+		if global.o2 > 100
+		{
+		global.o2 = 100
+		}
+	
+		if vspeed > 2.6 && down_attack = 0
+		{
+		vspeed = 2.6
+		}
+
+		if o2_timer > 130
+		{
+			repeat(choose(1,2))
+			{
+			var ins_bb = instance_create_depth(x-image_xscale*25+irandom_range(-16,16),y,depth,bubble_effect)
+			ins_bb.t_scale = irandom_range(3,10)*0.5
+			ins_bb.can_interect = false
+			}
+		o2_timer = 0
+		}
 	}
 	else
 	{
-	global.o2 = 100
+		if global.o2 < 100
+		{
+		global.o2++
+		}
+		else
+		{
+		global.o2 = 100
+		}
 	}
 }
 
@@ -928,7 +931,11 @@ w_alpha += (-0.01 - w_alpha)*0.1
 		sprite_index = hurt_sprite
 		}
 	
+		if global.guide_gif = -4
+		{
 		hurt_little ++
+		}
+		
 			if hurt_little >= 45
 			{
 			cannot_move = 0
@@ -987,7 +994,7 @@ w_alpha += (-0.01 - w_alpha)*0.1
 				check_guard = choose(-1,1)
 				}
 				
-				var cal_m_ste = (1/global.guard_power)*1
+				var cal_m_ste = (2/global.guard_power)*1
 				if guarding > 0 && global.stamina >= cal_m_ste && check_guard = sign(image_xscale)
 				{
 				guarding_now = 1
@@ -1417,7 +1424,7 @@ w_alpha += (-0.01 - w_alpha)*0.1
 			var _placed_obj = instance_place(x,y,simhae_doo_bullet)
 			if _placed_obj >= 0 && spin = 0 && _placed_obj.image_alpha >= 0.3
 			{
-			var check_guard = sign(x - _placed_obj.x)
+			var check_guard = sign(x - _placed_obj.xstart)
 		
 			
 				if check_guard = 0
@@ -1425,7 +1432,7 @@ w_alpha += (-0.01 - w_alpha)*0.1
 				check_guard = choose(-1,1)
 				}
 				
-				var cal_m_ste = (1/global.guard_power)*1
+				var cal_m_ste = (2.1/global.guard_power)*1
 				if guarding > 0 && global.stamina >= cal_m_ste && check_guard = sign(image_xscale)
 				{
 				guarding_now = 1
@@ -2646,7 +2653,7 @@ w_alpha += (-0.01 - w_alpha)*0.1
 				global.movement_speed = -abs(global.movement_speed)
 				}
 				
-				if hurt > 0
+				if hurt > 0 && global.guide_gif = -4
 				{
 				hurt = 0
 				hurt_cooltime = 0
@@ -2697,7 +2704,7 @@ w_alpha += (-0.01 - w_alpha)*0.1
 					cooltime = 1
 					global.stamina_cooltime = 0
 				
-						if hurt > 0
+						if hurt > 0 && global.guide_gif = -4
 						{
 						red_glow_effect(sprite_index,image_index,0.5)
 					

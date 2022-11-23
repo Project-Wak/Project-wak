@@ -11,6 +11,11 @@ if image_alpha <= 0
 
 
 
+if bgm != -4
+{
+audio_sound_gain(bgm,0.1*global.master_volume*global.bgm_volume*scene__,0)
+}
+
 
 
 if hp <= 0
@@ -131,7 +136,11 @@ b_alpha_ += (t_b_alpha_ - b_alpha_)*0.08
 	{
 	sprite_index = simhae_doo265
 	}
-	alpha += (0 - alpha)*0.1
+	
+		if patturn >= 3 || patturn < 2
+		{
+		alpha += (0 - alpha)*0.1
+		}
 	}
 	
 	
@@ -203,12 +212,6 @@ b_alpha_ += (t_b_alpha_ - b_alpha_)*0.08
 			saved_real_y = y
 			}
 		}
-	}
-	
-
-	if bgm != -4
-	{
-	audio_sound_gain(bgm,0.1*global.master_volume*global.bgm_volume*scene__,0)
 	}
 
 	if activated = 1
@@ -420,6 +423,7 @@ b_alpha_ += (t_b_alpha_ - b_alpha_)*0.08
 		
 		if patturn >= 2.1
 		{
+		alpha = 2
 			if patturn = 2.1
 			{
 			p_xscale = sign_k(player.x - x)
@@ -520,7 +524,8 @@ b_alpha_ += (t_b_alpha_ - b_alpha_)*0.08
 
 			if patturn = 3.2 || patturn = 3.3 || patturn = 3.4 || patturn = 3.5
 			{
-			instance_create_depth(xstart,1600,player.depth-32,obj_simhaedoo_ring)
+			instance_create_depth(xstart,player.y,player.depth-32,obj_simhaedoo_ring)
+			created_ring_once++
 			}
 
 			
@@ -533,11 +538,15 @@ b_alpha_ += (t_b_alpha_ - b_alpha_)*0.08
 				bullet__.attack_type = 0
 				}
 				
-			var __ins__ = instance_create_depth(xstart,1625,player.depth-1,effect_special_skill_attacked)
-			__ins__.color_1 = c_white
-			__ins__.color_2 = $FF2C75FF
-			__ins__.color_3 = $FF75F2FF
+				if created_ring_once > 0
+				{
+				var __ins__ = instance_create_depth(xstart,1625,player.depth-1,effect_special_skill_attacked)
+				__ins__.color_1 = c_white
+				__ins__.color_2 = $FF2C75FF
+				__ins__.color_3 = $FF75F2FF
+				}
 			patturn = 3.7
+			created_ring_once = 0
 			}
 		vspeed = 0
 		}

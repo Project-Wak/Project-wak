@@ -78,3 +78,15 @@ instance_create_depth(0,0,0,broken_platfrom)
 
 var droped_item__ = instance_create_depth(497,774,0,obj_droped_item)
 droped_item__.item_var = 110
+
+
+
+var ele__ = instance_create_depth(-750,440,9999,obj_elevator)
+ele__.t_x = -750
+ele__.t_y = 440
+ele__.real_t_x = 200
+ele__.real_t_y = 440
+ele__.activated = 1
+ele__.cannot_active_more = 1
+ele__.destination = 0
+ele__.line_length = 1200

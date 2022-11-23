@@ -7,6 +7,14 @@ guide_gif_alpha = 0
 guide_gif_y_timer = 0
 }
 
+if message_phase = 1 && !instance_exists(player_message)
+{
+check__ = instance_create_depth(x,y,depth-1,player_message)
+check__.text = "돌아가자"
+check__.target = player.id
+check__.parents = id
+}
+
 
 if global.r_alpha > 0
 {

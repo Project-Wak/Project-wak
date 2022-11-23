@@ -1,6 +1,13 @@
 /// @description Insert description here
 // You can write your code in this editor
 image_blend = c_white
+
+
+if bgm != -4
+{
+audio_sound_gain(bgm,0.1*global.master_volume*global.bgm_volume*scene__,0)
+}
+
 if hp <= 0
 {
 	if global.achievement[14] != 1
@@ -17,6 +24,7 @@ global.never_move = 1
 hp = 0
 dead_scene ++
 patturn = 0
+
 
 
 	if dead_scene < 200
@@ -401,10 +409,6 @@ else
 		}
 	}
 
-	if bgm != -4
-	{
-	audio_sound_gain(bgm,0.1*global.master_volume*global.bgm_volume*scene__,0)
-	}
 
 	if activated = 1
 	{
