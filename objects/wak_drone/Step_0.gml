@@ -14,12 +14,12 @@ for(var i = 0; i <= 160; i++)
 //////////////////////////////////////////attack ai/////////////////////////////////////////
 timer_ ++
 
-if timer_ > 80
+if timer_ > 100
 {
 random_laser_move_set *= -1
 	if (targeted != -4 || targeted > 51)
 	{
-		if timer_ = 71
+		if timer_ = 91
 		{
 		sfx_for_multiplayer(gun_sfx,0,0.3)
 		}
@@ -31,7 +31,7 @@ random_laser_move_set *= -1
 		bullet__.direction = point_direction(x,y,player.x,player.y)
 		}
 		
-		if timer_ >= 101
+		if timer_ >= 121
 		{
 		timer_ = 0
 		}

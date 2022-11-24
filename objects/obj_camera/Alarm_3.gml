@@ -72,9 +72,9 @@ if global.guide_boss = 1 && show_guide = 1
 	
 	if instance_exists(obj_worm)
 	{
-	global.show_guide_mes = "쌉벌래두\n\n해당 보스는 단단한 장갑을 두르고 있어, 쉽게 데미지를 입힐 수 없다.\n다만, 꼬리 부분의 '코어'를 노리면 막대한 대미지를 입힐 수 있다."
+	global.show_guide_mes = "쌉벌래두\n\n보스의 공격 패턴이 시작되면, 왼쪽 구석으로 빠르게 도망가\n공격을 피할 준비를 하고있는것이 좋다."
 	global.show_guide_mes_spr = 8
-	global.guide_gif = Sprite310
+	global.guide_gif = Sprite318
 	}
 }
 

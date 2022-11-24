@@ -30,10 +30,31 @@ draw_text_kl_scale(xx+220*v_x_,yy-10*v_x_,string(floor(global.master_volume*100)
 draw_text_kl_scale(xx-128*v_x_,yy-10*v_x_,"마스터 볼륨 ",16,999,0.8,image_blend,0,-1,font0,1/3*v_x_,1/3*v_x_,image_angle)
 }
 
+
 	if global.key_setting_message = 1
 	{
-	draw_text_kl_scale(camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5,camera_get_view_y(view_camera[0])+160*v_x_,"조작키 변경을 위해 원하는 키를 입력해주세요",v_x_*64,-1,0.7,c_white,0,0,font0,v_x_*0.3,v_x_*0.3,0);
-	draw_text_kl_scale(camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5,camera_get_view_y(view_camera[0])+215*v_x_,"(ESC키를 누르면 기존값으로 설정됩니다)",v_x_*64,-1,0.5,c_white,0,0,font0,v_x_*0.25,v_x_*0.25,0);
+	var my_y = -4
+		with(setting_parents)
+		{
+			if variable_instance_exists(id,"pressed") && pressed > 0
+			{
+			my_y = y
+			}
+		}
+		
+		if my_y != -4
+		{
+			if my_y < camera_get_view_y(view_camera[0])+200*v_x_
+			{
+			draw_text_kl_scale(camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5,camera_get_view_y(view_camera[0])+460*v_x_,"조작키 변경을 위해 원하는 키를 입력해주세요",v_x_*64,-1,0.7,c_white,0,0,font0,v_x_*0.3,v_x_*0.3,0);
+			draw_text_kl_scale(camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5,camera_get_view_y(view_camera[0])+515*v_x_,"(ESC키를 누르면 기존값으로 설정됩니다)",v_x_*64,-1,0.5,c_white,0,0,font0,v_x_*0.25,v_x_*0.25,0);
+			}
+			else
+			{
+			draw_text_kl_scale(camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5,camera_get_view_y(view_camera[0])+160*v_x_,"조작키 변경을 위해 원하는 키를 입력해주세요",v_x_*64,-1,0.7,c_white,0,0,font0,v_x_*0.3,v_x_*0.3,0);
+			draw_text_kl_scale(camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5,camera_get_view_y(view_camera[0])+215*v_x_,"(ESC키를 누르면 기존값으로 설정됩니다)",v_x_*64,-1,0.5,c_white,0,0,font0,v_x_*0.25,v_x_*0.25,0);
+			}
+		}
 	}
 
 draw_text_kl_scale(camera_get_view_x(view_camera[0])+32*v_x_,camera_get_view_y(view_camera[0])+32*v_x_,"- 환경 설정",16,999,0.8,image_blend,0,-1,font0,1/2.5*v_x_,1/2.5*v_x_,image_angle)

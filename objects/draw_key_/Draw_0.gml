@@ -24,19 +24,19 @@ string_ = "->"
 }
 if img_index = 2 || img_index = 24
 {
-string_ = global.a_key
+string_ = global.a_key_for_draw
 }
 if img_index = 3
 {
-string_ = global.s_key
+string_ = global.s_key_for_draw
 }
 if img_index = 4
 {
-string_ = global.w_key
+string_ = global.w_key_for_draw
 }
 if img_index = 5
 {
-string_ = global.e_key
+string_ = global.e_key_for_draw
 }
 if img_index = 6
 {
@@ -48,15 +48,15 @@ string_ = "Space"
 }
 if img_index = 11
 {
-string_ = global.s_key
+string_ = global.s_key_for_draw
 }
 if img_index = 12
 {
-string_ = global.e_key
+string_ = global.e_key_for_draw
 }
 if img_index = 13
 {
-string_ = global.guard_key
+string_ = global.guard_key_for_draw
 	if global.guard_key = vk_up
 	{
 	string_ = "<-"
@@ -64,7 +64,7 @@ string_ = global.guard_key
 }
 if img_index = 14
 {
-string_ = global.guard_key
+string_ = global.guard_key_for_draw
 	if global.guard_key = vk_up
 	{
 	string_ = "<-"
@@ -72,21 +72,21 @@ string_ = global.guard_key
 }
 if img_index = 15
 {
-string_ = global.q_key
+string_ = global.q_key_for_draw
 }
 if img_index = 16 || img_index = 26
 {
-string_ = global.e_key
+string_ = global.e_key_for_draw
 }
 
 if img_index = 22
 {
-string_ = global.skip_key
+string_ = global.skip_key_for_draw
 }
 
 if img_index = 23
 {
-string_ = global.skip_key
+string_ = global.skip_key_for_draw
 }
 
 if img_index = 25

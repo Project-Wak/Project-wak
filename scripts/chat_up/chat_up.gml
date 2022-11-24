@@ -198,7 +198,7 @@ audio_sound_gain(sfx,0.07*global.master_volume*2*global.sfx_volume,0)
 			mob_parents.hp = 0
 			}
 		}
-		else
+		else if (argument0 = "/help")
 		{
 		chat_up("help)")
 		chat_up(") /noclip (중력 및 벽 무시), /rage (레이지 충전 100%), /item_all (아이템 99개씩 전부 지급)")

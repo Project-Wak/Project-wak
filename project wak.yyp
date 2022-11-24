@@ -348,6 +348,7 @@
     {"id":{"name":"obj_water_inside","path":"objects/obj_water_inside/obj_water_inside.yy",},"order":65,},
     {"id":{"name":"pl_hurt","path":"sprites/pl_hurt/pl_hurt.yy",},"order":32,},
     {"id":{"name":"obj_map_tile8","path":"objects/obj_map_tile8/obj_map_tile8.yy",},"order":12,},
+    {"id":{"name":"Sprite318","path":"sprites/Sprite318/Sprite318.yy",},"order":19,},
     {"id":{"name":"spin_attack_sfx","path":"sounds/spin_attack_sfx/spin_attack_sfx.yy",},"order":22,},
     {"id":{"name":"change_guard_key_to_other","path":"objects/change_guard_key_to_other/change_guard_key_to_other.yy",},"order":32,},
     {"id":{"name":"wakgood_hurt2","path":"sounds/wakgood_hurt2/wakgood_hurt2.yy",},"order":59,},

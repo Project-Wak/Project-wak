@@ -1,5 +1,12 @@
 /// @description Insert description here
 // You can write your code in this editor
+
+if global.t_b_alpha >= 1
+{
+instance_destroy()
+}
+
+
 for(var i = 0; i <= 32; i++)
 {
 alpha[i] -= 0.1

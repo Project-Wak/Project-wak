@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if player.cannot_move = 0 && abs(player.x - x) < 32 && abs(player.y - y) <= 160
+if global.playing_scene = 0 && abs(player.x - x) < 32 && abs(player.y - y) <= 160
 {
 can_interect = 1
 }
@@ -10,8 +10,13 @@ else
 can_interect = 0
 }
 
+if instance_exists(global.boss_target)
+{
+can_interect = 0
+}
 
-if keyboard_check_released(global.skip_key) && can_interect = 1
+
+if keyboard_check_released(global.skip_key) && can_interect = 1 && global.never_move_in_setting = 0
 {
 interectinig_now = 1
 }
@@ -74,6 +79,15 @@ global.playing_scene = 1
 		{
 		global.show_guide_mes_spr = 3
 		global.show_guide_mes = "상태 이상(디버프) - 감전\n\n플레이어가 감전되었을 경우, 스테미나가 0이 되버린다."
+		global.poison_tuto = 1
+		tutorial_message = 1
+		}
+		
+		if warning_message = "녀석... 몸통이 매우 단단하니 '꼬리에 있는 코어'를 노릴것..."
+		{
+		global.show_guide_mes_spr = 4
+		global.show_guide_mes = "쌉벌래두\n\n다른 보스들에 비해 몸통이 매우 단단하니,\n꼬리에 붙어있는 '코어'를 노리자"
+		global.guide_gif = Sprite310
 		global.poison_tuto = 1
 		tutorial_message = 1
 		}

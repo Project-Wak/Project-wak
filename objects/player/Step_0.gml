@@ -1818,19 +1818,29 @@ w_alpha += (-0.01 - w_alpha)*0.1
 					{
 					y -= 1
 					}
-				vspeed = -4
 				sfx_for_multiplayer(choose(global.hit_sfx_1,global.hit_sfx_2,global.hit_sfx_3),0,0.2)
 				
 				var ins_near = instance_nearest(x,y,obj_hand)
 					if instance_exists(ins_near) && point_distance(x,y,ins_near.x,ins_near.y) <= 128
 					{
 					hp_minus_for_player(384,_placed_obj)
+					vspeed = -4
 					}
 					
 				
 					if (instance_exists(obj_messi) && obj_messi.activated > 0)
 					{
-					hp_minus_for_player(66,_placed_obj)
+						if gravity = 0 && vspeed = 0
+						{
+						hp_minus_for_player(66,_placed_obj)
+						vspeed = -4
+						}
+						else
+						{
+						hurt = 0
+						hurt_cooltime = 0
+						movement_speed = 0
+						}
 					}
 					
 
@@ -1839,18 +1849,21 @@ w_alpha += (-0.01 - w_alpha)*0.1
 					if instance_exists(ins_near) && point_distance(x,y,ins_near.x,ins_near.y) <= 128
 					{
 					hp_minus_for_player(352,_placed_obj)
+					vspeed = -4
 					}
 					
 				var ins_near = instance_nearest(x,y,obj_twin_eye_another)
 					if instance_exists(ins_near) && point_distance(x,y,ins_near.x,ins_near.y) <= 130
 					{
 					hp_minus_for_player(352,_placed_obj)
+					vspeed = -4
 					}
 					
 				var ins_near = instance_nearest(x,y,obj_simhae_doo)
 					if instance_exists(ins_near) && place_meeting(x,y,ins_near) && spin = 0 && dash_attack = 0
 					{
 					hp_minus_for_player(232,_placed_obj)
+					vspeed = -4
 					}
 					
 				var ins_near = instance_nearest(x,y,obj_ball)
@@ -1858,6 +1871,7 @@ w_alpha += (-0.01 - w_alpha)*0.1
 					{
 					movement_speed = ins_near.hspeed
 					hp_minus_for_player(225,_placed_obj)
+					vspeed = -4
 					}
 					
 				var ins_near = instance_nearest(x,y,angel_spear)
@@ -1865,18 +1879,20 @@ w_alpha += (-0.01 - w_alpha)*0.1
 					{
 					movement_speed = image_xscale*5
 					hp_minus_for_player(1030,_placed_obj)
+					vspeed = -4
 					}
 					
 					if (instance_exists(obj_angel) && obj_angel.activated > 0) && point_distance(x,y,ins_near.x,ins_near.y) > 64
 					{
 					hp_minus_for_player(257,_placed_obj)
+					vspeed = -4
 					}
 
 					
 				var ins_near = instance_nearest(x,y,obj_worm)
 					if instance_exists(ins_near) && point_distance(x,y,ins_near.x,ins_near.y) <= 150 && spin = 0 && dash_attack = 0
 					{
-					vspeed -= 2
+					vspeed -= 6
 					hp_minus_for_player(628,_placed_obj)
 					}
 				}

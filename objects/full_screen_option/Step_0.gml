@@ -42,6 +42,7 @@ instance_activate_object(light_code)
 instance_activate_object(floor_parents)
 instance_activate_object(setting_parents)
 instance_activate_object(dreamy_effect)
+instance_activate_object(obj_door)
 instance_activate_object(player)
 global.stamina_cooltime = 0
 

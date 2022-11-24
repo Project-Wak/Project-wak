@@ -95,3 +95,12 @@ audio_sound_gain(sfx,0.07*global.master_volume*2*global.sfx_volume,0)
 	}
 instance_destroy()
 }
+
+
+if item_var >= 100 && item_var < 200
+{
+	if global.accessories_owned[item_var-100] > 0
+	{
+	item_var = irandom_range(0,4)
+	}
+}

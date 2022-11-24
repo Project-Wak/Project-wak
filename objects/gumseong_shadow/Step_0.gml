@@ -115,7 +115,7 @@ if abs(x - player.x) > 700
 
 //////////////////////////////////////////////attack_ai///////////////////////////////////////////////////////////
 
-if gravity = 0 && vspeed >= 0 && cannot_move = 0
+if gravity = 0 && vspeed >= 0 && cannot_move = 0 && global.b_alpha < 0.3
 {
 	if targeted = -4
 	{

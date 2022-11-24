@@ -150,7 +150,7 @@ if (pressed > 0 && global.key_setting_message > 0) || global.key_setting_message
 	{
 		if cal__img != 0
 		{
-		draw_text_kl_scale(camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5,camera_get_view_y(view_camera[0])+630*_c_x,"강화할 장비를 선택했다면, '"+string(global.use_item_for_draw)+"'키를 눌러 강화합니다",_c_x*64,-1,0.7,c_white,0,0,font0,_c_x*0.3,_c_x*0.3,0);
+		draw_text_kl_scale(camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5,camera_get_view_y(view_camera[0])+630*_c_x,"강화할 장비를 선택했다면, '"+string(global.use_item_for_draw)+"'키를 눌러 강화합니다",_c_x*64,-1,0.7,c_red,0,0,font0,_c_x*0.3,_c_x*0.3,0);
 		}
 	//draw_text_kl_scale(camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5,camera_get_view_y(view_camera[0])+615*_c_x,"(ESC키를 누르면 기존값으로 설정됩니다)",_c_x*64,-1,0.5,c_white,0,0,font0,_c_x*0.25,_c_x*0.25,0);
 	}

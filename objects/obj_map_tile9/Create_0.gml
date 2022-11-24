@@ -88,8 +88,12 @@ var door__ = instance_create_depth(369,481,0,obj_tp_door_basement)
 door__.connected_with = 15
 
 
-var droped_item__ = instance_create_depth(346,1427,0,obj_droped_item)
+var droped_item__ = instance_create_depth(250,1427,0,obj_droped_item)
 droped_item__.item_var = 111
+
+
+var warning_guide = instance_create_depth(2848,2208,0,obj_warning)
+warning_guide.warning_message = "녀석... 몸통이 매우 단단하니 '꼬리에 있는 코어'를 노릴것..."
 
 
 

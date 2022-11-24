@@ -30,6 +30,8 @@ global.playing_scene = 1
 			}
 		global.choice = 0
 		global.choosed = 0
+		global.show_guide_mes = "게임이 저장되었습니다!"
+		global.show_guide_mes_spr = 6
 		}
 		else
 		{
