@@ -2,8 +2,8 @@
 // You can write your code in this editor
 depth = -999999
 var _c_x = obj_camera.v_x/1280
-var xx = camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5-250*_c_x
-var yy = camera_get_view_y(view_camera[0])+(160+48+48+48)*_c_x
+var xx = camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5+64*_c_x
+var yy = camera_get_view_y(view_camera[0])+(160+48)*_c_x
 
 image_xscale = _c_x*0.5
 image_yscale = _c_x*0.5
@@ -34,7 +34,7 @@ var check_esc = keyboard_check_pressed(vk_escape)
 	{
 	var sfx = audio_play_sound(message_sfx,0,0)
 	audio_sound_gain(sfx,0.1*global.master_volume*2*global.sfx_volume,0)
-	global.q_key = string_upper(keyboard_lastchar)
+	global.q_key = keyboard_lastkey
 	pressed = 0
 	global.key_setting_message = 2
 	}

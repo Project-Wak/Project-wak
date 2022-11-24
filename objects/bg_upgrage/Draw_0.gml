@@ -49,7 +49,7 @@ if (pressed > 0 && global.key_setting_message > 0) || global.key_setting_message
 	
 	var item_name_upgrade = ""
 	var item_name__ = "장착 안함"
-	var item_desc__ = "무기를 장착하지 않음\n가드력 0%\n\n특수 효과 : 무기를 사용하는 공격은 사용 불가 (단, 달리기를 하지 않아도 "+string(global.a_key)+"키를 누를시 대쉬 스킬 발동)"
+	var item_desc__ = "무기를 장착하지 않음\n가드력 0%\n\n특수 효과 : 무기를 사용하는 공격은 사용 불가 (단, 달리기를 하지 않아도 "+string(global.a_key_for_draw)+"키를 누를시 대쉬 스킬 발동)"
 	
 	
 	if cal__img = 1
@@ -80,7 +80,7 @@ if (pressed > 0 && global.key_setting_message > 0) || global.key_setting_message
 	{
 	item_name__ = "돌격 소총 (+"+string(global.weapon_upgraded[cal__img])+")"
 	item_name_upgrade = "돌격 소총 (+"+string(global.weapon_upgraded[cal__img]+1)+")"
-	item_desc__ = "가디언 팬치들이 사용하던 소총 (예능 무기)\n\n특수 효과 : "+string(global.a_key)+"키를 사용한 공격만 가능, 가드 불가, 총알 제한 없음\n적의 방어력을 무시한 고정 데미지 적용"
+	item_desc__ = "가디언 팬치들이 사용하던 소총 (예능 무기)\n\n특수 효과 : "+string(global.a_key_for_draw)+"키를 사용한 공격만 가능, 가드 불가, 총알 제한 없음\n적의 방어력을 무시한 고정 데미지 적용"
 	}
 	if cal__img = 6
 	{
@@ -135,7 +135,7 @@ if (pressed > 0 && global.key_setting_message > 0) || global.key_setting_message
 		}
 		else
 		{
-		draw_text_kl_scale(xx-24*_c_x,yy-70*_c_x,"강화 대상 (클릭 혹은 "+string(global.skip_key)+"키를 눌러 변경)",16,999,0.8,image_blend,0,-1,font0,1/3*_c_x,1/3*_c_x,image_angle)
+		draw_text_kl_scale(xx-24*_c_x,yy-70*_c_x,"강화 대상 (클릭 혹은 "+string(global.skip_key_for_draw)+"키를 눌러 변경)",16,999,0.8,image_blend,0,-1,font0,1/3*_c_x,1/3*_c_x,image_angle)
 		}
 	}
 	//draw_text_kl_scale(xx-10*_c_x,yy-60*_c_x,"공격)",16,999,0.8,image_blend,0,-1,font0,1/3*_c_x,1/3*_c_x,image_angle)
@@ -143,14 +143,14 @@ if (pressed > 0 && global.key_setting_message > 0) || global.key_setting_message
 
 	if global.key_setting_message = 1 && pressed > 0
 	{
-	draw_text_kl_scale(camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5,camera_get_view_y(view_camera[0])+630*_c_x,"강화할 장비를 선택해주세요 (방향키와 "+string(global.skip_key)+"키로 선택합니다)",_c_x*64,-1,0.7,c_white,0,0,font0,_c_x*0.3,_c_x*0.3,0);
+	draw_text_kl_scale(camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5,camera_get_view_y(view_camera[0])+630*_c_x,"강화할 장비를 선택해주세요 (방향키와 "+string(global.skip_key_for_draw)+"키로 선택합니다)",_c_x*64,-1,0.7,c_white,0,0,font0,_c_x*0.3,_c_x*0.3,0);
 	draw_text_kl_scale(camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5,camera_get_view_y(view_camera[0])+665*_c_x,"(ESC키를 누르면 기존값으로 설정됩니다)",_c_x*64,-1,0.5,c_white,0,0,font0,_c_x*0.25,_c_x*0.25,0);
 	}
 	else
 	{
 		if cal__img != 0
 		{
-		draw_text_kl_scale(camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5,camera_get_view_y(view_camera[0])+630*_c_x,"강화할 장비를 선택했다면, 'R'키를 눌러 강화합니다",_c_x*64,-1,0.7,c_white,0,0,font0,_c_x*0.3,_c_x*0.3,0);
+		draw_text_kl_scale(camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5,camera_get_view_y(view_camera[0])+630*_c_x,"강화할 장비를 선택했다면, '"+string(global.use_item_for_draw)+"'키를 눌러 강화합니다",_c_x*64,-1,0.7,c_white,0,0,font0,_c_x*0.3,_c_x*0.3,0);
 		}
 	//draw_text_kl_scale(camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5,camera_get_view_y(view_camera[0])+615*_c_x,"(ESC키를 누르면 기존값으로 설정됩니다)",_c_x*64,-1,0.5,c_white,0,0,font0,_c_x*0.25,_c_x*0.25,0);
 	}

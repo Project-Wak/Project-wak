@@ -11,7 +11,7 @@ can_interect = 0
 }
 
 
-if keyboard_check_released(string(ord(global.skip_key))) && can_interect = 1
+if keyboard_check_released(global.skip_key) && can_interect = 1
 {
 interectinig_now = 1
 }
@@ -66,6 +66,7 @@ global.playing_scene = 1
 		global.show_guide_mes_spr = 3
 		global.show_guide_mes = "투사체 회피\n\n플레이어를 타깃팅하여 날라오는 투사체들은\n달리기와 구르기를 섞어 도망다니면 쉽게 피할 수 있다.\n(참고로 달리기 도중 구르기를 사용하면,\n이후 달리기 키를 누르지 않아도 자동으로 달려진다)"
 		global.poison_tuto = 1
+		global.guide_gif = Sprite317
 		tutorial_message = 1
 		}
 	

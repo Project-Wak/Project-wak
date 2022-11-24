@@ -98,7 +98,7 @@ image_alpha -= 0.01
 }
 
 
-if keyboard_check_released(string(ord(global.skip_key))) && can_interect = 1 && global.playing_scene = 0 && global.b_alpha < 0.1 && global.show_guide_mes = -4
+if keyboard_check_released(global.skip_key) && can_interect = 1 && global.playing_scene = 0 && global.b_alpha < 0.1 && global.show_guide_mes = -4
 {
 interectinig_now = 1
 }

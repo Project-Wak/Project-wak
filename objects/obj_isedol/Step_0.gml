@@ -34,7 +34,7 @@ else
 keep_pressing = 0
 }
 
-if ((global.accessories_owned[1] = 1 && global.none_wakgood_mode = false) || (global.accessories_owned[13] = 1 && global.none_wakgood_mode = true)) && first_tuto = 1 && global.accessories_equip[0] < 2 && global.accessories_equip[1] < 2 && global.accessories_equip[2] < 2
+if ((global.accessories_owned[1] = 1 && global.none_wakgood_mode = false) || (global.accessories_owned[13] = 1 && global.none_wakgood_mode = true)) && first_tuto = 1 && global.accessories_equip[0] < 2 && global.accessories_equip[1] < 2 && global.accessories_equip[2] < 2 && global.playing_scene <= 0
 {
 	if player.x < 1140
 	{
@@ -206,7 +206,7 @@ if image_index = 5
 
 
 
-if (can_interect = 1 && interecting_now = 0 && keyboard_check_released(ord(string(global.skip_key))))
+if (can_interect = 1 && interecting_now = 0 && keyboard_check_released(global.skip_key))
 {
 	if player.assult_mode <= 0
 	{
@@ -590,7 +590,7 @@ global.playing_scene = 1
 							if !instance_exists(check__) && message_phase = 2
 							{
 							check__ = instance_create_depth(x,y,depth-1,player_message)
-							check__.text = "대쉬는 달리기 도중 일반 공격키"+string(global.a_key)+"를 눌러 사용 가능해요!"
+							check__.text = "대쉬는 달리기 도중 일반 공격키"+string(global.a_key_for_draw)+"를 눌러 사용 가능해요!"
 							check__.target = id
 							check__.parents = id
 							can_interect = 0

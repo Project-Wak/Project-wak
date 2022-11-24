@@ -36,21 +36,12 @@ var check_esc = keyboard_check_pressed(vk_escape)
 	var sfx = audio_play_sound(message_sfx,0,0)
 	audio_sound_gain(sfx,0.2*global.master_volume*2*global.sfx_volume,0)
 	
-	global.suicide_key = string_upper(keyboard_lastchar)
+	global.suicide_key = keyboard_lastkey
 		if keyboard_check_pressed(vk_escape)
 		{
-		global.suicide_key = vk_shift
+		global.suicide_key = "P"
 		}
-		
-		if keyboard_check_pressed(vk_shift)
-		{
-		global.suicide_key = vk_shift
-		}
-		
-		if keyboard_check_pressed(string(global.guard_key_for_code))
-		{
-		global.suicide_key = global.guard_key
-		}
+
 	pressed = 0
 	global.key_setting_message = 2
 	}

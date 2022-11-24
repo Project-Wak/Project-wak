@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if (can_interect = 1 && interecting_now = 0 && keyboard_check_released(ord(string(global.skip_key)))) && global.playing_scene_black_bg < 0.1
+if (can_interect = 1 && interecting_now = 0 && keyboard_check_released(global.skip_key)) && global.playing_scene_black_bg < 0.1
 {
 interecting_now = 1
 }

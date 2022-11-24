@@ -43,12 +43,12 @@ if (pressed > 0 && global.key_setting_message > 0) || global.key_setting_message
 	if cal__img = 1
 	{
 	item_name__ = "가이드 북 1번 - 레이지 모드"
-	item_desc__ = string(global.e_key)+"키를 지속적으로 누르고 있으면 '레이지 모드'가 발동된다.\n 레이지 모드 시전시, 몇십초간 스테미나가 매우 빠르게 회복된다."
+	item_desc__ = global.e_key+"키를 지속적으로 누르고 있으면 '레이지 모드'가 발동된다.\n 레이지 모드 시전시, 몇십초간 스테미나가 매우 빠르게 회복된다."
 	}
 	if cal__img = 2
 	{
 	item_name__ = "가이드 북 2번 - 스테이지 탈출"
-	item_desc__ = "플렛폼을 타고 도착한 맵에서 돌아가고 싶으면\n"+string(global.suicide_key)+"키 혹은 스테이터스 창(Tab)에 들어가서 '자살 (사망 회귀)'버튼을 눌러 자살하여\n섹터에 입장하기 전의 과거로 돌아가 탈출할 수 있다 (단, 1시간의 시간이 소모 된다)"
+	item_desc__ = "플렛폼을 타고 도착한 맵에서 돌아가고 싶으면\n"+string(global.suicide_key_for_draw)+"키 혹은 스테이터스 창(Tab)에 들어가서 '자살 (사망 회귀)'버튼을 눌러 자살하여\n섹터에 입장하기 전의 과거로 돌아가 탈출할 수 있다 (단, 1시간의 시간이 소모 된다)"
 	}
 	if cal__img = 3
 	{
@@ -98,17 +98,17 @@ if (pressed > 0 && global.key_setting_message > 0) || global.key_setting_message
 	if cal__img = 12
 	{
 	item_name__ = "가이드 북 12번 - 익스플로전"
-	item_desc__ = "'양손 광선검'무기에 붙어 있는 특수 스킬로, 키보드 방향키 '상'을 누르고 있는 동시에 "+string(global.e_key)+"키를 눌러 사용할 수 있다.\n(단, 왼쪽 상단의 Rage(레이지)게이지가 80%~90%정도 충전 되어 있어야 한다)"
+	item_desc__ = "'양손 광선검'무기에 붙어 있는 특수 스킬로, 키보드 방향키 '상'을 누르고 있는 동시에 "+string(global.e_key_for_draw)+"키를 눌러 사용할 수 있다.\n(단, 왼쪽 상단의 Rage(레이지)게이지가 80%~90%정도 충전 되어 있어야 한다)"
 	}
 	if cal__img = 13
 	{
 	item_name__ = "가이드 북 13번 - 할복"
-	item_desc__ = "'지옥 참마도'무기에 붙어 있는 특수 스킬로, 키보드 방향키 '상'을 누르고 있는 동시에 "+string(global.e_key)+"키를 눌러 사용할 수 있다.\n(사용시, 플레이어의 체력이 1이 됨과 동시에 플레이어 사망 전까지 레이지 모드가 무한히 지속된다)"
+	item_desc__ = "'지옥 참마도'무기에 붙어 있는 특수 스킬로, 키보드 방향키 '상'을 누르고 있는 동시에 "+string(global.e_key_for_draw)+"키를 눌러 사용할 수 있다.\n(사용시, 플레이어의 체력이 1이 됨과 동시에 플레이어 사망 전까지 레이지 모드가 무한히 지속된다)"
 	}
 	if cal__img = 14
 	{
 	item_name__ = "가이드 북 14번 - 에네르기파"
-	item_desc__ = "'광선검 유형'의 무기를 1레벨 이상 강화 한경우 사용 할수 있는 스킬로, 키보드 방향키 '좌' 혹은 '우'를 누르고 있는 동시에 "+string(global.e_key)+"키를 눌러 사용할 수 있다.\n(단, 왼쪽 상단의 Rage(레이지)게이지가 80%~90%정도 충전 되어 있어야 한다)"
+	item_desc__ = "'광선검 유형'의 무기를 1레벨 이상 강화 한경우 사용 할수 있는 스킬로, 키보드 방향키 '좌' 혹은 '우'를 누르고 있는 동시에 "+string(global.e_key_for_draw)+"키를 눌러 사용할 수 있다.\n(단, 왼쪽 상단의 Rage(레이지)게이지가 80%~90%정도 충전 되어 있어야 한다)"
 	}
 	if cal__img = 15
 	{
@@ -131,7 +131,7 @@ if (pressed > 0 && global.key_setting_message > 0) || global.key_setting_message
 	
 	if global.key_setting_message = 1 && pressed > 0
 	{
-	draw_text_kl_scale(camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5,camera_get_view_y(view_camera[0])+160*_c_x,"읽어 볼 가이드 북을 선택해주세요 (방향키와 "+string(global.skip_key)+"키로 선택합니다)",_c_x*64,-1,0.7,c_white,0,0,font0,_c_x*0.3,_c_x*0.3,0);
+	draw_text_kl_scale(camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5,camera_get_view_y(view_camera[0])+160*_c_x,"읽어 볼 가이드 북을 선택해주세요 (방향키와 "+string(global.skip_key_for_draw)+"키로 선택합니다)",_c_x*64,-1,0.7,c_white,0,0,font0,_c_x*0.3,_c_x*0.3,0);
 	draw_text_kl_scale(camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5,camera_get_view_y(view_camera[0])+215*_c_x,"(ESC키를 누르면 기존값으로 설정됩니다)",_c_x*64,-1,0.5,c_white,0,0,font0,_c_x*0.25,_c_x*0.25,0);
 	}
 	

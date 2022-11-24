@@ -13,7 +13,7 @@ can_interect = 0
 }
 
 
-if can_interect = 1 && keyboard_check_pressed(ord(string(global.skip_key))) && t_y != -64
+if can_interect = 1 && keyboard_check_pressed(global.skip_key) && t_y != -64
 {
 var	sfx__ = audio_play_sound(walk_sfx,0,false)
 audio_sound_gain(sfx__,0.3,0)

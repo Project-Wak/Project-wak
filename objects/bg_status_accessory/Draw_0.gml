@@ -103,12 +103,12 @@ if (pressed > 0 && global.key_setting_message > 0) || global.key_setting_message
 		etc_mes = "(+"+string(global.max_sylinge1_use-1)+")"
 		}
 	item_name__ = "뱅갈나무 에스트 병"+string(etc_mes)
-	item_desc__ = "뱅갈나무 잎을 우려낸 물, 실제로 우려내서 먹진 말자\n전투 도중 'R키'를 눌러 사용가능하다.\n\n특수효과 : 최대 체력의 50%만큼 회복 및 상태 이상 해제 (각 전투당 1회 사용가능)"
+	item_desc__ = "뱅갈나무 잎을 우려낸 물, 실제로 우려내서 먹진 말자\n전투 도중 '"+string(global.use_item_for_draw)+"키'를 눌러 사용가능하다.\n\n특수효과 : 최대 체력의 50%만큼 회복 및 상태 이상 해제 (각 전투당 1회 사용가능)"
 	}
 	if cal__img = 15
 	{
 	item_name__ = "각성제"
-	item_desc__ = "전투 도중 'R키'를 눌러 사용가능한 각성제\n\n특수효과 : 사용 즉시 레이지 모드 발동 및 상태 이상 해제 (각 전투당 1회 사용가능)"
+	item_desc__ = "전투 도중 '"+string(global.use_item_for_draw)+"키'를 눌러 사용가능한 각성제\n\n특수효과 : 사용 즉시 레이지 모드 발동 및 상태 이상 해제 (각 전투당 1회 사용가능)"
 	}
 	if cal__img = 16
 	{
@@ -128,7 +128,7 @@ if (pressed > 0 && global.key_setting_message > 0) || global.key_setting_message
 	if cal__img = 19
 	{
 	item_name__ = "바다의 왕의 삼지창"
-	item_desc__ = "바다의 왕, 귀상어두의 번개를 사용할 수 있다\n\n특수효과 : Rage(레이지)게이지가 80%이상 찬 경우, 공중에서 "+string(global.e_key)+"키를 누를시 강력한 특수 스킬 사용"
+	item_desc__ = "바다의 왕, 귀상어두의 번개를 사용할 수 있다\n\n특수효과 : Rage(레이지)게이지가 80%이상 찬 경우, 공중에서 "+string(global.e_key_for_draw)+"키를 누를시 강력한 특수 스킬 사용"
 	}
 	
 	draw_text_kl_scale(xx+50*_c_x-global.key_setting_message*_c_x*70,yy-16*_c_x+global.key_setting_message*_c_x*80,item_name__,16,999,0.74,image_blend,0,-1,font0,1/3.5*_c_x,1/3.5*_c_x,image_angle)
@@ -140,7 +140,7 @@ if (pressed > 0 && global.key_setting_message > 0) || global.key_setting_message
 	
 	if global.key_setting_message = 1 && pressed > 0
 	{
-	draw_text_kl_scale(camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5,camera_get_view_y(view_camera[0])+160*_c_x,"장비할 아이템을 선택해주세요 (방향키와 "+string(global.skip_key)+"키로 선택합니다)",_c_x*64,-1,0.7,c_white,0,0,font0,_c_x*0.3,_c_x*0.3,0);
+	draw_text_kl_scale(camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5,camera_get_view_y(view_camera[0])+160*_c_x,"장비할 아이템을 선택해주세요 (방향키와 "+string(global.skip_key_for_draw)+"키로 선택합니다)",_c_x*64,-1,0.7,c_white,0,0,font0,_c_x*0.3,_c_x*0.3,0);
 	draw_text_kl_scale(camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5,camera_get_view_y(view_camera[0])+215*_c_x,"(ESC키를 누르면 기존값으로 설정됩니다)",_c_x*64,-1,0.5,c_white,0,0,font0,_c_x*0.25,_c_x*0.25,0);
 	}
 	

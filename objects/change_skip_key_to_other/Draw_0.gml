@@ -6,7 +6,7 @@ var _c_x = obj_camera.v_x/1280
 var xx = camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5-(250)*_c_x
 var yy = camera_get_view_y(view_camera[0])+(160+48+48+48+48+48+48+48+160)*_c_x
 
-var console_key = global.skip_key
+var console_key = keyconverter(global.skip_key)
 var img_ind__ = 0
 if global.console_mode = 1
 {

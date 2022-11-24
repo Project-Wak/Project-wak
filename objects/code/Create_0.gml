@@ -157,7 +157,7 @@ global.already_aed_used = 0
 alarm[1] = 3600
 global.key_setting_message = 0
 global.never_move_in_setting = 0
-global.game_ver = "Beta 3.02"
+global.game_ver = "Beta 3.03"
 playing_gameover_scene = 0
 global.graphics_for_code = 0
 global.show_guide_mes = -4
@@ -287,14 +287,9 @@ global.show_challenger = 0
 
 global.full_screen = 0
 global.skill_jump_attack = 2
-global.w_key = "W"
-global.q_key = "Q"
-global.a_key = "A"
-global.run_key = vk_shift
-global.e_key = "E"
-global.s_key = "S"
-global.g_key = "G"
+
 global.rage_gauge = 0
+global.all_reset_key = 0
 global.awakening = 0
 global.skill_turning_attack = 2
 global.skill_jump_attack = 2
@@ -380,20 +375,41 @@ global.graphics = 3
 global.console_mode = 0
 
 //키세팅
-global.a_key = "A"
-global.q_key = "Q"
-global.s_key ="S"
-global.w_key = "W"
+global.a_key = ord("A")
+global.a_key_for_draw = keyconverter(global.a_key)
+
+global.q_key = ord("Q")
+global.q_key_for_draw = keyconverter(global.q_key)
+
+global.s_key = ord("S")
+global.s_key_for_draw = keyconverter(global.s_key)
+
+global.w_key = ord("W")
+global.w_key_for_draw = keyconverter(global.w_key)
+
 global.run_key = string(vk_shift)
-global.e_key = "E"
-global.suicide_key = "P"
-global.skip_key = "D"
+global.run_key_for_draw = keyconverter(global.run_key)
+
+global.e_key = ord("E")
+global.e_key_for_draw = keyconverter(global.e_key)
+
+global.suicide_key = ord("P")
+global.suicide_key_for_draw = keyconverter(global.suicide_key)
+
+global.skip_key = ord("D")
+global.skip_key_for_draw = keyconverter(global.skip_key)
+
+global.use_item = ord("R")
+global.use_item_for_draw = keyconverter(global.use_item)
+
+global.g_key = ord("G")
+global.g_key_for_draw = keyconverter(global.g_key)
+
 global.jump_key = vk_space
 global.left_key = vk_left
 global.right_key = vk_right
 global.guard_key = vk_up
 global.down_key = vk_down
-
 global.korean_text = 0
 
 //키 가이드

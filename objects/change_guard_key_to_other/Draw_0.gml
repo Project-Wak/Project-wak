@@ -4,9 +4,9 @@ if (global.key_setting_message = 0 || pressed = 1) && global.n_to_setting__ = 2
 {
 var _c_x = obj_camera.v_x/1280
 var xx = camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5
-var yy = camera_get_view_y(view_camera[0])+(160+48+48+48+48+80)*_c_x
+var yy = camera_get_view_y(view_camera[0])+(160+48+48+48)*_c_x
 
-var console_key = global.guard_key
+var console_key = keyconverter(global.guard_key)
 
 if global.guard_key = vk_shift
 {

@@ -40,7 +40,7 @@ can_give_item = 0
 
 
 
-if (can_interect = 1 && interecting_now = 0 && keyboard_check_released(ord(string(global.skip_key))))
+if (can_interect = 1 && interecting_now = 0 && keyboard_check_released(global.skip_key))
 {
 interecting_now = 1
 }

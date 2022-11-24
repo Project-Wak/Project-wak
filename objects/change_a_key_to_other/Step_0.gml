@@ -30,7 +30,7 @@ var check_esc = keyboard_check_pressed(vk_escape)
 
 	if keyboard_check_pressed(vk_anykey) && !check_esc
 	{
-	global.a_key = string_upper(keyboard_lastchar)
+	global.a_key = keyboard_lastkey
 	pressed = 0
 	global.key_setting_message = 2
 	var sfx = audio_play_sound(message_sfx,0,0)

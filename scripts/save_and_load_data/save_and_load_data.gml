@@ -26,6 +26,8 @@ function save_and_load_data(argument0,argument1)
 	//골드
 	ini_write_real("total_died","a",global.total_died);
 	
+	ini_write_real("all_reset_key","a",global.all_reset_key);
+	
 	//골드
 	ini_write_real("playtime","a",global.playtime);
 
@@ -191,6 +193,8 @@ function save_and_load_data(argument0,argument1)
 	//골드
 	global.total_died = ini_read_real("total_died","a",0);
 	
+	global.all_reset_key = ini_read_real("all_reset_key","a",0);
+	
 	//골드
 	global.back_stage_guide = ini_read_real("back_stage_guide","a",0);
 	
@@ -215,17 +219,17 @@ function save_and_load_data(argument0,argument1)
 	
 
 	//키세팅
-	global.a_key = ini_read_string("a_key","a","A")
-	global.q_key = ini_read_string("q_key","a","Q")
-	global.s_key = ini_read_string("s_key","a","S")
-	global.w_key = ini_read_string("w_key","a","W")
+	global.a_key = ini_read_string("a_key","a",ord("A"))
+	global.q_key = ini_read_string("q_key","a",ord("Q"))
+	global.s_key = ini_read_string("s_key","a",ord("S"))
+	global.w_key = ini_read_string("w_key","a",ord("W"))
 	global.run_key = ini_read_string("run_key","a",string(vk_shift))
-	global.e_key = ini_read_string("e_key","a","E")
-	global.suicide_key = ini_read_string("sui_key","a","P")
-	global.skip_key = ini_read_string("skip_key","a","D")
+	global.e_key = ini_read_string("e_key","a",ord("E"))
+	global.suicide_key = ini_read_string("sui_key","a",ord("P"))
+	global.skip_key = ini_read_string("skip_key","a",ord("D"))
 	global.korean_text = ini_read_real("korean_text","a",0)
-	global.guard_key = ini_read_string("guard_key","a",global.guard_key)
-	global.g_key = ini_read_string("g_key","a","G")
+	global.guard_key = ini_read_string("guard_key","a",string(vk_up))
+	global.g_key = ini_read_string("g_key","a",ord("G"))
 	global.console_mode = ini_read_real("console_mode","a",0)
 
 	//키 가이드

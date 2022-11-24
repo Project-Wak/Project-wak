@@ -35,21 +35,12 @@ image_index = 9
 	var sfx = audio_play_sound(message_sfx,0,0)
 	audio_sound_gain(sfx,0.2*global.master_volume*2*global.sfx_volume,0)
 	
-	global.skip_key = string_upper(keyboard_lastchar)
+	global.skip_key = keyboard_lastkey
 		if keyboard_check_pressed(vk_escape)
 		{
 		global.skip_key = vk_shift
 		}
-		
-		if keyboard_check_pressed(vk_shift)
-		{
-		global.skip_key = vk_shift
-		}
-		
-		if keyboard_check_pressed(string(global.guard_key_for_code))
-		{
-		global.skip_key = global.guard_key
-		}
+
 	pressed = 0
 	global.key_setting_message = 2
 	}

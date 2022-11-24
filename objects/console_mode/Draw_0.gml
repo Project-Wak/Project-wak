@@ -3,7 +3,7 @@
 if global.key_setting_message = 0 && global.n_to_setting__ = 2
 {
 var _c_x = obj_camera.v_x/1280
-var xx = camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5+240*_c_x
+var xx = camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5+330*_c_x
 var yy = camera_get_view_y(view_camera[0])+(200+64+48+32)*_c_x
 
 image_index = global.console_mode

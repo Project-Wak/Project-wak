@@ -382,7 +382,7 @@ vspeed = 0
 	y -= 8
 	}
 	
-	if keyboard_check(ord(string(global.s_key))) || keyboard_check(global.down_key) || gamepad_button_check(0,gp_padd)
+	if keyboard_check(global.s_key) || keyboard_check(global.down_key) || gamepad_button_check(0,gp_padd)
 	{
 	y += 8
 	}
@@ -431,7 +431,7 @@ if guarding > 0
 guarded = 1
 }
 
-if (keyboard_check_released(global.guard_key_for_code) || gamepad_button_check_released(0,gp_padu) || jump > 0 || gravity != 0 || vspeed < 0)
+if (keyboard_check_released(global.guard_key) || gamepad_button_check_released(0,gp_padu) || jump > 0 || gravity != 0 || vspeed < 0)
 {
 guarded = 0
 }
@@ -467,7 +467,7 @@ guard_success = 0
 
 if guarding >= 0.8 && pering = 0 && guard_success = 1 && global.n_sword != 0 && global.n_sword != 5 && global.playing_scene = 0 && global.never_move = 0
 {
-	if keyboard_check_pressed(ord(string(global.a_key))) || gamepad_button_check_pressed(0,gp_face2)
+	if keyboard_check_pressed(global.a_key) || gamepad_button_check_pressed(0,gp_face2)
 	{
 	guard_success = 0
 	guarding = 0
@@ -610,7 +610,7 @@ skill_combo_cancle_n_motion(0)
 	{
 		if (global.medical_slincer2 > 0) && global.can_use_sylinge2 > 0
 		{
-			if keyboard_check_pressed(ord("R")) || gamepad_button_check_pressed(0,gp_shoulderlb)
+			if keyboard_check_pressed(global.use_item) || gamepad_button_check_pressed(0,gp_shoulderlb)
 			{
 			global.poisoning = 0
 			sfx_for_multiplayer(medical_sylinge_sfx,0,0.1)
@@ -626,7 +626,7 @@ skill_combo_cancle_n_motion(0)
 		
 		if (global.medical_slincer1 > 0) && global.can_use_sylinge1 > 0
 		{
-			if keyboard_check_pressed(ord("R")) || gamepad_button_check_pressed(0,gp_shoulderlb)
+			if keyboard_check_pressed(global.use_item) || gamepad_button_check_pressed(0,gp_shoulderlb)
 			{
 			global.poisoning = 0
 			sfx_for_multiplayer(medical_sylinge_sfx,0,0.1)
@@ -769,7 +769,7 @@ returned_id = global.return_player_id;
 		
 		if pering >= 4 && pering < 6 && global.n_sword != 0 && global.n_sword != 5
 		{
-			if keyboard_check_pressed(ord(string(global.a_key))) || gamepad_button_check_pressed(0,gp_face2)
+			if keyboard_check_pressed(global.a_key) || gamepad_button_check_pressed(0,gp_face2)
 			{
 			pering = 0
 			pering_sfx = 0
@@ -846,9 +846,9 @@ w_alpha += (-0.01 - w_alpha)*0.1
 	{
 		if global.hp <= 0 && ((global.in_practice = 0 && global.slow_motion = 0 && global.never_move = 0 && global.never_move_in_setting = 0) || (instance_exists(obj_wakdroid_ending) && global.slow_motion = 0))
 		{
-		var message_1 = ("Tip : 올려 베기("+string(global.w_key)+") 혹은 회전베기("+string(global.q_key)+")를 사용해보세요")
+		var message_1 = ("Tip : 올려 베기("+string(global.w_key_for_draw)+") 혹은 회전베기("+string(global.q_key_for_draw)+")를 사용해보세요")
 		var message_2 = ("Tip : 기절상태에서 점프(Space) 혹은 구르기(아래 방향키)시 빠르게 기절을 풀수 있습니다")
-		var message_3 = ("Tip : "+string(global.e_key)+"키를 꾹 눌러 레이지 모드를 사용하면 일시적으로 스테미나가 무한이 됩니다")
+		var message_3 = ("Tip : "+string(global.e_key_for_draw)+"키를 꾹 눌러 레이지 모드를 사용하면 일시적으로 스테미나가 무한이 됩니다")
 		var random_message = choose(message_1,message_2,message_3)
 		dev_mes(random_message)
 		
@@ -2939,21 +2939,21 @@ w_alpha += (-0.01 - w_alpha)*0.1
 
 if ((attack_ > 3.9 && attack_ <= 4.1) || (attack_ > 6.8 && attack_ <= 7) || (attack_ > 9.8 && attack_ <= 10) || attack_ > 14) && global.n_sword != 0 && global.n_sword != 5
 {
-	if global.skill_jump_attack > 0 && global.stamina > 2.5 && (keyboard_check(ord(string(global.w_key))) || gamepad_button_check(0,gp_face4)) && attack_ >= 12 && global.chat_activity = false
+	if global.skill_jump_attack > 0 && global.stamina > 2.5 && (keyboard_check(global.w_key) || gamepad_button_check(0,gp_face4)) && attack_ >= 12 && global.chat_activity = false
 	{
 	red_glow_effect(sprite_index,image_index,0.6)
 	
 	skill_combo_cancle_n_motion(1)
 	}
 	
-	if global.skill_turning_attack > 0 && global.stamina > 3.8 && (keyboard_check(ord(string(global.q_key))) || gamepad_button_check(0,gp_face3)) && attack_ >= 12 && global.chat_activity = false
+	if global.skill_turning_attack > 0 && global.stamina > 3.8 && (keyboard_check(global.q_key) || gamepad_button_check(0,gp_face3)) && attack_ >= 12 && global.chat_activity = false
 	{
 	red_glow_effect(sprite_index,image_index,0.6)
 	
 	skill_combo_cancle_n_motion(1)
 	}
 
-	if (keyboard_check(string(global.guard_key_for_code)) || gamepad_button_check(0,gp_padu)) && global.chat_activity = false
+	if (keyboard_check(global.guard_key) || gamepad_button_check(0,gp_padu)) && global.chat_activity = false
 	{
 	red_glow_effect(sprite_index,image_index,0.6)
 	
@@ -2986,19 +2986,19 @@ if ((attack_ > 3.9 && attack_ <= 4.1) || (attack_ > 6.8 && attack_ <= 7) || (att
 
 if down_attack > 13 && global.n_sword != 0 && global.n_sword != 5
 {
-	if global.skill_jump_attack > 0 && global.stamina > 2.5 && (keyboard_check_pressed(ord(string(global.w_key))) || gamepad_button_check_pressed(0,gp_face4)) && global.chat_activity = false
+	if global.skill_jump_attack > 0 && global.stamina > 2.5 && (keyboard_check_pressed(global.w_key) || gamepad_button_check_pressed(0,gp_face4)) && global.chat_activity = false
 	{
 	red_glow_effect(sprite_index,image_index,0.6)
 	skill_combo_cancle_n_motion(1)
 	}
 	
-	if global.skill_turning_attack > 0 && global.stamina > 3.8 && (keyboard_check_pressed(ord(string(global.q_key))) || gamepad_button_check_pressed(0,gp_face3)) && global.chat_activity = false
+	if global.skill_turning_attack > 0 && global.stamina > 3.8 && (keyboard_check_pressed(global.q_key) || gamepad_button_check_pressed(0,gp_face3)) && global.chat_activity = false
 	{
 	red_glow_effect(sprite_index,image_index,0.6)
 	skill_combo_cancle_n_motion(1)
 	}
 	
-	if (keyboard_check_pressed(string(global.guard_key_for_code)) || gamepad_button_check_pressed(0,gp_padu)) && global.chat_activity = false
+	if (keyboard_check_pressed(global.guard_key) || gamepad_button_check_pressed(0,gp_padu)) && global.chat_activity = false
 	{
 	red_glow_effect(sprite_index,image_index,0.6)
 	skill_combo_cancle_n_motion(1)
@@ -3031,13 +3031,13 @@ if down_attack > 13 && global.n_sword != 0 && global.n_sword != 5
 
 if dash_attack >= 4.6 && global.n_sword != 0 && global.n_sword != 5
 {
-	if global.skill_jump_attack > 0 && global.stamina > 2.5 && (keyboard_check_pressed(ord(string(global.w_key))) || gamepad_button_check_pressed(0,gp_face4)) && global.chat_activity = false
+	if global.skill_jump_attack > 0 && global.stamina > 2.5 && (keyboard_check_pressed(global.w_key) || gamepad_button_check_pressed(0,gp_face4)) && global.chat_activity = false
 	{
 	red_glow_effect(sprite_index,image_index,0.6)
 	skill_combo_cancle_n_motion(1)
 	}
 	
-	if (keyboard_check_pressed(string(global.guard_key_for_code)) || gamepad_button_check_pressed(0,gp_padu)) && global.chat_activity = false
+	if (keyboard_check_pressed(global.guard_key) || gamepad_button_check_pressed(0,gp_padu)) && global.chat_activity = false
 	{
 	red_glow_effect(sprite_index,image_index,0.6)
 	skill_combo_cancle_n_motion(1)
@@ -3129,7 +3129,7 @@ if dash_attack >= 4.6 && global.n_sword != 0 && global.n_sword != 5
 
 /////////////////////////////////////////////////////////////////////////////////
 
-if (keyboard_check_pressed(global.guard_key_for_code) || gamepad_button_check_pressed(0,gp_padu)) && hurt > 0 && global.hp > 0 && global.playing_scene = 0 && on_floor = true
+if (keyboard_check_pressed(global.guard_key) || gamepad_button_check_pressed(0,gp_padu)) && hurt > 0 && global.hp > 0 && global.playing_scene = 0 && on_floor = true
 {
 hurt = 0
 hurt_cooltime = 0
@@ -3191,7 +3191,7 @@ if guarding >= 2.5
 	}
 }
 
-if (keyboard_check(string(global.guard_key_for_code)) || gamepad_button_check(0,gp_padu)) && hurt = 0 && hurt_little = 0 && global.chat_activity = false && global.playing_scene = 0 && global.never_move_in_setting = 0
+if (keyboard_check(global.guard_key) || gamepad_button_check(0,gp_padu)) && hurt = 0 && hurt_little = 0 && global.chat_activity = false && global.playing_scene = 0 && global.never_move_in_setting = 0
 {
 	if guarding = -1 && gravity <= 0 && vspeed >= 0
 	{
@@ -3256,7 +3256,7 @@ cannot_move = 1
 
 
 
-if global.never_move = 0 && global.never_move_in_setting = 0 && (keyboard_check_pressed(ord(string(global.a_key))) || gamepad_button_check_pressed(0,gp_face2)) && global.chat_activity = false && pering = 0
+if global.never_move = 0 && global.never_move_in_setting = 0 && (keyboard_check_pressed(global.a_key) || gamepad_button_check_pressed(0,gp_face2)) && global.chat_activity = false && pering = 0
 {
 	if (attack_in_air < 7 && gravity > 0 && cooltime = 0 && hurt = 0 && hurt_little = 0 && attack_in_air_cool = 0 && ((!place_meeting(x,y+45,floor_parents) || vspeed < 0))) && charge_attack <= 0 && global.n_sword != 0 && global.n_sword != 5
 	{
@@ -3329,12 +3329,12 @@ if global.never_move = 0 && global.never_move_in_setting = 0 && (keyboard_check_
 var pressing = 0
 if global.chat_activity = false
 {
-	if global.run_key != "Non" && (keyboard_check(ord(string(global.run_key))) || gamepad_button_check(0,gp_shoulderr))
+	if global.run_key != "Non" && (keyboard_check(global.run_key) || gamepad_button_check(0,gp_shoulderr))
 	{
 	pressing = 1
 	}
 
-	if global.run_key != "Non" && (global.run_key = vk_shift || global.run_key = vk_up) && (keyboard_check(string(global.run_key)) || gamepad_button_check(0,gp_shoulderr))
+	if global.run_key != "Non" && (global.run_key = vk_shift || global.run_key = vk_up) && (keyboard_check(global.run_key) || gamepad_button_check(0,gp_shoulderr))
 	{
 	pressing = 1
 	}
@@ -3351,17 +3351,17 @@ double_pressed_run_key = 2
 
 var pressing = 0
 
-if global.e_key != "Non" && (keyboard_check(ord(string(global.e_key))) || gamepad_button_check(0,gp_shoulderlb)) && global.chat_activity = false
+if global.e_key != "Non" && (keyboard_check(global.e_key) || gamepad_button_check(0,gp_shoulderlb)) && global.chat_activity = false
 {
 pressing = 1
 }
 
-if global.e_key = vk_shift && (keyboard_check(ord(string(global.e_key))) || gamepad_button_check(0,gp_shoulderlb)) && global.chat_activity = false
+if global.e_key = vk_shift && (keyboard_check(global.e_key) || gamepad_button_check(0,gp_shoulderlb)) && global.chat_activity = false
 {
 pressing = 1
 }
 
-if global.e_key = vk_up && (keyboard_check(ord(string(global.e_key))) || gamepad_button_check(0,gp_shoulderlb)) && global.chat_activity = false
+if global.e_key = vk_up && (keyboard_check(global.e_key) || gamepad_button_check(0,gp_shoulderlb)) && global.chat_activity = false
 {
 pressing = 1
 }
@@ -3396,7 +3396,7 @@ global.awakening = 0
 
 
 
-if global.never_move = 0 && global.never_move_in_setting = 0 && keyboard_check_released(ord(string(global.e_key))) && w_alpha < 0.17 && global.chat_activity = false
+if global.never_move = 0 && global.never_move_in_setting = 0 && keyboard_check_released(global.e_key) && w_alpha < 0.17 && global.chat_activity = false
 {
 	if on_floor != true && (global.accessories_equip[0] = 19 || global.accessories_equip[1] = 19 || global.accessories_equip[2] = 19)
 	{
@@ -3469,7 +3469,7 @@ if global.never_move = 0 && global.never_move_in_setting = 0 && keyboard_check_r
 			
 		if on_floor = true && gravity <= 0
 		{
-			if global.nickname = "아버" && global.n_sword != 0 && global.n_sword != 5 && !keyboard_check(global.down_key) && !keyboard_check(global.left_key) && !keyboard_check(global.right_key) && (keyboard_check(string(global.guard_key_for_code)) || gamepad_button_check(0,gp_padu)) && down_attack_with_rage = 0 && global.chat_activity = false
+			if global.nickname = "아버" && global.n_sword != 0 && global.n_sword != 5 && !keyboard_check(global.down_key) && !keyboard_check(global.left_key) && !keyboard_check(global.right_key) && (keyboard_check(global.guard_key) || gamepad_button_check(0,gp_padu)) && down_attack_with_rage = 0 && global.chat_activity = false
 			{
 				if attack_laser_thi = 0 && spin = 0 && hurt = 0 && hurt_little = 0 && global.rage_gauge >= 80
 				{
@@ -3512,7 +3512,7 @@ if global.never_move = 0 && global.never_move_in_setting = 0 && keyboard_check_r
 				}
 			}
 			
-			if (global.n_sword = 1 || global.n_sword = 6) && !keyboard_check(global.left_key) && !keyboard_check(global.right_key) && (keyboard_check(string(global.guard_key_for_code)) || gamepad_button_check(0,gp_padu)) && down_attack_with_rage = 0 && global.chat_activity = false && global.used_suicide_skill = 0
+			if (global.n_sword = 1 || global.n_sword = 6) && !keyboard_check(global.left_key) && !keyboard_check(global.right_key) && (keyboard_check(global.guard_key) || gamepad_button_check(0,gp_padu)) && down_attack_with_rage = 0 && global.chat_activity = false && global.used_suicide_skill = 0
 			{
 				if attack_laser = 0 && (cannot_move = 0 || guarding > 0) && cooltime = 0 && spin = 0 && hurt = 0 && hurt_little = 0 && ((global.n_sword = 1 && global.rage_gauge >= 80) || global.n_sword = 6)
 				{
@@ -3565,7 +3565,7 @@ if global.never_move = 0 && global.never_move_in_setting = 0 && keyboard_check_r
 			}
 			
 			
-			if !keyboard_check(global.down_key) && !keyboard_check(string(global.guard_key_for_code)) && (keyboard_check(global.left_key) || keyboard_check(global.right_key) || gamepad_button_check(0,gp_padl) || gamepad_button_check(0,gp_padr)) && down_attack_with_rage = 0 && global.chat_activity = false && global.n_sword != 6 && global.weapon_upgraded[global.n_sword] > 0
+			if !keyboard_check(global.down_key) && !keyboard_check(global.guard_key) && (keyboard_check(global.left_key) || keyboard_check(global.right_key) || gamepad_button_check(0,gp_padl) || gamepad_button_check(0,gp_padr)) && down_attack_with_rage = 0 && global.chat_activity = false && global.n_sword != 6 && global.weapon_upgraded[global.n_sword] > 0
 			{
 				if attack_laser_sec = 0 && cannot_move = 0 && cooltime = 0 && spin = 0 && hurt = 0 && hurt_little = 0 && global.rage_gauge >= 80
 				{
@@ -3628,7 +3628,7 @@ check_d_press_e = 0
 
 
 
-if global.never_move = 0 && global.n_sword != 0 && global.n_sword != 5 && global.never_move_in_setting = 0 && (keyboard_check_pressed(ord(string(global.q_key))) || gamepad_button_check_pressed(0,gp_face3)) && global.chat_activity = false && charge_attack <= 0
+if global.never_move = 0 && global.n_sword != 0 && global.n_sword != 5 && global.never_move_in_setting = 0 && (keyboard_check_pressed(global.q_key) || gamepad_button_check_pressed(0,gp_face3)) && global.chat_activity = false && charge_attack <= 0
 {
 	if global.skill_turning_attack > 0 && turning_attack_used < global.skill_turning_attack
 	{
@@ -3695,7 +3695,7 @@ if global.never_move = 0 && global.n_sword != 0 && global.n_sword != 5 && global
 
 
 
-if global.never_move = 0 && global.n_sword != 0 && global.n_sword != 5 && global.never_move_in_setting = 0 && (keyboard_check_pressed(ord(string(global.s_key))) || gamepad_button_check_pressed(0,gp_face1)) && global.chat_activity = false && charge_attack <= 0
+if global.never_move = 0 && global.n_sword != 0 && global.n_sword != 5 && global.never_move_in_setting = 0 && (keyboard_check_pressed(global.s_key) || gamepad_button_check_pressed(0,gp_face1)) && global.chat_activity = false && charge_attack <= 0
 {
 	if on_floor != true
 	{
@@ -3788,7 +3788,7 @@ if global.never_move = 0 && global.n_sword != 0 && global.n_sword != 5 && global
 
 
 
-if global.never_move = 0 && global.n_sword != 0 && global.n_sword != 5 && global.never_move_in_setting = 0 && (keyboard_check_pressed(ord(string(global.w_key))) || gamepad_button_check_pressed(0,gp_face4)) && global.chat_activity = false && charge_attack <= 0
+if global.never_move = 0 && global.n_sword != 0 && global.n_sword != 5 && global.never_move_in_setting = 0 && (keyboard_check_pressed(global.w_key) || gamepad_button_check_pressed(0,gp_face4)) && global.chat_activity = false && charge_attack <= 0
 {
 	if global.skill_jump_attack > 0 && jump_attack_used < global.skill_jump_attack
 	{

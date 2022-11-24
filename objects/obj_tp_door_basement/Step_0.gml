@@ -25,7 +25,7 @@ can_interect = 0
 }
 
 
-if can_interect = 1 && keyboard_check_pressed(ord(string(global.skip_key))) && t_y != -64
+if can_interect = 1 && keyboard_check_pressed(global.skip_key) && t_y != -64
 {
 //var sfx = audio_play_sound(activate_sfx,0,0)
 //audio_sound_gain(sfx,global.master_volume*2*global.sfx_volume,0)

@@ -40,6 +40,8 @@ if global.key_setting_message = 0
 	instance_create_depth(x,y,-9999,change_guard_key_to_other)
 	instance_create_depth(x,y,-9998,graphics_q_setting)
 	instance_create_depth(x,y,-9998,brightness_setting___)
+	instance_create_depth(x,y,-9999,change_use_item_key)
+	instance_create_depth(x,y,-9999,change_g_key_to_other)
 
 
 

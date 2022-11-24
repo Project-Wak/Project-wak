@@ -256,29 +256,29 @@ if room != menu && global.playing_scene = 0 && global.story_next < 100 && global
 	draw_text_kl_scale(xx-v_x_*836,__yyyy-v_x_*130,"기능키 : ",v_x_*64,-1,__alpha_set,c_white,0,-1,font0,v_x_*0.3,v_x_*0.3,0);
 	draw_text_kl_scale(xx-v_x_*836,__yyyy-v_x_*130+v_x_*32,"환경 설정[ESC]",v_x_*64,-1,__alpha_set*0.7,c_white,0,-1,font0,v_x_*0.3,v_x_*0.3,0);
 	draw_text_kl_scale(xx-v_x_*836,__yyyy-v_x_*130+v_x_*56,"장비창[Tab]",v_x_*64,-1,__alpha_set*0.7,c_white,0,-1,font0,v_x_*0.3,v_x_*0.3,0);
-	draw_text_kl_scale(xx-v_x_*836,__yyyy-v_x_*130+v_x_*80,"상호작용/선택["+string(global.skip_key)+"] (지상)",v_x_*64,-1,__alpha_set*0.7,c_white,0,-1,font0,v_x_*0.3,v_x_*0.3,0);
-	draw_text_kl_scale(xx-v_x_*836,__yyyy-v_x_*130+v_x_*104,"사망 회귀["+string(global.suicide_key)+"] (지상)",v_x_*64,-1,__alpha_set*0.7,c_white,0,-1,font0,v_x_*0.3,v_x_*0.3,0);
+	draw_text_kl_scale(xx-v_x_*836,__yyyy-v_x_*130+v_x_*80,"상호작용/선택["+string(global.skip_key_for_draw)+"] (지상)",v_x_*64,-1,__alpha_set*0.7,c_white,0,-1,font0,v_x_*0.3,v_x_*0.3,0);
+	draw_text_kl_scale(xx-v_x_*836,__yyyy-v_x_*130+v_x_*104,"사망 회귀["+string(global.suicide_key_for_draw)+"] (지상)",v_x_*64,-1,__alpha_set*0.7,c_white,0,-1,font0,v_x_*0.3,v_x_*0.3,0);
 
 
 	draw_text_kl_scale(xx-v_x_*636,__yyyy-v_x_*130,"전투 기술(스테미나 소모) : ",v_x_*64,-1,__alpha_set,c_white,0,-1,font0,v_x_*0.3,v_x_*0.3,0);
 	draw_text_kl_scale(xx-v_x_*636,__yyyy-v_x_*130+v_x_*32,"가드[상] (지상)",v_x_*64,-1,__alpha_set*0.7,c_white,0,-1,font0,v_x_*0.3,v_x_*0.3,0);
 	draw_text_kl_scale(xx-v_x_*636,__yyyy-v_x_*130+v_x_*56,"구르기[하] (지상)",v_x_*64,-1,__alpha_set*0.7,c_white,0,-1,font0,v_x_*0.3,v_x_*0.3,0);
-	draw_text_kl_scale(xx-v_x_*636,__yyyy-v_x_*130+v_x_*80,"대쉬["+string(global.a_key)+"] (지상/공중)",v_x_*64,-1,__alpha_set*0.7,c_white,0,-1,font0,v_x_*0.3,v_x_*0.3,0);
+	draw_text_kl_scale(xx-v_x_*636,__yyyy-v_x_*130+v_x_*80,"대쉬["+string(global.a_key_for_draw)+"] (지상/공중)",v_x_*64,-1,__alpha_set*0.7,c_white,0,-1,font0,v_x_*0.3,v_x_*0.3,0);
 	draw_text_kl_scale(xx-v_x_*636,__yyyy-v_x_*130+v_x_*104,"달리기[Shift]",v_x_*64,-1,__alpha_set*0.7,c_white,0,-1,font0,v_x_*0.3,v_x_*0.3,0);
 	
 
 
 	draw_text_kl_scale(xx-v_x_*436,__yyyy-v_x_*130,"기본 스킬(스테미나 소모) : ",v_x_*64,-1,__alpha_set,$FFF7D06D,0,-1,font0,v_x_*0.3,v_x_*0.3,0);
-	draw_text_kl_scale(xx-v_x_*436,__yyyy-v_x_*130+v_x_*32,"돌진 베기["+string(global.s_key)+"] (지상)",v_x_*64,-1,__alpha_set*0.7,c_white,0,-1,font0,v_x_*0.3,v_x_*0.3,0);
-	draw_text_kl_scale(xx-v_x_*436,__yyyy-v_x_*130+v_x_*56,"회전베기["+string(global.q_key)+"] (지상/공중)",v_x_*64,-1,__alpha_set*0.7,c_white,0,-1,font0,v_x_*0.3,v_x_*0.3,0);
-	draw_text_kl_scale(xx-v_x_*436,__yyyy-v_x_*130+v_x_*80,"올려 베기["+string(global.w_key)+"] (지상/공중)",v_x_*64,-1,__alpha_set*0.7,c_white,0,-1,font0,v_x_*0.3,v_x_*0.3,0);
-	draw_text_kl_scale(xx-v_x_*436,__yyyy-v_x_*130+v_x_*104,"아래 베기["+string(global.s_key)+"] (공중)",v_x_*64,-1,__alpha_set*0.7,c_white,0,-1,font0,v_x_*0.3,v_x_*0.3,0);
+	draw_text_kl_scale(xx-v_x_*436,__yyyy-v_x_*130+v_x_*32,"돌진 베기["+string(global.s_key_for_draw)+"] (지상)",v_x_*64,-1,__alpha_set*0.7,c_white,0,-1,font0,v_x_*0.3,v_x_*0.3,0);
+	draw_text_kl_scale(xx-v_x_*436,__yyyy-v_x_*130+v_x_*56,"회전베기["+string(global.q_key_for_draw)+"] (지상/공중)",v_x_*64,-1,__alpha_set*0.7,c_white,0,-1,font0,v_x_*0.3,v_x_*0.3,0);
+	draw_text_kl_scale(xx-v_x_*436,__yyyy-v_x_*130+v_x_*80,"올려 베기["+string(global.w_key_for_draw)+"] (지상/공중)",v_x_*64,-1,__alpha_set*0.7,c_white,0,-1,font0,v_x_*0.3,v_x_*0.3,0);
+	draw_text_kl_scale(xx-v_x_*436,__yyyy-v_x_*130+v_x_*104,"아래 베기["+string(global.s_key_for_draw)+"] (공중)",v_x_*64,-1,__alpha_set*0.7,c_white,0,-1,font0,v_x_*0.3,v_x_*0.3,0);
 	
 
 	draw_text_kl_scale(xx-v_x_*8,__yyyy-v_x_*180,"(G키로 가이드 열고 닫기)",v_x_*64,-1,__alpha_set,c_white,0,1,font0,v_x_*0.3,v_x_*0.3,0);
 	draw_text_kl_scale(xx-v_x_*236,__yyyy-v_x_*130,"특수 스킬(레이지(Rage) 소모) : ",v_x_*64,-1,__alpha_set,$FF7D47EE,0,-1,font0,v_x_*0.3,v_x_*0.3,0);
-	draw_text_kl_scale(xx-v_x_*236,__yyyy-v_x_*130+v_x_*32,"레이지 모드 ["+string(global.e_key)+" 지속 누르기]",v_x_*64,-1,__alpha_set*0.7,c_white,0,-1,font0,v_x_*0.3,v_x_*0.3,0);
-	draw_text_kl_scale(xx-v_x_*236,__yyyy-v_x_*130+v_x_*80,"특수 능력 (좌/우/하 지속 누르기 + "+string(global.e_key)+")",v_x_*64,-1,__alpha_set*0.7,c_white,0,-1,font0,v_x_*0.3,v_x_*0.3,0);
+	draw_text_kl_scale(xx-v_x_*236,__yyyy-v_x_*130+v_x_*32,"레이지 모드 ["+string(global.e_key_for_draw)+" 지속 누르기]",v_x_*64,-1,__alpha_set*0.7,c_white,0,-1,font0,v_x_*0.3,v_x_*0.3,0);
+	draw_text_kl_scale(xx-v_x_*236,__yyyy-v_x_*130+v_x_*80,"특수 능력 (좌/우/하 지속 누르기 + "+string(global.e_key_for_draw)+")",v_x_*64,-1,__alpha_set*0.7,c_white,0,-1,font0,v_x_*0.3,v_x_*0.3,0);
 	//draw_text_kl_scale(xx-v_x_*236,yy2-v_x_*170+v_x_*114,"특수 능력 (좌/우/하 방향키 + E)",v_x_*64,-1,__alpha_set,c_white,0,-1,font0,v_x_*0.35,v_x_*0.35,0);
 	}
 	
@@ -320,7 +320,7 @@ instance_destroy(setting_parents)
 	
 		if !audio_is_playing(boss_bgm) && !audio_is_playing(quake_sfx) && global.show_ui = 1
 		{
-		draw_text_kl_scale(g_xx+v_x_*190,g_yy-guide_gif_y*0.5*v_x_,"\n\n\n\n\n\n\n\n\n\n\n\n\n("+string(global.skip_key)+"키를 눌러 넘기기)",v_x_*64,-1,0.5*show_guide_mes_alpha,c_white,0,1,font0,v_x_*0.3,v_x_*0.3,0);
+		draw_text_kl_scale(g_xx+v_x_*190,g_yy-guide_gif_y*0.5*v_x_,"\n\n\n\n\n\n\n\n\n\n\n\n\n("+string(global.skip_key_for_draw)+"키를 눌러 넘기기)",v_x_*64,-1,0.5*show_guide_mes_alpha,c_white,0,1,font0,v_x_*0.3,v_x_*0.3,0);
 		}
 	}
 	else
@@ -333,7 +333,7 @@ instance_destroy(setting_parents)
 	
 		if !audio_is_playing(boss_bgm) && !audio_is_playing(quake_sfx) && global.show_ui = 1
 		{
-		draw_text_kl_scale(g_xx+v_x_*190,g_yy,"\n\n"+string(global.skip_key)+"키를 눌러 넘기기",v_x_*64,-1,0.5*show_guide_mes_alpha,c_white,0,1,font0,v_x_*0.3,v_x_*0.3,0);
+		draw_text_kl_scale(g_xx+v_x_*190,g_yy,"\n\n"+string(global.skip_key_for_draw)+"키를 눌러 넘기기",v_x_*64,-1,0.5*show_guide_mes_alpha,c_white,0,1,font0,v_x_*0.3,v_x_*0.3,0);
 		}
 	}
 	
@@ -358,7 +358,7 @@ instance_destroy(setting_parents)
 	
 	
 	
-	if keyboard_check_released(ord(string(global.skip_key))) && message_can_des_delay > 60
+	if keyboard_check_released(global.skip_key) && message_can_des_delay > 60
 	{
 		if global.guide_gif = Sprite313
 		{
@@ -437,9 +437,9 @@ draw_text_kl_scale(xx_g,yy_g,global.gameover_reason_title,v_x_*64,-1,global.game
 draw_text_kl_scale(xx_g,yy_g+v_x_*100,global.gameover_reason,v_x_*190,-1,global.gameover*0.5,c_white,0,0,font_title,v_x_*0.15,v_x_*0.15,0)
 }
 
-draw_text_kl_scale(xx+xxx-32*v_x_,yy+yyy-(70)*v_x_,"("+string(global.skip_key)+"키를 눌러 다음으로)",v_x_*64,-1,global.gameover*0.5,c_white,0,1,font0,v_x_*0.3,v_x_*0.3,0);
+draw_text_kl_scale(xx+xxx-32*v_x_,yy+yyy-(70)*v_x_,"("+string(global.skip_key_for_draw)+"키를 눌러 다음으로)",v_x_*64,-1,global.gameover*0.5,c_white,0,1,font0,v_x_*0.3,v_x_*0.3,0);
 
-	if global.gameover >= 0.98 && keyboard_check_released(ord(string(global.skip_key)))
+	if global.gameover >= 0.98 && keyboard_check_released(global.skip_key)
 	{
 	//global.w_alpha = 0.6
 	show_ending_var ++
@@ -489,11 +489,11 @@ draw_rectangle(xx-32,yy+yyy+32,xx+xxx+32,yy+yyy+32-global.playing_scene_black_bg
 	{
 		if audio_is_playing(boss_bgm) || audio_is_playing(final_battle)
 		{
-		draw_text_kl_scale(xx+xxx-32*v_x_,yy+yyy-(-64+global.playing_scene_black_bg)*v_x_,"("+string(global.skip_key)+"키 꾹 눌러 눌러 빨리 감기)",v_x_*64,-1,0.5,c_white,0,1,font0,v_x_*0.3,v_x_*0.3,0);
+		draw_text_kl_scale(xx+xxx-32*v_x_,yy+yyy-(-64+global.playing_scene_black_bg)*v_x_,"("+string(global.skip_key_for_draw)+"키 꾹 눌러 눌러 빨리 감기)",v_x_*64,-1,0.5,c_white,0,1,font0,v_x_*0.3,v_x_*0.3,0);
 		}
 		else
 		{
-		draw_text_kl_scale(xx+xxx-32*v_x_,yy+yyy-(-64+global.playing_scene_black_bg)*v_x_,""+string(global.skip_key)+"키를 눌러 넘기기)",v_x_*64,-1,0.5,c_white,0,1,font0,v_x_*0.3,v_x_*0.3,0);
+		draw_text_kl_scale(xx+xxx-32*v_x_,yy+yyy-(-64+global.playing_scene_black_bg)*v_x_,""+string(global.skip_key_for_draw)+"키를 눌러 넘기기)",v_x_*64,-1,0.5,c_white,0,1,font0,v_x_*0.3,v_x_*0.3,0);
 		}
 	}
 }

@@ -76,7 +76,7 @@ if global.show_credits = 0
 	key_guide.location = 0
 	key_guide.img_index = 15
 
-	global.show_guide_mes = "회전베기("+string(global.q_key)+")\n\n적의 총알을 향해 회전 베기를 사용하면 총알을 도탄 시킬 수 있다.\n이때, 총알을 쏜 적이 도탄된 총알을 맞게 되면 막대한 데미지를 입게 된다."
+	global.show_guide_mes = "회전베기("+string(global.q_key_for_draw)+")\n\n적의 총알을 향해 회전 베기를 사용하면 총알을 도탄 시킬 수 있다.\n이때, 총알을 쏜 적이 도탄된 총알을 맞게 되면 막대한 데미지를 입게 된다."
 	global.show_guide_mes_spr = 4
 	global.guide_gif = Sprite305
 	}
@@ -176,7 +176,7 @@ if global.show_credits = 0
 
 	message_phase = 23
 
-	global.show_guide_mes = "레이지 모드("+string(global.e_key)+")\n\n왼쪽 상단의 Rage가 풀인 경우 사용 가능,\n시전시, 스테미나 회복 속도가 대폭 증가 및, 이속 및 공속 증가"
+	global.show_guide_mes = "레이지 모드("+string(global.e_key_for_draw)+")\n\n왼쪽 상단의 Rage가 풀인 경우 사용 가능,\n시전시, 스테미나 회복 속도가 대폭 증가 및, 이속 및 공속 증가"
 	global.show_guide_mes_spr = 4
 	global.guide_gif = Sprite312
 	}

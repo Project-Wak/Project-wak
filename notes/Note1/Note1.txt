@@ -7,7 +7,7 @@
 
 if w_alpha > 0.05 && guarding > 0
 {
-	if keyboard_check_pressed(ord(string(global.a_key))) && fast_guarding > 0
+	if keyboard_check_pressed(global.a_key) && fast_guarding > 0
 	{
 		repeat(3)
 		{
@@ -98,7 +98,7 @@ if w_alpha > 0.05 && guarding > 0
 
 if (attack_ > 4 && attack_ <= 5) || (attack_ > 6.5 && attack_ <= 9) || (attack_ >= 12)
 {
-	if global.skill_jump_attack > 0 && global.stamina > 2.5 && keyboard_check_pressed(ord(string(global.w_key))) && attack_ >= 12
+	if global.skill_jump_attack > 0 && global.stamina > 2.5 && keyboard_check_pressed(global.w_key) && attack_ >= 12
 	{
 		repeat(3)
 		{
@@ -134,7 +134,7 @@ if (attack_ > 4 && attack_ <= 5) || (attack_ > 6.5 && attack_ <= 9) || (attack_ 
 	skill_combo_cancle_n_motion(1)
 	}
 	
-	if global.skill_turning_attack > 0 && global.stamina > 3.8 && keyboard_check_pressed(ord(string(global.q_key))) && attack_ >= 12
+	if global.skill_turning_attack > 0 && global.stamina > 3.8 && keyboard_check_pressed(global.q_key) && attack_ >= 12
 	{
 		repeat(3)
 		{
@@ -170,7 +170,7 @@ if (attack_ > 4 && attack_ <= 5) || (attack_ > 6.5 && attack_ <= 9) || (attack_ 
 	skill_combo_cancle_n_motion(1)
 	}
 	
-	if keyboard_check_pressed(string(global.guard_key_for_code))
+	if keyboard_check_pressed(global.guard_key)
 	{
 		repeat(3)
 		{
@@ -281,7 +281,7 @@ if (attack_ > 4 && attack_ <= 5) || (attack_ > 6.5 && attack_ <= 9) || (attack_ 
 
 if down_attack > 13
 {
-	if global.skill_jump_attack > 0 && global.stamina > 2.5 && keyboard_check_pressed(ord(string(global.w_key)))
+	if global.skill_jump_attack > 0 && global.stamina > 2.5 && keyboard_check_pressed(global.w_key)
 	{
 		repeat(3)
 		{
@@ -305,7 +305,7 @@ if down_attack > 13
 	skill_combo_cancle_n_motion(1)
 	}
 	
-	if global.skill_turning_attack > 0 && global.stamina > 3.8 && keyboard_check_pressed(ord(string(global.q_key)))
+	if global.skill_turning_attack > 0 && global.stamina > 3.8 && keyboard_check_pressed(global.q_key)
 	{
 		repeat(3)
 		{
@@ -329,7 +329,7 @@ if down_attack > 13
 	skill_combo_cancle_n_motion(1)
 	}
 	
-	if keyboard_check_pressed(string(global.guard_key_for_code))
+	if keyboard_check_pressed(global.guard_key)
 	{
 		repeat(3)
 		{
@@ -417,7 +417,7 @@ if down_attack > 13
 
 if dash_attack >= 4.6
 {
-	if global.skill_jump_attack > 0 && global.stamina > 2.5 && keyboard_check_pressed(ord(string(global.w_key)))
+	if global.skill_jump_attack > 0 && global.stamina > 2.5 && keyboard_check_pressed(global.w_key)
 	{
 		repeat(3)
 		{
@@ -441,7 +441,7 @@ if dash_attack >= 4.6
 	skill_combo_cancle_n_motion(1)
 	}
 	
-	if keyboard_check_pressed(string(global.guard_key_for_code))
+	if keyboard_check_pressed(global.guard_key)
 	{
 		repeat(3)
 		{
@@ -615,7 +615,7 @@ skill_combo --
 
 
 
-if keyboard_check(string(global.guard_key_for_code)) && hurt = 0 && hurt_little = 0 && global.playing_scene = 0 && global.grabed <= 0
+if keyboard_check(global.guard_key) && hurt = 0 && hurt_little = 0 && global.playing_scene = 0 && global.grabed <= 0
 {
 	if (cannot_move = 0) && guarding <= 1
 	{
@@ -818,7 +818,7 @@ skill_combo = 0
 
 
 
-if global.never_move = 0 && global.never_move_in_setting = 0 && keyboard_check_pressed(ord(string(global.a_key)))
+if global.never_move = 0 && global.never_move_in_setting = 0 && keyboard_check_pressed(global.a_key)
 {
 if global.got_wakchori > 0
 {
@@ -863,17 +863,17 @@ if global.got_wakchori > 0
 
 
 var pressing = 0
-if global.run_key != "Non" && keyboard_check_pressed(ord(string(global.run_key)))
+if global.run_key != "Non" && keyboard_check_pressed(global.run_key)
 {
 pressing = 1
 }
 
-if global.run_key = vk_shift && keyboard_check_pressed(string(global.run_key))
+if global.run_key = vk_shift && keyboard_check_pressed(global.run_key)
 {
 pressing = 1
 }
 
-if global.run_key = global.guard_key && keyboard_check_pressed(string(global.run_key))
+if global.run_key = global.guard_key && keyboard_check_pressed(global.run_key)
 {
 pressing = 1
 }
@@ -890,17 +890,17 @@ double_pressed_run_key = 2
 
 
 var pressing = 0
-if global.e_key != "Non" && keyboard_check(ord(string(global.e_key)))
+if global.e_key != "Non" && keyboard_check(global.e_key)
 {
 pressing = 1
 }
 
-if global.e_key = vk_shift && keyboard_check(string(global.e_key))
+if global.e_key = vk_shift && keyboard_check(global.e_key)
 {
 pressing = 1
 }
 
-if global.e_key = global.guard_key && keyboard_check(string(global.e_key))
+if global.e_key = global.guard_key && keyboard_check(global.e_key)
 {
 pressing = 1
 }
@@ -935,7 +935,7 @@ global.awakening = 0
 
 
 
-if global.never_move = 0 && global.never_move_in_setting = 0 && keyboard_check_released(ord(string(global.e_key))) && w_alpha < 0.17
+if global.never_move = 0 && global.never_move_in_setting = 0 && keyboard_check_released(global.e_key) && w_alpha < 0.17
 {
 	if global.can_use_quake_skill = 1 && check_d_press_e = 0
 	{
@@ -1075,7 +1075,7 @@ check_d_press_e = 0
 
 
 
-if global.never_move = 0 && global.never_move_in_setting = 0 && keyboard_check_pressed(ord(string(global.q_key)))
+if global.never_move = 0 && global.never_move_in_setting = 0 && keyboard_check_pressed(global.q_key)
 {
 if global.skill_turning_attack > 0 && turning_attack_used < global.skill_turning_attack
 {
@@ -1156,7 +1156,7 @@ if global.got_wakchori > 0
 
 
 
-if global.never_move = 0 && global.never_move_in_setting = 0 && keyboard_check_pressed(ord(string(global.s_key)))
+if global.never_move = 0 && global.never_move_in_setting = 0 && keyboard_check_pressed(global.s_key)
 {
 if !place_meeting(x,y+2,floor_parents)
 {
@@ -1266,7 +1266,7 @@ else
 
 
 
-if global.never_move = 0 && global.never_move_in_setting = 0 && keyboard_check_pressed(ord(string(global.w_key)))
+if global.never_move = 0 && global.never_move_in_setting = 0 && keyboard_check_pressed(global.w_key)
 {
 if global.skill_jump_attack > 0 && jump_attack_used < global.skill_jump_attack
 {

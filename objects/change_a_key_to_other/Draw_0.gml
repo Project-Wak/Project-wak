@@ -6,7 +6,7 @@ var _c_x = obj_camera.v_x/1280
 var xx = camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5-250*_c_x
 var yy = camera_get_view_y(view_camera[0])+(160)*_c_x
 
-var console_key = global.a_key
+var console_key = keyconverter(global.a_key)
 if global.console_mode = 1
 {
 console_key = "B"
@@ -25,5 +25,5 @@ else
 draw_text_kl_scale(xx+32*_c_x,yy-10*_c_x,"일반 공격",16,999,0.8,image_blend,0,-1,font0,1/3*_c_x,1/3*_c_x,image_angle)
 }
 
-draw_text_kl_scale(xx-10*_c_x,yy-60*_c_x,"공격)",16,999,0.8,image_blend,0,-1,font0,1/3*_c_x,1/3*_c_x,image_angle)
+draw_text_kl_scale(xx-10*_c_x,yy-60*_c_x,"공격)",16,999,0.8,$FF4A4AE6,0,-1,font0,1/3*_c_x,1/3*_c_x,image_angle)
 }

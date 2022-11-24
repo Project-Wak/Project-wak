@@ -12,7 +12,7 @@ can_interect = 0
 }
 
 
-if can_interect = 1 && keyboard_check_released(ord(string(global.skip_key)))
+if can_interect = 1 && keyboard_check_released(global.skip_key)
 {
 
 	if player.assult_mode <= 0

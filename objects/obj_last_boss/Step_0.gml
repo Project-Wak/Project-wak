@@ -193,7 +193,7 @@ depth = player.depth-32
 	view_shake(0.1,0.1,1)
 	scene__ += 0.0032
 	
-		if keyboard_check(ord(string(global.skip_key)))
+		if keyboard_check(global.skip_key)
 		{
 		scene__ += 0.0032
 		if y > 2025

@@ -46,7 +46,7 @@ var check_esc = keyboard_check_pressed(vk_escape)
 		event_user(1)
 		}
 		
-		if keyboard_check_pressed(string(ord(global.skip_key)))
+		if keyboard_check_pressed(global.skip_key)
 		{
 		var sfx = audio_play_sound(change_etc,0,0)
 		audio_sound_gain(sfx,0.02*global.master_volume*2*global.sfx_volume,0)
@@ -69,7 +69,7 @@ else
 {
 image_index = 8
 
-	if keyboard_check_pressed(ord("R"))
+	if keyboard_check_pressed(global.use_item)
 	{
 	var _check__1 = requirement[0]
 	if _check__1 < 0

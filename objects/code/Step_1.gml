@@ -2,6 +2,40 @@
 // You can write your code in this editor
 
 
+
+if global.all_reset_key = 0
+{
+global.a_key = ord("A")
+global.q_key = ord("Q")
+global.s_key = ord("S")
+global.w_key = ord("W")
+global.run_key = string(vk_shift)
+global.e_key = ord("E")
+global.suicide_key = ord("P")
+global.skip_key = ord("D")
+global.use_item = ord("R")
+global.jump_key = vk_space
+global.left_key = vk_left
+global.right_key = vk_right
+global.guard_key = vk_up
+global.down_key = vk_down
+global.all_reset_key = 1
+}
+
+
+
+global.a_key_for_draw = keyconverter(global.a_key)
+global.q_key_for_draw = keyconverter(global.q_key)
+global.s_key_for_draw = keyconverter(global.s_key)
+global.w_key_for_draw = keyconverter(global.w_key)
+global.run_key_for_draw = keyconverter(global.run_key)
+global.e_key_for_draw = keyconverter(global.e_key)
+global.suicide_key_for_draw = keyconverter(global.suicide_key)
+global.skip_key_for_draw = keyconverter(global.skip_key)
+global.use_item_for_draw = keyconverter(global.use_item)
+
+
+
 if global.slow_motion > 0
 {
 global.slow_motion += 0.1

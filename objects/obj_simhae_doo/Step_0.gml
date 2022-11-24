@@ -239,7 +239,7 @@ b_alpha_ += (t_b_alpha_ - b_alpha_)*0.08
 	image_blend = merge_color(c_black,c_white,scene__)
 	global.playing_scene = 1
 	global.never_move = 1
-		if keyboard_check(ord(string(global.skip_key)))
+		if keyboard_check(global.skip_key)
 		{
 		alpha -= 0.01
 		scene__ += 0.0032

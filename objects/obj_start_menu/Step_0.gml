@@ -101,7 +101,7 @@ wheel_cooltime --
 
 	if global.never_move_in_setting = 0 && menu_alpha > 0.1 && global.b_alpha < 0.1 && global.show_credits = 0 && global.chat_activity = false
 	{
-		if keyboard_check_pressed(ord(string(global.skip_key))) || keyboard_check_pressed(vk_enter) || keyboard_check_pressed(global.jump_key)
+		if keyboard_check_pressed(global.skip_key) || keyboard_check_pressed(vk_enter) || keyboard_check_pressed(global.jump_key)
 		{
 		event_user(0)
 		}
@@ -194,7 +194,7 @@ wheel_cooltime --
 			if global.story_text_alpha <= 2 && timer_st <= 60
 			{
 			global.story_text_alpha += 0.01
-				if keyboard_check(ord(string(global.skip_key)))
+				if keyboard_check(global.skip_key)
 				{
 				global.story_text_alpha += 0.01
 				}
@@ -211,7 +211,7 @@ wheel_cooltime --
 				{
 				global.story_text_alpha -= 0.01
 				
-					if keyboard_check(ord(string(global.skip_key)))
+					if keyboard_check(global.skip_key)
 					{
 					global.story_text_alpha -= 0.01
 					}
@@ -300,7 +300,7 @@ timer ++
 	instance_destroy(text_effect_option)
 	}
 	
-	if keyboard_check_pressed(ord(string(global.skip_key)))
+	if keyboard_check_pressed(global.skip_key)
 	{
 	instance_destroy(brightness_setting___)
 	instance_destroy(obj_hint_arrow)

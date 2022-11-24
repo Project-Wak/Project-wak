@@ -24,19 +24,19 @@ string_ = "->"
 }
 if img_index = 2 || img_index = 24
 {
-string_ = string(global.a_key)
+string_ = global.a_key
 }
 if img_index = 3
 {
-string_ = string(global.s_key)
+string_ = global.s_key
 }
 if img_index = 4
 {
-string_ = string(global.w_key)
+string_ = global.w_key
 }
 if img_index = 5
 {
-string_ = string(global.e_key)
+string_ = global.e_key
 }
 if img_index = 6
 {
@@ -48,15 +48,15 @@ string_ = "Space"
 }
 if img_index = 11
 {
-string_ = string(global.s_key)
+string_ = global.s_key
 }
 if img_index = 12
 {
-string_ = string(global.e_key)
+string_ = global.e_key
 }
 if img_index = 13
 {
-string_ = string(global.guard_key)
+string_ = global.guard_key
 	if global.guard_key = vk_up
 	{
 	string_ = "<-"
@@ -64,29 +64,29 @@ string_ = string(global.guard_key)
 }
 if img_index = 14
 {
-string_ = string(global.guard_key)
-	if global.guard_key = global.guard_key
+string_ = global.guard_key
+	if global.guard_key = vk_up
 	{
 	string_ = "<-"
 	}
 }
 if img_index = 15
 {
-string_ = string(global.q_key)
+string_ = global.q_key
 }
 if img_index = 16 || img_index = 26
 {
-string_ = string(global.e_key)
+string_ = global.e_key
 }
 
 if img_index = 22
 {
-string_ = string(global.skip_key)
+string_ = global.skip_key
 }
 
 if img_index = 23
 {
-string_ = string(global.skip_key)
+string_ = global.skip_key
 }
 
 if img_index = 25
@@ -151,7 +151,7 @@ if img_index = 0 || img_index = 1
 {
 	if global.run_key != vk_shift
 	{
-	draw_text_kl_scale(camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5-2*96*cm_vx-cm_vx*20,yy+85*cm_vx,"이동 (연타 or "+string(global.run_key)+" 눌러 달리기)",16,9999,1,image_blend,0,-1,font0,cm_vx*1/3,cm_vx*1/3,image_angle)
+	draw_text_kl_scale(camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5-2*96*cm_vx-cm_vx*20,yy+85*cm_vx,"이동 (연타 or "+string(global.run_key_for_draw)+" 눌러 달리기)",16,9999,1,image_blend,0,-1,font0,cm_vx*1/3,cm_vx*1/3,image_angle)
 	}
 	else
 	{
@@ -166,12 +166,12 @@ draw_text_kl_scale(xx,yy+85*cm_vx,"일반 공격\n\n\n\n(지상에서 최대 4�
 
 if img_index = 24
 {
-draw_text_kl_scale(xx,yy+85*cm_vx,"대쉬\n\n\n\n[스테미나 대량 소비 및 시전 도중 가드 판정]\n\n\n\n(지상 or 공중에서 달리기 도중 "+string(global.a_key)+")",16,9999,1,image_blend,0,0,font0,cm_vx*1/3,cm_vx*1/3,image_angle)
+draw_text_kl_scale(xx,yy+85*cm_vx,"대쉬\n\n\n\n[스테미나 대량 소비 및 시전 도중 가드 판정]\n\n\n\n(지상 or 공중에서 달리기 도중 "+string(global.a_key_for_draw)+")",16,9999,1,image_blend,0,0,font0,cm_vx*1/3,cm_vx*1/3,image_angle)
 }
 
 if img_index = 3
 {
-draw_text_kl_scale(xx,yy+85*cm_vx,"아래 베기\n\n\n\n[스테미나 소비]\n\n\n\n(공중에서 "+string(global.s_key)+")",16,9999,1,image_blend,0,0,font0,cm_vx*1/3,cm_vx*1/3,image_angle)
+draw_text_kl_scale(xx,yy+85*cm_vx,"아래 베기\n\n\n\n[스테미나 소비]\n\n\n\n(공중에서 "+string(global.s_key_for_draw)+")",16,9999,1,image_blend,0,0,font0,cm_vx*1/3,cm_vx*1/3,image_angle)
 }
 
 if img_index = 4
@@ -181,7 +181,7 @@ draw_text_kl_scale(xx,yy+85*cm_vx,"올려 베기\n\n\n\n[스테미나 소비]",1
 
 if img_index = 5
 {
-draw_text_kl_scale(xx,yy+85*cm_vx,"레이지 모드\n\n\n\n(왼쪽 상단의 레이지(Rage) 풀인 상태로 "+string(global.e_key)+"키 꾹)",16,9999,1,image_blend,0,0,font0,cm_vx*1/3,cm_vx*1/3,image_angle)
+draw_text_kl_scale(xx,yy+85*cm_vx,"레이지 모드\n\n\n\n(왼쪽 상단의 레이지(Rage) 풀인 상태로 "+string(global.e_key_for_draw)+"키 꾹)",16,9999,1,image_blend,0,0,font0,cm_vx*1/3,cm_vx*1/3,image_angle)
 }
 
 if img_index = 6
@@ -201,12 +201,12 @@ draw_text_kl_scale(camera_get_view_x(view_camera[0])+camera_get_view_width(view_
 
 if img_index = 11
 {
-draw_text_kl_scale(xx,yy+85*cm_vx,"돌진베기\n\n\n\n(걷기 or 달리기 도중 "+string(global.s_key)+")\n\n\n\n[스테미나 전부 소비]",16,9999,1,image_blend,0,0,font0,cm_vx*1/3,cm_vx*1/3,image_angle)
+draw_text_kl_scale(xx,yy+85*cm_vx,"돌진베기\n\n\n\n(걷기 or 달리기 도중 "+string(global.s_key_for_draw)+")\n\n\n\n[스테미나 전부 소비]",16,9999,1,image_blend,0,0,font0,cm_vx*1/3,cm_vx*1/3,image_angle)
 }
 
 if img_index = 12
 {
-draw_text_kl_scale(xx,yy+85*cm_vx,"지진파\n\n\n\n(공중에서 "+string(global.e_key)+")\n\n\n\n[(Rage) 일부 소비]",16,9999,1,image_blend,0,0,font0,cm_vx*1/3,cm_vx*1/3,image_angle)
+draw_text_kl_scale(xx,yy+85*cm_vx,"지진파\n\n\n\n(공중에서 "+string(global.e_key_for_draw)+")\n\n\n\n[(Rage) 일부 소비]",16,9999,1,image_blend,0,0,font0,cm_vx*1/3,cm_vx*1/3,image_angle)
 }
 
 if img_index = 13
@@ -219,11 +219,11 @@ if img_index = 14
 var xx_sec = camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5
 	if global.n_sword != 6
 	{
-	draw_text_kl_scale(xx_sec,yy+85*cm_vx,"익스플로전\n\n\n\n(가드키 '먼저' 누르던 도중 "+string(global.e_key)+"키)",16,9999,1,image_blend,0,0,font0,cm_vx*1/3,cm_vx*1/3,image_angle)
+	draw_text_kl_scale(xx_sec,yy+85*cm_vx,"익스플로전\n\n\n\n(가드키 '먼저' 누르던 도중 "+string(global.e_key_for_draw)+"키)",16,9999,1,image_blend,0,0,font0,cm_vx*1/3,cm_vx*1/3,image_angle)
 	}
 	else
 	{
-	draw_text_kl_scale(xx_sec,yy+85*cm_vx,"할복\n\n\n\n(가드키 '먼저' 누르던 도중 "+string(global.e_key)+"키)",16,9999,1,image_blend,0,0,font0,cm_vx*1/3,cm_vx*1/3,image_angle)
+	draw_text_kl_scale(xx_sec,yy+85*cm_vx,"할복\n\n\n\n(가드키 '먼저' 누르던 도중 "+string(global.e_key_for_draw)+"키)",16,9999,1,image_blend,0,0,font0,cm_vx*1/3,cm_vx*1/3,image_angle)
 	}
 }
 
@@ -244,7 +244,7 @@ draw_text_kl_scale(xx,yy+85*cm_vx,"연습장 나가기",16,9999,1,image_blend,0,
 
 if img_index = 25
 {
-draw_text_kl_scale(camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5,yy+85*cm_vx,"에네르기파\n\n\n\n[레이지(Rage) 대량 소비]\n\n\n\n(방향키 '먼저' 누르던 도중 "+string(global.e_key)+"키)",16,9999,1,image_blend,0,0,font0,cm_vx*1/3,cm_vx*1/3,image_angle)
+draw_text_kl_scale(camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5,yy+85*cm_vx,"에네르기파\n\n\n\n[레이지(Rage) 대량 소비]\n\n\n\n(방향키 '먼저' 누르던 도중 "+string(global.e_key_for_draw)+"키)",16,9999,1,image_blend,0,0,font0,cm_vx*1/3,cm_vx*1/3,image_angle)
 }
 
 if img_index = 27
