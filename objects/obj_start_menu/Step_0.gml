@@ -239,7 +239,7 @@ wheel_cooltime --
 		if global.b_alpha > 2
 		{
 		go_start = 3
-		t_set_menu_choose = 1
+		t_set_menu_choose = 3
 		global.t_b_alpha = -0.01
 		}
 	}

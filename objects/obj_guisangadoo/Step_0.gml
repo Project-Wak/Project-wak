@@ -225,12 +225,7 @@ b_alpha_ += (t_b_alpha_ - b_alpha_)*0.08
 	image_blend = merge_color(c_black,c_white,scene__)
 	global.playing_scene = 1
 	global.never_move = 1
-		if keyboard_check(global.skip_key)
-		{
-		alpha -= 0.01
-		scene__ += 0.0032
-		y -= scene__*3.5
-		}
+
 	
 		if bgm = -4 && global.show_credits = 0
 		{
@@ -246,12 +241,29 @@ b_alpha_ += (t_b_alpha_ - b_alpha_)*0.08
 		check__.target = player.id
 		check__.parents = id
 		}
+		
+		if skip_boss_apearence = 1 && keyboard_check_pressed(global.skip_key)
+		{
+			repeat(900)
+			{
+			alpha -= 0.01
+			scene__ += 0.0032
+			y -= scene__*3.5
+
+				if scene__ >= 1
+				{
+				global.b_alpha = 1.2
+				break;
+				}
+			}
+		}
 	}
 
 	if scene__ >= 1
 	{
 	t_b_alpha_ = 1.01
 	activated = 2
+	skip_boss_apearence = 1
 	
 	player.assult_mode = 300
 	

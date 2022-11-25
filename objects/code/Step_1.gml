@@ -228,7 +228,7 @@ global.slow_motion += global.slow_motion*0.03
 			{
 				if playing_gameover_scene > 0
 				{
-				global.left_time = 12*global.time_plusment
+				global.left_time = 25*global.time_plusment
 				global.tiredness = 0
 				playing_gameover_scene = 0
 				}
@@ -423,11 +423,11 @@ global.slow_motion += global.slow_motion*0.03
 			instance_destroy(obj_last_boss.wall1)
 			instance_destroy(obj_last_boss.wall2)
 			instance_destroy(obj_last_boss)
-			obj_andience1194.cre_boss = 1
-			obj_andience1194.play_scene__ = 0
-			obj_andience1194.message_phase = 15
-			obj_andience1194.sprite_index = pl_move_hyumpanchi_hakase
-			obj_andience1194.image_index = 0
+			var __aaa____ = instance_create_depth(3328,2240,depth,obj_last_boss)
+			__aaa____.alarm[6] = 30
+			obj_camera.t_x = -4
+			obj_camera.x = player.x
+			obj_potential_camera.x = player.x
 			}
 			
 		

@@ -83,7 +83,7 @@ var yy_ = y+lengthdir_y(42,image_angle)
 	var max_length = 400
 	for(var i = 0; i < max_length; i ++)
 	{
-		for(var ii = 0; ii < 14; ii++)
+		for(var ii = 42; ii < 56; ii++)
 		{
 		var x2 = x + lengthdir_x(i,image_angle+ii)
 		var y2 = y + lengthdir_y(i,image_angle+ii)
@@ -317,15 +317,7 @@ else
 	global.playing_scene = 1
 	global.never_move = 1
 	global.room_brightness += 0.0012
-	
-		if keyboard_check(global.skip_key)
-		{
-		alpha -= 0.01
-		scene__ += 0.0032
-		y -= scene__*4
-		x -= scene__*0.6
-		}
-	
+
 	
 		if bgm = -4 && global.show_credits = 0
 		{
@@ -341,12 +333,30 @@ else
 		check__.target = player.id
 		check__.parents = id
 		}
+		
+		if skip_boss_apearence = 1 && keyboard_check_pressed(global.skip_key)
+		{
+			repeat(900)
+			{
+			scene__ += 0.0032
+			global.room_brightness += 0.0012
+			y -= scene__*4
+			x -= scene__*0.6
+			alpha -= 0.01
+				if scene__ >= 1
+				{
+				global.b_alpha = 1.2
+				break;
+				}
+			}
+		}
 	}
 	
 	
 
 	if scene__ >= 1
 	{
+	skip_boss_apearence = 1
 	activated = 2
 	player.assult_mode = 300
 		if instance_exists(check__)
@@ -532,6 +542,52 @@ else
 			view_shake(5,8,1)
 			}
 			
+			if patturn = 2.24
+			{
+			var dust = instance_create_depth(player.x,player.y+32,player.depth-1,obj_dust_ef)
+			dust.image_xscale = -1.5
+			
+			var dust = instance_create_depth(player.x,player.y+32,player.depth-1,obj_dust_ef)
+			dust.image_xscale = 1.5
+			}
+			
+			if patturn = 2.25
+			{
+			var dust = instance_create_depth(player.x,player.y+32,player.depth-1,obj_dust_ef)
+			dust.image_xscale = -1.6
+			
+			var dust = instance_create_depth(player.x,player.y+32,player.depth-1,obj_dust_ef)
+			dust.image_xscale = 1.6
+			}
+			
+			if patturn = 2.26
+			{
+			var dust = instance_create_depth(player.x,player.y+32,player.depth-1,obj_dust_ef)
+			dust.image_xscale = -1.75
+			
+			var dust = instance_create_depth(player.x,player.y+32,player.depth-1,obj_dust_ef)
+			dust.image_xscale = 1.75
+			}
+			
+			if patturn = 2.27
+			{
+			var dust = instance_create_depth(player.x,player.y+32,player.depth-1,obj_dust_ef)
+			dust.image_xscale = -1.9
+			
+			var dust = instance_create_depth(player.x,player.y+32,player.depth-1,obj_dust_ef)
+			dust.image_xscale = 1.9
+			}
+			
+			if patturn = 2.28
+			{
+			var dust = instance_create_depth(player.x,player.y+32,player.depth-1,obj_dust_ef)
+			dust.image_xscale = -2
+			
+			var dust = instance_create_depth(player.x,player.y+32,player.depth-1,obj_dust_ef)
+			dust.image_xscale = 2
+			}
+			
+			
 			if patturn >= 2.3
 			{
 			view_shake(0.1,0.1,1)
@@ -549,6 +605,8 @@ else
 				}
 			t_y -= 20
 			}
+
+			
 			
 			if patturn >= 2.7
 			{

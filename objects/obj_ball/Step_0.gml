@@ -1,6 +1,6 @@
 /// @description Insert description here// You can write your code in this editor
 
-if global.playing_scene > 0
+if global.playing_scene > 0 || global.never_move_in_setting > 0
 {
 	if stop_move = -4
 	{
@@ -128,7 +128,7 @@ if stop_move = -4
 		check_on_floor = 1
 		gravity = 0
 		vspeed = 0
-			if obj_twin_eye.patturn != 0
+			if instance_exists(obj_twin_eye) && obj_twin_eye.patturn != 0
 			{
 			y -= 0.5
 			}

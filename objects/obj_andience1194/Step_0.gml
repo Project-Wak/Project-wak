@@ -262,7 +262,7 @@ global.playing_scene = 1
 	if !instance_exists(check__) && message_phase = 21
 	{
 	check__ = instance_create_depth(x,y,depth-1,player_message)
-	check__.text = "왁드로이드는 완성한지 얼마 되지 않아 안정성이 떨어진단말입니다!"
+	check__.text = "왁드로이드는 완성한지 얼마 되지 않아 안정성이 떨어진단 말입니다!"
 	check__.target = id
 	check__.parents = id
 	}
@@ -270,7 +270,7 @@ global.playing_scene = 1
 	if !instance_exists(check__) && message_phase = 22
 	{
 	check__ = instance_create_depth(x,y,depth-1,player_message)
-	check__.text = "자칫하면 폭주하여 이 연구소랑 함께 통째로 사라질수도 있다구요!"
+	check__.text = "자칫하면 폭주하여 이 연구소랑 함께 통째로 사라질 수도 있다구요!"
 	check__.target = id
 	check__.parents = id
 	global.guide_boss = 0

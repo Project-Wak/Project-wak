@@ -2,6 +2,8 @@
 // You can write your code in this editor
 total_died_from_here = 0
 
+skip_boss_apearence = 0
+
 depth = 1000
 image_speed = 0
 image_index = 0

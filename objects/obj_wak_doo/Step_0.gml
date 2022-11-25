@@ -609,6 +609,22 @@ global.room_brightness += 0.0012
 	check__.parents = id
 	}
 	
+	if skip_boss_apearence = 1 && keyboard_check_pressed(global.skip_key)
+	{
+		repeat(900)
+		{
+		scene__ += 0.0032
+		global.room_brightness += 0.0012
+		image_blend = merge_color(c_black,c_white,scene__)
+			if scene__ >= 1
+			{
+			global.b_alpha = 1.2
+			y = ystart+8
+			break;
+			}
+		}
+	}
+	
 	//if keyboard_check(global.skip_key)
 	//{
 	//alpha -= 0.01
@@ -621,6 +637,7 @@ global.room_brightness += 0.0012
 
 if scene__ >= 1
 {
+skip_boss_apearence = 1
 player.assult_mode = 300
 activated = 2
 	if instance_exists(check__)

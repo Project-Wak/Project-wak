@@ -49,6 +49,11 @@ if abs(movement_speed) < 0.03 && sprite_index = move_sprite
 image_index = 0
 }
 
+if gravity = 0
+{
+movement_ai = 1
+}
+
 
 
 //////////////////////////////////////////ai codes//////////////////////////////////////////////

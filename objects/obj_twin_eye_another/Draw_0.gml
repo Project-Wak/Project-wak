@@ -18,3 +18,17 @@ var yy = player.y
 	draw_triangle(x,y,x,y-3,xx,yy,false)
 	}
 }
+
+if w_alpha_laser > 0
+{
+w_alpha_laser += (-0.01 - w_alpha_laser)*0.1
+var xx = player.x
+var yy = player.y
+
+draw_set_alpha(w_alpha_laser)
+draw_set_color(c_white)
+	for(var i = 1; i > 0.5; i -= 0.1)
+	{
+	draw_triangle(x,y,x,y-3,xx,yy,false)
+	}
+}

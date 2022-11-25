@@ -16,6 +16,7 @@ global.got_sec_phase = 1
 _light_3 = -4
 _aaa = -4
 back_my_point = 0
+skip_boss_apearence = 0
 bgm = -4
 dead_scene = 0
 shake_boss = 1
@@ -66,4 +67,5 @@ n_dir_grabing = 1
 n_grabing_total_pressed = 0
 grab_skill = 0
 
+global.room_brightness = 0.6
 alarm[0] = 120

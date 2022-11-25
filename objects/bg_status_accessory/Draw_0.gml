@@ -68,7 +68,7 @@ if (pressed > 0 && global.key_setting_message > 0) || global.key_setting_message
 	if cal__img = 8
 	{
 	item_name__ = "응원 깃발"
-	item_desc__ = "응원을 받아 강력해짐\n\n특수효과 : 일반 데미지 18% 증가"
+	item_desc__ = "응원을 받아 강력해짐\n\n특수효과 : 기본 데미지 18% 증가"
 	}
 	if cal__img = 9
 	{

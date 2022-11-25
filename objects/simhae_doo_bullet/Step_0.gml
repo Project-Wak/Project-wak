@@ -7,6 +7,7 @@ instance_destroy()
 }
 
 
+
 for(var i = 0; i <= 32; i++)
 {
 alpha[i] -= 0.1
@@ -15,6 +16,7 @@ alpha[i] -= 0.1
 	alpha[i] -= 0.05
 	}
 }
+
 
 
 if des_time > 0
@@ -39,20 +41,23 @@ image_angle += (angle - image_angle)*0.1
 
 
 
+if timer >= 120
+{
 ii += 0.5
 
-if ii > 32
-{
-ii = 0
-}
-
-if ii = floor(ii) && des_time = 0
-{
-	if alpha[ii] <= 0
+	if ii > 32
 	{
-	xx[ii] = x
-	yy[ii] = y
-	alpha[ii] = 1
+	ii = 0
+	}
+
+	if ii = floor(ii) && des_time = 0
+	{
+		if alpha[ii] <= 0
+		{
+		xx[ii] = x
+		yy[ii] = y
+		alpha[ii] = 1
+		}
 	}
 }
 

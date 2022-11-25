@@ -41,13 +41,21 @@ var random_val_fl = percentage_k(global.graphics_for_code*8)
 	if audio_is_playing(follower_bgm)
 	{
 	audio_stop_sound(follower_bgm)
-	code.last_bgm = audio_play_sound(final_battle,0,1)
 	}
+	
+	
 }
 
-if audio_is_playing(final_battle)
+if scene__ > 0
 {
-audio_sound_gain(code.last_bgm,0.13*global.master_volume*global.bgm_volume*scene__,0)
+	if audio_is_playing(final_battle)
+	{
+	audio_sound_gain(code.last_bgm,0.13*global.master_volume*global.bgm_volume*scene__,0)
+	}
+	else
+	{
+	code.last_bgm = audio_play_sound(final_battle,0,1)
+	}
 }
 
 if hp <= 0
@@ -193,15 +201,7 @@ depth = player.depth-32
 	view_shake(0.1,0.1,1)
 	scene__ += 0.0032
 	
-		if keyboard_check(global.skip_key)
-		{
-		scene__ += 0.0032
-		if y > 2025
-		{
-		y -= scene__*2
-		}
-		global.room_brightness -= 0.001
-		}
+
 		
 		if scene__ > 0.63
 		{
@@ -232,6 +232,25 @@ depth = player.depth-32
 		_aaa.image_angle = 220+(scene__-0.7)*200
 		_aaa.direction = 220+(scene__-0.7)*200
 		}
+		
+		if skip_boss_apearence = 1 && keyboard_check_pressed(global.skip_key)
+		{
+			repeat(900)
+			{
+			scene__ += 0.0032
+			global.room_brightness -= 0.001
+				if y > 2025
+				{
+				y -= scene__*2
+				}
+				
+				if scene__ >= 1
+				{
+				global.b_alpha = 1.2
+				break;
+				}
+			}
+		}
 			
 	image_blend = merge_color(c_black,c_white,scene__)
 	global.playing_scene = 1
@@ -245,6 +264,7 @@ depth = player.depth-32
 		check__.target = player.id
 		check__.parents = id
 		}
+		
 	}
 	
 	
@@ -254,6 +274,7 @@ depth = player.depth-32
 	depth = player.depth-32
 	global.dreamy_alpha += (1 - global.dreamy_alpha)*0.04
 	activated = 2
+	skip_boss_apearence = 1
 	player.assult_mode = 300
 		if instance_exists(check__)
 		{

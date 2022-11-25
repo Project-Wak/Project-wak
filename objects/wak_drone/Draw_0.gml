@@ -27,7 +27,7 @@ draw_set_alpha(0.15)
 draw_set_color(c_green)
 if targeted != -4
 {
-draw_set_alpha(0.3)
+draw_set_alpha(0.3*timer_/100)
 draw_set_color(c_red)
 }
 if targeted = -4
@@ -41,6 +41,21 @@ else
 {
 var xx = targeted.x
 var yy = targeted.y
+	for(var i = 1; i > 0.5; i -= 0.1)
+	{
+	draw_triangle(x,y,x,y-3,xx,yy,false)
+	}
+}
+
+
+if w_alpha > 0 && targeted != -4
+{
+w_alpha += (-0.01 - w_alpha)*0.1
+var xx = targeted.x
+var yy = targeted.y
+
+draw_set_alpha(w_alpha)
+draw_set_color(c_white)
 	for(var i = 1; i > 0.5; i -= 0.1)
 	{
 	draw_triangle(x,y,x,y-3,xx,yy,false)

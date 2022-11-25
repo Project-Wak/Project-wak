@@ -24,19 +24,19 @@ string_ = "->"
 }
 if img_index = 2 || img_index = 24
 {
-string_ = global.a_key_for_draw
+string_ = keyconverter(global.a_key)
 }
 if img_index = 3
 {
-string_ = global.s_key_for_draw
+string_ = keyconverter(global.s_key)
 }
 if img_index = 4
 {
-string_ = global.w_key_for_draw
+string_ = keyconverter(global.w_key)
 }
 if img_index = 5
 {
-string_ = global.e_key_for_draw
+string_ = keyconverter(global.e_key)
 }
 if img_index = 6
 {
@@ -48,15 +48,15 @@ string_ = "Space"
 }
 if img_index = 11
 {
-string_ = global.s_key_for_draw
+string_ = keyconverter(global.s_key)
 }
 if img_index = 12
 {
-string_ = global.e_key_for_draw
+string_ = keyconverter(global.e_key)
 }
 if img_index = 13
 {
-string_ = global.guard_key_for_draw
+string_ = keyconverter(global.guard_key)
 	if global.guard_key = vk_up
 	{
 	string_ = "<-"
@@ -64,7 +64,7 @@ string_ = global.guard_key_for_draw
 }
 if img_index = 14
 {
-string_ = global.guard_key_for_draw
+string_ = keyconverter(global.guard_key)
 	if global.guard_key = vk_up
 	{
 	string_ = "<-"
@@ -72,21 +72,21 @@ string_ = global.guard_key_for_draw
 }
 if img_index = 15
 {
-string_ = global.q_key_for_draw
+string_ = keyconverter(global.q_key)
 }
 if img_index = 16 || img_index = 26
 {
-string_ = global.e_key_for_draw
+string_ = keyconverter(global.e_key)
 }
 
 if img_index = 22
 {
-string_ = global.skip_key_for_draw
+string_ = keyconverter(global.skip_key)
 }
 
 if img_index = 23
 {
-string_ = global.skip_key_for_draw
+string_ = keyconverter(global.skip_key)
 }
 
 if img_index = 25
@@ -220,6 +220,7 @@ var xx_sec = camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera
 	if global.n_sword != 6
 	{
 	draw_text_kl_scale(xx_sec,yy+85*cm_vx,"익스플로전\n\n\n\n(가드키 '먼저' 누르던 도중 "+string(global.e_key_for_draw)+"키)",16,9999,1,image_blend,0,0,font0,cm_vx*1/3,cm_vx*1/3,image_angle)
+	global.rage_gauge = 100
 	}
 	else
 	{
@@ -245,6 +246,7 @@ draw_text_kl_scale(xx,yy+85*cm_vx,"연습장 나가기",16,9999,1,image_blend,0,
 if img_index = 25
 {
 draw_text_kl_scale(camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5,yy+85*cm_vx,"에네르기파\n\n\n\n[레이지(Rage) 대량 소비]\n\n\n\n(방향키 '먼저' 누르던 도중 "+string(global.e_key_for_draw)+"키)",16,9999,1,image_blend,0,0,font0,cm_vx*1/3,cm_vx*1/3,image_angle)
+global.rage_gauge = 100
 }
 
 if img_index = 27

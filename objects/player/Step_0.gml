@@ -606,7 +606,7 @@ skill_combo_cancle_n_motion(0)
 	}
 
 
-	if global.never_move = 0 && global.playing_scene = 0 && cannot_move = 0 && global.never_move_in_setting = 0
+	if global.never_move = 0 && global.playing_scene = 0 && hurt = 0 && global.never_move_in_setting = 0
 	{
 		if (global.medical_slincer2 > 0) && global.can_use_sylinge2 > 0
 		{

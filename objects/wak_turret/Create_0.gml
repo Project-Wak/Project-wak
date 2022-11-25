@@ -14,6 +14,7 @@ knocked_down_ef = 0
 hit_motion = 0
 can_attack = 0
 hp = 205
+w_alpha = 0
 max_hp = hp
 spin = 0
 hp_bar_alpha = 0

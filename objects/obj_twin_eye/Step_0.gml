@@ -442,17 +442,7 @@ else
 	view_shake(0.1,0.1,1)
 	scene__ += 0.0032
 	
-		if keyboard_check(global.skip_key)
-		{
-		alpha -= 0.01
-		scene__ += 0.0032
-		y -= scene__*(9-4*(scene__/0.6))
-			if instance_exists(left_eye)
-			{
-			left_eye.y -= scene__*(8-2.5*(scene__/0.6))
-			}
-		}
-		
+
 		if scene__ > 0.7
 		{
 		image_angle += (0 - image_angle)*0.1
@@ -533,12 +523,33 @@ else
 		check__.target = player.id
 		check__.parents = id
 		}
+		
+		if skip_boss_apearence = 1 && keyboard_check_pressed(global.skip_key)
+		{
+			repeat(900)
+			{
+			alpha -= 0.01
+			scene__ += 0.0032
+			y -= scene__*(9-4*(scene__/0.6))
+				if instance_exists(left_eye)
+				{
+				left_eye.y -= scene__*(8-2.5*(scene__/0.6))
+				}
+			global.room_brightness += 0.0012
+				if scene__ >= 1
+				{
+				global.b_alpha = 1.2
+				break;
+				}
+			}
+		}
 	}
 	
 	
 
 	if scene__ >= 1
 	{
+	skip_boss_apearence = 1
 	activated = 2
 	player.assult_mode = 300
 		if instance_exists(check__)
@@ -590,7 +601,18 @@ else
 			{
 			patturn = choose(1,1,1,2,2,2,3,3,4,4,5,5)
 			timer = 0
+			attackable_time ++
+			
+				if attackable_time > 2
+				{
+				patturn = choose(1,2)
+				}
 			}
+		}
+		
+		if patturn < 3 && patturn >= 1
+		{
+		attackable_time = 0
 		}
 		
 		if patturn >= 1 && patturn < 2
@@ -991,6 +1013,12 @@ else
 			{
 			patturn += 0.001
 			
+				if patturn = 3.16
+				{
+				w_alpha_laser = 1.2
+				left_eye.w_alpha_laser = 1.2
+				}
+			
 				if patturn >= 3.2
 				{
 				bullet__ ++
@@ -1265,6 +1293,18 @@ else
 		obj_twin_eye_another.laser_alpha += (0.8 - obj_twin_eye_another.laser_alpha)*0.1
 		laser_alpha += (-1 - laser_alpha)*0.1
 		}
+		
+			if patturn = 5.06
+			{
+				if random_shoot = 1
+				{
+				left_eye.w_alpha_laser = 1.2
+				}
+				else
+				{
+				w_alpha_laser = 1.2
+				}
+			}
 		
 			if patturn = 5.1
 			{

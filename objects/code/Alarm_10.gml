@@ -3,7 +3,7 @@
 global.n_to_setting__ = 0
 if global.key_setting_message = 0
 {
-	if global.playing_scene = 0
+	if global.playing_scene = 0 && room != menu
 	{
 	global.cursor = 1
 	show_debug_message("option")

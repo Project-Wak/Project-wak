@@ -737,7 +737,8 @@ audio_sound_gain(bgm,0.23*global.master_volume*2*global.bgm_volume*volume_downer
 			{
 				if global.choice_now = 0
 				{
-				game_restart()
+				save_and_load_data(1,1)
+				alarm[10] = 30
 				}
 				
 				if global.choice_now = 1

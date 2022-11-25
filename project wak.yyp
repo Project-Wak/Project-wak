@@ -320,6 +320,7 @@
     {"id":{"name":"obj_water_behind","path":"objects/obj_water_behind/obj_water_behind.yy",},"order":63,},
     {"id":{"name":"obj_pipeline_blocked","path":"objects/obj_pipeline_blocked/obj_pipeline_blocked.yy",},"order":50,},
     {"id":{"name":"obj_statue","path":"objects/obj_statue/obj_statue.yy",},"order":23,},
+    {"id":{"name":"Sprite319","path":"sprites/Sprite319/Sprite319.yy",},"order":20,},
     {"id":{"name":"item_shine","path":"sprites/item_shine/item_shine.yy",},"order":156,},
     {"id":{"name":"nomal_ending","path":"sounds/nomal_ending/nomal_ending.yy",},"order":99,},
     {"id":{"name":"obj_statue_4","path":"objects/obj_statue_4/obj_statue_4.yy",},"order":48,},

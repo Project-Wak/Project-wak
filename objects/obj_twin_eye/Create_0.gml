@@ -9,6 +9,8 @@ image_blend = c_white
 scene__ = 0
 spin = 0
 
+skip_boss_apearence = 0
+w_alpha_laser = 0
 total_died_from_here = 0
 dead_scene = 0
 shake_boss = 1
@@ -16,6 +18,7 @@ bgm = -4
 activated = 0
 patturn = 0
 timer = 0
+attackable_time = 0
 laser1 = -4
 laser2 = -4
 saved_player_dir = 0

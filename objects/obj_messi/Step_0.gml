@@ -18,6 +18,15 @@ automatic_bug_fix ++
 	automatic_bug_fix = 0
 	}
 }
+else
+{
+	if instance_exists(block_laser)
+	{
+	instance_destroy(block_laser)
+	laser1 = -4
+	laser2 = -4
+	}
+}
 
 
 
@@ -737,10 +746,27 @@ global.room_brightness += 0.0003
 	check__.target = player.id
 	check__.parents = id
 	}
+	
+	if skip_boss_apearence = 1 && keyboard_check_pressed(global.skip_key)
+	{
+		repeat(900)
+		{
+		scene__ += 0.0032
+		global.room_brightness += 0.0003
+		image_blend = merge_color(c_black,c_white,scene__)
+			if scene__ >= 1
+			{
+			global.b_alpha = 1.2
+			y = ystart+8
+			break;
+			}
+		}
+	}
 }
 
 if scene__ >= 1
 {
+skip_boss_apearence = 1
 player.assult_mode = 300
 activated = 2
 	if instance_exists(check__)
@@ -863,9 +889,9 @@ activated = 2
 			else
 			{
 			view_shake(0.1,0.1,1)
-				if patturn > 1.5
+				if patturn > 1.57
 				{
-				laser1.direction -= saved_player_dir
+				laser1.direction -= saved_player_dir*2
 				}
 				
 				if laser1.image_alpha < 1.1
@@ -894,9 +920,9 @@ activated = 2
 			}
 			else
 			{
-				if patturn > 1.5
+				if patturn > 1.57
 				{
-				laser2.direction -= saved_player_dir
+				laser2.direction -= saved_player_dir*2
 				}
 				if laser2.image_alpha < 1.1
 				{
@@ -905,7 +931,7 @@ activated = 2
 			}
 		}
 		
-		if patturn > 1.7
+		if patturn > 1.6
 		{
 			if instance_exists(laser1)
 			{
@@ -927,16 +953,19 @@ activated = 2
 		}
 		
 	patturn += 0.002
-		if patturn > 1.8 && patturn_repeat < 1
+		if !instance_exists(laser1)
 		{
-		patturn = 1
-		patturn_repeat ++
-		}
+			if patturn > 1.7 && patturn_repeat < 1
+			{
+			patturn = 1
+			patturn_repeat ++
+			}
 		
-		if patturn > 1.8 && patturn_repeat >= 1
-		{
-		patturn = 0
-		patturn_repeat = 0
+			if patturn > 1.7 && patturn_repeat >= 1
+			{
+			patturn = 0
+			patturn_repeat = 0
+			}
 		}
 	}
 }

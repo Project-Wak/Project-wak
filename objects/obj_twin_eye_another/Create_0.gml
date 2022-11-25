@@ -10,6 +10,7 @@ check_met_other_eye = 0
 n_hp = 500
 hp = 500
 max_hp = 500
+w_alpha_laser = 0
 cannot_move = 0
 t_hp_bar_alpha = 0
 hit_cooltime = 0

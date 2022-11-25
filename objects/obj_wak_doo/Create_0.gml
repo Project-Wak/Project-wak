@@ -12,6 +12,7 @@ spin = 0
 
 dead_scene = 0
 shake_boss = 1
+skip_boss_apearence = 0
 bgm = -4
 activated = 0
 patturn = 0

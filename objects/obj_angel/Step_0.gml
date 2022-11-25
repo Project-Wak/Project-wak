@@ -6,6 +6,11 @@ if hp > max_hp
 hp = max_hp
 }
 
+if instance_exists(yellow_circle_effect)
+{
+patturn = 0
+}
+
 
 if hp <= 0
 {
@@ -393,6 +398,14 @@ if activated = 1
 				var sfx = audio_play_sound(mob_faint,0,0)
 				audio_sound_gain(sfx,0.4*global.master_volume*2*global.sfx_volume,0)
 				view_shake(11,40,5)
+				
+					repeat(3)
+					{
+					var effect_ = instance_create_depth(angel_spear.x,obj_angel.y+220,player.depth+1,down_effect)
+					effect_.t_image_xscale = 0.7*6
+					effect_.t_image_yscale = 0.05*6
+					effect_.received = 0
+					}
 				}
 			}
 		}
@@ -421,6 +434,22 @@ global.room_brightness += 0.0002
 	check__.target = player.id
 	check__.parents = id
 	}
+	
+	if skip_boss_apearence = 1 && keyboard_check_pressed(global.skip_key)
+	{
+		repeat(900)
+		{
+		scene__ += 0.0032
+		global.room_brightness += 0.0002
+		image_blend = merge_color(c_black,c_white,scene__)
+			if scene__ >= 1
+			{
+			global.b_alpha = 1.2
+			y = ystart+8
+			break;
+			}
+		}
+	}
 }
 
 if activated > 0
@@ -437,6 +466,7 @@ var random_val_fl = percentage_k(global.graphics_for_code*8)
 
 if scene__ >= 1
 {
+skip_boss_apearence = 1
 player.assult_mode = 300
 activated = 2
 opening_sfx = 0
@@ -677,6 +707,14 @@ opening_sfx = 0
 		
 				var sfx = audio_play_sound(mob_faint,0,0)
 				audio_sound_gain(sfx,0.4*global.master_volume*2*global.sfx_volume,0)
+				
+					repeat(3)
+					{
+					var effect_ = instance_create_depth(angel_spear.x,obj_angel.y+220,player.depth+1,down_effect)
+					effect_.t_image_xscale = 0.7*6
+					effect_.t_image_yscale = 0.05*6
+					effect_.received = 0
+					}
 				}
 			view_shake(11,38,1)
 			sfx_ = 1
@@ -720,7 +758,7 @@ opening_sfx = 0
 		spear__.y += (player.y - spear__.y)*0.05
 		}
 		
-		if patturn = 2.14
+		if patturn = 2.08
 		{
 		var dust = instance_create_depth(spear__.x,spear__.y+32,spear__.depth-1,obj_dust_ef)
 		dust.image_xscale = -f_dir*2

@@ -963,7 +963,7 @@ global.playing_scene = 1
 				if !instance_exists(check__) && message_phase = 4
 				{
 				check__ = instance_create_depth(x,y,depth-1,player_message)
-				check__.text = "한숨 자시고, 아침에 출발하는 게 좋을 것 같아요!"
+				check__.text = "한숨 주무시고, 아침에 출발하는 게 좋을 것 같아요!"
 				check__.target = id
 				check__.parents = id
 				can_interect = 0

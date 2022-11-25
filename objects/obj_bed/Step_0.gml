@@ -26,12 +26,12 @@ global.playing_scene = 1
 			interecting_now = 0
 			can_interect = 0
 			save_and_load_data(1,1)
+			global.show_guide_mes = "게임이 저장되었습니다!"
+			global.show_guide_mes_spr = 6
 			alarm[1] = 1
 			}
 		global.choice = 0
 		global.choosed = 0
-		global.show_guide_mes = "게임이 저장되었습니다!"
-		global.show_guide_mes_spr = 6
 		}
 		else
 		{

@@ -80,7 +80,14 @@ if global.story_next >= 101 && global.story_next < 300
 		if message_phase < 149
 		{
 		message_phase ++
-		global.left_time = 24*3
+			if global.difficulty != 2
+			{
+			global.left_time = 24*3
+			}
+			else
+			{
+			global.left_time = 24
+			}
 		obj_camera.t_x = -4
 		obj_camera.t_y = -4
 		obj_camera.x = player.x

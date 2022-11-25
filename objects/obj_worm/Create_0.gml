@@ -18,6 +18,7 @@ scene__ = 0
 wall1 = -4
 check__ = -4
 message_phase = 0
+skip_boss_apearence = 0
 activated = 0
 w_alpha = 0
 timer = 0

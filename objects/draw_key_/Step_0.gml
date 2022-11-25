@@ -98,3 +98,9 @@ var _check__ = 0
 	a = 1
 	}
 }
+
+
+if global.b_alpha >= 0.7 && global.t_b_alpha >= 1
+{
+a = 1
+}

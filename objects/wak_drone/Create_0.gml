@@ -18,6 +18,7 @@ max_hp = hp
 spin = 0
 hp_bar_alpha = 0
 damage_calcul__ = 0
+w_alpha = 0
 t_hp_bar_alpha = 0
 armored_level = 1
 draw_hp = 0

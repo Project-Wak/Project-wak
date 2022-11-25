@@ -15,6 +15,7 @@ t_b_alpha_ = 0
 b_patturn = 0
 total_died_from_here = 0
 dead_scene = 0
+skip_boss_apearence = 0
 shake_boss = 1
 bgm = -4
 activated = 0

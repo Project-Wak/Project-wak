@@ -4,4 +4,4 @@
 //	global.show_guide_mes_spr = 4
 //instance_create_depth(player.x,player.y-300,player.depth,fire_turret)
 
-instance_create_depth(player.x,player.y,depth,bangal_tree)
+//instance_create_depth(player.x,player.y,depth,bangal_tree)

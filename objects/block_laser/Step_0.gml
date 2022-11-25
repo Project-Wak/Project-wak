@@ -59,7 +59,7 @@ if damage_able > 0
 
 	
 	
-		if (instance_number(player) > 0 && collision_point(x2,y2,player,true,0)) && image_alpha > 0.77
+		if (instance_number(player) > 0 && player.spin <= 0 && collision_point(x2,y2,player,true,0)) && image_alpha > 0.77
 		{
 		var _calcul_ = sign(player.x - x)
 		var guarding_now = 0

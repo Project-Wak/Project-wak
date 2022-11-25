@@ -72,7 +72,7 @@ if global.guide_boss = 1 && show_guide = 1
 	
 	if instance_exists(obj_worm)
 	{
-	global.show_guide_mes = "쌉벌래두\n\n보스의 공격 패턴이 시작되면, 왼쪽 구석으로 빠르게 도망가\n공격을 피할 준비를 하고있는것이 좋다."
+	global.show_guide_mes = "쌉벌래두\n\n쌉벌래두의 레이저는 '가드 ["+string(keyconverter(global.guard_key))+"]'를 통해 막을 수 있다"
 	global.show_guide_mes_spr = 8
 	global.guide_gif = Sprite318
 	}
