@@ -4,7 +4,7 @@ var cm_vx = (obj_camera.v_x/1280)*0.9
 var xx = camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5+location*96*cm_vx
 var yy = camera_get_view_y(view_camera[0])+160*cm_vx
 
-if img_index = 7 || img_index = 27
+if img_index = 7 || img_index = 27 || img_index = 70
 {
 draw_sprite_ext(sprite95,1,xx,yy,cm_vx,cm_vx,0,c_white,image_alpha*0.8)
 }
@@ -45,6 +45,10 @@ string_ = "->"
 if img_index = 7
 {
 string_ = "Space"
+}
+if img_index = 70
+{
+string_ = keyconverter(global.run_key)
 }
 if img_index = 11
 {
@@ -149,14 +153,7 @@ else
 
 if img_index = 0 || img_index = 1
 {
-	if global.run_key != vk_shift
-	{
-	draw_text_kl_scale(camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5-2*96*cm_vx-cm_vx*20,yy+85*cm_vx,"이동 (연타 or "+string(global.run_key_for_draw)+" 눌러 달리기)",16,9999,1,image_blend,0,-1,font0,cm_vx*1/3,cm_vx*1/3,image_angle)
-	}
-	else
-	{
-	draw_text_kl_scale(camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5-2*96*cm_vx-cm_vx*20,yy+85*cm_vx,"이동 (연타 or 쉬프트 눌러 달리기)",16,9999,1,image_blend,0,-1,font0,cm_vx*1/3,cm_vx*1/3,image_angle)
-	}
+draw_text_kl_scale(camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5-2*115*cm_vx-cm_vx*20,yy+85*cm_vx,"이동",16,9999,1,image_blend,0,-1,font0,cm_vx*1/3,cm_vx*1/3,image_angle)
 }
 
 if img_index = 2
@@ -192,6 +189,11 @@ draw_text_kl_scale(xx,yy+85*cm_vx,"구르기\n\n\n\n(걷기 or 달리기 도중 
 if img_index = 7
 {
 draw_text_kl_scale(xx,yy+85*cm_vx,"점프",16,9999,1,image_blend,0,0,font0,cm_vx*1/3,cm_vx*1/3,image_angle)
+}
+
+if img_index = 70
+{
+draw_text_kl_scale(xx,yy+85*cm_vx,"달리기\n\n\n\n(방향키 연타로도 가능)",16,9999,1,image_blend,0,0,font0,cm_vx*1/3,cm_vx*1/3,image_angle)
 }
 
 if img_index = 8

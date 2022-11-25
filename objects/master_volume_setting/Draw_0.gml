@@ -44,10 +44,10 @@ draw_text_kl_scale(xx-128*v_x_,yy-10*v_x_,"마스터 볼륨 ",16,999,0.8,image_b
 		
 		if my_y != -4
 		{
-			if my_y < camera_get_view_y(view_camera[0])+200*v_x_
+			if my_y < camera_get_view_y(view_camera[0])+300*v_x_
 			{
-			draw_text_kl_scale(camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5,camera_get_view_y(view_camera[0])+460*v_x_,"조작키 변경을 위해 원하는 키를 입력해주세요",v_x_*64,-1,0.7,c_white,0,0,font0,v_x_*0.3,v_x_*0.3,0);
-			draw_text_kl_scale(camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5,camera_get_view_y(view_camera[0])+515*v_x_,"(ESC키를 누르면 기존값으로 설정됩니다)",v_x_*64,-1,0.5,c_white,0,0,font0,v_x_*0.25,v_x_*0.25,0);
+			draw_text_kl_scale(camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5,camera_get_view_y(view_camera[0])+360*v_x_,"조작키 변경을 위해 원하는 키를 입력해주세요",v_x_*64,-1,0.7,c_white,0,0,font0,v_x_*0.3,v_x_*0.3,0);
+			draw_text_kl_scale(camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5,camera_get_view_y(view_camera[0])+415*v_x_,"(ESC키를 누르면 기존값으로 설정됩니다)",v_x_*64,-1,0.5,c_white,0,0,font0,v_x_*0.25,v_x_*0.25,0);
 			}
 			else
 			{

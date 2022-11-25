@@ -99,7 +99,7 @@ wheel_cooltime --
 
 
 
-	if global.never_move_in_setting = 0 && menu_alpha > 0.1 && global.b_alpha < 0.1 && global.show_credits = 0 && global.chat_activity = false
+	if global.never_move_in_setting = 0 && menu_alpha > 0.1 && global.b_alpha < 0.1 && global.show_credits = 0 && global.chat_activity = false && global.show_achievement = 0
 	{
 		if keyboard_check_pressed(global.skip_key) || keyboard_check_pressed(vk_enter) || keyboard_check_pressed(global.jump_key)
 		{
@@ -164,9 +164,10 @@ wheel_cooltime --
 						else
 						{
 						global.choice = 0
+						global.choosed = 0
 						file_delete("Project_wak_beta_04.ini")
-						save_and_load_data(0,0)
-						game_restart()
+						save_and_load_data(1,0)
+						alarm[10] = 30
 						}
 					}
 				}

@@ -38,14 +38,7 @@ var v_x_ = obj_camera.v_x/1280
 
 		if global.hp > 0 && instance_exists(player_message) && global.show_ui = 1
 		{
-			if audio_is_playing(boss_bgm) || audio_is_playing(final_battle)
-			{
-			draw_text_kl_scale(xx+xxx-32*v_x_,yy+yyy-(-64+global.playing_scene_black_bg)*v_x_,"("+string(global.skip_key_for_draw)+"키 꾹 눌러 눌러 빨리 감기)",v_x_*64,-1,0.5,c_white,0,1,font0,v_x_*0.3,v_x_*0.3,0);
-			}
-			else
-			{
-			draw_text_kl_scale(xx+xxx-32*v_x_,yy+yyy-(-64+global.playing_scene_black_bg)*v_x_,""+string(global.skip_key_for_draw)+"키를 눌러 넘기기)",v_x_*64,-1,0.5,c_white,0,1,font0,v_x_*0.3,v_x_*0.3,0);
-			}
+		draw_text_kl_scale(xx+xxx-32*v_x_,yy+yyy-(-64+global.playing_scene_black_bg)*v_x_,""+string(global.skip_key_for_draw)+"키를 눌러 넘기기)",v_x_*64,-1,0.5,c_white,0,1,font0,v_x_*0.3,v_x_*0.3,0);
 		}
 	}
 }

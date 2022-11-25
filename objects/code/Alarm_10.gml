@@ -3,7 +3,7 @@
 global.n_to_setting__ = 0
 if global.key_setting_message = 0
 {
-	if global.playing_scene = 0 && room != menu
+	if global.playing_scene = 0
 	{
 	global.cursor = 1
 	show_debug_message("option")
@@ -14,6 +14,7 @@ if global.key_setting_message = 0
 	instance_create_depth(x,y,-9999,full_screen_option)
 	instance_create_depth(x,y,-9999,change_a_key_to_other)
 	instance_create_depth(x,y,-9999,console_mode)
+	instance_create_depth(x,y,-9999,auto_run)
 	instance_create_depth(x,y,-9999,change_w_key_to_other)
 	instance_create_depth(x,y,-9999,change_s_key_to_other)
 	instance_create_depth(x,y,-9999,change_q_key_to_other)

@@ -957,7 +957,7 @@ activated = 2
 		{
 			if patturn > 1.7 && patturn_repeat < 1
 			{
-			patturn = 1
+			patturn = 1.31
 			patturn_repeat ++
 			}
 		

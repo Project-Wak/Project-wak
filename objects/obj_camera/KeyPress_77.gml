@@ -83,4 +83,11 @@ if global.guide_boss = 1 && show_guide = 1
 	global.show_guide_mes_spr = 8
 	global.guide_gif = Sprite315
 	}
+	
+	if instance_exists(obj_last_boss)
+	{
+	global.show_guide_mes = "폭주한 왁드로이드\n\n레이저는 공격 패턴은 플레이어를 타깃팅하여 발사하기에,\n점프나, 구르기등으로 피할 수 없다.\n따라서, '가드 ["+string(keyconverter(global.guard_key))+"]'를 통해 막도록 하자"
+	global.show_guide_mes_spr = 8
+	global.guide_gif = Sprite320
+	}
 }

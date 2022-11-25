@@ -846,9 +846,9 @@ w_alpha += (-0.01 - w_alpha)*0.1
 	{
 		if global.hp <= 0 && ((global.in_practice = 0 && global.slow_motion = 0 && global.never_move = 0 && global.never_move_in_setting = 0) || (instance_exists(obj_wakdroid_ending) && global.slow_motion = 0))
 		{
-		var message_1 = ("Tip : 올려 베기("+string(global.w_key_for_draw)+") 혹은 회전베기("+string(global.q_key_for_draw)+")를 사용해보세요")
+		var message_1 = ("Tip : 올려 베기("+string(keyconverter(global.w_key))+") 혹은 회전베기("+string(keyconverter(global.q_key))+")를 사용해보세요")
 		var message_2 = ("Tip : 기절상태에서 점프(Space) 혹은 구르기(아래 방향키)시 빠르게 기절을 풀수 있습니다")
-		var message_3 = ("Tip : "+string(global.e_key_for_draw)+"키를 꾹 눌러 레이지 모드를 사용하면 일시적으로 스테미나가 무한이 됩니다")
+		var message_3 = ("Tip : "+string(keyconverter(global.e_key))+"키를 꾹 눌러 레이지 모드를 사용하면 일시적으로 스테미나가 무한이 됩니다")
 		var random_message = choose(message_1,message_2,message_3)
 		dev_mes(random_message)
 		
@@ -3349,11 +3349,6 @@ if global.chat_activity = false
 	{
 	pressing = 1
 	}
-
-	if global.run_key != "Non" && (global.run_key = vk_shift || global.run_key = vk_up) && (keyboard_check(global.run_key) || gamepad_button_check(0,gp_shoulderr))
-	{
-	pressing = 1
-	}
 }
 
 
@@ -4290,6 +4285,12 @@ global.movement_speed = 0
 	cooltime = 1
 	alarm[1] = 8
 	cannot_move = 0
+	
+		if global.auto_run = 0
+		{
+		double_pressed_run_key = 0
+		double_pressed_run_key = 0
+		}
 	}
 }
 

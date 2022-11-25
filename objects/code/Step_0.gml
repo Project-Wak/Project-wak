@@ -423,12 +423,18 @@ global.gold_draw_alpha += (-0.01 - global.gold_draw_alpha)*0.1
 
 if global.playing_scene = 0 && global.show_guide_mes = -4 && global.hp > 0 && global.b_alpha < 0.3
 {
-	if keyboard_check_pressed(vk_escape)
+var cannot_open_on_menu = 0
+	if !instance_exists(setting_parents) && room = menu
+	{
+	cannot_open_on_menu = 1
+	}
+	
+	if keyboard_check_pressed(vk_escape) && cannot_open_on_menu = 0
 	{
 	alarm[10] = 1
 	}
 	
-	if keyboard_check_pressed(vk_tab)
+	if keyboard_check_pressed(vk_tab) && cannot_open_on_menu = 0
 	{
 	alarm[8] = 1
 	}

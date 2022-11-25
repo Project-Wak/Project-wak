@@ -33,9 +33,6 @@ repeat(100)
 
 
 
-
-
-
 if interecting_now = 1 && global.story_next < 100
 {
 global.never_move = 1
@@ -453,7 +450,7 @@ if cre_boss = 1
 	}
 }
 
-if total_died_from_here > 2
+if total_died_from_here > 2 && instance_exists(obj_wakdroid)
 {
 global.guide_boss = 1
 }
@@ -472,3 +469,9 @@ if message_phase != 31
 	}
 }
 
+
+
+if total_died_from_here_sec > 2 && instance_exists(player) && player.assult_mode <= -299
+{
+global.guide_boss = 1
+}

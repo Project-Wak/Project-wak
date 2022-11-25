@@ -42,6 +42,11 @@ if img_index = 7 && keyboard_check(global.jump_key)
 a = 1
 }
 
+if img_index = 70 && abs(global.movement_speed) >= 5
+{
+a = 1
+}
+
 if img_index = 11 && player.dash_attack > 0
 {
 a = 1

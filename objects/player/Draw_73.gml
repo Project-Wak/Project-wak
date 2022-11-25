@@ -122,12 +122,12 @@ if image_alpha > 0 && global.hp > 0 && global.playing_scene <= 0 && global.t_b_a
 		if hp_bar_alpha > 0 && global.slow_motion = 0 && global.show_challenger = 0
 		{
 		draw_rage += (global.rage_gauge - draw_rage)*0.1
-		draw_sprite_ext(sprite20,0,xx+67*v_x,yy+96*v_x,1.82*v_x,1.71*v_x,0,c_white,hp_bar_alpha)
+		draw_sprite_ext(sprite20,0,xx+66*v_x,yy+96*v_x,1.82*v_x,1.71*v_x,0,c_white,hp_bar_alpha)
 			if global.rage_gauge/100 > 0
 			{
 			draw_sprite_ext(sprite20,2,xx+69*v_x,yy+96*v_x,(draw_rage/100)*1.9*v_x,2*v_x,0,c_white,hp_bar_alpha)
 			}
-		draw_sprite_ext(sprite20,3,xx+67*v_x,yy+96*v_x,1.82*v_x,1.71*v_x,0,c_white,global.rage_w_alpha)
+		draw_sprite_ext(sprite20,3,xx+69*v_x,yy+96*v_x,1.82*v_x,1.71*v_x,0,c_white,global.rage_w_alpha)
 		}
 		
 		
@@ -139,6 +139,12 @@ if image_alpha > 0 && global.hp > 0 && global.playing_scene <= 0 && global.t_b_a
 			{
 			draw_sprite_ext(sprite20,7,x-22*v_x,y+56*v_x,(draw_o2/100)*1.9*v_x,2*v_x,0,c_white,obj_camera.o2_alpha)
 			}
+		}
+		
+		if global.medical_slincer1 > 0
+		{
+		draw_sprite_ext(spr_icon,9,xx+8*v_x,yy+133*v_x,v_x*0.3,v_x*0.3,0,c_white,hp_bar_alpha)
+		draw_text_kl_scale(xx+93*v_x,yy+128*v_x,"남은 에스트병 횟수 : "+string(global.can_use_sylinge1),v_x*64,-1,hp_bar_alpha,c_white,0,0,font0,v_x*0.3,v_x*0.3,0);
 		}
 	}
 }

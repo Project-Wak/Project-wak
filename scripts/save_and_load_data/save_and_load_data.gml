@@ -6,29 +6,21 @@ function save_and_load_data(argument0,argument1)
 	{
 	ini_open_protect("Project_wak_beta_04.ini")
 	
-	//골드
-	ini_write_real("key_tuto","a",global.key_tuto);
-	ini_write_real("poison_tuto","a",global.poison_tuto);
-	ini_write_real("chunyang","a",global.chunyang);
-	ini_write_real("replayed","a",global.replayed);
+	//도전과제
 	for(var i = 0; i <= 20; i++)
 	{
 	ini_write_real("achievement",string(i),global.achievement[i]);
 	ini_write_real("achievement_percentage",string(i),global.achievement_percentage[i]);
 	}
 	
-	//골드
-	ini_write_real("first_sleep","a",global.first_sleep);
 	
-	//골드
-	ini_write_real("back_stage_guide","a",global.back_stage_guide);
 	
-	//골드
+	//총 사망 횟수
 	ini_write_real("total_died","a",global.total_died);
 	
 	ini_write_real("all_reset_key","a",global.all_reset_key);
 	
-	//골드
+	//플레이 타임
 	ini_write_real("playtime","a",global.playtime);
 
 	//마스터 볼륨
@@ -45,7 +37,7 @@ function save_and_load_data(argument0,argument1)
 
 	//그래픽
 	ini_write_real("graphics","a",global.graphics);
-	ini_write_real("gumseong_tuto","a",global.gumseong_tuto);
+	
 
 	//키세팅
 	ini_write_string("a_key","a",global.a_key)
@@ -61,6 +53,7 @@ function save_and_load_data(argument0,argument1)
 	ini_write_string("g_key","a",global.g_key)
 	ini_write_string("console_mode","a",global.console_mode)
 	ini_write_string("brightness_setting","a",global.brightness_setting)
+	ini_write_string("auto_run","a",global.auto_run)
 
 
 
@@ -80,15 +73,28 @@ function save_and_load_data(argument0,argument1)
 	ini_write_real("keep_winning","a",global.keep_winning)
 	
 	
-	//연승
-	ini_write_real("difficulty","a",global.difficulty)
-
-	//연승
-	ini_write_real("time_plusment","a",global.time_plusment)
-	
 	
 	if argument1 = 1 //아이템 정보도 저장
 	{
+	//첫 잠 이벤트
+	ini_write_real("first_sleep","a",global.first_sleep);
+	
+	//가이드
+	ini_write_real("back_stage_guide","a",global.back_stage_guide);
+	
+	//가이드
+	ini_write_real("gumseong_tuto","a",global.gumseong_tuto);
+	ini_write_real("key_tuto","a",global.key_tuto);
+	ini_write_real("poison_tuto","a",global.poison_tuto);
+	ini_write_real("chunyang","a",global.chunyang);
+	ini_write_real("replayed","a",global.replayed);
+	
+	//난이도
+	ini_write_real("difficulty","a",global.difficulty)
+
+	//난이도 (시간 추가정도)
+	ini_write_real("time_plusment","a",global.time_plusment)
+		
 	ini_write_real("add_max_hp","a",global.add_max_hp);
 	ini_write_real("broken_clock","a",global.broken_clock);
 	//키 가이드
@@ -231,6 +237,7 @@ function save_and_load_data(argument0,argument1)
 	global.guard_key = ini_read_string("guard_key","a",string(vk_up))
 	global.g_key = ini_read_string("g_key","a",ord("G"))
 	global.console_mode = ini_read_real("console_mode","a",0)
+	global.auto_run = ini_read_real("auto_run","a",0)
 
 	//키 가이드
 	global.guide = ini_read_real("guide","a",0)

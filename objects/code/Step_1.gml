@@ -425,6 +425,7 @@ global.slow_motion += global.slow_motion*0.03
 			instance_destroy(obj_last_boss)
 			var __aaa____ = instance_create_depth(3328,2240,depth,obj_last_boss)
 			__aaa____.alarm[6] = 30
+			obj_andience1194.total_died_from_here_sec ++
 			obj_camera.t_x = -4
 			obj_camera.x = player.x
 			obj_potential_camera.x = player.x

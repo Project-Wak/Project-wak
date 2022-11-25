@@ -166,13 +166,13 @@ if room != menu && global.playing_scene = 0 && global.story_next < 100 && global
 		{
 		alpha____ = 1
 		}
-	draw_text_kl_scale(xx3,yy+151*v_x_,"Gold : "+string(floor(global.gold_for_draw))+" +"+string(floor(global.gold-global.gold_for_draw)),v_x_*64,-1,__alpha_set*alpha____*0.8,c_white,0,-1,font0,v_x_*0.34,v_x_*0.34,0);
+	draw_text_kl_scale(xx3,yy+171*v_x_,"Gold : "+string(floor(global.gold_for_draw))+" +"+string(floor(global.gold-global.gold_for_draw)),v_x_*64,-1,__alpha_set*alpha____*0.8,c_white,0,-1,font0,v_x_*0.34,v_x_*0.34,0);
 	}
 	
 	if (instance_exists(player) && player.assult_mode > 0) && global.show_credits = 0
 	{
-	draw_sprite_ext(Sprite162,2,xx3+12*v_x_,yy+198*v_x_,v_x_*0.65,v_x_*0.65,0,c_white,__alpha_set*0.5)
-	draw_text_kl_scale(xx3+32*v_x_,yy+191*v_x_,"전투모드",v_x_*64,-1,__alpha_set*0.5,c_white,0,-1,font0,v_x_*0.3,v_x_*0.3,0);
+	draw_sprite_ext(Sprite162,2,xx3+12*v_x_,yy+258*v_x_,v_x_*0.65,v_x_*0.65,0,c_white,__alpha_set*0.5)
+	draw_text_kl_scale(xx3+32*v_x_,yy+251*v_x_,"전투모드",v_x_*64,-1,__alpha_set*0.5,c_white,0,-1,font0,v_x_*0.3,v_x_*0.3,0);
 	}
 
 	
@@ -487,14 +487,7 @@ draw_rectangle(xx-32,yy+yyy+32,xx+xxx+32,yy+yyy+32-global.playing_scene_black_bg
 
 	if global.hp > 0 && instance_exists(player_message) && global.show_ui = 1
 	{
-		if audio_is_playing(boss_bgm) || audio_is_playing(final_battle)
-		{
-		draw_text_kl_scale(xx+xxx-32*v_x_,yy+yyy-(-64+global.playing_scene_black_bg)*v_x_,"("+string(global.skip_key_for_draw)+"키 꾹 눌러 눌러 빨리 감기)",v_x_*64,-1,0.5,c_white,0,1,font0,v_x_*0.3,v_x_*0.3,0);
-		}
-		else
-		{
-		draw_text_kl_scale(xx+xxx-32*v_x_,yy+yyy-(-64+global.playing_scene_black_bg)*v_x_,""+string(global.skip_key_for_draw)+"키를 눌러 넘기기)",v_x_*64,-1,0.5,c_white,0,1,font0,v_x_*0.3,v_x_*0.3,0);
-		}
+	draw_text_kl_scale(xx+xxx-32*v_x_,yy+yyy-(-64+global.playing_scene_black_bg)*v_x_,""+string(global.skip_key_for_draw)+"키를 눌러 넘기기)",v_x_*64,-1,0.5,c_white,0,1,font0,v_x_*0.3,v_x_*0.3,0);
 	}
 }
 

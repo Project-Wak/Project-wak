@@ -31,6 +31,7 @@ if global.story_next >= 101 && global.story_next < 300
 		message_phase = 4
 		}
 	}
+
 	
 	if message_phase = 4 && !instance_exists(check__) 
 	{
@@ -39,12 +40,17 @@ if global.story_next >= 101 && global.story_next < 300
 	check__.target = player
 	check__.parents = player
 	message_phase = 7
+	global.playing_scene = 1
+	global.never_move = 1
 	}
+	
+
 	
 	//show_debug_message(message_phase)
 	if message_phase >= 7 && global.left_time > 0
 	{
 	global.playing_scene = 1
+	global.never_move = 1
 
 
 		if !instance_exists(check__) && message_phase = 149
@@ -88,6 +94,8 @@ if global.story_next >= 101 && global.story_next < 300
 			{
 			global.left_time = 24
 			}
+		global.never_move = 0
+		global.playing_scene = 0
 		obj_camera.t_x = -4
 		obj_camera.t_y = -4
 		obj_camera.x = player.x
@@ -106,21 +114,29 @@ if global.story_next >= 101 && global.story_next < 300
 
 		
 		var key_guide = instance_create_depth(-100,-100,-999994,draw_key_)
-		key_guide.location = -2
+		key_guide.location = -3
 		key_guide.img_index = 0
 
 		var key_guide = instance_create_depth(-100,-100,-999994,draw_key_)
-		key_guide.location = -0.5
+		key_guide.location = -2
 		key_guide.img_index = 1
 
 		var key_guide = instance_create_depth(-100,-100,-999994,draw_key_)
-		key_guide.location = 1.5
+		key_guide.location = 2.5
 		key_guide.img_index = 7
+		
+		var key_guide = instance_create_depth(-100,-100,-999994,draw_key_)
+		key_guide.location = -0.5
+		key_guide.img_index = 70
 		}
 
 	message_phase = 303
 	obj_camera.tv_x = 1280*0.8
 	obj_camera.tv_y = 720*0.8
+	}
+	
+	if !instance_exists(player_message) && message_phase > 7
+	{
 	global.never_move = 0
 	global.playing_scene = 0
 	}

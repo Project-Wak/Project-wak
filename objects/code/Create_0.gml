@@ -147,6 +147,7 @@ global.poison_tuto = 0
 global.chunyang = 0
 global.hp_upgrage_money = 0
 global.add_max_hp = 0
+global.auto_run = 0
 global.o2 = 100
 
 
@@ -157,7 +158,7 @@ global.already_aed_used = 0
 alarm[1] = 3600
 global.key_setting_message = 0
 global.never_move_in_setting = 0
-global.game_ver = "Beta 3.10"
+global.game_ver = "Beta 3.11"
 playing_gameover_scene = 0
 global.graphics_for_code = 0
 global.show_guide_mes = -4
