@@ -62,6 +62,16 @@ if t_y = -64
 					{
 					cre_shadow = 1
 					}
+					
+					if my_connection = 4 && cre_shadow = 0
+					{
+					cre_shadow = 1
+					}
+					
+					if my_connection = 5 && cre_shadow = 0
+					{
+					cre_shadow = 1
+					}
 				}
 			}
 			else
@@ -74,6 +84,16 @@ if t_y = -64
 				obj_camera.y = y+65
 				
 					if my_connection = 14 && cre_shadow = 0
+					{
+					cre_shadow = 1
+					}
+					
+					if my_connection = 4 && cre_shadow = 0
+					{
+					cre_shadow = 1
+					}
+					
+					if my_connection = 5 && cre_shadow = 0
 					{
 					cre_shadow = 1
 					}
@@ -91,7 +111,7 @@ if room = room_sector_B06_2
 {
 	if cre_shadow = 1 && global.b_alpha < 0.7 && global.t_b_alpha <= 0
 	{
-	var test_mob = instance_create_depth(58,571,player.depth+3,gumseong_shadow)
+	var test_mob = instance_create_depth(58,571,player.depth+3,gumseong_shadow) && !instance_exists(gumseong_shadow)
 	test_mob.test_mob_type = 0
 	test_mob.image_xscale = -1
 	test_mob.image_yscale = 1
@@ -103,3 +123,21 @@ if room = room_sector_B06_2
 	cre_shadow = 0
 	}
 }
+
+if room = room_sector_B03_2_remaked
+{
+	if cre_shadow = 1 && global.b_alpha < 0.7 && global.t_b_alpha <= 0 && player.y >= 1300 && !instance_exists(gumseong_shadow)
+	{
+	var test_mob = instance_create_depth(2778,1600,player.depth+3,gumseong_shadow)
+	test_mob.test_mob_type = 0
+	test_mob.image_xscale = -1
+	test_mob.image_yscale = 1
+	cre_shadow = 2
+	}
+
+	if !instance_exists(gumseong_shadow) && cre_shadow = 2
+	{
+	cre_shadow = 0
+	}
+}
+

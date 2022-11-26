@@ -7,7 +7,7 @@ if global.show_guide_mes = -4
 {
 depth = player.depth-110
 
-if string_pos("(",text) != 0
+if string_pos("(",text) != 0 || string_pos("-",text) != 0
 {
 real_text = text
 real_text_a = string_length(text)+2
@@ -93,7 +93,7 @@ instance_destroy()
 
 
 
-if global.show_time = 0
+if global.show_time = 0 && global.selecting_stage = 0
 {
 	if string_length(text) < 10
 	{

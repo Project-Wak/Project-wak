@@ -452,11 +452,9 @@ draw_text_kl_scale(xx+xxx-32*v_x_,yy+yyy-(70)*v_x_,"("+string(global.skip_key_fo
 }
 
 
-
+var std_value = 110
 if global.playing_scene > 0
 {
-var std_value = 110
-
 	if global.show_credits > 0
 	{
 	std_value = 80

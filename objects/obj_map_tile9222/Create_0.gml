@@ -94,3 +94,9 @@ droped_item__.item_var = 110
 
 
 
+var door__ = instance_create_depth(3097,1603,0,obj_tp_door_basement)
+door__.connected_with = 4
+
+var door__ = instance_create_depth(5764,640,0,obj_tp_door_basement)
+door__.connected_with = 5
+

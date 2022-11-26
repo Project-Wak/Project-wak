@@ -35,7 +35,7 @@ movement_speed += (0 - movement_speed)*0.1
 
 global.gold += 1600
 
-	if room = room_sector_B03_2
+	if room = room_sector_B03_2_remaked
 	{
 	give_item(2,4)
 	}
@@ -54,6 +54,8 @@ global.gold += 1600
 	{
 	give_item(2,6)
 	}
+	
+	
 
 
 	knocked_down_ef = 999

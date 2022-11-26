@@ -119,7 +119,7 @@ wheel_cooltime --
 				{
 				global.choice_name[0] = "이어 하기"
 				global.choice_name[1] = "세이브 파일 삭제"
-				global.choice_name[2] = -4
+				global.choice_name[2] = "뒤로 가기"
 				}
 				else
 				{
@@ -144,12 +144,18 @@ wheel_cooltime --
 						timer_des = 1
 						alarm[2] = 120
 						}
-						else
+						
+						if global.choice_now = 1
 						{
 						global.choosed = 0
 						global.choice_now = 0
 						global.choice = 0
 						really = 1
+						}
+						
+						if global.choice_now = 2
+						{
+						game_restart()
 						}
 					}
 					else

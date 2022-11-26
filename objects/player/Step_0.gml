@@ -328,7 +328,7 @@ if global.never_move_in_setting = 0 && global.playing_scene = 0 && global.none_w
 	key_guide.img_index = 14
 	}
 	
-	if global.energy_laser = 0 && global.weapon_upgraded[global.n_sword] > 0 && global.n_sword != 5 && !instance_exists(draw_key_)
+	if global.energy_laser = 0 && global.weapon_upgraded[global.n_sword] > 0 && global.n_sword <= 4 && !instance_exists(draw_key_)
 	{
 	global.rage_gauge = 100
 	global.energy_laser = 1
@@ -1786,7 +1786,7 @@ w_alpha += (-0.01 - w_alpha)*0.1
 					{
 					hurt = 1
 					hurt_cooltime = 6
-					hp_minus_for_player(259,_placed_obj)
+					hp_minus_for_player(859,_placed_obj)
 				
 			
 				

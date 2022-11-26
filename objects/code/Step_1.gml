@@ -171,7 +171,7 @@ global.slow_motion += global.slow_motion*0.03
 				}
 			}
 			
-			if (playing_gameover_scene > 0 || instance_exists(obj_wakdroid_ending)) && sfx_broken = 0 && global.slow_motion > 1200 && global.story_next < 100
+			if (playing_gameover_scene > 0 || instance_exists(obj_wakdroid_ending)) && sfx_broken = 0 && global.slow_motion > 1200 && global.story_next < 100 && room != room_sector_runaway
 			{
 			sfx_broken = 1
 				if instance_exists(obj_wakdroid_ending)
@@ -271,7 +271,7 @@ global.slow_motion += global.slow_motion*0.03
 		
 		save_and_load_data(1,0)
 		
-		if instance_exists(obj_wakdroid_ending) && !instance_exists(obj_last_boss)
+		if instance_exists(obj_wakdroid_ending) && !instance_exists(obj_last_boss) && room != room_sector_runaway
 		{
 		global.platform_speed = 0
 		room_goto(room_main)

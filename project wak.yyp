@@ -132,6 +132,7 @@
     {"id":{"name":"sprite99","path":"sprites/sprite99/sprite99.yy",},"order":16,},
     {"id":{"name":"dreamy_effect","path":"objects/dreamy_effect/dreamy_effect.yy",},"order":31,},
     {"id":{"name":"down_effect_for_laser","path":"objects/down_effect_for_laser/down_effect_for_laser.yy",},"order":16,},
+    {"id":{"name":"sector_map","path":"sprites/sector_map/sector_map.yy",},"order":264,},
     {"id":{"name":"Sprite307","path":"sprites/Sprite307/Sprite307.yy",},"order":8,},
     {"id":{"name":"spr_move_run145","path":"sprites/spr_move_run145/spr_move_run145.yy",},"order":135,},
     {"id":{"name":"twitch_chat_disconnect","path":"scripts/twitch_chat_disconnect/twitch_chat_disconnect.yy",},"order":4,},

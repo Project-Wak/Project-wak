@@ -146,6 +146,7 @@ audio_sound_gain(sfx,0.07*global.master_volume*2*global.sfx_volume,0)
 		}
 		else if (argument0 = "/ending" || argument0 = "/end")
 		{
+		global.real_ending = 0
 		global.lantern = 1
 		instance_create_depth(2994,2331,depth,obj_wakdroid_ending)
 		player.x = 2800

@@ -22,7 +22,7 @@ ball_timer = 440
 cre_gumseong = 0
 }
 
-if global.never_move = 0
+if global.never_move = 0 && global.never_move_in_setting = 0
 {
 ball_timer++
 }

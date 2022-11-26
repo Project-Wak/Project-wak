@@ -72,6 +72,7 @@ function save_and_load_data(argument0,argument1)
 	//연승
 	ini_write_real("keep_winning","a",global.keep_winning)
 	
+	ini_write_real("replayed","a",global.replayed);
 	
 	
 	if argument1 = 1 //아이템 정보도 저장
@@ -87,7 +88,6 @@ function save_and_load_data(argument0,argument1)
 	ini_write_real("key_tuto","a",global.key_tuto);
 	ini_write_real("poison_tuto","a",global.poison_tuto);
 	ini_write_real("chunyang","a",global.chunyang);
-	ini_write_real("replayed","a",global.replayed);
 	
 	//난이도
 	ini_write_real("difficulty","a",global.difficulty)

@@ -745,6 +745,7 @@ audio_sound_gain(bgm,0.23*global.master_volume*2*global.bgm_volume*volume_downer
 				{
 				file_delete("Project_wak_beta_04.ini")
 				global.replayed ++
+				save_and_load_data(1,2)
 				select_end = 1
 				}
 			global.choosed = 0

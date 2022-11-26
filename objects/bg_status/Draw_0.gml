@@ -49,36 +49,36 @@ if (pressed > 0 && global.key_setting_message > 0) || global.key_setting_message
 	
 	
 	var item_name__ = "장착 안함"
-	var item_desc__ = "무기를 장착하지 않음\n가드력 0%\n\n특수 효과 : 무기를 사용하는 공격은 사용 불가 (단, 달리기를 하지 않아도 "+string(keyconverter(global.a_key))+"키를 누를시 대쉬 스킬 발동)"
+	var item_desc__ = "무기를 장착하지 않음\n가드 효율 0%\n\n특수 효과 : 무기를 사용하는 공격은 사용 불가 (단, 달리기를 하지 않아도 "+string(keyconverter(global.a_key))+"키를 누를시 대쉬 스킬 발동)"
 	if cal__img = 1
 	{
 	item_name__ = "양손 광선검 (+"+string(global.weapon_upgraded[cal__img])+")"
-	item_desc__ = "양손으로 광선검을 사용한다\n가드력 0%\n\n특수 효과 : 익스플로전 사용 가능"
+	item_desc__ = "양손으로 광선검을 사용한다\n가드 효율 0%\n\n특수 효과 : 익스플로전 사용 가능"
 	}
 	if cal__img = 2
 	{
 	item_name__ = "초록 광선검 (+"+string(global.weapon_upgraded[cal__img])+")"
-	item_desc__ = "왁굳에디션 광선검\n가드력 10%\n\n특수 효과 : 일반 공격 공속 증가"
+	item_desc__ = "왁굳에디션 광선검\n가드 효율 10%\n\n특수 효과 : 일반 공격 공속 증가"
 	}
 	if cal__img = 3
 	{
 	item_name__ = "붉은 광선검 (+"+string(global.weapon_upgraded[cal__img])+")"
-	item_desc__ = "푸른 광선검과 함께라면 더욱 강력해진다\n가드력 0%"
+	item_desc__ = "푸른 광선검과 함께라면 더욱 강력해진다\n가드 효율 0%"
 	}
 	if cal__img = 4
 	{
 	item_name__ = "푸른 광선검 (+"+string(global.weapon_upgraded[cal__img])+")"
-	item_desc__ = "붉은 광선검과 함께라면 더욱 강력해진다\n가드력 0%"
+	item_desc__ = "붉은 광선검과 함께라면 더욱 강력해진다\n가드 효율 0%"
 	}
 	if cal__img = 5
 	{
 	item_name__ = "돌격 소총 (+"+string(global.weapon_upgraded[cal__img])+")"
-	item_desc__ = "가디언 팬치들이 사용하던 소총 (예능 무기)\n가드력 -90%\n\n특수 효과 : "+string(keyconverter(global.a_key))+"키를 사용한 공격만 가능, 가드 불가, 총알 제한 없음\n적의 방어력을 무시한 고정 데미지 적용"
+	item_desc__ = "가디언 팬치들이 사용하던 소총 (예능 무기)\n가드 효율 -90%\n\n특수 효과 : "+string(keyconverter(global.a_key))+"키를 사용한 공격만 가능, 가드 불가, 총알 제한 없음\n적의 방어력을 무시한 고정 데미지 적용"
 	}
 	if cal__img = 6
 	{
 	item_name__ = "지옥참마도 (+"+string(global.weapon_upgraded[cal__img])+")"
-	item_desc__ = "검성 우왁굳으로 돌아갈 때다\n가드력 20%\n\n특수 효과 : '할복' 사용 가능"
+	item_desc__ = "검성 우왁굳으로 돌아갈 때다\n가드 효율 20%\n\n특수 효과 : '할복' 사용 가능"
 	}
 	
 	draw_text_kl_scale(xx+50*_c_x-global.key_setting_message*_c_x*70,yy-16*_c_x+global.key_setting_message*_c_x*80,item_name__,16,999,0.74,image_blend,0,-1,font0,1/3.5*_c_x,1/3.5*_c_x,image_angle)
@@ -180,7 +180,7 @@ if critical_per < 0
 critical_per = 0
 }
 draw_text_kl_scale(xx+20*_c_x,yy-16*0.8,"플레이어 정보",16,999,0.9,image_blend,0,-1,font0,1/3*_c_x,1/3*_c_x,image_angle)
-draw_text_kl_scale(xx+20*_c_x,yy+32*0.8,"HP : "+string(hp___)+"/"+string(player.max_hp)+"\nstamina : "+string(stamina_)+"/100"+"\n\n\nDMG : "+string(dmg)+"\n          +("+string(critical_dmg)+" critical dmg ["+string(critical_per)+"% 확률])\n\nDEF : "+string(def)+"%\n\n\nGuard power : "+string(g_p)+"% 만큼\n 가드시 스테미나를 덜 소모합니다\n\n\n보유 중인 골드 :\n"+string(global.gold)+" Gold\n\n\n\n"+"피로도 : "+string(global.tiredness)+"/24\n\n(피로도가 18 이상 쌓였을 경우,\n                   최대 체력이 감소합니다)",54*_c_x,2300*_c_x,0.7,image_blend,0,-1,font0,1/3.5*_c_x,1/3.5*_c_x,image_angle)
+draw_text_kl_scale(xx+20*_c_x,yy+32*0.8,"HP : "+string(hp___)+"/"+string(player.max_hp)+"\nstamina : "+string(stamina_)+"/100"+"\n\n\nDMG : "+string(dmg)+"\n          +("+string(critical_dmg)+" critical dmg ["+string(critical_per)+"% 확률])\n\nDEF : "+string(def)+"%\n\n\n가드 효율 : "+string(g_p)+"% 만큼\n 가드시 스테미나를 덜 소모합니다\n\n\n보유 중인 골드 :\n"+string(global.gold)+" Gold\n\n\n\n"+"피로도 : "+string(global.tiredness)+"/24\n\n(피로도가 18 이상 쌓였을 경우,\n                   최대 체력이 감소합니다)",54*_c_x,2300*_c_x,0.7,image_blend,0,-1,font0,1/3.5*_c_x,1/3.5*_c_x,image_angle)
 }
 else
 {

@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 global.n_to_setting__ = 0
-if global.key_setting_message = 0
+if global.key_setting_message = 0 
 {
 	if global.playing_scene = 0
 	{

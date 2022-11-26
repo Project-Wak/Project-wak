@@ -49,32 +49,32 @@ if (pressed > 0 && global.key_setting_message > 0) || global.key_setting_message
 	
 	var item_name_upgrade = ""
 	var item_name__ = "장착 안함"
-	var item_desc__ = "무기를 장착하지 않음\n가드력 0%\n\n특수 효과 : 무기를 사용하는 공격은 사용 불가 (단, 달리기를 하지 않아도 "+string(global.a_key_for_draw)+"키를 누를시 대쉬 스킬 발동)"
+	var item_desc__ = "무기를 장착하지 않음\n가드 효율 0%\n\n특수 효과 : 무기를 사용하는 공격은 사용 불가 (단, 달리기를 하지 않아도 "+string(global.a_key_for_draw)+"키를 누를시 대쉬 스킬 발동)"
 	
 	
 	if cal__img = 1
 	{
 	item_name__ = "양손 광선검 (+"+string(global.weapon_upgraded[cal__img])+")"
 	item_name_upgrade = "양손 광선검 (+"+string(global.weapon_upgraded[cal__img]+1)+")"
-	item_desc__ = "양손으로 광선검을 사용한다\n가드력 0%\n\n특수 효과 : '익스플로전' 사용 가능"
+	item_desc__ = "양손으로 광선검을 사용한다\n가드 효율 0%\n\n특수 효과 : '익스플로전' 사용 가능"
 	}
 	if cal__img = 2
 	{
 	item_name__ = "초록 광선검 (+"+string(global.weapon_upgraded[cal__img])+")"
 	item_name_upgrade = "초록 광선검 (+"+string(global.weapon_upgraded[cal__img]+1)+")"
-	item_desc__ = "왁굳에디션 광선검\n가드력 10%\n\n특수 효과 : 일반 공격 공속 증가"
+	item_desc__ = "왁굳에디션 광선검\n가드 효율 10%\n\n특수 효과 : 일반 공격 공속 증가"
 	}
 	if cal__img = 3
 	{
 	item_name__ = "붉은 광선검 (+"+string(global.weapon_upgraded[cal__img])+")"
 	item_name_upgrade = "붉은 광선검 (+"+string(global.weapon_upgraded[cal__img]+1)+")"
-	item_desc__ = "푸른 광선검과 함께라면 더욱 강력해진다\n가드력 0%"
+	item_desc__ = "푸른 광선검과 함께라면 더욱 강력해진다\n가드 효율 0%"
 	}
 	if cal__img = 4
 	{
 	item_name__ = "푸른 광선검 (+"+string(global.weapon_upgraded[cal__img])+")"
 	item_name_upgrade = "푸른 광선검 (+"+string(global.weapon_upgraded[cal__img]+1)+")"
-	item_desc__ = "붉은 광선검과 함께라면 더욱 강력해진다\n가드력 0%"
+	item_desc__ = "붉은 광선검과 함께라면 더욱 강력해진다\n가드 효율 0%"
 	}
 	if cal__img = 5
 	{
@@ -86,7 +86,7 @@ if (pressed > 0 && global.key_setting_message > 0) || global.key_setting_message
 	{
 	item_name__ = "지옥참마도 (+"+string(global.weapon_upgraded[cal__img])+")"
 	item_name_upgrade = "지옥참마도 (+"+string(global.weapon_upgraded[cal__img]+1)+")"
-	item_desc__ = "검성 우왁굳이 되는거다\n가드력 20%\n\n특수 효과 : '할복' 사용 가능"
+	item_desc__ = "검성 우왁굳이 되는거다\n가드 효율 20%\n\n특수 효과 : '할복' 사용 가능"
 	}
 
 
@@ -102,7 +102,7 @@ if (pressed > 0 && global.key_setting_message > 0) || global.key_setting_message
 		draw_text_kl_scale(xx+50*_c_x,yy+200*_c_x-16*_c_x,item_name_upgrade,16,999,0.74,image_blend,0,-1,font0,1/3.5*_c_x,1/3.5*_c_x,image_angle)
 		
 			
-			if global.weapon_upgraded[cal__img] = 0 && cal__img != 5 && global.none_wakgood_mode = false
+			if global.weapon_upgraded[cal__img] = 0 && cal__img <= 4 && global.none_wakgood_mode = false
 			{
 			draw_text_kl_scale(xx+50*_c_x,yy+200*_c_x,"\n+ 기본 데미지 +3증가 및 '에네르기파' 사용 가능",54*_c_x,2300*_c_x,0.63,image_blend,0,-1,font0,1/4*_c_x,1/4*_c_x,image_angle)
 			}

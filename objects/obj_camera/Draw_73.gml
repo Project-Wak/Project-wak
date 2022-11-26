@@ -1,5 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
+var std_value = 44
 if global.show_credits > 0
 {
 var xx = camera_get_view_x(view_camera[0])
@@ -10,10 +11,6 @@ var v_x_ = obj_camera.v_x/1280
 
 	if global.playing_scene > 0
 	{
-	var std_value = 44
-
-	
-
 		if global.playing_scene_black_bg < std_value
 		{
 		global.playing_scene_black_bg ++

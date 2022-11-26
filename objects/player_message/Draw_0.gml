@@ -87,6 +87,25 @@ draw_text_kl_scale(x,y-50*image_yscale,real_text,16,9999,image_alpha,image_blend
 	draw_text_kl_scale(xx-95*v_x,yy+50*v_x,string(cal_days2)+"일 "+string(global.left_time-obj_bed.set_time - cal_days2*24)+"시간 남음",64,-1,0.8*image_alpha,c_white,-1,-1,font0,v_x/4,v_x/4,0)
 	}
 	
+	if global.selecting_stage = 1
+	{
+	var v_x = obj_camera.v_x/1280
+	var yy = player.y-v_x*200
+	var __ing_ind__ = global.opened_sector-2
+	
+		if __ing_ind__ > 5
+		{
+		__ing_ind__ = 5
+		}
+	
+		if instance_exists(activator)
+		{
+		draw_sprite_ext(sector_map,__ing_ind__,x,yy+52*v_x,v_x*1.4,v_x*1.4,0,c_white,1*image_alpha)
+		draw_sprite_ext(sector_map,6,x+(activator.selected_sector-1)*v_x*33.5,yy+52*v_x,v_x*1.4,v_x*1.4,0,c_white,1*image_alpha)
+		}
+	draw_text_kl_scale(x,yy,"탐험할 섹터를 선택해주세요",64,-1,1*image_alpha,c_white,-1,0,font0,v_x/3.5,v_x/3.5,0)
+	}
+	
 	
 	if (global.show_time = 2)
 	{

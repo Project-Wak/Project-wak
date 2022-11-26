@@ -62,7 +62,7 @@ if message_phase = 1
 		if global.tutorial = 1 && room = room_main && cannot_active_more = 0
 		{
 		check__ = instance_create_depth(x,y,depth-1,player_message)
-		check__.text = "<-     (Sector B02)     ->"
+		check__.text = "<-     Sector B02     ->"
 		check__.target = player.id
 		check__.parents = id
 		
@@ -112,6 +112,7 @@ if message_phase = 1
 		{
 		global.never_move = 1
 		global.playing_scene = 1
+		global.selecting_stage = 1
 			if keyboard_check_pressed(global.left_key)
 			{
 			var sfx = audio_play_sound(activate_sfx,0,0)
@@ -144,20 +145,29 @@ if message_phase = 1
 				}
 				else if selected_sector = 6
 				{
-				check__.text = "<-     (지하 하수도)     ->"
+				check__.text = "<-     지하 하수도     ->"
 				}
 				else if selected_sector = 7
 				{
-				check__.text = "<-     (왁드로이드 개발실 입구)     ->"
+				check__.text = "<-     왁드로이드 개발실 입구     ->"
 				}
 				else
 				{
-				check__.text = "<-     (Sector B0"+string(selected_sector)+")     ->"
+				check__.text = "<-     Sector B0"+string(selected_sector)+"     ->"
+				}
+				
+				if keyboard_check_pressed(vk_escape)
+				{
+				global.never_move = 0
+				global.playing_scene = 0
+				global.selecting_stage = 0
+				message_phase = 0
+				alarm[1] = 1
 				}
 			}
 			else
 			{
-			check__.text = "<-     (Sector B"+string(selected_sector)+")     ->"
+			check__.text = "<-     Sector B"+string(selected_sector)+"     ->"
 			}
 		}
 	}
@@ -172,6 +182,7 @@ if global.tutorial = 1 && room = room_main
 	parents.destination = selected_sector
 	global.never_move = 1
 	global.playing_scene = 1
+	global.selecting_stage = 0
 		with(parents)
 		{
 		activated *= -1
@@ -183,6 +194,7 @@ if global.tutorial = 1 && room = room_main
 	{
 	global.never_move = 0
 	global.playing_scene = 0
+	global.selecting_stage = 0
 	message_phase = 0
 	}
 }
@@ -196,6 +208,7 @@ else
 			{
 			global.never_move = 1
 			global.playing_scene = 1
+			global.selecting_stage = 0
 				with(parents)
 				{
 				activated *= -1
@@ -209,6 +222,7 @@ else
 			{
 			global.never_move = 0
 			global.playing_scene = 0
+			global.selecting_stage = 0
 			message_phase = 0
 			}
 		}
@@ -221,6 +235,7 @@ else
 			{
 			global.never_move = 0
 			global.playing_scene = 0
+			global.selecting_stage = 0
 			message_phase = 0
 			}
 		}

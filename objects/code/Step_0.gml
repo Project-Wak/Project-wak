@@ -9,7 +9,14 @@ global.credit_message = "\n\n\n\nDirector\n아버 (1인 개발)\n\n\nProgramer\n
 }
 
 
-if global.back_to_origin_stage = 2 && global.b_alpha < 0.1
+if global.back_to_origin_stage > 0 && room = room_main
+{
+player.x = 1213
+player.y = 734
+timer_back_to_stage ++
+}
+
+if timer_back_to_stage > 100
 {
 global.back_to_origin_stage = 0
 }

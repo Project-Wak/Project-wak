@@ -75,3 +75,8 @@ if global.real_ending > 0 && global.show_credits = 0 && global.killed_angel > 0
 {
 instance_destroy()
 }
+
+if instance_exists(obj_last_boss) || instance_exists(obj_wakdroid_ending)
+{
+instance_destroy()
+}

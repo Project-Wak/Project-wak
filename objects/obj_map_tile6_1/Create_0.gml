@@ -35,6 +35,8 @@ global.save_point_x = 1000
 global.save_point_y = 700
 
 global.platform_speed = 10
+global.dreamy_alpha = 0
+global.back_to_origin_stage = 0
 
 slow_motioned = 0
 

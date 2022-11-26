@@ -834,7 +834,7 @@ depth = player.depth-32
 		
 		if patturn >= 5 && patturn < 6
 		{
-			if instance_exists(angel_spear)
+			if instance_exists(angel_spear) && instance_exists(_light_3)
 			{
 			_light_3.x = angel_spear.x
 			_light_3.y = angel_spear.y

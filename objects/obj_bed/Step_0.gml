@@ -62,6 +62,14 @@ global.playing_scene = 1
 		check__.text = "<-     ("+string(set_time)+"시간 잔다)     ->"
 		}
 		
+		if keyboard_check_pressed(vk_escape)
+		{
+		global.show_time = 0
+		message_phase = 0
+		instance_destroy(player_message)
+		alarm[1] = 1
+		}
+		
 		
 		if keyboard_check_pressed(global.left_key)
 		{
