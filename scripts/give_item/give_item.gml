@@ -22,7 +22,7 @@ function give_item(argument0,argument1)
 		
 		if _cal__ = 4
 		{
-		chat_up("탈리스만 '강철 나시'를 획득하였다!")
+		chat_up("탈리스만 '런닝 나시'를 획득하였다!")
 		}
 		
 		if _cal__ = 5

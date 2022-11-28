@@ -108,8 +108,15 @@ cannot_step = 1
 }
 else
 {
-
-depth = player.depth-32
+	if grabing_alpha > 0
+	{
+	depth = player.depth+32
+	}
+	else
+	{
+	depth = player.depth-32
+	}
+	
 	if instance_exists(_light_1)
 	{
 	_light_1.x = x
@@ -271,13 +278,22 @@ depth = player.depth-32
 
 	if scene__ >= 1
 	{
-	depth = player.depth-32
+		if grabing_alpha > 0
+		{
+		depth = player.depth+32
+		}
+		else
+		{
+		depth = player.depth-32
+		}
 	global.dreamy_alpha += (1 - global.dreamy_alpha)*0.04
 	activated = 2
 	skip_boss_apearence = 1
 	player.assult_mode = 300
 		if instance_exists(check__)
 		{
+		global.save_point_x = player.x+150
+		global.save_point_y = player.y
 		global.playing_scene = 0
 		global.never_move = 0
 		instance_destroy(check__)
@@ -555,6 +571,13 @@ depth = player.depth-32
 			if patturn > 2.1 && patturn <= 2.4
 			{
 			bullet__ ++
+			w_alpha += (0 - w_alpha)*0.1
+			
+				if (bullet__-40)%60 = 0
+				{
+				w_alpha = 1.5
+				}
+			
 				if bullet__%60 = 0
 				{
 				view_shake(11,11,1)
@@ -1098,9 +1121,20 @@ depth = player.depth-32
 				bullet_.bullet_speed = 0.7
 				bullet_.attack_type = 0
 				}
+
 				
 				if grab_skill > 300
 				{
+					if global.hp <= 0
+					{
+					patturn = 0
+					grabing_alpha = 0
+					grabing_walpha = 0
+					n_dir_grabing = 1
+					n_grabing_total_pressed = 0
+					grab_skill = 0
+					}
+					
 					if instance_exists(spear_lastboss_grab)
 					{
 						repeat(irandom_range(8,12))
@@ -1117,6 +1151,7 @@ depth = player.depth-32
 					player.gravity = 0.3
 					global.hp = -1
 					global.never_move = 0
+					
 						repeat(choose(2,4))
 						{
 						var _ef = instance_create_depth(player.x+irandom_range(-16,16),player.y,depth-1,effect_spark)
@@ -1136,16 +1171,17 @@ depth = player.depth-32
 			
 			if grab_skill < 300
 			{
-				if global.hp <= 0
-				{
-				global.hp = 1
-				}
 			grabing_walpha += (-0.01 - grabing_walpha)*0.1
 			center_xx = camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5
 				if abs(center_xx-player.x) > 3
 				{
 				player.x += sign(center_xx-player.x)*2
 				global.never_move = 1
+				}
+				
+				if global.hp <= 0 && grab_skill < 240
+				{
+				global.hp = 1
 				}
 			player.hurt = 1
 			

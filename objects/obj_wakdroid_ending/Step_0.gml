@@ -123,8 +123,8 @@ if interecting_now = 1 && (global.real_ending = 0 || (message_phase >= 61 && mes
 	global.choice += (1 - global.choice)*0.1
 		if global.none_wakgood_mode = false
 		{
-		global.choice_name[0] = "시계를 던져 왁드로이드를 과거로 보낸다 (시계 아이템 소모)"
-		global.choice_name[1] = "시계를 이용해 과거로 되돌아간다"
+		global.choice_name[0] = "시계로 왁드로이드를 과거로 보낸다 (Re:wind시계 영구 소모)"
+		global.choice_name[1] = "시계를 이용해 과거로 돌아가 모두를 대피시킨다"
 		global.choice_name[2] = "연구소 밖으로 도망 간다"
 			if global.choosed > 0
 			{
@@ -1105,11 +1105,14 @@ global.never_move = 1
 		{
 			if show_cinematic_sec = 4930
 			{
-			instance_destroy(obj_angel.wall1)
-			instance_destroy(obj_angel.wall2)
-			instance_destroy(obj_angel._light_)
-			instance_destroy(obj_angel.spear__)
-			instance_destroy(obj_angel)
+				if instance_exists(obj_angel)
+				{
+				instance_destroy(obj_angel.wall1)
+				instance_destroy(obj_angel.wall2)
+				instance_destroy(obj_angel._light_)
+				instance_destroy(obj_angel.spear__)
+				instance_destroy(obj_angel)
+				}
 			global.t_b_alpha = -0.1
 			obj_camera.x = 4468
 			obj_camera.t_x = 4468

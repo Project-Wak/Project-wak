@@ -109,9 +109,9 @@ if t_y = -64
 
 if room = room_sector_B06_2
 {
-	if cre_shadow = 1 && global.b_alpha < 0.7 && global.t_b_alpha <= 0
+	if cre_shadow = 1 && global.b_alpha < 0.7 && global.t_b_alpha <= 0 && !instance_exists(gumseong_shadow)
 	{
-	var test_mob = instance_create_depth(58,571,player.depth+3,gumseong_shadow) && !instance_exists(gumseong_shadow)
+	var test_mob = instance_create_depth(58,571,player.depth+3,gumseong_shadow)
 	test_mob.test_mob_type = 0
 	test_mob.image_xscale = -1
 	test_mob.image_yscale = 1

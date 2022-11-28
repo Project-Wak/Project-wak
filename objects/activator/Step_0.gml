@@ -11,6 +11,12 @@ else
 can_interect = 0
 }
 
+var cannot_go_now = 0
+if global.item_owned[5] > 0 && global.lantern <= 0
+{
+cannot_go_now = 1
+}
+
 
 if can_interect = 1 && keyboard_check_released(global.skip_key)
 {
@@ -19,7 +25,7 @@ if can_interect = 1 && keyboard_check_released(global.skip_key)
 	{
 		if !instance_exists(check__) && message_phase = 0
 		{
-			if global.tutorial = 1 && room = room_main
+			if global.tutorial = 1 && room = room_main && cannot_go_now = 0
 			{
 			global.never_move = 1
 			global.playing_scene = 1
@@ -59,7 +65,7 @@ if message_phase = 1
 {
 	if !instance_exists(check__)
 	{
-		if global.tutorial = 1 && room = room_main && cannot_active_more = 0
+		if global.tutorial = 1 && room = room_main && cannot_active_more = 0 && cannot_go_now = 0
 		{
 		check__ = instance_create_depth(x,y,depth-1,player_message)
 		check__.text = "<-     Sector B02     ->"
@@ -71,28 +77,41 @@ if message_phase = 1
 		}
 		else
 		{
-			if global.item_owned[5] > 0 && cannot_active_more = 0
+			if cannot_go_now = 0
 			{
-			global.never_move = 0
-			global.playing_scene = 0
-			message_phase = 0
-	
-				with(parents)
+				if global.item_owned[5] > 0 && cannot_active_more = 0
 				{
-				activated *= -1
-				}
-			}
-			else if cannot_active_more = 1
-			{
-			var sfx = audio_play_sound(cannot_buy,0,0)
-			audio_sound_gain(sfx,0.2*global.master_volume*2*global.sfx_volume,0)
+				global.never_move = 0
+				global.playing_scene = 0
+				message_phase = 0
 	
-			check__ = instance_create_depth(x,y,depth-1,player_message)
-			check__.text = "(더 이상 작동하지 않는것 같다)"
-			check__.target = player.id
-			check__.parents = id
-			global.never_move = 1
-			global.playing_scene = 1
+					with(parents)
+					{
+					activated *= -1
+					}
+				}
+				else if cannot_active_more = 1
+				{
+				var sfx = audio_play_sound(cannot_buy,0,0)
+				audio_sound_gain(sfx,0.2*global.master_volume*2*global.sfx_volume,0)
+	
+				check__ = instance_create_depth(x,y,depth-1,player_message)
+				check__.text = "(더 이상 작동하지 않는것 같다)"
+				check__.target = player.id
+				check__.parents = id
+				global.never_move = 1
+				global.playing_scene = 1
+				}
+				else
+				{
+				var sfx = audio_play_sound(cannot_buy,0,0)
+				audio_sound_gain(sfx,0.2*global.master_volume*2*global.sfx_volume,0)
+	
+				check__ = instance_create_depth(x,y,depth-1,player_message)
+				check__.text = "(키카드가 필요하다 뒤돌아가서 찾아보자)"
+				check__.target = player.id
+				check__.parents = id
+				}
 			}
 			else
 			{
@@ -100,15 +119,17 @@ if message_phase = 1
 			audio_sound_gain(sfx,0.2*global.master_volume*2*global.sfx_volume,0)
 	
 			check__ = instance_create_depth(x,y,depth-1,player_message)
-			check__.text = "(키카드가 필요하다 뒤돌아가서 찾아보자)"
+			check__.text = "(출발하기 전, 무기강화를 하러 가보자)"
 			check__.target = player.id
 			check__.parents = id
+			global.never_move = 1
+			global.playing_scene = 1
 			}
 		}
 	}
 	else
 	{
-		if cannot_active_more = 0 && global.tutorial = 1 && room = room_main
+		if cannot_active_more = 0 && global.tutorial = 1 && room = room_main && cannot_go_now = 0
 		{
 		global.never_move = 1
 		global.playing_scene = 1
@@ -175,7 +196,7 @@ if message_phase = 1
 
 
 
-if global.tutorial = 1 && room = room_main
+if global.tutorial = 1 && room = room_main && cannot_go_now = 0
 {
 	if message_phase = 2 && !instance_exists(check__) && selected_sector != 1
 	{

@@ -36,8 +36,41 @@ for(var i = 0.1; i < abs(hspeed); i += 0.5)
 	}
 }
 
+if global.aed > 0 && global.already_aed_used = 0
+{
+	if timer_back_to_player = 0
+	{
+	timer_back_to_player = 1
+	}
+already_droped = 1
 
+	if timer_back_to_player > 40 && timer_back_to_player < 60
+	{
+	gravity = 0
+	vspeed += (0 - vspeed)*0.05
+	hspeed += (0 - hspeed)*0.05
+	image_angle += (random_angle_p - image_angle)*0.08
+	random_angle_p += (sign(player.x - x) - random_angle_p)*0.05
+	}
+}
 
+if timer_back_to_player > 0
+{
+timer_back_to_player ++
+}
+
+if timer_back_to_player > 60
+{
+x += (player.x - x)*0.1
+y += (player.y - y)*0.1
+random_angle_p += (sign(player.x - x) - random_angle_p)*0.05
+image_angle += (random_angle_p - image_angle)*0.08
+	
+	if point_distance(x,y,player.x,player.y) <= 75
+	{
+	instance_destroy()
+	}
+}
 
 if spin_speed > 1
 {

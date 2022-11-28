@@ -4,29 +4,6 @@ image_blend = c_white
 
 
 
-if patturn != 0
-{
-automatic_bug_fix ++
-
-	if automatic_bug_fix > 9999
-	{
-	patturn = 0
-	cannot_step = 1
-	random_quake = -1
-	hit_motion = 0
-	hit_cooltime = 0
-	automatic_bug_fix = 0
-	}
-}
-else
-{
-	if instance_exists(block_laser)
-	{
-	instance_destroy(block_laser)
-	laser1 = -4
-	laser2 = -4
-	}
-}
 
 
 
@@ -299,6 +276,46 @@ else
 	if scene__ > 0
 	{
 	player.assult_mode = 300
+	
+		if patturn != 0
+		{
+		automatic_bug_fix ++
+
+			if automatic_bug_fix > 9999
+			{
+			patturn = 0
+			cannot_step = 1
+			random_quake = -1
+			hit_motion = 0
+			hit_cooltime = 0
+			automatic_bug_fix = 0
+			}
+		}
+		else
+		{
+			if instance_exists(block_laser)
+			{
+			instance_destroy(block_laser)
+			laser1 = -4
+			laser2 = -4
+			}
+		}
+
+		if !instance_exists(obj_hand)
+		{
+		left_hand = instance_create_depth(x-240,y+150,depth,obj_hand)
+		left_hand.image_angle = -8
+		left_hand.image_xscale = 1
+
+		right_hand = instance_create_depth(x+240,y+150,depth,obj_hand)
+		right_hand.image_angle = 8
+		right_hand.image_xscale = -1
+		}
+
+	
+	
+	
+	
 		if !instance_exists(_light_)
 		{
 		total_died_from_here ++

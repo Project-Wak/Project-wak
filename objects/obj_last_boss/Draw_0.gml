@@ -49,6 +49,10 @@ draw_sprite_ext(sprite15_1,2,player.x,player.y,image_xscale*3,image_yscale*0.8,9
 draw_self()
 draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,c_black,alpha*0.7)
 
+shader_set(shFlash)
+draw_sprite_ext(sprite_index,image_index,x,y,image_xscale,image_yscale,image_angle,c_white,w_alpha)
+shader_reset()
+
 
 if global.fps_draw > 0
 {

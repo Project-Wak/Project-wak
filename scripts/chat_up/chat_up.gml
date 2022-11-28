@@ -199,6 +199,10 @@ audio_sound_gain(sfx,0.07*global.master_volume*2*global.sfx_volume,0)
 			mob_parents.hp = 0
 			}
 		}
+		else if (argument0 = "/lanturn_dis")
+		{
+		global.lantern = 0
+		}
 		else if (argument0 = "/help")
 		{
 		chat_up("help)")

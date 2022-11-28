@@ -275,7 +275,7 @@ if room != menu && global.playing_scene = 0 && global.story_next < 100 && global
 	draw_text_kl_scale(xx-v_x_*436,__yyyy-v_x_*130+v_x_*104,"아래 베기["+string(global.s_key_for_draw)+"] (공중)",v_x_*64,-1,__alpha_set*0.7,c_white,0,-1,font0,v_x_*0.3,v_x_*0.3,0);
 	
 
-	draw_text_kl_scale(xx-v_x_*8,__yyyy-v_x_*180,"(G키로 가이드 열고 닫기)",v_x_*64,-1,__alpha_set,c_white,0,1,font0,v_x_*0.3,v_x_*0.3,0);
+	draw_text_kl_scale(xx-v_x_*8,__yyyy-v_x_*180,"("+string(keyconverter(global.g_key))+"키로 가이드 열고 닫기)",v_x_*64,-1,__alpha_set,c_white,0,1,font0,v_x_*0.3,v_x_*0.3,0);
 	draw_text_kl_scale(xx-v_x_*236,__yyyy-v_x_*130,"특수 스킬(레이지(Rage) 소모) : ",v_x_*64,-1,__alpha_set,$FF7D47EE,0,-1,font0,v_x_*0.3,v_x_*0.3,0);
 	draw_text_kl_scale(xx-v_x_*236,__yyyy-v_x_*130+v_x_*32,"레이지 모드 ["+string(global.e_key_for_draw)+" 지속 누르기]",v_x_*64,-1,__alpha_set*0.7,c_white,0,-1,font0,v_x_*0.3,v_x_*0.3,0);
 	draw_text_kl_scale(xx-v_x_*236,__yyyy-v_x_*130+v_x_*80,"특수 능력 (좌/우/하 지속 누르기 + "+string(global.e_key_for_draw)+")",v_x_*64,-1,__alpha_set*0.7,c_white,0,-1,font0,v_x_*0.3,v_x_*0.3,0);

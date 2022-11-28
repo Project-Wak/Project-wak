@@ -150,7 +150,7 @@ if image_alpha > 0 && global.hp > 0 && global.playing_scene <= 0 && global.t_b_a
 }
 
 
-	if global.playing_scene <= 0 && global.b_alpha < 0.3 && !instance_number(setting_parents) && global.hp > 0
+	if global.playing_scene <= 0 && global.b_alpha < 0.3 && !instance_number(setting_parents) && global.hp > 1
 	{
 		if hurt > 0 && ((gravity = 0 && vspeed = 0) || (global.o2 < 100))
 		{

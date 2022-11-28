@@ -15,6 +15,18 @@ check__.target = player.id
 check__.parents = id
 }
 
+if keyboard_check_pressed(string(global.g_key))
+{
+	if global.chat_activity = false
+	{
+	global.guide++
+		if global.guide > 1
+		{
+		global.guide = 0
+		}
+	}
+}
+
 
 if global.r_alpha > 0
 {
