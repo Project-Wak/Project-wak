@@ -13,7 +13,15 @@ for(var i = 0; i < 64; i++)
 
 
 //////////////////////////////////////////attack ai/////////////////////////////////////////
+if (instance_exists(player) && player.hurt = 0) || timer_ > 60
+{
 timer_ ++
+}
+
+if (instance_exists(player) && player.hurt != 0)
+{
+timer_ = 0
+}
 
 if timer_ = 20
 {

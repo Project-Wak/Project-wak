@@ -18,5 +18,5 @@ b++
 	}
 }
 
-draw_text_kl_scale(x,y,d_text,16,999,image_alpha*real_alpha,image_blend,0,0,font0,1/3*abs(image_xscale),1/3*abs(image_yscale),image_angle)
+draw_text_kl_scale(x,draw_y,d_text,16,999,image_alpha*real_alpha,image_blend,0,0,font0,1/3*abs(image_xscale),1/3*abs(image_yscale),image_angle)
 }

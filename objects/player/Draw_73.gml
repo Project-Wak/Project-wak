@@ -150,7 +150,7 @@ if image_alpha > 0 && global.hp > 0 && global.playing_scene <= 0 && global.t_b_a
 }
 
 
-	if global.playing_scene <= 0 && global.b_alpha < 0.3 && !instance_number(setting_parents) && global.hp > 1
+	if global.playing_scene <= 0 && global.b_alpha < 0.3 && !instance_number(setting_parents) && global.hp > 1 && global.show_guide_mes = -4
 	{
 		if hurt > 0 && ((gravity = 0 && vspeed = 0) || (global.o2 < 100))
 		{
@@ -159,7 +159,7 @@ if image_alpha > 0 && global.hp > 0 && global.playing_scene <= 0 && global.t_b_a
 		}
 		else
 		{
-			if global.hp <= max_hp*0.35 && global.medical_slincer1 > 0 && global.can_use_sylinge1 > 0 && gravity = 0 && vspeed = 0 && hurt = 0
+			if global.hp <= max_hp*0.35 && global.medical_slincer1 > 0 && global.can_use_sylinge1 > 0 && hurt = 0
 			{
 			draw_text_kl_scale(x,y-v_x*64,"에스트병 사용 (R)",v_x*64,-1,image_alpha*guide__alpha,c_white,0,0,font0,v_x*0.3,v_x*0.3,0);
 			guide__alpha += (1 - guide__alpha)*0.04

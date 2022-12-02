@@ -82,7 +82,7 @@ player.x += (x-90 - player.x)*0.1
 			{
 			image_index = 0
 			check__ = instance_create_depth(x,y,depth-1,player_message)
-			check__.text = "혹시 '프로젝트 왁'에 대해 알아?"
+			check__.text = "지금 도파민 박사가 여러 로봇 병기들을 만들어"
 			check__.target = id
 			check__.parents = id
 			}
@@ -92,16 +92,15 @@ player.x += (x-90 - player.x)*0.1
 		{
 		image_index = 0
 		check__ = instance_create_depth(x,y,depth-1,player_message)
-		check__.text = "?"
-		check__.target = player.id
+		check__.text = "그중 가장 강력한 최종병기 '왁컬로이드'를 필두로"
+		check__.target = id
 		check__.parents = id
 		}
 		
 		if !instance_exists(check__) && message_phase = 3
 		{
-		image_index = 0
 		check__ = instance_create_depth(x,y,depth-1,player_message)
-		check__.text = "아 모르는구나... 그럼 내가 설명해줄게!"
+		check__.text = "세계를 정복하려 하고 있어!"
 		check__.target = id
 		check__.parents = id
 		}
@@ -109,7 +108,7 @@ player.x += (x-90 - player.x)*0.1
 		if !instance_exists(check__) && message_phase = 4
 		{
 		check__ = instance_create_depth(x,y,depth-1,player_message)
-		check__.text = "도파민 박사는 왁굳의 모습을 본딴"
+		check__.text = "형이 이 일을 알기전에 내가 미리 이를 막으려 했지만"
 		check__.target = id
 		check__.parents = id
 		}
@@ -117,7 +116,7 @@ player.x += (x-90 - player.x)*0.1
 		if !instance_exists(check__) && message_phase = 5
 		{
 		check__ = instance_create_depth(x,y,depth-1,player_message)
-		check__.text = "'왁드로이드'를 만들어 세계를 파괴하려 계획하고 있어"
+		check__.text = "로봇 병기들이 너무 강력해서 나의 힘만으론 무리였어..."
 		check__.target = id
 		check__.parents = id
 		}
@@ -125,15 +124,15 @@ player.x += (x-90 - player.x)*0.1
 		if !instance_exists(check__) && message_phase = 6
 		{
 		check__ = instance_create_depth(x,y,depth-1,player_message)
-		check__.text = "!"
-		check__.target = player.id
+		check__.text = "형이 부디 나 대신 꼭 박사의 계획을 저지해줬으면 해!"
+		check__.target = id
 		check__.parents = id
 		}
 		
 		if !instance_exists(check__) && message_phase = 7
 		{
 		check__ = instance_create_depth(x,y,depth-1,player_message)
-		check__.text = "이걸 보고 '프로젝트 왁'이라고 불러"
+		check__.text = "대신!"
 		check__.target = id
 		check__.parents = id
 		}
@@ -141,7 +140,7 @@ player.x += (x-90 - player.x)*0.1
 		if !instance_exists(check__) && message_phase = 8
 		{
 		check__ = instance_create_depth(x,y,depth-1,player_message)
-		check__.text = "형이 이 일을 알기전에 내가 미리 이를 막으려 했지만"
+		check__.text = "나는 형이 '재료'만 조공해준다면, 형의 무기를 강화 시켜줄께!"
 		check__.target = id
 		check__.parents = id
 		}
@@ -149,7 +148,7 @@ player.x += (x-90 - player.x)*0.1
 		if !instance_exists(check__) && message_phase = 9
 		{
 		check__ = instance_create_depth(x,y,depth-1,player_message)
-		check__.text = "왁드로이드 연구실을 지키는 '강력한 여러 기계 보스'들이 너무 강력해서 막지 못했어"
+		check__.text = "'재료'들은 연구소를 탐험하면서 보이는 적들을 해치우면 얻을 수 있을꺼야!"
 		check__.target = id
 		check__.parents = id
 		}
@@ -157,23 +156,23 @@ player.x += (x-90 - player.x)*0.1
 		if !instance_exists(check__) && message_phase = 10
 		{
 		check__ = instance_create_depth(x,y,depth-1,player_message)
-		check__.text = "형이 부디 나 대신 꼭 박사의 계획을 저지해줬으면 해"
-		check__.target = id
+		check__.text = "!"
+		check__.target = player.id
 		check__.parents = id
 		}
 		
 		if !instance_exists(check__) && message_phase = 11
 		{
 		check__ = instance_create_depth(x,y,depth-1,player_message)
-		check__.text = "?"
-		check__.target = player.id
+		check__.text = "아! 그리고!"
+		check__.target = id
 		check__.parents = id
 		}
 		
 		if !instance_exists(check__) && message_phase = 12
 		{
 		check__ = instance_create_depth(x,y,depth-1,player_message)
-		check__.text = "물론 형 혼자서 막으라는건 아니야!"
+		check__.text = "연구소를 탐험하다 보면, 내가 미리 붙여둔 '안내 포스터'가 보일거야!"
 		check__.target = id
 		check__.parents = id
 		}
@@ -181,7 +180,7 @@ player.x += (x-90 - player.x)*0.1
 		if !instance_exists(check__) && message_phase = 13
 		{
 		check__ = instance_create_depth(x,y,depth-1,player_message)
-		check__.text = "형이 박사의 계획 저지하는 대신, 나는 옆에서 지원해줄게!"
+		check__.text = "그중 특히 '화살표'모양의 안내 포스터를 따라가면 아이템이 숨겨져 있으니"
 		check__.target = id
 		check__.parents = id
 		}
@@ -189,171 +188,32 @@ player.x += (x-90 - player.x)*0.1
 		if !instance_exists(check__) && message_phase = 14
 		{
 		check__ = instance_create_depth(x,y,depth-1,player_message)
-		check__.text = "?"
-		check__.target = player.id
+		check__.text = "꼭 참고해!"
+		check__.target = id
 		check__.parents = id
 		}
-		
+
 		if !instance_exists(check__) && message_phase = 15
 		{
 		check__ = instance_create_depth(x,y,depth-1,player_message)
-		check__.text = "무슨 지원을 할거냐고?"
+		check__.text = "아! 참고로 연구소 탐험은 밖에있는 '플렛폼'을 타고 내려갈 수 있어"
 		check__.target = id
 		check__.parents = id
 		}
-		
+			
 		if !instance_exists(check__) && message_phase = 16
 		{
 		check__ = instance_create_depth(x,y,depth-1,player_message)
-		check__.text = "바로 '장비 강화'야!"
+		check__.text = "일단 지금은 여기까지 오느라 피곤했을 테니 한숨 자고 가는게 좋을 것 같아!"
 		check__.target = id
 		check__.parents = id
 		}
-		
+			
 		if !instance_exists(check__) && message_phase = 17
-		{
-		check__ = instance_create_depth(x,y,depth-1,player_message)
-		check__.text = "형이 나에게 필요한 재료를 조공해주면, 내가 장비를 강화시켜줄게!"
-		check__.target = id
-		check__.parents = id
-		}
-		
-		if !instance_exists(check__) && message_phase = 18
-		{
-		check__ = instance_create_depth(x,y,depth-1,player_message)
-		check__.text = "언제든 필요하면 나에게 말을 걸어줘!"
-		check__.target = id
-		check__.parents = id
-		}
-		
-		if message_phase = 19
-		{
-			if !instance_exists(check__)
-			{
-			check__ = instance_create_depth(x,y,depth-1,player_message)
-			check__.text = "..."
-			check__.target = player.id
-			check__.parents = id
-			player.image_xscale = 1
-			}
-		}
-		else
-		{
-			if (x - player.x) < 300
-			{
-			player.movement_speed = -4
-			}
-		}
-		
-		if !instance_exists(check__) && message_phase = 20
-		{
-		check__ = instance_create_depth(x,y,depth-1,player_message)
-		check__.text = "아 형!"
-		check__.target = id
-		check__.parents = id
-		player.image_xscale = -1
-		}
-		
-		if !instance_exists(check__) && message_phase = 21
-		{
-		check__ = instance_create_depth(x,y,depth-1,player_message)
-		check__.text = "깜빡한게 있어!"
-		check__.target = id
-		check__.parents = id
-		}
-		
-		if !instance_exists(check__) && message_phase = 22
-		{
-		check__ = instance_create_depth(x,y,depth-1,player_message)
-		check__.text = "?"
-		check__.target = player.id
-		check__.parents = id
-		}
-		
-		if !instance_exists(check__) && message_phase = 23
-		{
-		check__ = instance_create_depth(x,y,depth-1,player_message)
-		check__.text = "내가 구한 정보에 의하면, 박사의 '왁드로이드'는 아직 완성되지 않았고"
-		check__.target = id
-		check__.parents = id
-		}
-		
-		if !instance_exists(check__) && message_phase = 24
-		{
-		check__ = instance_create_depth(x,y,depth-1,player_message)
-		check__.text = "완성까지 '3일'정도 남았대!"
-		check__.target = id
-		check__.parents = id
-		}
-		
-		if !instance_exists(check__) && message_phase = 25
-		{
-		check__ = instance_create_depth(x,y,depth-1,player_message)
-		check__.text = "그 전에 개발중인 왁드로이드를 파괴하면 박사의 계획을 저지할 수 있어"
-		check__.target = id
-		check__.parents = id
-		}
-		
-		if !instance_exists(check__) && message_phase = 26
-		{
-		check__ = instance_create_depth(x,y,depth-1,player_message)
-		check__.text = "이 연구소 내부의 지하 깊은 곳에 왁드로이드 개발실이 있어"
-		check__.target = id
-		check__.parents = id
-		}
-		
-		if !instance_exists(check__) && message_phase = 27
-		{
-		check__ = instance_create_depth(x,y,depth-1,player_message)
-		check__.text = "근데 각 층 마다 해당 구역을 지키는 박사가 만든 로봇들이 있는데"
-		check__.target = id
-		check__.parents = id
-		}
-		
-		if !instance_exists(check__) && message_phase = 28
-		{
-		check__ = instance_create_depth(x,y,depth-1,player_message)
-		check__.text = "그중에도 박사의 '매우 강력한 기계 보스'들이 각 구역을 지키고 있어"
-		check__.target = id
-		check__.parents = id
-		}
-			
-		if !instance_exists(check__) && message_phase = 29
-		{
-		check__ = instance_create_depth(x,y,depth-1,player_message)
-		check__.text = "강력한 로봇을 처치하면 조금이나마 왁드로이드의 개발을 늦출 수 있을거야!" 
-		check__.target = id
-		check__.parents = id
-		}
-		
-		if !instance_exists(check__) && message_phase = 30
-		{
-		check__ = instance_create_depth(x,y,depth-1,player_message)
-		check__.text = "아! 참고로 지하는 밖에있는 플렛폼을 타고 내려갈 수 있어"
-		check__.target = id
-		check__.parents = id
-		}
-		
-		if !instance_exists(check__) && message_phase = 31
-		{
-		check__ = instance_create_depth(x,y,depth-1,player_message)
-		check__.text = "그럼 잘 부탁할게! 형!"
-		check__.target = id
-		check__.parents = id
-		}
-			
-		if !instance_exists(check__) && message_phase = 32
-		{
-		check__ = instance_create_depth(x,y,depth-1,player_message)
-		check__.text = "일단 지금은 여기까지 오느라 피곤했을테니 한숨 자는게 좋겠어"
-		check__.target = id
-		check__.parents = id
-		}
-			
-		if !instance_exists(check__) && message_phase = 33
 		{
 		global.show_guide_mes = "피로도와 수면 시스템\n\n피로도의 경우, 시간이 지날 때마다 증가하게 되며\n피로도가 18이상이 된 경우, 플레이어의 최대 체력이 줄어들게 된다.\n이때 피로도는, 플레이어가 수면을 취함으로써 회복할수 있다.\n\n(참고로 침대와 상호작용해야 게임이 저장되니 수시로 이용하자)"
 		global.show_guide_mes_spr = 0
+		global.guide_gif = Sprite323
 		global.tutorial = 1
 		message_phase = 0
 		can_interect = 0

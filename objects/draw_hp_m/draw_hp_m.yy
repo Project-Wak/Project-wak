@@ -2,7 +2,10 @@
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
   "name": "draw_hp_m",
-  "spriteId": null,
+  "spriteId": {
+    "name": "sprite173",
+    "path": "sprites/sprite173/sprite173.yy",
+  },
   "solid": false,
   "visible": true,
   "managed": true,

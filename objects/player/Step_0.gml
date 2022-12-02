@@ -273,7 +273,7 @@ hspeed = ins_pl_hand.hspeed
 
 if global.story_next < 100 && global.playing_scene = 0 && global.hp > 0 && global.never_move = 0 && global.b_alpha < 0.1 && global.never_move_in_setting = 0 && show_left_time = 0 && global.left_time <= 12 && global.slow_motion = 0 && code.playing_gameover_scene = 0
 {
-global.show_guide_mes = "왁드로이드 완성까지 시간이 얼마 남지 않았다"
+global.show_guide_mes = "왁컬로이드 완성까지 시간이 얼마 남지 않았다"
 global.show_guide_mes_spr = 6
 show_left_time = 2
 }
@@ -488,10 +488,10 @@ if guarding >= 0.8 && pering = 0 && guard_success = 1 && global.n_sword != 0 && 
 }
 
 
-if guarded = 1 && hurt != 0 && (!instance_exists(obj_wakdroid_ending) || global.real_ending != 0)
+if guarded = 1 && hurt != 0 && (!instance_exists(obj_wakdroid_ending) || global.real_ending != 0) && global.playing_scene = 0
 {
 var d_ef = instance_create_depth(player.x,player.y-64,depth-1,draw_hp_m)
-var text__ = "Low stanima"
+var text__ = "Low stamina"
 if global.korean_text = 1
 {
 text__ = "스테미나 부족"
@@ -1818,12 +1818,13 @@ w_alpha += (-0.01 - w_alpha)*0.1
 					{
 					y -= 1
 					}
-				sfx_for_multiplayer(choose(global.hit_sfx_1,global.hit_sfx_2,global.hit_sfx_3),0,0.2)
+
 				
 				var ins_near = instance_nearest(x,y,obj_hand)
 					if instance_exists(ins_near) && point_distance(x,y,ins_near.x,ins_near.y) <= 128
 					{
 					hp_minus_for_player(384,_placed_obj)
+					sfx_for_multiplayer(choose(global.hit_sfx_1,global.hit_sfx_2,global.hit_sfx_3),0,0.2)
 					vspeed = -4
 					}
 					
@@ -1833,6 +1834,7 @@ w_alpha += (-0.01 - w_alpha)*0.1
 						if gravity = 0 && vspeed = 0
 						{
 						hp_minus_for_player(66,_placed_obj)
+						sfx_for_multiplayer(choose(global.hit_sfx_1,global.hit_sfx_2,global.hit_sfx_3),0,0.2)
 						vspeed = -4
 						}
 						else
@@ -1849,6 +1851,7 @@ w_alpha += (-0.01 - w_alpha)*0.1
 					if instance_exists(ins_near) && point_distance(x,y,ins_near.x,ins_near.y) <= 128
 					{
 					hp_minus_for_player(352,_placed_obj)
+					sfx_for_multiplayer(choose(global.hit_sfx_1,global.hit_sfx_2,global.hit_sfx_3),0,0.2)
 					vspeed = -4
 					}
 					
@@ -1856,6 +1859,7 @@ w_alpha += (-0.01 - w_alpha)*0.1
 					if instance_exists(ins_near) && point_distance(x,y,ins_near.x,ins_near.y) <= 130
 					{
 					hp_minus_for_player(352,_placed_obj)
+					sfx_for_multiplayer(choose(global.hit_sfx_1,global.hit_sfx_2,global.hit_sfx_3),0,0.2)
 					vspeed = -4
 					}
 					
@@ -1863,6 +1867,7 @@ w_alpha += (-0.01 - w_alpha)*0.1
 					if instance_exists(ins_near) && place_meeting(x,y,ins_near) && spin = 0 && dash_attack = 0
 					{
 					hp_minus_for_player(232,_placed_obj)
+					sfx_for_multiplayer(choose(global.hit_sfx_1,global.hit_sfx_2,global.hit_sfx_3),0,0.2)
 					vspeed = -4
 					}
 					
@@ -1871,6 +1876,7 @@ w_alpha += (-0.01 - w_alpha)*0.1
 					{
 					movement_speed = ins_near.hspeed
 					hp_minus_for_player(225,_placed_obj)
+					sfx_for_multiplayer(choose(global.hit_sfx_1,global.hit_sfx_2,global.hit_sfx_3),0,0.2)
 					vspeed = -4
 					}
 					
@@ -1879,12 +1885,14 @@ w_alpha += (-0.01 - w_alpha)*0.1
 					{
 					movement_speed = image_xscale*5
 					hp_minus_for_player(1030,_placed_obj)
+					sfx_for_multiplayer(choose(global.hit_sfx_1,global.hit_sfx_2,global.hit_sfx_3),0,0.2)
 					vspeed = -4
 					}
 					
 					if (instance_exists(obj_angel) && obj_angel.activated > 0) && point_distance(x,y,ins_near.x,ins_near.y) > 64
 					{
 					hp_minus_for_player(257,_placed_obj)
+					sfx_for_multiplayer(choose(global.hit_sfx_1,global.hit_sfx_2,global.hit_sfx_3),0,0.2)
 					vspeed = -4
 					}
 
@@ -1894,6 +1902,7 @@ w_alpha += (-0.01 - w_alpha)*0.1
 					{
 					vspeed -= 6
 					hp_minus_for_player(628,_placed_obj)
+					sfx_for_multiplayer(choose(global.hit_sfx_1,global.hit_sfx_2,global.hit_sfx_3),0,0.2)
 					}
 				}
 			}

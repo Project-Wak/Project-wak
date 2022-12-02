@@ -877,7 +877,7 @@ global.playing_scene = 1
 					if !instance_exists(check__) && message_phase = 4
 					{
 					check__ = instance_create_depth(x,y,depth-1,player_message)
-					check__.text = string(global.nickname)+"님은 빨리 왁드로이드를 막으러 가세요!"
+					check__.text = string(global.nickname)+"님은 빨리 왁컬로이드를 막으러 가세요!"
 					check__.target = id
 					check__.parents = id
 					can_interect = 0

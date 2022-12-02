@@ -14,6 +14,7 @@ random_dir = choose(-1,1)
 change_dir = 0
 global.got_sec_phase = 1
 _light_3 = -4
+global.left_time = 24
 _aaa = -4
 back_my_point = 0
 skip_boss_apearence = 0

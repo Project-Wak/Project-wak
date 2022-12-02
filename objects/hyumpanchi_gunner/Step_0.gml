@@ -85,7 +85,7 @@ if gravity = 0 && vspeed >= 0 && cannot_move = 0
 		bullet__.bullet_speed = -12*sign(image_xscale);
 		}
 		
-		if attack_ >= 22
+		if attack_ >= 19
 		{
 		attack_ = 0
 		}
@@ -99,7 +99,7 @@ if gravity = 0 && vspeed >= 0 && cannot_move = 0
 	spin_delay++
 		if abs(x - player.x) <= 128
 		{
-		spin_delay += (128 - abs(x - player.x))/16
+		spin_delay += 0.5
 		}
 	}
 

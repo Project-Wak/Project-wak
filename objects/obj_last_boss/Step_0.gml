@@ -161,7 +161,7 @@ else
 		if activated = 2
 		{
 		global.boss_target = id
-		global.boss_name = "폭주한 왁드로이드"
+		global.boss_name = "폭주한 왁컬로이드"
 			if player.attack_laser_sec = 0 && player.attack_laser = 0 && player.suicide = 0 && player.sting_attack = 0
 			{
 			obj_camera.tv_x = 1280*1.1
@@ -1203,7 +1203,7 @@ else
 					grabing_walpha = 1
 					}
 				
-					if n_grabing_total_pressed > 20
+					if n_grabing_total_pressed > 16
 					{
 					y = 0
 					patturn = 0

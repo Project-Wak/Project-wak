@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
-y += (ystart-32 - y)*0.1
+
+draw_y += (t_y-32 - draw_y)*0.1
 depth = -99
 
 if c = 0

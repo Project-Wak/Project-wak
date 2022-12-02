@@ -5,11 +5,11 @@ a = 0
 b = 0
 real_alpha = 0
 c = 0
+draw_y = ystart
+t_y = ystart
 time = 0
-with(draw_hp_m)
-{
-time += 10
-}
+image_xscale = 0.2
+image_yscale = 0.2
 
 depth = player.depth-1
 alarm[1] = 5

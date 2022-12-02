@@ -725,6 +725,19 @@ player.guarding = 2
 				var sfx = audio_play_sound(mob_faint,0,0)
 				audio_sound_gain(sfx,0.4*global.master_volume*2*global.sfx_volume,0)
 				view_shake(11,40,5)
+				
+					repeat(3)
+					{
+					var effect_ = instance_create_depth(left_hand.x,left_hand.y+70,left_hand.depth+1,down_effect)
+					effect_.t_image_yscale = 0.05*15
+					effect_.t_image_xscale = 0.4*12
+					effect_.received = 0
+		
+					var effect_ = instance_create_depth(right_hand.x,right_hand.y+70,right_hand.depth+1,down_effect)
+					effect_.t_image_yscale = 0.05*15
+					effect_.t_image_xscale = 0.4*12
+					effect_.received = 0
+					}
 				}
 			}
 		}
@@ -1043,15 +1056,18 @@ activated = 2
 			a___.image_xscale = 10
 			a___.image_yscale = 3
 		
-			var effect_ = instance_create_depth(left_hand.x,left_hand.y+50,depth+10,down_effect)
-			effect_.t_image_yscale = 0.4*3
-			effect_.t_image_xscale = 0.05*3
+			repeat(3)
+			{
+			var effect_ = instance_create_depth(left_hand.x,left_hand.y+70,left_hand.depth+1,down_effect)
+			effect_.t_image_yscale = 0.05*15
+			effect_.t_image_xscale = 0.4*12
 			effect_.received = 0
 		
-			var effect_ = instance_create_depth(right_hand.x,right_hand.y+50,depth+10,down_effect)
-			effect_.t_image_yscale = 0.4*3
-			effect_.t_image_xscale = 0.05*3
+			var effect_ = instance_create_depth(right_hand.x,right_hand.y+70,right_hand.depth+1,down_effect)
+			effect_.t_image_yscale = 0.05*15
+			effect_.t_image_xscale = 0.4*12
 			effect_.received = 0
+			}
 		
 				repeat(8)
 				{
@@ -1162,15 +1178,18 @@ activated = 2
 			a___.image_xscale = 10
 			a___.image_yscale = 3
 		
-			var effect_ = instance_create_depth(left_hand.x,left_hand.y+50,depth+10,down_effect)
-			effect_.t_image_yscale = 0.4*3
-			effect_.t_image_xscale = 0.05*3
+			repeat(3)
+			{
+			var effect_ = instance_create_depth(left_hand.x,left_hand.y+70,left_hand.depth+1,down_effect)
+			effect_.t_image_yscale = 0.05*15
+			effect_.t_image_xscale = 0.4*12
 			effect_.received = 0
 		
-			var effect_ = instance_create_depth(right_hand.x,right_hand.y+50,depth+10,down_effect)
-			effect_.t_image_yscale = 0.4*3
-			effect_.t_image_xscale = 0.05*3
+			var effect_ = instance_create_depth(right_hand.x,right_hand.y+70,right_hand.depth+1,down_effect)
+			effect_.t_image_yscale = 0.05*15
+			effect_.t_image_xscale = 0.4*12
 			effect_.received = 0
+			}
 		
 				repeat(8)
 				{
@@ -1335,7 +1354,7 @@ activated = 2
 	{
 	cannot_step = 1
 	obj_hand.cannot_step = 0
-		if patturn >= 3 && patturn < 3.06
+		if patturn >= 3 && patturn < 3.08
 		{
 		left_hand.image_angle += (0 - left_hand.image_angle)*0.1
 		right_hand.image_angle += (0 - right_hand.image_angle)*0.1
@@ -1364,7 +1383,7 @@ activated = 2
 		}
 	
 	
-		if patturn = 3.06
+		if patturn = 3.08
 		{
 			if left_hand.vspeed < 4
 			{
@@ -1411,15 +1430,18 @@ activated = 2
 			a___.image_xscale = 10
 			a___.image_yscale = 3
 		
-			var effect_ = instance_create_depth(left_hand.x,left_hand.y+50,depth+10,down_effect)
-			effect_.t_image_yscale = 0.4*3
-			effect_.t_image_xscale = 0.05*3
+			repeat(3)
+			{
+			var effect_ = instance_create_depth(left_hand.x,left_hand.y+70,left_hand.depth+1,down_effect)
+			effect_.t_image_yscale = 0.05*15
+			effect_.t_image_xscale = 0.4*12
 			effect_.received = 0
 		
-			var effect_ = instance_create_depth(right_hand.x,right_hand.y+50,depth+10,down_effect)
-			effect_.t_image_yscale = 0.4*3
-			effect_.t_image_xscale = 0.05*3
+			var effect_ = instance_create_depth(right_hand.x,right_hand.y+70,right_hand.depth+1,down_effect)
+			effect_.t_image_yscale = 0.05*15
+			effect_.t_image_xscale = 0.4*12
 			effect_.received = 0
+			}
 		
 				repeat(8)
 				{
@@ -1521,6 +1543,14 @@ activated = 2
 					var sfx = audio_play_sound(mob_faint,0,0)
 					audio_sound_gain(sfx,0.4*global.master_volume*2*global.sfx_volume,0)
 					view_shake(11,30,1)
+					
+						repeat(3)
+						{
+						var effect_ = instance_create_depth(left_hand.x,left_hand.y+70,left_hand.depth+1,down_effect)
+						effect_.t_image_yscale = 0.05*15
+						effect_.t_image_xscale = 0.4*12
+						effect_.received = 0
+						}
 					}
 		
 				var a___ = instance_create_depth(left_hand.x,left_hand.y+60,depth,rage_mode_knockback_attacked)
@@ -1558,6 +1588,14 @@ activated = 2
 					var sfx = audio_play_sound(mob_faint,0,0)
 					audio_sound_gain(sfx,0.4*global.master_volume*2*global.sfx_volume,0)
 					view_shake(11,30,1)
+					
+						repeat(3)
+						{
+						var effect_ = instance_create_depth(right_hand.x,right_hand.y+70,right_hand.depth+1,down_effect)
+						effect_.t_image_yscale = 0.05*15
+						effect_.t_image_xscale = 0.4*12
+						effect_.received = 0
+						}
 					}
 		
 				var a___ = instance_create_depth(right_hand.x,right_hand.y+60,depth,rage_mode_knockback_attacked)

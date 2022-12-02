@@ -364,7 +364,7 @@ cannot_step = 1
 	global.left_time += 6*global.time_plusment
 		if global.killed_first_boss = 0
 		{
-		global.show_guide_mes = "보스 레이드\n\n보스를 처치하면 왁드로이드의 완성이 늦춰진다 (D-day "+string(6*global.time_plusment)+"시간 연장)\n\n또한 다음 섹터의 '키카드'를 드랍한다.\n\n(참고로, 보스는 여러번 반복해서 잡을수 있는데, 플레이 타임 길어짐 유의)"
+		global.show_guide_mes = "보스 레이드\n\n보스를 처치하면 왁컬로이드의 완성이 늦춰진다 (D-day "+string(6*global.time_plusment)+"시간 연장)\n\n또한 다음 섹터의 '키카드'를 드랍한다.\n\n(참고로, 보스는 여러번 반복해서 잡을수 있는데, 플레이 타임 길어짐 유의)"
 		global.show_guide_mes_spr = 4
 		global.killed_first_boss = 1
 		global.guide_gif = Sprite313
@@ -457,6 +457,7 @@ player.guarding = 2
 
 	wall2 = instance_create_depth(3136+200,512,player.depth+3,obj_floor_tile3)
 	wall2.image_yscale = 4.5
+	total_died_from_here ++
 	}
 	
 	if !audio_is_playing(quake_sfx) && global.show_credits = 0
@@ -522,6 +523,19 @@ player.guarding = 2
 			var a___ = instance_create_depth(right_hand.x,right_hand.y+60,depth,rage_mode_knockback_attacked)
 			a___.image_xscale = 10
 			a___.image_yscale = 3
+			
+			repeat(3)
+			{
+			var effect_ = instance_create_depth(left_hand.x,left_hand.y+70,left_hand.depth+1,down_effect)
+			effect_.t_image_yscale = 0.05*15
+			effect_.t_image_xscale = 0.4*12
+			effect_.received = 0
+		
+			var effect_ = instance_create_depth(right_hand.x,right_hand.y+70,right_hand.depth+1,down_effect)
+			effect_.t_image_yscale = 0.05*15
+			effect_.t_image_xscale = 0.4*12
+			effect_.received = 0
+			}
 		
 				repeat(8)
 				{
@@ -671,9 +685,9 @@ activated = 2
 	
 	var cal_ = (hp/max_hp)*1.2
 	
-	if cal_ < 0.5
+	if cal_ < 0.8
 	{
-	cal_ = 0.5
+	cal_ = 0.8
 	}
 	
 	if cal_ > 1
@@ -889,15 +903,18 @@ obj_hand.cannot_step = 0
 		a___.image_xscale = 10
 		a___.image_yscale = 3
 		
-		var effect_ = instance_create_depth(left_hand.x,left_hand.y+50,depth+1,down_effect)
-		effect_.t_image_yscale = 0.4*3
-		effect_.t_image_xscale = 0.05*3
-		effect_.received = 0
+			repeat(3)
+			{
+			var effect_ = instance_create_depth(left_hand.x,left_hand.y+70,left_hand.depth+1,down_effect)
+			effect_.t_image_yscale = 0.05*15
+			effect_.t_image_xscale = 0.4*12
+			effect_.received = 0
 		
-		var effect_ = instance_create_depth(right_hand.x,right_hand.y+50,depth+1,down_effect)
-		effect_.t_image_yscale = 0.4*3
-		effect_.t_image_xscale = 0.05*3
-		effect_.received = 0
+			var effect_ = instance_create_depth(right_hand.x,right_hand.y+70,right_hand.depth+1,down_effect)
+			effect_.t_image_yscale = 0.05*15
+			effect_.t_image_xscale = 0.4*12
+			effect_.received = 0
+			}
 		
 			repeat(8)
 			{
@@ -1056,10 +1073,10 @@ obj_hand.cannot_step = 0
 	patturn += 0.001
 		if random_quake = -1
 		{
-		random_quake = choose(1,0,0)
-			if hp < 700
+		random_quake = 0
+			if hp < 100
 			{
-			random_quake = choose(1,1,0)
+			random_quake = 1
 			}
 		}
 	}
@@ -1113,15 +1130,18 @@ obj_hand.cannot_step = 0
 		a___.image_xscale = 10
 		a___.image_yscale = 3
 		
-		var effect_ = instance_create_depth(left_hand.x,left_hand.y+50,depth+1,down_effect)
-		effect_.t_image_yscale = 0.4*3
-		effect_.t_image_xscale = 0.05*3
-		effect_.received = 0
+			repeat(3)
+			{
+			var effect_ = instance_create_depth(left_hand.x,left_hand.y+70,left_hand.depth+1,down_effect)
+			effect_.t_image_yscale = 0.05*15
+			effect_.t_image_xscale = 0.4*12
+			effect_.received = 0
 		
-		var effect_ = instance_create_depth(right_hand.x,right_hand.y+50,depth+1,down_effect)
-		effect_.t_image_yscale = 0.4*3
-		effect_.t_image_xscale = 0.05*3
-		effect_.received = 0
+			var effect_ = instance_create_depth(right_hand.x,right_hand.y+70,right_hand.depth+1,down_effect)
+			effect_.t_image_yscale = 0.05*15
+			effect_.t_image_xscale = 0.4*12
+			effect_.received = 0
+			}
 		
 			repeat(8)
 			{

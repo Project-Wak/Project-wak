@@ -77,6 +77,11 @@ if img_index = 24 && player.charge_attack > 0
 a = 1
 }
 
+if img_index = 71 && player.charge_attack > 0
+{
+a = 1
+}
+
 if (img_index = 25 || img_index = 26) && player.attack_laser_sec > 0
 {
 a = 1

@@ -123,7 +123,7 @@ if interecting_now = 1 && (global.real_ending = 0 || (message_phase >= 61 && mes
 	global.choice += (1 - global.choice)*0.1
 		if global.none_wakgood_mode = false
 		{
-		global.choice_name[0] = "시계로 왁드로이드를 과거로 보낸다 (Re:wind시계 영구 소모)"
+		global.choice_name[0] = "시계로 왁컬로이드를 과거로 보낸다 (Re:wind시계 영구 소모)"
 		global.choice_name[1] = "시계를 이용해 과거로 돌아가 모두를 대피시킨다"
 		global.choice_name[2] = "연구소 밖으로 도망 간다"
 			if global.choosed > 0
@@ -211,7 +211,7 @@ if interecting_now = 1 && (global.real_ending = 0 || (message_phase >= 61 && mes
 		if !instance_exists(check__) && clock_throw_scene > 200
 		{
 		global.show_guide_mes_spr = 6
-		global.show_guide_mes = "성공적으로 자폭 직전의 왁드로이드는 과거로 보내졌다"
+		global.show_guide_mes = "성공적으로 자폭 직전의 왁컬로이드는 과거로 보내졌다"
 		message_phase++
 		}
 	}
@@ -308,7 +308,7 @@ if interecting_now = 1 && (global.real_ending = 0 || (message_phase >= 61 && mes
 			audio_sound_gain(bgm,0.23*global.master_volume*2*global.bgm_volume,0)
 			}
 		global.gameover_reason_title = "[소멸 엔딩]"
-		global.gameover_reason = "과거로 보낸 왁드로이드로 인해 과거의 자신이 사망하여 없어졌기에\n현재의 자신 또한 존재할 수 없게 되었다"
+		global.gameover_reason = "과거로 보낸 왁컬로이드로 인해 과거의 자신이 사망하여 없어졌기에\n현재의 자신 또한 존재할 수 없게 되었다"
 		show_ending += (1 - show_ending)*0.01
 		global.fix_camera = 0
 		ending_mes_timer += 0.5
@@ -344,7 +344,7 @@ if interecting_now = 1 && (global.real_ending = 0 || (message_phase >= 61 && mes
 	
 
 	//check__ = instance_create_depth(x,y,depth-1,player_message)
-	//check__.text = "(과거로 보내버린 왁드로이드가 폭발하여, 과거의 자신이 폭발에 휘말려 사망한듯 하다)"
+	//check__.text = "(과거로 보내버린 왁컬로이드가 폭발하여, 과거의 자신이 폭발에 휘말려 사망한듯 하다)"
 	//check__.target = player.id
 	//check__.parents = id
 
@@ -372,7 +372,7 @@ if interecting_now = 1 && (global.real_ending = 0 || (message_phase >= 61 && mes
 	if !instance_exists(check__) && message_phase = 31
 	{
 	global.show_guide_mes_spr = 6
-	global.show_guide_mes = "왁드로이드의 자폭으로 인해 폭발하는 연구소"
+	global.show_guide_mes = "왁컬로이드의 자폭으로 인해 폭발하는 연구소"
 	message_phase++
 	}
 	
@@ -448,7 +448,7 @@ if interecting_now = 1 && (global.real_ending = 0 || (message_phase >= 61 && mes
 	if !instance_exists(check__) && message_phase = 52
 	{
 	global.show_guide_mes_spr = 6
-	global.show_guide_mes = "왁드로이드의 자폭에 대한 사실을 모르는"
+	global.show_guide_mes = "왁컬로이드의 자폭에 대한 사실을 모르는"
 	message_phase++
 	}
 	
@@ -564,7 +564,7 @@ if interecting_now = 1 && (global.real_ending = 0 || (message_phase >= 61 && mes
 	if !instance_exists(check__) && message_phase = 62 && global.show_guide_mes = -4
 	{
 	global.show_guide_mes_spr = 6
-	global.show_guide_mes = "빨리 왁드로이드의 자폭에 대한 사실을 알려야만 한다!"
+	global.show_guide_mes = "빨리 왁컬로이드의 자폭에 대한 사실을 알려야만 한다!"
 	message_phase++
 	}
 	

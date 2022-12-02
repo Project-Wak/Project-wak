@@ -16,6 +16,14 @@ can_interect = 0
 }
 
 
+if global.show_guide_mes != -4 && interectinig_now > 0
+{
+	if string_pos("이 앞, 올려 베기",warning_message) != 0
+	{
+	global.guide_gif = Sprite321
+	}
+}
+
 if keyboard_check_released(global.skip_key) && can_interect = 1 && global.never_move_in_setting = 0
 {
 interectinig_now = 1
@@ -92,7 +100,6 @@ global.playing_scene = 1
 		global.poison_tuto = 1
 		tutorial_message = 1
 		}
-		
 		
 		if warning_message = "물이 깊으니 익사 주의"
 		{

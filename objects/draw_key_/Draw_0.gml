@@ -4,7 +4,7 @@ var cm_vx = (obj_camera.v_x/1280)*0.9
 var xx = camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5+location*96*cm_vx
 var yy = camera_get_view_y(view_camera[0])+160*cm_vx
 
-if img_index = 7 || img_index = 27 || img_index = 70
+if img_index = 7 || img_index = 27 || img_index = 70 || img_index = 71
 {
 draw_sprite_ext(sprite95,1,xx,yy,cm_vx,cm_vx,0,c_white,image_alpha*0.8)
 }
@@ -47,6 +47,10 @@ if img_index = 7
 string_ = "Space"
 }
 if img_index = 70
+{
+string_ = keyconverter(global.run_key)
+}
+if img_index = 71
 {
 string_ = keyconverter(global.run_key)
 }
@@ -100,6 +104,11 @@ string_ = "<- or ->"
 if img_index = 27
 {
 string_ = "Space"
+}
+
+if img_index = 71
+{
+draw_text_kl_scale(camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.66,yy-cm_vx*8,"+",16,9999,image_alpha,image_blend,-1,0,font0,cm_vx*1/2.5,cm_vx*1/2.5,0)
 }
 
 
@@ -163,7 +172,7 @@ draw_text_kl_scale(xx,yy+85*cm_vx,"일반 공격\n\n\n\n(지상에서 최대 4�
 
 if img_index = 24
 {
-draw_text_kl_scale(xx,yy+85*cm_vx,"대쉬\n\n\n\n[스테미나 대량 소비 및 시전 도중 가드 판정]\n\n\n\n(지상 or 공중에서 달리기 도중 "+string(global.a_key_for_draw)+")",16,9999,1,image_blend,0,0,font0,cm_vx*1/3,cm_vx*1/3,image_angle)
+draw_text_kl_scale(xx,yy+85*cm_vx,"대쉬\n\n\n\n[스테미나 대량 소비]",16,9999,1,image_blend,0,0,font0,cm_vx*1/3,cm_vx*1/3,image_angle)
 }
 
 if img_index = 3
@@ -192,6 +201,11 @@ draw_text_kl_scale(xx,yy+85*cm_vx,"점프",16,9999,1,image_blend,0,0,font0,cm_vx
 }
 
 if img_index = 70
+{
+draw_text_kl_scale(xx,yy+85*cm_vx,"달리기\n\n\n\n(방향키 연타로도 가능)",16,9999,1,image_blend,0,0,font0,cm_vx*1/3,cm_vx*1/3,image_angle)
+}
+
+if img_index = 71
 {
 draw_text_kl_scale(xx,yy+85*cm_vx,"달리기\n\n\n\n(방향키 연타로도 가능)",16,9999,1,image_blend,0,0,font0,cm_vx*1/3,cm_vx*1/3,image_angle)
 }

@@ -31,7 +31,7 @@ wall1 = instance_create_depth(3072,192,depth,obj_floor_tile3)
 wall1.image_yscale = 5
 
 
-var test_mob = instance_create_depth(1750,652,player.depth+3,wak_drone)
+var test_mob = instance_create_depth(2100,652,player.depth+3,wak_drone)
 test_mob.test_mob_type = 1
 test_mob.image_xscale = 0.75
 test_mob.image_yscale = 0.75

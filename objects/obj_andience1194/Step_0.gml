@@ -101,7 +101,7 @@ global.playing_scene = 1
 	if !instance_exists(check__) && message_phase = 6
 	{
 	check__ = instance_create_depth(x,y,depth-1,player_message)
-	check__.text = "서둘러 왁드로이드 작업하길 잘했네요...."
+	check__.text = "서둘러 왁컬로이드 작업하길 잘했네요...."
 	check__.target = id
 	check__.parents = id
 	}
@@ -117,7 +117,7 @@ global.playing_scene = 1
 	if !instance_exists(check__) && message_phase = 8
 	{
 	check__ = instance_create_depth(x,y,depth-1,player_message)
-	check__.text = "왁드로이드는 이미 완성됐습니다"
+	check__.text = "왁컬로이드는 이미 완성됐습니다"
 	check__.target = id
 	check__.parents = id
 	}
@@ -154,7 +154,7 @@ global.playing_scene = 1
 	if !instance_exists(check__) && message_phase = 11
 	{
 	check__ = instance_create_depth(x,y,depth-1,player_message)
-	check__.text = "왁드로이드 가동!"
+	check__.text = "왁컬로이드 가동!"
 	check__.target = id
 	check__.parents = id
 	}
@@ -259,7 +259,7 @@ global.playing_scene = 1
 	if !instance_exists(check__) && message_phase = 21
 	{
 	check__ = instance_create_depth(x,y,depth-1,player_message)
-	check__.text = "왁드로이드는 완성한지 얼마 되지 않아 안정성이 떨어진단 말입니다!"
+	check__.text = "왁컬로이드는 완성한지 얼마 되지 않아 안정성이 떨어진단 말입니다!"
 	check__.target = id
 	check__.parents = id
 	}
@@ -406,7 +406,7 @@ global.playing_scene = 1
 	{
 	obj_camera.t_x = -4
 	check__ = instance_create_depth(x,y,depth-1,player_message)
-	check__.text = "(왁드로이드를 쫓아가자)"
+	check__.text = "(왁컬로이드를 쫓아가자)"
 	check__.target = player.id
 	check__.parents = id
 	}

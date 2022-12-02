@@ -12,7 +12,16 @@ for(var i = 0; i <= 160; i++)
 
 
 //////////////////////////////////////////attack ai/////////////////////////////////////////
+if (instance_exists(player) && player.hurt = 0) || timer_ > 100
+{
 timer_ ++
+}
+
+if (instance_exists(player) && player.hurt != 0)
+{
+timer_ = 0
+}
+
 
 if timer_ = 60
 {

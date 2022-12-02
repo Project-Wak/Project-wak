@@ -38,7 +38,7 @@ if (pressed > 0 && global.key_setting_message > 0) || global.key_setting_message
 	if cal__img = 2
 	{
 	item_name__ =  "Re:wind 시계"
-	item_desc__ = "Re:wind뮤비속 시계를 본따 만든 휴대용 시계\n\n특수효과 : 게임 오버가 되었을 때 바로 직전의 과거로 시간을 되돌림\n또한, 현재 시각과 함께 왁드로이드 완성까지 남은 시간을 표시해줌"
+	item_desc__ = "Re:wind뮤비속 시계를 본따 만든 휴대용 시계\n\n특수효과 : 게임 오버가 되었을 때 바로 직전의 과거로 시간을 되돌림\n또한, 현재 시각과 함께 왁컬로이드 완성까지 남은 시간을 표시해줌"
 	}
 	if cal__img = 3
 	{

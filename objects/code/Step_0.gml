@@ -232,8 +232,9 @@ var saved_c = 0
 
 if (global.accessories_equip[0] = 2 || global.accessories_equip[1] = 2) && global.first_rewind = 0 && instance_exists(player) && global.b_alpha < 0.1
 {
-global.show_guide_mes = "Re:wind (사망 회귀) 시스템\n\n플레이어가 사망하게 된 경우, 1시간씩 시간을 소모하여\n사망 전의 과거(일종의 세이브 포인트)로 되돌린다.\n\n(이때의 시간 소모는, 게임 내의 '목숨'과 같은 시스템이라고 볼수 있다)"
+global.show_guide_mes = "Re:wind (사망 회귀) 시스템\n\n플레이어가 사망하게 된 경우, d-day를 1시간씩 시간을 소모하여\n사망 전의 과거(일종의 세이브 포인트)로 되돌린다.\n\n(이때의 시간 소모는, 게임 내의 '목숨'과 같은 시스템이라고 볼수 있다)"
 global.show_guide_mes_spr = 0
+global.guide_gif = Sprite324
 global.first_rewind = 1
 }
 
@@ -265,7 +266,7 @@ global.platform_speed = 0
 					else
 					{
 					global.gameover_reason_title = "[종말 엔딩]"
-					global.gameover_reason = "D-day가 지나, 박사의 왁드로이드가 완성되어버렸다"
+					global.gameover_reason = "D-day가 지나, 박사의 왁컬로이드가 완성되어버렸다"
 					}
 				global.never_move = 0
 				global.playing_scene = 0

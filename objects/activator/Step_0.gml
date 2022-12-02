@@ -12,7 +12,7 @@ can_interect = 0
 }
 
 var cannot_go_now = 0
-if global.item_owned[5] > 0 && global.lantern <= 0
+if global.item_owned[6] > 0 && global.lantern <= 0 && room = room_main
 {
 cannot_go_now = 1
 }
@@ -119,7 +119,7 @@ if message_phase = 1
 			audio_sound_gain(sfx,0.2*global.master_volume*2*global.sfx_volume,0)
 	
 			check__ = instance_create_depth(x,y,depth-1,player_message)
-			check__.text = "(출발하기 전, 무기강화를 하러 가보자)"
+			check__.text = "(출발하기 전, 팬치를 만나러 가보자)"
 			check__.target = player.id
 			check__.parents = id
 			global.never_move = 1
@@ -170,7 +170,7 @@ if message_phase = 1
 				}
 				else if selected_sector = 7
 				{
-				check__.text = "<-     왁드로이드 개발실 입구     ->"
+				check__.text = "<-     왁컬로이드 개발실 입구     ->"
 				}
 				else
 				{

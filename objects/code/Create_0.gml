@@ -6,6 +6,7 @@ twitch_chat_connect("woowakgood","우왁굳","oauth:43rzue6rdcldus9fomqrwmtfuaum
 
 global.chat_sender = noone
 global.chat_data = noone
+global.game_ver = "Beta 3.15"
 
 global.bubble_surf = surface_create(1920, 1080);
 global.rage_surf = surface_create(1920, 1080);
@@ -104,11 +105,11 @@ global.achievement_desc[15] = "쌉벌래두를 쓰러뜨렸다"
 global.achievement_name[16] = "연구소의 수호자"
 global.achievement_desc[16] = "창의 기사 엔젤로이드를 쓰러뜨렸다"
 
-global.achievement_name[17] = "왁드로이드"
-global.achievement_desc[17] = "왁드로이드를 저지했다"
+global.achievement_name[17] = "왁컬로이드"
+global.achievement_desc[17] = "왁컬로이드를 저지했다"
 
-global.achievement_name[18] = "폭주한 왁드로이드"
-global.achievement_desc[18] = "폭주한 왁드로이드를 쓰러뜨렸다"
+global.achievement_name[18] = "폭주한 왁컬로이드"
+global.achievement_desc[18] = "폭주한 왁컬로이드를 쓰러뜨렸다"
 
 global.achievement_name[19] = "왁귀상어"
 global.achievement_desc[19] = "귀상어두를 쓰러뜨렸다"
@@ -160,7 +161,6 @@ global.already_aed_used = 0
 alarm[1] = 3600
 global.key_setting_message = 0
 global.never_move_in_setting = 0
-global.game_ver = "Beta 3.12"
 playing_gameover_scene = 0
 global.graphics_for_code = 0
 global.show_guide_mes = -4
@@ -500,7 +500,7 @@ global.item_name_owned[6] = "Sector-B03 키카드"
 global.item_name_owned[7] = "Sector-B04 키카드"
 global.item_name_owned[8] = "Sector-B05 키카드"
 global.item_name_owned[9] = "지하 하수도 열쇠"
-global.item_name_owned[10] = "왁드로이드 개발실 키카드"
+global.item_name_owned[10] = "왁컬로이드 개발실 키카드"
 global.item_name_owned[11] = "Sector-B07 키카드"
 global.item_name_owned[12] = "Sector-B08 키카드"
 global.item_name_owned[13] = "Sector-B09 키카드"
