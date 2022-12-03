@@ -16,7 +16,7 @@ max_hp = 60
 last_hit = 0
 t_hp_bar_alpha = 0
 hp_bar_alpha = 0
-draw_hp = 420
+draw_hp = 60
 test_mob_type = 0
 t_x = x
 

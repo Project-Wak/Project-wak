@@ -10,23 +10,22 @@ global.never_move = 0
 //alarm[1] = 30
 alarm[2] = 100
 
-
 if global.simhaedoo_stage = 1
 {
-player.x = 5181
-player.y = 1869
-
-obj_camera.x = 5181
-obj_camera.y = 1869
+timer = 1
 }
 else
 {
+timer = 0
 player.x = 547
 player.y = 448
 
 obj_camera.x = 547
 obj_camera.y = 448
 }
+
+
+
 
 //var ele__ = instance_create_depth(-2100,448,0,obj_elevator)
 //ele__.t_x = -1000
@@ -63,7 +62,7 @@ global.save_point_x = 547
 global.save_point_y = 449
 
 global.platform_speed = 0
-alarm[3] = 5
+
 
 
 var warning_guide = instance_create_depth(540,340,0,obj_warning)

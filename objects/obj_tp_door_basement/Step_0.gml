@@ -107,37 +107,39 @@ if t_y = -64
 }
 
 
-if room = room_sector_B06_2
+if global.never_move_in_setting = 0
 {
-	if cre_shadow = 1 && global.b_alpha < 0.7 && global.t_b_alpha <= 0 && !instance_exists(gumseong_shadow)
+	if room = room_sector_B06_2 
 	{
-	var test_mob = instance_create_depth(58,571,player.depth+3,gumseong_shadow)
-	test_mob.test_mob_type = 0
-	test_mob.image_xscale = -1
-	test_mob.image_yscale = 1
-	cre_shadow = 2
+		if !instance_exists(gumseong_shadow) && cre_shadow = 2 && global.t_b_alpha >= 1
+		{
+		cre_shadow = 0
+		}
+	
+		if cre_shadow = 1 && global.b_alpha < 0.7 && global.t_b_alpha <= 0 && !instance_exists(gumseong_shadow)
+		{
+		var test_mob = instance_create_depth(58,571,player.depth+3,gumseong_shadow)
+		test_mob.test_mob_type = 0
+		test_mob.image_xscale = -1
+		test_mob.image_yscale = 1
+		cre_shadow = 2
+		}
 	}
 
-	if !instance_exists(gumseong_shadow) && cre_shadow = 2
+	if room = room_sector_B03_2_remaked
 	{
-	cre_shadow = 0
+		if !instance_exists(gumseong_shadow) && cre_shadow = 2 && global.t_b_alpha >= 1
+		{
+		cre_shadow = 0
+		}
+	
+		if cre_shadow = 1 && global.b_alpha < 0.7 && global.t_b_alpha <= 0 && player.y >= 1300 && !instance_exists(gumseong_shadow)
+		{
+		var test_mob = instance_create_depth(2778,1600,player.depth+3,gumseong_shadow)
+		test_mob.test_mob_type = 0
+		test_mob.image_xscale = -1
+		test_mob.image_yscale = 1
+		cre_shadow = 2
+		}
 	}
 }
-
-if room = room_sector_B03_2_remaked
-{
-	if cre_shadow = 1 && global.b_alpha < 0.7 && global.t_b_alpha <= 0 && player.y >= 1300 && !instance_exists(gumseong_shadow)
-	{
-	var test_mob = instance_create_depth(2778,1600,player.depth+3,gumseong_shadow)
-	test_mob.test_mob_type = 0
-	test_mob.image_xscale = -1
-	test_mob.image_yscale = 1
-	cre_shadow = 2
-	}
-
-	if !instance_exists(gumseong_shadow) && cre_shadow = 2
-	{
-	cre_shadow = 0
-	}
-}
-

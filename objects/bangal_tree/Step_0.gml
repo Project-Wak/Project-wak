@@ -118,7 +118,7 @@ global.playing_scene = 1
 	if !instance_exists(check__) && message_phase = 1
 	{
 	check__ = instance_create_depth(x,y,depth-1,player_message)
-	check__.text = "(황금 뱅갈나무다)"
+	check__.text = "(황금 뱅갈고무나무다)"
 	check__.target = player.id
 	check__.parents = id
 	}
@@ -134,7 +134,7 @@ global.playing_scene = 1
 	
 	if !instance_exists(check__) && message_phase = 3
 	{
-	global.choice_name[0] = "뱅갈나무 잎을 때간다"
+	global.choice_name[0] = "뱅갈고무나무 잎을 때간다"
 	global.choice_name[1] = "취소 하기"
 	global.choice_name[2] = -4
 	
@@ -165,7 +165,7 @@ global.playing_scene = 1
 		if !instance_exists(check__) && image_alpha < 0
 		{
 		check__ = instance_create_depth(x,y,depth-1,player_message)
-		check__.text = "(뱅갈나무 에스트 병의 최대 사용 횟수가 늘어났다!)"
+		check__.text = "(뱅갈고무나무 에스트 병의 최대 사용 횟수가 늘어났다!)"
 		check__.target = player.id
 		check__.parents = id
 		global.max_sylinge1_use ++

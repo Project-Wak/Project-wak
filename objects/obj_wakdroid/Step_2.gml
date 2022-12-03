@@ -62,52 +62,6 @@ movement_speed += (0 - movement_speed)*0.1
 	var sfx = audio_play_sound(mob_faint,0,0)
 	audio_sound_gain(sfx,0.4*global.master_volume*2*global.sfx_volume,0)
 	}
-	
-	
-	if knocked_down_ef > 100
-	{
-	global.gold += 12000
-	var random_item_drop = percentage_k(10)
-		if random_item_drop = 1
-		{
-		var item_vari = percentage_k(50)
-			if item_vari = 1
-			{
-			give_item(0,0)
-			}
-			else
-			{
-			give_item(0,1)
-			}
-		}
-	give_item(0,2)
-	
-	
-		///////////////////////////////////////////
-		repeat(irandom_range(14,17))
-		{
-		create_buble_effect(1.2,irandom_range(0,359),0,choose(-1)*irandom_range(1,100)/7,0.08,0.08,$FF00D2FE,$FF076BFE,1.5,$FF737272,x,y,-room_width*1.5,0,true,false)
-		}
-	
-		repeat(irandom_range(7,10))
-		{
-		create_buble_effect(1.45,irandom_range(0,359),0,choose(-1)*irandom_range(1,100)/7,0.07,0.07,c_white,$FF00D2FE,1.5,$FF342F32,x,y,-room_width*1.5,1,true,false)
-		}
-	
-		view_shake(choose(0,0,0,0,1),irandom_range(10,15),choose(0,1))
-		var y_set = y+irandom_range(-16,16)
-		repeat(8)
-		{
-		var _ef = instance_create_depth(x,y_set,depth-1,effect_spark)
-		_ef.hspeed = irandom_range(5,20)*choose(-1,1)
-		_ef.vspeed = irandom_range(-8,-3)
-		}
-	
-		var a___ = audio_play_sound(bomb_sfx,0,0)
-		audio_sound_gain(a___,0.07*global.master_volume*2*global.sfx_volume,0)
-	
-		//////////////////////////////////////////////////////
-	}
 }
 
 if hit_cooltime > 0
