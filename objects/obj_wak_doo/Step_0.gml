@@ -431,7 +431,7 @@ else
 		obj_camera.t_x = x
 		}
 	
-		if saved_real_x = -4
+		if saved_real_y = -4
 		{
 		global.save_point_x = player.x-600
 		global.save_point_y = player.y

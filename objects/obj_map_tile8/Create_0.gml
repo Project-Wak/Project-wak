@@ -19,8 +19,7 @@ droped_item__.item_var = 108
 var warning_guide = instance_create_depth(2713,2261,0,obj_warning)
 warning_guide.warning_message = "이 앞, 올려 베기["+string(keyconverter(global.w_key))+"]를 통한 상승을 적절히 활용할 것"
 
-var warning_guide = instance_create_depth(2624,1344,0,obj_warning)
-warning_guide.warning_message = "'움직이는 그림자' 주의"
+
 
 
 

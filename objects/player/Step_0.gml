@@ -40,7 +40,7 @@ jump_timer ++
 	}
 }
 
-if !instance_exists(master_volume_setting)
+if global.never_move_in_setting = 0 && global.show_guide_mes = -4
 {
 	if place_meeting(x,y,obj_water_inside) || place_meeting(x,y-18,obj_water_front)
 	{

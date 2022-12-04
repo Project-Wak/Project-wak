@@ -9,6 +9,9 @@ if timer > 0
 
 	obj_camera.x = 5181
 	obj_camera.y = 1869
+	
+	obj_camera.t_x = 5181
+	obj_camera.t_y = 1869
 	timer ++
 	}
 }

@@ -18,6 +18,10 @@ global.save_point_y = 96
 obj_camera.x = 503
 obj_camera.y = 96
 
+obj_camera.t_x = 503
+obj_camera.t_y = 96
+
+
 mes = 0
 
 //var door__ = instance_create_depth(920,166,0,obj_tp_door_basement)

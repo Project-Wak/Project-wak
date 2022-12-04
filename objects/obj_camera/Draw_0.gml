@@ -333,7 +333,7 @@ instance_destroy(setting_parents)
 	
 		if !audio_is_playing(boss_bgm) && !audio_is_playing(quake_sfx) && global.show_ui = 1
 		{
-		draw_text_kl_scale(g_xx+v_x_*190,g_yy,"\n\n"+string(global.skip_key_for_draw)+"키를 눌러 넘기기",v_x_*64,-1,0.5*show_guide_mes_alpha,c_white,0,1,font0,v_x_*0.3,v_x_*0.3,0);
+		draw_text_kl_scale(g_xx+v_x_*190,g_yy+v_x_*16,"\n\n"+string(global.skip_key_for_draw)+"키를 눌러 넘기기",v_x_*64,-1,0.5*show_guide_mes_alpha,c_white,0,1,font0,v_x_*0.3,v_x_*0.3,0);
 		}
 	}
 	

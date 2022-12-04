@@ -16,6 +16,8 @@ player.y = 2300
 obj_camera.x = 160
 obj_camera.y = 2300
 
+
+
 alarm[0] = 5
 
 

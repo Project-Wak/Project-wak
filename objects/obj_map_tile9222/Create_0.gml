@@ -22,9 +22,13 @@ player.y = 448
 
 obj_camera.x = 547
 obj_camera.y = 448
+
+obj_camera.t_x = 547
+obj_camera.t_y = 448
 }
 
-
+var warning_guide = instance_create_depth(5600,647,0,obj_warning)
+warning_guide.warning_message = "이 앞, '움직이는 그림자'가 등장하니 아래로 우회할 것"
 
 
 //var ele__ = instance_create_depth(-2100,448,0,obj_elevator)
