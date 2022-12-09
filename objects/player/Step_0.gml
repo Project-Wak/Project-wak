@@ -273,7 +273,7 @@ hspeed = ins_pl_hand.hspeed
 
 if global.story_next < 100 && global.playing_scene = 0 && global.hp > 0 && global.never_move = 0 && global.b_alpha < 0.1 && global.never_move_in_setting = 0 && show_left_time = 0 && global.left_time <= 12 && global.slow_motion = 0 && code.playing_gameover_scene = 0
 {
-global.show_guide_mes = "왁컬로이드 완성까지 시간이 얼마 남지 않았다"
+global.show_guide_mes = "왁드로이드 완성까지 시간이 얼마 남지 않았다"
 global.show_guide_mes_spr = 6
 show_left_time = 2
 }

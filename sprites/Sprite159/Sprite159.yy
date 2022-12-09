@@ -19,7 +19,7 @@
   "For3D": false,
   "DynamicTexturePage": false,
   "width": 128,
-  "height": 320,
+  "height": 400,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -63,7 +63,7 @@
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
     "xorigin": 61,
-    "yorigin": 316,
+    "yorigin": 336,
     "eventToFunction": {},
     "eventStubScript": null,
   },

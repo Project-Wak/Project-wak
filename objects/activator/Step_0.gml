@@ -170,7 +170,7 @@ if message_phase = 1
 				}
 				else if selected_sector = 7
 				{
-				check__.text = "<-     왁컬로이드 개발실 입구     ->"
+				check__.text = "<-     왁드로이드 개발실 입구     ->"
 				}
 				else
 				{

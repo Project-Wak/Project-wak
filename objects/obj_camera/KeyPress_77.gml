@@ -70,7 +70,7 @@ if global.guide_boss = 1 && show_guide = 1
 
 	if instance_exists(obj_wakdroid)
 	{
-	global.show_guide_mes = "왁컬로이드\n\n적이 레이지 모드 상태일 때, 모든 공격에 대한 저항력이 생기기 때문에\n공격보단 최대한 거리를 두며 회피하도록 하자."
+	global.show_guide_mes = "왁드로이드\n\n적이 레이지 모드 상태일 때, 모든 공격에 대한 저항력이 생기기 때문에\n공격보단 최대한 거리를 두며 회피하도록 하자."
 	global.show_guide_mes_spr = 8
 	global.guide_gif = Sprite303
 	}
@@ -78,7 +78,7 @@ if global.guide_boss = 1 && show_guide = 1
 	
 	if instance_exists(obj_worm)
 	{
-	global.show_guide_mes = "쌉벌래두\n\n해당 보스는 단단한 장갑을 두르고 있어, 쉽게 데미지를 입힐 수 없다.\n다만, 꼬리 부분의 '코어'를 노리면 막대한 대미지를 입힐 수 있다."
+	global.show_guide_mes = "쌉벌레두\n\n해당 보스는 단단한 장갑을 두르고 있어, 쉽게 데미지를 입힐 수 없다.\n다만, 꼬리 부분의 '코어'를 노리면 막대한 대미지를 입힐 수 있다."
 	global.show_guide_mes_spr = 8
 	global.guide_gif = Sprite310
 	}
@@ -93,7 +93,7 @@ if global.guide_boss = 1 && show_guide = 1
 	
 	if instance_exists(obj_last_boss)
 	{
-	global.show_guide_mes = "폭주한 왁컬로이드\n\n레이저는 공격 패턴은 플레이어를 타깃팅하여 발사하기에,\n점프나, 구르기등으로 피할 수 없다.\n따라서, '가드 ["+string(keyconverter(global.guard_key))+"]'를 통해 막도록 하자"
+	global.show_guide_mes = "폭주한 왁드로이드\n\n레이저는 공격 패턴은 플레이어를 타깃팅하여 발사하기에,\n점프나, 구르기등으로 피할 수 없다.\n따라서, '가드 ["+string(keyconverter(global.guard_key))+"]'를 통해 막도록 하자"
 	global.show_guide_mes_spr = 8
 	global.guide_gif = Sprite320
 	}

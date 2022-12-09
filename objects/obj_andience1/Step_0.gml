@@ -92,7 +92,7 @@ player.x += (x-90 - player.x)*0.1
 		{
 		image_index = 0
 		check__ = instance_create_depth(x,y,depth-1,player_message)
-		check__.text = "그중 가장 강력한 최종병기 '왁컬로이드'를 필두로"
+		check__.text = "그중 가장 강력한 최종병기 '왁드로이드'를 필두로"
 		check__.target = id
 		check__.parents = id
 		}
@@ -266,7 +266,7 @@ player.x += (x-90 - player.x)*0.1
 				instance_create_depth(x,y,-9998,bg_upgrage)
 
 				var __aaa = instance_create_depth(x,y,-9999,obj_n_to_setting)
-				__aaa.n_to_set = 5
+				__aaa.n_to_set = 6
 				}
 			message_phase = 0
 			alarm[0] = 1

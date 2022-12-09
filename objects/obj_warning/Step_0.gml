@@ -95,7 +95,7 @@ global.playing_scene = 1
 		if warning_message = "녀석... 몸통이 매우 단단하니 '꼬리에 있는 코어'를 노릴것..."
 		{
 		global.show_guide_mes_spr = 4
-		global.show_guide_mes = "쌉벌래두\n\n다른 보스들에 비해 몸통이 매우 단단하니,\n꼬리에 붙어있는 '코어'를 노리자"
+		global.show_guide_mes = "쌉벌레두\n\n다른 보스들에 비해 몸통이 매우 단단하니,\n꼬리에 붙어있는 '코어'를 노리자"
 		global.guide_gif = Sprite310
 		global.poison_tuto = 1
 		tutorial_message = 1

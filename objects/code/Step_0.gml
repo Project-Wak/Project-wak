@@ -266,7 +266,7 @@ global.platform_speed = 0
 					else
 					{
 					global.gameover_reason_title = "[종말 엔딩]"
-					global.gameover_reason = "D-day가 지나, 박사의 왁컬로이드가 완성되어버렸다"
+					global.gameover_reason = "D-day가 지나, 박사의 왁드로이드가 완성되어버렸다"
 					}
 				global.never_move = 0
 				global.playing_scene = 0
@@ -513,9 +513,9 @@ if instance_exists(player)
 }
 
 //자살키 (suicide)
-if keyboard_check_pressed(global.suicide_key) && global.chat_activity = false && global.never_move_in_setting = 0 
+if keyboard_check_pressed(global.suicide_key) && global.chat_activity = false && global.never_move_in_setting = 0 && global.playing_scene = 0
 {
-	if global.hp > 0 && instance_exists(player) && player.suicide = 0 && global.b_alpha < 0.1 && !instance_exists(obj_wakdroid_ending)
+	if global.hp > 0 && instance_exists(player) && player.suicide = 0 && global.b_alpha < 0.1 && !instance_exists(obj_wakdroid_ending) && !instance_exists(obj_map_tile1) && !instance_exists(obj_map_tile5)
 	{
 	//player.y -= 4
 	//player.vspeed = -4

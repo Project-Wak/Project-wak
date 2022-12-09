@@ -84,7 +84,7 @@ down_attack_with_rage_dis = 0
 attack_target_x = 0
 
 global.boss_target = id
-global.boss_name = "왁컬로이드"
+global.boss_name = "왁드로이드"
 
 
 hurt_motion_time_for_bug = 0

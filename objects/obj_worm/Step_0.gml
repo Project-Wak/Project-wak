@@ -12,7 +12,7 @@ if global.none_wakgood_mode = true
 sprite_index = spr_ssab_bulrae263
 }
 //global.boss_target = id
-//global.boss_name = "쌉벌래두"
+//global.boss_name = "쌉벌레두"
 
 //obj_camera.tv_x = 1280*0.9
 //obj_camera.tv_y = 720*0.9

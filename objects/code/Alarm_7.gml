@@ -122,6 +122,20 @@ player.guard_sprite = pl_move_skeleton_guard
 	}
 }
 		
+
+
+//난이도 보정 (추가 방어력)
+var plus_defence__ = 0
+if global.time_plusment = 2
+{
+plus_defence__ = 0.1
+	if global.super_easy = 2
+	{
+	plus_defence__ = 0.2
+	}
+}
+		
+		
 		
 //탈리스만
 global.clock = sign(check_equipment(global.accessories_equip[0]/2)+check_equipment(global.accessories_equip[1]/2)+check_equipment(global.accessories_equip[2]/2))
@@ -172,7 +186,7 @@ if global.n_sword != 6
 	
 //스텟 적용
 global.max_armor_plus = 1
-global.max_armor_plus += global.ribon*0.1+global.hairpin*0.1
+global.max_armor_plus += global.ribon*0.1+global.hairpin*0.1+plus_defence__
 	
 global.critical_plus = 0
 global.critical_plus += global.blue_flag*0.15+global.diamond_sword*0.1
