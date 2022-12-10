@@ -6,7 +6,7 @@ twitch_chat_connect("woowakgood","우왁굳","oauth:43rzue6rdcldus9fomqrwmtfuaum
 
 global.chat_sender = noone
 global.chat_data = noone
-global.game_ver = "Beta 3.19"
+global.game_ver = "Beta 3.2"
 
 global.bubble_surf = surface_create(1920, 1080);
 global.rage_surf = surface_create(1920, 1080);

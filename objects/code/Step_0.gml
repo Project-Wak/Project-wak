@@ -16,7 +16,7 @@ player.y = 734
 timer_back_to_stage ++
 }
 
-if timer_back_to_stage > 100
+if timer_back_to_stage > 100 && instance_exists(player) && player.gravity = 0 && player.vspeed = 0
 {
 global.back_to_origin_stage = 0
 }

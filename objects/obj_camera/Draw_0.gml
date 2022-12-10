@@ -358,7 +358,7 @@ instance_destroy(setting_parents)
 	
 	
 	
-	if (keyboard_check_released(global.skip_key) && message_can_des_delay > 60) || audio_is_playing(walk_sfx)
+	if (keyboard_check_released(global.skip_key) && message_can_des_delay > 60) || audio_is_playing(walk_sfx) || (global.t_b_alpha >= 1 && global.b_alpha >= 1)
 	{
 		if global.guide_gif = Sprite313 && !audio_is_playing(walk_sfx)
 		{

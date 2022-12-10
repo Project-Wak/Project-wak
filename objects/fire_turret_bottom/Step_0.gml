@@ -70,13 +70,6 @@ var yy_ = y
 		if abs(y - player.y) <= 400 && player.y > y && abs(x - player.x) <= 24
 		{
 		global.r_alpha += (0.17 - global.r_alpha)*0.1
-			with(player)
-			{
-				if object_index = player && player.spin = 0 && player.dash_attack = 0
-				{
-				skill_combo_cancle_n_motion(1)
-				}
-			}
 			
 		global.hp -= 10*global.difficulty
 			if !audio_is_playing(global.hit_sfx_1)
@@ -91,13 +84,6 @@ var yy_ = y
 		if abs(y - player.y) <= 400 && player.y > y && abs(x - player.x) <= 24
 		{
 		global.r_alpha += (0.17 - global.r_alpha)*0.1
-			with(player)
-			{
-				if object_index = player && player.spin = 0 && player.dash_attack = 0
-				{
-				skill_combo_cancle_n_motion(1)
-				}
-			}
 			
 		global.hp -= 10*global.difficulty
 			if !audio_is_playing(global.hit_sfx_1)

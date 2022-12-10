@@ -292,7 +292,7 @@ else
 	player.assult_mode = 300
 		if instance_exists(check__)
 		{
-		global.save_point_x = player.x+150
+		global.save_point_x = player.x+250
 		global.save_point_y = player.y
 		global.playing_scene = 0
 		global.never_move = 0
