@@ -3,7 +3,7 @@
 
 
 
-if global.all_reset_key = 0
+if global.all_reset_key != 1 || global.tutorial <= 0
 {
 global.a_key = ord("A")
 global.q_key = ord("Q")

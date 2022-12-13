@@ -15,7 +15,7 @@ check__.target = player.id
 check__.parents = id
 }
 
-if keyboard_check_pressed(string(global.g_key))
+if instance_exists(player) && keyboard_check_pressed(string(global.g_key))
 {
 	if global.chat_activity = false
 	{

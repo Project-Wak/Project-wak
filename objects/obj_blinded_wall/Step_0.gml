@@ -1,6 +1,13 @@
 /// @description Insert description here
 // You can write your code in this editor
+if instance_exists(player_message)
+{
+depth = player.depth+122
+}
+else
+{
 depth = player.depth-122
+}
 
 if place_meeting(x,y,player)
 {

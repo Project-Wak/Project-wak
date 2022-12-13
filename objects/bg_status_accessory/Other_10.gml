@@ -12,7 +12,17 @@ repeat(999)
 	pressed = 2
 	}
 	
-	if global.accessories_owned[pressed-1] <= 0
+	var overlap_equipment = 0
+	for(var i = 0; i <= 2; i++)
+	{
+		if global.accessories_equip[i] = pressed-1 && pressed > 2
+		{
+		overlap_equipment = 1
+		}
+	}
+	
+	
+	if global.accessories_owned[pressed-1] <= 0 || overlap_equipment = 1
 	{
 	pressed --
 	}

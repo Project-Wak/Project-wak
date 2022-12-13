@@ -148,4 +148,21 @@ if global.never_move_in_setting = 0
 		cre_shadow = 2
 		}
 	}
+	
+	if room = room_sector_B03_3_remaked && !instance_exists(gumseong_shadow)
+	{
+		if cre_shadow = 2 && global.t_b_alpha >= 1
+		{
+		cre_shadow = 0
+		}
+	
+		if cre_shadow = 1 && global.b_alpha < 0.7 && global.t_b_alpha <= 0 && player.y >= 1300
+		{
+		var test_mob = instance_create_depth(3064,483,player.depth+3,gumseong_shadow)
+		test_mob.test_mob_type = 0
+		test_mob.image_xscale = -1
+		test_mob.image_yscale = 1
+		cre_shadow = 2
+		}
+	}
 }

@@ -39,11 +39,11 @@ if (pressed > 0 && global.key_setting_message > 0) || global.key_setting_message
 	
 	
 	var item_name__ = "가이드 북 0번 - 기본 조작 (공격)"
-	var item_desc__ = "'"+string(global.g_key)+"키'를 눌러 스킬 조작키 가이드를 상시 띄워둘수 있다."
+	var item_desc__ = "'"+string(keyconverter(global.g_key))+"키'를 눌러 스킬 조작키 가이드를 상시 띄워둘수 있다."
 	if cal__img = 1
 	{
 	item_name__ = "가이드 북 1번 - 레이지 모드"
-	item_desc__ = global.e_key+"키를 지속적으로 누르고 있으면 '레이지 모드'가 발동된다.\n 레이지 모드 시전시, 몇십초간 스테미나가 매우 빠르게 회복된다."
+	item_desc__ = string(keyconverter(global.e_key))+"키를 지속적으로 누르고 있으면 '레이지 모드'가 발동된다.\n 레이지 모드 시전시, 몇십초간 스테미나가 매우 빠르게 회복된다."
 	}
 	if cal__img = 2
 	{
@@ -126,7 +126,7 @@ if (pressed > 0 && global.key_setting_message > 0) || global.key_setting_message
 	draw_text_kl_scale(xx+50*_c_x-global.key_setting_message*_c_x*70,yy+global.key_setting_message*_c_x*95,item_desc__,85*_c_x,2300*_c_x,0.6,image_blend,0,-1,font0,1/3.5*_c_x,1/3.5*_c_x,image_angle)
 	if accesssory_num = 0
 	{
-	draw_text_kl_scale(xx-24*_c_x,yy-70*_c_x,"현재 보고 있는 가이드 북 (총 17개)",16,999,0.8,image_blend,0,-1,font0,1/3*_c_x,1/3*_c_x,image_angle)
+	draw_text_kl_scale(xx-24*_c_x,yy-70*_c_x,"현재 보고 있는 가이드 북 (총 16개)",16,999,0.8,image_blend,0,-1,font0,1/3*_c_x,1/3*_c_x,image_angle)
 	}
 	
 	if global.key_setting_message = 1 && pressed > 0

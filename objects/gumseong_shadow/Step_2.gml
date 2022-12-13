@@ -55,6 +55,11 @@ global.gold += 1600
 	give_item(2,6)
 	}
 	
+	if room = room_sector_B03_3_remaked
+	{
+	give_item(2,4)
+	}
+	
 	
 
 

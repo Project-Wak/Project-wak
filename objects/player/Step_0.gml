@@ -3098,7 +3098,6 @@ if dash_attack >= 4.6 && global.n_sword != 0 && global.n_sword != 5
 				{
 				dash_attack = 0
 				double_pressed_run_key = 0
-				double_pressed_run_key = 0
 				cannot_move = 0
 				sprite_index = move_sprite
 				image_index = 0

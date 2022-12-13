@@ -43,3 +43,12 @@ instance_create_depth(4608,1440,depth,obj_guisangadoo)
 
 var droped_item__ = instance_create_depth(160,1856,0,obj_droped_item)
 droped_item__.item_var = 104
+
+if global.guisanga_doo_event = 1 && !instance_exists(obj_wakdroid_ending)
+{
+var door__ = instance_create_depth(3808,1504,0,obj_tp_door_basement)
+door__.connected_with = 4
+
+var door__ = instance_create_depth(2720,480,0,obj_tp_door_basement)
+door__.connected_with = 5
+}

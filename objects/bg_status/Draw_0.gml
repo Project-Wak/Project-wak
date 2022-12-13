@@ -141,8 +141,13 @@ if (pressed > 0 && global.key_setting_message > 0) || global.key_setting_message
 	
 	
 
+var text_____ = "(ESC키 혹은 Tab키로 창 닫기)"
 
-draw_text_kl_scale(camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])-42*_c_x,camera_get_view_y(view_camera[0])+camera_get_view_height(view_camera[0])-32*_c_x,"(ESC키 혹은 Tab키로 창 닫기)",16,999,0.7,$FFCC8E61,0,1,font0,1/3.5*_c_x,1/3.5*_c_x,image_angle)
+if !instance_exists(player)
+{
+text_____ = "(ESC키로 창 닫기)"
+}
+draw_text_kl_scale(camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])-42*_c_x,camera_get_view_y(view_camera[0])+camera_get_view_height(view_camera[0])-32*_c_x,text_____,16,999,0.7,$FFCC8E61,0,1,font0,1/3.5*_c_x,1/3.5*_c_x,image_angle)
 
 
 var yy_ = camera_get_view_y(view_camera[0])+camera_get_view_height(view_camera[0])-(160-10)*0.8
