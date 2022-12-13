@@ -16,7 +16,7 @@
 
 #### - 게임 다운로드 
 
-[![](https://img.shields.io/github/downloads/ABER1047/Project-wak/Beta-3.21/project.wak_2022_12_11.zip?color=AD8264&label=DOWNLOAD&style=for-the-badge)](https://github.com/ABER1047/Project-wak/releases/download/Beta-3.21/project.wak_2022_12_11.zip)
+[![](https://img.shields.io/github/downloads/ABER1047/Project-wak/Beta-3.22/project.wak_2022_12_13.zip?color=AD8264&label=DOWNLOAD&style=for-the-badge)](https://github.com/ABER1047/Project-wak/releases/download/Beta-3.22/project.wak_2022_12_13.zip)
 
 </br></br>
 
