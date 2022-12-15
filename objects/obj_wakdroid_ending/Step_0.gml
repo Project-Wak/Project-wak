@@ -721,7 +721,7 @@ if interecting_now = 1 && (global.real_ending = 0 || (message_phase >= 61 && mes
 	}
 }
 
-if global.show_credits > 13000
+if global.show_credits > 11000
 {
 volume_downer -= 0.001
 audio_sound_gain(bgm,0.23*global.master_volume*2*global.bgm_volume*volume_downer,0)
@@ -1234,7 +1234,7 @@ global.never_move = 1
 			}
 		}
 		
-		if show_cinematic_sec >= 10000 && show_cinematic_sec < 11600
+		if show_cinematic_sec >= 10000 && show_cinematic_sec < 11000
 		{
 			if show_cinematic_sec <= 10000
 			{
@@ -1250,7 +1250,7 @@ global.never_move = 1
 			}
 		}
 		
-		if show_cinematic_sec >= 11600
+		if show_cinematic_sec >= 11000
 		{
 		global.t_b_alpha = 2.1
 			if global.b_alpha >= 1 && room != room_main

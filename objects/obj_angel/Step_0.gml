@@ -687,6 +687,14 @@ opening_sfx = 0
 				bullet__.attack_type = 0
 				}
 				
+				repeat(3)
+				{
+				var effect_ = instance_create_depth(spear__.x,spear__.y,spear__.depth+1,down_effect)
+				effect_.t_image_yscale = 0.05*15
+				effect_.t_image_xscale = 0.4*12
+				effect_.received = 0
+				}
+				
 			var effect_ = instance_create_depth(spear__.x,spear__.y,spear__.depth+10,down_effect)
 			effect_.t_image_yscale = 0.4*3
 			effect_.t_image_xscale = 0.05*3

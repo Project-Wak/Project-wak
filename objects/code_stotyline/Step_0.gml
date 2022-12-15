@@ -8,6 +8,7 @@ if global.story_next >= 101 && global.story_next < 300
 	global.clock = 0
 	global.broken_clock = 0
 	global.platform_speed = 0
+	global.rainy = 1
 	room_goto(room_sector_outside)
 	player.x = 32
 	player.y = 1154

@@ -1810,9 +1810,62 @@ w_alpha += (-0.01 - w_alpha)*0.1
 			
 				if hurt_cooltime = 0
 				{
-				hurt = 1
-				hurt_cooltime = 10
-				movement_speed = check_guard*5
+				var ins_near = instance_nearest(x,y,obj_simhae_doo)
+					if !instance_exists(ins_near)
+					{
+					hurt = 1
+					hurt_cooltime = 10
+					movement_speed = check_guard*5
+					}
+				
+					if instance_exists(ins_near) && place_meeting(x,y,ins_near) && spin = 0 && dash_attack = 0
+					{
+						if guarding > 0 && global.stamina >= 4 && check_guard = sign(image_xscale)
+						{
+						guarding_now = 1
+						}
+						
+						if guarding_now = 1 || charge_attack > 0 || pering > 0
+						{
+						global.stamina -= 3
+						hurt = 0
+						hurt_cooltime = 0
+		
+							if guard_cool_time = 0
+							{
+								if charge_attack = 0
+								{
+								movement_speed = image_xscale*10
+								}
+							guarding = 2.5
+							w_alpha = 1
+							guard_cool_time = 150
+							sfx_for_multiplayer(guard,0,0.1)
+	
+					
+							global.rage_gauge += 2
+
+								repeat(8)
+								{
+								var _ef = instance_create_depth(x-image_xscale*4,y+irandom_range(-13,0),depth-1,effect_spark)
+								_ef.hspeed = irandom_range(5,20)*random_dir
+								_ef.vspeed = irandom_range(-4,2)
+								}
+							}
+						}
+						else
+						{
+							if guard_cool_time = 0
+							{
+							hurt = 1
+							hurt_cooltime = 40
+							movement_speed = check_guard*5
+							hp_minus_for_player(232,_placed_obj)
+							sfx_for_multiplayer(choose(global.hit_sfx_1,global.hit_sfx_2,global.hit_sfx_3),0,0.2)
+							vspeed = -4
+							}
+						}
+					}
 			
 					if !place_meeting(x,y+3,floor_parents)
 					{
@@ -1862,14 +1915,7 @@ w_alpha += (-0.01 - w_alpha)*0.1
 					sfx_for_multiplayer(choose(global.hit_sfx_1,global.hit_sfx_2,global.hit_sfx_3),0,0.2)
 					vspeed = -4
 					}
-					
-				var ins_near = instance_nearest(x,y,obj_simhae_doo)
-					if instance_exists(ins_near) && place_meeting(x,y,ins_near) && spin = 0 && dash_attack = 0
-					{
-					hp_minus_for_player(232,_placed_obj)
-					sfx_for_multiplayer(choose(global.hit_sfx_1,global.hit_sfx_2,global.hit_sfx_3),0,0.2)
-					vspeed = -4
-					}
+
 					
 				var ins_near = instance_nearest(x,y,obj_ball)
 					if instance_exists(ins_near) && point_distance(x,y,ins_near.x,ins_near.y) <= 200
