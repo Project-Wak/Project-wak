@@ -91,6 +91,10 @@ cannot_step = 1
 		{
 		audio_stop_sound(final_battle)
 		audio_stop_sound(follower_bgm)
+			if !instance_exists(obj_wakdroid_ending)
+			{
+			instance_create_depth(2994,2331,depth,obj_wakdroid_ending)
+			}
 		room_goto(room_sector_runaway)
 		}
 		else
@@ -292,7 +296,7 @@ else
 	player.assult_mode = 300
 		if instance_exists(check__)
 		{
-		global.save_point_x = player.x+250
+		global.save_point_x = player.x+500
 		global.save_point_y = player.y
 		global.playing_scene = 0
 		global.never_move = 0
@@ -368,7 +372,7 @@ else
 			
 				if instance_exists(obj_wakdroid_ending)
 				{
-				random_patturn = choose(1,2,2,3,4,4,5,5,5,6,6)
+				random_patturn = choose(1,2,3,4,4,5,5,5,6,7,7,7)
 				}
 			
 				if count_three > 3
@@ -394,7 +398,7 @@ else
 					
 						if instance_exists(obj_wakdroid_ending)
 						{
-						random_patturn = choose(1,2,2,3,4,4,5,5,5,6,6)
+						random_patturn = choose(1,2,3,4,4,5,5,5,6,7,7,7)
 						}
 						else
 						{
@@ -575,7 +579,7 @@ else
 			
 				if (bullet__-40)%60 = 0
 				{
-				w_alpha = 1.5
+				w_alpha = 2.5
 				}
 			
 				if bullet__%60 = 0
@@ -1113,14 +1117,14 @@ else
 				instance_create_depth(player.x+random_val_xx,player.y+random_val_yy,player.depth-10,spear_lastboss_grab)
 				}
 				
-				if (grab_skill-3)%6 = 0 && grab_skill <= 80
-				{
-				var random_val_xx = irandom_range(-420,420)
-				var random_val_yy = irandom_range(-420,420)
-				var bullet_ = instance_create_depth(player.x+random_val_xx,player.y+random_val_yy,player.depth-1,simhae_doo_bullet)
-				bullet_.bullet_speed = 0.7
-				bullet_.attack_type = 0
-				}
+				//if (grab_skill-3)%6 = 0 && grab_skill <= 80
+				//{
+				//var random_val_xx = irandom_range(-420,420)
+				//var random_val_yy = irandom_range(-420,420)
+				//var bullet_ = instance_create_depth(player.x+random_val_xx,player.y+random_val_yy,player.depth-1,simhae_doo_bullet)
+				//bullet_.bullet_speed = 0.7
+				//bullet_.attack_type = 0
+				//}
 
 				
 				if grab_skill > 300
@@ -1235,6 +1239,101 @@ else
 					draw_key_.a = 1
 					}
 				}
+			}
+		}
+		
+		
+		
+		
+		
+		if patturn >= 7 && patturn < 8
+		{
+		
+		var center_x_pos = camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5
+		x += (center_x_pos - x)*0.1
+		
+			if patturn = 7
+			{
+			image_xscale = sign_k(x - player.x)*0.9
+			var xx___ = x
+			var yy___ = y
+				repeat(choose(6,7,7,8,8,9,9,9,10,10,11,12))
+				{
+				randomize()
+				var dust = instance_create_depth(xx___+irandom_range(-5,5),yy___+irandom_range(-5,5),depth-1,pepsi_effect_received)
+				var scale = irandom_range(20,40)/50
+				dust.image_xscale = scale
+				dust.image_yscale = scale
+				dust.vspeed = irandom_range(-50,50)/37
+				dust.hspeed = irandom_range(-50,50)/37
+				dust.image_alpha = 1
+				}
+			var sfx = audio_play_sound(mob_faint,0,0)
+			audio_sound_gain(sfx,0.4*global.master_volume*2*global.sfx_volume,0)
+			y = 0
+			}
+			
+		patturn += 0.001
+			
+			if patturn = 7.05
+			{
+			image_xscale = sign_k(x - player.x)*0.9
+			var xx___ = x
+			var yy___ = y
+				repeat(choose(6,7,7,8,8,9,9,9,10,10,11,12))
+				{
+				randomize()
+				var dust = instance_create_depth(xx___+irandom_range(-5,5),yy___+irandom_range(-5,5),depth-1,pepsi_effect_received)
+				var scale = irandom_range(20,40)/50
+				dust.image_xscale = scale
+				dust.image_yscale = scale
+				dust.vspeed = irandom_range(-50,50)/37
+				dust.hspeed = irandom_range(-50,50)/37
+				dust.image_alpha = 1
+				}
+			var sfx = audio_play_sound(mob_faint,0,0)
+			audio_sound_gain(sfx,0.4*global.master_volume*2*global.sfx_volume,0)
+			y = 1900
+			}
+			
+			
+			
+			if patturn >= 7.08 && patturn < 7.3
+			{
+			bullet__patturn ++
+			
+				if bullet__patturn%5 = 0
+				{
+				var bullet_ = instance_create_depth(x+lengthdir_x(64,90+bullet__patturn),y+90+lengthdir_y(64,90+bullet__patturn),depth-1,simhae_doo_bullet)
+				bullet_.bullet_speed = 0.7
+				bullet_.attack_type = 0
+			
+				var bullet_ = instance_create_depth(x+lengthdir_x(64,90-bullet__patturn),y+90+lengthdir_y(64,90-bullet__patturn),depth-1,simhae_doo_bullet)
+				bullet_.bullet_speed = 0.7
+				bullet_.attack_type = 0
+				}
+			}
+			
+			if patturn >= 7.35
+			{
+			patturn = 0
+			bullet__patturn = 0
+			var xx___ = x
+			var yy___ = y
+				repeat(choose(6,7,7,8,8,9,9,9,10,10,11,12))
+				{
+				randomize()
+				var dust = instance_create_depth(xx___+irandom_range(-5,5),yy___+irandom_range(-5,5),depth-1,pepsi_effect_received)
+				var scale = irandom_range(20,40)/50
+				dust.image_xscale = scale
+				dust.image_yscale = scale
+				dust.vspeed = irandom_range(-50,50)/37
+				dust.hspeed = irandom_range(-50,50)/37
+				dust.image_alpha = 1
+				}
+			var sfx = audio_play_sound(mob_faint,0,0)
+			audio_sound_gain(sfx,0.4*global.master_volume*2*global.sfx_volume,0)
+			y = 0
 			}
 		}
 /////////////////////////////////////////////////////////////////////////////////////////////////////

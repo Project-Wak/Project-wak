@@ -172,6 +172,12 @@ global.heart_crystal2 = sign(check_equipment(global.accessories_equip[0]/17)+che
 
 global.heart_crystal3 = sign(check_equipment(global.accessories_equip[0]/18)+check_equipment(global.accessories_equip[1]/18)+check_equipment(global.accessories_equip[2]/18))
 
+global.fir_tester_statue = sign(check_equipment(global.accessories_equip[0]/20)+check_equipment(global.accessories_equip[1]/20)+check_equipment(global.accessories_equip[2]/20))
+
+global.sec_tester_statue = sign(check_equipment(global.accessories_equip[0]/21)+check_equipment(global.accessories_equip[1]/21)+check_equipment(global.accessories_equip[2]/21))
+
+global.thi_tester_statue = sign(check_equipment(global.accessories_equip[0]/22)+check_equipment(global.accessories_equip[1]/22)+check_equipment(global.accessories_equip[2]/22))
+
 
 if global.n_sword != 6
 {
@@ -186,10 +192,10 @@ if global.n_sword != 6
 	
 //스텟 적용
 global.max_armor_plus = 1
-global.max_armor_plus += global.ribon*0.1+global.hairpin*0.1+plus_defence__
+global.max_armor_plus += global.ribon*0.1+global.hairpin*0.1+plus_defence__+(global.fir_tester_statue+global.sec_tester_statue+global.thi_tester_statue)*0.05
 	
 global.critical_plus = 0
-global.critical_plus += global.blue_flag*0.15+global.diamond_sword*0.1
+global.critical_plus += global.blue_flag*0.15+global.diamond_sword*0.1+(global.fir_tester_statue+global.sec_tester_statue+global.thi_tester_statue)*0.12
 
 if instance_exists(player)
 {
@@ -211,7 +217,7 @@ gun_ = 1
 }
 
 global.damage_plus = 1
-global.damage_plus += global.flag_enc*0.18+_sword*0.5-gun_*0.5+global.diamond_sword*0.1
+global.damage_plus += global.flag_enc*0.18+_sword*0.5-gun_*0.5+global.diamond_sword*0.1+(global.fir_tester_statue+global.sec_tester_statue+global.thi_tester_statue)*0.1
 	
 	
 global.guard_power = 1
@@ -222,7 +228,7 @@ global.guard_power = 1
 		
 	if global.n_sword = 5
 	{
-	global.guard_power -= 0.9
+	global.guard_power -= 0.5
 	}
 	
 	if global.n_sword = 6

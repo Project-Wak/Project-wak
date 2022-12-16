@@ -130,6 +130,21 @@ if (pressed > 0 && global.key_setting_message > 0) || global.key_setting_message
 	item_name__ = "바다의 왕의 삼지창"
 	item_desc__ = "바다의 왕, 귀상어두의 번개를 사용할 수 있다\n\n특수효과 : Rage(레이지)게이지가 80%이상 찬 경우, 공중에서 "+string(global.e_key_for_draw)+"키를 누를시 강력한 특수 스킬 사용"
 	}
+	if cal__img = 20
+	{
+	item_name__ = "1차 테스터 기념 동상"
+	item_desc__ = "프로젝트 왁 1차 테스터 기념 동상\n\n특수효과 : 방어력 5%, 크리티컬 데미지 확률 12%, 기본 데미지 10% 증가"
+	}
+	if cal__img = 21
+	{
+	item_name__ = "2차 테스터 기념 동상"
+	item_desc__ = "프로젝트 왁 2차 테스터 기념 동상\n\n특수효과 : 방어력 5%, 크리티컬 데미지 확률 12%, 기본 데미지 10% 증가"
+	}
+	if cal__img = 22
+	{
+	item_name__ = "3차 테스터 기념 동상"
+	item_desc__ = "프로젝트 왁 3차 테스터 기념 동상\n\n특수효과 : 방어력 5%, 크리티컬 데미지 확률 12%, 기본 데미지 10% 증가"
+	}
 	
 	draw_text_kl_scale(xx+50*_c_x-global.key_setting_message*_c_x*70,yy-16*_c_x+global.key_setting_message*_c_x*80,item_name__,16,999,0.74,image_blend,0,-1,font0,1/3.5*_c_x,1/3.5*_c_x,image_angle)
 	draw_text_kl_scale(xx+50*_c_x-global.key_setting_message*_c_x*70,yy+global.key_setting_message*_c_x*80,item_desc__,60*_c_x,2300*_c_x,0.4,image_blend,0,-1,font0,1/4*_c_x,1/4*_c_x,image_angle)

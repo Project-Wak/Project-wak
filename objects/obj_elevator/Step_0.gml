@@ -12,11 +12,18 @@ if activated = 1
 
 	if player.image_alpha > 0
 	{
-		if global.back_to_origin_stage = 0 && !audio_is_playing(follower_bgm) && global.simhaedoo_stage != 1
+	//왁귀상어 버그 패치
+	var bug_fix__ = 0
+		if (global.guisanga_doo_event = 1 && room = room_sector_B03_2_remaked)
+		{
+		bug_fix__ = 1
+		}
+	
+		if global.back_to_origin_stage = 0 && !audio_is_playing(follower_bgm) && bug_fix__ = 0
 		{
 		global.never_move = 1
 		global.playing_scene = 1
-			if room != room_sector_B03_1
+			if room != room_sector_B03_1 && !instance_exists(broken_platfrom)
 			{
 				if (x - player.x) > 100
 				{

@@ -60,17 +60,17 @@ if t_y = -64
 				
 					if !instance_exists(gumseong_shadow)
 					{
-						if my_connection = 14 && cre_shadow = 0
+						if my_connection = 14
 						{
 						cre_shadow = 1
 						}
 					
-						if my_connection = 4 && cre_shadow = 0
+						if my_connection = 4
 						{
 						cre_shadow = 1
 						}
 					
-						if my_connection = 5 && cre_shadow = 0
+						if my_connection = 5
 						{
 						cre_shadow = 1
 						}
@@ -88,17 +88,17 @@ if t_y = -64
 				
 					if !instance_exists(gumseong_shadow)
 					{
-						if my_connection = 14 && cre_shadow = 0
+						if my_connection = 14
 						{
 						cre_shadow = 1
 						}
 					
-						if my_connection = 4 && cre_shadow = 0
+						if my_connection = 4
 						{
 						cre_shadow = 1
 						}
 					
-						if my_connection = 5 && cre_shadow = 0
+						if my_connection = 5
 						{
 						cre_shadow = 1
 						}
@@ -117,12 +117,7 @@ if global.never_move_in_setting = 0
 {
 	if room = room_sector_B06_2 && !instance_exists(gumseong_shadow)
 	{
-		if cre_shadow = 2 && global.t_b_alpha >= 1
-		{
-		cre_shadow = 0
-		}
-	
-		if cre_shadow = 1 && global.b_alpha < 0.7 && global.t_b_alpha <= 0
+		if cre_shadow = 1 && global.b_alpha >= 1 && global.t_b_alpha <= 0
 		{
 		var test_mob = instance_create_depth(58,571,player.depth+3,gumseong_shadow)
 		test_mob.test_mob_type = 0
@@ -134,12 +129,7 @@ if global.never_move_in_setting = 0
 
 	if room = room_sector_B03_2_remaked && !instance_exists(gumseong_shadow)
 	{
-		if cre_shadow = 2 && global.t_b_alpha >= 1
-		{
-		cre_shadow = 0
-		}
-	
-		if cre_shadow = 1 && global.b_alpha < 0.7 && global.t_b_alpha <= 0 && player.y >= 1300
+		if cre_shadow = 1 && global.b_alpha >= 1 && global.t_b_alpha <= 0 && player.y >= 1300
 		{
 		var test_mob = instance_create_depth(2778,1600,player.depth+3,gumseong_shadow)
 		test_mob.test_mob_type = 0
@@ -151,18 +141,16 @@ if global.never_move_in_setting = 0
 	
 	if room = room_sector_B03_3_remaked && !instance_exists(gumseong_shadow)
 	{
-		if cre_shadow = 2 && global.t_b_alpha >= 1
-		{
-		cre_shadow = 0
-		}
-	
-		if cre_shadow = 1 && global.b_alpha < 0.7 && global.t_b_alpha <= 0 && player.y >= 1300
+		if cre_shadow = 1 && global.b_alpha >= 1 && global.t_b_alpha <= 0 && player.y < 700
 		{
 		var test_mob = instance_create_depth(3064,483,player.depth+3,gumseong_shadow)
 		test_mob.test_mob_type = 0
 		test_mob.image_xscale = -1
 		test_mob.image_yscale = 1
 		cre_shadow = 2
+		
+		instance_destroy(obj_jellyfish)
 		}
 	}
 }
+

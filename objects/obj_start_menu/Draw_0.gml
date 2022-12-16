@@ -26,7 +26,7 @@ draw_text_k_scale(xx+wid*0.5,yy+v_x*190,"(잘 모르겠으면 보통(50%)으로 
 draw_text_k_scale(xx+wid*0.5,yy+v_x*600,"(설정이 완료되었으면 'D'키를 눌러 넘어갑니다)",99,-1,alpha_____*brightness_set_alpha,c_white,0,0,font_title,v_x/6.5,v_x/6.5,0)
 }
 
-if set_brightness = 0.5
+if set_brightness = 0.4
 {
 var alpha_____ = 1 - global.b_alpha
 draw_text_k_scale(xx+wid*0.5,yy+v_x*120,"일부 영어로 표기되는 텍스트들을 전부 한국어로 바꿀까요?",99,-1,alpha_____,c_white,0,0,font_title,v_x/5,v_x/5,0)
@@ -35,7 +35,15 @@ draw_text_k_scale(xx+wid*0.5,yy+v_x*190,"지금 설정하지 않아도 나중에
 draw_text_k_scale(xx+wid*0.5,yy+v_x*600,"(설정이 완료되었으면 'D'키를 눌러 넘어갑니다)",99,-1,alpha_____*brightness_set_alpha,c_white,0,0,font_title,v_x/6.5,v_x/6.5,0)
 }
 
-if global.never_move_in_setting = 0 && global.show_credits = 0 && global.show_achievement = 0 && set_brightness = 1
+if set_brightness = 0.8
+{
+var alpha_____ = 1 - global.b_alpha
+draw_text_k_scale(xx+wid*0.5,yy+v_x*120,"당신의 이름은?",99,-1,alpha_____,c_white,0,0,font_title,v_x/5,v_x/5,0)
+draw_text_k_scale(xx+wid*0.5,yy+v_x*160,"[띄어쓰기 불가 및 일부 한글 깨짐 주의]",99,-1,alpha_____*0.7,c_white,0,0,font_title,v_x/6,v_x/6,0)
+draw_text_k_scale(xx+wid*0.5,yy+v_x*600,"(설정이 완료되었으면 'Enter'키를 눌러 넘어갑니다)",99,-1,alpha_____*brightness_set_alpha,c_white,0,0,font_title,v_x/6.5,v_x/6.5,0)
+}
+
+if global.never_move_in_setting = 0 && global.show_credits = 0 && global.show_achievement = 0 && set_brightness >= 1
 {
 //draw_text(300,300,dis)
 dis = point_distance(xx+wid*0.5,400,mouse_x,mouse_y)
@@ -74,6 +82,7 @@ message_4 = "크레딧"
 message_5 = "문의"
 message_6 = "종료"
 }
+
 
 if go_start >= 3
 {

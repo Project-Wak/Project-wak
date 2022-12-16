@@ -543,15 +543,33 @@ if interecting_now = 1 && (global.real_ending = 0 || (message_phase >= 61 && mes
 		bgm__ = audio_play_sound(follower_bgm,0,true)
 		}
 		
-		if !instance_exists(check__) && room = room_main
+		if room = room_main
 		{
-		global.b_alpha = 0
-		audio_stop_sound(ending_select)
-		check__ = instance_create_depth(x,y,depth-1,player_message)
-		check__.text = "!"
-		check__.target = player.id
-		check__.parents = id
-		global.never_move = 1
+			if !instance_exists(check__)
+			{
+			obj_camera.x = 1213
+			obj_camera.y = 734
+			obj_camera.t_x = 1213
+			obj_camera.t_y = 734
+			player.x = 1213
+			player.y = 734
+			global.b_alpha = 0
+			audio_stop_sound(ending_select)
+			check__ = instance_create_depth(x,y,depth-1,player_message)
+			check__.text = "!"
+			check__.target = player.id
+			check__.parents = id
+			global.never_move = 1
+			}
+			else
+			{
+			obj_camera.x = 1213
+			obj_camera.y = 734
+			obj_camera.t_x = 1213
+			obj_camera.t_y = 734
+			player.x = 1213
+			player.y = 734
+			}
 		}
 		
 		if room != room_main

@@ -22,7 +22,6 @@ obj_camera.t_x = 503
 obj_camera.t_y = 96
 
 
-mes = 0
 
 //var door__ = instance_create_depth(920,166,0,obj_tp_door_basement)
 //door__.connected_with = 5
@@ -51,4 +50,7 @@ door__.connected_with = 4
 
 var door__ = instance_create_depth(2720,480,0,obj_tp_door_basement)
 door__.connected_with = 5
+
+var droped_item__ = instance_create_depth(3408,534,0,obj_droped_item)
+droped_item__.item_var = 110
 }

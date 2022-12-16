@@ -10,7 +10,7 @@ image_index = choose(0,1)
 image_speed = 0
 
 can_interect = 0
-cre_shadow = 0
+cre_shadow = 1
 
 
 

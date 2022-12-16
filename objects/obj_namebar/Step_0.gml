@@ -3,20 +3,6 @@
 
 dis_a_draw += (dis_a - dis_a_draw)*0.1
 
-if keyboard_check_pressed(vk_anykey)
-{
-timer = -8
-alpha1 = 0
-}
-
-
-
-timer += 0.1
-if timer > 40
-{
-alpha1 += 0.1
-}
-
 
 
 if start = 2
@@ -37,9 +23,6 @@ if activate = 1
 	}
 	
 global.nickname = keyboard_string;
-
-keyboard_string = string_replace(keyboard_string," ","");
-global.nickname = string_replace(global.nickname," ","");
 }
 
 cannot_select_name -= 0.08
@@ -52,7 +35,7 @@ if activate = 0
 		if global.nickname = -4
 		{
 		already_set_name = 0
-		global.nickname = "우왁굳"
+		global.nickname = "왁굳"
 		}
 	}
 	else

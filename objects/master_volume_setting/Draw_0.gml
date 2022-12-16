@@ -58,8 +58,13 @@ draw_text_kl_scale(xx-128*v_x_,yy-10*v_x_,"마스터 볼륨 ",16,999,0.8,image_b
 	}
 
 draw_text_kl_scale(camera_get_view_x(view_camera[0])+32*v_x_,camera_get_view_y(view_camera[0])+32*v_x_,"- 환경 설정",16,999,0.8,image_blend,0,-1,font0,1/2.5*v_x_,1/2.5*v_x_,image_angle)
+var text_____ = "(ESC키 혹은 Tab키로 창 닫기)"
 
-draw_text_kl_scale(camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])-42*v_x_,camera_get_view_y(view_camera[0])+camera_get_view_height(view_camera[0])-32*v_x_,"(ESC키 혹은 Tab키로 창 닫기)",16,999,0.7,$FFCC8E61,0,1,font0,1/3.5*v_x_,1/3.5*v_x_,image_angle)
+if !instance_exists(player)
+{
+text_____ = "(ESC키로 창 닫기)"
+}
+draw_text_kl_scale(camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])-42*v_x_,camera_get_view_y(view_camera[0])+camera_get_view_height(view_camera[0])-32*v_x_,string(text_____),16,999,0.7,$FFCC8E61,0,1,font0,1/3.5*v_x_,1/3.5*v_x_,image_angle)
 
 
 if global.key_setting_message = 0

@@ -10,9 +10,5 @@ already_set_name = 0
 auto_nick = 0
 dis_a = 0
 dis_a_draw = 0
-alarm[2] = 5
-
-var sfx = audio_play_sound(message_sfx,0,0)
-audio_sound_gain(sfx,0.2*global.master_volume*2*global.sfx_volume,0)
 
 //alarm[1] = 60

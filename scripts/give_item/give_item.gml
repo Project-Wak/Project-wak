@@ -10,7 +10,7 @@ function give_item(argument0,argument1)
 		if _cal__ = 2
 		{
 		chat_up("'Re:wind 시계'를 획득하였다!")
-		global.show_guide_mes = "탈리스만\n\n탈리스만는 Tab키를 통해 장착 가능 하며,\n최대 2개까지 장착 가능하다.\n\n(참고로, Re:wind 시계를 장착하지 않고 플레이어 사망시\n'완전한 게임오버'가 되니 꼭 장착하도록 하자.)"
+		global.show_guide_mes = "탈리스만\n\n탈리스만는 Tab키를 통해 장착 가능 하며,\n최대 3개까지 장착 가능하다.\n\n(참고로, Re:wind 시계를 장착하지 않고 플레이어 사망시\n'완전한 게임오버'가 되니 꼭 장착하도록 하자.)"
 		global.show_guide_mes_spr = 0
 		global.guide_gif = Sprite304
 		}
@@ -65,7 +65,7 @@ function give_item(argument0,argument1)
 		chat_up("탈리스만 'AED'를 획득하였다!")
 			if global.none_wakgood_mode = true
 			{
-			global.show_guide_mes = "탈리스만\n\n탈리스만는 Tab키를 통해 장착 가능 하며,\n최대 2개까지 장착 가능하다."
+			global.show_guide_mes = "탈리스만\n\n탈리스만는 Tab키를 통해 장착 가능 하며,\n최대 3개까지 장착 가능하다."
 			global.show_guide_mes_spr = 0
 			}
 		}
@@ -98,6 +98,21 @@ function give_item(argument0,argument1)
 		if _cal__ = 19
 		{
 		chat_up("탈리스만 '바다의 왕의 삼지창'를 획득하였다!")
+		}
+		
+		if _cal__ = 20
+		{
+		chat_up("탈리스만 '1차 테스터 기념 동상'을 획득하였다!")
+		}
+		
+		if _cal__ = 21
+		{
+		chat_up("탈리스만 '2차 테스터 기념 동상'을 획득하였다!")
+		}
+		
+		if _cal__ = 22
+		{
+		chat_up("탈리스만 '3차 테스터 기념 동상'을 획득하였다!")
 		}
 	}
 	else if argument0 = 2

@@ -69,6 +69,7 @@ grabing_walpha = 0
 n_dir_grabing = 1
 n_grabing_total_pressed = 0
 grab_skill = 0
+bullet__patturn = 0
 
 global.room_brightness = 0.6
 alarm[0] = 120

@@ -429,6 +429,11 @@ global.slow_motion += global.slow_motion*0.03
 			obj_camera.t_x = -4
 			obj_camera.x = player.x
 			obj_potential_camera.x = player.x
+			
+				if instance_exists(angel_spear)
+				{
+				instance_destroy(angel_spear)
+				}
 			}
 			
 		

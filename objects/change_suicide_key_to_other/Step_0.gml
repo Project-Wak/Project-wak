@@ -25,7 +25,7 @@ var check_esc = keyboard_check_pressed(vk_escape)
 	{
 	pressed = 0
 	global.key_setting_message = 2
-	global.suicide_key = "P"
+	global.suicide_key = ord("P")
 	
 	var sfx = audio_play_sound(cannot_buy,0,0)
 	audio_sound_gain(sfx,0.1*global.master_volume*2*global.sfx_volume,0)
@@ -39,7 +39,7 @@ var check_esc = keyboard_check_pressed(vk_escape)
 	global.suicide_key = keyboard_lastkey
 		if keyboard_check_pressed(vk_escape)
 		{
-		global.suicide_key = "P"
+		global.suicide_key = ord("P")
 		}
 
 	pressed = 0

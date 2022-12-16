@@ -17,14 +17,14 @@ function hp_minus_for_mob(argument0,argument1)
 	
 	
 	
-	var random_val = percentage_k(global.critical_plus*10)
+	var random_val = percentage_k(global.critical_plus*100)
 	if random_val = 0
 	{
 	random_val = 1
 	}
 	else
 	{
-	random_val = 1.5
+	random_val = 1.25
 	var _ins = instance_create_depth(player.x-player.image_xscale*32,player.y,player.depth-1,effect_saber)
 	_ins.image_xscale = player.image_xscale
 	}

@@ -6,7 +6,7 @@ twitch_chat_connect("woowakgood","우왁굳","oauth:43rzue6rdcldus9fomqrwmtfuaum
 
 global.chat_sender = noone
 global.chat_data = noone
-global.game_ver = "Beta 3.23"
+global.game_ver = "Beta 3.3"
 
 global.bubble_surf = surface_create(1920, 1080);
 global.rage_surf = surface_create(1920, 1080);
@@ -15,7 +15,7 @@ global.guisanga_doo_event = 0
 global.already_played_platform_scene = 0
 ////////////////////////////////////////////////////////////////////////
 global.simhaedoo_stage = 0
-global.credit_message = "\n\n\n\nDirector\n아버 (1인 개발)\n\n\nProgramer\n아버\n\n\nStory\n아버\n\n\nEnemy design\n아버\n\n\nUI design\n아버\n\n\nStage design\n아버\n\n\nEffect design\n아버\n\n\n\n\n\nBackground Music\nSymphony of Specters - Intense Cinematic Trailer\n\nSharo - Atorie to denno sekai\n\nBrightwaltz - Touch a flower softly\n\nBrightwaltz - Trifolium repens f. roseum\n\nSharou - Jinro no tame no komori uta\n\nBrightwaltz - Piano Improvisation 2020 Spring No2\n\nBrightwaltz - Dance in the Air\n\n\nilodolly - Raison d'etre\n\nMakai Symphony - Dragon Castle\n\n\nTrailer Music\nak+q - Ignotus\nZekk - Libertas\n\n\n\n\n\n\n\nReference\n\n\nThe Legend of Gockgang-E\n\nElden Ring\n\nMegaman Z\n\nTerraria\n\n심해두 팬아트\n\n메시 팬아트\n\n왁두 팬아트\n\nNier:Automata\n\n이세돌 팬아트\n\n\n\n\n\n1차 QA\n(피드백/버그 제보)\n\n\nStellarSea\n\n서장님\n오코츠유타\n옥수수칲\n탄창\n황금뿌리\n러머\nSsab\n공벌\n화염뽱어\n젓가락아저씨\n진성e\n벼슬\n페르마벤\n댐쿵이\n쓰레기맛캔디\n1잡탕1\nzun\nDillionaire\nalpamin\nBackSang\nNANFREE\n쥬기\n참이프\n광부\nContra\nQuiettBee\n사미니\n(이외의 많은 여러 사람들)\n\n\n\n\n2차 QA\n\n\n댐쿵이\nBackSang\n모니타리\n스즈메의 문단속\n벤찌\n별명1577\nKastle\n고 라니임니다\n재영이요\n윤석\n러머\n최민우\nㅁㅈ\n허미온\n아리에스\nNAㅅ\nMang0_k\nLadon\nTJD\najdkg296\n쥬기\n잠복근무\n도트박스\n재영\n윤석\n허미온\ncccc\n원시인\n징버거의 돗대\n면주바이\n\n\n\n\n3차 QA\n\n\n세구세구세구야사랑해\n1잡탕1\n백상\nKIM DDi YOMG\nTT1\nACHI99\nNikemach\ndamku1214\nDillionaire\n로얄플러쉬\nDO_S\n이미지박스\n킹츄러스\nseesaw\n소다쿤\n플로토돔\n펭구\n입꼬기\n명준\n갱후니\n조금하는바드\n은색의하늘\najdkg296\nChungYeo\nsda\njustahirman\n허거덩\n\n\n\n\n\n\n\nSpecial Thanks\n(개발에 큰 도움 주신분들과 추가 아이디어 제공자)\n\n\n\nBackSang\n쓰레기맛캔디\nzun\nDillionaire\nNANFREE\nalpamin\n1잡탕1\n쥬기\n댐쿵이\n\n\n\n\n\n\n\nThanks for playing\n\n\n\n\n\n\n\nMade with Gamemaker studio 2"
+global.credit_message = "\n\n\n\nDirector\n아버 (1인 개발)\n\n\nProgramer\n아버\n\n\nStory\n아버\n\n\nEnemy design\n아버\n\n\nUI design\n아버\n\n\nStage design\n아버\n\n\nEffect design\n아버\n\n\n\n\n\nBackground Music\nSymphony of Specters - Intense Cinematic Trailer\n\nSharo - Atorie to denno sekai\n\nBrightwaltz - Touch a flower softly\n\nBrightwaltz - Trifolium repens f. roseum\n\nSharou - Jinro no tame no komori uta\n\nBrightwaltz - Piano Improvisation 2020 Spring No2\n\nBrightwaltz - Dance in the Air\n\n\nilodolly - Raison d'etre\n\nMakai Symphony - Dragon Castle\n\n\nTrailer Music\nak+q - Ignotus\nZekk - Libertas\n\n\n\n\n\n\n\nReference\n\n\nThe Legend of Gockgang-E\n\nElden Ring\n\nMegaman Z\n\nTerraria\n\n심해두 팬아트\n\n메시 팬아트\n\n왁두 팬아트\n\nNier:Automata\n\n이세돌 팬아트\n\n\n\n\n\n1차 QA\n(피드백/버그 제보)\n\n\nStellarSea\n서장님\n오코츠유타\n옥수수칲\n탄창\n황금뿌리\n러머\nSsab\n공벌\n화염뽱어\n젓가락아저씨\n진성e\n벼슬\n페르마벤\n댐쿵이\n쓰레기맛캔디\n1잡탕1\nzun\n왁만치\nalpamin\nBackSang\nNANFREE\n쥬기\n참이프\n광부\nContra\nQuiettBee\n사미니\n(이외의 많은 여러 사람들)\n\n\n\n\n2차 QA\n\n\n댐쿵이\nBackSang\n모니타리\n스즈메의 문단속\n벤찌\n별명1577\nKastle\n고 라니임니다\n재영이요\n윤석\n러머\n최민우\nㅁㅈ\n허미온\n아리에스\nNAㅅ\nMang0_k\nLadon\nTJD\najdkg296\n쥬기\n잠복근무\n도트박스\n재영\n윤석\n허미온\ncccc\n원시인\n징버거의 돗대\n면주바이\n\n\n\n\n3차 QA\n\n\n세구세구세구야사랑해\n1잡탕1\n백상\nKIM DDi YOMG\nTT1\nACHI99\nNikemach\ndamku1214\n왁만치\n로얄플러쉬\nDO_S\n이미지박스\n킹츄러스\nseesaw\n소다쿤\n플로토돔\n펭구\n입꼬기\n명준\n갱후니\n조금하는바드\n은색의하늘\najdkg296\nChungYeo\nsda\njustahirman\n허거덩\n\n\n\n\n\n\n\nSpecial Thanks\n(개발에 큰 도움 주신분들과 추가 아이디어 제공자)\n\n\n\nBackSang\n쓰레기맛캔디\nzun\n왁만치\nNANFREE\nalpamin\n1잡탕1\n쥬기\n댐쿵이\n\n\n\n\n\n\n\nThanks for playing\n\n\n\n\n\n\n\nMade with Gamemaker studio 2"
 //text_color = 0 //Initialize text color variable
 ip_for_calcul = ""
 //created_platfrom = 0
@@ -186,6 +186,9 @@ global.metal_shirts = 0
 global.lockon = 0
 global.lockon_target = -4
 global.clock = 0
+global.fir_tester_statue = 0
+global.sec_tester_statue = 0
+global.thi_tester_statue = 0
 global.noclip = -1
 global.gameover_reason = -4
 global.gameover_reason_title = -4
@@ -464,7 +467,7 @@ global.weapon_owned[i] = 0
 global.weapon_upgraded[i] = 0
 }
 	
-var total_accessories = 19
+var total_accessories = 22
 global.total_accessories_num = total_accessories
 for(var i = 0; i <= total_accessories; i++)
 {

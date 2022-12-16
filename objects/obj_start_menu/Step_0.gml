@@ -2,7 +2,7 @@
 // You can write your code in this editor
 depth = obj_camera.depth+30
 
-if set_brightness = 1 && first_guide_timer < 405
+if set_brightness >= 1 && first_guide_timer < 405
 {
 first_guide_timer ++
 
@@ -45,7 +45,7 @@ if go_start < 3 && start_alpha > 0.5
 
 
 
-if set_brightness = 1 && first_guide_timer > 200
+if set_brightness >= 1 && first_guide_timer > 200
 {
 wheel_cooltime --
 	if start_alpha < 1
@@ -269,7 +269,7 @@ timer ++
 	if global.b_alpha < 1
 	{
 	first_guide_timer = 0
-		if set_brightness < 0.5
+		if set_brightness = 0
 		{
 			if !instance_exists(brightness_setting___)
 			{
@@ -281,11 +281,18 @@ timer ++
 			arrow__.image_yscale = 2
 			}
 		}
-		else
+		if set_brightness = 0.4
 		{
 			if !instance_exists(text_effect_option)
 			{
 			instance_create_depth(x,y,-9999,text_effect_option)
+			}
+		}
+		 if set_brightness = 0.8
+		{
+			if !instance_exists(obj_namebar)
+			{
+			instance_create_depth(x,y,-9999,obj_namebar)
 			}
 		}
 	}
@@ -305,21 +312,23 @@ timer ++
 	instance_destroy(obj_hint_arrow)
 	instance_destroy(brightness_setting_wall)
 	instance_destroy(text_effect_option)
+	instance_destroy(obj_namebar)
 	}
 	
-	if keyboard_check_pressed(global.skip_key)
+ 	if (!instance_exists(obj_namebar) && keyboard_check_pressed(global.skip_key)) || (instance_exists(obj_namebar) && keyboard_check_pressed(vk_enter))
 	{
 	instance_destroy(brightness_setting___)
 	instance_destroy(obj_hint_arrow)
 	instance_destroy(brightness_setting_wall)
 	instance_destroy(text_effect_option)
+	instance_destroy(obj_namebar)
 	global.b_alpha = 10
 	global.room_brightness = 0.6
 	brightness_set_alpha = 0
 	use_keyboard_guide_timer = 1
 		if set_brightness < 1
 		{
-		set_brightness += 0.5
+		set_brightness += 0.4
 		}
 	}
 	
