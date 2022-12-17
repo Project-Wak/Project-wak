@@ -21,8 +21,8 @@
   "width": 64,
   "height": 64,
   "textureGroupId": {
-    "name": "Default",
-    "path": "texturegroups/Default",
+    "name": "entities",
+    "path": "texturegroups/entities",
   },
   "swatchColours": null,
   "gridX": 0,
@@ -90,7 +90,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "스프라이트",
-    "path": "folders/스프라이트.yy",
+    "name": "player_texture",
+    "path": "folders/스프라이트/player_texture.yy",
   },
 }

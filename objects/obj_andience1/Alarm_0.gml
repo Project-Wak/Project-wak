@@ -3,3 +3,4 @@
 interecting_now = 0
 global.never_move = 0
 global.playing_scene = 0
+global.buying_components = 0

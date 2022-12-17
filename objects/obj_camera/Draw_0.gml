@@ -567,7 +567,7 @@ if global.story_text_alpha > 0
 {
 	if global.story_next = 0
 	{
-	draw_text_kl_scale(camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5,yy+300*v_x_,"어느날, 도파민 박사가 음모를 꿈꾸고",188*v_x_,-1,global.story_text_alpha,c_white,0,0,font0,v_x_/2.5,v_x_/2.5,0)
+	draw_text_kl_scale(camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5,yy+300*v_x_,"어느날, 도파민 박사가 음모를 꾸미고",188*v_x_,-1,global.story_text_alpha,c_white,0,0,font0,v_x_/2.5,v_x_/2.5,0)
 	}
 	
 	if global.story_next = 1

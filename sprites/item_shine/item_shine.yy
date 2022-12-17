@@ -21,8 +21,8 @@
   "width": 64,
   "height": 64,
   "textureGroupId": {
-    "name": "Default",
-    "path": "texturegroups/Default",
+    "name": "items",
+    "path": "texturegroups/items",
   },
   "swatchColours": null,
   "gridX": 3,
@@ -90,7 +90,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "스프라이트",
-    "path": "folders/스프라이트.yy",
+    "name": "items",
+    "path": "folders/스프라이트/items.yy",
   },
 }

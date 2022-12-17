@@ -48,7 +48,7 @@ if (pressed > 0 && global.key_setting_message > 0) || global.key_setting_message
 	if cal__img = 2
 	{
 	item_name__ = "가이드 북 2번 - 스테이지 탈출"
-	item_desc__ = "플렛폼을 타고 도착한 맵에서 돌아가고 싶으면\n"+string(keyconverter(global.suicide_key))+"키 혹은 스테이터스 창(Tab)에 들어가서 '자살 (사망 회귀)'버튼을 눌러 자살하여\n섹터에 입장하기 전의 과거로 돌아가 탈출할 수 있다 (단, 1시간의 시간이 소모 된다)"
+	item_desc__ = "플랫폼을 타고 도착한 맵에서 돌아가고 싶으면\n"+string(keyconverter(global.suicide_key))+"키 혹은 스테이터스 창(Tab)에 들어가서 '자살 (사망 회귀)'버튼을 눌러 자살하여\n섹터에 입장하기 전의 과거로 돌아가 탈출할 수 있다 (단, 1시간의 시간이 소모 된다)"
 	}
 	if cal__img = 3
 	{

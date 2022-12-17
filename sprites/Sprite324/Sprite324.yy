@@ -21,8 +21,8 @@
   "width": 559,
   "height": 140,
   "textureGroupId": {
-    "name": "Default",
-    "path": "texturegroups/Default",
+    "name": "guide_video",
+    "path": "texturegroups/guide_video",
   },
   "swatchColours": null,
   "gridX": 0,

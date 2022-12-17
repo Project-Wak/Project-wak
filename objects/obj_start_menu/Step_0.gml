@@ -2,7 +2,58 @@
 // You can write your code in this editor
 depth = obj_camera.depth+30
 
-if set_brightness >= 1 && first_guide_timer < 405
+
+loading_textures_timer++
+
+if loading_textures_timer = 100
+{
+texturegroup_load("guide_video")
+}
+
+if loading_textures_timer = 200
+{
+loading_draw = 0.1
+texturegroup_load("ui")
+}
+
+if loading_textures_timer = 225
+{
+loading_draw = 0.2
+texturegroup_load("map_objects")
+}
+
+if loading_textures_timer = 230
+{
+loading_draw = 0.3
+texturegroup_load("entities")
+}
+
+if loading_textures_timer = 235
+{
+loading_draw = 0.4
+texturegroup_load("boss")
+}
+
+if loading_textures_timer = 240
+{
+loading_draw = 0.5
+texturegroup_load("effects")
+}
+
+if loading_textures_timer = 245
+{
+loading_draw = 0.6
+texturegroup_load("items")
+}
+
+if loading_textures_timer = 250
+{
+loading_draw = 1
+alarm[0] = 1
+}
+
+
+if set_brightness >= 1 && first_guide_timer < 405 && loading_draw = 1
 {
 first_guide_timer ++
 

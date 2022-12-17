@@ -7,6 +7,8 @@ var wid = camera_get_view_width(view_camera[0])
 var hei = camera_get_view_height(view_camera[0])
 
 
+
+
 if surface_exists(owner_surface)
 {
 var surf__ = owner_surface

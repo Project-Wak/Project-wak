@@ -130,7 +130,7 @@ if (pressed > 0 && global.key_setting_message > 0) || global.key_setting_message
 				}
 			}
 		draw_text_kl_scale(xx+50*_c_x,yy+250*_c_x,"필요한 골드 : ",54*_c_x,2300*_c_x,0.8,image_blend,0,-1,font0,1/3.5*_c_x,1/3.5*_c_x,image_angle)
-		draw_text_kl_scale(xx+50*_c_x,yy+275*_c_x,string(requirement_gold)+"Gold",54*_c_x,2300*_c_x,0.4,image_blend,0,-1,font0,1/4*_c_x,1/4*_c_x,image_angle)
+		draw_text_kl_scale(xx+50*_c_x,yy+275*_c_x,string(requirement_gold)+" Gold",54*_c_x,2300*_c_x,0.4,image_blend,0,-1,font0,1/4*_c_x,1/4*_c_x,image_angle)
 		draw_text_kl_scale(xx+50*_c_x,yy+290*_c_x,"(보유 중인 골드 :    "+string(global.gold)+" Gold)",64*_c_x,999,0.67,image_blend,0,-1,font0,1/3.8*_c_x,1/3.8*_c_x,image_angle)
 		}
 		else

@@ -11,4 +11,4 @@ auto_nick = 0
 dis_a = 0
 dis_a_draw = 0
 
-//alarm[1] = 60
+alarm[1] = 5

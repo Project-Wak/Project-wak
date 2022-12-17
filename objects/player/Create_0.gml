@@ -186,7 +186,6 @@ attack_laser_sprite = pl_move_skeleton_laser_skill
 attack_laser_sprite_sec = pl_move_skeleton_laser_skill_sec
 guard_sprite = pl_move_skeleton_guard_beat_saber
 sting_sprite = pl_move_skeleton_sting_skill
-cancled_sprite = pl_move_skeleton_attack_cancled
 rush_sprite = pl_move_skeleton_rush_slice
 suicide_sprite = pl_move_skeleton_suicide
 pering_sprite = pl_move_skeleton_pering_beat_saber

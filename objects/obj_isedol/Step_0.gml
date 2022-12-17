@@ -400,8 +400,8 @@ global.playing_scene = 1
 								{
 								image_xscale = sign_k(x - player.x)
 								check__ = instance_create_depth(x,y,depth-1,player_message)
-								check__.text = "!"
-								check__.target = player.id
+								check__.text = "저기 왼쪽에 있는 플랫폼 아래쪽이 좀 수상해 보이지 않아요?"
+								check__.target = id
 								check__.parents = id
 								}
 			
@@ -417,16 +417,8 @@ global.playing_scene = 1
 										}
 										else
 										{
-											if global.none_wakgood_mode = false
-											{
-											check__.text = "(아이네다)"
-											check__.target = player.id
-											}
-											else
-											{
-											check__.text = "(...)"
-											check__.target = player.id
-											}
+										check__.text = "..."
+										check__.target = player.id
 										}
 									}
 									else

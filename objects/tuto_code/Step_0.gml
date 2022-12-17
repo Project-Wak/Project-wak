@@ -197,7 +197,7 @@ if global.show_credits = 0
 	if message_phase = 25 && !instance_exists(p_mes)
 	{
 	p_mes = instance_create_depth(x,y,depth-1,player_message)
-	p_mes.text = "(플렛폼에 탑승하자)"
+	p_mes.text = "(플랫폼에 탑승하자)"
 	p_mes.target = player.id
 	p_mes.parents = id
 	message_phase = 32

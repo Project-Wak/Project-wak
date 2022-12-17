@@ -68,7 +68,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "gif",
-    "path": "folders/스프라이트/gif.yy",
+    "name": "스프라이트",
+    "path": "folders/스프라이트.yy",
   },
 }

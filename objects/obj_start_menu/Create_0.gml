@@ -20,7 +20,8 @@ brightness_set_alpha = 0
 timer = 0
 
 achievement_delay = 0
-
+loading_draw = 0
+loading_textures_timer = 0
 dis = -4
 
 global.show_credits = 0
@@ -30,4 +31,3 @@ audio_stop_sound(it_s_over)
 owner_surface = surface_create(1920,1080)
 really = 0
 timer_des = 0
-alarm[0] = 1

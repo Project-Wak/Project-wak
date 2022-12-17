@@ -10,5 +10,7 @@ check__ = -4
 story = 0
 
 interecting_now = 0
+selected_sector = 2
+cannot_buy_alpha = 0
 
 depth = 960

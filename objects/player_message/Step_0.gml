@@ -93,7 +93,7 @@ instance_destroy()
 
 
 
-if global.show_time = 0 && global.selecting_stage = 0
+if global.show_time = 0 && global.selecting_stage = 0 && global.buying_components = 0
 {
 	if string_length(text) < 10
 	{

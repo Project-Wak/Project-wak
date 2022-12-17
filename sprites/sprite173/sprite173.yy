@@ -21,8 +21,8 @@
   "width": 64,
   "height": 64,
   "textureGroupId": {
-    "name": "texgroup1",
-    "path": "texturegroups/texgroup1",
+    "name": "effects",
+    "path": "texturegroups/effects",
   },
   "swatchColours": null,
   "gridX": 8,
@@ -68,7 +68,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "스프라이트",
-    "path": "folders/스프라이트.yy",
+    "name": "effects",
+    "path": "folders/스프라이트/effects.yy",
   },
 }

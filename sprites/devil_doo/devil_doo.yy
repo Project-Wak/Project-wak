@@ -21,8 +21,8 @@
   "width": 256,
   "height": 256,
   "textureGroupId": {
-    "name": "Default",
-    "path": "texturegroups/Default",
+    "name": "boss",
+    "path": "texturegroups/boss",
   },
   "swatchColours": null,
   "gridX": 3,
@@ -80,7 +80,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "스프라이트",
-    "path": "folders/스프라이트.yy",
+    "name": "boss",
+    "path": "folders/스프라이트/boss.yy",
   },
 }

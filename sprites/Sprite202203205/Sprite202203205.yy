@@ -21,8 +21,8 @@
   "width": 128,
   "height": 480,
   "textureGroupId": {
-    "name": "Default",
-    "path": "texturegroups/Default",
+    "name": "map_objects",
+    "path": "texturegroups/map_objects",
   },
   "swatchColours": null,
   "gridX": 4,
@@ -68,7 +68,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "스프라이트",
-    "path": "folders/스프라이트.yy",
+    "name": "map",
+    "path": "folders/스프라이트/map.yy",
   },
 }

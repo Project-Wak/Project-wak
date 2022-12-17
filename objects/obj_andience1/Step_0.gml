@@ -23,7 +23,7 @@ repeat(100)
 }
 
 
-
+cannot_buy_alpha += (0 - cannot_buy_alpha)*0.1
 
 
 
@@ -196,7 +196,7 @@ player.x += (x-90 - player.x)*0.1
 		if !instance_exists(check__) && message_phase = 15
 		{
 		check__ = instance_create_depth(x,y,depth-1,player_message)
-		check__.text = "아! 참고로 연구소 탐험은 밖에있는 '플렛폼'을 타고 내려갈 수 있어"
+		check__.text = "아! 참고로 연구소 탐험은 밖에있는 '플랫폼'을 타고 내려갈 수 있어"
 		check__.target = id
 		check__.parents = id
 		}
@@ -237,6 +237,15 @@ player.x += (x-90 - player.x)*0.1
 			
 					if global.choice_now = 1
 					{
+					message_phase = 2
+					check__ = instance_create_depth(x,y,depth-1,player_message)
+					check__.text = "<-          ->"
+					check__.target = player.id
+					check__.parents = id
+					}
+					
+					if global.choice_now = 2
+					{
 					global.playing_scene = 0
 					message_phase = 0
 					interecting_now = 0
@@ -250,8 +259,8 @@ player.x += (x-90 - player.x)*0.1
 				{
 				global.choice += (1 - global.choice)*0.1
 				global.choice_name[0] = "장비를 강화 한다"
-				global.choice_name[1] = "취소 하기"
-				global.choice_name[2] = -4
+				global.choice_name[1] = "재료 구입"
+				global.choice_name[2] = "취소 하기"
 				}
 			}
 		
@@ -270,6 +279,100 @@ player.x += (x-90 - player.x)*0.1
 				}
 			message_phase = 0
 			alarm[0] = 1
+			}
+			
+			if message_phase = 2 && instance_exists(check__)
+			{
+			global.never_move = 1
+			global.playing_scene = 1
+			global.selecting_stage = 0
+				if keyboard_check_pressed(global.left_key)
+				{
+				var sfx = audio_play_sound(activate_sfx,0,0)
+				audio_sound_gain(sfx,global.master_volume*2*global.sfx_volume,0)
+				selected_sector --
+				}
+		
+				if keyboard_check_pressed(global.right_key)
+				{
+				var sfx = audio_play_sound(activate_sfx,0,0)
+				audio_sound_gain(sfx,global.master_volume*2*global.sfx_volume,0)
+				selected_sector ++
+				}
+		
+				if selected_sector < 1
+				{
+				selected_sector = 6
+				}
+		
+				if selected_sector > 6
+				{
+				selected_sector = 1
+				}
+		
+
+				if selected_sector = 1
+				{
+				global.buying_components = 0
+				check__.text = "<-     (취소 하기)     ->"
+				}
+				else
+				{
+				check__.text = "<-     "+string(global.item_name_owned[selected_sector-2])+"     ->"
+				global.buying_components = 1
+				}
+				
+				if keyboard_check_pressed(vk_escape)
+				{
+				global.buying_components = 0
+				global.playing_scene = 0
+				message_phase = 0
+				interecting_now = 0
+				can_interect = 0
+				instance_destroy(check__)
+				alarm[0] = 1
+				}
+			}
+			
+			if message_phase >= 3 && !instance_exists(check__)
+			{
+				if selected_sector = 1
+				{
+				global.buying_components = 0
+				global.playing_scene = 0
+				message_phase = 0
+				interecting_now = 0
+				can_interect = 0
+				alarm[0] = 1
+				}
+				else
+				{
+					if global.gold >= 2500
+					{
+					var sfx = audio_play_sound(critical_sfx,0,0)
+					audio_sound_gain(sfx,0.01*global.master_volume*2*global.sfx_volume,0)
+				
+					var sfx = audio_play_sound(buy_item,0,0)
+					audio_sound_gain(sfx,0.02*global.master_volume*2*global.sfx_volume,0)
+					dev_mes("구매 성공")
+					
+					global.item_owned[selected_sector-2]++;
+					global.gold -= 2500;
+					}
+					else
+					{
+					var sfx = audio_play_sound(cannot_buy,0,0)
+					audio_sound_gain(sfx,0.2*global.master_volume*2*global.sfx_volume,0)
+					dev_mes("골드가 부족합니다")
+					cannot_buy_alpha = 1
+					}
+					
+				check__ = instance_create_depth(x,y,depth-1,player_message)
+				check__.text = "<-          ->"
+				check__.target = player.id
+				check__.parents = id
+				message_phase = 2
+				}
 			}
 		}
 		else

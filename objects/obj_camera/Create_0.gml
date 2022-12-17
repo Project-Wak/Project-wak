@@ -9,6 +9,7 @@ global.story_next = 0
 global.blur_range = 0
 global.ending_b_alpha = 1
 
+
 timer_ending_scene = 0
 image_alpha = 0
 //command_buffer = buffer_create(3, buffer_grow, 1);
