@@ -50,7 +50,7 @@ if scene__ > 0
 {
 	if audio_is_playing(final_battle)
 	{
-	audio_sound_gain(code.last_bgm,0.13*global.master_volume*global.bgm_volume*scene__,0)
+	audio_sound_gain(code.last_bgm,0.13*global.master_volume*global.bgm_volume*global.certain_music_volume*scene__,0)
 	}
 	else
 	{
@@ -577,9 +577,15 @@ else
 			bullet__ ++
 			w_alpha += (0 - w_alpha)*0.1
 			
-				if (bullet__-40)%60 = 0
+				if (bullet__-46)%60 = 0
 				{
 				w_alpha = 2.5
+					repeat(8)
+					{
+					var _ef = instance_create_depth(x,y,depth-1,effect_spark)
+					_ef.hspeed = irandom_range(-20,20)
+					_ef.vspeed = irandom_range(-4,2)
+					}
 				}
 			
 				if bullet__%60 = 0

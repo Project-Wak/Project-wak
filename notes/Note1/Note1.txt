@@ -2166,7 +2166,7 @@ sprite_index = down_attack_sprite
 	
 	if global.now_music = wak_rio
 	{
-	audio_sound_gain(wakrio_bgm,0.3*global.master_volume*2*global.bgm_volume,0)
+	audio_sound_gain(wakrio_bgm,0.3*global.master_volume*2*global.bgm_volume*global.certain_music_volume,0)
 	}
 	
 	if down_attack_plusing > 0
@@ -2184,7 +2184,7 @@ sprite_index = down_attack_sprite
 		obj_camera.y = player.y
 		
 		wakrio_bgm = audio_play_sound(wak_rio,0,0)
-		audio_sound_gain(wakrio_bgm,0.3*global.master_volume*2*global.bgm_volume,0)
+		audio_sound_gain(wakrio_bgm,0.3*global.master_volume*2*global.bgm_volume*global.certain_music_volume,0)
 		
 		room_speed = 25
 		slow_motion = 1

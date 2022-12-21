@@ -657,7 +657,7 @@ global.playing_scene = 1
 							if !instance_exists(check__) && message_phase = 1
 							{
 							check__ = instance_create_depth(x,y,depth-1,player_message)
-							check__.text = "일반 공격 도중 가드를 올리면 공격이 캔슬 되요!"
+							check__.text = "일반 공격 도중 가드를 올리면 공격이 캔슬 돼요!"
 							check__.target = id
 							check__.parents = id
 							can_interect = 0
@@ -733,7 +733,7 @@ global.playing_scene = 1
 							if !instance_exists(check__) && message_phase = 2
 							{
 							check__ = instance_create_depth(x,y,depth-1,player_message)
-							check__.text = "구르기나 가드, 올려 베기를 사용하면 딜레이가 캔슬 되요!"
+							check__.text = "구르기나 가드, 올려 베기를 사용하면 딜레이가 캔슬 돼요!"
 							check__.target = id
 							check__.parents = id
 							can_interect = 0
@@ -855,11 +855,11 @@ global.playing_scene = 1
 					check__ = instance_create_depth(x,y,depth-1,player_message)
 						if global.none_wakgood_mode = false
 						{
-						check__.text = "천양님이랑 팬치들한테도 미리 대피 하라고 전해둘게요!"
+						check__.text = "천양님이랑 팬치들한테도 미리 대피하라고 전해둘게요!"
 						}
 						else
 						{
-						check__.text = "연구소 내에 동료들에게도 미리 대피 하라고 전해둘게요!"
+						check__.text = "연구소 내에 동료들에게도 미리 대피하라고 전해둘게요!"
 						}
 					check__.target = id
 					check__.parents = id

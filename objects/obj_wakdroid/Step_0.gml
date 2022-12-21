@@ -63,7 +63,7 @@ for(var i = 0; i < 64; i++)
 
 if audio_is_playing(follower_bgm)
 {
-audio_sound_gain(code.last_bgm,0.1*global.master_volume*global.bgm_volume*scene__,0)
+audio_sound_gain(code.last_bgm,0.1*global.master_volume*global.bgm_volume*global.certain_music_volume*scene__,0)
 }
 
 if !audio_is_playing(follower_bgm)

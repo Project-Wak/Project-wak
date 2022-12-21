@@ -58,7 +58,7 @@ player.x += (x-90 - player.x)*0.1
 		if !audio_is_playing(interaction_bgm)
 		{
 		var sfx = audio_play_sound(interaction_bgm,0,0)
-		audio_sound_gain(sfx,0.12*global.master_volume*2*global.bgm_volume,0)
+		audio_sound_gain(sfx,0.12*global.master_volume*2*global.bgm_volume*global.certain_music_volume,0)
 		}
 		
 		if !instance_exists(check__) && message_phase = 0
@@ -211,7 +211,7 @@ player.x += (x-90 - player.x)*0.1
 			
 		if !instance_exists(check__) && message_phase = 17
 		{
-		global.show_guide_mes = "피로도와 수면 시스템\n\n피로도의 경우, 시간이 지날 때마다 증가하게 되며\n피로도가 18이상이 된 경우, 플레이어의 최대 체력이 줄어들게 된다.\n이때 피로도는, 플레이어가 수면을 취함으로써 회복할수 있다.\n\n(참고로 침대와 상호작용해야 게임이 저장되니 수시로 이용하자)"
+		global.show_guide_mes = "피로도와 수면 시스템\n\n피로도의 경우, 시간이 지날 때마다 증가하게 되며\n피로도가 18이상이 된 경우, 플레이어의 최대 체력이 줄어들게 된다.\n이때 피로도는, 플레이어가 수면을 취함으로써 회복할 수 있다.\n\n(참고로 침대와 상호작용해야 게임이 저장되니 수시로 이용하자)"
 		global.show_guide_mes_spr = 0
 		global.guide_gif = Sprite323
 		global.tutorial = 1
@@ -380,7 +380,7 @@ player.x += (x-90 - player.x)*0.1
 			if !audio_is_playing(interaction_bgm)
 			{
 			var sfx = audio_play_sound(interaction_bgm,0,0)
-			audio_sound_gain(sfx,0.12*global.master_volume*2*global.bgm_volume,0)
+			audio_sound_gain(sfx,0.12*global.master_volume*2*global.bgm_volume*global.certain_music_volume,0)
 			}
 		
 			if !instance_exists(check__) && message_phase = 0

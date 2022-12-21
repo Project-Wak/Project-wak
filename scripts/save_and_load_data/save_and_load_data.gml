@@ -28,6 +28,9 @@ function save_and_load_data(argument0,argument1)
 
 	//BGM 볼륨
 	ini_write_real("bgm_volume","a",global.bgm_volume);
+	
+	//저작권 브금
+	ini_write_real("certain_musicoff","a",global.certain_musicoff);
 
 	//효과음
 	ini_write_real("sfx_volume","a",global.sfx_volume);
@@ -212,6 +215,9 @@ function save_and_load_data(argument0,argument1)
 
 	//BGM 볼륨
 	global.bgm_volume = ini_read_real("bgm_volume","a",1);
+	
+	//저작권 브금
+	global.certain_musicoff = ini_read_real("certain_musicoff","a",0);
 
 	//효과음
 	global.sfx_volume = ini_read_real("sfx_volume","a",1);

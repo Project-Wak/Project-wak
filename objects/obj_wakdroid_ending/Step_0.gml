@@ -46,7 +46,7 @@ repeat(100)
 
 if audio_is_playing(ending_select) || audio_is_playing(follower_bgm) || audio_is_playing(ending_cinematic)
 {
-audio_sound_gain(bgm__,volume__*volume_downer*0.04*global.master_volume*2*global.bgm_volume,0)
+audio_sound_gain(bgm__,volume__*volume_downer*0.04*global.master_volume*2*global.bgm_volume*global.certain_music_volume,0)
 }
 
 
@@ -76,13 +76,13 @@ if interecting_now = 1 && (global.real_ending = 0 || (message_phase >= 61 && mes
 	check__.target = player.id
 	check__.parents = id
 	player.image_xscale = -1
-	audio_stop_sound(boss_bgm)
+	audio_stop_sound(global.boss_bgm_file)
 	}
 	
 	if !instance_exists(check__) && message_phase = 1
 	{
 	global.show_guide_mes_spr = 6
-	global.show_guide_mes = "박사의 계획은 성공적으로 저지된듯 하다"
+	global.show_guide_mes = "박사의 계획은 성공적으로 저지된 듯 하다"
 	message_phase++
 	}
 	
@@ -125,7 +125,7 @@ if interecting_now = 1 && (global.real_ending = 0 || (message_phase >= 61 && mes
 		{
 		global.choice_name[0] = "시계로 왁드로이드를 과거로 보낸다 (Re:wind시계 영구 소모)"
 		global.choice_name[1] = "시계를 이용해 과거로 돌아가 모두를 대피시킨다"
-		global.choice_name[2] = "연구소 밖으로 도망 간다"
+		global.choice_name[2] = "연구소 밖으로 도망간다"
 			if global.choosed > 0
 			{
 				if global.choice_now = 0
@@ -152,7 +152,7 @@ if interecting_now = 1 && (global.real_ending = 0 || (message_phase >= 61 && mes
 		else
 		{
 		global.choice_name[0] = "사망 회귀를 이용해 과거로 되돌아간다"
-		global.choice_name[1] = "연구소 밖으로 도망 간다"
+		global.choice_name[1] = "연구소 밖으로 도망간다"
 		global.choice_name[2] = -4
 		
 			if global.choosed > 0
@@ -305,7 +305,7 @@ if interecting_now = 1 && (global.real_ending = 0 || (message_phase >= 61 && mes
 			if !audio_is_playing(nomal_ending)
 			{
 			bgm = audio_play_sound(nomal_ending,0,true)
-			audio_sound_gain(bgm,0.23*global.master_volume*2*global.bgm_volume,0)
+			audio_sound_gain(bgm,0.23*global.master_volume*2*global.bgm_volume*global.certain_music_volume,0)
 			}
 		global.gameover_reason_title = "[소멸 엔딩]"
 		global.gameover_reason = "과거로 보낸 왁드로이드로 인해 과거의 자신이 사망하여 없어졌기에\n현재의 자신 또한 존재할 수 없게 되었다"
@@ -676,7 +676,7 @@ if interecting_now = 1 && (global.real_ending = 0 || (message_phase >= 61 && mes
 			if !audio_is_playing(ending_sec_bgm)
 			{
 			bgm = audio_play_sound(ending_sec_bgm,0,true)
-			audio_sound_gain(bgm,0.23*global.master_volume*2*global.bgm_volume,0)
+			audio_sound_gain(bgm,0.23*global.master_volume*2*global.bgm_volume*global.certain_music_volume,0)
 			}
 		global.gameover_reason_title = "[도망자 엔딩]"
 		if global.none_wakgood_mode = true
@@ -742,7 +742,7 @@ if interecting_now = 1 && (global.real_ending = 0 || (message_phase >= 61 && mes
 if global.show_credits > 11000
 {
 volume_downer -= 0.001
-audio_sound_gain(bgm,0.23*global.master_volume*2*global.bgm_volume*volume_downer,0)
+audio_sound_gain(bgm,0.23*global.master_volume*2*global.bgm_volume*global.certain_music_volume*volume_downer,0)
 	if volume_downer <= 0
 	{
 		if select_end = 0

@@ -5,7 +5,7 @@ image_blend = c_white
 
 if bgm != -4
 {
-audio_sound_gain(bgm,0.1*global.master_volume*global.bgm_volume*scene__,0)
+audio_sound_gain(bgm,0.1*global.master_volume*global.bgm_volume*global.certain_music_volume*scene__,0)
 }
 
 if hp <= 0
@@ -261,7 +261,7 @@ patturn = 0
 	{
 	global.playing_scene = 0
 	global.never_move = 0
-	audio_stop_sound(boss_bgm)
+	audio_stop_sound(global.boss_bgm_file)
 	var a___ = audio_play_sound(bomb_sfx,0,0)
 	audio_sound_gain(a___,0.12*global.master_volume*2*global.sfx_volume,0)
 
@@ -513,7 +513,7 @@ else
 		{
 		var sfx = audio_play_sound(laser_skill_ready,0,0)
 		audio_sound_gain(sfx,0.1*global.master_volume*2*global.sfx_volume,0)
-		bgm = audio_play_sound(boss_bgm,1,1)
+		bgm = audio_play_sound(global.boss_bgm_file,1,1)
 		}
 	
 		if !instance_exists(check__) && player.image_alpha > 0

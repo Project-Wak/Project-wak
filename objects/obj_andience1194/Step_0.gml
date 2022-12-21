@@ -77,7 +77,7 @@ global.playing_scene = 1
 	if !instance_exists(check__) && message_phase = 3
 	{
 	check__ = instance_create_depth(x,y,depth-1,player_message)
-	check__.text = "분명 경비용 거대 로봇을 세워뒀을텐데...!"
+	check__.text = "분명 경비용 거대 로봇을 세워뒀을 텐데...!"
 	check__.target = id
 	check__.parents = id
 	}
@@ -146,7 +146,7 @@ global.playing_scene = 1
 	if !instance_exists(check__) && message_phase = 10
 	{
 	check__ = instance_create_depth(x,y,depth-1,player_message)
-	check__.text = "방금 완성 돼서 아직 테스트는 못해봤지만, 상황이 이러니 어쩔 수 없지요..."
+	check__.text = "방금 완성 돼서 아직 테스트는 못 해봤지만, 상황이 이러니 어쩔 수 없지요..."
 	check__.target = id
 	check__.parents = id
 	}
@@ -162,7 +162,7 @@ global.playing_scene = 1
 	if !instance_exists(check__) && message_phase = 12
 	{
 	check__ = instance_create_depth(x,y,depth-1,player_message)
-	check__.text = "공격 부터 방어까지 모든걸 본떠 이보다 완벽할 수 없습니다!"
+	check__.text = "공격부터 방어까지 모든 걸 본떠 이보다 완벽할 수 없습니다!"
 	check__.target = id
 	check__.parents = id
 	}

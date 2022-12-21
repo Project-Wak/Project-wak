@@ -46,7 +46,7 @@ if global.guide_boss = 1 && show_guide = 1
 
 	if instance_exists(obj_angel)
 	{
-	global.show_guide_mes = "엔젤로이드\n\n공격이 오기전, 항상 '특정한' 애니메이션 효과 혹은 효과음이 재생된다.\n이를 통해 보다 쉽게 공격이 오는 타이밍을 확인할 수 있다."
+	global.show_guide_mes = "엔젤로이드\n\n공격이 오기 전, 항상 '특정한' 애니메이션 효과 혹은 효과음이 재생된다.\n이를 통해 보다 쉽게 공격이 오는 타이밍을 확인할 수 있다."
 	global.show_guide_mes_spr = 8
 	global.guide_gif = Sprite300
 	}
@@ -62,7 +62,7 @@ if global.guide_boss = 1 && show_guide = 1
 
 	if instance_exists(obj_guisangadoo)
 	{
-	global.show_guide_mes = "왁귀상어\n\n공격이 오기전, 항상 '특정한' 애니메이션 효과 혹은 효과음이 재생된다.\n이를 통해 보다 쉽게 공격이 오는 타이밍을 확인할 수 있다."
+	global.show_guide_mes = "왁귀상어\n\n공격이 오기 전, 항상 '특정한' 애니메이션 효과 혹은 효과음이 재생된다.\n이를 통해 보다 쉽게 공격이 오는 타이밍을 확인할 수 있다."
 	global.show_guide_mes_spr = 8
 	global.guide_gif = Sprite302
 	}

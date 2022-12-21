@@ -134,7 +134,7 @@ global.playing_scene = 1
 	
 	if !instance_exists(check__) && message_phase = 3
 	{
-	global.choice_name[0] = "뱅갈고무나무 잎을 때간다"
+	global.choice_name[0] = "뱅갈고무나무 잎을 따간다"
 	global.choice_name[1] = "취소 하기"
 	global.choice_name[2] = -4
 	

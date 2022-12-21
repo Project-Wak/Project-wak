@@ -35,7 +35,51 @@ var v_x_ = obj_camera.v_x/1280
 
 		if global.hp > 0 && instance_exists(player_message) && global.show_ui = 1
 		{
-		draw_text_kl_scale(xx+xxx-32*v_x_,yy+yyy-(-64+global.playing_scene_black_bg)*v_x_,"("+string(global.skip_key_for_draw)+"키를 눌러 넘기기)",v_x_*64,-1,0.5,c_white,0,1,font0,v_x_*0.3,v_x_*0.3,0);
+		var can_skip = 1
+			if instance_exists(obj_wak_doo) && obj_wak_doo.skip_boss_apearence = 0
+			{
+			can_skip = 0
+			}
+			
+			if instance_exists(obj_simhae_doo) && obj_simhae_doo.skip_boss_apearence = 0
+			{
+			can_skip = 0
+			}
+			
+			if instance_exists(obj_messi) && obj_messi.skip_boss_apearence = 0
+			{
+			can_skip = 0
+			}
+			
+			if instance_exists(obj_twin_eye) && obj_twin_eye.skip_boss_apearence = 0
+			{
+			can_skip = 0
+			}
+			
+			if instance_exists(obj_worm) && obj_worm.skip_boss_apearence = 0
+			{
+			can_skip = 0
+			}
+			
+			if instance_exists(obj_angel) && obj_angel.skip_boss_apearence = 0
+			{
+			can_skip = 0
+			}
+			
+			if instance_exists(obj_last_boss) && obj_last_boss.skip_boss_apearence = 0
+			{
+			can_skip = 0
+			}
+			
+			if instance_exists(obj_guisangadoo) && obj_guisangadoo.skip_boss_apearence = 0
+			{
+			can_skip = 0
+			}
+			
+			if can_skip = 1
+			{
+			draw_text_kl_scale(xx+xxx-32*v_x_,yy+yyy-(-64+global.playing_scene_black_bg)*v_x_,"("+string(global.skip_key_for_draw)+"키를 눌러 넘기기)",v_x_*64,-1,0.5,c_white,0,1,font0,v_x_*0.3,v_x_*0.3,0);
+			}
 		}
 	}
 }

@@ -15,7 +15,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "boss_bgm_b.mp3",
-  "duration": 70.32,
+  "duration": 157.9102,
   "parent": {
     "name": "소리",
     "path": "folders/소리.yy",

@@ -42,7 +42,7 @@ bgm = -4
 volume_downer = 1
 select_end = 0
 
-audio_stop_sound(boss_bgm)
+audio_stop_sound(global.boss_bgm_file)
 
 _light_ = instance_create_depth(x,y,depth,obj_light)
 _light_.p_id = id

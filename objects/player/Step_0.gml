@@ -143,7 +143,7 @@ poison_alpha += 0.01
 	{
 	var xx_ = x
 	var yy_ = y
-		
+
 		repeat(choose(4,5))
 		{
 		var random_val___2 = percentage_k(80)
@@ -283,7 +283,7 @@ show_left_time = 2
 
 if global.playing_scene = 0 && global.hp > 0 && global.never_move = 0 && global.b_alpha < 0.1 && global.never_move_in_setting = 0 && tiredness = 0 && global.tiredness >= 18 && global.slow_motion = 0 && code.playing_gameover_scene = 0
 {
-global.show_guide_mes = "피로도가 쌓여 조금 피곤한것 같다"
+global.show_guide_mes = "피로도가 쌓여 조금 피곤한 것 같다"
 global.show_guide_mes_spr = 6
 tiredness = 2
 }
@@ -827,7 +827,7 @@ returned_id = global.return_player_id;
 			repeat(10)
 			{
 			var __i = choose(-1,1)
-			var bl_ef = instance_create_depth(x+irandom_range(-16,16),y+irandom_range(16,32),depth-1,blood_on_floor)
+			var bl_ef = instance_create_depth(x+irandom_range(-16,16),y+irandom_range(16,32),depth+1,blood_on_floor)
 			bl_ef.scale_dir = choose(-1,1)
 			bl_ef.sprite_index = sprite991
 				if global.blood_effect > 0
@@ -846,16 +846,10 @@ w_alpha += (-0.01 - w_alpha)*0.1
 	{
 		if global.hp <= 0 && ((global.in_practice = 0 && global.slow_motion = 0 && global.never_move = 0 && global.never_move_in_setting = 0) || (instance_exists(obj_wakdroid_ending) && global.slow_motion = 0))
 		{
-		var message_1 = ("Tip : 올려 베기("+string(keyconverter(global.w_key))+") 혹은 회전베기("+string(keyconverter(global.q_key))+")를 사용해보세요")
-		var message_2 = ("Tip : 기절상태에서 점프(Space) 혹은 구르기(아래 방향키)시 빠르게 기절을 풀수 있습니다")
-		var message_3 = ("Tip : "+string(keyconverter(global.e_key))+"키를 꾹 눌러 레이지 모드를 사용하면 일시적으로 스테미나가 무한이 됩니다")
-		var random_message = choose(message_1,message_2,message_3)
-		dev_mes(random_message)
-		
-		if global.none_wakgood_mode = false && global.left_time > 0 && (!instance_exists(obj_wakdroid_ending) || global.real_ending != 0)
-		{
-		sfx_for_multiplayer(choose(wakgood_hurt,wakgood_hurt2,kiyahou,died_sfx),0,0.85)
-		}
+			if global.none_wakgood_mode = false && global.left_time > 0 && (!instance_exists(obj_wakdroid_ending) || global.real_ending != 0)
+			{
+			sfx_for_multiplayer(choose(wakgood_hurt,wakgood_hurt2,kiyahou,died_sfx),0,0.85)
+			}
 		global.slow_motion = 1;
 		room_speed = 15;
 		global.never_move = 1

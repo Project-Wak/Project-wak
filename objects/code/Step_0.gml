@@ -1,3 +1,20 @@
+
+if !instance_exists(certain_music_off) && global.b_certain_musicoff != global.certain_musicoff
+{
+	if global.certain_musicoff = 1
+	{
+	audio_stop_sound(boss_bgm)
+	global.boss_bgm_file = boss_bgm_b
+	}
+	else
+	{
+	audio_stop_sound(boss_bgm_b)
+	global.boss_bgm_file = boss_bgm
+	}
+global.b_certain_musicoff = global.certain_musicoff
+}
+
+
 if global.chat_data != noone
 {
 save_twitch_chat(global.chat_sender,global.chat_data);
@@ -5,7 +22,7 @@ save_twitch_chat(global.chat_sender,global.chat_data);
 
 if global.none_wakgood_mode = true
 {
-global.credit_message = "\n\n\n\nDirector\n아버 (1인 개발)\n\n\nProgramer\n아버\n\n\nStory\n아버\n\n\nEnemy design\n아버\n\n\nUI design\n아버\n\n\nStage design\n아버\n\n\nEffect design\n아버\n\n\n\n\n\nBackground Music\nSymphony of Specters - Intense Cinematic Trailer\n\nSharo - Atorie to denno sekai\n\nBrightwaltz - Touch a flower softly\n\nBrightwaltz - Trifolium repens f. roseum\n\nSharou - Jinro no tame no komori uta\n\nBrightwaltz - Piano Improvisation 2020 Spring No2\n\nBrightwaltz - Dance in the Air\n\n\nilodolly - Raison d'etre\n\nMakai Symphony - Dragon Castle\n\n\n\n\n\n\n\n\n\n\n1차 QA\n(피드백/버그 제보)\n\n\nStellarSea\n\n서장님\n\n오코츠유타\n\n옥수수칲\n\n탄창\n\n황금뿌리\n\n러머\n\nSsab\n\n공벌\n\n화염뽱어\n\n젓가락아저씨\n\n진성e\n\n벼슬\n\n페르마벤\n\n댐쿵이\n\n쓰레기맛캔디\n\n1잡탕1\n\nzun\n\n왁만치\n\nalpamin\n\nBackSang\n\nNANFREE\n\n쥬기\n\n참이프\n\n광부\n\nContra\n\nQuiettBee\n\n사미니\n\n(이외의 많은 여러 사람들)\n\n\n\n\n2차 QA\n(벨런스 테스터)\n\n\n댐쿵이\n\nBackSang\n\n모니타리\n\n스즈메의 문단속\n\n벤찌\n\n별명1577\n\nKastle\n\n고 라니임니다\n\n재영이요\n\n윤석\n\n러머\n\n최민우\n\nㅁㅈ\n\n허미온\n\n아리에스\n\nNAㅅ\n\nMang0_k\n\nLadon\n\nTJD\n\najdkg296\n\n쥬기\n\n잠복근무\n\n도트박스\n\n재영\n\n윤석\n\n허미온\n\ncccc\n\n원시인\n\n징버거의 돗대\n\n면주바이\n\n\n\n\n\n\n\nSpecial Thanks\n(개발에 큰 도움 주신분들과 추가 아이디어 제공자)\n\n\n\nBackSang\n쓰레기맛캔디\nzun\n왁만치\nNANFREE\nalpamin\n1잡탕1\n쥬기\n댐쿵이\n\n\n\n\n\n\n\nThanks for playing\n\n\n\n\n\n\n\nMade with Gamemaker studio 2"
+global.credit_message = "\n\n\n\nDirector\n아버 (1인 개발)\n\n\nProgramer\n아버\n\n\nStory\n아버\n\n\nEnemy design\n아버\n\n\nUI design\n아버\n\n\nStage design\n아버\n\n\nEffect design\n아버\n\n\n\n\n\nBackground Music\nSymphony of Specters - Intense Cinematic Trailer\n\nSharo - Atorie to denno sekai\n\nBrightwaltz - Touch a flower softly\n\nBrightwaltz - Trifolium repens f. roseum\n\nSharou - Jinro no tame no komori uta\n\nBrightwaltz - Piano Improvisation 2020 Spring No2\n\nBrightwaltz - Dance in the Air\n\n\nilodolly - Raison d'etre\n\nMakai Symphony - Dragon Castle\n\n\n\n\n\n\n\n\n\n\n1차 QA\n(피드백/버그 제보)\n\n\nStellarSea\n\n서장님\n\n오코츠유타\n\n옥수수칲\n\n탄창\n\n황금뿌리\n\n러머\n\nSsab\n\n공벌\n\n화염뽱어\n\n젓가락아저씨\n\n진성e\n\n벼슬\n\n페르마벤\n\n댐쿵이\n\n쓰레기맛캔디\n\n1잡탕1\n\nzun\n\n왁만치\n\nalpamin\n\nBackSang\n\nNANFREE\n\n쥬기\n\n참이프\n\n광부\n\nContra\n\nQuiettBee\n\n사미니\n\n(이외의 많은 여러 사람들)\n\n\n\n\n2차 QA\n(벨런스 테스터)\n\n\n댐쿵이\n\nBackSang\n\n모니타리\n\n스즈메의 문단속\n\n벤찌\n\n별명1577\n\nKastle\n\n고 라니임니다\n\n재영이요\n\n윤석\n\n러머\n\n최민우\n\nㅁㅈ\n\n허미온\n\n아리에스\n\nNAㅅ\n\nMang0_k\n\nLadon\n\nTJD\n\najdkg296\n\n쥬기\n\n잠복근무\n\n도트박스\n\n재영\n\n윤석\n\n허미온\n\ncccc\n\n원시인\n\n징버거의 돗대\n\n면주바이\n\n\n\n\n\n\n\nSpecial Thanks\n(개발에 큰 도움 주신 분들과 추가 아이디어 제공자)\n\n\n\nBackSang\n쓰레기맛캔디\nzun\n왁만치\nNANFREE\nalpamin\n1잡탕1\n쥬기\n댐쿵이\n이미지박스\n\n\n\n\n\n\n\nThanks for playing\n\n\n\n\n\n\n\nMade with Gamemaker studio 2"
 }
 
 
@@ -156,29 +173,29 @@ global.n_night = 0
 }
 
 
-if instance_exists(player) && player.image_alpha > 0
-{
-	if (room = room_sector_B02_1 || room = room_sector_B02_2 || room = room_sector_B03_1 || room = room_sector_B03_2 || room = room_sector_B04_2 || room = room_sector_B05_2 || room = room_sector_B06_2 || room = room_sector_B03_2_remaked || room = room_sector_B03_3_remaked) && !audio_is_playing(boss_bgm)
-	{
-		if audio_is_playing(dungeon_bgm)
-		{
-		dg_vol += (1 - dg_vol)*0.08
-		audio_sound_gain(in_dg_bgm,0.3*global.master_volume*global.bgm_volume*dg_vol,0)
-		}
-		else
-		{
-		in_dg_bgm = audio_play_sound(dungeon_bgm,0,true)
-		}
-	}
-	else
-	{
-	dg_vol += (-0.1 - dg_vol)*0.08
-		if dg_vol <= 0
-		{
-		audio_stop_sound(dungeon_bgm)
-		}
-	}
-}
+//if instance_exists(player) && player.image_alpha > 0
+//{
+//	if (room = room_sector_B02_1 || room = room_sector_B02_2 || room = room_sector_B03_1 || room = room_sector_B03_2 || room = room_sector_B04_2 || room = room_sector_B05_2 || room = room_sector_B06_2 || room = room_sector_B03_2_remaked || room = room_sector_B03_3_remaked) && !audio_is_playing(global.boss_bgm_file)
+//	{
+//		if audio_is_playing(dungeon_bgm)
+//		{
+//		dg_vol += (1 - dg_vol)*0.08
+//		audio_sound_gain(in_dg_bgm,0.3*global.master_volume*global.bgm_volume*global.certain_music_volume*dg_vol,0)
+//		}
+//		else
+//		{
+//		in_dg_bgm = audio_play_sound(dungeon_bgm,0,true)
+//		}
+//	}
+//	else
+//	{
+//	dg_vol += (-0.1 - dg_vol)*0.08
+//		if dg_vol <= 0
+//		{
+//		audio_stop_sound(dungeon_bgm)
+//		}
+//	}
+//}
 
 
 
@@ -514,7 +531,7 @@ if instance_exists(player)
 //자살키 (suicide)
 if keyboard_check_pressed(global.suicide_key) && global.chat_activity = false && global.never_move_in_setting = 0 && global.playing_scene = 0
 {
-	if global.hp > 0 && instance_exists(player) && player.suicide = 0 && global.b_alpha < 0.1 && !instance_exists(obj_wakdroid_ending) && !instance_exists(obj_map_tile1) && !instance_exists(obj_map_tile5)
+	if global.hp > 0 && instance_exists(player) && player.suicide = 0 && global.b_alpha < 0.1 && !instance_exists(obj_wakdroid_ending) && !instance_exists(obj_map_tile1) && !instance_exists(obj_map_tile5) && !instance_exists(obj_wakdroid) && !instance_exists(obj_last_boss)
 	{
 	//player.y -= 4
 	//player.vspeed = -4

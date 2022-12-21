@@ -25,6 +25,7 @@ if global.key_setting_message = 0
 	{
 	instance_create_depth(x,y,-9999,voice_off_option)
 	}
+	instance_create_depth(x,y,-9999,certain_music_off)
 	instance_create_depth(x,y,-9999,shine_effect_option)
 	if !instance_exists(obj_start_menu)
 	{

@@ -171,22 +171,21 @@ global.slow_motion += global.slow_motion*0.03
 				}
 			}
 			
-			if (playing_gameover_scene > 0 || instance_exists(obj_wakdroid_ending)) && sfx_broken = 0 && global.slow_motion > 1200 && global.story_next < 100 && room != room_sector_runaway
+			if playing_gameover_scene > 0 && sfx_broken = 0 && global.slow_motion > 1200 && global.story_next < 100 && room != room_sector_runaway
 			{
 			sfx_broken = 1
-				if instance_exists(obj_wakdroid_ending)
-				{
-					if global.broken_clock = 2
-					{
-					view_shake(0,8,8)
-					var sfx_th = audio_play_sound(broken_sfx,0,0)
-					audio_sound_gain(sfx_th,0.2*global.master_volume*2*global.sfx_volume,0)
-					var sfx_th = audio_play_sound(glow_sfx,0,0)
-					audio_sound_gain(sfx_th,0.3*global.master_volume*2*global.sfx_volume,0)
-					global.broken_clock++
-					}
-				}
-				else
+
+			view_shake(0,8,8)
+			var sfx_th = audio_play_sound(broken_sfx,0,0)
+			audio_sound_gain(sfx_th,0.2*global.master_volume*2*global.sfx_volume,0)
+			var sfx_th = audio_play_sound(glow_sfx,0,0)
+			audio_sound_gain(sfx_th,0.3*global.master_volume*2*global.sfx_volume,0)
+			global.broken_clock++
+			}
+			
+			if instance_exists(obj_wakdroid_ending) && sfx_broken = 0 && global.slow_motion > 1200 && global.story_next < 100 && room != room_sector_runaway
+			{
+				if global.broken_clock = 2
 				{
 				view_shake(0,8,8)
 				var sfx_th = audio_play_sound(broken_sfx,0,0)
@@ -255,6 +254,11 @@ global.slow_motion += global.slow_motion*0.03
 		player.suicided = 0
 		global.hp = player.max_hp
 		global.o2 = 100
+		var message_1 = ("Tip : 올려 베기("+string(keyconverter(global.w_key))+") 혹은 회전베기("+string(keyconverter(global.q_key))+")를 사용해보세요")
+		var message_2 = ("Tip : 기절상태에서 점프(Space) 혹은 구르기(아래 방향키)시 빠르게 기절을 풀수 있습니다")
+		var message_3 = ("Tip : "+string(keyconverter(global.e_key))+"키를 꾹 눌러 레이지 모드를 사용하면 일시적으로 스테미나가 무한이 됩니다")
+		var random_message = choose(message_1,message_2,message_3)
+		dev_mes(random_message)
 		}
 		global.dreamy_alpha = 0
 		room_speed = 60
@@ -568,7 +572,7 @@ global.slow_motion += global.slow_motion*0.03
 			{
 			room_goto(room_sector_B03_2_remaked)
 			}
-		audio_stop_sound(boss_bgm)
+		audio_stop_sound(global.boss_bgm_file)
 		global.blur_range = 0
 		obj_camera.t_x = _revive_xx
 		obj_camera.t_y = _revive_yy

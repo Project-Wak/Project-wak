@@ -39,7 +39,7 @@ if global.show_credits = 0
 	//p_mes.text = "굿. 이제 공격 알려드림"
 	//p_mes.target = player.id
 	//p_mes.parents = id
-	global.show_guide_mes = "일반 공격\n\n일반 공격의 경우 최대 4연타 까지 가능하며,\n다른 공격들과 달리 스테미나를 사용하지 않는다.\n또한 마지막 타의 경우 데미지가 매우 높다.\n\n(참고로 모든 가이드는, 'Tab키'를 눌러 '기타'에서 다시 확인 할수 있다)"
+	global.show_guide_mes = "일반 공격\n\n일반 공격의 경우 최대 4연타 까지 가능하며,\n다른 공격들과 달리 스테미나를 사용하지 않는다.\n또한 마지막 타의 경우 데미지가 매우 높다.\n\n(참고로 모든 가이드는, 'Tab키'를 눌러 '기타'에서 다시 확인 할 수 있다)"
 	global.show_guide_mes_spr = 4
 	}
 
