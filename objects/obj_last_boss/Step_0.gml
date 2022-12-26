@@ -296,7 +296,7 @@ else
 	player.assult_mode = 300
 		if instance_exists(check__)
 		{
-		global.save_point_x = player.x+500
+		global.save_point_x = player.x+640
 		global.save_point_y = player.y
 		global.playing_scene = 0
 		global.never_move = 0
@@ -358,6 +358,7 @@ else
 		if global.hp > 0
 		{
 		timer ++
+		w_alpha += (0 - w_alpha)*0.1
 		}
 		
 			if change_dir > 60

@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-if global.key_setting_message = 0 && global.n_to_setting__ = 1
+if (global.key_setting_message = 0 && global.n_to_setting__ = 1) || (!instance_exists(master_volume_setting))
 {
 global.certain_musicoff ++
 if global.certain_musicoff > 1

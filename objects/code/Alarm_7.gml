@@ -125,16 +125,26 @@ player.guard_sprite = pl_move_skeleton_guard
 
 
 //난이도 보정 (추가 방어력)
-var plus_defence__ = 0
+var broad_buff = 0
+var easymode_buff = 0
 if global.time_plusment = 2
 {
-plus_defence__ = 0.1
+easymode_buff = 0.25
 	if global.super_easy = 2
 	{
-	plus_defence__ = 0.2
+	easymode_buff = 0.4
 	}
 }
-		
+else
+{
+	if (string_pos(global.nickname,"왁굳") != 0 || string_pos(global.nickname,"우왁굳") != 0)
+	{
+	broad_buff = 0.25
+	}
+}
+
+
+
 		
 		
 //탈리스만
@@ -192,7 +202,7 @@ if global.n_sword != 6
 	
 //스텟 적용
 global.max_armor_plus = 1
-global.max_armor_plus += global.ribon*0.1+global.hairpin*0.1+plus_defence__+(global.fir_tester_statue+global.sec_tester_statue+global.thi_tester_statue)*0.05
+global.max_armor_plus += easymode_buff+broad_buff+global.ribon*0.1+global.hairpin*0.1+(global.fir_tester_statue+global.sec_tester_statue+global.thi_tester_statue)*0.05
 	
 global.critical_plus = 0
 global.critical_plus += global.blue_flag*0.15+global.diamond_sword*0.1+(global.fir_tester_statue+global.sec_tester_statue+global.thi_tester_statue)*0.12

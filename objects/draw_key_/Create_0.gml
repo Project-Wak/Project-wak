@@ -4,3 +4,4 @@ image_speed = 0
 image_alpha = 0
 a = 0
 time = 0
+hurted = 0

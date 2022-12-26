@@ -123,7 +123,7 @@ if interecting_now = 1 && (global.real_ending = 0 || (message_phase >= 61 && mes
 	global.choice += (1 - global.choice)*0.1
 		if global.none_wakgood_mode = false
 		{
-		global.choice_name[0] = "시계로 왁드로이드를 과거로 보낸다 (Re:wind시계 영구 소모)"
+		global.choice_name[0] = "시계로 왁드로이드를 과거로 보낸다\n(Re:wind시계 영구 소모로 인해, 더 이상 사망 회귀 사용 불가)"
 		global.choice_name[1] = "시계를 이용해 과거로 돌아가 모두를 대피시킨다"
 		global.choice_name[2] = "연구소 밖으로 도망간다"
 			if global.choosed > 0

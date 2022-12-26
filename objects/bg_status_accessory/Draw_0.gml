@@ -38,12 +38,27 @@ if (pressed > 0 && global.key_setting_message > 0) || global.key_setting_message
 	if cal__img = 2
 	{
 	item_name__ =  "Re:wind 시계"
-	item_desc__ = "Re:wind뮤비속 시계를 본따 만든 휴대용 시계\n\n특수효과 : 게임 오버가 되었을 때 바로 직전의 과거로 시간을 되돌림\n또한, 현재 시각과 함께 왁드로이드 완성까지 남은 시간을 표시해줌"
+		if (global.time_plusment = 2 && global.super_easy = 1)
+		{
+		item_desc__ = "Re:wind뮤비속 시계를 본따 만든 휴대용 시계\n\n특수효과 : 게임 오버가 되었을 때 바로 직전의 과거로 시간을 되돌림\n또한, 현재 시각과 함께 왁드로이드 완성까지 남은 시간을 표시해줌\n+방어력 25% 증가 (벨런스 보정 효과)"
+		}
+		else if (global.time_plusment = 2 && global.super_easy = 2)
+		{
+		item_desc__ = "Re:wind뮤비속 시계를 본따 만든 휴대용 시계\n\n특수효과 : 게임 오버가 되었을 때 바로 직전의 과거로 시간을 되돌림\n또한, 현재 시각과 함께 왁드로이드 완성까지 남은 시간을 표시해줌\n+방어력 40% 증가 (벨런스 보정 효과)"
+		}
+		else if (string_pos(global.nickname,"왁굳") != 0 || string_pos(global.nickname,"우왁굳") != 0)
+		{
+		item_desc__ = "Re:wind뮤비속 시계를 본따 만든 휴대용 시계\n\n특수효과 : 게임 오버가 되었을 때 바로 직전의 과거로 시간을 되돌림\n또한, 현재 시각과 함께 왁드로이드 완성까지 남은 시간을 표시해줌\n+방어력 25% 증가 (벨런스 보정 효과)"
+		}
+		else
+		{
+		item_desc__ = "Re:wind뮤비속 시계를 본따 만든 휴대용 시계\n\n특수효과 : 게임 오버가 되었을 때 바로 직전의 과거로 시간을 되돌림\n또한, 현재 시각과 함께 왁드로이드 완성까지 남은 시간을 표시해줌"
+		}
 	}
 	if cal__img = 3
 	{
 	item_name__ = "객관안"
-	item_desc__ = "자동으로 적을 타깃팅 해준다. 돌격 소총과 함께 사용하면 굳\n\n특수효과 : 객관적으로 판단하여 적을 자동으로 락온"
+	item_desc__ = "자동으로 적을 타깃팅 해준다. 돌격 소총과 함께 사용하면 총을 모든 각도로 자동 조준한다\n\n특수효과 : 객관적으로 판단하여 적을 자동으로 락온"
 	}
 	if cal__img = 4
 	{

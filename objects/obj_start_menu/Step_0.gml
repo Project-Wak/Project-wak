@@ -332,14 +332,25 @@ timer ++
 			arrow__.image_yscale = 2
 			}
 		}
-		if set_brightness = 0.4
+		
+		if set_brightness = 0.3
 		{
 			if !instance_exists(text_effect_option)
 			{
 			instance_create_depth(x,y,-9999,text_effect_option)
 			}
 		}
-		 if set_brightness = 0.8
+		
+		if set_brightness = 0.6
+		{
+			if !instance_exists(certain_music_off)
+			{
+			instance_create_depth(x,y,-9999,certain_music_off)
+			show_debug_message("created")
+			}
+		}
+		
+		if set_brightness = 0.9
 		{
 			if !instance_exists(obj_namebar)
 			{
@@ -364,6 +375,7 @@ timer ++
 	instance_destroy(brightness_setting_wall)
 	instance_destroy(text_effect_option)
 	instance_destroy(obj_namebar)
+	instance_destroy(certain_music_off)
 	}
 	
  	if (!instance_exists(obj_namebar) && keyboard_check_pressed(global.skip_key)) || (instance_exists(obj_namebar) && keyboard_check_pressed(vk_enter))
@@ -373,13 +385,14 @@ timer ++
 	instance_destroy(brightness_setting_wall)
 	instance_destroy(text_effect_option)
 	instance_destroy(obj_namebar)
+	instance_destroy(certain_music_off)
 	global.b_alpha = 10
 	global.room_brightness = 0.6
 	brightness_set_alpha = 0
 	use_keyboard_guide_timer = 1
 		if set_brightness < 1
 		{
-		set_brightness += 0.4
+		set_brightness += 0.3
 		}
 	}
 	

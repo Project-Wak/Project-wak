@@ -401,7 +401,7 @@ else
 	
 			if saved_real_x = -4
 			{
-			global.save_point_x = xstart-250
+			global.save_point_x = xstart-400
 			global.save_point_y = player.y
 			saved_real_x = xstart
 			saved_real_y = y
@@ -508,7 +508,6 @@ else
 	image_blend = merge_color(c_black,c_white,scene__)
 	global.playing_scene = 1
 	global.never_move = 1
-	global.room_brightness += 0.0012
 		if bgm = -4 && global.show_credits = 0
 		{
 		var sfx = audio_play_sound(laser_skill_ready,0,0)
@@ -535,7 +534,7 @@ else
 				{
 				left_eye.y -= scene__*(8-2.5*(scene__/0.6))
 				}
-			global.room_brightness += 0.0012
+
 				if scene__ >= 1
 				{
 				global.b_alpha = 1.2

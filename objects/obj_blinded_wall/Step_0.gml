@@ -11,6 +11,10 @@ if room = room_main
 	depth = player.depth-122
 	}
 }
+else
+{
+depth = player.depth-122
+}
 
 if place_meeting(x,y,player)
 {

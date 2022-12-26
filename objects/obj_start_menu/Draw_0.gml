@@ -28,7 +28,7 @@ draw_text_k_scale(xx+wid*0.5,yy+v_x*190,"(잘 모르겠으면 보통(50%)으로 
 draw_text_k_scale(xx+wid*0.5,yy+v_x*600,"(설정이 완료되었으면 'D'키를 눌러 넘어갑니다)",99,-1,alpha_____*brightness_set_alpha,c_white,0,0,font_title,v_x/6.5,v_x/6.5,0)
 }
 
-if set_brightness = 0.4
+if set_brightness = 0.3
 {
 var alpha_____ = 1 - global.b_alpha
 draw_text_k_scale(xx+wid*0.5,yy+v_x*120,"일부 영어로 표기되는 텍스트들을 전부 한국어로 바꿀까요?",99,-1,alpha_____,c_white,0,0,font_title,v_x/5,v_x/5,0)
@@ -37,7 +37,16 @@ draw_text_k_scale(xx+wid*0.5,yy+v_x*190,"지금 설정하지 않아도 나중에
 draw_text_k_scale(xx+wid*0.5,yy+v_x*600,"(설정이 완료되었으면 'D'키를 눌러 넘어갑니다)",99,-1,alpha_____*brightness_set_alpha,c_white,0,0,font_title,v_x/6.5,v_x/6.5,0)
 }
 
-if set_brightness = 0.8
+if set_brightness = 0.6
+{
+var alpha_____ = 1 - global.b_alpha
+draw_text_k_scale(xx+wid*0.5,yy+v_x*120,"저작권 음원들을 다른 음원으로 대체 할까요?",99,-1,alpha_____,c_white,0,0,font_title,v_x/5,v_x/5,0)
+draw_text_k_scale(xx+wid*0.5,yy+v_x*160,"(유튜브 업로드 시, 저작권 음원들은 '라이선스 코드'와 몇 가지 단계를 거쳐 저작권 해제 가능)",99,-1,alpha_____*0.7,c_white,0,0,font_title,v_x/6,v_x/6,0)
+draw_text_k_scale(xx+wid*0.5,yy+v_x*190,"(더욱 몰입도 있는 게임을 위해, 대체 하지 않기를 권장하며, 귀찮으시면 그냥 대체해주세요)",99,-1,alpha_____*0.7,c_white,0,0,font_title,v_x/6.5,v_x/6.5,0)
+draw_text_k_scale(xx+wid*0.5,yy+v_x*600,"(설정이 완료되었으면 'D'키를 눌러 넘어갑니다)",99,-1,alpha_____*brightness_set_alpha,c_white,0,0,font_title,v_x/6.5,v_x/6.5,0)
+}
+
+if set_brightness = 0.9
 {
 var alpha_____ = 1 - global.b_alpha
 draw_text_k_scale(xx+wid*0.5,yy+v_x*120,"당신의 이름은?",99,-1,alpha_____,c_white,0,0,font_title,v_x/5,v_x/5,0)

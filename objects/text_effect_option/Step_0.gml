@@ -3,7 +3,7 @@
 var _c_x = obj_camera.v_x/1280
 if !instance_exists(master_volume_setting)
 {
-var xx = camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5-150*_c_x
+var xx = camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5-145*_c_x
 var yy = camera_get_view_y(view_camera[0])+(500-100)*_c_x
 	if instance_exists(obj_start_menu)
 	{

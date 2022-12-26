@@ -12,7 +12,7 @@ if global.choice > 0
 		draw_set_color(c_black)
 		draw_set_alpha(global.choice*0.7)
 		draw_rectangle(xx-v_x*180,yy+v_x*(60+i*100),xx+v_x*180,yy+v_x*(100+i*100),false)
-		draw_text_kl_scale(xx,yy+v_x*(70+i*100),global.choice_name[i],128*v_x,-1,global.choice,c_white,0,0,font0,1/3.3*v_x,1/3.3*v_x,0)
+		draw_text_kl_scale(xx,yy+v_x*(70+i*100),global.choice_name[i],64*v_x,-1,global.choice,c_white,0,0,font0,1/3.3*v_x,1/3.3*v_x,0)
 			if global.choice_now = i
 			{
 			draw_set_color(c_white)

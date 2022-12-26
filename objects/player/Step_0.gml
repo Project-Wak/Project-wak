@@ -4033,7 +4033,7 @@ pressed_d_key = 0
 hspeed += (0 - hspeed)*0.1
 
 
-if global.noclip = -1
+if global.noclip = -1 && spin_attack = 0
 {
 	repeat(100)
 	{
@@ -4556,6 +4556,10 @@ spin_attack += 0.3
 			
 				if on_floor = true
 				{
+				down_attack_with_rage = 1
+				sfx_for_multiplayer(bomb_sfx,false,0.01)
+		
+				attack_target_x = x
 				y -= 3
 				vspeed = -4
 				sfx_for_multiplayer(guard,0,0.1)
@@ -4768,7 +4772,7 @@ down_attack_with_rage++
 	}
 	
 	
-	if (global.awakening <= 0 && down_attack_with_rage_dis/64 > floor(down_dis_set*0.2)) || (global.awakening > 1 && down_attack_with_rage_dis/64 > floor(down_dis_set*0.5))
+	if (global.awakening <= 0 && down_attack_with_rage_dis/64 > 3)
 	{
 	down_dis = 0
 	down_attack_with_rage_dis = 0
@@ -5260,19 +5264,8 @@ global.movement_speed = 0
 		if down_attack_sfx_on != 1
 		{
 		down_attack_sfx_on = 1
+		down_dis = 0
 		sfx_for_multiplayer(down_attack_sfx,0,0.5)
-		
-			if down_dis > 10
-			{
-			down_attack_with_rage = 1
-			sfx_for_multiplayer(bomb_sfx,false,0.05)
-		
-			attack_target_x = x
-			}
-			else
-			{
-			down_dis = 0
-			}
 		
 		if place_meeting(x,y,obj_water_inside)
 		{

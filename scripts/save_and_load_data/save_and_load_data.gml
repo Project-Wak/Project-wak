@@ -243,7 +243,7 @@ function save_and_load_data(argument0,argument1)
 	global.guard_key = ini_read_string("guard_key","a",string(vk_up))
 	global.g_key = ini_read_string("g_key","a",ord("G"))
 	global.console_mode = ini_read_real("console_mode","a",0)
-	global.auto_run = ini_read_real("auto_run","a",0)
+	global.auto_run = ini_read_real("auto_run","a",1)
 
 	//키 가이드
 	global.guide = ini_read_real("guide","a",0)

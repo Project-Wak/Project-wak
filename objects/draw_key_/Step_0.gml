@@ -94,18 +94,17 @@ instance_destroy()
 
 if (img_index = 27)
 {
-var _check__ = 0
-	with(draw_hp_m)
+	if instance_exists(player)
 	{
-		if d_text = "Stand up!" || d_text = "일어남!"
+		if player.hurt > 0
 		{
-		_check__ = 1
+		hurted = 1
 		}
-	}
 	
-	if _check__ = 1
-	{
-	a = 1
+		if audio_is_playing(critical_sfx) && hurted = 1
+		{
+		a = 1
+		}
 	}
 }
 

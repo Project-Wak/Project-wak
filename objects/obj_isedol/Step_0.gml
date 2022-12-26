@@ -342,7 +342,7 @@ global.playing_scene = 1
 						}
 						else
 						{
-							if (global.total_died >= 10 && global.accessories_owned[14] = 0)
+							if (global.total_died >= 10 && global.accessories_owned[14] = 0 && global.item_owned[6] > 0 && global.b_alpha < 0.6)
 							{
 								if !instance_exists(check__) && message_phase = 0
 								{
@@ -380,7 +380,7 @@ global.playing_scene = 1
 								if !instance_exists(check__) && message_phase = 4
 								{
 								check__ = instance_create_depth(x,y,depth-1,player_message)
-								check__.text = "힘들 때 사용하면 체력이 오를 거예요! 화이팅!"
+								check__.text = "힘들 때 사용하면 체력이 회복될 거예요! 화이팅!"
 								check__.target = id
 								check__.parents = id
 								give_healitem = 0
@@ -400,7 +400,7 @@ global.playing_scene = 1
 								{
 								image_xscale = sign_k(x - player.x)
 								check__ = instance_create_depth(x,y,depth-1,player_message)
-								check__.text = "저기 왼쪽에 있는 플랫폼 아래쪽이 좀 수상해 보이지 않아요?"
+								check__.text = "근데... 저기 왼쪽 아래가 좀 수상해 보이지 않아요?"
 								check__.target = id
 								check__.parents = id
 								}
