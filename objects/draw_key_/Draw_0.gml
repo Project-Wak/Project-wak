@@ -235,12 +235,12 @@ if img_index = 14
 var xx_sec = camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5
 	if global.n_sword != 6
 	{
-	draw_text_kl_scale(xx_sec,yy+85*cm_vx,"익스플로전\n\n\n\n(가드키 '먼저' 누르던 도중 "+string(global.e_key_for_draw)+"키)",16,9999,1,image_blend,0,0,font0,cm_vx*1/3,cm_vx*1/3,image_angle)
+	draw_text_kl_scale(xx_sec,yy+85*cm_vx,"익스플로전\n\n\n\n(가드 중인 상태로"+string(global.e_key_for_draw)+"키 살짝)",16,9999,1,image_blend,0,0,font0,cm_vx*1/3,cm_vx*1/3,image_angle)
 	global.rage_gauge = 100
 	}
 	else
 	{
-	draw_text_kl_scale(xx_sec,yy+85*cm_vx,"할복\n\n\n\n(가드키 '먼저' 누르던 도중 "+string(global.e_key_for_draw)+"키)",16,9999,1,image_blend,0,0,font0,cm_vx*1/3,cm_vx*1/3,image_angle)
+	draw_text_kl_scale(xx_sec,yy+85*cm_vx,"할복\n\n\n\n(가드 중인 상태로 "+string(global.e_key_for_draw)+"키 살짝)",16,9999,1,image_blend,0,0,font0,cm_vx*1/3,cm_vx*1/3,image_angle)
 	}
 }
 
@@ -261,7 +261,7 @@ draw_text_kl_scale(xx,yy+85*cm_vx,"연습장 나가기",16,9999,1,image_blend,0,
 
 if img_index = 25
 {
-draw_text_kl_scale(camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5,yy+85*cm_vx,"에네르기파\n\n\n\n[레이지(Rage) 대량 소비]\n\n\n\n(방향키 '먼저' 누르던 도중 "+string(global.e_key_for_draw)+"키)",16,9999,1,image_blend,0,0,font0,cm_vx*1/3,cm_vx*1/3,image_angle)
+draw_text_kl_scale(camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5,yy+85*cm_vx,"에네르기파\n\n\n\n[레이지(Rage) 대량 소비]\n\n\n\n(걸어가는 도중 "+string(global.e_key_for_draw)+"키 살짝)",16,9999,1,image_blend,0,0,font0,cm_vx*1/3,cm_vx*1/3,image_angle)
 global.rage_gauge = 100
 }
 

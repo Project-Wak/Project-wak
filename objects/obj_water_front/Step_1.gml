@@ -12,8 +12,11 @@ if place_meeting(x,y,player)
 	effect_.t_image_yscale = 0.05*2
 	effect_.received = 0
 	effect_.image_alpha = 1.3
+	if global.show_credits = 0
+	{
 	var sfx__ = audio_play_sound(water_in_sfx,0,false)
 	audio_sound_gain(sfx__,0.9,0)
+	}
 	placing_player = 1
 	}
 }
@@ -28,8 +31,11 @@ else
 		effect_.t_image_yscale = 0.05*2
 		effect_.received = 0
 		effect_.image_alpha = 1.3
+		if global.show_credits = 0
+		{
 		var sfx__ = audio_play_sound(water_in_sfx,0,false)
 		audio_sound_gain(sfx__,0.9,0)
+		}
 		placing_player = 0
 		}
 	}

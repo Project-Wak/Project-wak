@@ -422,9 +422,17 @@ global.playing_scene = 1
 								{
 								image_xscale = sign_k(x - player.x)
 								check__ = instance_create_depth(x,y,depth-1,player_message)
-								check__.text = "근데... 저기 왼쪽 아래가 좀 수상해 보이지 않아요?"
-								check__.target = id
 								check__.parents = id
+									if global.item_owned[6] <= 0
+									{
+									check__.text = "..."
+									check__.target = player.id
+									}
+									else
+									{
+									check__.text = "근데... 저기 왼쪽 아래가 좀 수상해 보이지 않아요?"
+									check__.target = id
+									}
 								}
 			
 								if !instance_exists(check__) && message_phase = 1

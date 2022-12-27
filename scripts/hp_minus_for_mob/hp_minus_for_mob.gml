@@ -48,7 +48,12 @@ function hp_minus_for_mob(argument0,argument1)
 	
 	if argument1 > 0
 	{
-	hp -= damage_calcul
+	var __dmg_decrease = global.replayed*0.7
+	if __dmg_decrease < 1
+	{
+	__dmg_decrease = 1
+	}
+	hp -= damage_calcul/__dmg_decrease
 	damaged_time = 0
 	var d_ef = instance_create_depth(x,y,depth-1,draw_hp_m)
 	d_ef.d_text = round(damage_calcul)

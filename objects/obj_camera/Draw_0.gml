@@ -283,7 +283,7 @@ if room != menu && global.playing_scene = 0 && global.story_next < 100 && global
 	}
 	
 	
-	if global.guide != 1 || global.playing_scene > 0 || global.b_alpha > 0.1 || (instance_exists(player) && player.attack_laser+player.attack_laser_sec > 0) || global.show_guide_mes != -4
+	if global.guide != 1 || global.playing_scene > 0 || global.b_alpha > 0.1 || (instance_exists(player) && player.attack_laser+player.attack_laser_sec > 0) || global.show_guide_mes != -4 || (instance_exists(obj_chatbox) && obj_chatbox.new_chat > 0) || instance_exists(draw_key_)
 	{
 	guide_g_alpha = 1
 	}

@@ -3,7 +3,7 @@
 
 
 
-if player.x < 668
+if player.x < 2129
 {
 var __i = sign(x - player.x)
 	if __i = 0

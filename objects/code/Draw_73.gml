@@ -21,17 +21,21 @@ if global.choice > 0
 		}
 	}
 	
-	if instance_exists(obj_wakdroid_ending) && room = room_sector_B07
+	if instance_exists(obj_wakdroid_ending)
 	{
 		if global.show_credits > 0
 		{
 		draw_text_kl_scale(xx,yy-v_x*54,"다회차 플레이를 하시겠어요?",192*v_x,-1,global.choice,c_white,0,0,font0,1/2.5*v_x,1/2.5*v_x,0)
-		draw_text_kl_scale(xx,yy-v_x*16,"(플레이어가 현재 장비중인 무기와, 최대 체력 및 도전과제를 제외하고 모든 데이터가 지워집니다)",160*v_x,-1,global.choice*0.8,c_white,0,0,font0,1/3.5*v_x,1/3.5*v_x,0)
+		draw_text_kl_scale(xx,yy-v_x*16,"(플레이어가 현재 장비중인 무기와, 최대 체력 및 도전과제를 제외하고 모든 데이터 초기화)",160*v_x,-1,global.choice*0.8,c_white,0,0,font0,1/3.5*v_x,1/3.5*v_x,0)
+		draw_text_kl_scale(xx,yy+v_x*16,"(다회차 플레이시, 기존 몬스터들이 더욱 강력해지고, 히든 보스를 만나보실 수 있습니다)",160*v_x,-1,global.choice*0.8,c_white,0,0,font0,1/4*v_x,1/4*v_x,0)
 		}
 		else
 		{
-		draw_text_kl_scale(xx,yy-v_x*54,"선택지에 따라 엔딩이 달라집니다",192*v_x,-1,global.choice,c_white,0,0,font0,1/2.5*v_x,1/2.5*v_x,0)
-		draw_text_kl_scale(xx,yy-v_x*16,"(진엔딩을 보기 위해선 신중하게 선택해주세요)",160*v_x,-1,global.choice*0.8,c_white,0,0,font0,1/3.5*v_x,1/3.5*v_x,0)
+			if room = room_sector_B07
+			{
+			draw_text_kl_scale(xx,yy-v_x*54,"선택지에 따라 엔딩이 달라집니다",192*v_x,-1,global.choice,c_white,0,0,font0,1/2.5*v_x,1/2.5*v_x,0)
+			draw_text_kl_scale(xx,yy-v_x*16,"(진엔딩을 보기 위해선 신중하게 선택해주세요)",160*v_x,-1,global.choice*0.8,c_white,0,0,font0,1/3.5*v_x,1/3.5*v_x,0)
+			}
 		}
 	}
 }

@@ -347,7 +347,7 @@ player.x += (x-90 - player.x)*0.1
 				}
 				else
 				{
-					if global.gold >= 2500
+					if global.gold >= 9000
 					{
 					var sfx = audio_play_sound(critical_sfx,0,0)
 					audio_sound_gain(sfx,0.01*global.master_volume*2*global.sfx_volume,0)
@@ -357,7 +357,7 @@ player.x += (x-90 - player.x)*0.1
 					dev_mes("구매 성공")
 					
 					global.item_owned[selected_sector-2]++;
-					global.gold -= 2500;
+					global.gold -= 9000;
 					}
 					else
 					{

@@ -120,7 +120,7 @@ draw_text_kl_scale(x,y-50*image_yscale,real_text,16,9999,image_alpha,image_blend
 	draw_text_kl_scale(xx+170*v_x,yy+40*v_x,"현재 보유 중인 갯수 :",64,-1,1*image_alpha,t_color,-1,-1,font0,v_x/3.5,v_x/3.5,0)
 	draw_text_kl_scale(xx+170*v_x,yy+60*v_x,string(global.item_owned[obj_andience1.selected_sector-2])+"개",64,-1,1*image_alpha,t_color,-1,-1,font0,v_x/4,v_x/4,0)
 
-	draw_text_kl_scale(xx-180*v_x,yy+40*v_x,"필요한 골드 : 2500 Gold",64,-1,1*image_alpha,t_color,-1,-1,font0,v_x/3.5,v_x/3.5,0)
+	draw_text_kl_scale(xx-180*v_x,yy+40*v_x,"필요한 골드 : 9000 Gold",64,-1,1*image_alpha,t_color,-1,-1,font0,v_x/3.5,v_x/3.5,0)
 	draw_text_kl_scale(xx-180*v_x,yy+60*v_x,"(보유 중인 골드 :    "+string(global.gold)+" Gold)",64,-1,1*image_alpha,t_color,-1,-1,font0,v_x/4,v_x/4,0)
 	}
 	

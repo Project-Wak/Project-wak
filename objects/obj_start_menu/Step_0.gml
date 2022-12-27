@@ -378,7 +378,7 @@ timer ++
 	instance_destroy(certain_music_off)
 	}
 	
- 	if (!instance_exists(obj_namebar) && keyboard_check_pressed(global.skip_key)) || (instance_exists(obj_namebar) && keyboard_check_pressed(vk_enter))
+ 	if global.b_alpha < 0.5 && ((!instance_exists(obj_namebar) && keyboard_check_pressed(global.skip_key)) || (instance_exists(obj_namebar) && keyboard_check_pressed(vk_enter)))
 	{
 	instance_destroy(brightness_setting___)
 	instance_destroy(obj_hint_arrow)

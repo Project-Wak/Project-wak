@@ -69,6 +69,12 @@ if global.show_credits = 0
 	key_guide.location = 1.2
 	key_guide.img_index = 71
 	}
+	
+	if message_phase = 6 && !instance_exists(draw_key_) && guide_open_first = 0
+	{
+	global.guide = 1
+	guide_open_first = 1
+	}
 
 	if message_phase = 6 && !instance_exists(p_mes) && instance_exists(wak_drone) && point_distance(wak_drone.x,wak_drone.y,player.x,player.y) <= 370
 	{
