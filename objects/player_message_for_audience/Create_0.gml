@@ -10,9 +10,9 @@ real_text = ""
 real_text_time = 0
 real_text_a = 1
 next_time = 0
+voice_delay = 0
 des = 0
 
 special_voice_chat = 0
-can_draw = 0
+can_draw = 1
 
-alarm[3] = 1

@@ -49,7 +49,7 @@ attack ++
 
 if targeted = 1 && hp > 0 && global.b_alpha <= 0.2
 {
-timer ++
+timer += set_value_case(global.replayed*0.5,1,2,true)
 speed += (0 - speed)*0.07
 direction += (point_direction(x,y,player.x,player.y) - direction)*0.03
 	if timer > 100

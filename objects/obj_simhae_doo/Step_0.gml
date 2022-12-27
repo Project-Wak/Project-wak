@@ -311,7 +311,7 @@ b_alpha_ += (t_b_alpha_ - b_alpha_)*0.08
 	
 			if global.hp > 0
 			{
-			timer ++
+			timer += set_value_case(global.replayed*0.5,1,2,true)
 			}
 			
 			

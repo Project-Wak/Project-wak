@@ -824,7 +824,7 @@ activated = 2
 	
 	if global.hp > 0
 	{
-	timer ++
+	timer += set_value_case(global.replayed*0.5,1,2,true)
 	}
 	
 		var cal_ = (hp/max_hp)*1.2

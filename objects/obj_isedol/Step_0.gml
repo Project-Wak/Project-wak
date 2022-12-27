@@ -12,6 +12,28 @@ instance_destroy(wall2)
 
 if global.chunyang = 1 && image_index = 6
 {
+	if bgm_on = 0
+	{
+	minigame_bgm_volume += (-0.01 - minigame_bgm_volume)*0.01
+		
+		if minigame_bgm_volume <= 0
+		{
+		audio_stop_sound(minigame_bgm)
+		}
+	}
+	else
+	{
+		if message_phase >= 5
+		{
+		minigame_bgm_volume += (1 - minigame_bgm_volume)*0.01
+		}
+	}
+	
+	if audio_is_playing(minigame_bgm)
+	{
+	audio_sound_gain(minigame_bgm__,0.07*minigame_bgm_volume*global.master_volume*global.bgm_volume,0)
+	}
+
 	if y > 800
 	{
 	y = 744
@@ -1200,6 +1222,11 @@ global.playing_scene = 1
 				check__.text = "헉!"
 				check__.target = id
 				check__.parents = id
+					if !audio_is_playing(minigame_bgm)
+					{
+					bgm_on = 1
+					minigame_bgm__ = audio_play_sound(minigame_bgm,0,true,0)
+					}
 				}
 			
 				if !instance_exists(check__) && message_phase = 4
@@ -1442,6 +1469,7 @@ global.playing_scene = 1
 					global.show_guide_mes_spr = 6
 					global.gold -= betted_gold
 					}
+				bgm_on = 0
 				global.show_time = 0
 				message_phase = 0
 				timer = 0

@@ -3,3 +3,4 @@
 global.never_move = 0
 global.playing_scene = 0
 interecting_now = 0
+bgm_on = 0

@@ -357,7 +357,7 @@ else
 	
 		if global.hp > 0
 		{
-		timer ++
+		timer += set_value_case(global.replayed*0.5,1,2,true)
 		w_alpha += (0 - w_alpha)*0.1
 		}
 		

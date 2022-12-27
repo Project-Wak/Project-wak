@@ -515,7 +515,7 @@ opening_sfx = 0
 		skill_red_ball_effect_rage.t_scale = 1.5
 		phase_change = 1
 		}
-	timer ++
+	timer += set_value_case(global.replayed*0.5,1,2,true)
 	}
 	
 		if timer > 300-phase_change*100

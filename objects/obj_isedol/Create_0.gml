@@ -2,7 +2,10 @@
 // You can write your code in this editor
 image_speed = 0
 gravity = 0.3
-
+hit_cooltime = 0
+last_hit = 0
+hp = 99999
+armored_level = 9
 can_interect = 0
 message_phase = 0
 check__ = -4
@@ -12,6 +15,10 @@ first_tuto = 0
 give_healitem = 0
 wall_1 = -4
 warning_night = 0
+
+minigame_bgm__ = -4
+minigame_bgm_volume = 0
+bgm_on = 0
 
 depth = 960
 set_time = 1
