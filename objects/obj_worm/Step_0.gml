@@ -403,8 +403,20 @@ else
 			timer ++
 			}
 			
+			
+			var cal_ = (hp/max_hp)*1.2
 	
-			if timer > 250
+			if cal_ < 0.6
+			{
+			cal_ = 0.6
+			}
+	
+			if cal_ > 1
+			{
+			cal_ = 1
+			}
+
+			if timer > 250*cal_
 			{
 			var random_patturn = choose(1,1,2,2,3,4,4)
 			

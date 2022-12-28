@@ -80,7 +80,7 @@ if global.real_ending != 0
 
 if image_index != 6 && !instance_number(obj_wakdroid_ending)
 {
-	if ((global.accessories_owned[2] = 0 && global.none_wakgood_mode = false) || (global.accessories_owned[13] = 0 && global.none_wakgood_mode = true) || (global.total_died >= 10 && global.accessories_owned[14] <= 0))
+	if ((global.accessories_owned[2] = 0 && global.none_wakgood_mode = false) || (global.accessories_owned[13] = 0 && global.none_wakgood_mode = true) || (global.total_died >= 10 && global.accessories_owned[14] = 0 && global.item_owned[6] > 0 && global.b_alpha < 0.6))
 	{
 		if abs(player.x - x) <= 64 && (global.tutorial = 1 && (global.accessories_owned[2] = 0 && global.none_wakgood_mode = false) || (global.accessories_owned[13] = 0 && global.none_wakgood_mode = true))
 		{
@@ -88,7 +88,7 @@ if image_index != 6 && !instance_number(obj_wakdroid_ending)
 		interecting_now = 1
 		}
 	
-		if abs(player.x - x) <= 600 && global.total_died >= 10 && global.accessories_owned[14] = 0
+		if abs(player.x - x) <= 600 && global.total_died >= 10 && global.accessories_owned[14] = 0 && global.item_owned[6] > 0 && global.b_alpha < 0.6
 		{
 		image_index = 0
 		interecting_now = 1
@@ -425,8 +425,8 @@ global.playing_scene = 1
 								check__.parents = id
 									if global.item_owned[6] <= 0
 									{
-									check__.text = "..."
-									check__.target = player.id
+									check__.text = "!"
+									check__.target = id
 									}
 									else
 									{

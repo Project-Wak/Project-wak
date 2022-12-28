@@ -144,7 +144,7 @@ if image_alpha > 0 && global.hp > 0 && global.playing_scene <= 0 && global.t_b_a
 		if global.medical_slincer1 > 0
 		{
 		draw_sprite_ext(spr_icon,9,xx+8*v_x,yy+133*v_x,v_x*0.3,v_x*0.3,0,c_white,hp_bar_alpha)
-		draw_text_kl_scale(xx+93*v_x,yy+128*v_x,"남은 에스트병 횟수 : "+string(global.can_use_sylinge1),v_x*64,-1,hp_bar_alpha,c_white,0,0,font0,v_x*0.3,v_x*0.3,0);
+		draw_text_kl_scale(xx+24*v_x,yy+119*v_x,"남은 에스트병\n"+string(global.can_use_sylinge1)+" / "+string(global.max_sylinge1_use),v_x*64,-1,hp_bar_alpha,c_white,0,-1,font0,v_x*0.3,v_x*0.3,0);
 		}
 	}
 }

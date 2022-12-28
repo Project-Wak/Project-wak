@@ -300,7 +300,7 @@ b_alpha_ += (t_b_alpha_ - b_alpha_)*0.08
 	
 			if timer > 300*cal_
 			{
-			var random_patturn = choose(1,2,3)
+			var random_patturn = choose(1,2,3,4)
 				if random_patturn != b_patturn
 				{
 				patturn = random_patturn
@@ -310,7 +310,7 @@ b_alpha_ += (t_b_alpha_ - b_alpha_)*0.08
 				{
 					repeat(99)
 					{
-					random_patturn = choose(1,2,3)
+					random_patturn = choose(1,2,3,4)
 					
 						if random_patturn != b_patturn
 						{
@@ -571,16 +571,55 @@ b_alpha_ += (t_b_alpha_ - b_alpha_)*0.08
 		if patturn = 3.21
 		{
 		w_alpha_elec = 1
+		var a___ = audio_play_sound(sparking_sound,0,0)
+		audio_sound_gain(a___,0.03*global.master_volume*2*global.sfx_volume,0)
+			repeat(choose(2,3,3,4))
+			{
+			var __xx__ = irandom_range(xstart-300,xstart+300)
+		
+				repeat(8)
+				{
+				var _ef = instance_create_depth(__xx__,1624,depth-1,effect_spark)
+				_ef.hspeed = irandom_range(-20,20)
+				_ef.vspeed = irandom_range(-4,2)
+				}
+			}
 		}
 		
 		if patturn = 3.3
 		{
 		w_alpha_elec = 1
+		var a___ = audio_play_sound(sparking_sound,0,0)
+		audio_sound_gain(a___,0.03*global.master_volume*2*global.sfx_volume,0)
+			repeat(choose(2,3,3,4))
+			{
+			var __xx__ = irandom_range(xstart-300,xstart+300)
+		
+				repeat(8)
+				{
+				var _ef = instance_create_depth(__xx__,1624,depth-1,effect_spark)
+				_ef.hspeed = irandom_range(-20,20)
+				_ef.vspeed = irandom_range(-4,2)
+				}
+			}
 		}
 		
 		if patturn = 3.32
 		{
 		w_alpha_elec = 1
+		var a___ = audio_play_sound(sparking_sound,0,0)
+		audio_sound_gain(a___,0.03*global.master_volume*2*global.sfx_volume,0)
+			repeat(choose(2,3,3,4))
+			{
+			var __xx__ = irandom_range(xstart-300,xstart+300)
+		
+				repeat(8)
+				{
+				var _ef = instance_create_depth(__xx__,1624,depth-1,effect_spark)
+				_ef.hspeed = irandom_range(-20,20)
+				_ef.vspeed = irandom_range(-4,2)
+				}
+			}
 		}
 		
 		if patturn >= 3.21 && patturn < 3.45
@@ -594,6 +633,88 @@ b_alpha_ += (t_b_alpha_ - b_alpha_)*0.08
 		}
 		
 		if patturn > 3.6
+		{
+		patturn = 0
+		w_alpha_elec = 0
+		}
+	}
+	
+	if patturn >= 4 && patturn < 5
+	{
+	patturn += 0.001
+	w_alpha += (-0.01 - w_alpha)*0.1
+	
+		if patturn = 4.1
+		{
+		w_alpha = 1
+		var __xx__ = irandom_range(xstart-300,xstart+300)
+		var __yy__ = irandom_range(y-100,y-200)
+		var random_size__ = irandom_range(32,64)
+			for(var i = 0; i < 360; i += 15)
+			{
+			var _bullet__ = instance_create_depth(__xx__+lengthdir_x(random_size__,i),__yy__+lengthdir_y(random_size__,i),player.depth-1,simhae_doo_bullet)
+			_bullet__.bullet_speed = 0.7
+			_bullet__.attack_type = 0
+			}
+		}
+		
+		if patturn = 4.15
+		{
+		w_alpha = 1
+		var __xx__ = irandom_range(xstart-300,xstart+300)
+		var __yy__ = irandom_range(y-100,y-200)
+		var random_size__ = irandom_range(32,64)
+			for(var i = 0; i < 360; i += 15)
+			{
+			var _bullet__ = instance_create_depth(__xx__+lengthdir_x(random_size__,i),__yy__+lengthdir_y(random_size__,i),player.depth-1,simhae_doo_bullet)
+			_bullet__.bullet_speed = 0.7
+			_bullet__.attack_type = 0
+			}
+		}
+		
+		if patturn = 4.2
+		{
+		w_alpha = 1
+		var __xx__ = irandom_range(xstart-300,xstart+300)
+		var __yy__ = irandom_range(y-100,y-200)
+		var random_size__ = irandom_range(32,64)
+			for(var i = 0; i < 360; i += 15)
+			{
+			var _bullet__ = instance_create_depth(__xx__+lengthdir_x(random_size__,i),__yy__+lengthdir_y(random_size__,i),player.depth-1,simhae_doo_bullet)
+			_bullet__.bullet_speed = 0.7
+			_bullet__.attack_type = 0
+			}
+		}
+		
+		if patturn = 4.25
+		{
+		w_alpha = 1
+		var __xx__ = irandom_range(xstart-300,xstart+300)
+		var __yy__ = irandom_range(y-100,y-200)
+		var random_size__ = irandom_range(32,64)
+			for(var i = 0; i < 360; i += 15)
+			{
+			var _bullet__ = instance_create_depth(__xx__+lengthdir_x(random_size__,i),__yy__+lengthdir_y(random_size__,i),player.depth-1,simhae_doo_bullet)
+			_bullet__.bullet_speed = 0.7
+			_bullet__.attack_type = 0
+			}
+		}
+		
+		if patturn = 4.3
+		{
+		w_alpha = 1
+		var __xx__ = irandom_range(xstart-300,xstart+300)
+		var __yy__ = irandom_range(y-100,y-200)
+		var random_size__ = irandom_range(32,64)
+			for(var i = 0; i < 360; i += 15)
+			{
+			var _bullet__ = instance_create_depth(__xx__+lengthdir_x(random_size__,i),__yy__+lengthdir_y(random_size__,i),player.depth-1,simhae_doo_bullet)
+			_bullet__.bullet_speed = 0.7
+			_bullet__.attack_type = 0
+			}
+		}
+		
+		if patturn = 4.42
 		{
 		patturn = 0
 		w_alpha_elec = 0

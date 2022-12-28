@@ -1,5 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
+
+
+
+
 if global.guide_gif = -4
 {
 	if player.attack_laser_sec = 0 && player.attack_laser = 0 && player.suicide = 0 && player.sting_attack = 0

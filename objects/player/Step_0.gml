@@ -40,64 +40,67 @@ jump_timer ++
 	}
 }
 
-if global.never_move_in_setting = 0 && global.show_guide_mes = -4
-{
-	if place_meeting(x,y,obj_water_inside) || place_meeting(x,y-18,obj_water_front)
-	{
-	o2_timer ++
-	jump_attack_used = 0
-	turning_attack_used = 0
-		if attack_ > 0
-		{
-		attack_in_air_cool = 0
-		}
-	global.o2 -= 0.03
-	global.movement_speed += (0 - global.movement_speed)*0.05
-	
-		if abs(global.movement_speed) >= 6
-		{
-		global.movement_speed += (0 - global.movement_speed)*0.05
-		}
-	
-		if global.o2 < 0
-		{
-		global.hp -= 1
-		global.o2 = 0
-		}
-	
-		if global.o2 > 100
-		{
-		global.o2 = 100
-		}
-	
-		if vspeed > 2.6 && down_attack = 0
-		{
-		vspeed = 2.6
-		}
 
-		if o2_timer > 130
+if place_meeting(x,y,obj_water_inside) || place_meeting(x,y-18,obj_water_front)
+{
+o2_timer ++
+jump_attack_used = 0
+turning_attack_used = 0
+	if attack_ > 0
+	{
+	attack_in_air_cool = 0
+	}
+	
+	if global.never_move_in_setting = 0 && global.show_guide_mes = -4
+	{
+	global.o2 -= 0.03
+	}
+global.movement_speed += (0 - global.movement_speed)*0.05
+	
+	if abs(global.movement_speed) >= 6
+	{
+	global.movement_speed += (0 - global.movement_speed)*0.05
+	}
+	
+	if global.o2 < 0
+	{
+	global.hp -= 1
+	global.o2 = 0
+	}
+	
+	if global.o2 > 100
+	{
+	global.o2 = 100
+	}
+	
+	if vspeed > 2.6 && down_attack = 0
+	{
+	vspeed = 2.6
+	}
+
+	if o2_timer > 130
+	{
+		repeat(choose(1,2))
 		{
-			repeat(choose(1,2))
-			{
-			var ins_bb = instance_create_depth(x-image_xscale*25+irandom_range(-16,16),y,depth,bubble_effect)
-			ins_bb.t_scale = irandom_range(3,10)*0.5
-			ins_bb.can_interect = false
-			}
-		o2_timer = 0
+		var ins_bb = instance_create_depth(x-image_xscale*25+irandom_range(-16,16),y,depth,bubble_effect)
+		ins_bb.t_scale = irandom_range(3,10)*0.5
+		ins_bb.can_interect = false
 		}
+	o2_timer = 0
+	}
+}
+else
+{
+	if global.o2 < 100
+	{
+	global.o2++
 	}
 	else
 	{
-		if global.o2 < 100
-		{
-		global.o2++
-		}
-		else
-		{
-		global.o2 = 100
-		}
+	global.o2 = 100
 	}
 }
+
 
 
 

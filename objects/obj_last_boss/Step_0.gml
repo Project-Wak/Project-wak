@@ -367,7 +367,20 @@ else
 			change_dir = 0
 			}
 	
-			if timer > 110
+	
+			var cal_ = (hp/max_hp)*1.2
+	
+			if cal_ < 0.6
+			{
+			cal_ = 0.6
+			}
+	
+			if cal_ > 1
+			{
+			cal_ = 1
+			}
+		
+			if timer > 110*cal_
 			{
 			var random_patturn = choose(1,2,2,3,4,4)
 			

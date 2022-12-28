@@ -1,5 +1,21 @@
 /// @description Insert description here
 // You can write your code in this editor
+if abs(player.y - y) < 120
+{
+	var random_val___ = percentage_k(5)
+	if random_val___ = 1
+	{
+	create_buble_effect(1*0.3,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,32)/7,0.1,0.1,$FF47BBFF,$FF4C81FF,2,$FF534CFF,x,y+5,depth-choose(-1,32),0,false,false)
+	}
+	
+	var random_val___ = percentage_k(10)
+	if random_val___ = 1
+	{
+	create_buble_effect(1.1*0.3,270+irandom_range(-50,50),0,choose(-1)*irandom_range(1,32)/7,0.07,0.07,$FF62D1F7,$FF6C60CD,2,$FF191919,x,y+5,depth-choose(-1,32),1,false,false)
+	}
+}
+
+
 if !instance_exists(_light_)
 {
 _light_ = instance_create_depth(x,y,depth,obj_light)
