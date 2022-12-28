@@ -69,7 +69,7 @@ else
 {
 image_index = 8
 
-	if keyboard_check_pressed(global.use_item)
+	if keyboard_check_pressed(global.use_item) && now_set_weapon > 0
 	{
 	var _check__1 = requirement[0]
 	if _check__1 < 0
