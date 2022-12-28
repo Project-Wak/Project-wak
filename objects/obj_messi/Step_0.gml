@@ -829,9 +829,9 @@ activated = 2
 	
 		var cal_ = (hp/max_hp)*1.2
 	
-		if cal_ < 0.5
+		if cal_ < 0.64
 		{
-		cal_ = 0.5
+		cal_ = 0.64
 		}
 	
 		if cal_ > 1

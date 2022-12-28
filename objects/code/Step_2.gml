@@ -30,7 +30,7 @@ for(var i = 0; i <= 20; i++)
 var all_accessory = 0
 for(var i = 2; i <= 19; i++)
 {
-	if (global.accessories_owned[i] > 0 && i != 9 && i != 18)
+	if (global.accessories_owned[i] > 0 && i != 9 && i != 17 && i != 18)
 	{
 	all_accessory ++
 	}
