@@ -1133,8 +1133,8 @@ w_alpha += (-0.01 - w_alpha)*0.1
 				check_guard = choose(-1,1)
 				}
 				
-				var cal_m_ste = (8/global.guard_power)*1
-				if guarding > 0 && global.stamina >= cal_m_ste && check_guard = sign(image_xscale)
+				var cal_m_ste = (8/global.guard_power)*0.08
+				if guarding > 0 && global.stamina >= cal_m_ste
 				{
 				guarding_now = 1
 				}
@@ -2035,8 +2035,8 @@ w_alpha += (-0.01 - w_alpha)*0.1
 				check_guard = choose(-1,1)
 				}
 				
-				var cal_m_ste = (1/global.guard_power)*2
-				if guarding > 0 && global.stamina >= cal_m_ste && check_guard = sign(image_xscale)
+				var cal_m_ste = (1/global.guard_power)*0.1
+				if guarding > 0 && global.stamina >= cal_m_ste 
 				{
 				guarding_now = 1
 				}
@@ -2108,8 +2108,8 @@ w_alpha += (-0.01 - w_alpha)*0.1
 				check_guard = choose(-1,1)
 				}
 				
-				var cal_m_ste = (1/global.guard_power)*1.8
-				if guarding > 0 && global.stamina >= cal_m_ste && check_guard = sign(image_xscale)
+				var cal_m_ste = (1/global.guard_power)*0.1
+				if guarding > 0 && global.stamina >= cal_m_ste
 				{
 				guarding_now = 1
 				}

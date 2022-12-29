@@ -64,7 +64,7 @@ if global.guide_boss = 1 && show_guide = 1
 
 	if instance_exists(obj_wakdroid)
 	{
-	global.show_guide_mes = "왁드로이드\n\n적이 레이지 모드 상태일 때, 모든 공격에 대한 저항력이 생기기 때문에\n공격보단 최대한 거리를 두며 구르기를 사용해 회피하도록 하자.\n또한, 왁드로이드의 레이저 공격은 '가드 ["+string(keyconverter(global.guard_key))+"]'로 방어 가능하다."
+	global.show_guide_mes = "왁드로이드\n\n적이 레이지 모드 상태일 때, 모든 공격에 대한 저항력이 생기기 때문에\n공격보단 최대한 거리를 두며 구르기를 사용해 회피하도록 하자.\n또한, 왁드로이드의 레이저/회전베기는 '가드 ["+string(keyconverter(global.guard_key))+"]'로 방어 가능하다."
 	global.show_guide_mes_spr = 8
 	global.guide_gif = Sprite303
 	}

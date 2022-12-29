@@ -509,6 +509,7 @@ opening_sfx = 0
 		if hp < 1500 && phase_change = 0
 		{
 		low_hp_phase = 1
+		w_alpha = 0
 		skill_red_ball_effect_rage = instance_create_depth(x,y+100,depth-1,yellow_circle_effect)
 		skill_red_ball_effect_rage.image_xscale = 0
 		skill_red_ball_effect_rage.image_yscale = 0
