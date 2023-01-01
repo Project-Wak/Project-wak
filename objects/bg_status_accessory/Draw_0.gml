@@ -48,7 +48,7 @@ if (pressed > 0 && global.key_setting_message > 0) || global.key_setting_message
 		}
 		else if (string_pos(global.nickname,"왁굳") != 0 || string_pos(global.nickname,"우왁굳") != 0)
 		{
-		item_desc__ = "Re:wind뮤비속 시계를 본따 만든 휴대용 시계\n\n특수효과 : 게임 오버가 되었을 때 바로 직전의 과거로 시간을 되돌림\n또한, 현재 시각과 함께 왁드로이드 완성까지 남은 시간을 표시해줌\n+방어력 35% 증가 ('우왁굳'이름 벨런스 보정 효과)"
+		item_desc__ = "Re:wind뮤비속 시계를 본따 만든 휴대용 시계\n\n특수효과 : 게임 오버가 되었을 때 바로 직전의 과거로 시간을 되돌림\n또한, 현재 시각과 함께 왁드로이드 완성까지 남은 시간을 표시해줌\n+방어력 40% 증가 ('우왁굳'이름 벨런스 보정 효과)"
 		}
 		else
 		{

@@ -572,12 +572,12 @@ if global.story_text_alpha > 0
 	
 	if global.story_next = 1
 	{
-	draw_text_kl_scale(camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5,yy+300*v_x_,string(global.nickname)+"의 모습을 본딴 '왁드로이드'와 함께 로봇 병기를 제작하여\n세계를 위협하려 하고...",188*v_x_,-1,global.story_text_alpha,c_white,0,0,font0,v_x_/2.5,v_x_/2.5,0)
+	draw_text_kl_scale(camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5,yy+300*v_x_,string(global.nickname)+"의 모습을 본딴 '왁드로이드'와 함께 로봇 병기를 제작하여\n세계를 위협하려 합니다!",188*v_x_,-1,global.story_text_alpha,c_white,0,0,font0,v_x_/2.5,v_x_/2.5,0)
 	}
 	
 	if global.story_next = 2
 	{
-	draw_text_kl_scale(camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5,yy+300*v_x_,string(global.nickname)+"은/는 그 계획을 저지하기 위해\n왁드로이드의 완성 전, 박사의 연구소로 향했습니다",188*v_x_,-1,global.story_text_alpha,c_white,0,0,font0,v_x_/2.5,v_x_/2.5,0)
+	draw_text_kl_scale(camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5,yy+300*v_x_,"이에, "+string(global.nickname)+"은/는 그 계획을 저지하기 위해\n왁드로이드의 완성 전, 박사의 연구소로 향했습니다",188*v_x_,-1,global.story_text_alpha,c_white,0,0,font0,v_x_/2.5,v_x_/2.5,0)
 	}
 }
 

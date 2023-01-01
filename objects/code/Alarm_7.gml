@@ -139,7 +139,7 @@ else
 {
 	if (string_pos(global.nickname,"왁굳") != 0 || string_pos(global.nickname,"우왁굳") != 0)
 	{
-	broad_buff = 0.35
+	broad_buff = 0.4
 	}
 }
 
