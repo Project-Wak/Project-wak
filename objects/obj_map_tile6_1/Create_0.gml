@@ -45,8 +45,17 @@ global.room_brightness = 0.6
 phase = 0
 if global.none_wakgood_mode = false
 {
-broken_platform = sign(global.replayed)
-global.guisanga_doo_event = sign(global.replayed)
+	if global.accessories_owned[24] = 0
+	{
+	global.guisanga_doo_event = sign(global.replayed)
+	broken_platform = sign(global.replayed)
+	}
+	else
+	{
+	var _random_ = percentage_k(50)
+	global.guisanga_doo_event = _random_
+	broken_platform = _random_
+	}
 }
 else
 {

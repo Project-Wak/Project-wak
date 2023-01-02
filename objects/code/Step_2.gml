@@ -30,7 +30,7 @@ for(var i = 0; i <= 20; i++)
 var all_accessory = 0
 for(var i = 2; i <= 19; i++)
 {
-	if (global.accessories_owned[i] > 0 && i != 9 && i != 17 && i != 18)
+	if (global.accessories_owned[i] > 0 && i != 9 && i != 18)
 	{
 	all_accessory ++
 	}
@@ -194,5 +194,29 @@ if global.achievement[5] <= 0 && !instance_exists(bg_achievement)
 	_achievement.text = string(global.achievement_name[5])
 	_achievement.icon_num = 0
 	global.achievement[5] = 1
+	}
+}
+
+if global.achievement[21] <= 0 && !instance_exists(bg_achievement)
+{
+var achievement_cleared = 1
+	for(var i = 0; i <= 20; i++)
+	{
+		if global.achievement[i] <= 0
+		{
+		achievement_cleared = 0
+		break;
+		}
+	}
+	
+	
+	if achievement_cleared = 1
+	{
+	var _achievement = instance_create_depth(x,y,depth,bg_achievement)
+	_achievement.text = string(global.achievement_name[21])
+	_achievement.icon_num = 0
+	global.achievement[21] = 1
+	
+	give_item(1,24)
 	}
 }

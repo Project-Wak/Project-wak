@@ -119,6 +119,11 @@ function give_item(argument0,argument1)
 		{
 		chat_up("탈리스만 '버그 사냥꾼'을 획득하였다!")
 		}
+		
+		if _cal__ = 24
+		{
+		chat_up("탈리스만 '신세계의 신'을 획득하였다!")
+		}
 	}
 	else if argument0 = 2
 	{

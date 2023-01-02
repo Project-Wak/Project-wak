@@ -650,11 +650,14 @@ b_alpha_ += (t_b_alpha_ - b_alpha_)*0.08
 		var __xx__ = irandom_range(xstart-300,xstart+300)
 		var __yy__ = irandom_range(y-100,y-200)
 		var random_size__ = irandom_range(32,64)
-			for(var i = 0; i < 360; i += 15)
+			repeat(sign(global.replayed)+1)
 			{
-			var _bullet__ = instance_create_depth(__xx__+lengthdir_x(random_size__,i),__yy__+lengthdir_y(random_size__,i),player.depth-1,simhae_doo_bullet)
-			_bullet__.bullet_speed = 0.7
-			_bullet__.attack_type = 0
+				for(var i = 0; i < 360; i += 15)
+				{
+				var _bullet__ = instance_create_depth(__xx__+lengthdir_x(random_size__,i),__yy__+lengthdir_y(random_size__,i),player.depth-1,simhae_doo_bullet)
+				_bullet__.bullet_speed = 0.7
+				_bullet__.attack_type = 0
+				}
 			}
 		}
 		
@@ -664,11 +667,14 @@ b_alpha_ += (t_b_alpha_ - b_alpha_)*0.08
 		var __xx__ = irandom_range(xstart-300,xstart+300)
 		var __yy__ = irandom_range(y-100,y-200)
 		var random_size__ = irandom_range(32,64)
-			for(var i = 0; i < 360; i += 15)
+			repeat(sign(global.replayed)+1)
 			{
-			var _bullet__ = instance_create_depth(__xx__+lengthdir_x(random_size__,i),__yy__+lengthdir_y(random_size__,i),player.depth-1,simhae_doo_bullet)
-			_bullet__.bullet_speed = 0.7
-			_bullet__.attack_type = 0
+				for(var i = 0; i < 360; i += 15)
+				{
+				var _bullet__ = instance_create_depth(__xx__+lengthdir_x(random_size__,i),__yy__+lengthdir_y(random_size__,i),player.depth-1,simhae_doo_bullet)
+				_bullet__.bullet_speed = 0.7
+				_bullet__.attack_type = 0
+				}
 			}
 		}
 		
@@ -678,11 +684,14 @@ b_alpha_ += (t_b_alpha_ - b_alpha_)*0.08
 		var __xx__ = irandom_range(xstart-300,xstart+300)
 		var __yy__ = irandom_range(y-100,y-200)
 		var random_size__ = irandom_range(32,64)
-			for(var i = 0; i < 360; i += 15)
+			repeat(sign(global.replayed)+1)
 			{
-			var _bullet__ = instance_create_depth(__xx__+lengthdir_x(random_size__,i),__yy__+lengthdir_y(random_size__,i),player.depth-1,simhae_doo_bullet)
-			_bullet__.bullet_speed = 0.7
-			_bullet__.attack_type = 0
+				for(var i = 0; i < 360; i += 15)
+				{
+				var _bullet__ = instance_create_depth(__xx__+lengthdir_x(random_size__,i),__yy__+lengthdir_y(random_size__,i),player.depth-1,simhae_doo_bullet)
+				_bullet__.bullet_speed = 0.7
+				_bullet__.attack_type = 0
+				}
 			}
 		}
 		
@@ -692,11 +701,14 @@ b_alpha_ += (t_b_alpha_ - b_alpha_)*0.08
 		var __xx__ = irandom_range(xstart-300,xstart+300)
 		var __yy__ = irandom_range(y-100,y-200)
 		var random_size__ = irandom_range(32,64)
-			for(var i = 0; i < 360; i += 15)
+			repeat(sign(global.replayed)+1)
 			{
-			var _bullet__ = instance_create_depth(__xx__+lengthdir_x(random_size__,i),__yy__+lengthdir_y(random_size__,i),player.depth-1,simhae_doo_bullet)
-			_bullet__.bullet_speed = 0.7
-			_bullet__.attack_type = 0
+				for(var i = 0; i < 360; i += 15)
+				{
+				var _bullet__ = instance_create_depth(__xx__+lengthdir_x(random_size__,i),__yy__+lengthdir_y(random_size__,i),player.depth-1,simhae_doo_bullet)
+				_bullet__.bullet_speed = 0.7
+				_bullet__.attack_type = 0
+				}
 			}
 		}
 		
@@ -706,11 +718,14 @@ b_alpha_ += (t_b_alpha_ - b_alpha_)*0.08
 		var __xx__ = irandom_range(xstart-300,xstart+300)
 		var __yy__ = irandom_range(y-100,y-200)
 		var random_size__ = irandom_range(32,64)
-			for(var i = 0; i < 360; i += 15)
+			repeat(sign(global.replayed)+1)
 			{
-			var _bullet__ = instance_create_depth(__xx__+lengthdir_x(random_size__,i),__yy__+lengthdir_y(random_size__,i),player.depth-1,simhae_doo_bullet)
-			_bullet__.bullet_speed = 0.7
-			_bullet__.attack_type = 0
+				for(var i = 0; i < 360; i += 15)
+				{
+				var _bullet__ = instance_create_depth(__xx__+lengthdir_x(random_size__,i),__yy__+lengthdir_y(random_size__,i),player.depth-1,simhae_doo_bullet)
+				_bullet__.bullet_speed = 0.7
+				_bullet__.attack_type = 0
+				}
 			}
 		}
 		

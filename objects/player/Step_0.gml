@@ -3949,6 +3949,11 @@ red_glow_effect(sprite_index,image_index,0.2)
 	sfx_for_multiplayer(sound5,0,0.13)
 	view_shake(1,0,1)
 	instance_create_depth(x,y,depth-1,rage_mode_knockback)
+	
+	if global.god_accessory = 1
+	{
+	var skill_red_ball_effect_rage = instance_create_depth(x+image_xscale*10,y+32,player.depth-1,obj_lightning_player)
+	}
 
 
 	

@@ -16,6 +16,9 @@ ele__.line_length = 2500
 var droped_item__ = instance_create_depth(3295,0,0,obj_droped_item)
 droped_item__.item_var = 108
 
+var droped_item__ = instance_create_depth(572,306,0,obj_droped_item)
+droped_item__.item_var = 117
+
 var warning_guide = instance_create_depth(2713,2261,0,obj_warning)
 warning_guide.warning_message = "이 앞, 올려 베기["+string(keyconverter(global.w_key))+"]를 통한 상승을 적절히 활용할 것"
 

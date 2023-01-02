@@ -57,7 +57,7 @@ player.x += (992 - player.x)*0.1
 player.assult_mode = 300
 
 
-if global.total_died >= 3 && global.back_stage_guide = 0
+if global.total_died >= 3 && global.back_stage_guide = 0 && !instance_exists(obj_wakdroid_ending)
 {
 global.show_guide_mes = "스테이지 나가기\n\n현재 스테이지에서 나가고 싶다면 자살("+string(global.suicide_key_for_draw)+"키)을 통한\n사망 회귀로 해당 스테이지를 오기 전의 과거로 돌아갈 수 있다.\n\n(자살 키는 환경설정에서 변경가능하며,\n"+string(keyconverter(global.suicide_key))+"키를 누르지 않아도 환경설정에서 자살할 수 있다)"
 global.show_guide_mes_spr = 0

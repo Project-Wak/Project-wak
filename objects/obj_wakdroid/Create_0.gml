@@ -27,11 +27,11 @@ can_attack = 0
 bgm = -4
 if global.real_ending = 0
 {
-hp = 1050
+hp = 1050+global.replayed*250
 }
 else
 {
-hp = 500
+hp = 500+global.replayed*250
 }
 check_floor = 0
 max_hp = hp
@@ -39,7 +39,7 @@ check_hp = hp
 hp_bar_alpha = 0
 damage_calcul__ = 0
 t_hp_bar_alpha = 0
-armored_level = 5
+armored_level = 5+global.replayed*0.25
 damaged_count = 0
 dash_attack = 0
 draw_hp = 0

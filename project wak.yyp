@@ -740,6 +740,7 @@
     {"id":{"name":"map8_2214","path":"sprites/map8_2214/map8_2214.yy",},"order":46,},
     {"id":{"name":"change_a_key_to_other","path":"objects/change_a_key_to_other/change_a_key_to_other.yy",},"order":27,},
     {"id":{"name":"spin_sfx","path":"sounds/spin_sfx/spin_sfx.yy",},"order":33,},
+    {"id":{"name":"spr_stetue323","path":"sprites/spr_stetue323/spr_stetue323.yy",},"order":69,},
     {"id":{"name":"room_sector_outside","path":"rooms/room_sector_outside/room_sector_outside.yy",},"order":13,},
     {"id":{"name":"fire_turret_bottom","path":"objects/fire_turret_bottom/fire_turret_bottom.yy",},"order":25,},
     {"id":{"name":"spr_jump_wakdroid","path":"sprites/spr_jump_wakdroid/spr_jump_wakdroid.yy",},"order":72,},

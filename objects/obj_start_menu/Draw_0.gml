@@ -175,7 +175,7 @@ draw_text_k_scale(xx+wid*0.5,yy+v_x*64,"달성한 도전과제",200,-1,main_text
 
 
 var cleared_achievement = 0
-	for(var i = 0; i <= 20; i++)
+	for(var i = 0; i <= 21; i++)
 	{
 	draw_text_k_scale(xx+wid*0.3,yy+v_x*(180+i*60-global.achievement_yy),string(global.achievement_name[i])+"  ("+string(floor(global.achievement_percentage[i]))+"%)",200,-1,0.5+global.achievement_percentage[i]/500,c_white,0,-1,font_title,v_x/6,v_x/6,0)
 	draw_rectangle(xx+wid*0.3,yy+v_x*(215+i*60-global.achievement_yy),xx+wid*0.3+global.achievement_percentage[i]*4.5*v_x,yy+v_x*(220+i*60-global.achievement_yy),false)

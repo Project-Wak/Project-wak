@@ -227,7 +227,7 @@ draw_text_k_scale(xx+wid*0.4,yy-_c_x*96,"달성한 도전과제",200,-1,main_tex
 
 
 var cleared_achievement = 0
-	for(var i = 0; i <= 20; i++)
+	for(var i = 0; i <= 21; i++)
 	{
 	draw_text_k_scale(xx+wid*0.1,yy+_c_x*(40+i*60-global.achievement_yy),string(global.achievement_name[i])+"  ("+string(floor(global.achievement_percentage[i]))+"%)",200,-1,0.5+global.achievement_percentage[i]/500,c_white,0,-1,font_title,_c_x/6,_c_x/6,0)
 	draw_rectangle(xx+wid*0.1,yy+_c_x*(75+i*60-global.achievement_yy),xx+wid*0.1+global.achievement_percentage[i]*4.5*_c_x,yy+_c_x*(80+i*60-global.achievement_yy),false)
@@ -251,7 +251,7 @@ yy_for_total_achievement = 0
 }
 
 draw_text_k_scale(xx+wid*0.6,yy+_c_x*(-64-yy_for_total_achievement*0.65),"총 달성한 도전과제",200,-1,0.8,c_white,0,0,font_title,_c_x/7,_c_x/7,0)
-draw_text_k_scale(xx+wid*0.6,yy+_c_x*(-32-yy_for_total_achievement*0.65),string(cleared_achievement)+"/20",200,-1,0.8,c_white,0,0,font_title,_c_x/8,_c_x/8,0)
+draw_text_k_scale(xx+wid*0.6,yy+_c_x*(-32-yy_for_total_achievement*0.65),string(cleared_achievement)+"/21",200,-1,0.8,c_white,0,0,font_title,_c_x/8,_c_x/8,0)
 
 draw_text_k_scale(xx+wid-_c_x*256,yy,"(마우스 휠을 통해 둘러보기)",200,-1,0.8,c_white,0,1,font_title,_c_x/7,_c_x/7,0)
 }

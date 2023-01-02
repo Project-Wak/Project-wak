@@ -188,6 +188,10 @@ global.sec_tester_statue = sign(check_equipment(global.accessories_equip[0]/21)+
 
 global.thi_tester_statue = sign(check_equipment(global.accessories_equip[0]/22)+check_equipment(global.accessories_equip[1]/22)+check_equipment(global.accessories_equip[2]/22))
 
+var bug_killer = sign(check_equipment(global.accessories_equip[0]/23)+check_equipment(global.accessories_equip[1]/23)+check_equipment(global.accessories_equip[2]/23))
+
+global.god_accessory = sign(check_equipment(global.accessories_equip[0]/24)+check_equipment(global.accessories_equip[1]/24)+check_equipment(global.accessories_equip[2]/24))
+
 
 if global.n_sword != 6
 {
@@ -205,7 +209,7 @@ global.max_armor_plus = 1
 global.max_armor_plus += easymode_buff+broad_buff+global.ribon*0.1+global.hairpin*0.1+(global.fir_tester_statue+global.sec_tester_statue+global.thi_tester_statue)*0.05
 	
 global.critical_plus = 0
-global.critical_plus += global.blue_flag*0.15+global.diamond_sword*0.1+(global.fir_tester_statue+global.sec_tester_statue+global.thi_tester_statue)*0.12
+global.critical_plus += global.blue_flag*0.15+global.diamond_sword*0.1+(global.fir_tester_statue+global.sec_tester_statue+global.thi_tester_statue)*0.12+bug_killer*0.15
 
 if instance_exists(player)
 {
@@ -227,7 +231,7 @@ gun_ = 1
 }
 
 global.damage_plus = 1
-global.damage_plus += global.flag_enc*0.18+_sword*0.5-gun_*0.5+global.diamond_sword*0.1+(global.fir_tester_statue+global.sec_tester_statue+global.thi_tester_statue)*0.1
+global.damage_plus += global.flag_enc*0.18+_sword*0.5-gun_*0.5+global.diamond_sword*0.1+(global.fir_tester_statue+global.sec_tester_statue+global.thi_tester_statue)*0.1+bug_killer*0.2
 	
 	
 global.guard_power = 1

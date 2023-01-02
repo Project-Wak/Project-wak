@@ -50,7 +50,7 @@ global.player_blur_time = 0
 global.show_ui = 1
 global.visible_player = 1
 global.buying_components = 0
-for(var i = 0; i <= 20; i++)
+for(var i = 0; i <= 21; i++)
 {
 global.achievement[i] = -4
 global.achievement_name[i] = -4
@@ -77,7 +77,7 @@ global.achievement_name[5] = "도망자"
 global.achievement_desc[5] = "도망자 엔딩을 봤다"
 
 global.achievement_name[6] = "탈리스만 수집가"
-global.achievement_desc[6] = "얻을 수 있는 모든 탈리스만을 수집했다"
+global.achievement_desc[6] = "얻을 수 있는 모든 탈리스만을 수집했다 (치트, 난이도 보정 등의 특수 탈리스만 제외)"
 
 global.achievement_name[7] = "의문의 제단"
 global.achievement_desc[7] = "제단에 붉은 광선검과 푸른 광선검을 바쳤다"
@@ -120,6 +120,9 @@ global.achievement_desc[19] = "귀상어두를 쓰러뜨렸다"
 
 global.achievement_name[20] = "'프로젝트 왁' 저지"
 global.achievement_desc[20] = "성공적으로 박사의 계획 '프로젝트 왁'을 저지하였다"
+
+global.achievement_name[21] = "신세계의 신이 되는거다!"
+global.achievement_desc[21] = "모든 도전과제를 달성하였다 (달성시 특수 탈리스만 지급)"
 
 
 for(var i = 0; i < 3; i++)
@@ -474,7 +477,7 @@ global.weapon_owned[i] = 0
 global.weapon_upgraded[i] = 0
 }
 	
-var total_accessories = 23
+var total_accessories = 24
 global.total_accessories_num = total_accessories
 for(var i = 0; i <= total_accessories; i++)
 {
@@ -526,6 +529,7 @@ global.low_gravity_plus = 1 //중력 감소 -10%
 
 global.max_armor_plus = 0 //방어력 증가 +15%
 global.damage_plus = 0 //데미지 증가 +10%
+global.god_accessory = 0;
 
 
 

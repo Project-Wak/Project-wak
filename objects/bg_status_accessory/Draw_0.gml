@@ -165,6 +165,11 @@ if (pressed > 0 && global.key_setting_message > 0) || global.key_setting_message
 	item_name__ = "버그 사냥꾼"
 	item_desc__ = "프로젝트 왁 출시 직전에 진행한 디버그 테스트에 참가해주신 테스터에게 지급되는 특수 탈리스만\n\n특수효과 : 크리티컬 데미지 확률 15%, 기본 데미지 20% 증가"
 	}
+	if cal__img = 24
+	{
+	item_name__ = "신세계의 신"
+	item_desc__ = "모든 도전과제를 달성한 플레이어에게 지급되는 특수 탈리스만\n\n특수효과 : 레이지 모드 사용시, 주변에 번개를 생성"
+	}
 	
 	draw_text_kl_scale(xx+50*_c_x-global.key_setting_message*_c_x*70,yy-16*_c_x+global.key_setting_message*_c_x*80,item_name__,16,999,0.74,image_blend,0,-1,font0,1/3.5*_c_x,1/3.5*_c_x,image_angle)
 	draw_text_kl_scale(xx+50*_c_x-global.key_setting_message*_c_x*70,yy+global.key_setting_message*_c_x*80,item_desc__,60*_c_x,2300*_c_x,0.4,image_blend,0,-1,font0,1/4*_c_x,1/4*_c_x,image_angle)
