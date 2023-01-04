@@ -48,6 +48,8 @@
 
 </br></br></br>
 
+</div>
+
 ##### (코드 관련 설명글은 아래 참고)
 
 
@@ -56,9 +58,13 @@
 <details>
 <summary>코드 관련 설명글 (click)</summary>
 
+</br>
 
 
-### ▼ 보스 움직임
+<details>
+<summary>여러 보스 모션</summary>
+
+
 -------------
 
 보스 움직임은 다른 프로그램 이용 안하고 전부 코드로 일일히 짰습니다.
@@ -66,29 +72,60 @@
 [관련 코드내용은 Object파일 -> (보스 이름 ex. obj_wak_doo)파일 참고해주세요]
 
 https://github.com/ABER1047/Project-wak/tree/main/objects/obj_worm
-</br></br></br></br></br></br>
+</br>
 
-
-
-### ▼ 쌉벌레두 움직임 (테라리아식 지렁이 알고리즘)
 -------------
+</details>
+
+
+
+
+
+<details>
+<summary>쌉벌레두</summary>
+
+### - 쌉벌레두 (테라리아식 지렁이 알고리즘)
+
+-------------
+
+
 
 [관련 코드 내용은 해당 소스 파일 참고해주세요]
 
 https://github.com/ABER1047/Worm
-</br></br></br></br></br></br>
+
+-------------
+</details>
+
   
   
-### ▼ 세이브 파일 암호화 알고리즘
+  
+  
+<details>
+<summary>세이브 파일 암호화 알고리즘</summary>
+  
+  
+### - 세이브 파일 암호화 알고리즘
 -------------
 
 [관련 코드 내용은 해당 소스 파일 참고해주세요]
 
 [https://github.com/ABER1047/Worm](https://github.com/ABER1047/Project-wak/blob/main/scripts/ini_open_protect/ini_open_protect.gml)
-</br></br></br></br></br></br>
+
+-------------
+</details>
 
 
-### ▼ 레이지 모드 준비 상태때 나오는 아우라, 혹은 불 이펙트의 외곽선 효과
+
+
+
+
+
+<details>
+<summary>이펙트 외곽선 효과</summary>
+
+
+### - 레이지 모드 준비 상태때 나오는 아우라, 혹은 불 이펙트의 외곽선 효과
 -------------
 
 전체적인 알고리즘은 다음과 같습니다.
@@ -103,8 +140,18 @@ https://github.com/ABER1047/Worm
 https://github.com/ABER1047/Project-wak/blob/main/scripts/set_surf_outline/set_surf_outline.gml
 
 https://github.com/ABER1047/Project-wak/blob/main/objects/code_bubble_surf/Draw_0.gml
-</br></br></br></br></br></br>
 
+-------------
+</details>
+
+
+
+
+
+
+
+<details>
+<summary>스파크/빗물 튀기기 효과</summary>
 
 ### ▼ 빗물 튀기는 효과 및 스파크 튀기는 효과
 -------------
@@ -123,10 +170,20 @@ https://github.com/ABER1047/Project-wak/blob/main/objects/code_bubble_surf/Draw_
 [관련 코드 내용은 "effect_spark" 참고]
 
 https://github.com/ABER1047/Project-wak/tree/main/objects/effect_spark
-</br></br></br></br></br></br>
+
+-------------
+</details>
 
 
-### ▼ 화면 흔들림 효과
+
+
+
+
+<details>
+<summary>화면 흔들림 효과</summary>
+
+
+### - 화면 흔들림 효과
 -------------
 
 전체적인 알고리즘은 obj_camera에서의 "shake"라는 단어가 포함되어있는 변수들을 확인해주세요
@@ -134,10 +191,18 @@ https://github.com/ABER1047/Project-wak/tree/main/objects/effect_spark
 [관련 코드 내용은 "obj_camera" 참고]
 
 https://github.com/ABER1047/Project-wak/blob/main/objects/obj_camera/Step_0.gml
-</br></br></br></br></br></br>
+
+-------------
+</details>
 
 
-### ▼ 레이저 (보스가 눈에서 발사하던 레이저 혹은 맵 중간중간 마다 놓여있던 장애물)
+
+
+
+<details>
+<summary>레이저 알고리즘</summary>
+
+### - 레이저 (보스가 눈에서 발사하던 레이저 혹은 맵 중간중간 마다 놓여있던 장애물)
 -------------
 
 전체적인 알고리즘은 다음과 같습니다.
@@ -154,12 +219,16 @@ https://github.com/ABER1047/Project-wak/blob/main/objects/obj_camera/Step_0.gml
 [관련 코드 내용은 "block_laser" 참고]
 
 https://github.com/ABER1047/Project-wak/blob/main/objects/block_laser/Step_0.gml
-</br></br></br></br></br></br>
 
+-------------
+</details>
+
+
+</br></br></br></br></br>
 
 #### 이외에 궁금한거 있으시면 디코로 연락해주심 자세히 설명드리겠읍니당
 
 (디코 아이디는 제 깃헙 프로필에 적혀있어요!)
 
 
-</details>
+
