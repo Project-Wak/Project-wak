@@ -46,14 +46,15 @@
 
 완성 하기 전에 대략 100명 정도의 테스터들한테 베타테스트를 진행했음.
 
+</br></br></br>
+
 ##### (코드 관련 설명글은 아래 참고)
 
 
 
 
-
 <details>
-<summary>코드 관련 설명글</summary>
+<summary>코드 관련 설명글 (click)</summary>
 
 
 
@@ -69,12 +70,21 @@ https://github.com/ABER1047/Project-wak/tree/main/objects/obj_worm
 
 
 
-### ▼ 쌉벌래두 움직임 (테라리아식 지렁이 알고리즘)
+### ▼ 쌉벌레두 움직임 (테라리아식 지렁이 알고리즘)
 -------------
 
-[관련 코드 내용은 해당 소스 파일 참고해주세영 (물론 보닌이 만든거)]
+[관련 코드 내용은 해당 소스 파일 참고해주세요]
 
 https://github.com/ABER1047/Worm
+#
+  
+  
+### ▼ 세이브 파일 암호화 알고리즘
+-------------
+
+[관련 코드 내용은 해당 소스 파일 참고해주세요]
+
+[https://github.com/ABER1047/Worm](https://github.com/ABER1047/Project-wak/blob/main/scripts/ini_open_protect/ini_open_protect.gml)
 #
 
 
