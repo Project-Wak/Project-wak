@@ -52,11 +52,8 @@
 
 
 
-</div>
-
-</br></br></br></br>
-
-## - 코드 관련 설명글
+<details>
+<summary>코드 관련 설명글</summary>
 
 
 
@@ -153,3 +150,6 @@ https://github.com/ABER1047/Project-wak/blob/main/objects/block_laser/Step_0.gml
 #### 이외에 궁금한거 있으시면 디코로 연락해주심 자세히 설명드리겠읍니당
 
 (디코 아이디는 제 깃헙 프로필에 적혀있어요!)
+
+
+</details>
