@@ -110,7 +110,7 @@ https://github.com/ABER1047/Worm
 
 [관련 코드 내용은 해당 소스 파일 참고해주세요]
 
-[https://github.com/ABER1047/Worm](https://github.com/ABER1047/Project-wak/blob/main/scripts/ini_open_protect/ini_open_protect.gml)
+ttps://github.com/ABER1047/Project-wak/blob/main/scripts/ini_open_protect/ini_open_protect.gml
 
 -------------
 </details>
