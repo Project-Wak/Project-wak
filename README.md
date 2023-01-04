@@ -108,6 +108,8 @@ https://github.com/ABER1047/Worm
 ### - 세이브 파일 암호화 알고리즘
 -------------
 
+1바이트가 256종류의 정보라는 특성을 이용해 암호화 하는 
+
 [관련 코드 내용은 해당 소스 파일 참고해주세요]
 
 https://github.com/ABER1047/Project-wak/blob/main/scripts/ini_open_protect/ini_open_protect.gml
