@@ -29,9 +29,9 @@
 
 
 
-<img src = "imgs/preview_1.gif" width = "500px">
-<img src = "preview_4.gif" width = "500px">
-<img src = "imgs/preview_3.gif" width = "500px">
+<img src = "imgs/preview_1.gif" width = "400px">
+<img src = "preview_4.gif" width = "400px">
+<img src = "imgs/preview_3.gif" width = "400px">
 
 
 #
