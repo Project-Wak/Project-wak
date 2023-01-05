@@ -54,7 +54,7 @@
 
 
 <details>
-<summary>Credit 크레딧</summary>
+<summary>Credit (크레딧)</summary>
 
 ---------------------------------
 
