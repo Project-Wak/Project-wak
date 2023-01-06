@@ -1,4 +1,4 @@
-
+randomize()
 //twitch chat
 twitch_init("oauth:43rzue6rdcldus9fomqrwmtfuauma9")
 twitch_chat_connect("woowakgood","우왁굳","oauth:43rzue6rdcldus9fomqrwmtfuauma9")
