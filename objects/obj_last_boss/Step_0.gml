@@ -188,6 +188,8 @@ else
 	{
 		if !instance_exists(wall1)
 		{
+		np_setpresence("폭주한 왁드로이드","", "spr_icon325", "");
+		
 		wall1 = instance_create_depth(xstart-650,ystart-1200,player.depth+3,obj_floor_tile3)
 		wall1.image_yscale = 32
 

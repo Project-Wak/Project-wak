@@ -1,6 +1,127 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+
+//discord presence
+np_update();
+
+if discord_presence_reloading > 0
+{
+discord_presence_reloading ++
+}
+
+if global.show_credits <= 0 && discord_presence_reloading > 30
+{
+var n_sword_text = "guarding_"+string(global.n_sword);
+
+	
+//////////////////////////////////////////////////////////////////////////////////
+	if room = menu
+	{
+	global.n_sector_discord = -1
+	}
+
+	if room = room_sector_B02_1 || room = room_sector_B02_2
+	{
+	global.n_sector_discord = 2
+	}
+
+	if room = room_main
+	{
+	global.n_sector_discord = -3
+	}
+
+	if room = room_sector_B03_2_remaked || room = room_sector_B03_3_remaked
+	{
+	global.n_sector_discord = 3
+	}
+
+	if room = room_sector_B04_2
+	{
+	global.n_sector_discord = 4
+	}
+	
+	if room = room_sector_B05_2
+	{
+	global.n_sector_discord = 5
+	}
+	
+	if room = room_sector_B06_2
+	{
+	global.n_sector_discord = 6
+	}
+	
+	if room = room_sector_B07
+	{
+	global.n_sector_discord = 7
+	}
+	
+	if room = room_sector_outside
+	{
+	global.n_sector_discord = 0
+	}
+	
+	if room = room_sector_runaway
+	{
+	global.n_sector_discord = -2
+	}
+
+
+
+
+	var n_sector_text = "해안가 근처 동굴 입구";
+	if global.n_sector_discord < 10 && global.n_sector_discord > 0
+	{
+		if global.n_sector_discord = 1
+		{
+		n_sector_text = "Sector-B01 (튜토리얼)"
+		}
+		else if global.n_sector_discord = 6
+		{
+		n_sector_text = "Sector-B06 (지하 하수도)"
+		}
+		else if global.n_sector_discord = 7
+		{
+		n_sector_text = "Sector-B06 (왁드로이드 개발실 입구)"
+		}
+		else
+		{
+		n_sector_text = "Sector-B0"+string(global.n_sector_discord)
+		}
+	}
+
+	if global.n_sector_discord >= 10
+	{
+	n_sector_text = "Sector-B"+string(global.n_sector_discord)
+	}
+
+	if global.n_sector_discord = -1
+	{
+	np_setpresence("메인 매뉴", "", "npc"+string(irandom_range(1,8)), "");
+	}
+	else if global.n_sector_discord = -2
+	{
+	np_setpresence("Sector-B??", "연구소 탈출 중...", string(n_sword_text), "");
+	}
+	else if global.n_sector_discord = -3
+	{
+	np_setpresence("Sector-Main", "아지트에서 정비 중...", string(n_sword_text), "");
+	}
+	else
+	{
+	np_setpresence(string(n_sector_text), "연구소 탐험 중...", string(n_sword_text), "");
+	}
+	
+discord_presence_reloading = 0;
+}
+
+
+
+
+
+
+
+//original code for game
 if global.show_achievement > 0
 {
 global.achievement_yy += (global.achievement_tyy - global.achievement_yy)*0.07

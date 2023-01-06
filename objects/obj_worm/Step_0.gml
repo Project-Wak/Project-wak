@@ -287,6 +287,9 @@ else
 	{
 		if !instance_exists(wall1)
 		{
+
+		np_setpresence("하수도 속의 거대 쌉벌레두","", "spr_icon325", "");
+		
 		wall1 = instance_create_depth(xstart-1300,ystart-1200,player.depth+3,obj_floor_tile3)
 		wall1.image_yscale = 32
 		instance_destroy(normal_mob)

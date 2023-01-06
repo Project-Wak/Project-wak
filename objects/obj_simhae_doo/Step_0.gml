@@ -189,10 +189,10 @@ b_alpha_ += (t_b_alpha_ - b_alpha_)*0.08
 			if global.show_credits = 0
 			{
 			global.boss_target = id
-			global.boss_name = "암흑속의 심해두"
+			global.boss_name = "암흑 속의 심해두"
 			if global.none_wakgood_mode = true
 			{
-			global.boss_name = "암흑속의 심해어"
+			global.boss_name = "암흑 속의 심해어"
 			}
 			
 			if player.attack_laser_sec = 0 && player.attack_laser = 0 && player.suicide = 0 && player.sting_attack = 0
@@ -219,6 +219,9 @@ b_alpha_ += (t_b_alpha_ - b_alpha_)*0.08
 		if !instance_exists(wall1)
 		{
 		instance_destroy(normal_mob)
+
+		np_setpresence("암흑 속의 심해두","", "spr_icon325", "");
+		
 		wall1 = instance_create_depth(xstart-520,992,player.depth+3,obj_floor_tile3)
 		wall1.image_xscale = -1
 		wall1.image_yscale = 5

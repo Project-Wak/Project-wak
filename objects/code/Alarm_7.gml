@@ -1,5 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
+
+discord_presence_reloading = 1
+
 if instance_exists(player)
 {
 player.show_my_sword = 8

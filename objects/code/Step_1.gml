@@ -2,7 +2,6 @@
 // You can write your code in this editor
 
 
-
 if global.all_reset_key != 1 || global.tutorial <= 0
 {
 global.a_key = ord("A")

@@ -258,6 +258,9 @@ if activated = 1
 {
 	if !instance_exists(wall1)
 	{
+	np_setpresence("창의 기사 엔젤로이드","연구소의 수호자", "spr_icon325", "");
+
+	
 	wall1 = instance_create_depth(x-560,1696,player.depth+3,obj_floor_tile3)
 	wall1.image_xscale = -1
 	wall1.image_yscale = 5.4
