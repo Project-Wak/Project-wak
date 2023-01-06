@@ -16,7 +16,7 @@
 
 #### - 게임 다운로드 
 
-[![](https://img.shields.io/github/downloads/ABER1047/Project-wak/Alpha-1.1/project.wak_2022_12_28.zip?color=AD8264&label=DOWNLOAD&style=for-the-badge)](https://github.com/ABER1047/Project-wak/releases/download/Alpha-1.1/project.wak_2022_12_28.zip)
+[![](https://img.shields.io/github/downloads/ABER1047/Project-wak/Alpha-1.2/project.wak_2023_01_06.zip?color=AD8264&label=DOWNLOAD&style=for-the-badge)](https://github.com/ABER1047/Project-wak/releases/download/Alpha-1.2/project.wak_2023_01_06.zip)
 
 </br></br>
 
@@ -27,13 +27,15 @@
 
 </br></br></br></br></br></br>
 
-# - Preview
 
-![preview_1](imgs/preview_1.gif)
-![preview_2](preview_4.gif)
-![preview_3](imgs/preview_3.gif)
+
+<img src = "imgs/preview_1.gif" width = "400px">
+<img src = "preview_4.gif" width = "400px">
+<img src = "imgs/preview_3.gif" width = "400px">
+
 
 #
+
 
 
 
@@ -46,19 +48,67 @@
 
 완성 하기 전에 대략 100명 정도의 테스터들한테 베타테스트를 진행했음.
 
+##### (크레딧 및 코드 관련 설명글은 아래 참고)
+
 </br></br></br>
 
 </div>
 
-##### (코드 관련 설명글은 아래 참고)
 
+<details>
+<summary>Credit (크레딧)</summary>
+
+---------------------------------
+
+#### 게임 시작시, 아래 명단에 기재된 분의 닉네임으로 이름을 설정하시면, 특수한 탈리스만을 획득할 수 있습니다
+  
+##### (기재된 분들 이외에 많은 분들이 테스트에 참여해주셨으며, 피드백 주신 분들만 선정해서 크레딧에 따로 기재했습니다)
+
+</br></br>
+
+- 1차 테스터 명단
+
+StellarSea 서장님 오코츠유타 옥수수칲 탄창 황금뿌리 러머 Ssab 공벌 화염뽱어 젓가락아저씨 진성e 벼슬 페르마벤 댐쿵이 쓰레기맛캔디 1잡탕1 zun Dillionaire alpamin BackSang NANFREE 쥬기 참이프 광부 Contra QuiettBee 사미니
+
+</br></br>
+
+- 2차 테스터 명단
+
+댐쿵이 BackSang 모니타리 스즈메의 문단속 벤찌 별명1577 Kastle 고 라니임니다 재영이요 윤석 러머 최민우 ㅁㅈ 허미온 아리에스 NAㅅ Mang0_k Ladon TJD ajdkg296 쥬기 잠복근무 도트박스 재영 윤석 허미온 cccc 원시인 징버거의 돗대 면주바이
+
+</br></br>
+
+- 3차 테스터 명단
+
+세구세구세구야사랑해 1잡탕1 백상 KIM DDi YOMG TT1 ACHI99 Nikemach damku1214 Dillionaire 로얄플러쉬 DO_S 이미지박스 킹츄러스 seesaw 소다쿤 플로토돔 펭구 입꼬기 명준 갱후니 조금하는바드 은색의하늘 ajdkg296 ChungYeo sda justahirman 허거덩 Eluhu libertad
+
+</br></br>
+
+- Special Thanks
+
+BackSang 쓰레기맛캔디 zun 왁만치 NANFREE alpamin 1잡탕1 쥬기 댐쿵이 ㅇㅅㄹㅋ Eluhu seesaw 뱌밍 우소 libertad 랑 이 갱후니 러머 ajdkg296 Hermione 대충지은닉네임
+
+</br></br>
+
+<div align="center">
+
+##### 이외의 후원자 분들은 따로 스폰서로써 기재해드리며 추가적인 특수 아이템을 획득 하실 수 있습니다! 
+
+##### 후원 해주신 분은 따로 디스코드를 통해 연락주시면 원하시는 닉네임으로 크레딧에 꼭 기재해드리겠습니다!
+
+</div>
+
+
+---------------------------------
+
+</details>
 
 
 
 <details>
-<summary>코드 관련 설명글 (click)</summary>
+<summary>코드 관련 설명글</summary>
 
-</br>
+---------------------------
 
 
 <details>
