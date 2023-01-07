@@ -446,7 +446,8 @@ draw_text_kl_scale(xx+xxx-32*v_x_,yy+yyy-(70)*v_x_,"("+string(global.skip_key_fo
 
 		if show_ending_var > 1
 		{
-		game_restart()
+		save_and_load_data(1,2)
+		code.alarm[3] = 15
 		}
 	}
 }

@@ -26,7 +26,7 @@ global.n_sector_discord = -1;
 //original code for game
 global.chat_sender = noone
 global.chat_data = noone
-global.game_ver = "Alpha 1.1"
+global.game_ver = "Alpha 1.21"
 
 global.bubble_surf = surface_create(1920, 1080);
 global.rage_surf = surface_create(1920, 1080);
@@ -70,7 +70,7 @@ global.player_blur_time = 0
 global.show_ui = 1
 global.visible_player = 1
 global.buying_components = 0
-for(var i = 0; i <= 21; i++)
+for(var i = 0; i <= 24; i++)
 {
 global.achievement[i] = -4
 global.achievement_name[i] = -4
@@ -143,6 +143,15 @@ global.achievement_desc[20] = "성공적으로 박사의 계획 '프로젝트 �
 
 global.achievement_name[21] = "신세계의 신이 되는거다!"
 global.achievement_desc[21] = "모든 도전과제를 달성하였다 (달성시 특수 탈리스만 지급)"
+
+global.achievement_name[22] = "변태"
+global.achievement_desc[22] = "'하드코어' 난이도로 게임을 클리어하였다"
+
+global.achievement_name[23] = "썩은물"
+global.achievement_desc[23] = "'매우 어려움' 이상의 난이도로 게임을 클리어하였다"
+
+global.achievement_name[24] = "깨지고 부셔져라"
+global.achievement_desc[24] = "'어려움' 이상의 난이도로 게임을 클리어하였다"
 
 
 for(var i = 0; i < 3; i++)

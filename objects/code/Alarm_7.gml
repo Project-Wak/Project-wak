@@ -132,10 +132,10 @@ var broad_buff = 0
 var easymode_buff = 0
 if global.time_plusment = 2
 {
-easymode_buff = 0.25
+easymode_buff = 0.4
 	if global.super_easy = 2
 	{
-	easymode_buff = 0.4
+	easymode_buff = 0.7
 	}
 }
 else

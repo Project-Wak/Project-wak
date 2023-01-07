@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 img_ind += image_speed
-if (image_index >= image_number || image_yscale <= 0)
+if (image_index >= image_number || image_alpha <= 0 || image_yscale <= 0)
 {
 instance_destroy()
 }

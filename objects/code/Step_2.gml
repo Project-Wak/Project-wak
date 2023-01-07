@@ -321,7 +321,7 @@ if global.achievement[5] <= 0 && !instance_exists(bg_achievement)
 if global.achievement[21] <= 0 && !instance_exists(bg_achievement)
 {
 var achievement_cleared = 1
-	for(var i = 0; i <= 20; i++)
+	for(var i = 0; i <= 24; i++)
 	{
 		if global.achievement[i] <= 0
 		{
@@ -339,5 +339,33 @@ var achievement_cleared = 1
 	global.achievement[21] = 1
 	
 	give_item(1,24)
+	}
+}
+
+
+if instance_exists(obj_wakdroid_ending) > 0 && global.show_credits > 0
+{
+	if global.difficulty >= 2.5 && global.achievement[22] <= 0 && !instance_exists(bg_achievement)
+	{
+	var _achievement = instance_create_depth(x,y,depth,bg_achievement)
+	_achievement.text = string(global.achievement_name[22])
+	_achievement.icon_num = 0
+	global.achievement[22] = 1
+	}
+	
+	if global.difficulty >= 2 && global.achievement[23] <= 0 && !instance_exists(bg_achievement)
+	{
+	var _achievement = instance_create_depth(x,y,depth,bg_achievement)
+	_achievement.text = string(global.achievement_name[23])
+	_achievement.icon_num = 0
+	global.achievement[23] = 1
+	}
+	
+	if global.difficulty >= 1.5 && global.achievement[24] <= 0 && !instance_exists(bg_achievement)
+	{
+	var _achievement = instance_create_depth(x,y,depth,bg_achievement)
+	_achievement.text = string(global.achievement_name[24])
+	_achievement.icon_num = 0
+	global.achievement[24] = 1
 	}
 }
