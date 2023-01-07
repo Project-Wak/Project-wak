@@ -48,6 +48,21 @@
 
 완성 하기 전에 대략 100명 정도의 테스터들한테 베타테스트를 진행했음.
 
+</br>
+
+#
+
+#### 2023-01-06 추가
+
+##### 디스코드(Discord)에 게임 등록 완료!
+
+##### 이제 게임 플레이시, 프로필에 게임 상태창이 활성화 됩니다!
+
+<img src = "imgs/discord_pre1.PNG" width = "250px"> <img src = "imgs/discord_pre2.PNG" width = "250px"> <img src = "imgs/discord_pre3.PNG" width = "250px">
+
+#
+
+
 ##### (크레딧 및 코드 관련 설명글은 아래 참고)
 
 </br></br></br>
