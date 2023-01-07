@@ -4780,7 +4780,7 @@ down_attack_with_rage++
 	}
 	
 	
-	if (global.awakening <= 0 && down_attack_with_rage_dis/64 > 3)
+	if (global.awakening <= 0 && down_attack_with_rage_dis/64 > 3) || (global.awakening > 0 && down_attack_with_rage_dis/64 > 5)
 	{
 	down_dis = 0
 	down_attack_with_rage_dis = 0

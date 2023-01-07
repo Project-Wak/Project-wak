@@ -574,6 +574,7 @@ global.slow_motion += global.slow_motion*0.03
 		audio_stop_sound(global.boss_bgm_file)
 		global.blur_range = 0
 		global.playing_scene = 0
+		discord_presence_reloading = 1
 		obj_camera.t_x = _revive_xx
 		obj_camera.t_y = _revive_yy
 		obj_camera.x = _revive_xx

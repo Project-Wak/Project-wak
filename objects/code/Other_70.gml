@@ -10,7 +10,7 @@ window_set_caption("Project Wak");
 ready = true;
 show_debug_message("date: " + string(date_current_datetime()));
 np_setpresence_timestamps(date_current_datetime(), 0, false);
-np_setpresence_more("Small image text", "Large image text", false);
+np_setpresence_more("", "메인 매뉴", false);
 	
 //np_setpresence() should ALWAYS come the last!!
 discord_presence_reloading = 1;

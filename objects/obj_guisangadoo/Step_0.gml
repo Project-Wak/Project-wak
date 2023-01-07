@@ -205,7 +205,11 @@ b_alpha_ += (t_b_alpha_ - b_alpha_)*0.08
 		if !instance_exists(wall1)
 		{
 		instance_destroy(normal_mob)
-		np_setpresence("암흑 속의 왁귀상어","", "spr_icon325", "");
+			if global.show_credits <= 0
+			{
+			np_setpresence_more("", "보스전", false);
+			np_setpresence("암흑 속의 왁귀상어","", "spr_icon325", "");
+			}
 		
 		wall1 = instance_create_depth(xstart-350,992,player.depth+3,obj_floor_tile3)
 		wall1.image_xscale = -1

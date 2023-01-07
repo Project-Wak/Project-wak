@@ -452,7 +452,11 @@ player.guarding = 2
 
 	if !instance_exists(wall1)
 	{
-	np_setpresence("프로토타입 거대 왁두 mk.2","", "spr_icon325", "");
+		if global.show_credits <= 0
+		{
+		np_setpresence_more("", "보스전", false);
+		np_setpresence("프로토타입 거대 왁두 mk.2","", "spr_icon325", "");
+		}
 	
 	wall1 = instance_create_depth(2368-200,512,player.depth+3,obj_floor_tile3)
 	wall1.image_yscale = 4.5

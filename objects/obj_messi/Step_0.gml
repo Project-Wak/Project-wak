@@ -601,7 +601,11 @@ if activated = 1
 player.guarding = 2
 	if !instance_exists(wall1)
 	{
-	np_setpresence("화염의 거대 안드로이드 메시","거대 왁두의 권속", "spr_icon325", "");
+		if global.show_credits <= 0
+		{
+		np_setpresence_more("", "보스전", false);
+		np_setpresence("화염의 거대 안드로이드 메시","거대 왁두의 권속", "spr_icon325", "");
+		}
 	
 	
 	wall1 = instance_create_depth(xstart-700,ystart-400,player.depth+3,obj_floor_tile3)

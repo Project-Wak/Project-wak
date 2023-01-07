@@ -6,11 +6,15 @@ twitch_chat_connect("woowakgood","우왁굳","oauth:43rzue6rdcldus9fomqrwmtfuaum
 
 
 
+
+
 //discord presence
 #macro DISCORD_APP_ID "1060792404300546049"
 
 ready = false;
 discord_presence_reloading = 0
+check_achievement_state = 0
+check_ending_credit_state = 0
 if (!np_initdiscord(DISCORD_APP_ID, true, np_steam_app_id_empty))
 {
 //show_error("NekoPresence init fail.", true);

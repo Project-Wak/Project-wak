@@ -2,8 +2,18 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function save_and_load_data(argument0,argument1)
 {
+	//save 
 	if argument0 = 1 //save 
 	{
+		//online statistics
+		with(code)
+		{
+			if (object_index = code)
+			{
+			event_user(0)
+			}
+		}
+		
 	ini_open_protect("Project_wak_beta_04.ini")
 	
 	//도전과제

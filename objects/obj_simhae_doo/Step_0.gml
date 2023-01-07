@@ -220,7 +220,11 @@ b_alpha_ += (t_b_alpha_ - b_alpha_)*0.08
 		{
 		instance_destroy(normal_mob)
 
+		if global.show_credits <= 0
+		{
+		np_setpresence_more("", "보스전", false);
 		np_setpresence("암흑 속의 심해두","", "spr_icon325", "");
+		}
 		
 		wall1 = instance_create_depth(xstart-520,992,player.depth+3,obj_floor_tile3)
 		wall1.image_xscale = -1

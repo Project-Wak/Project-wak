@@ -1,0 +1,9 @@
+{
+  "extensionId": {
+    "name": "GameAnalyticsExt",
+    "path": "extensions/GameAnalyticsExt/GameAnalyticsExt.yy"
+  },
+  "resourceVersion": "1.0",
+  "resourceType": "GMExtensionConfigSet",
+  "configurables": null
+}

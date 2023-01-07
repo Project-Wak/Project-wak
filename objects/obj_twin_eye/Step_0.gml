@@ -414,7 +414,12 @@ else
 	{
 		if !instance_exists(wall1)
 		{
-		np_setpresence("객관안과 스킵안","", "spr_icon325", "");
+			
+			if global.show_credits <= 0
+			{
+			np_setpresence_more("", "보스전", false);
+			np_setpresence("객관안과 스킵안","", "spr_icon325", "");
+			}
 			
 		wall1 = instance_create_depth(xstart-650,ystart-1200,player.depth+3,obj_floor_tile3)
 		wall1.image_yscale = 32

@@ -51,7 +51,7 @@ global.show_guide_mes = "점점 이 연구소 지하의 끝이 보이는 것 같
 }
 
 
-if abs(player.x-2805) <= 32 && show_mes = 1 && global.show_credits = 0
+if abs(player.x-2805) <= 32 && show_mes = 1 && global.show_credits = 0 && instance_exists(obj_angel)
 {
 show_mes++
 global.show_guide_mes_spr = 6

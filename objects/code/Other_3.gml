@@ -4,6 +4,7 @@
 
 save_and_load_data(1,0)
 
+//ga_onQuit();
 if room != menu
 {
 //network_destroy(code.server);

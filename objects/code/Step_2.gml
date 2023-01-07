@@ -10,9 +10,22 @@ if discord_presence_reloading > 0
 discord_presence_reloading ++
 }
 
-if global.show_credits <= 0 && discord_presence_reloading > 30
+if check_achievement_state != global.show_achievement
+{
+discord_presence_reloading = 1
+check_achievement_state = global.show_achievement
+}
+
+if (check_ending_credit_state != 1 && instance_exists(obj_wakdroid_ending) && global.show_credits > 0)
+{
+discord_presence_reloading = 1
+check_ending_credit_state = 1
+}
+
+if (global.show_credits <= 0 || check_ending_credit_state = 1) && discord_presence_reloading > 30
 {
 var n_sword_text = "guarding_"+string(global.n_sword);
+np_setpresence_more("", "", false);
 
 	
 //////////////////////////////////////////////////////////////////////////////////
@@ -20,53 +33,51 @@ var n_sword_text = "guarding_"+string(global.n_sword);
 	{
 	global.n_sector_discord = -1
 	}
-
-	if room = room_sector_B02_1 || room = room_sector_B02_2
+	if (room = room_sector_B02_1 || room = room_sector_B02_2)
 	{
 	global.n_sector_discord = 2
 	}
-
 	if room = room_main
 	{
 	global.n_sector_discord = -3
 	}
-
-	if room = room_sector_B03_2_remaked || room = room_sector_B03_3_remaked
+	if (room = room_sector_B03_2_remaked || room = room_sector_B03_3_remaked)
 	{
 	global.n_sector_discord = 3
 	}
-
 	if room = room_sector_B04_2
 	{
 	global.n_sector_discord = 4
 	}
-	
 	if room = room_sector_B05_2
 	{
 	global.n_sector_discord = 5
 	}
-	
 	if room = room_sector_B06_2
 	{
 	global.n_sector_discord = 6
 	}
-	
 	if room = room_sector_B07
 	{
 	global.n_sector_discord = 7
 	}
-	
 	if room = room_sector_outside
 	{
 	global.n_sector_discord = 0
 	}
-	
 	if room = room_sector_runaway
 	{
 	global.n_sector_discord = -2
 	}
-
-
+	if global.show_achievement > 0
+	{
+	global.n_sector_discord = -4
+	}
+	if check_ending_credit_state = 1
+	{
+	global.n_sector_discord = -5
+	}
+	
 
 
 	var n_sector_text = "해안가 근처 동굴 입구";
@@ -101,14 +112,63 @@ var n_sword_text = "guarding_"+string(global.n_sword);
 	}
 	else if global.n_sector_discord = -2
 	{
+	np_setpresence_more("", "장착 중인 무기", false);
 	np_setpresence("Sector-B??", "연구소 탈출 중...", string(n_sword_text), "");
 	}
 	else if global.n_sector_discord = -3
 	{
-	np_setpresence("Sector-Main", "아지트에서 정비 중...", string(n_sword_text), "");
+	var cal_days = floor(global.left_time/24)
+	var cal_time = global.left_time - cal_days*24
+	np_setpresence_more("", "장착 중인 무기", false);
+	np_setpresence("D-day ["+string(cal_days)+"일 "+string(cal_time)+"시간 남음]", "아지트에서 정비 중...", string(n_sword_text), "");
+	}
+	else if global.n_sector_discord = -4
+	{
+	var cleared_achievement = 0
+		for(var i = 0; i <= 24; i++)
+		{
+			if global.achievement[i] > 0
+			{
+			cleared_achievement ++
+			}
+		}
+	np_setpresence("(총 달성한 도전과제 : "+string(cleared_achievement)+"/24)","도전과제 창","npc"+string(irandom_range(1,8)), "");
+	}
+	else if global.n_sector_discord = -5
+	{
+	var difficulty__ = "하드 코어"
+		if global.difficulty = 2
+		{
+		difficulty__ = "매우 어려움"
+		}
+		if global.difficulty = 1.5
+		{
+		difficulty__ = "어려움"
+		}
+		if global.difficulty = 1
+		{
+		difficulty__ = "보통"
+			if global.time_plusment = 2
+			{
+			difficulty__ = "쉬움"
+				if global.super_easy = 2
+				{
+				difficulty__ = "매우 쉬움"
+				}
+			}
+		}
+	
+	var __ending_name = global.gameover_reason_title
+	if __ending_name = -4
+	{
+	__ending_name = "엔딩 크레딧"
+	}
+	
+	np_setpresence(string(global.replayed)+"회차 / "+string(difficulty__)+" / "+string(global.total_died)+"회 사망",string(__ending_name),"npc"+string(irandom_range(1,8)), "");
 	}
 	else
 	{
+	np_setpresence_more("", "장착 중인 무기", false);
 	np_setpresence(string(n_sector_text), "연구소 탐험 중...", string(n_sword_text), "");
 	}
 	
