@@ -51,20 +51,15 @@ var calcul_damage = damage_real*(1 - (armor_level-1))*global.difficulty
 	
 	
 		var __i = choose(-1,1)
-		var bl_ef = instance_create_depth(x,y,depth-1,ef_blood)
+		var bl_ef = instance_create_depth(player.x,player.y,player.depth-1,ef_blood)
 		var img_scale = -__i*irandom_range(8,15)/5
 		bl_ef.image_xscale = img_scale
 		bl_ef.image_yscale = abs(img_scale)
 		bl_ef.t_x = __i
-		bl_ef.image_angle = irandom_range(-90,90)
+		bl_ef.image_angle = irandom_range(-35,35)
 		bl_ef.sfx_play = false
-	
-		var random_val_t = percentage_k(10)
-	
-			if random_val_t = 1
-			{
-			global.w_alpha = 0.1
-			}
+		
+		global.w_alpha = 0.1
 		}
 	
 

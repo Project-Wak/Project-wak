@@ -8,24 +8,16 @@ sfx_play = -4
 
 
 
-
-image_alpha -= 0.05
-
-if image_alpha <= 0
+if image_index > 6
 {
 instance_destroy()
+image_index = 6
 }
 
-
-if image_index > 5
+if image_index >= 3
 {
-image_index = 5
-}
-
-if image_alpha <= 0.5 && image_index = 3
-{
-xscale += (0 - xscale)*0.34
-yscale += (0 - yscale)*0.18
+xscale += (-0.01 - xscale)*0.34
+yscale += (-0.01 - yscale)*0.18
 }
 else
 {
@@ -52,6 +44,5 @@ if ins_pl >= 0
 	ins_pl.activated = 1
 	image_angle = ins_pl.image_angle+90
 	}
-image_angle += image_xscale
 }
 

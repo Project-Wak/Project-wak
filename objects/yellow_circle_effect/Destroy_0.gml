@@ -34,4 +34,5 @@ bl_ef.image_yscale = abs(img_scale)
 bl_ef.t_x = __i
 bl_ef.image_angle = irandom_range(-90,90)
 bl_ef.sfx_play = false
+
 }

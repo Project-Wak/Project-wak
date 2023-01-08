@@ -3511,6 +3511,7 @@ if global.never_move = 0 && global.never_move_in_setting = 0 && keyboard_check_r
 		bl_ef.image_yscale = abs(img_scale)*0.5
 		bl_ef.t_x = __i
 		bl_ef.image_angle = irandom_range(-90,90)
+		
 			
 
 				

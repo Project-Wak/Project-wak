@@ -178,7 +178,7 @@ if scene__ > 0 && hp > 0
 	total_died_from_here ++
 	_light_ = instance_create_depth(x,y-30,depth,obj_light)
 	_light_.p_id = id
-	_light_.alpha = 0.7
+	_light_.alpha = 0
 	_light_.sprite_index = sprite64
 	_light_.image_blend = $FF75F2FF
 	_light_.light_type = 0
@@ -198,7 +198,11 @@ if scene__ > 0 && hp > 0
 	{
 	_light_.x = x
 	_light_.y = y-100-40*image_yscale
-	_light_.alpha = image_alpha*0.5+w_alpha
+	
+	if scene__ >= 1
+	{
+	_light_.alpha += (image_alpha*0.5+w_alpha - _light_.alpha)*0.1
+	}
 	
 		if instance_exists(spear__)
 		{
@@ -354,6 +358,7 @@ if activated = 1
 		if scene__ > 0.8
 		{
 		y += (ystart+8 - y)*0.08
+		_light_.alpha += (0.7 - _light_.alpha)*0.1
 		spear__.x += (x+150 - spear__.x)*0.08
 		spear__.y += (y-50+angelring_y - spear__.y)*0.08
 		spear__.image_angle = point_direction(x,y,spear__.x,spear__.y)+90
