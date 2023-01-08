@@ -4,7 +4,7 @@ gravity = 0.3
 image_alpha = 0
 image_xscale = 1/128
 image_yscale = 1/128
-image_blend = $FF0E0A99
+image_blend = $FF3A32FF
 resized = 0
 image_speed = 0
 
