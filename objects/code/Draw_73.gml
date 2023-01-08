@@ -26,8 +26,8 @@ if global.choice > 0
 		if global.show_credits > 0
 		{
 		draw_text_kl_scale(xx,yy-v_x*54,"다회차 플레이를 하시겠어요? (총 플레이한 회차 : "+string(global.replayed)+"회)",192*v_x,-1,global.choice,c_white,0,0,font0,1/2.5*v_x,1/2.5*v_x,0)
-		draw_text_kl_scale(xx,yy-v_x*16,"(플레이어가 현재 장비 중인 무기와, 최대 체력 및 도전과제를 제외하고 모든 데이터를 초기화합니다)",160*v_x,-1,global.choice*0.8,c_white,0,0,font0,1/3.5*v_x,1/3.5*v_x,0)
-		draw_text_kl_scale(xx,yy+v_x*16,"(다회차 플레이시, 기존 몬스터들이 더욱 강력해지고, 히든 보스를 만나보실 수 있습니다)",160*v_x,-1,global.choice*0.8,c_white,0,0,font0,1/4*v_x,1/4*v_x,0)
+		draw_text_kl_scale(xx,yy-v_x*16,"(플레이어가 '현재 장비 중인 무기'와, '최대 체력' 및 '도전과제'를 제외하고 모든 데이터를 초기화합니다)",160*v_x,-1,global.choice*0.8,c_white,0,0,font0,1/3.5*v_x,1/3.5*v_x,0)
+		draw_text_kl_scale(xx,yy+v_x*16,"(다회차 플레이시, 적들이 더욱 강력해지고, 새로운 보스 및 새로운 패턴 만나보실 수 있습니다)",160*v_x,-1,global.choice*0.8,c_white,0,0,font0,1/4*v_x,1/4*v_x,0)
 		}
 		else
 		{

@@ -1077,13 +1077,9 @@ obj_hand.cannot_step = 0
 		}
 		
 	patturn += 0.001
-		if random_quake = -1
+		if hp < 100 || global.replayed > 0
 		{
-		random_quake = 0
-			if hp < 100
-			{
-			random_quake = 1
-			}
+		random_quake = 1
 		}
 	}
 	

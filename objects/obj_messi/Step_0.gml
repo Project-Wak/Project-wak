@@ -1379,13 +1379,10 @@ activated = 2
 			}
 		
 		patturn += 0.001
-			if random_quake = -1
+
+			if hp < 100 || global.replayed > 0
 			{
-			random_quake = choose(1,0,0)
-				if hp < 700
-				{
-				random_quake = choose(1,1,0)
-				}
+			random_quake = 1
 			}
 		}
 	
@@ -1492,6 +1489,32 @@ activated = 2
 		if patturn >= 3.2
 		{
 		patturn += 0.01
+			if random_quake = 1
+			{
+			down_attack_motion_dilay++
+				if down_attack_motion_dilay > 4
+				{
+				var xx1 = x+down_attack_with_rage_dis
+				var yy = right_hand.check_floor+65
+					if place_meeting(xx1,yy+2,floor_parents)
+					{
+					var _effect = instance_create_depth(xx1,yy,depth-15,effect_quake_attacked)
+					_effect.image_xscale = 1.5;
+					_effect.image_yscale = 2;
+					}
+		
+				var xx2 = x-down_attack_with_rage_dis
+					if place_meeting(xx2,yy+2,floor_parents)
+					{
+					var _effect = instance_create_depth(xx2,yy,depth-15,effect_quake_attacked)
+					_effect.image_xscale = 1.5;
+					_effect.image_yscale = 2;
+					}
+		
+				down_attack_with_rage_dis += 64
+				down_attack_motion_dilay = 0
+				}
+			}
 		}
 	
 	

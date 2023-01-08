@@ -109,12 +109,12 @@ var calcul_damage = ((((argu_0+random_plus_damage)/(global.max_armor_plus))*glob
 	global.hp -= (calcul_damage)*dmg_min
 		if instance_exists(obj_last_boss)
 		{
-		obj_last_boss.hp += calcul_damage/10
+		obj_last_boss.hp += calcul_damage/5
 		}
 		
 		if instance_exists(obj_wakdroid)
 		{
-		obj_wakdroid.hp += calcul_damage/10
+		obj_wakdroid.hp += calcul_damage/5
 		}
 	}
 	
