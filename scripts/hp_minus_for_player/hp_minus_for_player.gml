@@ -11,9 +11,15 @@ var dmg_min = 1
 	{
 	dmg_min = 0
 	}
+var armor_level = global.max_armor_plus
 
-	
-var calcul_damage = ((((argu_0+random_plus_damage)/(global.max_armor_plus))*global.difficulty)/global.super_easy)
+if armor_level > 1.9
+{
+armor_level = 1.9
+}
+
+var damage_real = argu_0+random_plus_damage
+var calcul_damage = damage_real*(1 - (armor_level-1))*global.difficulty
 
 
 	if !instance_exists(obj_wakdroid_ending)

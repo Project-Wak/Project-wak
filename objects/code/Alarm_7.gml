@@ -138,13 +138,12 @@ easymode_buff = 0.4
 	easymode_buff = 0.7
 	}
 }
-else
+
+if (string_pos(global.nickname,"왁굳") != 0 || string_pos(global.nickname,"우왁굳") != 0)
 {
-	if (string_pos(global.nickname,"왁굳") != 0 || string_pos(global.nickname,"우왁굳") != 0)
-	{
-	broad_buff = 0.4
-	}
+broad_buff = 0.4
 }
+
 
 
 

@@ -176,7 +176,14 @@ if global.n_to_setting__ = 0 && global.story_next < 100
 var dmg = global.damage_plus*(16+global.weapon_upgraded[global.n_sword]*3)
 var stamina_ = floor(global.stamina*100)/10
 var critical_dmg = dmg*1.5
-var def = 100*(global.max_armor_plus-1)
+var def_real = global.max_armor_plus
+var plus_mes = ""
+if def_real > 1.9
+{
+def_real = 1.9
+plus_mes = " (최대 90%)"
+}
+var def = 100*(def_real-1)
 var g_p = (global.guard_power-1)*100
 var hp___ = floor(global.hp*10)/10
 var critical_per = (global.critical_plus)*100
@@ -185,7 +192,7 @@ if critical_per < 0
 critical_per = 0
 }
 draw_text_kl_scale(xx+20*_c_x,yy-16*0.8,"플레이어 정보",16,999,0.9,image_blend,0,-1,font0,1/3*_c_x,1/3*_c_x,image_angle)
-draw_text_kl_scale(xx+20*_c_x,yy+32*0.8,"HP : "+string(hp___)+"/"+string(player.max_hp)+"\nstamina : "+string(stamina_)+"/100"+"\n\n\nDMG : "+string(dmg)+"\n          +("+string(critical_dmg)+" critical dmg ["+string(critical_per)+"% 확률])\n\nDEF : "+string(def)+"%\n\n\n가드 효율 : "+string(g_p)+"% 만큼\n 가드시 스테미나를 덜 소모합니다\n\n\n보유 중인 골드 :\n"+string(global.gold)+" Gold\n\n\n\n"+"피로도 : "+string(global.tiredness)+"/24\n\n(피로도가 18 이상 쌓였을 경우,\n                   최대 체력이 감소합니다)",54*_c_x,2300*_c_x,0.7,image_blend,0,-1,font0,1/3.5*_c_x,1/3.5*_c_x,image_angle)
+draw_text_kl_scale(xx+20*_c_x,yy+32*0.8,"HP : "+string(hp___)+"/"+string(player.max_hp)+"\nstamina : "+string(stamina_)+"/100"+"\n\n\nDMG : "+string(dmg)+"\n          +("+string(critical_dmg)+" critical dmg ["+string(critical_per)+"% 확률])\n\nDEF : "+string(def)+string(plus_mes)+"%\n\n\n가드 효율 : "+string(g_p)+"% 만큼\n 가드시 스테미나를 덜 소모합니다\n\n\n보유 중인 골드 :\n"+string(global.gold)+" Gold\n\n\n\n"+"피로도 : "+string(global.tiredness)+"/24\n\n(피로도가 18 이상 쌓였을 경우,\n                   최대 체력이 감소합니다)",54*_c_x,2300*_c_x,0.7,image_blend,0,-1,font0,1/3.5*_c_x,1/3.5*_c_x,image_angle)
 }
 else
 {

@@ -878,6 +878,7 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"소리","folderPath":"folders/소리.yy","order":4,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"쉐이더","folderPath":"folders/쉐이더.yy","order":8,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"스크립트","folderPath":"folders/스크립트.yy","order":7,},
+    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Statics","folderPath":"folders/스크립트/Statics.yy","order":43,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"twitch_chat_","folderPath":"folders/스크립트/twitch_chat_.yy","order":42,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"스프라이트","folderPath":"folders/스프라이트.yy","order":0,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"boss","folderPath":"folders/스프라이트/boss.yy","order":5,},
@@ -892,7 +893,6 @@
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"타임라인","folderPath":"folders/타임라인.yy","order":10,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"필기","folderPath":"folders/필기.yy","order":13,},
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"확장 기능","folderPath":"folders/확장 기능.yy","order":14,},
-    {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Statics","folderPath":"folders/스크립트/Statics.yy","order":43,},
   ],
   "AudioGroups": [
     {"resourceType":"GMAudioGroup","resourceVersion":"1.3","name":"audiogroup_default","targets":-1,},
