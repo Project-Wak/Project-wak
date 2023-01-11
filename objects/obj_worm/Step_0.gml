@@ -427,9 +427,18 @@ else
 			{
 			var random_patturn = choose(1,1,2,2,3,4,4)
 			
+			if sign(global.replayed) = 1
+			{
+			random_patturn = choose(1,1,2,2,3,4,4,6,6,6)
+			}
+			
 			if hp < 3000
 			{
-			random_patturn = choose(1,1,2,2,3,4,5,5)
+			random_patturn = choose(1,1,2,2,3,4,5,5,6,6,6)
+				if sign(global.replayed) = 1
+				{
+				random_patturn = choose(1,1,2,2,3,4,4,6,6,6)
+				}
 			}
 			
 				if random_patturn != b_patturn
@@ -442,9 +451,21 @@ else
 					repeat(99)
 					{
 					random_patturn = choose(1,1,2,2,3,4,4)
+					
+						if sign(global.replayed) = 1
+						{
+						random_patturn = choose(1,1,2,2,3,4,4,6,6,6)
+						}
+			
+					
 						if hp < 3000
 						{
 						random_patturn = choose(1,1,2,2,3,4,5,5)
+						
+							if sign(global.replayed) = 1
+							{
+							random_patturn = choose(1,1,2,2,3,4,4,6,6,6)
+							}
 						}
 					
 						if random_patturn != b_patturn
@@ -881,6 +902,93 @@ else
 				worm_body[i].y = ystart+500
 				}
 			patturn = 0
+			}
+		}
+		
+		
+		
+		
+		
+		
+		if patturn >= 6 && patturn < 7
+		{
+		patturn += 0.001
+		obj_camera.tv_x = 1280*1.1
+		obj_camera.tv_y = 720*1.1
+			
+			if patturn = 6.01
+			{
+				for(var i = 0; i < 360; i += 20)
+				{
+				var xx = x+lengthdir_x(48,i)
+				var yy = y+lengthdir_y(48,i)
+				bullet__ = instance_create_depth(xx,yy-100,player.depth-1,simhae_doo_bullet)
+				bullet__.bullet_speed = 0.2
+				bullet__.attack_type = 0
+				}
+			}
+			
+			if patturn = 6.11
+			{
+			bullet__creator = instance_create_depth(x,y-100,player.depth-1,simhae_doo_bullet)
+			bullet__creator.bullet_speed = 0.01
+			bullet__creator.attack_type = 0
+			
+				for(var i = 0; i < 360; i += 60)
+				{
+				var xx = x+lengthdir_x(16,i)
+				var yy = y+lengthdir_y(16,i)
+				bullet__ = instance_create_depth(xx,yy-100,player.depth-1,simhae_doo_bullet)
+				bullet__.bullet_speed = 0.01
+				bullet__.attack_type = 0
+				}
+			}
+			
+			if patturn >= 6.2
+			{
+			bullet_time ++
+				if instance_exists(bullet__creator) && bullet_time%15 = 0
+				{
+					repeat(choose(1,2))
+					{
+					var xx = bullet__creator.x+irandom_range(-32,32)
+					var yy = bullet__creator.y+irandom_range(-32,32)
+				
+					bullet__ = instance_create_depth(xx,yy-100,player.depth-1,simhae_doo_bullet)
+					bullet__.bullet_speed = 0.7
+					bullet__.attack_type = 0
+					}
+				}
+			}
+			
+			if instance_exists(bullet__creator)
+			{
+			var xx_ = bullet__creator.x+choose(-4,4)
+			var yy_ = bullet__creator.y+choose(-4,4)
+				repeat(2)
+				{
+					var random_val___ = percentage_k(5+global.graphics_for_code*7)
+					if random_val___ = 1
+					{
+					create_buble_effect(1,irandom_range(0,359),0,choose(-1)*irandom_range(1,20)/7,0.1,0.1,$FF3E2D24,$FF473021,2,$FF513524,xx_,yy_,depth+10,0,false,false)
+					}
+				}
+	
+				var random_val___ = percentage_k(global.graphics_for_code*3)
+				if random_val___ = 1
+				{
+				var random_val___2 = percentage_k(1)
+				create_buble_effect(0.3,irandom_range(0,359),0,choose(-1)*irandom_range(1,20)/7,0.07,0.07,$FF62D1F7,$FF6C60CD,2,$FF191919,xx_,yy_,depth-random_val___2,1,false,false)
+				}
+			}
+			else
+			{
+				if patturn >= 6.25
+				{
+				bullet__creator = -4
+				patturn = 0
+				bullet_time = 0
+				}
 			}
 		}
 	}

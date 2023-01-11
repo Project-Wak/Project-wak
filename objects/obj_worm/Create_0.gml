@@ -20,6 +20,7 @@ check__ = -4
 message_phase = 0
 skip_boss_apearence = 0
 activated = 0
+bullet__creator = -4
 w_alpha = 0
 timer = 0
 bgm = -4

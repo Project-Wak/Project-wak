@@ -19,6 +19,7 @@ gravity = 0.2
 hit_cooltime = 0
 last_hit = 0
 gravity_ignore = 0
+guarding_now = 0
 hit_stand_up = 0
 scene__ = 0
 knocked_down_ef = 0
@@ -76,7 +77,7 @@ attack_delay = 0
 
 damaged_hp = 0
 damaged_time = 0
-attack_paturn = 0
+attack_pattern = 0
 attack_sfx_on = 0
 keep_attacking = 0
 down_attack_motion_dilay = 0

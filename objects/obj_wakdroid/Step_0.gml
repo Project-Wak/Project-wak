@@ -202,9 +202,9 @@ obj_camera.t_x = 5650
 	
 	if hit_cooltime > 0
 	{
-		if attack_paturn < 2
+		if attack_pattern < 2
 		{
-		attack_paturn = 0
+		attack_pattern = 0
 		}
 	}
 
@@ -242,7 +242,7 @@ obj_camera.t_x = 5650
 
 
 
-	if attack_paturn = 0
+	if attack_pattern = 0
 	{
 		if hit_motion = -1
 		{
@@ -315,7 +315,7 @@ obj_camera.t_x = 5650
 	show_debug_message(_cal)
 	}
 
-	if attack_paturn = 0 && gravity <= 0
+	if attack_pattern = 0 && gravity <= 0
 	{
 	image_angle = 0
 	test_mob_type = 0
@@ -333,9 +333,9 @@ obj_camera.t_x = 5650
 			}
 		
 		
-			if rage_mode > 0.6 && abs(x - player.x) > 75 && rage_mode < 0.8 && attack_paturn = 0
+			if rage_mode > 0.6 && abs(x - player.x) > 75 && rage_mode < 0.8 && attack_pattern = 0
 			{
-			attack_paturn = 3
+			attack_pattern = 3
 			}
 		
 		
@@ -572,7 +572,7 @@ obj_camera.t_x = 5650
 		}
 	
 	
-		if damaged_count >= 100 || rage_mode > 0.9 && attack_paturn = 0
+		if damaged_count >= 100 || rage_mode > 0.9 && attack_pattern = 0
 		{
 			if abs(player.x - x) >= 220 && global.b_alpha < 0.1
 			{
@@ -589,7 +589,7 @@ obj_camera.t_x = 5650
 			skill_red_ball_effect.image_xscale = 0.45
 			skill_red_ball_effect.image_yscale = 0.45
 			skill_red_ball_effect.t_scale = 0.65
-			attack_paturn = 2
+			attack_pattern = 2
 			damaged_count = 0
 			image_xscale = sign_k(x - player.x)
 			attack_laser_sec = 1
@@ -627,11 +627,11 @@ obj_camera.t_x = 5650
 				{
 					if rage_mode > 0
 					{
-					attack_paturn = choose(1,3)
+					attack_pattern = choose(1,3)
 					}
 					else
 					{
-					attack_paturn = 1
+					attack_pattern = 1
 					}
 				attack_delay = irandom_range(-120,0)
 				}
@@ -644,24 +644,24 @@ obj_camera.t_x = 5650
 	}
 
 	//공격 패턴 1
-	if attack_paturn >= 1 && attack_paturn < 2
+	if attack_pattern >= 1 && attack_pattern < 2
 	{
 		if w_alpha <= 0
 		{
-			if attack_paturn = 1.1
+			if attack_pattern = 1.1
 			{
 			var sfx = audio_play_sound(spin_attack_sfx,0,0)
 			audio_sound_gain(sfx,0.4*global.master_volume*2*global.sfx_volume,0)
 			sfx_for_multiplayer(swing_lightsaber_sfx2,0,0.1)
 			image_xscale = -sign_k(player.x - x)
 			sprite_index = jump_spr
-			attack_paturn = 1.2
+			attack_pattern = 1.2
 			vspeed = 0
 			}
 		
-			if attack_paturn = 1
+			if attack_pattern = 1
 			{
-			attack_paturn = 1.1
+			attack_pattern = 1.1
 			movement_speed += (0 - movement_speed)*0.1
 				repeat(2)
 				{
@@ -683,7 +683,7 @@ obj_camera.t_x = 5650
 			sprite_index = jump_spr
 			}
 		
-			if attack_paturn >= 1.2 && attack_paturn < 1.3
+			if attack_pattern >= 1.2 && attack_pattern < 1.3
 			{
 			movement_speed += (-20*sign_k(image_xscale) - movement_speed)*0.07
 
@@ -726,21 +726,21 @@ obj_camera.t_x = 5650
 				if abs(x - player.x) <= 64 //|| place_meeting(x,y+1,floor_parents)
 				{
 				gravity = 0.5
-				attack_paturn += 0.01
+				attack_pattern += 0.01
 				movement_speed = -10*sign_k(image_xscale)
 				}
 			
-				if attack_paturn > 1.2
+				if attack_pattern > 1.2
 				{
 				//image_xscale = -sign_k(player.x - x)
 				vspeed += 0.5
 				gravity_ignore = 0
 				movement_speed += (0 - movement_speed)*0.02
-				attack_paturn += 0.002
+				attack_pattern += 0.002
 				}
 			}
 		
-			if attack_paturn >= 1.3
+			if attack_pattern >= 1.3
 			{
 			image_angle = 0
 			movement_speed += (0 - movement_speed)*0.04
@@ -750,7 +750,7 @@ obj_camera.t_x = 5650
 				{
 				sprite_index = move_sprite
 				spin_attack_delay = 0
-				attack_paturn = 0
+				attack_pattern = 0
 				}
 			}
 		}
@@ -759,7 +759,7 @@ obj_camera.t_x = 5650
 
 
 	//패턴 2 (레이저)
-	if attack_paturn >= 2 && attack_paturn < 3
+	if attack_pattern >= 2 && attack_pattern < 3
 	{
 	movement_speed = 0
 	attack_laser_sec += 0.12
@@ -874,7 +874,7 @@ obj_camera.t_x = 5650
 		{
 		attack_laser_sfx = 0
 		attack_laser_sec = 0
-		attack_paturn = 0
+		attack_pattern = 0
 		sprite_index = move_sprite
 		image_index = 0
 		}
@@ -883,24 +883,24 @@ obj_camera.t_x = 5650
 
 
 	//공격 패턴 3
-	if attack_paturn >= 3 && attack_paturn < 4
+	if attack_pattern >= 3 && attack_pattern < 4
 	{
 		if w_alpha <= 0
 		{
-			if attack_paturn = 3.1
+			if attack_pattern = 3.1
 			{
 			var sfx = audio_play_sound(spin_attack_sfx,0,0)
 			audio_sound_gain(sfx,0.4*global.master_volume*2*global.sfx_volume,0)
 			sfx_for_multiplayer(swing_lightsaber_sfx2,0,0.1)
 			image_xscale = -sign_k(player.x - x)
 			sprite_index = jump_spr
-			attack_paturn = 3.2
+			attack_pattern = 3.2
 			vspeed = 0
 			}
 		
-			if attack_paturn = 3
+			if attack_pattern = 3
 			{
-			attack_paturn = 3.1
+			attack_pattern = 3.1
 			movement_speed += (0 - movement_speed)*0.1
 				repeat(2)
 				{
@@ -920,9 +920,9 @@ obj_camera.t_x = 5650
 			sprite_index = jump_spr
 			}
 		
-			if attack_paturn >= 3.2
+			if attack_pattern >= 3.2
 			{
-				if attack_paturn < 3.3
+				if attack_pattern < 3.3
 				{
 				gravity = 0.4
 				movement_speed += (-20*sign_k(image_xscale) - movement_speed)*0.07
@@ -957,7 +957,7 @@ obj_camera.t_x = 5650
 					sfx_for_multiplayer(down_attack_sfx,0,0.5)
 					sfx_for_multiplayer(bomb_sfx,false,0.1)
 					attack_target_x = x
-					attack_paturn = 3.3
+					attack_pattern = 3.3
 					movement_speed = -4*sign_k(image_xscale)
 					sprite_index = jump_spr
 					sfx_for_multiplayer(guard,0,0.1)
@@ -970,9 +970,9 @@ obj_camera.t_x = 5650
 					}
 				}
 			
-				if attack_paturn >= 3.3
+				if attack_pattern >= 3.3
 				{
-				attack_paturn += 0.01
+				attack_pattern += 0.01
 				down_attack_motion_dilay++
 					if down_attack_motion_dilay > 4
 					{
@@ -1003,7 +1003,7 @@ obj_camera.t_x = 5650
 				}
 			}
 		
-			if attack_paturn >= 3.45
+			if attack_pattern >= 3.45
 			{
 			image_angle = 0
 			movement_speed += (0 - movement_speed)*0.04
@@ -1015,7 +1015,7 @@ obj_camera.t_x = 5650
 				down_attack_with_rage_dis = 0
 				sprite_index = move_sprite
 				spin_attack_delay = 0
-				attack_paturn = 0
+				attack_pattern = 0
 				dash_attack = 0
 				cannot_move = 0
 				hit_cooltime = 0
@@ -1071,12 +1071,12 @@ for(var i = abs(dis____); i > 0; i--)
 }
 
 
-if check_floor != -4 && knocked_down_ef = 0 && attack_paturn = 0
+if check_floor != -4 && knocked_down_ef = 0 && attack_pattern = 0
 {
 movement_speed += (0 - movement_speed)*0.05
 }
 
-if attack_paturn = 0
+if attack_pattern = 0
 {
 	if hit_motion > 0
 	{

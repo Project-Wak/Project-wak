@@ -125,7 +125,11 @@ direction = point_direction(x,y,player.x,player.y)
 
 if place_meeting(x,y-2,floor_parents) || (place_meeting(x,y,player) && player.spin = 0)
 {
-sfx_for_multiplayer(critical_sfx,0,0.01)
+	if global.star_sfx_control < 5
+	{
+	sfx_for_multiplayer(critical_sfx,0,0.01)
+	global.star_sfx_control ++
+	}
 speed = 0
 image_alpha += (-1 - image_alpha)*0.15
 image_xscale += (-0.1 - image_xscale)*0.15

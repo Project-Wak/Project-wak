@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-if abs(player.y - y) < 120
+if abs(player.y - y) < 120 && image_alpha > 0
 {
 	var random_val___ = percentage_k(5)
 	if random_val___ = 1
@@ -563,12 +563,15 @@ if interecting_now = 1 && (global.real_ending = 0 || (message_phase >= 61 && mes
 		{
 			if !instance_exists(check__)
 			{
-			obj_camera.x = 1213
-			obj_camera.y = 734
-			obj_camera.t_x = 1213
-			obj_camera.t_y = 734
-			player.x = 1213
-			player.y = 734
+				if player.y > 739
+				{
+				obj_camera.x = 1213
+				obj_camera.y = 734
+				obj_camera.t_x = 1213
+				obj_camera.t_y = 734
+				player.x = 1213
+				player.y = 734
+				}
 			global.b_alpha = 0
 			audio_stop_sound(ending_select)
 			check__ = instance_create_depth(x,y,depth-1,player_message)
@@ -579,12 +582,15 @@ if interecting_now = 1 && (global.real_ending = 0 || (message_phase >= 61 && mes
 			}
 			else
 			{
-			obj_camera.x = 1213
-			obj_camera.y = 734
-			obj_camera.t_x = 1213
-			obj_camera.t_y = 734
-			player.x = 1213
-			player.y = 734
+				if player.y > 739
+				{
+				obj_camera.x = 1213
+				obj_camera.y = 734
+				obj_camera.t_x = 1213
+				obj_camera.t_y = 734
+				player.x = 1213
+				player.y = 734
+				}
 			}
 		}
 		

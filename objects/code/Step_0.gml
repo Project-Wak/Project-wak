@@ -1,4 +1,9 @@
 
+if global.star_sfx_control > 0
+{
+global.star_sfx_control -= 0.1
+}
+
 if !instance_exists(certain_music_off) && global.b_certain_musicoff != global.certain_musicoff
 {
 	if global.certain_musicoff = 1
@@ -28,8 +33,12 @@ global.credit_message = "\n\n\n\nDirector\n아버 (1인 개발)\n\n\nProgramer\n
 
 if global.back_to_origin_stage > 0 && room = room_main
 {
-player.x = 1213
-player.y = 734
+	if player.y > 739
+	{
+	player.x = 1213
+	player.y = 734
+	}
+	
 	if instance_exists(player) && player.gravity = 0 && player.vspeed = 0 && player.y < 790
 	{
 	timer_back_to_stage ++

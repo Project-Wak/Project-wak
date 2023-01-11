@@ -588,7 +588,7 @@ else
 	
 			if global.hp > 0
 			{
-			timer ++
+			timer += sign(global.replayed)+1
 			}
 		
 			var cal_ = (hp/max_hp)*1.2

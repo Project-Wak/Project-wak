@@ -28,7 +28,7 @@ hp = max_hp
 	}
 }
 
-if knocked_down_ef > 0 && attack_paturn = 0
+if knocked_down_ef > 0 && attack_pattern = 0
 {
 knocked_down_ef ++
 if rage_mode <= 0

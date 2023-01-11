@@ -76,9 +76,9 @@ function hp_minus_for_mob(argument0,argument1)
 		d_ef.image_xscale = 1.5
 		d_ef.image_yscale = 1.5
 	
-	
+
 		var __i = choose(-1,1)
-		var bl_ef = instance_create_depth(player.x,player.y,player.depth-10,ef_blood)
+		var bl_ef = instance_create_depth(x+(player.x - x)*0.5,y+(player.y - y)*0.5,player.depth-10,ef_blood)
 		var img_scale = -__i*irandom_range(8,15)/5
 		bl_ef.image_xscale = img_scale
 		bl_ef.image_yscale = abs(img_scale)

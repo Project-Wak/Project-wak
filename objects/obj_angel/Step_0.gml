@@ -511,6 +511,7 @@ opening_sfx = 0
 		spear__.y += (y-50+angelring_y - spear__.y)*0.08
 		spear__.image_angle = point_direction(x,y,spear__.x,spear__.y)+90
 		}
+		
 
 	
 	if global.hp > 0 && low_hp_phase = 0
@@ -529,6 +530,33 @@ opening_sfx = 0
 		phase_change = 1
 		}
 	timer += set_value_case(global.replayed*0.5,1,2,true)
+	}
+	
+	if sign(global.replayed) > 0
+	{
+		if timer < 10
+		{
+			if new_pattern = 0
+			{
+			var __xx__ = irandom_range(xstart-300,xstart+300)
+			var __yy__ = irandom_range(y-100,y-200)
+			var random_size__ = irandom_range(32,64)
+				repeat(sign(global.replayed)+1)
+				{
+					for(var i = 0; i < 360; i += 15)
+					{
+					var _bullet__ = instance_create_depth(__xx__+lengthdir_x(random_size__,i),__yy__+lengthdir_y(random_size__,i),player.depth-1,simhae_doo_bullet)
+					_bullet__.bullet_speed = 0.7
+					_bullet__.attack_type = 0
+					}
+				}
+			new_pattern = 1
+			}
+		}
+		else
+		{
+		new_pattern = 0
+		}
 	}
 	
 		if timer > 300-phase_change*100

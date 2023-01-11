@@ -20,11 +20,6 @@ if sprite_index = move_sprite
 	else
 	{
 	var guarding_check = sprite_index
-		if guarding_now > 0
-		{
-		guarding_check = pl_move_wakdroid_guard
-		}
-		
 	draw_sprite_ext(guarding_check,image_index,x,y,image_xscale,image_yscale,image_angle,c_white,image_alpha)
 	}
 }
@@ -37,10 +32,6 @@ if w_alpha > 0
 {
 shader_set(shFlash)
 var guarding_check = sprite_index
-	if guarding_now > 0
-	{
-	guarding_check = pl_move_wakdroid_guard
-	}
 draw_sprite_ext(guarding_check,image_index,x,y,image_xscale,image_yscale,image_angle,c_white,w_alpha)
 shader_reset()
 }

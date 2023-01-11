@@ -414,6 +414,7 @@ global.bgm_volume = 1
 
 //효과음
 global.sfx_volume = 1
+global.star_sfx_control = 0;
 
 //풀스크린
 global.full_screen = 1

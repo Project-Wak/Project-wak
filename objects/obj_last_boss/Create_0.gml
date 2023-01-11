@@ -72,4 +72,4 @@ grab_skill = 0
 bullet__patturn = 0
 
 global.room_brightness = 0.6
-alarm[0] = 120
+alarm[0] = 40

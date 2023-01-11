@@ -1067,7 +1067,31 @@ else
 					}
 				instance_destroy(angel_spear)
 				instance_destroy(_light_3)
-				patturn = 0
+				
+					if sign(global.replayed) = 1
+					{
+					patturn = 4.15
+					
+						repeat(2)
+						{
+						var __i = choose(-1,1)
+						var bl_ef = instance_create_depth(x,y,depth-1,ef_blood)
+						var img_scale = -__i*2
+						bl_ef.image_xscale = img_scale
+						bl_ef.image_yscale = abs(img_scale)
+						bl_ef.t_x = __i
+						bl_ef.image_angle = irandom_range(-90,90)
+						bl_ef.sfx_play = true
+						}
+					var sfx = audio_play_sound(laser_skill_ready,0,0)
+					audio_sound_gain(sfx,0.15*global.master_volume*2*global.sfx_volume,0)
+					view_shake(5,5,1)
+					}
+					else
+					{
+					patturn = 0
+					y = 0
+					}
 				spear_timer = 0
 				spear_falling = 0
 				var xx___ = x
@@ -1085,7 +1109,6 @@ else
 					}
 				var sfx = audio_play_sound(mob_faint,0,0)
 				audio_sound_gain(sfx,0.4*global.master_volume*2*global.sfx_volume,0)
-				y = 0
 				}
 			}
 		}
