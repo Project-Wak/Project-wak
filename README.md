@@ -20,7 +20,7 @@
 
 </br></br>
 
-#### - 디스코드
+#### - 디스코드 (채팅 금지 되어있음 [개발 일지용])
 
 [![](https://discordapp.com/api/guilds/958378000414568558/embed.png?style=banner2)](https://discord.gg/hzbCTRemqq)
 
