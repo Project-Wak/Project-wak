@@ -194,6 +194,8 @@ var bug_killer = sign(check_equipment(global.accessories_equip[0]/23)+check_equi
 
 global.god_accessory = sign(check_equipment(global.accessories_equip[0]/24)+check_equipment(global.accessories_equip[1]/24)+check_equipment(global.accessories_equip[2]/24))
 
+global.ine_axe = sign(check_equipment(global.accessories_equip[0]/25)+check_equipment(global.accessories_equip[1]/25)+check_equipment(global.accessories_equip[2]/25))
+
 
 if global.n_sword != 6
 {

@@ -33,9 +33,14 @@ function hp_minus_for_mob(argument0,argument1)
 	armor__ = 1
 	}
 	
+	if global.ine_axe > 0
+	{
+	var damage_increasement_ = (player.max_hp - global.hp)*0.00025
+	}
 	
 	
-	var damage_calcul = ((((argument1+global.weapon_upgraded[global.n_sword]*3)*random_val)/armor__)*global.damage_plus);
+	var origin_damage = ((((argument1+global.weapon_upgraded[global.n_sword]*3)*random_val)/armor__)*global.damage_plus)
+	var damage_calcul = origin_damage + origin_damage*damage_increasement_;
 
 	
 	if argument1 <= 0

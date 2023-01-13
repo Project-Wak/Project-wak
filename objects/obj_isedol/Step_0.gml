@@ -351,6 +351,10 @@ global.playing_scene = 1
 								if global.none_wakgood_mode = false
 								{
 								give_item(1,2)
+									if global.replayed > 0
+									{
+									give_item(1,25)
+									}
 								}
 								else
 								{

@@ -113,7 +113,7 @@ global.achievement_name[9] = "무-신"
 global.achievement_desc[9] = "모든 보스를 클리어했다"
 
 global.achievement_name[10] = "다회차 플레이"
-global.achievement_desc[10] = "다회차 플레이를 했다"
+global.achievement_desc[10] = "다회차 플레이를 했다 (달성시 특수 탈리스만 지급)"
 
 global.achievement_name[11] = "거대 왁두"
 global.achievement_desc[11] = "프로토타입 거대왁두 mk.2를 쓰러뜨렸다"
@@ -511,7 +511,7 @@ global.weapon_owned[i] = 0
 global.weapon_upgraded[i] = 0
 }
 	
-var total_accessories = 24
+var total_accessories = 25
 global.total_accessories_num = total_accessories
 for(var i = 0; i <= total_accessories; i++)
 {
@@ -573,6 +573,8 @@ global.critical_plus = 0 //크리티컬 데미지 확률 증가 +10%
 global.ignore_falling_check = 0
 global.mental_attack_sp_plus = 0 //멘탈 게이지 스킬 시전 속도 +50%
 global.automatic_guard_plus = 0 //공격 자동 방어 확률 +10%
+
+global.ine_axe = 0
 
 alarm[11] = 10
 

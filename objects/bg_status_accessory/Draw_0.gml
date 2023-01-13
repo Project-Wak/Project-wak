@@ -170,6 +170,11 @@ if (pressed > 0 && global.key_setting_message > 0) || global.key_setting_message
 	item_name__ = "신세계의 신"
 	item_desc__ = "모든 도전과제를 달성한 플레이어에게 지급되는 특수 탈리스만\n\n특수효과 : 레이지 모드 사용시, 주변에 번개를 생성"
 	}
+	if cal__img = 25
+	{
+	item_name__ = "아이네가 준 도끼"
+	item_desc__ = "다회차 플레이어에게 지급되는 특수 탈리스만. 아이네가 줬다.\n\n특수효과 : 현재 체력에 반비례하여 기본 데미지 증가"
+	}
 	
 	draw_text_kl_scale(xx+50*_c_x-global.key_setting_message*_c_x*70,yy-16*_c_x+global.key_setting_message*_c_x*80,item_name__,16,999,0.74,image_blend,0,-1,font0,1/3.5*_c_x,1/3.5*_c_x,image_angle)
 	draw_text_kl_scale(xx+50*_c_x-global.key_setting_message*_c_x*70,yy+global.key_setting_message*_c_x*80,item_desc__,60*_c_x,2300*_c_x,0.4,image_blend,0,-1,font0,1/4*_c_x,1/4*_c_x,image_angle)

@@ -92,7 +92,7 @@ function give_item(argument0,argument1)
 		
 		if _cal__ = 18
 		{
-		chat_up("탈리스만 '하트 크리스탈'를 획득하였다!")
+		chat_up("탈리스만 '하트 크리스탈'을 획득하였다!")
 		}
 		
 		if _cal__ = 19
@@ -123,6 +123,11 @@ function give_item(argument0,argument1)
 		if _cal__ = 24
 		{
 		chat_up("탈리스만 '신세계의 신'을 획득하였다!")
+		}
+		
+		if _cal__ = 25
+		{
+		chat_up("탈리스만 '아이네가 준 도끼'를 획득하였다!")
 		}
 	}
 	else if argument0 = 2
