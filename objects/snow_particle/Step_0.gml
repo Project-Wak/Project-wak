@@ -25,7 +25,7 @@ if global.rainy > 0
 	alpha += 0.02
 	}
 	
-	if global.rainy = 1 && !audio_is_playing(rain_sound_effect) && room = room_sector_outside
+	if global.rainy = 1 && !audio_is_playing(rain_sound_effect) && room = room_sector_outside && global.show_credits <= 0
 	{
 	sfx = audio_play_sound(rain_sound_effect,0,0)
 	}
@@ -43,7 +43,7 @@ else
 	}
 }
 
-if global.rainy != 1 || room != room_sector_outside
+if (global.rainy != 1 || room != room_sector_outside) && global.show_credits <= 0
 {
 	if sfx != -1
 	{
@@ -53,7 +53,7 @@ if global.rainy != 1 || room != room_sector_outside
 }
 
 
-if sfx != -1
+if sfx != -1 && global.show_credits <= 0
 {
 	if room != menu
 	{

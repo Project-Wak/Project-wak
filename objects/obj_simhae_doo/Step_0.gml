@@ -400,6 +400,7 @@ b_alpha_ += (t_b_alpha_ - b_alpha_)*0.08
 				var bullet__ = instance_create_depth(x+irandom_range(-120,120),y-150+irandom_range(-120,120),player.depth-1,simhae_doo_bullet)
 				bullet__.bullet_speed = 0.7
 				bullet__.attack_type = 0
+				bullet__._color_ = $FF75F2FF
 				}
 			}
 		}
@@ -512,6 +513,7 @@ b_alpha_ += (t_b_alpha_ - b_alpha_)*0.08
 				var bullet__ = instance_create_depth(x+irandom_range(-120,120),y-150+irandom_range(-120,120),player.depth-1,simhae_doo_bullet)
 				bullet__.bullet_speed = 0.7
 				bullet__.attack_type = 0
+				bullet__._color_ = $FF75F2FF
 				}
 			}
 		}
@@ -554,6 +556,7 @@ b_alpha_ += (t_b_alpha_ - b_alpha_)*0.08
 				var bullet__ = instance_create_depth(xstart,1625-150+irandom_range(-120,120),player.depth-1,simhae_doo_bullet)
 				bullet__.bullet_speed = 0.7
 				bullet__.attack_type = 0
+				bullet__._color_ = $FF75F2FF
 				}
 				
 				if created_ring_once > 0

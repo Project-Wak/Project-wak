@@ -60,9 +60,16 @@ repeat(100)
 }
 
 
-if audio_is_playing(ending_select) || audio_is_playing(follower_bgm) || audio_is_playing(ending_cinematic)
+if audio_is_playing(ending_select) || audio_is_playing(follower_bgm) || audio_is_playing(ending_cinematic) || audio_is_playing(ending_cinematic_replay)
 {
-audio_sound_gain(bgm__,volume__*volume_downer*0.04*global.master_volume*2*global.bgm_volume*global.certain_music_volume,0)
+	if audio_is_playing(ending_cinematic_replay)
+	{
+	audio_sound_gain(bgm__,volume__*volume_downer*0.07*global.master_volume*2*global.bgm_volume*global.certain_music_volume,0)
+	}
+	else
+	{
+	audio_sound_gain(bgm__,volume__*volume_downer*0.04*global.master_volume*2*global.bgm_volume*global.certain_music_volume,0)
+	}
 }
 
 
@@ -761,7 +768,7 @@ if interecting_now = 1 && (global.real_ending = 0 || (message_phase >= 61 && mes
 	}
 }
 
-if global.show_credits > 12000
+if global.show_credits > 12200
 {
 volume_downer -= 0.001
 audio_sound_gain(bgm,0.23*global.master_volume*2*global.bgm_volume*global.certain_music_volume*volume_downer,0)
@@ -817,6 +824,10 @@ show_cinematic ++
 if show_cinematic > 0
 {
 global.never_move = 1
+global.lantern = 1
+global.n_time = 8
+global.n_night = 0
+
 	if show_cinematic_sec < 7150
 	{
 	global.playing_scene = 1
@@ -932,7 +943,14 @@ global.never_move = 1
 		show_cinematic_sec = 1
 		room_goto(tuto_room)
 		global.gameover_reason_title = "[진엔딩]"
-		bgm__ = audio_play_sound(ending_cinematic,0,true)
+			if global.certain_musicoff = 0
+			{
+			bgm__ = audio_play_sound(ending_cinematic_replay,0,true)
+			}
+			else
+			{
+			bgm__ = audio_play_sound(ending_cinematic,0,true)
+			}
 		}
 	}
 	
@@ -1055,8 +1073,8 @@ global.never_move = 1
 			{
 			room_goto(room_sector_B05_2)
 			global.t_b_alpha = -0.1
-			obj_camera.x = 1323
-			obj_camera.t_x = 1323
+			obj_camera.x = 1223
+			obj_camera.t_x = 1223
 			obj_camera.y = 1333
 			obj_camera.t_y = 1333
 			}
@@ -1064,8 +1082,8 @@ global.never_move = 1
 			{
 				if show_cinematic_sec < 2400
 				{
-				obj_camera.t_x += 0.8
-				obj_camera.t_y -= 0.9
+				obj_camera.t_x += 0.9
+				obj_camera.t_y -= 0.6
 				}
 				else
 				{
@@ -1075,8 +1093,8 @@ global.never_move = 1
 			
 			if show_cinematic_sec = 2400
 			{
-			obj_camera.x = 5000
-			obj_camera.t_x = 5000
+			obj_camera.x = 4500
+			obj_camera.t_x = 4500
 			obj_camera.y = 2240
 			obj_camera.t_y = 2240
 			}
@@ -1121,17 +1139,17 @@ global.never_move = 1
 			{
 			room_goto(room_sector_B07)
 			global.t_b_alpha = -0.1
-			obj_camera.x = 1825
-			obj_camera.t_x = 1825
-			obj_camera.y = 2241
-			obj_camera.t_y = 2241
+			obj_camera.x = 2500
+			obj_camera.t_x = 2500
+			obj_camera.y = 2320
+			obj_camera.t_y = 2320
 			}
 			else
 			{
 			obj_camera.t_x += 1.5
 			}
 			
-			if show_cinematic_sec >= 4200
+			if show_cinematic_sec >= 3900
 			{
 			obj_camera.t_x += 1
 			}
@@ -1196,6 +1214,7 @@ global.never_move = 1
 			if show_cinematic_sec <= 7201
 			{
 			global.rainy = 1
+			global.dreamy_alpha = 0
 			room_goto(room_main)
 			global.t_b_alpha = -0.1
 			obj_camera.x = 669
@@ -1280,8 +1299,8 @@ global.never_move = 1
 			if show_cinematic_sec <= 10000
 			{
 			global.t_b_alpha = -0.1
-			obj_camera.x = 3071
-			obj_camera.t_x = 3071
+			obj_camera.x = 3220
+			obj_camera.t_x = 3220
 			obj_camera.y = 1492
 			obj_camera.t_y = 1492
 			}

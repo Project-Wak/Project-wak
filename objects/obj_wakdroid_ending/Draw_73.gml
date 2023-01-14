@@ -24,7 +24,7 @@ var alpha = (global.show_credits-40)*0.8
 	}
 	
 var scale_ = 1
-if audio_is_playing(ending_cinematic)
+if audio_is_playing(ending_cinematic) || audio_is_playing(ending_cinematic_replay)
 {
 scale_ = 0.9
 }
@@ -53,7 +53,7 @@ difficulty__ = "보통"
 }
 
 
-draw_text_k_scale(xx+wid*0.5,yy-v_x*(global.show_credits*scale_-940),string(global.credit_message)+"\n\n\n\n\n총 사망 횟수\n"+string(global.total_died)+"회\n\n\n선택한 난이도\n"+string(difficulty__)+"\n\n\n총 플레이 타임\n"+string(cal_play_time__)+"시간 "+string(play_time__-cal_play_time__*60)+"분",200,-1,alpha,c_white,0,0,font_title,v_x/5,v_x/5,0)
+draw_text_kl_scale(xx+wid*0.5,yy-v_x*(global.show_credits*scale_-940),string(global.credit_message)+"\n\n\n\n\n총 사망 횟수\n"+string(global.total_died)+"회\n\n\n선택한 난이도\n"+string(difficulty__)+"\n\n\n총 플레이 타임\n"+string(cal_play_time__)+"시간 "+string(play_time__-cal_play_time__*60)+"분",200,-1,alpha,c_white,0,0,font_title,v_x/5,v_x/5,0)
 
 	if keyboard_check(global.skip_key)
 	{

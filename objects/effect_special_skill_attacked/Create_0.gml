@@ -5,9 +5,9 @@
 
 if instance_exists(obj_last_boss)
 {
-color_1 = $FF3E2D24
-color_2 = $FF473021
-color_3 = $FF513524
+color_1 = $FFF6DDED
+color_2 = $FFB47697
+color_3 = $FFDCBFF6
 }
 
 

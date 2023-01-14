@@ -107,8 +107,8 @@ var yy = irandom_range(120,0)
 		if phase = 3 && !instance_exists(mob_parents)
 		{
 		var test_mob = instance_create_depth(xx-100,0+yy,player.depth+3,wak_drone)
-		test_mob.image_xscale = -1
-		test_mob.image_yscale = 1
+		test_mob.image_xscale = -0.8
+		test_mob.image_yscale = 0.8
 		test_mob.test_mob_type = 1
 
 		phase++

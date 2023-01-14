@@ -548,6 +548,7 @@ opening_sfx = 0
 					var _bullet__ = instance_create_depth(__xx__+lengthdir_x(random_size__,i),__yy__+lengthdir_y(random_size__,i),player.depth-1,simhae_doo_bullet)
 					_bullet__.bullet_speed = 0.7
 					_bullet__.attack_type = 0
+					_bullet__._color_ = $FFFFA671
 					}
 				}
 			new_pattern = 1
@@ -607,6 +608,23 @@ opening_sfx = 0
 	cannot_step = 1
 	spear__.cannot_step = 1
 	low_hp_phase ++
+		if low_hp_phase%130 = 0
+		{
+		var __xx__ = irandom_range(xstart-300,xstart+300)
+		var __yy__ = irandom_range(y-150,y-250)
+		var random_size__ = irandom_range(32,64)
+			repeat(sign(global.replayed)+1)
+			{
+				for(var i = 0; i < 360; i += 15)
+				{
+				var _bullet__ = instance_create_depth(__xx__+lengthdir_x(random_size__,i),__yy__+lengthdir_y(random_size__,i),player.depth-1,simhae_doo_bullet)
+				_bullet__.bullet_speed = 0.7
+				_bullet__.attack_type = 0
+				_bullet__._color_ = $FFFFA671
+				}
+			}
+		}
+	
 		if low_hp_phase > 800
 		{
 			if !instance_exists(yellow_circle_effect)
@@ -726,6 +744,7 @@ opening_sfx = 0
 				var bullet__ = instance_create_depth(spear__.x+irandom_range(-120,120),spear__.y-150+irandom_range(-120,120),spear__.depth-1,simhae_doo_bullet)
 				bullet__.bullet_speed = 0.7
 				bullet__.attack_type = 0
+				bullet__._color_ = $FF75F2FF
 				}
 				
 				repeat(3)

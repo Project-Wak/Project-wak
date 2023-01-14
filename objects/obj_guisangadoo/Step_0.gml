@@ -292,6 +292,23 @@ b_alpha_ += (t_b_alpha_ - b_alpha_)*0.08
 			timer ++
 			}
 			
+			if timer = 3
+			{
+			var __xx__ = irandom_range(xstart-300,xstart+300)
+			var __yy__ = irandom_range(y-100,y-200)
+			var random_size__ = irandom_range(32,64)
+				repeat(sign(global.replayed)+1)
+				{
+					for(var i = 0; i < 360; i += 15)
+					{
+					var _bullet__ = instance_create_depth(__xx__+lengthdir_x(random_size__,i),__yy__+lengthdir_y(random_size__,i),player.depth-1,simhae_doo_bullet)
+					_bullet__.bullet_speed = 0.7
+					_bullet__.attack_type = 0
+					_bullet__._color_ = $FFFFA671
+					}
+				}
+			}
+			
 			var cal_ = (hp/max_hp)*1.2
 	
 			if cal_ < 0.5
@@ -416,8 +433,11 @@ b_alpha_ += (t_b_alpha_ - b_alpha_)*0.08
 		
 		if patturn = 1.11
 		{
-		var a___ = audio_play_sound(sparking_sound,0,0)
-		audio_sound_gain(a___,0.1*global.master_volume*2*global.sfx_volume,0)
+			if global.show_credits <= 0
+			{
+			var a___ = audio_play_sound(sparking_sound,0,0)
+			audio_sound_gain(a___,0.1*global.master_volume*2*global.sfx_volume,0)
+			}
 		
 		w_alpha_lightning[0] = 5
 		w_alpha = 3
@@ -464,7 +484,10 @@ b_alpha_ += (t_b_alpha_ - b_alpha_)*0.08
 		if patturn = 2
 		{
 		w_alpha = 2
+		if global.show_credits <= 0
+		{
 		sfx_for_multiplayer(sparking_sound,0,0.1)
+		}
 		skill_red_ball_effect_rage = instance_create_depth(x,y,depth-1,white_circle_effect)
 		skill_red_ball_effect_rage.image_xscale = 0
 		skill_red_ball_effect_rage.image_yscale = 0
@@ -483,22 +506,56 @@ b_alpha_ += (t_b_alpha_ - b_alpha_)*0.08
 		
 		if patturn = 2.1
 		{
-		var a___ = audio_play_sound(sparking_sound,0,0)
-		audio_sound_gain(a___,0.1*global.master_volume*2*global.sfx_volume,0)
+			if global.show_credits <= 0
+			{
+			var a___ = audio_play_sound(sparking_sound,0,0)
+			audio_sound_gain(a___,0.1*global.master_volume*2*global.sfx_volume,0)
+			}
 		skill_red_ball_effect_rage.image_xscale = 1.4
 		skill_red_ball_effect_rage.image_yscale = 1.4
 		}
 		
+		if patturn = 2.12
+		{
+		var __xx__ = xstart
+		var __yy__ = y-64
+		var random_size__ = irandom_range(16,32)
+		var _random_dir = irandom_range(0,359)
+
+			for(var i = -random_size__*1.7; i < random_size__*1.7; i += 4)
+			{
+			var _bullet__ = instance_create_depth(__xx__+lengthdir_x(i,_random_dir),__yy__+lengthdir_y(i,_random_dir),player.depth-1,simhae_doo_bullet)
+			_bullet__.bullet_speed = 0.7
+			_bullet__.attack_type = 0
+			_bullet__._color_ = $FFFFA671
+			}
+			
+
+			for(var i = 0; i < 360; i += 15)
+			{
+			var _bullet__ = instance_create_depth(__xx__+lengthdir_x(random_size__,i),__yy__+lengthdir_y(random_size__,i),player.depth-1,simhae_doo_bullet)
+			_bullet__.bullet_speed = 0.7
+			_bullet__.attack_type = 0
+			_bullet__._color_ = $FFFFA671
+			}
+		}
+		
 		if patturn = 2.13
 		{
-		var a___ = audio_play_sound(sparking_sound,0,0)
-		audio_sound_gain(a___,0.1*global.master_volume*2*global.sfx_volume,0)
+			if global.show_credits <= 0
+			{
+			var a___ = audio_play_sound(sparking_sound,0,0)
+			audio_sound_gain(a___,0.1*global.master_volume*2*global.sfx_volume,0)
+			}
 		}
 		
 		if patturn = 2.14
 		{
-		var a___ = audio_play_sound(sparking_sound,0,0)
-		audio_sound_gain(a___,0.1*global.master_volume*2*global.sfx_volume,0)
+			if global.show_credits <= 0
+			{
+			var a___ = audio_play_sound(sparking_sound,0,0)
+			audio_sound_gain(a___,0.1*global.master_volume*2*global.sfx_volume,0)
+			}
 		}
 		
 		if patturn = 2.15
@@ -552,8 +609,11 @@ b_alpha_ += (t_b_alpha_ - b_alpha_)*0.08
 		w_alpha_lightning[1] = 16
 		w_alpha = 1
 		xx_lightning[1] = player.x
-		var a___ = audio_play_sound(sparking_sound,0,0)
-		audio_sound_gain(a___,0.1*global.master_volume*2*global.sfx_volume,0)
+			if global.show_credits <= 0
+			{
+			var a___ = audio_play_sound(sparking_sound,0,0)
+			audio_sound_gain(a___,0.1*global.master_volume*2*global.sfx_volume,0)
+			}
 		}
 	
 		if patturn < 3.1
@@ -565,8 +625,11 @@ b_alpha_ += (t_b_alpha_ - b_alpha_)*0.08
 		if patturn = 3.15
 		{
 		w_alpha = 1
-		var a___ = audio_play_sound(sparking_sound,0,0)
-		audio_sound_gain(a___,0.1*global.master_volume*2*global.sfx_volume,0)
+			if global.show_credits <= 0
+			{
+			var a___ = audio_play_sound(sparking_sound,0,0)
+			audio_sound_gain(a___,0.1*global.master_volume*2*global.sfx_volume,0)
+			}
 		}
 		
 		if patturn = 3.2
@@ -577,8 +640,12 @@ b_alpha_ += (t_b_alpha_ - b_alpha_)*0.08
 		if patturn = 3.21
 		{
 		w_alpha_elec = 1
-		var a___ = audio_play_sound(sparking_sound,0,0)
-		audio_sound_gain(a___,0.03*global.master_volume*2*global.sfx_volume,0)
+			if global.show_credits <= 0
+			{
+			var a___ = audio_play_sound(sparking_sound,0,0)
+			audio_sound_gain(a___,0.03*global.master_volume*2*global.sfx_volume,0)
+			}
+			
 			repeat(choose(2,3,3,4))
 			{
 			var __xx__ = irandom_range(xstart-300,xstart+300)
@@ -595,8 +662,12 @@ b_alpha_ += (t_b_alpha_ - b_alpha_)*0.08
 		if patturn = 3.3
 		{
 		w_alpha_elec = 1
-		var a___ = audio_play_sound(sparking_sound,0,0)
-		audio_sound_gain(a___,0.03*global.master_volume*2*global.sfx_volume,0)
+			if global.show_credits <= 0
+			{
+			var a___ = audio_play_sound(sparking_sound,0,0)
+			audio_sound_gain(a___,0.03*global.master_volume*2*global.sfx_volume,0)
+			}
+			
 			repeat(choose(2,3,3,4))
 			{
 			var __xx__ = irandom_range(xstart-300,xstart+300)
@@ -613,8 +684,13 @@ b_alpha_ += (t_b_alpha_ - b_alpha_)*0.08
 		if patturn = 3.32
 		{
 		w_alpha_elec = 1
-		var a___ = audio_play_sound(sparking_sound,0,0)
-		audio_sound_gain(a___,0.03*global.master_volume*2*global.sfx_volume,0)
+			if global.show_credits <= 0
+			{
+			var a___ = audio_play_sound(sparking_sound,0,0)
+			audio_sound_gain(a___,0.03*global.master_volume*2*global.sfx_volume,0)
+			}
+			
+			
 			repeat(choose(2,3,3,4))
 			{
 			var __xx__ = irandom_range(xstart-300,xstart+300)
@@ -663,6 +739,7 @@ b_alpha_ += (t_b_alpha_ - b_alpha_)*0.08
 				var _bullet__ = instance_create_depth(__xx__+lengthdir_x(random_size__,i),__yy__+lengthdir_y(random_size__,i),player.depth-1,simhae_doo_bullet)
 				_bullet__.bullet_speed = 0.7
 				_bullet__.attack_type = 0
+				_bullet__._color_ = $FFFFA671
 				}
 			}
 		}
@@ -680,6 +757,7 @@ b_alpha_ += (t_b_alpha_ - b_alpha_)*0.08
 				var _bullet__ = instance_create_depth(__xx__+lengthdir_x(random_size__,i),__yy__+lengthdir_y(random_size__,i),player.depth-1,simhae_doo_bullet)
 				_bullet__.bullet_speed = 0.7
 				_bullet__.attack_type = 0
+				_bullet__._color_ = $FFFFA671
 				}
 			}
 		}
@@ -697,6 +775,7 @@ b_alpha_ += (t_b_alpha_ - b_alpha_)*0.08
 				var _bullet__ = instance_create_depth(__xx__+lengthdir_x(random_size__,i),__yy__+lengthdir_y(random_size__,i),player.depth-1,simhae_doo_bullet)
 				_bullet__.bullet_speed = 0.7
 				_bullet__.attack_type = 0
+				_bullet__._color_ = $FFFFA671
 				}
 			}
 		}
@@ -714,6 +793,7 @@ b_alpha_ += (t_b_alpha_ - b_alpha_)*0.08
 				var _bullet__ = instance_create_depth(__xx__+lengthdir_x(random_size__,i),__yy__+lengthdir_y(random_size__,i),player.depth-1,simhae_doo_bullet)
 				_bullet__.bullet_speed = 0.7
 				_bullet__.attack_type = 0
+				_bullet__._color_ = $FFFFA671
 				}
 			}
 		}
@@ -731,6 +811,7 @@ b_alpha_ += (t_b_alpha_ - b_alpha_)*0.08
 				var _bullet__ = instance_create_depth(__xx__+lengthdir_x(random_size__,i),__yy__+lengthdir_y(random_size__,i),player.depth-1,simhae_doo_bullet)
 				_bullet__.bullet_speed = 0.7
 				_bullet__.attack_type = 0
+				_bullet__._color_ = $FFFFA671
 				}
 			}
 		}

@@ -390,7 +390,7 @@ else
 			{
 			var random_patturn = choose(1,2,2,3,4,4)
 			
-				if instance_exists(obj_wakdroid_ending)
+				if instance_exists(obj_wakdroid_ending) || global.real_ending > 0
 				{
 				random_patturn = choose(1,2,3,4,4,5,5,5,6,7,7,7)
 				}
@@ -416,7 +416,7 @@ else
 						break;
 						}
 					
-						if instance_exists(obj_wakdroid_ending)
+						if instance_exists(obj_wakdroid_ending) || global.real_ending > 0
 						{
 						random_patturn = choose(1,2,3,4,4,5,5,5,6,7,7,7)
 						}
@@ -622,23 +622,45 @@ else
 			
 			if patturn > 2.5
 			{
-			patturn = 0
-			var xx___ = x
-			var yy___ = y
-				repeat(choose(6,7,7,8,8,9,9,9,10,10,11,12))
+				if sign(global.replayed) = 1
 				{
-				randomize()
-				var dust = instance_create_depth(xx___+irandom_range(-5,5),yy___+irandom_range(-5,5),depth-1,pepsi_effect_received)
-				var scale = irandom_range(20,40)/50
-				dust.image_xscale = scale
-				dust.image_yscale = scale
-				dust.vspeed = irandom_range(-50,50)/37
-				dust.hspeed = irandom_range(-50,50)/37
-				dust.image_alpha = 1
+				patturn = 4.15
+					
+					repeat(2)
+					{
+					var __i = choose(-1,1)
+					var bl_ef = instance_create_depth(x,y,depth-1,ef_blood)
+					var img_scale = -__i*2
+					bl_ef.image_xscale = img_scale
+					bl_ef.image_yscale = abs(img_scale)
+					bl_ef.t_x = __i
+					bl_ef.image_angle = irandom_range(-90,90)
+					bl_ef.sfx_play = true
+					}
+				var sfx = audio_play_sound(laser_skill_ready,0,0)
+				audio_sound_gain(sfx,0.15*global.master_volume*2*global.sfx_volume,0)
+				view_shake(5,5,1)
 				}
-			var sfx = audio_play_sound(mob_faint,0,0)
-			audio_sound_gain(sfx,0.4*global.master_volume*2*global.sfx_volume,0)
-			y = 0
+				else
+				{
+				var xx___ = x
+				var yy___ = y
+					repeat(choose(6,7,7,8,8,9,9,9,10,10,11,12))
+					{
+					randomize()
+					var dust = instance_create_depth(xx___+irandom_range(-5,5),yy___+irandom_range(-5,5),depth-1,pepsi_effect_received)
+					var scale = irandom_range(20,40)/50
+					dust.image_xscale = scale
+					dust.image_yscale = scale
+					dust.vspeed = irandom_range(-50,50)/37
+					dust.hspeed = irandom_range(-50,50)/37
+					dust.image_alpha = 1
+					}
+				var sfx = audio_play_sound(mob_faint,0,0)
+				audio_sound_gain(sfx,0.4*global.master_volume*2*global.sfx_volume,0)
+				patturn = 0
+				y = 0
+				}
 			}
 		}
 		
@@ -727,9 +749,6 @@ else
 			if patturn = 3.6
 			{
 			var __ins__ = instance_create_depth(x,2370,depth-1,effect_special_skill_attacked)
-			__ins__.color_1 = $FF3E2D24
-			__ins__.color_2 = $FF473021
-			__ins__.color_3 = $FF513524
 			}
 			
 			if patturn = 3.62
@@ -965,6 +984,7 @@ else
 					var bullet_ = instance_create_depth(angel_spear.x+irandom_range(-120,120),angel_spear.y-150+irandom_range(-120,120),angel_spear.depth-1,simhae_doo_bullet)
 					bullet_.bullet_speed = 0.7
 					bullet_.attack_type = 0
+					bullet_._color_ = $FF75F2FF
 					}
 				
 				var effect_ = instance_create_depth(angel_spear.x,angel_spear.y,angel_spear.depth+10,down_effect)
@@ -1356,10 +1376,12 @@ else
 				var bullet_ = instance_create_depth(x+lengthdir_x(64,90+bullet__patturn),y+90+lengthdir_y(64,90+bullet__patturn),depth-1,simhae_doo_bullet)
 				bullet_.bullet_speed = 0.7
 				bullet_.attack_type = 0
+				bullet_._color_ = $FFFFA671
 			
 				var bullet_ = instance_create_depth(x+lengthdir_x(64,90-bullet__patturn),y+90+lengthdir_y(64,90-bullet__patturn),depth-1,simhae_doo_bullet)
 				bullet_.bullet_speed = 0.7
 				bullet_.attack_type = 0
+				bullet_._color_ = $FFFFA671
 				}
 			}
 			

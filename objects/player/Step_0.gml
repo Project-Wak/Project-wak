@@ -2044,6 +2044,11 @@ w_alpha += (-0.01 - w_alpha)*0.1
 				if guarding_now = 1 || charge_attack > 0 || pering > 0
 				{
 				global.stamina -= cal_m_ste
+				
+				if global.replayed > 0 && instance_exists(obj_wakdroid)
+				{
+				obj_wakdroid.hp += 1
+				}
 			
 		
 					if guard_cool_time = 0
@@ -2117,6 +2122,11 @@ w_alpha += (-0.01 - w_alpha)*0.1
 				if guarding_now = 1 || charge_attack > 0 || pering > 0
 				{
 				global.stamina -= cal_m_ste
+				
+				if global.replayed > 0 && instance_exists(obj_wakdroid)
+				{
+				obj_wakdroid.hp += 1
+				}
 			
 		
 					if guard_cool_time = 0
@@ -2308,6 +2318,11 @@ w_alpha += (-0.01 - w_alpha)*0.1
 				if guarding_now = 1 || charge_attack > 0 || pering > 0
 				{
 				global.stamina -= cal_m_ste
+				
+				if global.replayed > 0 && instance_exists(obj_wakdroid)
+				{
+				obj_wakdroid.hp += 1
+				}
 			
 		
 					if guard_cool_time = 0
@@ -2372,6 +2387,11 @@ w_alpha += (-0.01 - w_alpha)*0.1
 				if guarding_now = 1 || charge_attack > 0 || pering > 0
 				{
 				global.stamina -= cal_m_ste
+				
+				if global.replayed > 0 && instance_exists(obj_wakdroid)
+				{
+				obj_wakdroid.hp += 1
+				}
 			
 		
 					if guard_cool_time = 0
@@ -2434,6 +2454,11 @@ w_alpha += (-0.01 - w_alpha)*0.1
 				if guarding_now = 1 || charge_attack > 0 || pering > 0
 				{
 				global.stamina -= cal_m_ste
+				
+				if global.replayed > 0 && instance_exists(obj_wakdroid)
+				{
+				obj_wakdroid.hp += 1
+				}
 			
 		
 					if guard_cool_time = 0
@@ -2479,6 +2504,11 @@ w_alpha += (-0.01 - w_alpha)*0.1
 			if _placed_obj >= 0 && spin = 0
 			{
 			var check_guard = sign(x - _placed_obj.x)
+			
+			if global.replayed > 0 && instance_exists(obj_wakdroid)
+			{
+			obj_wakdroid.hp += 1
+			}
 			
 				if check_guard = 0
 				{
@@ -2613,7 +2643,7 @@ w_alpha += (-0.01 - w_alpha)*0.1
 			check_guard = choose(-1,1)
 			}
 				
-			var cal_m_ste = (1/global.guard_power)*0.1
+			var cal_m_ste = (1/global.guard_power)*0.2
 			if guarding > 0 && global.stamina >= cal_m_ste && check_guard = sign(image_xscale)
 			{
 			guarding_now = 1
@@ -2622,6 +2652,19 @@ w_alpha += (-0.01 - w_alpha)*0.1
 			if guarding_now = 1 || charge_attack > 0 || pering > 0
 			{
 			global.stamina -= cal_m_ste
+			
+			if global.replayed > 0
+			{
+				if instance_exists(obj_wakdroid)
+				{
+				obj_wakdroid.hp += 0.3
+				}
+				
+				if instance_exists(obj_last_boss)
+				{
+				obj_last_boss.hp += 0.3
+				}
+			}
 			
 		
 				if guard_cool_time = 0

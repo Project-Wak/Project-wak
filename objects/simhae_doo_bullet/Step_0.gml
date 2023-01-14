@@ -163,8 +163,7 @@ var yy = other.y - s_y
 	{
 	//var alpha_ = image_alpha/i
 	var alpha_ = (image_alpha/i)
-	var color = $FF75F2FF
-	draw_sprite_ext(sprite64,0,xx,yy,image_xscale*4/i,image_yscale*4/i,floor(image_angle),color,alpha_)
+	draw_sprite_ext(sprite64,0,xx,yy,image_xscale*4/i,image_yscale*4/i,floor(image_angle),_color_,alpha_)
 	}
 gpu_set_blendmode(bm_normal)
 surface_reset_target()

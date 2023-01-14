@@ -427,7 +427,7 @@ else
 			{
 			var random_patturn = choose(1,1,2,2,3,4,4)
 			
-			if sign(global.replayed) = 1
+			if global.replayed > 0
 			{
 			random_patturn = choose(1,1,2,2,3,4,4,6,6,6)
 			}
@@ -435,7 +435,7 @@ else
 			if hp < 3000
 			{
 			random_patturn = choose(1,1,2,2,3,4,5,5,6,6,6)
-				if sign(global.replayed) = 1
+				if global.replayed > 0
 				{
 				random_patturn = choose(1,1,2,2,3,4,4,6,6,6)
 				}
@@ -452,7 +452,7 @@ else
 					{
 					random_patturn = choose(1,1,2,2,3,4,4)
 					
-						if sign(global.replayed) = 1
+						if global.replayed > 0
 						{
 						random_patturn = choose(1,1,2,2,3,4,4,6,6,6)
 						}
@@ -462,7 +462,7 @@ else
 						{
 						random_patturn = choose(1,1,2,2,3,4,5,5)
 						
-							if sign(global.replayed) = 1
+							if global.replayed > 0
 							{
 							random_patturn = choose(1,1,2,2,3,4,4,6,6,6)
 							}
@@ -642,6 +642,7 @@ else
 				var bullet__ = instance_create_depth(x+irandom_range(-120,120),y-150+irandom_range(-120,120),player.depth-1,simhae_doo_bullet)
 				bullet__.bullet_speed = 0.7
 				bullet__.attack_type = 0
+				bullet__._color_ = $FF75F2FF
 				}
 			t_y -= 20
 			}
@@ -713,6 +714,7 @@ else
 				var bullet__ = instance_create_depth(xx,yy-100,player.depth-1,simhae_doo_bullet)
 				bullet__.bullet_speed = 0.7
 				bullet__.attack_type = 0
+				bullet__._color_ = $FF75F2FF
 				start_cre_dir += 15
 				}
 				else
@@ -771,7 +773,7 @@ else
 				_aaa = instance_create_depth(x,y+32,depth-20,effect_special_skill_sec_attacked)
 				_aaa.image_angle = 90+bullet_time+300
 				_aaa.direction = 90+bullet_time+300
-				_aaa.color_1 = $FF70FFDC
+				_aaa.color_1 = $FFCCFFF2
 				_aaa.color_2 = $FF5A8539
 				_aaa.color_3 = $FF4CE083
 				_aaa.maximum_size = 0.7
@@ -868,6 +870,7 @@ else
 				var bullet__ = instance_create_depth(saved_x,2329-150+irandom_range(-120,120),player.depth-1,simhae_doo_bullet)
 				bullet__.bullet_speed = 0.7
 				bullet__.attack_type = 0
+				bullet__._color_ = $FF75F2FF
 				}
 			}
 			
@@ -886,6 +889,7 @@ else
 				var bullet__ = instance_create_depth(saved_x,2329-150+irandom_range(-120,120),player.depth-1,simhae_doo_bullet)
 				bullet__.bullet_speed = 0.7
 				bullet__.attack_type = 0
+				bullet__._color_ = $FF75F2FF
 				}
 			}
 			
@@ -925,6 +929,7 @@ else
 				bullet__ = instance_create_depth(xx,yy-100,player.depth-1,simhae_doo_bullet)
 				bullet__.bullet_speed = 0.2
 				bullet__.attack_type = 0
+				bullet__._color_ = $FF75F2FF
 				}
 			}
 			
@@ -941,6 +946,7 @@ else
 				bullet__ = instance_create_depth(xx,yy-100,player.depth-1,simhae_doo_bullet)
 				bullet__.bullet_speed = 0.01
 				bullet__.attack_type = 0
+				bullet__._color_ = $FF75F2FF
 				}
 			}
 			
@@ -957,6 +963,7 @@ else
 					bullet__ = instance_create_depth(xx,yy-100,player.depth-1,simhae_doo_bullet)
 					bullet__.bullet_speed = 0.7
 					bullet__.attack_type = 0
+					bullet__._color_ = $FF75F2FF
 					}
 				}
 			}

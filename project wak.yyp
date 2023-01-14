@@ -611,6 +611,7 @@
     {"id":{"name":"ssip","path":"sounds/ssip/ssip.yy",},"order":40,},
     {"id":{"name":"room_sector_B02_1","path":"rooms/room_sector_B02_1/room_sector_B02_1.yy",},"order":2,},
     {"id":{"name":"Sprite325","path":"sprites/Sprite325/Sprite325.yy",},"order":12,},
+    {"id":{"name":"ending_cinematic_replay","path":"sounds/ending_cinematic_replay/ending_cinematic_replay.yy",},"order":128,},
     {"id":{"name":"effect_attack3","path":"objects/effect_attack3/effect_attack3.yy",},"order":7,},
     {"id":{"name":"room_sector_B07","path":"rooms/room_sector_B07/room_sector_B07.yy",},"order":12,},
     {"id":{"name":"obj_map_tile7_2168","path":"objects/obj_map_tile7_2168/obj_map_tile7_2168.yy",},"order":11,},
