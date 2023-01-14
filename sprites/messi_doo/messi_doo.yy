@@ -25,8 +25,8 @@
     "path": "texturegroups/boss",
   },
   "swatchColours": null,
-  "gridX": 3,
-  "gridY": 3,
+  "gridX": 2,
+  "gridY": 2,
   "frames": [
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"07cef9e8-8359-482c-9de2-24053592ca24",},
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a6866e9e-dd38-4812-99cf-fe451a559909",},

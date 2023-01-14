@@ -84,6 +84,10 @@ if stop_move = -4
 
 
 	global.gold += 1200
+	
+	var _achievement = instance_create_depth(x,y,depth,bg_achievement)
+	_achievement.text = "공 부수기 (히든 도전과제)"
+	_achievement.icon_num = 0
 
 
 	instance_destroy()

@@ -543,8 +543,8 @@ if scene__ > 0 && activated != 2
 	obj_camera.t_x = x
 		if player.attack_laser_sec = 0 && player.attack_laser = 0 && player.suicide = 0 && player.sting_attack = 0
 		{
-		obj_camera.tv_x = 1280*0.9
-		obj_camera.tv_y = 720*0.9
+		obj_camera.tv_x = 1280*1.06
+		obj_camera.tv_y = 720*1.06
 		}
 		
 		
@@ -573,8 +573,8 @@ else
 		
 			if player.attack_laser_sec = 0 && player.attack_laser = 0 && player.suicide = 0 && player.sting_attack = 0
 			{
-			obj_camera.tv_x = 1280
-			obj_camera.tv_y = 720
+			obj_camera.tv_x = 1280*1.06
+			obj_camera.tv_y = 720*1.06
 			}
 		obj_camera.t_x = x
 		obj_camera.t_y = y+105
@@ -582,7 +582,7 @@ else
 	
 		if saved_real_y = -4
 		{
-		global.save_point_x = player.x-600
+		global.save_point_x = player.x-800
 		global.save_point_y = player.y
 		instance_destroy(normal_mob)
 		saved_real_x = x
@@ -849,6 +849,13 @@ activated = 2
 		if timer > 300*cal_
 		{
 		var random_patturn = choose(1,2,2,3,4,4)
+			if global.replayed > 0
+			{
+			random_patturn = choose(2,2,3,4,4,5,5)
+			}
+		
+		
+		
 			if random_patturn != b_patturn
 			{
 			patturn = random_patturn
@@ -859,6 +866,11 @@ activated = 2
 				repeat(99)
 				{
 				random_patturn = choose(1,2,2,3,4,4)
+				
+					if global.replayed > 0
+					{
+					random_patturn = choose(2,2,3,4,4,5,5)
+					}
 					
 					if random_patturn != b_patturn
 					{
@@ -1023,8 +1035,8 @@ activated = 2
 		{
 			if left_hand.vspeed < 4
 			{
-			left_hand.vspeed = 10
-			right_hand.vspeed = 10
+			left_hand.vspeed = 20
+			right_hand.vspeed = 20
 				if global.show_credits = 0
 				{
 				var sfx = audio_play_sound(jump_attack_sfx,0,0)
@@ -1240,13 +1252,13 @@ activated = 2
 			{
 				if floor(patturn*10) != 24
 				{
-				left_hand.y += (saved_real_y-200 - left_hand.y)*0.2/patturn
-				right_hand.y += (saved_real_y-200 - right_hand.y)*0.2/patturn
-					if abs(left_hand.y - (saved_real_y-200)) < 30
+				left_hand.y += (saved_real_y-100 - left_hand.y)*0.2/patturn
+				right_hand.y += (saved_real_y-100 - right_hand.y)*0.2/patturn
+					if abs(left_hand.y - (saved_real_y-100)) < 30
 					{
-					left_hand.vspeed = 15
+					left_hand.vspeed = 20
+					right_hand.vspeed = 20
 					left_hand.gravity = 1
-					right_hand.vspeed = 15
 					right_hand.gravity = 1
 					go_up = 0
 					patturn += 0.1
@@ -1254,13 +1266,13 @@ activated = 2
 				}
 				else
 				{
-				left_hand.y += (saved_real_y-200 - left_hand.y)*0.05
-				right_hand.y += (saved_real_y-200 - right_hand.y)*0.05
-					if abs(left_hand.y - (saved_real_y-200)) < 5
+				left_hand.y += (saved_real_y-100 - left_hand.y)*0.05
+				right_hand.y += (saved_real_y-100 - right_hand.y)*0.05
+					if abs(left_hand.y - (saved_real_y-100)) < 5
 					{
-					left_hand.vspeed = 15
+					left_hand.vspeed = 20
+					right_hand.vspeed = 20
 					left_hand.gravity = 1
-					right_hand.vspeed = 15
 					right_hand.gravity = 1
 					go_up = 0
 					patturn += 0.1
@@ -1280,10 +1292,20 @@ activated = 2
 	
 		if patturn = 2.75
 		{
-		left_hand.hspeed += 1.2
-		right_hand.hspeed -= 1.2
+		clap_timer ++
+			if left_hand.hspeed < 4 && clap_timer > 40
+			{
+			left_hand.hspeed = 16
+			right_hand.hspeed = -16
+			}
+			
+			if left_hand.hspeed > 0
+			{
+			left_hand.hspeed += 1.2
+			right_hand.hspeed -= 1.2
+			}
 	
-			if left_hand.x+32 > right_hand.x-32
+			if left_hand.x+52 > right_hand.x-52
 			{
 			left_hand.hspeed = 0
 			right_hand.hspeed = 0
@@ -1302,7 +1324,7 @@ activated = 2
 		
 			var a___ = instance_create_depth(x,left_hand.y,depth,rage_mode_knockback_attacked)
 			a___.image_xscale = 3
-			a___.image_yscale = 2.3
+			a___.image_yscale = 3
 		
 			var effect_ = instance_create_depth(x+15,left_hand.y,player.depth+10,down_effect)
 			effect_.t_image_yscale = 0.6*3
@@ -1351,6 +1373,7 @@ activated = 2
 		{
 		sfx__ = 0
 		patturn = 0
+		clap_timer = 0
 		}
 	}
 
@@ -1365,8 +1388,8 @@ activated = 2
 		{
 		left_hand.image_angle += (0 - left_hand.image_angle)*0.1
 		right_hand.image_angle += (0 - right_hand.image_angle)*0.1
-		left_hand.x += (saved_real_x-37-random_quake*15 - left_hand.x)*0.05
-		right_hand.x += (saved_real_x+37+random_quake*15 - right_hand.x)*0.05
+		left_hand.x += (saved_real_x-57-random_quake*15 - left_hand.x)*0.05
+		right_hand.x += (saved_real_x+57+random_quake*15 - right_hand.x)*0.05
 			if random_quake = 0
 			{
 			left_hand.y += (saved_real_y-150 - left_hand.y)*0.05
@@ -1489,10 +1512,10 @@ activated = 2
 		if patturn >= 3.2
 		{
 		patturn += 0.01
-			if random_quake = 1
+			if random_quake = 1 && down_attack_with_rage_dis/64 < 4
 			{
 			down_attack_motion_dilay++
-				if down_attack_motion_dilay > 4
+				if down_attack_motion_dilay > 8
 				{
 				var xx1 = x+down_attack_with_rage_dis
 				var yy = right_hand.check_floor+65
@@ -1533,6 +1556,8 @@ activated = 2
 		if patturn > 3.6
 		{
 		patturn = 0
+		down_attack_with_rage_dis = 0
+		down_attack_motion_dilay = 0
 		}
 	}
 
@@ -1691,6 +1716,7 @@ activated = 2
 							{
 							global.r_alpha += (0.17 - global.r_alpha)*0.1
 							global.hp -= 10*global.difficulty
+							global.stamina_cooltime = 0
 								if !audio_is_playing(global.hit_sfx_1) && global.show_credits = 0
 								{
 								var sfx = audio_play_sound(global.hit_sfx_1,0,0)
@@ -1729,6 +1755,7 @@ activated = 2
 							{
 							global.r_alpha += (0.17 - global.r_alpha)*0.1
 							global.hp -= 10*global.difficulty
+							global.stamina_cooltime = 0
 								if !audio_is_playing(global.hit_sfx_1) && global.show_credits = 0
 								{
 								var sfx = audio_play_sound(global.hit_sfx_1,0,0)
@@ -1738,6 +1765,119 @@ activated = 2
 						}
 					}
 				}
+			}
+		}
+	}
+	
+	
+	
+	if patturn >= 5 && patturn < 6
+	{
+	cannot_step = 1
+	obj_hand.cannot_step = 0
+	patturn += 0.001
+	
+	var hand_left_correction = 0
+	if player.x < x && abs(player.x - x) > 150
+	{
+	hand_left_correction = abs(player.x - x)-150
+	}
+	
+	
+	var hand_right_correction = 0
+	if player.x > x && abs(player.x - x) > 150
+	{
+	hand_right_correction = abs(player.x - x)-150
+	}
+	
+		if patturn <= 5.15
+		{
+		left_hand.x += (saved_real_x-300-hand_left_correction - left_hand.x)*0.05
+		left_hand.y += (player.y - left_hand.y)*0.1
+		right_hand.x += (saved_real_x+300+hand_right_correction - right_hand.x)*0.05
+		right_hand.y += (player.y - right_hand.y)*0.1
+		}
+	
+		if patturn = 5.192
+		{
+			if global.show_credits = 0
+			{
+			var sfx = audio_play_sound(jump_attack_sfx,0,0)
+			audio_sound_gain(sfx,0.5*global.master_volume*2*global.sfx_volume,0)
+			}
+		}
+	
+		if patturn >= 5.15
+		{
+		clap_timer ++
+			if clap_timer < 20
+			{
+			left_hand.x += (saved_real_x-320-hand_left_correction - left_hand.x)*0.05
+			right_hand.x += (saved_real_x+320+hand_right_correction - right_hand.x)*0.05
+			}
+		
+			if left_hand.hspeed < 4 && clap_timer >= 20
+			{
+			left_hand.hspeed = 16
+			right_hand.hspeed = -16
+			}
+			
+			if left_hand.hspeed > 0
+			{
+			left_hand.hspeed += 1.2
+			right_hand.hspeed -= 1.2
+			}
+	
+			if left_hand.x+52 > right_hand.x-52
+			{
+			left_hand.hspeed = 0
+			right_hand.hspeed = 0
+			
+			if global.show_credits = 0
+			{
+			var a___ = audio_play_sound(bomb_sfx,0,0)
+			audio_sound_gain(a___,0.12*global.master_volume*2*global.sfx_volume,0)
+			
+			var sfx = audio_play_sound(mob_faint,0,0)
+			audio_sound_gain(sfx,0.4*global.master_volume*2*global.sfx_volume,0)
+			
+			var a___ = audio_play_sound(guard,0,0)
+			audio_sound_gain(a___,0.07*global.master_volume*2*global.sfx_volume,0)
+			}
+		
+			var a___ = instance_create_depth(x,left_hand.y,depth,rage_mode_knockback_attacked)
+			a___.image_xscale = 3
+			a___.image_yscale = 3
+		
+			var effect_ = instance_create_depth(x+15,left_hand.y,player.depth+10,down_effect)
+			effect_.t_image_yscale = 0.6*3
+			effect_.t_image_xscale = 0.1*3
+			effect_.received = 0
+		
+			var effect_ = instance_create_depth(x-15,left_hand.y,player.depth+10,down_effect)
+			effect_.t_image_yscale = 0.6*3
+			effect_.t_image_xscale = -0.1*3
+			effect_.received = 0
+		
+			view_shake(11,11,1)
+				repeat(choose(6,7,7,8,8,9,9,9,10,10,11,12))
+				{
+				randomize()
+				var random_target = choose(left_hand,right_hand)
+				var dust = instance_create_depth(random_target.x+irandom_range(-5,5),random_target.y+irandom_range(-5,5),random_target.depth-1,pepsi_effect_received)
+				var scale = irandom_range(20,40)/50
+				dust.image_xscale = scale
+				dust.image_yscale = scale
+				dust.vspeed = irandom_range(-50,50)/25
+				dust.hspeed = irandom_range(-50,50)/25
+				dust.image_alpha = 1
+				}
+			left_hand.vspeed = 0
+			left_hand.gravity = 0
+			right_hand.vspeed = 0
+			right_hand.gravity = 0
+			patturn = 0
+			clap_timer = 0
 			}
 		}
 	}

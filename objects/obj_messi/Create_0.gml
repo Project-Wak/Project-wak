@@ -54,6 +54,7 @@ down_attack_with_rage_dis = 0
 _light_ = -4
 _light_1 = -4
 _light_2 = -4
+clap_timer = 0
 
 sfx__ = 0
 go_up = 0

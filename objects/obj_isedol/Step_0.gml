@@ -1202,11 +1202,18 @@ global.playing_scene = 1
 					}
 					else
 					{
-						if global.gold >= global.hp_upgrage_money
+						if global.gold >= global.hp_upgrage_money && global.add_max_hp < 30
 						{
 						global.gold -= global.hp_upgrage_money
 						global.add_max_hp ++
 						global.hp += 50
+						
+							if global.add_max_hp = 30
+							{
+							var _achievement = instance_create_depth(x,y,depth,bg_achievement)
+							_achievement.text = "체력 강화 만랩 (히든 도전과제)"
+							_achievement.icon_num = 0
+							}
 					
 						var sfx = audio_play_sound(critical_sfx,0,0)
 						audio_sound_gain(sfx,0.01*global.master_volume*2*global.sfx_volume,0)

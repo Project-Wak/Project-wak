@@ -19,7 +19,7 @@ armor_level = 1.9
 }
 
 var damage_real = argu_0+random_plus_damage
-var calcul_damage = damage_real*(1 - (armor_level-1))*global.difficulty
+var calcul_damage = damage_real*(1 - (armor_level-1))*global.difficulty*(global.replayed*0.2+1)
 
 
 	if !instance_exists(obj_wakdroid_ending)

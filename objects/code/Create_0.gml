@@ -212,6 +212,7 @@ global.used_suicide_skill = 0
 global.heart_crystal1 = 0
 global.heart_crystal2 = 0
 global.heart_crystal3 = 0
+global.hit_count = 0;
 global.aed = 0
 global.medical_slincer1 = 0
 global.medical_slincer2 = 0

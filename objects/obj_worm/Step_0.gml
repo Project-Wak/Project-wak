@@ -407,15 +407,15 @@ else
 	
 			if global.hp > 0
 			{
-			timer ++
+			timer += 1+sign(global.replayed)
 			}
 			
 			
 			var cal_ = (hp/max_hp)*1.2
 	
-			if cal_ < 0.6
+			if cal_ < 0.7
 			{
-			cal_ = 0.6
+			cal_ = 0.7
 			}
 	
 			if cal_ > 1
@@ -429,7 +429,7 @@ else
 			
 			if global.replayed > 0
 			{
-			random_patturn = choose(1,1,2,2,3,4,4,6,6,6)
+			random_patturn = choose(1,1,2,2,3,4,4,6,6,7,7,7)
 			}
 			
 			if hp < 3000
@@ -437,7 +437,7 @@ else
 			random_patturn = choose(1,1,2,2,3,4,5,5,6,6,6)
 				if global.replayed > 0
 				{
-				random_patturn = choose(1,1,2,2,3,4,4,6,6,6)
+				random_patturn = choose(1,1,2,2,3,4,4,6,6,7,7,7)
 				}
 			}
 			
@@ -454,7 +454,7 @@ else
 					
 						if global.replayed > 0
 						{
-						random_patturn = choose(1,1,2,2,3,4,4,6,6,6)
+						random_patturn = choose(1,1,2,2,3,4,4,6,6,7,7,7)
 						}
 			
 					
@@ -464,7 +464,7 @@ else
 						
 							if global.replayed > 0
 							{
-							random_patturn = choose(1,1,2,2,3,4,4,6,6,6)
+							random_patturn = choose(1,1,2,2,3,4,4,6,6,7,7,7)
 							}
 						}
 					
@@ -938,12 +938,13 @@ else
 			bullet__creator = instance_create_depth(x,y-100,player.depth-1,simhae_doo_bullet)
 			bullet__creator.bullet_speed = 0.01
 			bullet__creator.attack_type = 0
+			bullet__creator._color_ = $FF75F2FF
 			
 				for(var i = 0; i < 360; i += 60)
 				{
 				var xx = x+lengthdir_x(16,i)
 				var yy = y+lengthdir_y(16,i)
-				bullet__ = instance_create_depth(xx,yy-100,player.depth-1,simhae_doo_bullet)
+				var bullet__ = instance_create_depth(xx,yy-100,player.depth-1,simhae_doo_bullet)
 				bullet__.bullet_speed = 0.01
 				bullet__.attack_type = 0
 				bullet__._color_ = $FF75F2FF
@@ -960,7 +961,7 @@ else
 					var xx = bullet__creator.x+irandom_range(-32,32)
 					var yy = bullet__creator.y+irandom_range(-32,32)
 				
-					bullet__ = instance_create_depth(xx,yy-100,player.depth-1,simhae_doo_bullet)
+					var bullet__ = instance_create_depth(xx,yy-100,player.depth-1,simhae_doo_bullet)
 					bullet__.bullet_speed = 0.7
 					bullet__.attack_type = 0
 					bullet__._color_ = $FF75F2FF
@@ -995,6 +996,55 @@ else
 				bullet__creator = -4
 				patturn = 0
 				bullet_time = 0
+				}
+			}
+		}
+		
+		
+		
+		
+		if patturn >= 7 && patturn < 8
+		{
+		bullet_time ++
+		obj_camera.tv_x = 1280*1.1
+		obj_camera.tv_y = 720*1.1
+		
+			if bullet_time = 41
+			{
+			random_empty_sword = irandom_range(0,8)
+			sword_pattern_dir = choose(-1,1)
+			}
+		
+			if bullet_time%5 = 0 && bullet_time <= 180 && bullet_time >= 60
+			{
+				if sword_pattern_dir = 1 && random_empty_sword != sword_xpos
+				{
+				var falling_s = instance_create_depth(2700+sword_xpos*64,y-128,depth-10,falling_sword)
+				falling_s.image_index = 0
+				}
+			
+				if sword_pattern_dir = -1 && random_empty_sword != sword_xpos
+				{
+				var falling_s = instance_create_depth(x-64-sword_xpos*64,y-128,depth-10,falling_sword)
+				falling_s.image_index = 0
+				}
+			sword_xpos ++
+			}
+			
+			if bullet_time > 300
+			{
+			sword_xpos = 0
+			bullet_time = 40
+			repeat_sword_pattern ++
+			
+				if repeat_sword_pattern <= 2
+				{
+				patturn = 7
+				}
+				else
+				{
+				patturn = 0
+				repeat_sword_pattern = 0
 				}
 			}
 		}

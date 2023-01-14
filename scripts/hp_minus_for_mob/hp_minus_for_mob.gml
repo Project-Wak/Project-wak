@@ -33,14 +33,43 @@ function hp_minus_for_mob(argument0,argument1)
 	armor__ = 1
 	}
 	
+	var damage_increasement_ = 0
 	if global.ine_axe > 0
 	{
-	var damage_increasement_ = (player.max_hp - global.hp)*0.00025
+	damage_increasement_ = (player.max_hp - global.hp)*0.00025
+	}
+	
+	global.hit_count++
+	
+	var __dmg_decrease = global.replayed*0.7
+	var origin_damage = ((((argument1+global.weapon_upgraded[global.n_sword]*3)*random_val)/armor__)*global.damage_plus)
+	var damage_calcul = origin_damage + origin_damage*damage_increasement_;
+	
+	if (global.n_sword = 1 || global.n_sword = 4) && global.hit_count%100 = 0
+	{
+	damage_calcul += (max_hp*__dmg_decrease)/5
+	sfx_for_multiplayer(sword_ready,0,0.1)
+	var d_ef = instance_create_depth(x,y-64,depth-1,draw_hp_m)
+	var text__ = "갈!"
+	d_ef.d_text = text__
+	d_ef.image_blend = c_red
+	d_ef.image_xscale = 1.5
+	d_ef.image_yscale = 1.5
+	d_ef.target = -4
+	
+	
+	
+	var __i = choose(-1,1)
+	var bl_ef = instance_create_depth(player.x,player.y,player.depth-10,ef_blood)
+	var img_scale = -__i*irandom_range(8,15)/5
+	bl_ef.image_xscale = img_scale
+	bl_ef.image_yscale = abs(img_scale)
+	bl_ef.t_x = __i
+	bl_ef.image_angle = irandom_range(-35,35)
+	bl_ef.sfx_play = false
 	}
 	
 	
-	var origin_damage = ((((argument1+global.weapon_upgraded[global.n_sword]*3)*random_val)/armor__)*global.damage_plus)
-	var damage_calcul = origin_damage + origin_damage*damage_increasement_;
 
 	
 	if argument1 <= 0
@@ -51,7 +80,6 @@ function hp_minus_for_mob(argument0,argument1)
 	
 	if argument1 > 0
 	{
-	var __dmg_decrease = global.replayed*0.7
 	if __dmg_decrease < 1
 	{
 	__dmg_decrease = 1

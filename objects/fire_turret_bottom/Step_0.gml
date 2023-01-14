@@ -72,6 +72,7 @@ var yy_ = y
 		global.r_alpha += (0.17 - global.r_alpha)*0.1
 			
 		global.hp -= 10*global.difficulty
+		global.stamina_cooltime = 0
 			if !audio_is_playing(global.hit_sfx_1)
 			{
 			var sfx = audio_play_sound(global.hit_sfx_1,0,0)
@@ -86,6 +87,7 @@ var yy_ = y
 		global.r_alpha += (0.17 - global.r_alpha)*0.1
 			
 		global.hp -= 10*global.difficulty
+		global.stamina_cooltime = 0
 			if !audio_is_playing(global.hit_sfx_1)
 			{
 			var sfx = audio_play_sound(global.hit_sfx_1,0,0)

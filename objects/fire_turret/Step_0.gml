@@ -110,11 +110,12 @@ var yy_ = y
 	
 	if image_xscale > 0 
 	{
-		if abs(x - player.x) <= 415 && player.x < x && (player.y > y-60) && abs(y - player.y) <= 64
+		if abs(x - player.x) <= 415 && player.x < x && (player.y > y-62) && abs(y - player.y) <= 64
 		{
 		global.r_alpha += (0.17 - global.r_alpha)*0.1
 			
 		global.hp -= 10*global.difficulty
+		global.stamina_cooltime = 0
 			if !audio_is_playing(global.hit_sfx_1) && global.show_credits = 0
 			{
 			var sfx = audio_play_sound(global.hit_sfx_1,0,0)
@@ -129,6 +130,7 @@ var yy_ = y
 		global.r_alpha += (0.17 - global.r_alpha)*0.1
 
 		global.hp -= 10*global.difficulty
+		global.stamina_cooltime = 0
 			if !audio_is_playing(global.hit_sfx_1) && global.show_credits = 0
 			{
 			var sfx = audio_play_sound(global.hit_sfx_1,0,0)

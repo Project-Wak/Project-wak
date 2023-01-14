@@ -97,7 +97,7 @@ image_index = 8
 		
 		global.gold -= requirement_gold
 		
-		global.weapon_upgraded[now_set_weapon] += 1
+		global.weapon_upgraded[now_set_weapon] ++
 		var sfx = audio_play_sound(critical_sfx,0,0)
 		audio_sound_gain(sfx,0.01*global.master_volume*2*global.sfx_volume,0)
 			
@@ -107,6 +107,13 @@ image_index = 8
 		bg_col = c_white
 		bg_alpha = 0.5
 		code.alarm[7] = 1
+		
+			if global.weapon_upgraded[now_set_weapon] = 100
+			{
+			var _achievement = instance_create_depth(x,y,depth,bg_achievement)
+			_achievement.text = "신의 무기 (히든 도전과제)"
+			_achievement.icon_num = 0
+			}
 		}
 		else
 		{

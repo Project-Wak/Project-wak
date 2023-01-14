@@ -186,8 +186,12 @@ function save_and_load_data(argument0,argument1)
 	ini_write_real("suicide_skill_tuto","a",global.suicide_skill_tuto)
 	ini_write_real("killed_first_boss","a",global.killed_first_boss)
 	var i = global.n_sword
+	for(var i = 0; i <= global.total_weapon_num; i++)
+	{
+	//웨폰 보유 유무
 	ini_write_real("weapon_owned",string(i),global.weapon_owned[i])
 	ini_write_real("weapon_upgraded",string(i),global.weapon_upgraded[i])
+	}
 	ini_write_real("add_max_hp","a",global.add_max_hp);
 	}
 

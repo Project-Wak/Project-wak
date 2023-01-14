@@ -45,6 +45,10 @@ armored_level = 20+global.replayed*0.5
 test_mob_type = 1
 movement_speed = 0
 hit_motion = 0
+sword_xpos = 0
+random_empty_sword = 0
+repeat_sword_pattern = 0
+sword_pattern_dir = 1
 _light_ = -4
 
 breathing = 0

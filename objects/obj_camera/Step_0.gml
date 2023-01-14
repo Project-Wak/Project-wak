@@ -201,11 +201,11 @@ if global.show_challenger = 0
 		
 		if global.fix_camera = 0
 		{
-		x += (obj_potential_camera.x - x)*0.08
+		x += (obj_potential_camera.x - x)*0.08/(audio_is_playing(quake_sfx)*3+1)
 		}
 		else
 		{
-		x += (portensial_x -x)*0.08
+		x += (portensial_x -x)*0.08/(audio_is_playing(quake_sfx)*3+1)
 		}
 	y += (obj_potential_camera.y - y)*0.08
 	}

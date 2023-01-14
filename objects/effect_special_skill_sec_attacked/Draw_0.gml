@@ -191,24 +191,24 @@ draw_sprite_ext(spr_3,0,x,y-8,image_xscale*xscale_shaker*0.9,image_yscale*laser_
 		{
 			for(var i = 1; i <= 20; i++)
 			{
-			draw_sprite_ext(spr_4,image_index_set,x-effect_y+32,y,image_xscale*xscale_shaker*0.9,image_yscale*i/4,image_angle,c_white,0.08)
+			draw_sprite_ext(spr_4,image_index_set,x-lengthdir_x(effect_y-32,image_angle)/1.414,y-lengthdir_y(effect_y-32,image_angle)/1.414,image_xscale*xscale_shaker*0.9,image_yscale*i/4,image_angle,c_white,0.08)
 			}
 		
 			for(var i = 1; i <= 20; i++)
 			{
-			draw_sprite_ext(spr_4,image_index_set-1,x-effect_y+32,y,image_xscale*xscale_shaker*0.9,image_yscale*i/4,image_angle,c_white,0.08)
+			draw_sprite_ext(spr_4,image_index_set-1,x-lengthdir_x(effect_y-32,image_angle)/1.414,y-lengthdir_y(effect_y-32,image_angle)/1.414,image_xscale*xscale_shaker*0.9,image_yscale*i/4,image_angle,c_white,0.08)
 			}
 		}
 		else
 		{
 			for(var i = 1; i <= 20; i++)
 			{
-			draw_sprite_ext(spr_4,image_index_set,x+effect_y+32,y,image_xscale*xscale_shaker*0.9,image_yscale*i/4,image_angle,c_white,0.08)
+			draw_sprite_ext(spr_4,image_index_set,x+lengthdir_x(effect_y+32,image_angle)/1.414,y+lengthdir_y(effect_y+32,image_angle)/1.414,image_xscale*xscale_shaker*0.9,image_yscale*i/4,image_angle,c_white,0.08)
 			}
 		
 			for(var i = 1; i <= 20; i++)
 			{
-			draw_sprite_ext(spr_4,image_index_set-1,x+effect_y+32,y,image_xscale*xscale_shaker*0.9,image_yscale*i/4,image_angle,c_white,0.08)
+			draw_sprite_ext(spr_4,image_index_set-1,x+lengthdir_x(effect_y+32,image_angle)/1.414,y+lengthdir_y(effect_y+32,image_angle)/1.414,image_xscale*xscale_shaker*0.9,image_yscale*i/4,image_angle,c_white,0.08)
 			}
 		}
 	}

@@ -1472,7 +1472,7 @@ w_alpha += (-0.01 - w_alpha)*0.1
 					hurt = 1
 					hurt_cooltime = 1
 					movement_speed = sign(_placed_obj.bullet_speed)*4
-					hp_minus_for_player(77,_placed_obj)
+					hp_minus_for_player(188,_placed_obj)
 				
 			
 				
@@ -1794,6 +1794,30 @@ w_alpha += (-0.01 - w_alpha)*0.1
 					vspeed = -4
 					sfx_for_multiplayer(choose(global.hit_sfx_1,global.hit_sfx_2,global.hit_sfx_3),0,0.2)
 					}
+				}
+			}
+			
+			
+			
+			
+			
+			var _placed_obj = instance_place(x,y,falling_sword)
+			if _placed_obj >= 0 && spin = 0 && _placed_obj.image_alpha = 1
+			{
+				if hurt_cooltime = 0
+				{
+				hurt = 1
+				hurt_cooltime = 30
+				hp_minus_for_player(399,_placed_obj)
+				
+			
+				
+					if !place_meeting(x,y+3,floor_parents)
+					{
+					y -= 1
+					}
+				vspeed = -4
+				sfx_for_multiplayer(choose(global.hit_sfx_1,global.hit_sfx_2,global.hit_sfx_3),0,0.2)
 				}
 			}
 			

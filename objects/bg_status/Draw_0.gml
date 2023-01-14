@@ -53,7 +53,7 @@ if (pressed > 0 && global.key_setting_message > 0) || global.key_setting_message
 	if cal__img = 1
 	{
 	item_name__ = "양손 광선검 (+"+string(global.weapon_upgraded[cal__img])+")"
-	item_desc__ = "양손으로 광선검을 사용한다\n가드 효율 0%\n\n특수 효과 : 익스플로전 사용 가능"
+	item_desc__ = "양손으로 광선검을 사용한다\n가드 효율 0%\n\n특수 효과 : 익스플로전 사용 가능 및 매 100번째 타격 마다 강력한 '갈!' 데미지"
 	}
 	if cal__img = 2
 	{
@@ -63,12 +63,12 @@ if (pressed > 0 && global.key_setting_message > 0) || global.key_setting_message
 	if cal__img = 3
 	{
 	item_name__ = "붉은 광선검 (+"+string(global.weapon_upgraded[cal__img])+")"
-	item_desc__ = "푸른 광선검과 함께라면 더욱 강력해진다\n가드 효율 0%"
+	item_desc__ = "오다가 주워온 무기. 푸른 광선검과 함께라면 더욱 강력해진다\n가드 효율 0%"
 	}
 	if cal__img = 4
 	{
 	item_name__ = "푸른 광선검 (+"+string(global.weapon_upgraded[cal__img])+")"
-	item_desc__ = "붉은 광선검과 함께라면 더욱 강력해진다\n가드 효율 0%"
+	item_desc__ = "붉은 광선검과 함께라면 더욱 강력해진다\n가드 효율 0%\n특수 효과 : 매 100번째 타격 마다 강력한 '갈!' 데미지"
 	}
 	if cal__img = 5
 	{
