@@ -16,6 +16,7 @@ phase_change = 0
 low_hp_phase = 0
 f_dir = 0
 new_pattern = 0
+ball_destroyed = 0
 w_alpha = 0
 angelring_y = 0
 angelring_timer = 0

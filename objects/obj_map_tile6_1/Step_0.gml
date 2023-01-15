@@ -48,9 +48,12 @@ var lay_id = layer_get_id("Background");
 layer_hspeed(lay_id,-global.platform_speed)
 
 
-if player.x >= 1140 || player.x <= 844
+if global.difficulty = 1
 {
-player.x += (992 - player.x)*0.1
+	if player.x >= 1140 || player.x <= 844
+	{
+	player.x += (992 - player.x)*0.1
+	}
 }
 
 

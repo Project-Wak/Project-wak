@@ -425,6 +425,7 @@ if activated = 1
 	
 	
 player.guarding = 2
+ball_destroyed = 0
 view_shake(0.1,0.1,1)
 scene__ += 0.0032
 image_blend = merge_color(c_black,c_white,scene__)
@@ -629,7 +630,21 @@ opening_sfx = 0
 		{
 			if !instance_exists(yellow_circle_effect)
 			{
-			low_hp_phase = 0
+				if ball_destroyed%30 = 0
+				{
+					if ball_destroyed != 0
+					{
+					var __ins__ = instance_create_depth(x-(ball_destroyed/30*190),2370,player.depth-10,effect_special_skill_attacked)
+					}
+				var __ins__ = instance_create_depth(x+(ball_destroyed/30*190),2370,player.depth-10,effect_special_skill_attacked)
+				}
+				
+			ball_destroyed++
+				
+				if ball_destroyed > 60
+				{
+				low_hp_phase = 0
+				}
 			}
 			else
 			{

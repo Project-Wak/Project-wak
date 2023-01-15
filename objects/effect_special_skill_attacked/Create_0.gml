@@ -3,7 +3,7 @@
 
 
 
-if instance_exists(obj_last_boss)
+if instance_exists(obj_last_boss) || instance_exists(obj_angel)
 {
 color_1 = $FFF6DDED
 color_2 = $FFB47697
