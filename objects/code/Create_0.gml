@@ -32,6 +32,7 @@ global.chat_sender = noone
 global.chat_data = noone
 global.game_ver = "Alpha 1.4"
 
+
 global.bubble_surf = surface_create(1920, 1080);
 global.rage_surf = surface_create(1920, 1080);
 global.none_wakgood_mode = false
@@ -233,6 +234,8 @@ global.thi_tester_statue = 0
 global.noclip = -1
 global.gameover_reason = -4
 global.gameover_reason_title = -4
+global.random_simhae_bullet_dir = 1
+simhae_buller_timer = 0
 global.platform_speed = 0
 global.first_enter_game = 0
 global.save_point_x = -4

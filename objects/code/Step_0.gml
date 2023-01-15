@@ -1,4 +1,11 @@
 
+simhae_buller_timer++
+if simhae_buller_timer > 60 && !instance_exists(simhae_doo_bullet)
+{
+global.random_simhae_bullet_dir *= -1
+simhae_buller_timer = 0
+}
+
 if global.star_sfx_control > 0
 {
 global.star_sfx_control -= 0.1

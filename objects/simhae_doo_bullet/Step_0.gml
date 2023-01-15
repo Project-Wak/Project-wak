@@ -10,10 +10,12 @@ instance_destroy()
 
 for(var i = 0; i <= 32; i++)
 {
-alpha[i] -= 0.1
+xx_[i] += (x - xx_[i])*0.01*i
+yy_[i] += (y - yy_[i])*0.01*i
+alpha[i] -= 0.025
 	if des_time = 1
 	{
-	alpha[i] -= 0.05
+	alpha[i] -= 0.1
 	}
 }
 
@@ -31,7 +33,7 @@ image_yscale += (-0.1 - image_yscale)*0.15
 }
 else
 {
-angle += sign_k(x - player.x)*16
+angle += __dir__*16
 
 image_xscale += (0.7 - image_xscale)*0.1
 image_yscale += (0.7 - image_yscale)*0.1
@@ -41,31 +43,22 @@ image_angle += (angle - image_angle)*0.1
 
 
 
-if timer >= 120
-{
-ii += 0.5
-
-	if ii > 32
-	{
-	ii = 0
-	}
-
-	if ii = floor(ii) && des_time = 0
-	{
-		if alpha[ii] <= 0
-		{
-		xx[ii] = x
-		yy[ii] = y
-		alpha[ii] = 1
-		}
-	}
-}
 
 
 if attack_type != 2
 {
 	if timer > 60
 	{
+		if timer = 61
+		{
+			for(var i = 0; i <= 32; i++)
+			{
+			xx_[i] = x
+			yy_[i] = y
+			alpha[i] = 1
+			}
+		}
+		
 		if attack_type = 0
 		{
 			if speed < 14 && des_time = 0

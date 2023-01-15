@@ -7,14 +7,15 @@ image_alpha = 0
 image_xscale = 0
 image_yscale = 0
 
-ii = 0
+
 for(var i = 0; i <= 32; i++)
 {
-xx[i] = x
-yy[i] = y
+xx_[i] = x
+yy_[i] = y
 alpha[i] = 0
 }
 
 image_angle = sign_k(player.x - x)*720
+__dir__ = global.random_simhae_bullet_dir
 angle = 0
 
