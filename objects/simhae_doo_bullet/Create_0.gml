@@ -18,4 +18,3 @@ alpha[i] = 0
 image_angle = sign_k(player.x - x)*720
 __dir__ = global.random_simhae_bullet_dir
 angle = 0
-

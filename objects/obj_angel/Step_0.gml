@@ -630,13 +630,16 @@ opening_sfx = 0
 		{
 			if !instance_exists(yellow_circle_effect)
 			{
-				if ball_destroyed%30 = 0
+				if global.replayed > 0
 				{
-					if ball_destroyed != 0
+					if ball_destroyed%30 = 0
 					{
-					var __ins__ = instance_create_depth(x-(ball_destroyed/30*190),2370,player.depth-10,effect_special_skill_attacked)
+						if ball_destroyed != 0
+						{
+						var __ins__ = instance_create_depth(x-(ball_destroyed/30*190),2370,player.depth-10,effect_special_skill_attacked)
+						}
+					var __ins__ = instance_create_depth(x+(ball_destroyed/30*190),2370,player.depth-10,effect_special_skill_attacked)
 					}
-				var __ins__ = instance_create_depth(x+(ball_destroyed/30*190),2370,player.depth-10,effect_special_skill_attacked)
 				}
 				
 			ball_destroyed++

@@ -173,6 +173,10 @@ audio_sound_gain(sfx,0.07*global.master_volume*2*global.sfx_volume,0)
 		{
 		global.difficulty = -4
 		}
+		else if (argument0 = "/reset_replayed")
+		{
+		global.replayed = 0
+		}
 		else if (argument0 = "/reset_item")
 		{
 			for(var i = 0; i <= global.total_weapon_num; i++)

@@ -1,6 +1,18 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+var _xx_ = x+irandom_range(-3,3)
+var _yy_ = y+irandom_range(-3,3)
+
+
+	
+var random_val___ = percentage_k(global.graphics_for_code)
+if random_val___ = 1
+{
+var random_val___2 = percentage_k(1)
+create_buble_effect(0.3,270+irandom_range(-50,50)-direction,0,choose(-1)*irandom_range(1,10)/5,0.07,0.07,_color_,_color_,2,_color_,_xx_,_yy_,depth-random_val___2,1,false,false)
+}
+
 if global.t_b_alpha >= 1
 {
 instance_destroy()
