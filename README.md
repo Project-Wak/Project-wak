@@ -198,7 +198,7 @@
 
 #### Re:wind 시계 [Item No.102]
 
-<img src = "etc/items_weapons/e2c9d994-3a44-4e96-8437-e57bb0c58b83.png" width = "64px">
+<img src = "etc/items_accesories/e2c9d994-3a44-4e96-8437-e57bb0c58b83.png" width = "64px">
 
 - 특수 효과 : 게임 오버가 되었을 때, 바로 직전의 과거로 시간을 되돌림.</br>
 또한, 현재 시각과 함께 왁드로이드 완성까지 남은 시간을 표시해줌.
@@ -212,7 +212,7 @@
 
 #### 객관안 [Item No.103]
 
-<img src = "etc/items_weapons/4834ca26-3609-4e92-b37b-de6e298eb95b.png" width = "64px">
+<img src = "etc/items_accesories/4834ca26-3609-4e92-b37b-de6e298eb95b.png" width = "64px">
 
 - 특수 효과 : 자동으로 적을 타깃팅 해줌 (= 락온 효과)</br>
 
@@ -227,7 +227,7 @@
 
 #### 런닝 나시 [Item No.104]
 
-<img src = "etc/items_weapons/33368b04-1ab5-410e-9c2e-8b2fa4bd3563.png" width = "64px">
+<img src = "etc/items_accesories/33368b04-1ab5-410e-9c2e-8b2fa4bd3563.png" width = "64px">
 
 - 특수 효과 : 대쉬 스킬 사용시 소모하는 스테미나량 50% 경감</br>
 
@@ -241,7 +241,7 @@
 
 #### 보라색 리본 [Item No.105]
 
-<img src = "etc/items_weapons/27ae17f7-542f-4132-9cb0-5452ff7e5e3a.png" width = "64px">
+<img src = "etc/items_accesories/27ae17f7-542f-4132-9cb0-5452ff7e5e3a.png" width = "64px">
 
 - 특수 효과 : 방어력 10% 증가 및 최대 체력 50만큼 증가</br>
 
@@ -255,7 +255,7 @@
 
 #### 징버거 [Item No.106]
 
-<img src = "etc/items_weapons/e23148b3-abe0-4d3e-8de3-3b96bd9ab770.png" width = "64px">
+<img src = "etc/items_accesories/e23148b3-abe0-4d3e-8de3-3b96bd9ab770.png" width = "64px">
 
 - 특수 효과 : 전투 모드가 아닌경우, 체력을 조금씩 회복</br>
 
@@ -268,7 +268,7 @@
 
 #### 파란 머리핀 [Item No.107]
 
-<img src = "etc/items_weapons/acd7c5c8-9f99-4ff1-861c-94544003d6dc.png" width = "64px">
+<img src = "etc/items_accesories/acd7c5c8-9f99-4ff1-861c-94544003d6dc.png" width = "64px">
 
 - 특수 효과 : 방어력 10% 증가 및 최대 체력 50만큼 증가</br>
 
@@ -281,7 +281,7 @@
 
 #### 응원 깃발 [Item No.108]
 
-<img src = "etc/items_weapons/14b748e0-3161-456d-b8b0-554a6cf4befb.png" width = "64px">
+<img src = "etc/items_accesories/14b748e0-3161-456d-b8b0-554a6cf4befb.png" width = "64px">
 
 - 특수 효과 : 기본 데미지 18% 증가</br>
 
@@ -294,7 +294,7 @@
 
 #### 알잘딱 가드 [Item No.109]
 
-<img src = "etc/items_weapons/2dec64d9-b339-4a52-99a1-5973a9288fef.png" width = "64px">
+<img src = "etc/items_accesories/2dec64d9-b339-4a52-99a1-5973a9288fef.png" width = "64px">
 
 - 특수 효과 : 적에게 피격당할시, 70%확률로 자동 방어</br>
 
@@ -307,7 +307,7 @@
 
 #### 아이돌 신발 [Item No.110]
 
-<img src = "etc/items_weapons/cd4dffa2-09b3-4aac-83db-f4aa7c303c4e.png" width = "64px">
+<img src = "etc/items_accesories/cd4dffa2-09b3-4aac-83db-f4aa7c303c4e.png" width = "64px">
 
 - 특수 효과 : 점프력 증가 및 중력 감소</br>
 
@@ -321,7 +321,7 @@
 
 #### 푸른색의 깃발 [Item No.111]
 
-<img src = "etc/items_weapons/dbb84ba4-efac-4cef-bc62-83756d3561e9.png" width = "64px">
+<img src = "etc/items_accesories/dbb84ba4-efac-4cef-bc62-83756d3561e9.png" width = "64px">
 
 - 특수 효과 : 크리티컬 데미지 확률 15% 증가</br>
 
@@ -334,7 +334,7 @@
 
 #### 다이아몬드 검 [Item No.112]
 
-<img src = "etc/items_weapons/a05a9789-e2c8-44a8-9814-3d8056f6aed3.png" width = "64px">
+<img src = "etc/items_accesories/a05a9789-e2c8-44a8-9814-3d8056f6aed3.png" width = "64px">
 
 - 특수 효과 : 크리티컬 데미지 확률 10% 및 기본 데미지 10% 증가</br>
 
@@ -347,7 +347,7 @@
 
 #### AED (심장 제세동기) [Item No.113]
 
-<img src = "etc/items_weapons/7a099ff1-0880-4487-aa3d-78294580adad.png" width = "64px">
+<img src = "etc/items_accesories/7a099ff1-0880-4487-aa3d-78294580adad.png" width = "64px">
 
 - 특수 효과 : 플레이어가 사망하였을때, 체력을 1만큼 남기고 즉시 부활</br>
 
@@ -360,7 +360,7 @@
 
 #### 뱅갈고무나무 에스트 병 [Item No.114]
 
-<img src = "etc/items_weapons/bd64db59-4a2d-4bd1-a91f-179205f0e95c.png" width = "64px">
+<img src = "etc/items_accesories/bd64db59-4a2d-4bd1-a91f-179205f0e95c.png" width = "64px">
 
 - 특수 효과 : 최대 체력의 50%만큼 회복 및 상태 이상 해제</br>
 
@@ -373,7 +373,7 @@
 
 #### 각성제 [Item No.115]
 
-<img src = "etc/items_weapons/73cc98ba-81c6-4e30-b08e-f4e9901a94e4.png" width = "64px">
+<img src = "etc/items_accesories/73cc98ba-81c6-4e30-b08e-f4e9901a94e4.png" width = "64px">
 
 - 특수 효과 : 사용 즉시 레이지 모드 발동 및 상태 이상 해제</br>
 
@@ -386,7 +386,7 @@
 
 #### 깨진 하트 크리스탈 (좌) [Item No.116]
 
-<img src = "etc/items_weapons/eaacbb97-063f-4fc1-8bab-485970a7d1a2.png" width = "64px">
+<img src = "etc/items_accesories/eaacbb97-063f-4fc1-8bab-485970a7d1a2.png" width = "64px">
 
 - 특수 효과 : 최대 체력 100만큼 증가</br>
 
@@ -399,7 +399,7 @@
 
 #### 깨진 하트 크리스탈 (우) [Item No.117]
 
-<img src = "etc/items_weapons/b63c67f4-8277-4a32-9c73-54f2b4774187.png" width = "64px">
+<img src = "etc/items_accesories/b63c67f4-8277-4a32-9c73-54f2b4774187.png" width = "64px">
 
 - 특수 효과 : 최대 체력 100만큼 증가</br>
 
@@ -412,7 +412,7 @@
 
 #### 하트 크리스탈 [Item No.118]
 
-<img src = "etc/items_weapons/480934c8-1778-454d-9691-11804f00bcbc.png" width = "64px">
+<img src = "etc/items_accesories/480934c8-1778-454d-9691-11804f00bcbc.png" width = "64px">
 
 - 특수 효과 : 최대 체력 150만큼 증가</br>
 
@@ -425,7 +425,7 @@
 
 #### 바다의 왕의 삼지창 [Item No.119]
 
-<img src = "etc/items_weapons/bde0985d-a6b2-4208-ab57-6da4d163751a.png" width = "64px">
+<img src = "etc/items_accesories/bde0985d-a6b2-4208-ab57-6da4d163751a.png" width = "64px">
 
 - 특수 효과 : 레이지 게이지가 80% 이상 찬 경우, 공중에서 E키를 누를시, 강력한 특수 스킬 사용</br>
 
@@ -438,7 +438,7 @@
 
 #### 1차 테스터 기념 동상 [Item No.120]
 
-<img src = "etc/items_weapons/21788fb4-7197-46f6-b228-7dc9aba90d07.png" width = "64px">
+<img src = "etc/items_accesories/21788fb4-7197-46f6-b228-7dc9aba90d07.png" width = "64px">
 
 - 특수 효과 : 방어력 5%, 크리티컬 데미지 확률 12%, 기본 데미지 10% 증가</br>
 
@@ -451,7 +451,7 @@
 
 #### 2차 테스터 기념 동상 [Item No.121]
 
-<img src = "etc/items_weapons/c77e5213-7980-40c7-b915-147b6f699f62.png" width = "64px">
+<img src = "etc/items_accesories/c77e5213-7980-40c7-b915-147b6f699f62.png" width = "64px">
 
 - 특수 효과 : 방어력 5%, 크리티컬 데미지 확률 12%, 기본 데미지 10% 증가</br>
 
@@ -464,7 +464,7 @@
 
 #### 3차 테스터 기념 동상 [Item No.122]
 
-<img src = "etc/items_weapons/9eef1fa8-246d-4e6b-b48c-7391d22ac2f2.png" width = "64px">
+<img src = "etc/items_accesories/9eef1fa8-246d-4e6b-b48c-7391d22ac2f2.png" width = "64px">
 
 - 특수 효과 : 방어력 5%, 크리티컬 데미지 확률 12%, 기본 데미지 10% 증가</br>
 
@@ -477,7 +477,7 @@
 
 #### 버그 사냥꾼 [Item No.123]
 
-<img src = "etc/items_weapons/3b596825-4daa-4098-929a-a4748d215d1e.png" width = "64px">
+<img src = "etc/items_accesories/3b596825-4daa-4098-929a-a4748d215d1e.png" width = "64px">
 
 - 특수 효과 : 크리티컬 데미지 확률 15%, 기본 데미지 20% 증가</br>
 
@@ -490,7 +490,7 @@
 
 #### 신세계의 신 [Item No.124]
 
-<img src = "etc/items_weapons/c0a167b3-e5b7-4fd8-879e-cde29a54ea87.png" width = "64px">
+<img src = "etc/items_accesories/c0a167b3-e5b7-4fd8-879e-cde29a54ea87.png" width = "64px">
 
 - 특수 효과 : 레이지 모드 사용시, 주변에 번개를 생성</br>
 
@@ -503,7 +503,7 @@
 
 #### 아이네가 준 도끼 [Item No.125]
 
-<img src = "etc/items_weapons/e5a48be2-9727-473c-8eb7-4ace41d949cb.png" width = "64px">
+<img src = "etc/items_accesories/e5a48be2-9727-473c-8eb7-4ace41d949cb.png" width = "64px">
 
 - 특수 효과 : 현재 체력에 반비례하여 기본 데미지 증가</br>
 
