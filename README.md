@@ -77,7 +77,7 @@
 -----------------------
 
 <details>
-<summary>무기</summary>
+<summary>무기 (총 7종류)</summary>
 
 -----------------------
 
@@ -172,7 +172,7 @@
 </br></br>
 
 
-#### 왁초리 [Item No.06]
+#### 왁초리 [Item No.07]
 
 <img src = "etc/items_weapons/cebda1fd-45bf-4a67-af7d-b58d645dd792.png" width = "64px">
 
@@ -192,7 +192,7 @@
 
 
 <details>
-<summary>탈리스만</summary>
+<summary>탈리스만 (총 27종류)</summary>
 
 -----------------------
 
