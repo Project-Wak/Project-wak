@@ -52,7 +52,7 @@ if global.none_wakgood_mode = false
 	}
 	else
 	{
-	var _random_ = percentage_k(50)
+	var _random_ = global.n_night
 	global.guisanga_doo_event = _random_
 	broken_platform = _random_
 	}
