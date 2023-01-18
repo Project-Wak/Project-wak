@@ -54,9 +54,9 @@
 
 #### 2023-01-06 추가
 
-##### 디스코드(Discord)에 게임 등록 완료!
+###### 디스코드(Discord)에 게임 등록 완료!
 
-##### 이제 게임 플레이시, 프로필에 게임 상태창이 활성화 됩니다!
+###### 이제 게임 플레이시, 프로필에 게임 상태창이 활성화 됩니다!
 
 <img src = "imgs/discord_pre1.PNG" width = "250px"> <img src = "imgs/discord_pre2.PNG" width = "250px"> <img src = "imgs/discord_pre3.PNG" width = "250px">
 
