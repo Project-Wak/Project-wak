@@ -73,7 +73,7 @@ if (pressed > 0 && global.key_setting_message > 0) || global.key_setting_message
 	if cal__img = 5
 	{
 	item_name__ = "돌격 소총 (+"+string(global.weapon_upgraded[cal__img])+")"
-	item_desc__ = "가디언 팬치들이 사용하던 소총 (예능 무기)\n가드 효율 -50%\n\n특수 효과 : "+string(keyconverter(global.a_key))+"키를 사용한 공격만 가능, 가드 불가, 총알 제한 없음\n적의 방어력을 무시한 고정 데미지 적용"
+	item_desc__ = "가디언 팬치들이 사용하던 소총 (예능 무기)\n가드 효율 -50%\n\n특수 효과 : "+string(keyconverter(global.a_key))+"키를 사용한 공격만 가능, 총알 제한 없음\n적의 방어력을 무시한 고정 데미지 적용"
 	}
 	if cal__img = 6
 	{

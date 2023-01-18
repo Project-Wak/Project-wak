@@ -192,6 +192,12 @@ function save_and_load_data(argument0,argument1)
 	ini_write_real("weapon_owned",string(i),global.weapon_owned[i])
 	ini_write_real("weapon_upgraded",string(i),global.weapon_upgraded[i])
 	}
+	
+	for(var i = 0; i <= global.total_accessories_num; i++)
+	{
+	//탈리스만 보유 유무
+	ini_write_real("accessories_owned",string(i),global.accessories_owned[i])
+	}
 	ini_write_real("add_max_hp","a",global.add_max_hp);
 	}
 

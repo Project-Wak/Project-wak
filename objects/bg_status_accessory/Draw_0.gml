@@ -118,7 +118,7 @@ if (pressed > 0 && global.key_setting_message > 0) || global.key_setting_message
 		etc_mes = "(+"+string(global.max_sylinge1_use-1)+")"
 		}
 	item_name__ = "뱅갈고무나무 에스트 병"+string(etc_mes)
-	item_desc__ = "뱅갈고무나무 잎을 우려낸 물, 실제로 우려내서 먹진 말자\n전투 도중 '"+string(global.use_item_for_draw)+"키'를 눌러 사용가능하다.\n\n특수효과 : 최대 체력의 50%만큼 회복 및 상태 이상 해제 (각 전투당 1회 사용가능)"
+	item_desc__ = "뱅갈고무나무 잎을 우려낸 물, 실제로 우려내서 먹진 말자\n전투 도중 '"+string(global.use_item_for_draw)+"키'를 눌러 사용가능하다.\n\n특수효과 : 최대 체력의 50%만큼 회복 및 상태 이상 해제 (각 전투당 "+string(global.max_sylinge1_use)+"회 사용가능)"
 	}
 	if cal__img = 15
 	{
