@@ -50,6 +50,10 @@ if (pressed > 0 && global.key_setting_message > 0) || global.key_setting_message
 		{
 		item_desc__ = "Re:wind뮤비속 시계를 본따 만든 휴대용 시계\n\n특수효과 : 게임 오버가 되었을 때 바로 직전의 과거로 시간을 되돌림\n또한, 현재 시각과 함께 왁드로이드 완성까지 남은 시간을 표시해줌\n+방어력 40% 증가 ('우왁굳'이름 벨런스 보정 효과)"
 		}
+		else if (global.nickname = "세구" || global.nickname = "릴파" || global.nickname = "아이네" || global.nickname = "비챤" || global.nickname = "징버거" || global.nickname = "고세구" || global.nickname = "르르" || global.nickname = "주르르")
+		{
+		item_desc__ = "Re:wind뮤비속 시계를 본따 만든 휴대용 시계\n\n특수효과 : 게임 오버가 되었을 때 바로 직전의 과거로 시간을 되돌림\n또한, 현재 시각과 함께 왁드로이드 완성까지 남은 시간을 표시해줌\n+방어력 40% 증가 (이세돌 벨런스 보정 효과)"
+		}
 		else
 		{
 		item_desc__ = "Re:wind뮤비속 시계를 본따 만든 휴대용 시계\n\n특수효과 : 게임 오버가 되었을 때 바로 직전의 과거로 시간을 되돌림\n또한, 현재 시각과 함께 왁드로이드 완성까지 남은 시간을 표시해줌"

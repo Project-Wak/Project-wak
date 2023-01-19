@@ -30,7 +30,7 @@ global.n_sector_discord = -1;
 //original code for game
 global.chat_sender = noone
 global.chat_data = noone
-global.game_ver = "Alpha 1.4"
+global.game_ver = "Alpha 2.0"
 
 
 global.bubble_surf = surface_create(1920, 1080);

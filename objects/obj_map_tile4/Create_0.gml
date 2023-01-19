@@ -10,7 +10,7 @@ global.n_time = 20
 }
 
 
-
+global.item_owned[5] = 1
 var ele__ = instance_create_depth(-1000,736,0,obj_elevator)
 ele__.t_x = -1000
 ele__.t_y = 736

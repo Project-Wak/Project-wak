@@ -27,7 +27,7 @@ alarm[3] = 1
 
 
 
-if global.guide_boss = 1 && show_guide = 1 && (global.time_plusment = 2 || global.nickname = "우왁굳" || global.nickname = "왁굳")
+if global.guide_boss = 1 && show_guide = 1 && (global.time_plusment = 2 || global.nickname = "우왁굳" || global.nickname = "왁굳" || global.nickname = "우왁굳" || global.nickname = "왁굳" || global.nickname = "세구" || global.nickname = "릴파" || global.nickname = "아이네" || global.nickname = "비챤" || global.nickname = "징버거" || global.nickname = "고세구" || global.nickname = "르르" || global.nickname = "주르르")
 {
 	if instance_exists(obj_wak_doo)
 	{

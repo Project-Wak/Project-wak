@@ -202,7 +202,7 @@ if room != menu && global.playing_scene = 0 && global.story_next < 100 && global
 }
 
 
-	if global.guide_boss = 1 && global.chat_activity = false && global.slow_motion = 0 && global.show_challenger = 0 && global.none_wakgood_mode = false && (global.time_plusment = 2 || global.nickname = "우왁굳" || global.nickname = "왁굳")
+	if global.guide_boss = 1 && global.chat_activity = false && global.slow_motion = 0 && global.show_challenger = 0 && global.none_wakgood_mode = false && (global.time_plusment = 2 || global.nickname = "우왁굳" || global.nickname = "왁굳" || global.nickname = "우왁굳" || global.nickname = "왁굳" || global.nickname = "세구" || global.nickname = "릴파" || global.nickname = "아이네" || global.nickname = "비챤" || global.nickname = "징버거" || global.nickname = "고세구" || global.nickname = "르르" || global.nickname = "주르르")
 	{
 	var __yyy = yy+(50-guide_m_alpha*300)*v_x_
 	var mid_xx__ = camera_get_view_x(view_camera[0])+camera_get_view_width(view_camera[0])*0.5

@@ -5,6 +5,7 @@ gravity = 0.3
 hit_cooltime = 0
 last_hit = 0
 hp = 99999
+max_hp = 99999
 armored_level = 9
 can_interect = 0
 message_phase = 0
