@@ -6,3 +6,5 @@ timer = 0
 w_alpha = 1
 alpha = 0
 image_alpha = 0
+
+save_and_load_data(1,0)
