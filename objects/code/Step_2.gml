@@ -198,7 +198,7 @@ global.achievement_tyy = 1000
 
 
 
-for(var i = 0; i <= 20; i++)
+for(var i = 0; i <= 24; i++)
 {
 	if global.achievement[i] > 0
 	{
