@@ -59,16 +59,18 @@ repeat(100)
 	}
 }
 
-
-if audio_is_playing(ending_select) || audio_is_playing(follower_bgm) || audio_is_playing(ending_cinematic) || audio_is_playing(ending_cinematic_replay)
+if bgm__ != -4
 {
-	if audio_is_playing(ending_cinematic_replay)
+	if audio_is_playing(ending_select) || audio_is_playing(follower_bgm) || audio_is_playing(ending_cinematic) || audio_is_playing(ending_cinematic_replay)
 	{
-	audio_sound_gain(bgm__,volume__*volume_downer*0.07*global.master_volume*2*global.bgm_volume*global.certain_music_volume,0)
-	}
-	else
-	{
-	audio_sound_gain(bgm__,volume__*volume_downer*0.04*global.master_volume*2*global.bgm_volume*global.certain_music_volume,0)
+		if audio_is_playing(ending_cinematic_replay)
+		{
+		audio_sound_gain(bgm__,volume__*volume_downer*0.07*global.master_volume*2*global.bgm_volume*global.certain_music_volume,0)
+		}
+		else
+		{
+		audio_sound_gain(bgm__,volume__*volume_downer*0.04*global.master_volume*2*global.bgm_volume*global.certain_music_volume,0)
+		}
 	}
 }
 

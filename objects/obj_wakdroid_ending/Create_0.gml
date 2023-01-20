@@ -19,7 +19,7 @@ message_phase = 0
 check__ = -4
 story = 0
 
-
+bgm__ = -4
 clock_throw_scene = 0
 interecting_now = 0
 

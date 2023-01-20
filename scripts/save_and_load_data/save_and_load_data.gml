@@ -17,7 +17,7 @@ function save_and_load_data(argument0,argument1)
 	ini_open_protect("Project_wak_beta_04.ini")
 	
 	//도전과제
-	for(var i = 0; i <= 20; i++)
+	for(var i = 0; i <= 24; i++)
 	{
 	ini_write_real("achievement",string(i),global.achievement[i]);
 	ini_write_real("achievement_percentage",string(i),global.achievement_percentage[i]);
@@ -353,7 +353,7 @@ function save_and_load_data(argument0,argument1)
 	global.item_owned[i] = ini_read_real("item_owned",string(i),0)
 	}
 	
-	for(var i = 0; i <= 20; i++)
+	for(var i = 0; i <= 24; i++)
 	{
 	global.achievement[i] = ini_read_real("achievement",string(i),-4);
 	global.achievement_percentage[i] = ini_read_real("achievement_percentage",string(i),0);
