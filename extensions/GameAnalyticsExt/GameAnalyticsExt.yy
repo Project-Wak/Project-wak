@@ -717,6 +717,8 @@
   "gradleinject": "\nrepositories {\n    maven { url 'https://maven.gameanalytics.com/release' }\n    maven { url 'https://maven.google.com' }\n}\n\ndependencies {\n    implementation \"com.gameanalytics.sdk:gameanalytics-android:6.2.9\"\n    implementation 'com.google.android.gms:play-services-appset:16.0.2'\n}\n",
   "hasConvertedCodeInjection": true,
   "helpfile": "",
+  "HTML5CodeInjection": "",
+  "html5Props": false,
   "IncludedResources": [],
   "installdir": "",
   "iosCocoaPodDependencies": "",
