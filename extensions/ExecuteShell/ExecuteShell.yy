@@ -18,7 +18,7 @@
   "exportToGame": false,
   "extensionVersion": "1.0.0",
   "files": [
-    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[],"copyToTargets":1048640,"filename":"ExecuteShell.dll","final":"","functions":[
+    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"ExecuteShell.dll","constants":[],"copyToTargets":1048640,"filename":"ExecuteShell.dll","final":"","functions":[
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"execute_shell","argCount":2,"args":[
             1,
             2,
@@ -26,15 +26,15 @@
       ],"init":"","kind":1,"order":[
         {"name":"execute_shell","path":"extensions/ExecuteShell/ExecuteShell.yy",},
       ],"origname":"extensions\\ExecuteShell.dll","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
-    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[],"copyToTargets":0,"filename":"ExecuteShell.dll.zip","final":"","functions":[],"init":"","kind":4,"order":[],"origname":"extensions\\ExecuteShell.dll.zip","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
-    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[],"copyToTargets":67108866,"filename":"ExecuteShell.dylib","final":"","functions":[
+    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"ExecuteShell.dll.zip","constants":[],"copyToTargets":0,"filename":"ExecuteShell.dll.zip","final":"","functions":[],"init":"","kind":4,"order":[],"origname":"extensions\\ExecuteShell.dll.zip","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
+    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"ExecuteShell.dylib","constants":[],"copyToTargets":67108866,"filename":"ExecuteShell.dylib","final":"","functions":[
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"execute_shell","argCount":2,"args":[
             1,
             2,
           ],"documentation":"","externalName":"execute_shell","help":"execute_shell(command,wait)","hidden":false,"kind":12,"returnType":2,},
       ],"init":"","kind":1,"order":[],"origname":"extensions\\ExecuteShell.dylib","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
-    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[],"copyToTargets":0,"filename":"ExecuteShell.dylib.zip","final":"","functions":[],"init":"","kind":4,"order":[],"origname":"extensions\\ExecuteShell.dylib.zip","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
-    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[],"copyToTargets":134217856,"filename":"ExecuteShell.so","final":"","functions":[
+    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"ExecuteShell.dylib.zip","constants":[],"copyToTargets":0,"filename":"ExecuteShell.dylib.zip","final":"","functions":[],"init":"","kind":4,"order":[],"origname":"extensions\\ExecuteShell.dylib.zip","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
+    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"ExecuteShell.so","constants":[],"copyToTargets":134217856,"filename":"ExecuteShell.so","final":"","functions":[
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"execute_shell","argCount":2,"args":[
             1,
             2,
@@ -42,7 +42,7 @@
       ],"init":"","kind":1,"order":[
         {"name":"execute_shell","path":"extensions/ExecuteShell/ExecuteShell.yy",},
       ],"origname":"extensions\\ExecuteShell.so","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
-    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[],"copyToTargets":0,"filename":"ExecuteShell.so.zip","final":"","functions":[],"init":"","kind":4,"order":[],"origname":"extensions\\ExecuteShell.so.zip","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
+    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"ExecuteShell.so.zip","constants":[],"copyToTargets":0,"filename":"ExecuteShell.so.zip","final":"","functions":[],"init":"","kind":4,"order":[],"origname":"extensions\\ExecuteShell.so.zip","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
   ],
   "gradleinject": "",
   "hasConvertedCodeInjection": true,

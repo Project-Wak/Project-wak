@@ -7,63 +7,63 @@ if go_start != 3
 	{
 		if global.difficulty > 0
 		{
-		var sfx_ = audio_play_sound(critical_sfx,0,0)
-		audio_sound_gain(sfx_,0.02*global.master_volume*2*global.sfx_volume,0)
-		global.t_b_alpha = 2.01
-		global.room_brightness = 0.6
-		go_start = 1
+			var sfx_ = audio_play_sound(critical_sfx,0,0)
+			audio_sound_gain(sfx_,0.02*global.master_volume*2*global.sfx_volume,0)
+			global.t_b_alpha = 2.01
+			global.room_brightness = 0.6
+			go_start = 1
 		}
 		else
 		{
-		var sfx_ = audio_play_sound(critical_sfx,0,0)
-		audio_sound_gain(sfx_,0.02*global.master_volume*2*global.sfx_volume,0)
-		global.t_b_alpha = 2.01
-		global.room_brightness = 0.6
-		go_start = 2
+			var sfx_ = audio_play_sound(critical_sfx,0,0)
+			audio_sound_gain(sfx_,0.02*global.master_volume*2*global.sfx_volume,0)
+			global.t_b_alpha = 2.01
+			global.room_brightness = 0.6
+			go_start = 2
 		}
 	}
 
 	if t_set_menu_choose = 1
 	{
-	var sfx_ = audio_play_sound(critical_sfx,0,0)
-	audio_sound_gain(sfx_,0.02*global.master_volume*2*global.sfx_volume,0)
+		var sfx_ = audio_play_sound(critical_sfx,0,0)
+		audio_sound_gain(sfx_,0.02*global.master_volume*2*global.sfx_volume,0)
 	
-	code.alarm[10] = 1
+		code.alarm[10] = 1
 	}
 	
 	if t_set_menu_choose = 2
 	{
-	var sfx_ = audio_play_sound(critical_sfx,0,0)
-	audio_sound_gain(sfx_,0.02*global.master_volume*2*global.sfx_volume,0)
-	achievement_delay = 0
-	global.achievement_yy = 0
-	global.achievement_tyy = 0
-	global.show_achievement = 1
+		var sfx_ = audio_play_sound(critical_sfx,0,0)
+		audio_sound_gain(sfx_,0.02*global.master_volume*2*global.sfx_volume,0)
+		achievement_delay = 0
+		global.achievement_yy = 0
+		global.achievement_tyy = 0
+		global.show_achievement = 1
 	}
 
 	if t_set_menu_choose = 3
 	{
-	var sfx_ = audio_play_sound(critical_sfx,0,0)
-	audio_sound_gain(sfx_,0.02*global.master_volume*2*global.sfx_volume,0)
-	global.show_credits = 1
+		var sfx_ = audio_play_sound(critical_sfx,0,0)
+		audio_sound_gain(sfx_,0.02*global.master_volume*2*global.sfx_volume,0)
+		global.show_credits = 1
 	}
 	
 	if t_set_menu_choose = 4
 	{
 		if global.none_wakgood_mode = false
 		{
-		var sfx_ = audio_play_sound(critical_sfx,0,0)
-		audio_sound_gain(sfx_,0.02*global.master_volume*2*global.sfx_volume,0)
-		url_open("https://project-wak.netlify.app/")
+			var sfx_ = audio_play_sound(critical_sfx,0,0)
+			audio_sound_gain(sfx_,0.02*global.master_volume*2*global.sfx_volume,0)
+			url_open("https://aber1047.github.io/MyPortfolio/")
 		}
 	}
 
 	if t_set_menu_choose = 5
 	{
-	var sfx_ = audio_play_sound(critical_sfx,0,0)
-	audio_sound_gain(sfx_,0.02*global.master_volume*2*global.sfx_volume,0)
-	save_and_load_data(1,0)
-	alarm[1] = 15
+		var sfx_ = audio_play_sound(critical_sfx,0,0)
+		audio_sound_gain(sfx_,0.02*global.master_volume*2*global.sfx_volume,0)
+		save_and_load_data(1,0)
+		alarm[1] = 15
 	}
 }
 else
@@ -71,34 +71,34 @@ else
 	
 	if t_set_menu_choose < 3
 	{
-	global.difficulty = 2.5-t_set_menu_choose*0.5
+		global.difficulty = 2.5-t_set_menu_choose*0.5
 		if t_set_menu_choose = 0
 		{
-		global.left_time = 24
+			global.left_time = 24
 		}
 	}
 	else
 	{
-	global.difficulty = 1
+		global.difficulty = 1
 		if t_set_menu_choose = 4
 		{
-		global.time_plusment = 2
-		global.accessories_owned[14] = 1
-		global.accessories_equip[0] = 14
+			global.time_plusment = 2
+			global.accessories_owned[14] = 1
+			global.accessories_equip[0] = 14
 		}
 		
 		if t_set_menu_choose = 5
 		{
-		global.time_plusment = 2
-		global.super_easy = 2
-		global.accessories_owned[9] = 1
-		global.accessories_equip[0] = 9
+			global.time_plusment = 2
+			global.super_easy = 2
+			global.accessories_owned[9] = 1
+			global.accessories_equip[0] = 9
 		}
 	}
 
-var sfx_ = audio_play_sound(critical_sfx,0,0)
-audio_sound_gain(sfx_,0.02*global.master_volume*2*global.sfx_volume,0)
-global.t_b_alpha = 2.01
-global.room_brightness = 0.6
-go_start = 4
+	var sfx_ = audio_play_sound(critical_sfx,0,0)
+	audio_sound_gain(sfx_,0.02*global.master_volume*2*global.sfx_volume,0)
+	global.t_b_alpha = 2.01
+	global.room_brightness = 0.6
+	go_start = 4
 }

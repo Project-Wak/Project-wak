@@ -81,7 +81,7 @@ var message_1 = "Start Game"
 var message_2 = "Setting"
 var message_3 = "Achievement"
 var message_4 = "Credits"
-var message_5 = "Contact"
+var message_5 = "Other games"
 var message_6 = "Quit"
 var text_scale = 1
 if global.korean_text = 1
@@ -90,7 +90,7 @@ message_1 = "게임 시작"
 message_2 = "환경 설정"
 message_3 = "도전 과제"
 message_4 = "크레딧"
-message_5 = "문의"
+message_5 = "다른 게임들"
 message_6 = "종료"
 }
 

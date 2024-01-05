@@ -21,8 +21,8 @@
   "exportToGame": true,
   "extensionVersion": "4.0.7",
   "files": [
-    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[],"copyToTargets":32,"filename":"GameAnalytics.js","final":"","functions":[],"init":"","kind":5,"order":[],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
-    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[
+    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"GameAnalytics.js","constants":[],"copyToTargets":32,"filename":"GameAnalytics.js","final":"","functions":[],"init":"","kind":5,"order":[],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
+    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"GameAnalyticsExt.ext","constants":[
         {"resourceType":"GMExtensionConstant","resourceVersion":"1.0","name":"GA_ERRORSEVERITY_DEBUG","hidden":false,"value":"1",},
         {"resourceType":"GMExtensionConstant","resourceVersion":"1.0","name":"GA_ERRORSEVERITY_INFO","hidden":false,"value":"2",},
         {"resourceType":"GMExtensionConstant","resourceVersion":"1.0","name":"GA_ERRORSEVERITY_WARNING","hidden":false,"value":"3",},
@@ -34,7 +34,7 @@
         {"resourceType":"GMExtensionConstant","resourceVersion":"1.0","name":"GA_PROGRESSIONSTATUS_COMPLETE","hidden":false,"value":"2",},
         {"resourceType":"GMExtensionConstant","resourceVersion":"1.0","name":"GA_PROGRESSIONSTATUS_FAIL","hidden":false,"value":"3",},
       ],"copyToTargets":35184372089070,"filename":"GameAnalyticsExt.ext","final":"","functions":[],"init":"","kind":4,"order":[],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
-    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[],"copyToTargets":8,"filename":"GameAnalyticsAndroid.ext","final":"","functions":[
+    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"GameAnalyticsAndroid.ext","constants":[],"copyToTargets":8,"filename":"GameAnalyticsAndroid.ext","final":"","functions":[
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"addBusinessEventWithReceiptAndroid","argCount":0,"args":[
             1,
             2,
@@ -135,7 +135,7 @@
             2,
           ],"documentation":"","externalName":"setEnabledEventSubmission","help":"setEnabledEventSubmission_android(flag:bool)","hidden":false,"kind":4,"returnType":2,},
       ],"init":"","kind":4,"order":[],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
-    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[],"copyToTargets":4,"filename":"GameAnalyticsIOS.ext","final":"","functions":[
+    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"GameAnalyticsIOS.ext","constants":[],"copyToTargets":4,"filename":"GameAnalyticsIOS.ext","final":"","functions":[
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"addBusinessEventWithReceiptIOS","argCount":0,"args":[
             1,
             2,
@@ -239,7 +239,7 @@
             2,
           ],"documentation":"","externalName":"setEnabledEventSubmission","help":"setEnabledManualSessionHandling_ios(flag:bool)","hidden":false,"kind":4,"returnType":2,},
       ],"init":"","kind":4,"order":[],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
-    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[],"copyToTargets":32,"filename":"GameAnalyticsExt.js","final":"","functions":[
+    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"GameAnalyticsExt.js","constants":[],"copyToTargets":32,"filename":"GameAnalyticsExt.js","final":"","functions":[
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"setEnabledInfoLog_html","argCount":0,"args":[
             2,
           ],"documentation":"","externalName":"setEnabledInfoLog","help":"setEnabledInfoLog_html(flag:bool)","hidden":false,"kind":5,"returnType":2,},
@@ -332,7 +332,7 @@
             2,
           ],"documentation":"","externalName":"setEnabledEventSubmission","help":"setEnabledEventSubmission_html(flag:bool)","hidden":false,"kind":5,"returnType":2,},
       ],"init":"","kind":5,"order":[],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
-    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[],"copyToTargets":2,"filename":"libGameAnalytics.dylib","final":"","functions":[
+    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"libGameAnalytics.dylib","constants":[],"copyToTargets":2,"filename":"libGameAnalytics.dylib","final":"","functions":[
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"setEnabledInfoLog_mac","argCount":0,"args":[
             2,
           ],"documentation":"","externalName":"setEnabledInfoLog","help":"setEnabledInfoLog_mac(flag:bool)","hidden":false,"kind":1,"returnType":2,},
@@ -427,7 +427,7 @@
             2,
           ],"documentation":"","externalName":"setEnabledEventSubmission","help":"setEnabledEventSubmission_mac(flag:bool)","hidden":false,"kind":1,"returnType":2,},
       ],"init":"","kind":1,"order":[],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
-    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[],"copyToTargets":64,"filename":"GameAnalytics.dll","final":"","functions":[
+    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"GameAnalytics.dll","constants":[],"copyToTargets":64,"filename":"GameAnalytics.dll","final":"","functions":[
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"setEnabledInfoLog_windows","argCount":0,"args":[
             2,
           ],"documentation":"","externalName":"setEnabledInfoLog","help":"setEnabledInfoLog_windows(flag:bool)","hidden":false,"kind":1,"returnType":2,},
@@ -523,7 +523,7 @@
             2,
           ],"documentation":"","externalName":"setEnabledEventSubmission","help":"setEnabledEventSubmission_windows(flag:bool)","hidden":false,"kind":1,"returnType":2,},
       ],"init":"","kind":1,"order":[],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
-    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[],"copyToTargets":35184372088832,"filename":"GameAnalytics.UWP.dll","final":"","functions":[
+    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"GameAnalytics.UWP.dll","constants":[],"copyToTargets":35184372088832,"filename":"GameAnalytics.UWP.dll","final":"","functions":[
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"setEnabledInfoLog_uwp","argCount":0,"args":[
             2,
           ],"documentation":"","externalName":"setEnabledInfoLog","help":"setEnabledInfoLog_uwp(flag:bool)","hidden":false,"kind":1,"returnType":2,},
@@ -619,7 +619,7 @@
             2,
           ],"documentation":"","externalName":"setEnabledEventSumission","help":"setEnabledEventSubmission_uwp(flag:bool)","hidden":false,"kind":1,"returnType":2,},
       ],"init":"","kind":1,"order":[],"origname":"","ProxyFiles":[],"uncompress":false,"usesRunnerInterface":false,},
-    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"","constants":[],"copyToTargets":128,"filename":"libGameAnalytics.so","final":"","functions":[
+    {"resourceType":"GMExtensionFile","resourceVersion":"1.0","name":"libGameAnalytics.so","constants":[],"copyToTargets":128,"filename":"libGameAnalytics.so","final":"","functions":[
         {"resourceType":"GMExtensionFunction","resourceVersion":"1.0","name":"setEnabledInfoLog_linux","argCount":0,"args":[
             2,
           ],"documentation":"","externalName":"setEnabledInfoLog","help":"setEnabledInfoLog_linux(flag:bool)","hidden":false,"kind":1,"returnType":2,},
