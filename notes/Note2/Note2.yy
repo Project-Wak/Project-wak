@@ -1,9 +1,11 @@
 {
-  "resourceType": "GMNotes",
-  "resourceVersion": "1.1",
-  "name": "Note2",
-  "parent": {
-    "name": "필기",
-    "path": "folders/필기.yy",
+  "$GMNotes":"",
+  "%Name":"Note2",
+  "name":"Note2",
+  "parent":{
+    "name":"필기",
+    "path":"folders/필기.yy",
   },
+  "resourceType":"GMNotes",
+  "resourceVersion":"2.0",
 }

@@ -1,10 +1,12 @@
 {
-  "resourceType": "GMShader",
-  "resourceVersion": "1.0",
-  "name": "shFlash",
-  "parent": {
-    "name": "쉐이더",
-    "path": "folders/쉐이더.yy",
+  "$GMShader":"",
+  "%Name":"shFlash",
+  "name":"shFlash",
+  "parent":{
+    "name":"쉐이더",
+    "path":"folders/쉐이더.yy",
   },
-  "type": 1,
+  "resourceType":"GMShader",
+  "resourceVersion":"2.0",
+  "type":1,
 }

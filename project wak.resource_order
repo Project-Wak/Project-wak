@@ -1,7 +1,5 @@
 {
-  "FolderOrderSettings": [
-    {"name":"Animation Curves","order":2,"path":"folders/Animation Curves.yy",},
-    {"name":"Sequences","order":1,"path":"folders/Sequences.yy",},
+  "FolderOrderSettings":[
     {"name":"객체","order":11,"path":"folders/객체.yy",},
     {"name":"attack_effect","order":16,"path":"folders/객체/attack_effect.yy",},
     {"name":"BG_UI","order":14,"path":"folders/객체/BG_UI.yy",},
@@ -27,8 +25,10 @@
     {"name":"타임라인","order":10,"path":"folders/타임라인.yy",},
     {"name":"필기","order":13,"path":"folders/필기.yy",},
     {"name":"확장 기능","order":14,"path":"folders/확장 기능.yy",},
+    {"name":"Animation Curves","order":2,"path":"folders/Animation Curves.yy",},
+    {"name":"Sequences","order":1,"path":"folders/Sequences.yy",},
   ],
-  "ResourceOrderSettings": [
+  "ResourceOrderSettings":[
     {"name":"obj_warning","order":53,"path":"objects/obj_warning/obj_warning.yy",},
     {"name":"pl_move_skeleton_guard_red","order":45,"path":"sprites/pl_move_skeleton_guard_red/pl_move_skeleton_guard_red.yy",},
     {"name":"blinder_wall_from_water1","order":71,"path":"objects/blinder_wall_from_water1/blinder_wall_from_water1.yy",},

@@ -1,11 +1,13 @@
 {
-  "resourceType": "GMScript",
-  "resourceVersion": "1.0",
-  "name": "ga_setCustomDimension01",
-  "isCompatibility": false,
-  "isDnD": false,
-  "parent": {
-    "name": "Statics",
-    "path": "folders/스크립트/Statics.yy",
+  "$GMScript":"",
+  "%Name":"ga_setCustomDimension01",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"ga_setCustomDimension01",
+  "parent":{
+    "name":"Statics",
+    "path":"folders/스크립트/Statics.yy",
   },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
 }
